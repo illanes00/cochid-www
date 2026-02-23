@@ -1,0 +1,390 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>COCHID — Propuestas Visuales</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;700&family=Inter:wght@400;500;600;700&family=DM+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    * { box-sizing: border-box; }
+    body { font-family: 'IBM Plex Sans', system-ui, sans-serif; background: #0f1115; color: #e4e8ec; }
+    .proposal { transition: all 0.3s ease; }
+    .proposal:hover { transform: translateY(-2px); }
+    .tab-btn { transition: all 0.2s; }
+    .tab-btn.active { background: var(--accent); color: white; }
+  </style>
+</head>
+<body class="min-h-screen">
+
+  <!-- Header -->
+  <div class="sticky top-0 z-50 backdrop-blur-md bg-[#0f1115]/90 border-b border-white/10">
+    <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+      <div>
+        <span class="font-mono font-bold tracking-widest text-sm">COCHID</span>
+        <span class="text-xs text-gray-500 ml-3">Propuestas Visuales</span>
+      </div>
+      <a href="/" class="text-xs text-gray-400 hover:text-white transition-colors px-3 py-1.5 rounded border border-white/10 hover:border-white/30">&larr; Volver al sitio</a>
+    </div>
+  </div>
+
+  <div class="max-w-7xl mx-auto px-6 py-12">
+
+    <!-- Intro -->
+    <div class="mb-12">
+      <h1 class="text-3xl font-bold mb-3">3 Direcciones Visuales</h1>
+      <p class="text-gray-400 max-w-2xl">Cada propuesta muestra una paleta de colores, tipografía y mood distinto aplicado a los mismos componentes del sitio COCHID. Haz click en cada una para ver el detalle completo.</p>
+    </div>
+
+    <!-- ═══════════════════════════════════════════ -->
+    <!-- PROPUESTA A: Corporate Electric -->
+    <!-- ═══════════════════════════════════════════ -->
+    <div class="proposal mb-16 rounded-2xl border border-white/10 overflow-hidden" style="--accent: #3763e0">
+      <div class="p-8 bg-gradient-to-br from-[#3763e0]/10 to-transparent border-b border-white/10">
+        <div class="flex items-start justify-between flex-wrap gap-4">
+          <div>
+            <span class="text-xs font-mono tracking-wider text-[#3763e0] uppercase">Propuesta A</span>
+            <h2 class="text-2xl font-bold mt-1">Corporate Electric</h2>
+            <p class="text-gray-400 text-sm mt-2 max-w-lg">El estilo actual refinado. Azul eléctrico corporativo con acentos saturados. Transmite tecnología, confianza institucional y seriedad técnica. Ideal si el público principal es sector público y corporativo.</p>
+          </div>
+          <div class="flex gap-2">
+            <div class="w-10 h-10 rounded-lg bg-[#3763e0]" title="#3763e0 Accent"></div>
+            <div class="w-10 h-10 rounded-lg bg-[#2c52c4]" title="#2c52c4 Hover"></div>
+            <div class="w-10 h-10 rounded-lg bg-[#1b1e22]" title="#1b1e22 Dark BG"></div>
+            <div class="w-10 h-10 rounded-lg bg-white" title="#ffffff Light BG"></div>
+            <div class="w-10 h-10 rounded-lg bg-[#10b981]" title="#10b981 Success"></div>
+          </div>
+        </div>
+        <div class="flex flex-wrap gap-2 mt-4">
+          <span class="text-xs px-2 py-1 rounded bg-[#3763e0]/20 text-[#3763e0] border border-[#3763e0]/30">IBM Plex Sans</span>
+          <span class="text-xs px-2 py-1 rounded bg-[#3763e0]/20 text-[#3763e0] border border-[#3763e0]/30">JetBrains Mono</span>
+          <span class="text-xs px-2 py-1 rounded bg-white/5 text-gray-400 border border-white/10">Mood: Institucional + Técnico</span>
+        </div>
+      </div>
+      <!-- Preview -->
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-0">
+        <!-- Light mode -->
+        <div class="p-8 bg-white text-gray-900" style="font-family: 'IBM Plex Sans', sans-serif">
+          <span class="text-[10px] uppercase tracking-wider text-gray-400 mb-4 block">Light Mode</span>
+          <div class="border-l-[3px] border-[#3763e0] pl-4 mb-6">
+            <p class="font-mono text-[0.65rem] tracking-[0.12em] uppercase text-[#3763e0] mb-1">Corporación Chilena de Inteligencia de Datos</p>
+            <h3 class="text-xl font-bold leading-tight">Convertimos datos complejos en ventaja competitiva</h3>
+          </div>
+          <div class="flex gap-2 mb-6">
+            <span class="px-4 py-2 bg-[#3763e0] text-white text-xs font-medium rounded-md">Agendar reunión</span>
+            <span class="px-4 py-2 border border-gray-300 text-xs font-medium rounded-md">Ver servicios</span>
+          </div>
+          <div class="rounded-lg border border-gray-200 overflow-hidden">
+            <div class="px-4 py-2.5 border-b border-gray-200 flex justify-between items-center">
+              <strong class="text-xs">Panel de métricas</strong>
+              <span class="text-[10px] px-1.5 py-0.5 rounded-full bg-emerald-50 text-emerald-600 border border-emerald-200">Operativo</span>
+            </div>
+            <div class="divide-y divide-gray-100">
+              <div class="px-4 py-2 flex justify-between text-xs"><span class="text-gray-500">Fuentes integradas</span><strong class="font-mono text-base">142</strong></div>
+              <div class="px-4 py-2 flex justify-between text-xs"><span class="text-gray-500">Precisión</span><strong class="font-mono text-base">96.7%</strong></div>
+            </div>
+          </div>
+          <div class="grid grid-cols-2 gap-2 mt-4">
+            <div class="rounded-lg border border-gray-200 p-3 text-center shadow-sm hover:shadow-md transition-shadow">
+              <div class="font-mono text-xl font-bold text-[#3763e0]">50+</div>
+              <div class="text-[10px] text-gray-500 uppercase">Proyectos</div>
+            </div>
+            <div class="rounded-lg border border-gray-200 p-3 text-center shadow-sm hover:shadow-md transition-shadow">
+              <div class="font-mono text-xl font-bold text-[#3763e0]">20+</div>
+              <div class="text-[10px] text-gray-500 uppercase">Clientes</div>
+            </div>
+          </div>
+        </div>
+        <!-- Dark mode -->
+        <div class="p-8 bg-[#1b1e22] text-[#e4e8ec]" style="font-family: 'IBM Plex Sans', sans-serif">
+          <span class="text-[10px] uppercase tracking-wider text-gray-500 mb-4 block">Dark Mode</span>
+          <div class="border-l-[3px] border-[#3763e0] pl-4 mb-6">
+            <p class="font-mono text-[0.65rem] tracking-[0.12em] uppercase text-[#3763e0] mb-1">Corporación Chilena de Inteligencia de Datos</p>
+            <h3 class="text-xl font-bold leading-tight">Convertimos datos complejos en ventaja competitiva</h3>
+          </div>
+          <div class="flex gap-2 mb-6">
+            <span class="px-4 py-2 bg-[#3763e0] text-white text-xs font-medium rounded-md">Agendar reunión</span>
+            <span class="px-4 py-2 border border-[#333840] text-xs font-medium rounded-md">Ver servicios</span>
+          </div>
+          <div class="rounded-lg border border-[#333840] overflow-hidden">
+            <div class="px-4 py-2.5 border-b border-[#333840] bg-[#242830] flex justify-between items-center">
+              <strong class="text-xs">Panel de métricas</strong>
+              <span class="text-[10px] px-1.5 py-0.5 rounded-full bg-emerald-900/30 text-emerald-400 border border-emerald-800">Operativo</span>
+            </div>
+            <div class="divide-y divide-[#333840] bg-[#242830]">
+              <div class="px-4 py-2 flex justify-between text-xs"><span class="text-[#8b95a3]">Fuentes integradas</span><strong class="font-mono text-base">142</strong></div>
+              <div class="px-4 py-2 flex justify-between text-xs"><span class="text-[#8b95a3]">Precisión</span><strong class="font-mono text-base">96.7%</strong></div>
+            </div>
+          </div>
+          <div class="grid grid-cols-2 gap-2 mt-4">
+            <div class="rounded-lg border border-[#333840] bg-[#242830] p-3 text-center">
+              <div class="font-mono text-xl font-bold text-[#3763e0]">50+</div>
+              <div class="text-[10px] text-[#8b95a3] uppercase">Proyectos</div>
+            </div>
+            <div class="rounded-lg border border-[#333840] bg-[#242830] p-3 text-center">
+              <div class="font-mono text-xl font-bold text-[#3763e0]">20+</div>
+              <div class="text-[10px] text-[#8b95a3] uppercase">Clientes</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ═══════════════════════════════════════════ -->
+    <!-- PROPUESTA B: Warm Terracotta -->
+    <!-- ═══════════════════════════════════════════ -->
+    <div class="proposal mb-16 rounded-2xl border border-white/10 overflow-hidden" style="--accent: #c2652a">
+      <div class="p-8 bg-gradient-to-br from-[#c2652a]/10 to-transparent border-b border-white/10">
+        <div class="flex items-start justify-between flex-wrap gap-4">
+          <div>
+            <span class="text-xs font-mono tracking-wider text-[#c2652a] uppercase">Propuesta B</span>
+            <h2 class="text-2xl font-bold mt-1">Warm Terracotta</h2>
+            <p class="text-gray-400 text-sm mt-2 max-w-lg">Paleta cálida con terracotta como acento. Transmite cercanía, confianza humana y sofisticación. Diferencia a COCHID de la estética fría de las consultoras tech. Backgrounds cálidos con tonos crema.</p>
+          </div>
+          <div class="flex gap-2">
+            <div class="w-10 h-10 rounded-lg bg-[#c2652a]" title="#c2652a Terracotta"></div>
+            <div class="w-10 h-10 rounded-lg bg-[#a3531f]" title="#a3531f Hover"></div>
+            <div class="w-10 h-10 rounded-lg bg-[#1a1714]" title="#1a1714 Dark BG"></div>
+            <div class="w-10 h-10 rounded-lg bg-[#faf8f5]" title="#faf8f5 Warm White"></div>
+            <div class="w-10 h-10 rounded-lg bg-[#2d7a4f]" title="#2d7a4f Forest"></div>
+          </div>
+        </div>
+        <div class="flex flex-wrap gap-2 mt-4">
+          <span class="text-xs px-2 py-1 rounded bg-[#c2652a]/20 text-[#c2652a] border border-[#c2652a]/30">DM Sans</span>
+          <span class="text-xs px-2 py-1 rounded bg-[#c2652a]/20 text-[#c2652a] border border-[#c2652a]/30">JetBrains Mono</span>
+          <span class="text-xs px-2 py-1 rounded bg-white/5 text-gray-400 border border-white/10">Mood: Cálido + Humano + Premium</span>
+        </div>
+      </div>
+      <!-- Preview -->
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-0">
+        <!-- Light mode -->
+        <div class="p-8 bg-[#faf8f5] text-[#2a2520]" style="font-family: 'DM Sans', sans-serif">
+          <span class="text-[10px] uppercase tracking-wider text-[#9e9389] mb-4 block">Light Mode</span>
+          <div class="border-l-[3px] border-[#c2652a] pl-4 mb-6">
+            <p class="font-mono text-[0.65rem] tracking-[0.12em] uppercase text-[#c2652a] mb-1">Corporación Chilena de Inteligencia de Datos</p>
+            <h3 class="text-xl font-bold leading-tight">Convertimos datos complejos en ventaja competitiva</h3>
+          </div>
+          <div class="flex gap-2 mb-6">
+            <span class="px-4 py-2 bg-[#c2652a] text-white text-xs font-medium rounded-md">Agendar reunión</span>
+            <span class="px-4 py-2 border border-[#d4cdc5] text-xs font-medium rounded-md text-[#5a5048]">Ver servicios</span>
+          </div>
+          <div class="rounded-lg border border-[#e8e2da] overflow-hidden bg-white">
+            <div class="px-4 py-2.5 border-b border-[#e8e2da] flex justify-between items-center">
+              <strong class="text-xs">Panel de métricas</strong>
+              <span class="text-[10px] px-1.5 py-0.5 rounded-full bg-[#2d7a4f]/10 text-[#2d7a4f] border border-[#2d7a4f]/20">Operativo</span>
+            </div>
+            <div class="divide-y divide-[#f0ebe5]">
+              <div class="px-4 py-2 flex justify-between text-xs"><span class="text-[#9e9389]">Fuentes integradas</span><strong class="font-mono text-base">142</strong></div>
+              <div class="px-4 py-2 flex justify-between text-xs"><span class="text-[#9e9389]">Precisión</span><strong class="font-mono text-base">96.7%</strong></div>
+            </div>
+          </div>
+          <div class="grid grid-cols-2 gap-2 mt-4">
+            <div class="rounded-lg border border-[#e8e2da] bg-white p-3 text-center shadow-sm">
+              <div class="font-mono text-xl font-bold text-[#c2652a]">50+</div>
+              <div class="text-[10px] text-[#9e9389] uppercase">Proyectos</div>
+            </div>
+            <div class="rounded-lg border border-[#e8e2da] bg-white p-3 text-center shadow-sm">
+              <div class="font-mono text-xl font-bold text-[#c2652a]">20+</div>
+              <div class="text-[10px] text-[#9e9389] uppercase">Clientes</div>
+            </div>
+          </div>
+        </div>
+        <!-- Dark mode -->
+        <div class="p-8 bg-[#1a1714] text-[#e8e2da]" style="font-family: 'DM Sans', sans-serif">
+          <span class="text-[10px] uppercase tracking-wider text-gray-500 mb-4 block">Dark Mode</span>
+          <div class="border-l-[3px] border-[#c2652a] pl-4 mb-6">
+            <p class="font-mono text-[0.65rem] tracking-[0.12em] uppercase text-[#c2652a] mb-1">Corporación Chilena de Inteligencia de Datos</p>
+            <h3 class="text-xl font-bold leading-tight">Convertimos datos complejos en ventaja competitiva</h3>
+          </div>
+          <div class="flex gap-2 mb-6">
+            <span class="px-4 py-2 bg-[#c2652a] text-white text-xs font-medium rounded-md">Agendar reunión</span>
+            <span class="px-4 py-2 border border-[#3a332c] text-xs font-medium rounded-md">Ver servicios</span>
+          </div>
+          <div class="rounded-lg border border-[#3a332c] overflow-hidden">
+            <div class="px-4 py-2.5 border-b border-[#3a332c] bg-[#252018] flex justify-between items-center">
+              <strong class="text-xs">Panel de métricas</strong>
+              <span class="text-[10px] px-1.5 py-0.5 rounded-full bg-[#2d7a4f]/20 text-[#5dbd7e] border border-[#2d7a4f]/30">Operativo</span>
+            </div>
+            <div class="divide-y divide-[#3a332c] bg-[#252018]">
+              <div class="px-4 py-2 flex justify-between text-xs"><span class="text-[#8a7f73]">Fuentes integradas</span><strong class="font-mono text-base">142</strong></div>
+              <div class="px-4 py-2 flex justify-between text-xs"><span class="text-[#8a7f73]">Precisión</span><strong class="font-mono text-base">96.7%</strong></div>
+            </div>
+          </div>
+          <div class="grid grid-cols-2 gap-2 mt-4">
+            <div class="rounded-lg border border-[#3a332c] bg-[#252018] p-3 text-center">
+              <div class="font-mono text-xl font-bold text-[#c2652a]">50+</div>
+              <div class="text-[10px] text-[#8a7f73] uppercase">Proyectos</div>
+            </div>
+            <div class="rounded-lg border border-[#3a332c] bg-[#252018] p-3 text-center">
+              <div class="font-mono text-xl font-bold text-[#c2652a]">20+</div>
+              <div class="text-[10px] text-[#8a7f73] uppercase">Clientes</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ═══════════════════════════════════════════ -->
+    <!-- PROPUESTA C: Emerald Data -->
+    <!-- ═══════════════════════════════════════════ -->
+    <div class="proposal mb-16 rounded-2xl border border-white/10 overflow-hidden" style="--accent: #0d9465">
+      <div class="p-8 bg-gradient-to-br from-[#0d9465]/10 to-transparent border-b border-white/10">
+        <div class="flex items-start justify-between flex-wrap gap-4">
+          <div>
+            <span class="text-xs font-mono tracking-wider text-[#0d9465] uppercase">Propuesta C</span>
+            <h2 class="text-2xl font-bold mt-1">Emerald Data</h2>
+            <p class="text-gray-400 text-sm mt-2 max-w-lg">Verde esmeralda como color primario con acentos en azul profundo. Transmite crecimiento, confianza financiera y precisión. Perfecto para posicionar COCHID como consultora premium de datos con identidad chilena.</p>
+          </div>
+          <div class="flex gap-2">
+            <div class="w-10 h-10 rounded-lg bg-[#0d9465]" title="#0d9465 Emerald"></div>
+            <div class="w-10 h-10 rounded-lg bg-[#0a7a53]" title="#0a7a53 Hover"></div>
+            <div class="w-10 h-10 rounded-lg bg-[#0f1419]" title="#0f1419 Deep Dark"></div>
+            <div class="w-10 h-10 rounded-lg bg-[#f7faf9]" title="#f7faf9 Mint White"></div>
+            <div class="w-10 h-10 rounded-lg bg-[#2563eb]" title="#2563eb Accent Blue"></div>
+          </div>
+        </div>
+        <div class="flex flex-wrap gap-2 mt-4">
+          <span class="text-xs px-2 py-1 rounded bg-[#0d9465]/20 text-[#0d9465] border border-[#0d9465]/30">Inter</span>
+          <span class="text-xs px-2 py-1 rounded bg-[#0d9465]/20 text-[#0d9465] border border-[#0d9465]/30">JetBrains Mono</span>
+          <span class="text-xs px-2 py-1 rounded bg-white/5 text-gray-400 border border-white/10">Mood: Premium + Growth + Precision</span>
+        </div>
+      </div>
+      <!-- Preview -->
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-0">
+        <!-- Light mode -->
+        <div class="p-8 bg-[#f7faf9] text-[#1a2e28]" style="font-family: 'Inter', sans-serif">
+          <span class="text-[10px] uppercase tracking-wider text-[#8fa39b] mb-4 block">Light Mode</span>
+          <div class="border-l-[3px] border-[#0d9465] pl-4 mb-6">
+            <p class="font-mono text-[0.65rem] tracking-[0.12em] uppercase text-[#0d9465] mb-1">Corporación Chilena de Inteligencia de Datos</p>
+            <h3 class="text-xl font-bold leading-tight">Convertimos datos complejos en ventaja competitiva</h3>
+          </div>
+          <div class="flex gap-2 mb-6">
+            <span class="px-4 py-2 bg-[#0d9465] text-white text-xs font-medium rounded-md">Agendar reunión</span>
+            <span class="px-4 py-2 border border-[#c8d9d2] text-xs font-medium rounded-md text-[#3d5a50]">Ver servicios</span>
+          </div>
+          <div class="rounded-lg border border-[#d4e4dd] overflow-hidden bg-white">
+            <div class="px-4 py-2.5 border-b border-[#d4e4dd] flex justify-between items-center">
+              <strong class="text-xs">Panel de métricas</strong>
+              <span class="text-[10px] px-1.5 py-0.5 rounded-full bg-[#0d9465]/10 text-[#0d9465] border border-[#0d9465]/20">Operativo</span>
+            </div>
+            <div class="divide-y divide-[#edf4f0]">
+              <div class="px-4 py-2 flex justify-between text-xs"><span class="text-[#8fa39b]">Fuentes integradas</span><strong class="font-mono text-base">142</strong></div>
+              <div class="px-4 py-2 flex justify-between text-xs"><span class="text-[#8fa39b]">Precisión</span><strong class="font-mono text-base">96.7%</strong></div>
+            </div>
+          </div>
+          <div class="grid grid-cols-2 gap-2 mt-4">
+            <div class="rounded-lg border border-[#d4e4dd] bg-white p-3 text-center shadow-sm">
+              <div class="font-mono text-xl font-bold text-[#0d9465]">50+</div>
+              <div class="text-[10px] text-[#8fa39b] uppercase">Proyectos</div>
+            </div>
+            <div class="rounded-lg border border-[#d4e4dd] bg-white p-3 text-center shadow-sm">
+              <div class="font-mono text-xl font-bold text-[#0d9465]">20+</div>
+              <div class="text-[10px] text-[#8fa39b] uppercase">Clientes</div>
+            </div>
+          </div>
+        </div>
+        <!-- Dark mode -->
+        <div class="p-8 bg-[#0f1419] text-[#d4e4dd]" style="font-family: 'Inter', sans-serif">
+          <span class="text-[10px] uppercase tracking-wider text-gray-500 mb-4 block">Dark Mode</span>
+          <div class="border-l-[3px] border-[#0d9465] pl-4 mb-6">
+            <p class="font-mono text-[0.65rem] tracking-[0.12em] uppercase text-[#0d9465] mb-1">Corporación Chilena de Inteligencia de Datos</p>
+            <h3 class="text-xl font-bold leading-tight">Convertimos datos complejos en ventaja competitiva</h3>
+          </div>
+          <div class="flex gap-2 mb-6">
+            <span class="px-4 py-2 bg-[#0d9465] text-white text-xs font-medium rounded-md">Agendar reunión</span>
+            <span class="px-4 py-2 border border-[#1e3029] text-xs font-medium rounded-md">Ver servicios</span>
+          </div>
+          <div class="rounded-lg border border-[#1e3029] overflow-hidden">
+            <div class="px-4 py-2.5 border-b border-[#1e3029] bg-[#141e1a] flex justify-between items-center">
+              <strong class="text-xs">Panel de métricas</strong>
+              <span class="text-[10px] px-1.5 py-0.5 rounded-full bg-[#0d9465]/20 text-[#3dbd8a] border border-[#0d9465]/30">Operativo</span>
+            </div>
+            <div class="divide-y divide-[#1e3029] bg-[#141e1a]">
+              <div class="px-4 py-2 flex justify-between text-xs"><span class="text-[#5d7a6e]">Fuentes integradas</span><strong class="font-mono text-base">142</strong></div>
+              <div class="px-4 py-2 flex justify-between text-xs"><span class="text-[#5d7a6e]">Precisión</span><strong class="font-mono text-base">96.7%</strong></div>
+            </div>
+          </div>
+          <div class="grid grid-cols-2 gap-2 mt-4">
+            <div class="rounded-lg border border-[#1e3029] bg-[#141e1a] p-3 text-center">
+              <div class="font-mono text-xl font-bold text-[#0d9465]">50+</div>
+              <div class="text-[10px] text-[#5d7a6e] uppercase">Proyectos</div>
+            </div>
+            <div class="rounded-lg border border-[#1e3029] bg-[#141e1a] p-3 text-center">
+              <div class="font-mono text-xl font-bold text-[#0d9465]">20+</div>
+              <div class="text-[10px] text-[#5d7a6e] uppercase">Clientes</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ═══════════════════════════════════════════ -->
+    <!-- COMPARISON TABLE -->
+    <!-- ═══════════════════════════════════════════ -->
+    <div class="rounded-2xl border border-white/10 overflow-hidden mb-12">
+      <div class="p-8 border-b border-white/10">
+        <h2 class="text-xl font-bold">Comparación rápida</h2>
+      </div>
+      <div class="overflow-x-auto">
+        <table class="w-full text-sm">
+          <thead>
+            <tr class="border-b border-white/10">
+              <th class="text-left px-6 py-3 text-xs uppercase tracking-wider text-gray-500">Aspecto</th>
+              <th class="text-left px-6 py-3 text-xs uppercase tracking-wider text-[#3763e0]">A · Corporate Electric</th>
+              <th class="text-left px-6 py-3 text-xs uppercase tracking-wider text-[#c2652a]">B · Warm Terracotta</th>
+              <th class="text-left px-6 py-3 text-xs uppercase tracking-wider text-[#0d9465]">C · Emerald Data</th>
+            </tr>
+          </thead>
+          <tbody class="divide-y divide-white/5">
+            <tr>
+              <td class="px-6 py-3 text-gray-400">Color primario</td>
+              <td class="px-6 py-3"><span class="inline-block w-3 h-3 rounded bg-[#3763e0] mr-2"></span>#3763e0</td>
+              <td class="px-6 py-3"><span class="inline-block w-3 h-3 rounded bg-[#c2652a] mr-2"></span>#c2652a</td>
+              <td class="px-6 py-3"><span class="inline-block w-3 h-3 rounded bg-[#0d9465] mr-2"></span>#0d9465</td>
+            </tr>
+            <tr>
+              <td class="px-6 py-3 text-gray-400">Tipografía</td>
+              <td class="px-6 py-3">IBM Plex Sans</td>
+              <td class="px-6 py-3">DM Sans</td>
+              <td class="px-6 py-3">Inter</td>
+            </tr>
+            <tr>
+              <td class="px-6 py-3 text-gray-400">BG Light</td>
+              <td class="px-6 py-3">Blanco puro #fff</td>
+              <td class="px-6 py-3">Crema cálido #faf8f5</td>
+              <td class="px-6 py-3">Mint tenue #f7faf9</td>
+            </tr>
+            <tr>
+              <td class="px-6 py-3 text-gray-400">Mood</td>
+              <td class="px-6 py-3">Institucional, tech</td>
+              <td class="px-6 py-3">Humano, premium</td>
+              <td class="px-6 py-3">Growth, precision</td>
+            </tr>
+            <tr>
+              <td class="px-6 py-3 text-gray-400">Mejor para</td>
+              <td class="px-6 py-3">Sector público, corp</td>
+              <td class="px-6 py-3">Diferenciarse del tech</td>
+              <td class="px-6 py-3">Fintech, consultoría</td>
+            </tr>
+            <tr>
+              <td class="px-6 py-3 text-gray-400">Esfuerzo de cambio</td>
+              <td class="px-6 py-3 text-emerald-400">Mínimo (actual)</td>
+              <td class="px-6 py-3 text-amber-400">Medio (font + colores)</td>
+              <td class="px-6 py-3 text-amber-400">Medio (font + colores)</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- Footer note -->
+    <div class="text-center text-gray-500 text-sm pb-8">
+      <p>Elige una propuesta y la implementamos en el sitio completo.</p>
+      <p class="text-xs mt-1 text-gray-600">También se pueden combinar elementos entre propuestas (ej: paleta de B con tipografía de C).</p>
+    </div>
+
+  </div>
+</body>
+</html>

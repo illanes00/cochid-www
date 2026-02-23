@@ -1,0 +1,98 @@
+{% extends "base.html" %}
+
+{% block title %}Contacto — COCHID{% endblock %}
+{% block meta_description %}Contacte a COCHID para consultoría en inteligencia de datos, ingeniería de datos y analítica avanzada.{% endblock %}
+
+{% block body %}
+
+<!-- ═══ HERO ═══ -->
+<section class="py-12 md:py-16 border-b border-gray-200 dark:border-dark-line">
+  <div class="max-w-5xl mx-auto px-4 sm:px-6">
+    <p class="font-mono text-[0.72rem] tracking-[0.15em] uppercase text-cochid-accent mb-2">Hablemos</p>
+    <h1 class="text-3xl sm:text-4xl font-bold mb-2">Contacto</h1>
+    <p class="text-gray-500 dark:text-dark-muted max-w-2xl">Conversemos sobre cómo podemos ayudar a su organización a tomar mejores decisiones con datos.</p>
+  </div>
+</section>
+
+<!-- ═══ CONTACTO ═══ -->
+<div class="py-16 md:py-20">
+  <div class="max-w-5xl mx-auto px-4 sm:px-6">
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+      <div>
+        <h3 class="text-lg font-semibold mb-2">Información de contacto</h3>
+        <p class="text-sm text-gray-500 dark:text-dark-muted mb-6">Estamos disponibles para conversar sobre sus necesidades de datos y explorar cómo podemos colaborar.</p>
+
+        <div class="divide-y divide-gray-100 dark:divide-dark-line border border-gray-200 dark:border-dark-line rounded-lg overflow-hidden mb-6">
+          <div class="px-5 py-3.5 bg-white dark:bg-dark-paper hover:bg-gray-50 dark:hover:bg-dark-bg/50 transition-colors">
+            <strong class="text-sm block mb-0.5">Email</strong>
+            <a href="mailto:contacto@cochid.cl" class="text-sm text-cochid-accent hover:text-cochid-accent-hover transition-colors">contacto@cochid.cl</a>
+          </div>
+          <div class="px-5 py-3.5 bg-white dark:bg-dark-paper hover:bg-gray-50 dark:hover:bg-dark-bg/50 transition-colors">
+            <strong class="text-sm block mb-0.5">Teléfono</strong>
+            <span class="text-sm text-gray-600 dark:text-dark-muted">+56 2 2345 6789</span>
+          </div>
+          <div class="px-5 py-3.5 bg-white dark:bg-dark-paper hover:bg-gray-50 dark:hover:bg-dark-bg/50 transition-colors">
+            <strong class="text-sm block mb-0.5">Ubicación</strong>
+            <span class="text-sm text-gray-600 dark:text-dark-muted">Santiago, Chile</span>
+          </div>
+          <div class="px-5 py-3.5 bg-white dark:bg-dark-paper hover:bg-gray-50 dark:hover:bg-dark-bg/50 transition-colors">
+            <strong class="text-sm block mb-0.5">Horario de atención</strong>
+            <span class="text-sm text-gray-600 dark:text-dark-muted">Lunes a viernes, 09:00 — 18:00 hrs (CLT)</span>
+          </div>
+        </div>
+
+        <div class="info-box">
+          <strong>Respuesta en 24 horas:</strong> Nos comprometemos a responder toda consulta dentro de un día hábil.
+        </div>
+      </div>
+
+      <div>
+        <form class="shadow-md rounded-lg border border-gray-200 dark:border-dark-line bg-white dark:bg-dark-paper overflow-hidden" action="mailto:contacto@cochid.cl" method="post" enctype="text/plain">
+          <div class="px-5 py-3 border-b border-gray-200 dark:border-dark-line">
+            <strong class="text-sm">Escríbenos</strong>
+          </div>
+          <div class="p-5 space-y-4">
+            <div>
+              <label for="nombre" class="block text-sm font-medium mb-1.5">Nombre</label>
+              <input type="text" id="nombre" name="nombre" placeholder="Su nombre completo" required
+                class="w-full px-3 py-2 rounded-md border border-gray-300 dark:border-dark-line bg-white dark:bg-dark-bg text-sm placeholder:text-gray-400 dark:placeholder:text-dark-muted focus:outline-none focus:ring-2 focus:ring-cochid-accent focus:border-transparent transition-shadow">
+            </div>
+            <div>
+              <label for="email" class="block text-sm font-medium mb-1.5">Email</label>
+              <input type="email" id="email" name="email" placeholder="correo@ejemplo.cl" required
+                class="w-full px-3 py-2 rounded-md border border-gray-300 dark:border-dark-line bg-white dark:bg-dark-bg text-sm placeholder:text-gray-400 dark:placeholder:text-dark-muted focus:outline-none focus:ring-2 focus:ring-cochid-accent focus:border-transparent transition-shadow">
+            </div>
+            <div>
+              <label for="organizacion" class="block text-sm font-medium mb-1.5">Organización</label>
+              <input type="text" id="organizacion" name="organizacion" placeholder="Nombre de su organización"
+                class="w-full px-3 py-2 rounded-md border border-gray-300 dark:border-dark-line bg-white dark:bg-dark-bg text-sm placeholder:text-gray-400 dark:placeholder:text-dark-muted focus:outline-none focus:ring-2 focus:ring-cochid-accent focus:border-transparent transition-shadow">
+            </div>
+            <div>
+              <label for="servicio" class="block text-sm font-medium mb-1.5">Servicio de interés</label>
+              <select id="servicio" name="servicio"
+                class="w-full px-3 py-2 rounded-md border border-gray-300 dark:border-dark-line bg-white dark:bg-dark-bg text-sm focus:outline-none focus:ring-2 focus:ring-cochid-accent focus:border-transparent transition-shadow">
+                <option value="">Seleccione un servicio</option>
+                <option value="ingenieria">Ingeniería de Datos</option>
+                <option value="analitica">Analítica Avanzada</option>
+                <option value="consultoria">Consultoría Estratégica</option>
+                <option value="integral">Solución Integral</option>
+                <option value="otro">Otro</option>
+              </select>
+            </div>
+            <div>
+              <label for="mensaje" class="block text-sm font-medium mb-1.5">Mensaje</label>
+              <textarea id="mensaje" name="mensaje" placeholder="Cuéntenos sobre su proyecto o necesidad..." required
+                class="w-full px-3 py-2 rounded-md border border-gray-300 dark:border-dark-line bg-white dark:bg-dark-bg text-sm min-h-[120px] resize-y placeholder:text-gray-400 dark:placeholder:text-dark-muted focus:outline-none focus:ring-2 focus:ring-cochid-accent focus:border-transparent transition-shadow"></textarea>
+            </div>
+            <button type="submit"
+              class="w-full px-5 py-2.5 bg-cochid-accent hover:bg-cochid-accent-hover active:scale-95 text-white rounded-md text-sm font-medium transition-all cursor-pointer">
+              Enviar mensaje
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+{% endblock %}

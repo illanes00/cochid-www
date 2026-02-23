@@ -3,28 +3,266 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="COCHID — Corporación Chilena de Inteligencia de Datos. Transformamos datos en decisiones estratégicas.">
+  <meta name="description" content="{% block meta_description %}COCHID — Corporación Chilena de Inteligencia de Datos. Transformamos datos complejos en ventaja competitiva.{% endblock %}">
   <title>{% block title %}COCHID — Corporación Chilena de Inteligencia de Datos{% endblock %}</title>
+
+  <!-- OG Tags -->
+  <meta property="og:title" content="{% block og_title %}COCHID — Inteligencia de Datos{% endblock %}">
+  <meta property="og:description" content="Corporación Chilena de Inteligencia de Datos. Ingeniería de datos, analítica avanzada y consultoría estratégica.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://cochid.cl">
+  <meta property="og:locale" content="es_CL">
+
+  <!-- Favicon -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>📊</text></svg>">
+
+  <!-- Anti-FOUC: apply dark class before first paint -->
+  <script>
+    (function() {
+      var s = localStorage.getItem('theme');
+      if (s === 'dark' || (s === 'auto' && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+        document.documentElement.classList.add('dark');
+      } else if (!s || s === 'auto') {
+        if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+          document.documentElement.classList.add('dark');
+        }
+      }
+    })();
+  </script>
 
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
 
-  <!-- illanes v3 design system -->
-  <link rel="stylesheet" href="https://static.illanes00.cl/illanes/v3/illanes-manual.min.css">
-  <link rel="stylesheet" href="https://static.illanes00.cl/illanes/v3/illanes-manual-extended.min.css">
+  <!-- Tailwind CSS (Play CDN) -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            cochid: {
+              accent: '#3763e0',
+              'accent-hover': '#2c52c4',
+              'accent-subtle': 'rgba(55,99,224,0.08)',
+              'accent-border': 'rgba(55,99,224,0.3)'
+            },
+            dark: {
+              bg: '#1b1e22',
+              paper: '#242830',
+              ink: '#e4e8ec',
+              muted: '#8b95a3',
+              line: '#333840'
+            }
+          },
+          fontFamily: {
+            sans: ['IBM Plex Sans', 'system-ui', 'sans-serif'],
+            mono: ['JetBrains Mono', 'monospace']
+          }
+        }
+      }
+    }
+  </script>
 
-  <!-- COCHID overrides -->
-  <link rel="stylesheet" href="{{ url_for('static', filename='css/cochid.css') }}">
+  <style type="text/tailwindcss">
+    html { scroll-behavior: smooth; }
+    section[id], div[id] { scroll-margin-top: 70px; }
+
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(16px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+    .animate-fade-in-up {
+      animation: fadeInUp 0.6s ease-out both;
+    }
+    .animate-fade-in-up-delay {
+      animation: fadeInUp 0.6s ease-out 0.15s both;
+    }
+
+    /* Card component: shadow + hover lift */
+    .card-hover {
+      @apply shadow-sm hover:shadow-md hover:-translate-y-0.5 transition-all duration-200;
+    }
+
+    /* Gradient separator */
+    .gradient-hr {
+      @apply h-px bg-gradient-to-r from-transparent via-gray-300 dark:via-dark-line to-transparent;
+    }
+
+    /* Info box with left accent border */
+    .info-box {
+      @apply rounded-md border-l-4 border-l-blue-500 border border-blue-200 dark:border-blue-800 bg-blue-50 dark:bg-blue-900/20 p-4 text-sm text-blue-800 dark:text-blue-300;
+    }
+
+    /* Link arrow animation */
+    .link-arrow span { @apply inline-block transition-transform; }
+    .link-arrow:hover span { @apply translate-x-1; }
+
+    /* Scroll-triggered fade-in */
+    .animate-on-scroll {
+      opacity: 0; transform: translateY(12px);
+      transition: opacity 0.5s ease, transform 0.5s ease;
+    }
+    .animate-on-scroll.visible {
+      opacity: 1; transform: translateY(0);
+    }
+
+    /* Timeline vertical line */
+    .cochid-timeline {
+      @apply relative pl-8;
+    }
+    .cochid-timeline::before {
+      content: '';
+      @apply absolute left-2 top-0 bottom-0 w-0.5 bg-gray-200 dark:bg-dark-line;
+    }
+    .cochid-timeline-item {
+      @apply relative pb-8;
+    }
+    .cochid-timeline-item:last-child {
+      @apply pb-0;
+    }
+    .cochid-timeline-item::before {
+      content: '';
+      @apply absolute -left-6 top-1 w-2.5 h-2.5 rounded-full bg-cochid-accent border-2 border-white dark:border-dark-paper;
+      box-shadow: 0 0 0 3px white, 0 0 0 5px rgba(55,99,224,0.15);
+    }
+    .dark .cochid-timeline-item::before {
+      box-shadow: 0 0 0 3px #242830, 0 0 0 5px rgba(55,99,224,0.2);
+    }
+  </style>
 
   {% block head_extra %}{% endblock %}
 </head>
-<body>
+<body class="bg-white dark:bg-dark-bg text-gray-900 dark:text-dark-ink font-sans antialiased">
+
+  <!-- ═══ NAV ═══ -->
+  <nav class="sticky top-0 z-50 backdrop-blur-md bg-white/85 dark:bg-dark-paper/85 border-b border-gray-200 dark:border-dark-line shadow-sm">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 h-14 flex items-center justify-between">
+      <a href="/" class="font-mono font-bold tracking-widest text-sm text-gray-900 dark:text-dark-ink no-underline">COCHID</a>
+      <div class="flex items-center gap-1">
+        <!-- Desktop nav links -->
+        <div class="hidden sm:flex items-center gap-1">
+          <a href="/" class="text-sm px-2 py-1 rounded transition-colors no-underline {% if nav_page == 'inicio' %}text-cochid-accent bg-cochid-accent-subtle{% else %}text-gray-500 dark:text-dark-muted hover:text-gray-900 dark:hover:text-dark-ink hover:bg-cochid-accent-subtle{% endif %}">Inicio</a>
+          <a href="/servicios" class="text-sm px-2 py-1 rounded transition-colors no-underline {% if nav_page == 'servicios' %}text-cochid-accent bg-cochid-accent-subtle{% else %}text-gray-500 dark:text-dark-muted hover:text-gray-900 dark:hover:text-dark-ink hover:bg-cochid-accent-subtle{% endif %}">Servicios</a>
+          <a href="/nosotros" class="text-sm px-2 py-1 rounded transition-colors no-underline {% if nav_page == 'nosotros' %}text-cochid-accent bg-cochid-accent-subtle{% else %}text-gray-500 dark:text-dark-muted hover:text-gray-900 dark:hover:text-dark-ink hover:bg-cochid-accent-subtle{% endif %}">Nosotros</a>
+          <a href="/contacto" class="text-sm px-2 py-1 rounded transition-colors no-underline {% if nav_page == 'contacto' %}text-cochid-accent bg-cochid-accent-subtle{% else %}text-gray-500 dark:text-dark-muted hover:text-gray-900 dark:hover:text-dark-ink hover:bg-cochid-accent-subtle{% endif %}">Contacto</a>
+        </div>
+        <button id="themeToggle" class="ml-1 text-sm px-2 py-1 rounded border border-gray-200 dark:border-dark-line hover:bg-gray-100 dark:hover:bg-dark-line hover:scale-110 active:scale-95 transition-all cursor-pointer" aria-label="Cambiar tema">◐</button>
+        <!-- Mobile hamburger -->
+        <button id="menuToggle" class="sm:hidden ml-1 text-sm px-2 py-1 rounded border border-gray-200 dark:border-dark-line hover:bg-gray-100 dark:hover:bg-dark-line active:scale-95 transition-all cursor-pointer" aria-label="Menú">
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
+        </button>
+      </div>
+    </div>
+    <!-- Mobile menu -->
+    <div id="mobileMenu" class="hidden sm:hidden border-t border-gray-200 dark:border-dark-line bg-white/95 dark:bg-dark-paper/95 backdrop-blur-md">
+      <div class="max-w-5xl mx-auto px-4 py-3 flex flex-col gap-1">
+        <a href="/" class="text-sm px-3 py-2 rounded transition-colors no-underline {% if nav_page == 'inicio' %}text-cochid-accent bg-cochid-accent-subtle{% else %}text-gray-500 dark:text-dark-muted hover:text-gray-900 dark:hover:text-dark-ink hover:bg-cochid-accent-subtle{% endif %}">Inicio</a>
+        <a href="/servicios" class="text-sm px-3 py-2 rounded transition-colors no-underline {% if nav_page == 'servicios' %}text-cochid-accent bg-cochid-accent-subtle{% else %}text-gray-500 dark:text-dark-muted hover:text-gray-900 dark:hover:text-dark-ink hover:bg-cochid-accent-subtle{% endif %}">Servicios</a>
+        <a href="/nosotros" class="text-sm px-3 py-2 rounded transition-colors no-underline {% if nav_page == 'nosotros' %}text-cochid-accent bg-cochid-accent-subtle{% else %}text-gray-500 dark:text-dark-muted hover:text-gray-900 dark:hover:text-dark-ink hover:bg-cochid-accent-subtle{% endif %}">Nosotros</a>
+        <a href="/contacto" class="text-sm px-3 py-2 rounded transition-colors no-underline {% if nav_page == 'contacto' %}text-cochid-accent bg-cochid-accent-subtle{% else %}text-gray-500 dark:text-dark-muted hover:text-gray-900 dark:hover:text-dark-ink hover:bg-cochid-accent-subtle{% endif %}">Contacto</a>
+      </div>
+    </div>
+  </nav>
+
   {% block body %}{% endblock %}
 
-  <!-- illanes v3 JS (dark mode) -->
-  <script src="https://static.illanes00.cl/illanes/v3/illanes-manual.js"></script>
+  <!-- ═══ FOOTER ═══ -->
+  <footer class="border-t border-gray-200 dark:border-dark-line pt-10 pb-6 text-sm text-gray-500 dark:text-dark-muted">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6">
+      <div class="grid grid-cols-1 md:grid-cols-[2fr_1fr_1fr] gap-8 mb-8">
+        <div>
+          <div class="font-mono font-bold tracking-widest text-sm text-gray-900 dark:text-dark-ink">COCHID</div>
+          <p class="mt-2">Corporación Chilena de Inteligencia de Datos. Transformamos datos complejos en ventaja competitiva para organizaciones públicas y privadas.</p>
+        </div>
+        <div>
+          <h4 class="text-xs uppercase tracking-wider text-gray-900 dark:text-dark-ink mb-3 font-semibold">Servicios</h4>
+          <ul class="space-y-1.5">
+            <li><a href="/servicios#ingenieria" class="hover:text-cochid-accent transition-colors">Ingeniería de Datos</a></li>
+            <li><a href="/servicios#analitica" class="hover:text-cochid-accent transition-colors">Analítica Avanzada</a></li>
+            <li><a href="/servicios#consultoria" class="hover:text-cochid-accent transition-colors">Consultoría Estratégica</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="text-xs uppercase tracking-wider text-gray-900 dark:text-dark-ink mb-3 font-semibold">Contacto</h4>
+          <ul class="space-y-1.5">
+            <li><a href="mailto:contacto@cochid.cl" class="hover:text-cochid-accent transition-colors">contacto@cochid.cl</a></li>
+            <li>Santiago, Chile</li>
+            <li><a href="/contacto" class="hover:text-cochid-accent transition-colors">Formulario de contacto</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="border-t border-gray-200 dark:border-dark-line pt-4 text-center text-xs">
+        &copy; 2025 COCHID · Corporación Chilena de Inteligencia de Datos
+      </div>
+    </div>
+  </footer>
+
+  <!-- Dark mode toggle JS -->
+  <script>
+    (function() {
+      var btn = document.getElementById('themeToggle');
+      var modes = ['light', 'dark', 'auto'];
+      var glyphs = { light: '☼', dark: '☽', auto: '◐' };
+      var current = localStorage.getItem('theme') || 'auto';
+
+      function applyTheme(mode) {
+        current = mode;
+        localStorage.setItem('theme', mode);
+        btn.textContent = glyphs[mode];
+
+        var isDark;
+        if (mode === 'dark') isDark = true;
+        else if (mode === 'light') isDark = false;
+        else isDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+
+        document.documentElement.classList.toggle('dark', isDark);
+      }
+
+      applyTheme(current);
+
+      btn.addEventListener('click', function() {
+        var idx = modes.indexOf(current);
+        applyTheme(modes[(idx + 1) % modes.length]);
+      });
+
+      window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', function() {
+        if (current === 'auto') applyTheme('auto');
+      });
+    })();
+  </script>
+
+  <!-- Mobile menu toggle -->
+  <script>
+    (function() {
+      var toggle = document.getElementById('menuToggle');
+      var menu = document.getElementById('mobileMenu');
+      if (toggle && menu) {
+        toggle.addEventListener('click', function() {
+          menu.classList.toggle('hidden');
+        });
+      }
+    })();
+  </script>
+
+  <!-- Scroll animations -->
+  <script>
+    (function() {
+      var els = document.querySelectorAll('.animate-on-scroll');
+      if (!els.length) return;
+      var observer = new IntersectionObserver(function(entries) {
+        entries.forEach(function(entry) {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+            observer.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.1 });
+      els.forEach(function(el) { observer.observe(el); });
+    })();
+  </script>
   {% block scripts_extra %}{% endblock %}
 </body>
 </html>
