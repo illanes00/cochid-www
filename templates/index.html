@@ -1,0 +1,373 @@
+{% extends "base.html" %}
+
+{% block body %}
+
+<!-- ═══ TOPBAR ═══ -->
+<nav class="topbar">
+  <div class="container flex-between">
+    <div>
+      <strong>COCHID</strong>
+      <span class="hidden-mobile"> / Corporación Chilena de Inteligencia de Datos</span>
+    </div>
+    <div class="flex-row gap-1">
+      <a href="#servicios" class="btn btn-sm">Servicios</a>
+      <a href="#nosotros" class="btn btn-sm">Nosotros</a>
+      <a href="#metodologia" class="btn btn-sm">Metodología</a>
+      <a href="#contacto" class="btn btn-sm">Contacto</a>
+      <button id="themeToggle" class="btn btn-sm" aria-label="Cambiar tema">◐</button>
+    </div>
+  </div>
+</nav>
+
+<!-- ═══ HERO ═══ -->
+<section class="cochid-hero" id="inicio">
+  <div class="container">
+    <div class="grid-2">
+      <div>
+        <p class="cochid-subtitle">Inteligencia de Datos / Chile</p>
+        <h1>Transformamos datos en decisiones estratégicas</h1>
+        <p>Somos una corporación chilena especializada en ingeniería de datos, analítica avanzada y consultoría estratégica. Ayudamos a organizaciones públicas y privadas a extraer valor real de sus datos.</p>
+        <div class="flex-row gap-05 mt-1">
+          <a href="#servicios" class="btn btn-primary">Ver servicios</a>
+          <a href="#contacto" class="btn">Contactar</a>
+        </div>
+      </div>
+      <div>
+        <div class="card">
+          <div class="card-header flex-between">
+            <strong>Panel de métricas</strong>
+            <span class="pill pill--ok">Operativo</span>
+          </div>
+          <div class="card-body">
+            <table class="table">
+              <tbody>
+                <tr>
+                  <td class="muted">Fuentes integradas</td>
+                  <td class="text-right"><span class="cochid-metric">142</span></td>
+                  <td><span class="pill pill--ok">sync</span></td>
+                </tr>
+                <tr>
+                  <td class="muted">Registros procesados</td>
+                  <td class="text-right"><span class="cochid-metric">2.4M</span></td>
+                  <td><span class="pill pill--info">batch</span></td>
+                </tr>
+                <tr>
+                  <td class="muted">Precisión del modelo</td>
+                  <td class="text-right"><span class="cochid-metric">96.7%</span></td>
+                  <td><span class="pill pill--ok">prod</span></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ SERVICIOS ═══ -->
+<section id="servicios" class="mt-2">
+  <div class="container">
+    <h2>Servicios</h2>
+    <p class="muted mb-1">Soluciones integrales en inteligencia de datos para organizaciones que necesitan resultados concretos.</p>
+    <div class="grid-3">
+
+      <div class="card">
+        <div class="card-header">
+          <span class="pill pill--info">Ingeniería</span>
+        </div>
+        <div class="card-body">
+          <h3>Ingeniería de Datos</h3>
+          <p>Diseño e implementación de arquitecturas de datos robustas y escalables.</p>
+          <ul>
+            <li>Pipelines ETL/ELT automatizados</li>
+            <li>Data warehousing y data lakes</li>
+            <li>Gobernanza y calidad de datos</li>
+            <li>Integración de fuentes heterogéneas</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-header">
+          <span class="pill pill--ok">Analítica</span>
+        </div>
+        <div class="card-body">
+          <h3>Analítica Avanzada</h3>
+          <p>Modelos predictivos y herramientas de visualización para decisiones basadas en evidencia.</p>
+          <ul>
+            <li>Machine learning aplicado</li>
+            <li>Dashboards interactivos</li>
+            <li>Reportería automatizada</li>
+            <li>Análisis estadístico y econométrico</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-header">
+          <span class="pill pill--warn">Estrategia</span>
+        </div>
+        <div class="card-body">
+          <h3>Consultoría Estratégica</h3>
+          <p>Acompañamiento en la definición e implementación de estrategias de datos.</p>
+          <ul>
+            <li>Diagnóstico de madurez de datos</li>
+            <li>Estrategia de datos organizacional</li>
+            <li>Capacitación y transferencia</li>
+            <li>Evaluación de herramientas</li>
+          </ul>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ═══ CIFRAS ═══ -->
+<section class="cochid-cifras mt-2" id="cifras">
+  <div class="container">
+    <h2>Cifras clave</h2>
+    <div class="grid-4 mt-1">
+      <div class="card card-compact">
+        <div class="cochid-metric">50+</div>
+        <div class="cochid-metric-label">Proyectos</div>
+      </div>
+      <div class="card card-compact">
+        <div class="cochid-metric">20+</div>
+        <div class="cochid-metric-label">Clientes</div>
+      </div>
+      <div class="card card-compact">
+        <div class="cochid-metric">8</div>
+        <div class="cochid-metric-label">Sectores</div>
+      </div>
+      <div class="card card-compact">
+        <div class="cochid-metric">5+</div>
+        <div class="cochid-metric-label">Años experiencia</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ METODOLOGÍA ═══ -->
+<section id="metodologia" class="mt-2">
+  <div class="container">
+    <h2>Metodología</h2>
+    <p class="muted mb-1">Proceso estructurado en cuatro fases para garantizar resultados medibles y transferencia de conocimiento.</p>
+    <div class="steps">
+      <div class="step step--completed">
+        <div class="step-header">
+          <span class="cochid-steps"><span class="step-number">01</span></span>
+          <strong>Diagnóstico</strong>
+          <span class="pill pill--ok">Fase 1</span>
+        </div>
+        <div class="step-body">
+          Levantamiento del estado actual: fuentes de datos, procesos, infraestructura y capacidades del equipo. Identificación de brechas y oportunidades.
+        </div>
+      </div>
+      <div class="step step--completed">
+        <div class="step-header">
+          <span class="cochid-steps"><span class="step-number">02</span></span>
+          <strong>Arquitectura</strong>
+          <span class="pill pill--ok">Fase 2</span>
+        </div>
+        <div class="step-body">
+          Diseño de la solución técnica: arquitectura de datos, selección de herramientas, modelado y plan de implementación detallado.
+        </div>
+      </div>
+      <div class="step step--active">
+        <div class="step-header">
+          <span class="cochid-steps"><span class="step-number">03</span></span>
+          <strong>Implementación</strong>
+          <span class="pill pill--info">Fase 3</span>
+        </div>
+        <div class="step-body">
+          Desarrollo iterativo con entregas incrementales. Pipelines, modelos, dashboards y automatizaciones con testing continuo.
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-header">
+          <span class="cochid-steps"><span class="step-number">04</span></span>
+          <strong>Transferencia</strong>
+          <span class="pill">Fase 4</span>
+        </div>
+        <div class="step-body">
+          Documentación completa, capacitación al equipo interno y acompañamiento post-implementación para asegurar adopción.
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ NOSOTROS ═══ -->
+<section id="nosotros" class="mt-2">
+  <div class="container">
+    <h2>Nosotros</h2>
+    <div class="grid-2 mt-1">
+      <div>
+        <p>COCHID es una corporación chilena enfocada en resolver problemas complejos de datos para organizaciones que necesitan evidencia para tomar decisiones.</p>
+        <p>Combinamos rigor técnico con conocimiento profundo del contexto chileno y latinoamericano — regulaciones, sistemas públicos, y realidades operacionales locales.</p>
+        <div class="alert alert-info mt-1">
+          <strong>Enfoque Chile:</strong> Experiencia directa con sistemas y datos del ecosistema público y privado chileno. Entendemos las particularidades de trabajar con datos en contexto local.
+        </div>
+      </div>
+      <div>
+        <strong class="mb-05 block">Sectores de experiencia</strong>
+        <div class="list-group">
+          <div class="list-group-item flex-between">
+            Salud Pública
+            <span class="dot ok"></span>
+          </div>
+          <div class="list-group-item flex-between">
+            Política Pública
+            <span class="dot ok"></span>
+          </div>
+          <div class="list-group-item flex-between">
+            Financiero
+            <span class="dot ok"></span>
+          </div>
+          <div class="list-group-item flex-between">
+            Educación
+            <span class="dot ok"></span>
+          </div>
+          <div class="list-group-item flex-between">
+            Retail
+            <span class="dot ok"></span>
+          </div>
+          <div class="list-group-item flex-between">
+            Infraestructura
+            <span class="dot ok"></span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ STACK TECNOLÓGICO ═══ -->
+<section id="stack" class="cochid-stack mt-2">
+  <div class="container">
+    <h2>Stack Tecnológico</h2>
+    <p class="muted mb-1">Herramientas probadas en producción, seleccionadas por rendimiento y mantenibilidad.</p>
+    <div class="grid-3">
+
+      <div class="card card-compact">
+        <strong>Lenguajes</strong>
+        <div class="mt-05">
+          <span class="pill">Python</span>
+          <span class="pill">SQL</span>
+          <span class="pill">R</span>
+          <span class="pill">Bash</span>
+        </div>
+      </div>
+
+      <div class="card card-compact">
+        <strong>Datos</strong>
+        <div class="mt-05">
+          <span class="pill">PostgreSQL</span>
+          <span class="pill">DuckDB</span>
+          <span class="pill">Apache Airflow</span>
+          <span class="pill">dbt</span>
+        </div>
+      </div>
+
+      <div class="card card-compact">
+        <strong>ML / IA</strong>
+        <div class="mt-05">
+          <span class="pill">scikit-learn</span>
+          <span class="pill">XGBoost</span>
+          <span class="pill">PyTorch</span>
+          <span class="pill">LangChain</span>
+        </div>
+      </div>
+
+      <div class="card card-compact">
+        <strong>Visualización</strong>
+        <div class="mt-05">
+          <span class="pill">Grafana</span>
+          <span class="pill">Plotly</span>
+          <span class="pill">Observable</span>
+          <span class="pill">Streamlit</span>
+        </div>
+      </div>
+
+      <div class="card card-compact">
+        <strong>Infraestructura</strong>
+        <div class="mt-05">
+          <span class="pill">Linux</span>
+          <span class="pill">systemd</span>
+          <span class="pill">Caddy</span>
+          <span class="pill">Docker</span>
+        </div>
+      </div>
+
+      <div class="card card-compact">
+        <strong>Cloud</strong>
+        <div class="mt-05">
+          <span class="pill">AWS</span>
+          <span class="pill">GCP</span>
+          <span class="pill">Cloudflare</span>
+          <span class="pill">GitHub Actions</span>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ═══ CONTACTO ═══ -->
+<section id="contacto" class="cochid-contacto mt-2">
+  <div class="container">
+    <h2>Contacto</h2>
+    <div class="grid-2 mt-1">
+      <div>
+        <p>Conversemos sobre cómo podemos ayudar a su organización a tomar mejores decisiones con datos.</p>
+        <div class="list-group mt-1">
+          <div class="list-group-item">
+            <strong>Email</strong><br>
+            <a href="mailto:contacto@cochid.cl">contacto@cochid.cl</a>
+          </div>
+          <div class="list-group-item">
+            <strong>Ubicación</strong><br>
+            Santiago, Chile
+          </div>
+          <div class="list-group-item">
+            <strong>Web</strong><br>
+            cochid.cl
+          </div>
+        </div>
+      </div>
+      <div>
+        <form class="card" action="mailto:contacto@cochid.cl" method="post" enctype="text/plain">
+          <div class="card-header">
+            <strong>Escríbenos</strong>
+          </div>
+          <div class="card-body">
+            <div class="form-group">
+              <label for="nombre">Nombre</label>
+              <input type="text" id="nombre" name="nombre" class="input" placeholder="Su nombre" required>
+            </div>
+            <div class="form-group">
+              <label for="email">Email</label>
+              <input type="email" id="email" name="email" class="input" placeholder="correo@ejemplo.cl" required>
+            </div>
+            <div class="form-group">
+              <label for="mensaje">Mensaje</label>
+              <textarea id="mensaje" name="mensaje" class="input" placeholder="¿En qué podemos ayudarle?" required></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary w-full">Enviar mensaje</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ FOOTER ═══ -->
+<footer class="cochid-footer">
+  <div class="container">
+    <strong>COCHID</strong> · Corporación Chilena de Inteligencia de Datos · Santiago, Chile
+  </div>
+</footer>
+
+{% endblock %}

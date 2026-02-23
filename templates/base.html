@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="COCHID — Corporación Chilena de Inteligencia de Datos. Transformamos datos en decisiones estratégicas.">
+  <title>{% block title %}COCHID — Corporación Chilena de Inteligencia de Datos{% endblock %}</title>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+
+  <!-- illanes v3 design system -->
+  <link rel="stylesheet" href="https://static.illanes00.cl/illanes/v3/illanes-manual.min.css">
+  <link rel="stylesheet" href="https://static.illanes00.cl/illanes/v3/illanes-manual-extended.min.css">
+
+  <!-- COCHID overrides -->
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/cochid.css') }}">
+
+  {% block head_extra %}{% endblock %}
+</head>
+<body>
+  {% block body %}{% endblock %}
+
+  <!-- illanes v3 JS (dark mode) -->
+  <script src="https://static.illanes00.cl/illanes/v3/illanes-manual.js"></script>
+  {% block scripts_extra %}{% endblock %}
+</body>
+</html>
