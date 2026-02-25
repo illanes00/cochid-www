@@ -10,7 +10,7 @@
   <div class="max-w-6xl mx-auto px-4 sm:px-6 relative">
     <span class="tag tag-cyan mb-4 animate-fade-in-up">Quiénes somos</span>
     <h1 class="text-4xl sm:text-5xl font-bold mb-3 animate-fade-in-up-d1">Nosotros</h1>
-    <p class="text-lg text-light-muted dark:text-gray-400 max-w-2xl animate-fade-in-up-d2">Corporación Chilena de Inteligencia de Datos. 19 servicios en producción, 3 servidores propios, infraestructura soberana.</p>
+    <p class="text-lg text-light-muted dark:text-gray-400 max-w-2xl animate-fade-in-up-d2">Corporación Chilena de Inteligencia de Datos. {{ stats.services }} servicios en producción, {{ stats.servers }} servidores propios, infraestructura soberana.</p>
   </div>
 </section>
 
@@ -27,7 +27,7 @@
         <p>Decidimos construir lo que faltaba: un <strong class="text-light-ink dark:text-white">warehouse de datos públicos chilenos</strong> que descarga, normaliza y sirve decenas de fuentes oficiales a través de una API abierta. Así nació <a href="https://datos.illanes00.cl" target="_blank" class="text-cochid-electric hover:text-cochid-electric-hover font-medium">datos.illanes00.cl</a> — el portal de datos que cruza seguridad, justicia, elecciones, encuestas, presupuesto, transporte, legislación, territorio y más.</p>
         <p>De ahí crecimos naturalmente. Si ya teníamos la infraestructura para procesar datos masivos, ¿por qué no aplicarla al periodismo? Así nació <a href="https://periodismo2.cl" target="_blank" class="text-cochid-cyan hover:text-cochid-cyan-hover font-medium">periodismo2.cl</a> — una plataforma que ingesta más de 100 fuentes de noticias y las procesa con NLP: deduplicación, clasificación, scoring, detección de tendencias.</p>
         <p>Y si ya sabíamos construir plataformas, ¿por qué no hacer que cualquier persona pueda tener la suya? Así nació <a href="https://indieweb.cl" target="_blank" class="text-amber-500 hover:text-amber-600 font-medium">indieweb.cl</a> — hosting ciudadano donde personas no técnicas construyen aplicaciones web con ayuda de IA.</p>
-        <p>Hoy COCHID opera <strong class="text-light-ink dark:text-white">19+ servicios en producción</strong> distribuidos en 3 servidores, con deployment continuo vía GitHub Actions, monitoreo con Prometheus/Grafana, y reverse proxy Caddy. Todo sin depender de nubes gigantes. <strong class="text-light-ink dark:text-white">Infraestructura soberana</strong> al servicio de la inteligencia de datos.</p>
+        <p>Hoy COCHID opera <strong class="text-light-ink dark:text-white">{{ stats.services }} servicios en producción</strong> distribuidos en {{ stats.servers }} servidores, con deployment continuo vía GitHub Actions, monitoreo con Prometheus/Grafana, y reverse proxy Caddy. Todo sin depender de nubes gigantes. <strong class="text-light-ink dark:text-white">Infraestructura soberana</strong> al servicio de la inteligencia de datos.</p>
       </div>
     </div>
   </div>
@@ -83,19 +83,19 @@
     </div>
     <div class="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6 mb-8">
       <div class="glass-card p-6 md:p-8 text-center reveal" style="transition-delay:0.05s">
-        <div class="font-mono text-4xl md:text-5xl font-bold gradient-text leading-none">19+</div>
+        <div class="font-mono text-4xl md:text-5xl font-bold gradient-text leading-none">{{ stats.services }}</div>
         <div class="text-xs text-light-muted dark:text-gray-400 uppercase tracking-wider mt-3 font-medium">Servicios en producción</div>
       </div>
       <div class="glass-card p-6 md:p-8 text-center reveal" style="transition-delay:0.1s">
-        <div class="font-mono text-4xl md:text-5xl font-bold gradient-text leading-none">3</div>
+        <div class="font-mono text-4xl md:text-5xl font-bold gradient-text leading-none">{{ stats.servers }}</div>
         <div class="text-xs text-light-muted dark:text-gray-400 uppercase tracking-wider mt-3 font-medium">VPS propios</div>
       </div>
       <div class="glass-card p-6 md:p-8 text-center reveal" style="transition-delay:0.15s">
-        <div class="font-mono text-4xl md:text-5xl font-bold gradient-text leading-none">100+</div>
+        <div class="font-mono text-4xl md:text-5xl font-bold gradient-text leading-none">{{ stats.sources }}</div>
         <div class="text-xs text-light-muted dark:text-gray-400 uppercase tracking-wider mt-3 font-medium">Fuentes de datos</div>
       </div>
       <div class="glass-card p-6 md:p-8 text-center reveal" style="transition-delay:0.2s">
-        <div class="font-mono text-4xl md:text-5xl font-bold gradient-text leading-none">10+</div>
+        <div class="font-mono text-4xl md:text-5xl font-bold gradient-text leading-none">{{ stats.domains }}</div>
         <div class="text-xs text-light-muted dark:text-gray-400 uppercase tracking-wider mt-3 font-medium">Dominios de datos</div>
       </div>
     </div>
@@ -115,7 +115,7 @@
         </span>
       </div>
       <div class="p-4">
-        <svg viewBox="0 0 700 180" class="w-full" style="min-height:140px">
+        <svg viewBox="0 0 700 180" class="w-full" aria-hidden="true" style="min-height:140px">
           <!-- Central COCHID hub -->
           <circle cx="350" cy="90" r="22" fill="#2d7aff" opacity="0.08"/>
           <circle cx="350" cy="90" r="15" fill="#2d7aff" opacity="0.15"><animate attributeName="r" values="15;18;15" dur="4s" repeatCount="indefinite"/></circle>
@@ -288,11 +288,11 @@
         <div class="flex flex-wrap justify-center gap-3">
           <a href="/contacto" class="inline-flex items-center gap-2 px-6 py-3 rounded-lg text-sm font-semibold bg-white text-cochid-electric hover:bg-gray-100 active:scale-[0.97] transition-all shadow-lg">
             Contactar
-            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+            <svg class="w-4 h-4" aria-hidden="true" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
           </a>
           <a href="https://datos.illanes00.cl" target="_blank" class="inline-flex items-center gap-2 px-6 py-3 rounded-lg text-sm font-semibold border border-white/30 text-white hover:bg-white/10 active:scale-[0.97] transition-all">
             Ver datos en vivo
-            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/></svg>
+            <svg class="w-4 h-4" aria-hidden="true" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/></svg>
           </a>
         </div>
       </div>

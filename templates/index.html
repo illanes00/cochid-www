@@ -74,13 +74,13 @@
         <p class="animate-fade-in-up-d2 text-sm font-mono text-cochid-electric/80 mb-6 tracking-wide">COCHID</p>
 
         <p class="animate-fade-in-up-d2 text-lg text-light-muted dark:text-gray-400 leading-relaxed mb-8 max-w-lg">
-          19 servicios en producción. 3 servidores propios. Más de 100 fuentes de datos públicos chilenos descargados, normalizados y servidos vía API. Sin AWS, sin humo, sin PowerPoints.
+          {{ stats.services }} servicios en producción. {{ stats.servers }} servidores propios. Más de {{ stats.sources }} fuentes de datos públicos chilenos descargados, normalizados y servidos vía API. Sin AWS, sin humo, sin PowerPoints.
         </p>
 
         <div class="animate-fade-in-up-d3 flex flex-wrap gap-3">
           <a href="/servicios" class="btn-primary">
             Ver servicios
-            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+            <svg class="w-4 h-4" aria-hidden="true" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
           </a>
           <a href="/contacto" class="btn-secondary">Contacto</a>
         </div>
@@ -111,7 +111,7 @@
             <!-- Network graph SVG -->
             <div class="relative rounded-lg bg-light-surface-alt/50 dark:bg-cochid-navy/60 border border-gray-100 dark:border-cochid-surface-border overflow-hidden">
               <div class="absolute top-2 left-3 text-[0.55rem] font-mono text-light-muted dark:text-gray-600 uppercase tracking-wider">Cluster de fuentes de datos</div>
-              <svg viewBox="0 0 400 180" class="w-full" style="min-height:140px">
+              <svg viewBox="0 0 400 180" class="w-full" aria-hidden="true" style="min-height:140px">
                 <!-- Cluster connections -->
                 <line x1="200" y1="90" x2="80" y2="50" stroke="#2d7aff" stroke-width="1" opacity="0.2" stroke-dasharray="3 3"><animate attributeName="stroke-dashoffset" from="0" to="-12" dur="3s" repeatCount="indefinite"/></line>
                 <line x1="200" y1="90" x2="320" y2="40" stroke="#00d4aa" stroke-width="1" opacity="0.2" stroke-dasharray="3 3"><animate attributeName="stroke-dashoffset" from="0" to="-12" dur="4s" repeatCount="indefinite"/></line>
@@ -191,15 +191,15 @@
             <!-- Live feed ticker -->
             <div class="grid grid-cols-3 gap-2">
               <div class="rounded-lg bg-light-surface-alt dark:bg-cochid-navy/60 p-2.5 border border-gray-100 dark:border-cochid-surface-border text-center">
-                <div class="font-mono text-lg font-bold text-cochid-electric">19+</div>
+                <div class="font-mono text-lg font-bold text-cochid-electric">{{ stats.services }}</div>
                 <div class="text-[0.55rem] font-mono text-light-muted dark:text-gray-500">servicios</div>
               </div>
               <div class="rounded-lg bg-light-surface-alt dark:bg-cochid-navy/60 p-2.5 border border-gray-100 dark:border-cochid-surface-border text-center">
-                <div class="font-mono text-lg font-bold text-cochid-cyan">100+</div>
+                <div class="font-mono text-lg font-bold text-cochid-cyan">{{ stats.sources }}</div>
                 <div class="text-[0.55rem] font-mono text-light-muted dark:text-gray-500">fuentes</div>
               </div>
               <div class="rounded-lg bg-light-surface-alt dark:bg-cochid-navy/60 p-2.5 border border-gray-100 dark:border-cochid-surface-border text-center">
-                <div class="font-mono text-lg font-bold text-amber-500">10+</div>
+                <div class="font-mono text-lg font-bold text-amber-500">{{ stats.domains }}</div>
                 <div class="text-[0.55rem] font-mono text-light-muted dark:text-gray-500">dominios</div>
               </div>
             </div>
@@ -235,11 +235,11 @@
           <div class="mt-2 text-light-muted dark:text-gray-400">{</div>
           <div class="text-light-muted dark:text-gray-400 pl-4">"total_olas": 63,</div>
           <div class="text-light-muted dark:text-gray-400 pl-4">"total_entrevistas": 93847,</div>
-          <div class="text-light-muted dark:text-gray-400 pl-4">"rango": "1990-2023",</div>
+          <div class="text-light-muted dark:text-gray-400 pl-4">"rango": "1990-2025",</div>
           <div class="text-light-muted dark:text-gray-400 pl-4">"formato": ["json", "csv", "parquet"]</div>
           <div class="text-light-muted dark:text-gray-400">}</div>
           <div class="text-light-muted dark:text-gray-500 mt-3 mb-1"># Delitos por comuna — Carabineros + PDI</div>
-          <div class="text-cochid-cyan">$ curl https://datos.illanes00.cl/api/v1/seguridad/delitos?comuna=santiago&anio=2023</div>
+          <div class="text-cochid-cyan">$ curl https://datos.illanes00.cl/api/v1/seguridad/delitos?comuna=santiago&anio=2024</div>
         </div>
       </div>
     </div>
@@ -261,7 +261,7 @@
         <div class="p-6 md:p-8">
           <div class="flex items-center gap-3 mb-4">
             <div class="w-10 h-10 rounded-lg bg-cochid-glow border border-cochid-electric/20 flex items-center justify-center">
-              <svg class="w-5 h-5 text-cochid-electric" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4 7v10c0 2.21 3.582 4 8 4s8-1.79 8-4V7M4 7c0 2.21 3.582 4 8 4s8-1.79 8-4M4 7c0-2.21 3.582-4 8-4s8 1.79 8 4"/></svg>
+              <svg class="w-5 h-5 text-cochid-electric" aria-hidden="true" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4 7v10c0 2.21 3.582 4 8 4s8-1.79 8-4V7M4 7c0 2.21 3.582 4 8 4s8-1.79 8-4M4 7c0-2.21 3.582-4 8-4s8 1.79 8 4"/></svg>
             </div>
             <div>
               <h3 class="text-xl font-bold">datos.illanes00.cl</h3>
@@ -277,7 +277,7 @@
           </div>
           <a href="https://datos.illanes00.cl" target="_blank" class="link-arrow text-cochid-electric hover:text-cochid-electric-hover">
             Explorar datos
-            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/></svg>
+            <svg aria-hidden="true" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/></svg>
           </a>
         </div>
         <div class="p-6 md:p-8 bg-light-surface-alt/50 dark:bg-cochid-navy/40 lg:border-l border-t lg:border-t-0 border-gray-200/50 dark:border-cochid-surface-border">
@@ -304,7 +304,7 @@
         <div class="p-6 md:p-8">
           <div class="flex items-center gap-3 mb-4">
             <div class="w-10 h-10 rounded-lg bg-cochid-glow-cyan border border-cochid-cyan/20 flex items-center justify-center">
-              <svg class="w-5 h-5 text-cochid-cyan" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M19 20H5a2 2 0 01-2-2V6a2 2 0 012-2h10a2 2 0 012 2v1m2 13a2 2 0 01-2-2V7m2 13a2 2 0 002-2V9a2 2 0 00-2-2h-2m-4-3H9M7 16h6M7 8h6v4H7V8z"/></svg>
+              <svg class="w-5 h-5 text-cochid-cyan" aria-hidden="true" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M19 20H5a2 2 0 01-2-2V6a2 2 0 012-2h10a2 2 0 012 2v1m2 13a2 2 0 01-2-2V7m2 13a2 2 0 002-2V9a2 2 0 00-2-2h-2m-4-3H9M7 16h6M7 8h6v4H7V8z"/></svg>
             </div>
             <div>
               <h3 class="text-xl font-bold">periodismo2.cl</h3>
@@ -321,7 +321,7 @@
           </div>
           <a href="https://periodismo2.cl" target="_blank" class="link-arrow text-cochid-cyan hover:text-cochid-cyan-hover">
             Ver plataforma
-            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/></svg>
+            <svg aria-hidden="true" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/></svg>
           </a>
         </div>
         <div class="p-6 md:p-8 bg-light-surface-alt/50 dark:bg-cochid-navy/40 lg:border-l border-t lg:border-t-0 border-gray-200/50 dark:border-cochid-surface-border">
@@ -362,7 +362,7 @@
       <div class="glass-card p-6 reveal group" style="transition-delay:0.2s">
         <div class="flex items-center gap-3 mb-4">
           <div class="w-10 h-10 rounded-lg bg-amber-500/5 border border-amber-400/20 flex items-center justify-center group-hover:scale-110 transition-transform">
-            <svg class="w-5 h-5 text-amber-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9"/></svg>
+            <svg class="w-5 h-5 text-amber-500" aria-hidden="true" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9"/></svg>
           </div>
           <div>
             <h3 class="font-bold">indieweb.cl</h3>
@@ -377,7 +377,7 @@
         </div>
         <a href="https://indieweb.cl" target="_blank" class="link-arrow text-amber-500 hover:text-amber-600">
           Ver plataforma
-          <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/></svg>
+          <svg aria-hidden="true" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/></svg>
         </a>
       </div>
 
@@ -385,7 +385,7 @@
       <div class="glass-card p-6 reveal group" style="transition-delay:0.3s">
         <div class="flex items-center gap-3 mb-4">
           <div class="w-10 h-10 rounded-lg bg-cochid-glow border border-cochid-electric/20 flex items-center justify-center group-hover:scale-110 transition-transform">
-            <svg class="w-5 h-5 text-cochid-electric" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>
+            <svg class="w-5 h-5 text-cochid-electric" aria-hidden="true" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>
           </div>
           <div>
             <h3 class="font-bold">situacion.cl</h3>
@@ -400,7 +400,7 @@
         </div>
         <a href="https://situacion.cl" target="_blank" class="link-arrow text-cochid-electric hover:text-cochid-electric-hover">
           Ver monitor
-          <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/></svg>
+          <svg aria-hidden="true" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/></svg>
         </a>
       </div>
     </div>
@@ -430,7 +430,7 @@
           <span class="w-2 h-2 rounded-full bg-cochid-cyan"></span>
           <h4 class="font-bold text-sm"><a href="https://discursos.illanes00.cl" target="_blank" class="hover:text-cochid-cyan transition-colors">Discursos</a></h4>
         </div>
-        <p class="text-xs text-light-muted dark:text-gray-400 leading-relaxed mb-2">Corpus completo de discursos presidenciales 2018-2023 (Piñera + Boric). Búsqueda por keyword, frecuencia absoluta/relativa, marcadores de hitos políticos.</p>
+        <p class="text-xs text-light-muted dark:text-gray-400 leading-relaxed mb-2">Corpus completo de discursos presidenciales 2018-2025 (Piñera + Boric). Búsqueda por keyword, frecuencia absoluta/relativa, marcadores de hitos políticos.</p>
         <code class="text-[0.6rem] font-mono text-cochid-cyan/60">discursos.illanes00.cl/buscar?q=seguridad</code>
       </div>
       <div class="glass-card p-5 reveal group" style="transition-delay:0.15s">
@@ -504,7 +504,7 @@
       <div class="p-6 md:p-8">
         <!-- SVG Architecture topology -->
         <div class="rounded-xl bg-light-surface-alt/50 dark:bg-cochid-navy/60 border border-gray-100 dark:border-cochid-surface-border p-4 mb-6 overflow-hidden">
-          <svg viewBox="0 0 700 260" class="w-full" style="min-height:200px">
+          <svg viewBox="0 0 700 260" class="w-full" aria-hidden="true" style="min-height:200px">
             <!-- Internet cloud -->
             <ellipse cx="350" cy="32" rx="50" ry="16" fill="none" stroke="#64748b" stroke-width="1" stroke-dasharray="3 3" opacity="0.4"/>
             <text x="350" y="36" text-anchor="middle" fill="#64748b" font-size="9" font-family="monospace">Internet</text>
@@ -601,7 +601,7 @@
 <section class="py-12 border-t border-gray-200/50 dark:border-cochid-surface-border">
   <div class="max-w-6xl mx-auto px-4 sm:px-6">
     <a href="https://circulodesantiago.cl" target="_blank" class="flex items-center justify-center gap-3 group">
-      <svg width="28" height="28" viewBox="0 0 24 24" fill="none" class="text-light-muted dark:text-gray-500 group-hover:text-light-ink dark:group-hover:text-gray-300 transition-colors">
+      <svg width="28" height="28" viewBox="0 0 24 24" fill="none" aria-hidden="true" class="text-light-muted dark:text-gray-500 group-hover:text-light-ink dark:group-hover:text-gray-300 transition-colors">
         <circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="2"/>
       </svg>
       <span class="text-sm text-light-muted dark:text-gray-500 group-hover:text-light-ink dark:group-hover:text-gray-300 transition-colors">Empresa asociada al <strong class="font-semibold">Círculo de Santiago</strong></span>
@@ -621,11 +621,11 @@
         <div class="flex flex-wrap justify-center gap-3">
           <a href="/contacto" class="inline-flex items-center gap-2 px-6 py-3 rounded-lg text-sm font-semibold bg-white text-cochid-electric hover:bg-gray-100 active:scale-[0.97] transition-all shadow-lg">
             Contactar
-            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+            <svg class="w-4 h-4" aria-hidden="true" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
           </a>
           <a href="https://datos.illanes00.cl" target="_blank" class="inline-flex items-center gap-2 px-6 py-3 rounded-lg text-sm font-semibold border border-white/30 text-white hover:bg-white/10 active:scale-[0.97] transition-all">
             Ver datos en vivo
-            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/></svg>
+            <svg class="w-4 h-4" aria-hidden="true" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/></svg>
           </a>
         </div>
       </div>

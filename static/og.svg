@@ -1,0 +1,35 @@
+<svg width="1200" height="630" viewBox="0 0 1200 630" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1200" height="630" fill="#0a0f1e"/>
+  <!-- Gradient background -->
+  <circle cx="200" cy="300" r="400" fill="#2d7aff" opacity="0.06"/>
+  <circle cx="900" cy="200" r="350" fill="#00d4aa" opacity="0.04"/>
+  <circle cx="700" cy="500" r="300" fill="#f59e0b" opacity="0.02"/>
+  <!-- Network nodes -->
+  <circle cx="150" cy="200" r="6" fill="#2d7aff" opacity="0.5"/>
+  <circle cx="350" cy="120" r="4" fill="#00d4aa" opacity="0.4"/>
+  <circle cx="900" cy="180" r="5" fill="#2d7aff" opacity="0.4"/>
+  <circle cx="1050" cy="400" r="4" fill="#00d4aa" opacity="0.3"/>
+  <circle cx="200" cy="450" r="3" fill="#f59e0b" opacity="0.3"/>
+  <circle cx="1000" cy="120" r="3" fill="#2d7aff" opacity="0.3"/>
+  <!-- Lines -->
+  <line x1="150" y1="200" x2="350" y2="120" stroke="#2d7aff" stroke-width="1" opacity="0.15"/>
+  <line x1="350" y1="120" x2="900" y2="180" stroke="#00d4aa" stroke-width="1" opacity="0.1"/>
+  <line x1="900" y1="180" x2="1050" y2="400" stroke="#2d7aff" stroke-width="1" opacity="0.1"/>
+  <!-- Logo mark -->
+  <circle cx="540" cy="260" r="20" fill="#2d7aff" opacity="0.9"/>
+  <circle cx="630" cy="220" r="14" fill="#00d4aa" opacity="0.8"/>
+  <circle cx="630" cy="300" r="14" fill="#2d7aff" opacity="0.7"/>
+  <line x1="558" y1="253" x2="616" y2="225" stroke="#2d7aff" stroke-width="2" opacity="0.4"/>
+  <line x1="558" y1="267" x2="616" y2="295" stroke="#00d4aa" stroke-width="2" opacity="0.4"/>
+  <line x1="630" y1="234" x2="630" y2="286" stroke="#2d7aff" stroke-width="1.5" opacity="0.25"/>
+  <!-- Text -->
+  <text x="600" y="380" text-anchor="middle" fill="white" font-family="system-ui, -apple-system, sans-serif" font-size="48" font-weight="700" letter-spacing="4">COCHID</text>
+  <text x="600" y="420" text-anchor="middle" fill="#64748b" font-family="system-ui, -apple-system, sans-serif" font-size="18" font-weight="400" letter-spacing="1">Corporación Chilena de Inteligencia de Datos</text>
+  <!-- Bottom tagline -->
+  <text x="600" y="470" text-anchor="middle" fill="#2d7aff" font-family="monospace" font-size="14" opacity="0.6">Plataformas de datos · Inteligencia periodística · Ingeniería a medida</text>
+  <!-- Bottom border accent -->
+  <rect x="400" y="610" width="400" height="2" rx="1" fill="url(#grad)" opacity="0.4"/>
+  <defs>
+    <linearGradient id="grad" x1="400" y1="0" x2="800" y2="0"><stop stop-color="#2d7aff"/><stop offset="1" stop-color="#00d4aa"/></linearGradient>
+  </defs>
+</svg>

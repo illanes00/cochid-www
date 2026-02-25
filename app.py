@@ -11,6 +11,12 @@ def create_app():
         return {
             "current_year": datetime.now().year,
             "canonical_base": "https://cochid.cl",
+            "stats": {
+                "services": "19+",
+                "servers": "3",
+                "sources": "100+",
+                "domains": "10+",
+            },
         }
 
     @app.route("/")
