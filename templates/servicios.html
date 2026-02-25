@@ -1,225 +1,383 @@
 {% extends "base.html" %}
 
 {% block title %}Servicios — COCHID{% endblock %}
-{% block meta_description %}Servicios de ingeniería de datos, analítica avanzada y consultoría estratégica. COCHID.{% endblock %}
+{% block meta_description %}Plataformas y servicios de inteligencia de datos de COCHID: datos abiertos, inteligencia periodística, observatorio electoral, hosting ciudadano.{% endblock %}
 
 {% block body %}
 
 <!-- ═══ HERO ═══ -->
-<section class="py-12 md:py-16 border-b border-gray-200 dark:border-dark-line">
-  <div class="max-w-5xl mx-auto px-4 sm:px-6">
-    <p class="font-mono text-[0.72rem] tracking-[0.15em] uppercase text-cochid-accent mb-2">Lo que hacemos</p>
-    <h1 class="text-3xl sm:text-4xl font-bold mb-2">Servicios</h1>
-    <p class="text-gray-500 dark:text-dark-muted max-w-2xl">Soluciones integrales en inteligencia de datos para organizaciones que necesitan resultados concretos y medibles.</p>
+<section class="relative py-16 md:py-20 network-bg overflow-hidden">
+  <div class="max-w-6xl mx-auto px-4 sm:px-6 relative">
+    <span class="tag mb-4 animate-fade-in-up">Servicios</span>
+    <h1 class="text-4xl sm:text-5xl font-bold mb-3 animate-fade-in-up-d1">Lo que construimos</h1>
+    <p class="text-lg text-light-muted dark:text-gray-400 max-w-2xl animate-fade-in-up-d2">Tres líneas de trabajo. Cada una con sus propios servicios systemd, bases de datos y APIs en producción.</p>
   </div>
 </section>
 
-<!-- ═══ INGENIERÍA DE DATOS ═══ -->
-<div class="py-16 md:py-20" id="ingenieria">
-  <div class="max-w-5xl mx-auto px-4 sm:px-6">
-    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-      <div>
-        <span class="text-xs px-2.5 py-1 rounded-full bg-blue-50 dark:bg-blue-900/20 text-blue-600 dark:text-blue-400 border border-blue-200 dark:border-blue-800 inline-block mb-4 hover:scale-105 transition-transform">Servicio 01</span>
-        <h2 class="text-2xl sm:text-3xl font-bold mb-3">Ingeniería de Datos</h2>
-        <p class="text-gray-600 dark:text-dark-muted leading-relaxed mb-6">Diseñamos e implementamos arquitecturas de datos robustas y escalables que integran todas sus fuentes de información en una plataforma unificada. Nuestro enfoque prioriza la calidad del dato, la automatización de procesos y la gobernanza.</p>
+<div class="section-divider"></div>
 
-        <h4 class="font-semibold text-sm mb-4">Proceso</h4>
-        <div class="cochid-timeline">
-          <div class="cochid-timeline-item">
-            <span class="font-mono font-bold text-xs text-cochid-accent">01</span>
-            <strong class="block mt-1">Auditoría de fuentes</strong>
-            <p class="text-sm text-gray-500 dark:text-dark-muted mt-1">Mapeo completo de fuentes, formatos, frecuencias y dependencias.</p>
+<!-- ═══ LÍNEA 1: PLATAFORMAS DE DATOS ═══ -->
+<section class="py-20 md:py-28 relative" id="plataformas">
+  <div class="max-w-6xl mx-auto px-4 sm:px-6">
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16">
+      <div class="reveal">
+        <div class="w-14 h-14 rounded-xl bg-cochid-glow border border-cochid-electric/20 flex items-center justify-center mb-6">
+          <svg class="w-7 h-7 text-cochid-electric" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4 7v10c0 2.21 3.582 4 8 4s8-1.79 8-4V7M4 7c0 2.21 3.582 4 8 4s8-1.79 8-4M4 7c0-2.21 3.582-4 8-4s8 1.79 8 4m0 5c0 2.21-3.582 4-8 4s-8-1.79-8-4"/>
+          </svg>
+        </div>
+        <span class="tag mb-4">Línea 01</span>
+        <h2 class="text-3xl sm:text-4xl font-bold mb-4">Plataformas de Datos</h2>
+        <p class="text-light-muted dark:text-gray-400 leading-relaxed mb-6">Construimos portales de datos completos — desde la ingesta de fuentes brutas hasta la API pública que expone datos limpios, normalizados y documentados. Arquitectura bronze/silver/gold. La cañería de datos que Chile necesita.</p>
+
+        <h4 class="font-semibold text-sm mb-5 text-light-ink dark:text-white">Producto estrella</h4>
+        <div class="glass-card p-5 mb-6 border-l-2 border-l-cochid-electric">
+          <div class="flex items-center gap-2 mb-2">
+            <h4 class="font-bold">datos.illanes00.cl</h4>
+            <a href="https://datos.illanes00.cl" target="_blank" class="text-cochid-electric hover:text-cochid-electric-hover">
+              <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/></svg>
+            </a>
           </div>
-          <div class="cochid-timeline-item">
-            <span class="font-mono font-bold text-xs text-cochid-accent">02</span>
-            <strong class="block mt-1">Diseño de arquitectura</strong>
-            <p class="text-sm text-gray-500 dark:text-dark-muted mt-1">Modelado dimensional, definición de pipelines y estrategia de orquestación.</p>
+          <p class="text-sm text-light-muted dark:text-gray-400 leading-relaxed">El warehouse de datos públicos chilenos más completo: SERVEL, Carabineros, PDI, Fiscalía, CEP, BCCh, DIPRES, INE, DTPM, MINVU y más. API REST abierta, catálogo con permalinks, explorador web con descarga CSV/JSON.</p>
+        </div>
+
+        <h4 class="font-semibold text-sm mb-4 text-light-ink dark:text-white">Endpoints reales</h4>
+        <div class="space-y-3">
+          <div class="rounded-lg bg-light-surface-alt/50 dark:bg-cochid-navy/60 border border-gray-100 dark:border-cochid-surface-border p-3">
+            <div class="font-mono text-[0.65rem] text-cochid-electric mb-1">GET /api/v1/catalogo</div>
+            <p class="text-xs text-light-muted dark:text-gray-500">Lista todos los datasets con metadata, última actualización y formato disponible.</p>
           </div>
-          <div class="cochid-timeline-item">
-            <span class="font-mono font-bold text-xs text-cochid-accent">03</span>
-            <strong class="block mt-1">Implementación iterativa</strong>
-            <p class="text-sm text-gray-500 dark:text-dark-muted mt-1">Desarrollo de pipelines con testing automatizado y entregas incrementales.</p>
+          <div class="rounded-lg bg-light-surface-alt/50 dark:bg-cochid-navy/60 border border-gray-100 dark:border-cochid-surface-border p-3">
+            <div class="font-mono text-[0.65rem] text-cochid-electric mb-1">GET /api/v1/seguridad/delitos?comuna=santiago&anio=2023</div>
+            <p class="text-xs text-light-muted dark:text-gray-500">Delitos por comuna. Fuentes: Carabineros + PDI fusionados y normalizados.</p>
           </div>
-          <div class="cochid-timeline-item">
-            <span class="font-mono font-bold text-xs text-cochid-accent">04</span>
-            <strong class="block mt-1">Monitoreo y gobernanza</strong>
-            <p class="text-sm text-gray-500 dark:text-dark-muted mt-1">Alertas de calidad, documentación de linaje y políticas de acceso.</p>
+          <div class="rounded-lg bg-light-surface-alt/50 dark:bg-cochid-navy/60 border border-gray-100 dark:border-cochid-surface-border p-3">
+            <div class="font-mono text-[0.65rem] text-cochid-electric mb-1">GET /api/v1/cep/series?variable=aprobacion_presidente</div>
+            <p class="text-xs text-light-muted dark:text-gray-500">Series temporales CEP. 63 olas, 93K+ entrevistas, 1990-2023.</p>
+          </div>
+          <div class="rounded-lg bg-light-surface-alt/50 dark:bg-cochid-navy/60 border border-gray-100 dark:border-cochid-surface-border p-3">
+            <div class="font-mono text-[0.65rem] text-cochid-electric mb-1">GET /api/v1/transporte/subidas?servicio=506&fecha=2024-01-15</div>
+            <p class="text-xs text-light-muted dark:text-gray-500">Subidas al transporte por servicio y fecha. DTPM, datos GTFS.</p>
           </div>
         </div>
       </div>
-      <div class="space-y-4">
-        <div class="card-hover rounded-lg border border-gray-200 dark:border-dark-line bg-white dark:bg-dark-paper overflow-hidden">
-          <div class="px-5 py-3 border-b border-gray-200 dark:border-dark-line">
-            <strong class="text-sm">Entregables</strong>
+
+      <div class="space-y-4 reveal" style="transition-delay:0.15s">
+        <!-- Data pipeline visualization -->
+        <div class="glass-card overflow-hidden">
+          <div class="px-5 py-3 border-b border-gray-200/50 dark:border-cochid-surface-border flex items-center gap-2">
+            <div class="flex gap-1">
+              <div class="w-2 h-2 rounded-full bg-red-400/70"></div>
+              <div class="w-2 h-2 rounded-full bg-amber-400/70"></div>
+              <div class="w-2 h-2 rounded-full bg-emerald-400/70"></div>
+            </div>
+            <span class="font-mono text-[0.65rem] text-light-muted dark:text-gray-500 ml-1">data_pipeline.flow</span>
           </div>
-          <div class="divide-y divide-gray-100 dark:divide-dark-line">
-            <div class="px-5 py-3 text-sm">Pipelines ETL/ELT automatizados</div>
-            <div class="px-5 py-3 text-sm">Data warehouse o data lake configurado</div>
-            <div class="px-5 py-3 text-sm">Capa de calidad de datos con reglas de validación</div>
-            <div class="px-5 py-3 text-sm">Documentación de linaje de datos</div>
-            <div class="px-5 py-3 text-sm">Políticas de gobernanza y acceso</div>
-            <div class="px-5 py-3 text-sm">Monitoreo y alertas operacionales</div>
+          <div class="p-4">
+            <svg viewBox="0 0 380 200" class="w-full" style="min-height:160px">
+              <!-- Bronze layer -->
+              <rect x="10" y="20" width="80" height="160" rx="6" fill="#2d7aff" opacity="0.05" stroke="#2d7aff" stroke-width="0.8" opacity="0.2"/>
+              <text x="50" y="14" text-anchor="middle" fill="#2d7aff" font-size="7" font-family="monospace" font-weight="bold" opacity="0.6">BRONZE</text>
+              <!-- Source nodes -->
+              <rect x="18" y="30" width="64" height="15" rx="3" fill="#2d7aff" opacity="0.12"/><text x="50" y="41" text-anchor="middle" fill="#2d7aff" font-size="6" font-family="monospace">Carabineros</text>
+              <rect x="18" y="50" width="64" height="15" rx="3" fill="#2d7aff" opacity="0.12"/><text x="50" y="61" text-anchor="middle" fill="#2d7aff" font-size="6" font-family="monospace">SERVEL</text>
+              <rect x="18" y="70" width="64" height="15" rx="3" fill="#00d4aa" opacity="0.12"/><text x="50" y="81" text-anchor="middle" fill="#00d4aa" font-size="6" font-family="monospace">CEP</text>
+              <rect x="18" y="90" width="64" height="15" rx="3" fill="#00d4aa" opacity="0.12"/><text x="50" y="101" text-anchor="middle" fill="#00d4aa" font-size="6" font-family="monospace">BCCh</text>
+              <rect x="18" y="110" width="64" height="15" rx="3" fill="#f59e0b" opacity="0.1"/><text x="50" y="121" text-anchor="middle" fill="#f59e0b" font-size="6" font-family="monospace">DTPM</text>
+              <rect x="18" y="130" width="64" height="15" rx="3" fill="#f59e0b" opacity="0.1"/><text x="50" y="141" text-anchor="middle" fill="#f59e0b" font-size="6" font-family="monospace">Ley Chile</text>
+              <rect x="18" y="150" width="64" height="15" rx="3" fill="#2d7aff" opacity="0.08"/><text x="50" y="161" text-anchor="middle" fill="#64748b" font-size="6" font-family="monospace">+14 más</text>
+
+              <!-- Silver layer -->
+              <rect x="150" y="20" width="80" height="160" rx="6" fill="#00d4aa" opacity="0.05" stroke="#00d4aa" stroke-width="0.8" opacity="0.2"/>
+              <text x="190" y="14" text-anchor="middle" fill="#00d4aa" font-size="7" font-family="monospace" font-weight="bold" opacity="0.6">SILVER</text>
+              <rect x="158" y="38" width="64" height="15" rx="3" fill="#00d4aa" opacity="0.1"/><text x="190" y="49" text-anchor="middle" fill="#00d4aa" font-size="6" font-family="monospace">Limpieza</text>
+              <rect x="158" y="60" width="64" height="15" rx="3" fill="#00d4aa" opacity="0.1"/><text x="190" y="71" text-anchor="middle" fill="#00d4aa" font-size="6" font-family="monospace">Tipado</text>
+              <rect x="158" y="82" width="64" height="15" rx="3" fill="#00d4aa" opacity="0.1"/><text x="190" y="93" text-anchor="middle" fill="#00d4aa" font-size="6" font-family="monospace">Deduplicar</text>
+              <rect x="158" y="104" width="64" height="15" rx="3" fill="#00d4aa" opacity="0.1"/><text x="190" y="115" text-anchor="middle" fill="#00d4aa" font-size="6" font-family="monospace">Validar</text>
+              <rect x="158" y="126" width="64" height="15" rx="3" fill="#00d4aa" opacity="0.1"/><text x="190" y="137" text-anchor="middle" fill="#00d4aa" font-size="6" font-family="monospace">Normalizar</text>
+              <rect x="158" y="148" width="64" height="15" rx="3" fill="#00d4aa" opacity="0.1"/><text x="190" y="159" text-anchor="middle" fill="#00d4aa" font-size="6" font-family="monospace">Enriquecer</text>
+
+              <!-- Gold layer -->
+              <rect x="290" y="20" width="80" height="160" rx="6" fill="#f59e0b" opacity="0.05" stroke="#f59e0b" stroke-width="0.8" opacity="0.2"/>
+              <text x="330" y="14" text-anchor="middle" fill="#f59e0b" font-size="7" font-family="monospace" font-weight="bold" opacity="0.6">GOLD</text>
+              <rect x="298" y="42" width="64" height="15" rx="3" fill="#f59e0b" opacity="0.1"/><text x="330" y="53" text-anchor="middle" fill="#f59e0b" font-size="6" font-family="monospace">REST API</text>
+              <rect x="298" y="64" width="64" height="15" rx="3" fill="#f59e0b" opacity="0.1"/><text x="330" y="75" text-anchor="middle" fill="#f59e0b" font-size="6" font-family="monospace">Catálogo</text>
+              <rect x="298" y="86" width="64" height="15" rx="3" fill="#f59e0b" opacity="0.1"/><text x="330" y="97" text-anchor="middle" fill="#f59e0b" font-size="6" font-family="monospace">CSV/JSON</text>
+              <rect x="298" y="108" width="64" height="15" rx="3" fill="#f59e0b" opacity="0.1"/><text x="330" y="119" text-anchor="middle" fill="#f59e0b" font-size="6" font-family="monospace">Permalinks</text>
+              <rect x="298" y="130" width="64" height="15" rx="3" fill="#f59e0b" opacity="0.1"/><text x="330" y="141" text-anchor="middle" fill="#f59e0b" font-size="6" font-family="monospace">Agregación</text>
+              <rect x="298" y="152" width="64" height="15" rx="3" fill="#f59e0b" opacity="0.1"/><text x="330" y="163" text-anchor="middle" fill="#f59e0b" font-size="6" font-family="monospace">OpenAPI</text>
+
+              <!-- Flow arrows bronze→silver -->
+              <line x1="90" y1="60" x2="150" y2="60" stroke="#2d7aff" stroke-width="0.8" opacity="0.2" stroke-dasharray="3 2"><animate attributeName="stroke-dashoffset" from="0" to="-10" dur="2s" repeatCount="indefinite"/></line>
+              <line x1="90" y1="100" x2="150" y2="100" stroke="#00d4aa" stroke-width="0.8" opacity="0.2" stroke-dasharray="3 2"><animate attributeName="stroke-dashoffset" from="0" to="-10" dur="2.5s" repeatCount="indefinite"/></line>
+              <line x1="90" y1="140" x2="150" y2="140" stroke="#f59e0b" stroke-width="0.8" opacity="0.15" stroke-dasharray="3 2"><animate attributeName="stroke-dashoffset" from="0" to="-10" dur="3s" repeatCount="indefinite"/></line>
+              <!-- Flow arrows silver→gold -->
+              <line x1="230" y1="60" x2="290" y2="60" stroke="#00d4aa" stroke-width="0.8" opacity="0.2" stroke-dasharray="3 2"><animate attributeName="stroke-dashoffset" from="0" to="-10" dur="2s" repeatCount="indefinite"/></line>
+              <line x1="230" y1="100" x2="290" y2="100" stroke="#00d4aa" stroke-width="0.8" opacity="0.2" stroke-dasharray="3 2"><animate attributeName="stroke-dashoffset" from="0" to="-10" dur="2.5s" repeatCount="indefinite"/></line>
+              <line x1="230" y1="140" x2="290" y2="140" stroke="#f59e0b" stroke-width="0.8" opacity="0.15" stroke-dasharray="3 2"><animate attributeName="stroke-dashoffset" from="0" to="-10" dur="3s" repeatCount="indefinite"/></line>
+
+              <!-- Particles -->
+              <circle r="1.5" fill="#2d7aff" opacity="0.7"><animateMotion dur="2s" repeatCount="indefinite" path="M90,60 L150,60"/></circle>
+              <circle r="1.5" fill="#00d4aa" opacity="0.7"><animateMotion dur="2.2s" repeatCount="indefinite" path="M230,100 L290,100"/></circle>
+              <circle r="1" fill="#f59e0b" opacity="0.5"><animateMotion dur="2.8s" repeatCount="indefinite" path="M90,140 L290,140"/></circle>
+            </svg>
           </div>
         </div>
-        <div class="card-hover rounded-lg border border-gray-200 dark:border-dark-line bg-white dark:bg-dark-paper overflow-hidden">
-          <div class="px-5 py-3 border-b border-gray-200 dark:border-dark-line">
-            <strong class="text-sm">Tecnologías</strong>
+
+        <div class="glass-card overflow-hidden">
+          <div class="px-5 py-3.5 border-b border-gray-200/50 dark:border-cochid-surface-border">
+            <strong class="text-sm">Stack</strong>
           </div>
           <div class="px-5 py-4 flex flex-wrap gap-1.5">
-            <span class="text-xs px-2 py-1 rounded border border-gray-200 dark:border-dark-line text-gray-600 dark:text-dark-muted">PostgreSQL</span>
-            <span class="text-xs px-2 py-1 rounded border border-gray-200 dark:border-dark-line text-gray-600 dark:text-dark-muted">DuckDB</span>
-            <span class="text-xs px-2 py-1 rounded border border-gray-200 dark:border-dark-line text-gray-600 dark:text-dark-muted">Apache Airflow</span>
-            <span class="text-xs px-2 py-1 rounded border border-gray-200 dark:border-dark-line text-gray-600 dark:text-dark-muted">dbt</span>
-            <span class="text-xs px-2 py-1 rounded border border-gray-200 dark:border-dark-line text-gray-600 dark:text-dark-muted">Python</span>
-            <span class="text-xs px-2 py-1 rounded border border-gray-200 dark:border-dark-line text-gray-600 dark:text-dark-muted">SQL</span>
+            <span class="text-[0.65rem] font-mono px-2.5 py-1 rounded-md bg-light-surface-alt dark:bg-cochid-navy border border-gray-100 dark:border-cochid-surface-border text-light-muted dark:text-gray-400">FastAPI</span>
+            <span class="text-[0.65rem] font-mono px-2.5 py-1 rounded-md bg-light-surface-alt dark:bg-cochid-navy border border-gray-100 dark:border-cochid-surface-border text-light-muted dark:text-gray-400">PostgreSQL</span>
+            <span class="text-[0.65rem] font-mono px-2.5 py-1 rounded-md bg-light-surface-alt dark:bg-cochid-navy border border-gray-100 dark:border-cochid-surface-border text-light-muted dark:text-gray-400">PgBouncer</span>
+            <span class="text-[0.65rem] font-mono px-2.5 py-1 rounded-md bg-light-surface-alt dark:bg-cochid-navy border border-gray-100 dark:border-cochid-surface-border text-light-muted dark:text-gray-400">Python</span>
+            <span class="text-[0.65rem] font-mono px-2.5 py-1 rounded-md bg-light-surface-alt dark:bg-cochid-navy border border-gray-100 dark:border-cochid-surface-border text-light-muted dark:text-gray-400">Parquet</span>
           </div>
         </div>
       </div>
     </div>
   </div>
-</div>
+</section>
 
-<div class="gradient-hr max-w-5xl mx-auto"></div>
+<div class="section-divider max-w-6xl mx-auto"></div>
 
-<!-- ═══ ANALÍTICA AVANZADA ═══ -->
-<div class="py-16 md:py-20" id="analitica">
-  <div class="max-w-5xl mx-auto px-4 sm:px-6">
-    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-      <div>
-        <span class="text-xs px-2.5 py-1 rounded-full bg-emerald-50 dark:bg-emerald-900/20 text-emerald-600 dark:text-emerald-400 border border-emerald-200 dark:border-emerald-800 inline-block mb-4 hover:scale-105 transition-transform">Servicio 02</span>
-        <h2 class="text-2xl sm:text-3xl font-bold mb-3">Analítica Avanzada</h2>
-        <p class="text-gray-600 dark:text-dark-muted leading-relaxed mb-6">Desarrollamos modelos predictivos, herramientas de visualización y sistemas de reportería que transforman datos en insights accionables. Combinamos técnicas estadísticas tradicionales con machine learning para resolver problemas complejos.</p>
+<!-- ═══ LÍNEA 2: INTELIGENCIA PERIODÍSTICA ═══ -->
+<section class="py-20 md:py-28 relative dot-pattern" id="periodismo">
+  <div class="max-w-6xl mx-auto px-4 sm:px-6">
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16">
+      <div class="reveal">
+        <div class="w-14 h-14 rounded-xl bg-cochid-glow-cyan border border-cochid-cyan/20 flex items-center justify-center mb-6">
+          <svg class="w-7 h-7 text-cochid-cyan" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M19 20H5a2 2 0 01-2-2V6a2 2 0 012-2h10a2 2 0 012 2v1m2 13a2 2 0 01-2-2V7m2 13a2 2 0 002-2V9a2 2 0 00-2-2h-2m-4-3H9M7 16h6M7 8h6v4H7V8z"/>
+          </svg>
+        </div>
+        <span class="tag tag-cyan mb-4">Línea 02</span>
+        <h2 class="text-3xl sm:text-4xl font-bold mb-4">Inteligencia Periodística</h2>
+        <p class="text-light-muted dark:text-gray-400 leading-relaxed mb-6">Plataforma completa de agregación y procesamiento de noticias. Más de 100 fuentes internacionales y chilenas procesadas con NLP: clasificación, deduplicación SimHash, scoring, detección de tendencias y publicación automática.</p>
 
-        <h4 class="font-semibold text-sm mb-4">Proceso</h4>
+        <h4 class="font-semibold text-sm mb-5 text-light-ink dark:text-white">Producto estrella</h4>
+        <div class="glass-card p-5 mb-6 border-l-2 border-l-cochid-cyan">
+          <div class="flex items-center gap-2 mb-2">
+            <h4 class="font-bold">periodismo2.cl</h4>
+            <a href="https://periodismo2.cl" target="_blank" class="text-cochid-cyan hover:text-cochid-cyan-hover">
+              <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/></svg>
+            </a>
+          </div>
+          <p class="text-sm text-light-muted dark:text-gray-400 leading-relaxed">Ecosistema de 4 servicios: sitio público (Flask), API (FastAPI), admin (FastAPI) y frontend (Next.js). Workers Celery procesan ingesta, NLP, publicación y newsletters 24/7.</p>
+        </div>
+
+        <h4 class="font-semibold text-sm mb-4 text-light-ink dark:text-white">Pipeline NLP — 6 etapas</h4>
         <div class="cochid-timeline">
           <div class="cochid-timeline-item">
-            <span class="font-mono font-bold text-xs text-cochid-accent">01</span>
-            <strong class="block mt-1">Definición del problema</strong>
-            <p class="text-sm text-gray-500 dark:text-dark-muted mt-1">Alineamiento con objetivos de negocio, KPIs y métricas de éxito.</p>
+            <strong class="block">Ingesta masiva</strong>
+            <p class="text-sm text-light-muted dark:text-gray-400 mt-1">100+ feeds RSS/Atom. Celery beat cada 15 min.</p>
           </div>
           <div class="cochid-timeline-item">
-            <span class="font-mono font-bold text-xs text-cochid-accent">02</span>
-            <strong class="block mt-1">Exploración y preparación</strong>
-            <p class="text-sm text-gray-500 dark:text-dark-muted mt-1">Análisis exploratorio, feature engineering y preparación de datasets.</p>
+            <strong class="block">Deduplicación SimHash</strong>
+            <p class="text-sm text-light-muted dark:text-gray-400 mt-1">64-bit fingerprint por artículo. Threshold configurable por fuente.</p>
           </div>
           <div class="cochid-timeline-item">
-            <span class="font-mono font-bold text-xs text-cochid-accent">03</span>
-            <strong class="block mt-1">Modelado y validación</strong>
-            <p class="text-sm text-gray-500 dark:text-dark-muted mt-1">Entrenamiento, evaluación cruzada y selección de modelos óptimos.</p>
+            <strong class="block">Clasificación + Scoring</strong>
+            <p class="text-sm text-light-muted dark:text-gray-400 mt-1">Categorías temáticas, relevancia ponderada por fuente y velocidad.</p>
           </div>
           <div class="cochid-timeline-item">
-            <span class="font-mono font-bold text-xs text-cochid-accent">04</span>
-            <strong class="block mt-1">Productivización</strong>
-            <p class="text-sm text-gray-500 dark:text-dark-muted mt-1">Deploy de modelos, dashboards y automatización de reportes.</p>
+            <strong class="block">Trending topics</strong>
+            <p class="text-sm text-light-muted dark:text-gray-400 mt-1">Frecuencia × velocidad × diversidad de fuentes. Algoritmo propio.</p>
           </div>
         </div>
       </div>
-      <div class="space-y-4">
-        <div class="card-hover rounded-lg border border-gray-200 dark:border-dark-line bg-white dark:bg-dark-paper overflow-hidden">
-          <div class="px-5 py-3 border-b border-gray-200 dark:border-dark-line">
-            <strong class="text-sm">Entregables</strong>
+
+      <div class="space-y-4 reveal" style="transition-delay:0.15s">
+        <!-- NLP Pipeline flow diagram -->
+        <div class="glass-card overflow-hidden">
+          <div class="px-5 py-3 border-b border-gray-200/50 dark:border-cochid-surface-border flex items-center gap-2">
+            <div class="flex gap-1">
+              <div class="w-2 h-2 rounded-full bg-red-400/70"></div>
+              <div class="w-2 h-2 rounded-full bg-amber-400/70"></div>
+              <div class="w-2 h-2 rounded-full bg-emerald-400/70"></div>
+            </div>
+            <span class="font-mono text-[0.65rem] text-light-muted dark:text-gray-500 ml-1">nlp_pipeline.flow</span>
           </div>
-          <div class="divide-y divide-gray-100 dark:divide-dark-line">
-            <div class="px-5 py-3 text-sm">Modelos predictivos en producción</div>
-            <div class="px-5 py-3 text-sm">Dashboards interactivos</div>
-            <div class="px-5 py-3 text-sm">Reportería automatizada periódica</div>
-            <div class="px-5 py-3 text-sm">Análisis estadísticos y econométricos</div>
-            <div class="px-5 py-3 text-sm">Documentación metodológica</div>
-            <div class="px-5 py-3 text-sm">Notebooks reproducibles</div>
+          <div class="p-4">
+            <svg viewBox="0 0 380 220" class="w-full" style="min-height:180px">
+              <!-- RSS Source cluster -->
+              <rect x="8" y="10" width="55" height="16" rx="3" fill="#00d4aa" opacity="0.1" stroke="#00d4aa" stroke-width="0.6"/><text x="36" y="21" text-anchor="middle" fill="#00d4aa" font-size="5.5" font-family="monospace">BBC</text>
+              <rect x="8" y="30" width="55" height="16" rx="3" fill="#00d4aa" opacity="0.1" stroke="#00d4aa" stroke-width="0.6"/><text x="36" y="41" text-anchor="middle" fill="#00d4aa" font-size="5.5" font-family="monospace">La Tercera</text>
+              <rect x="8" y="50" width="55" height="16" rx="3" fill="#00d4aa" opacity="0.1" stroke="#00d4aa" stroke-width="0.6"/><text x="36" y="61" text-anchor="middle" fill="#00d4aa" font-size="5.5" font-family="monospace">Cooperativa</text>
+              <rect x="8" y="70" width="55" height="16" rx="3" fill="#00d4aa" opacity="0.08" stroke="#00d4aa" stroke-width="0.5"/><text x="36" y="81" text-anchor="middle" fill="#64748b" font-size="5.5" font-family="monospace">+97 más</text>
+
+              <!-- Ingesta -->
+              <rect x="85" y="25" width="60" height="50" rx="6" fill="#00d4aa" opacity="0.06" stroke="#00d4aa" stroke-width="0.8"/>
+              <text x="115" y="48" text-anchor="middle" fill="#00d4aa" font-size="6" font-family="monospace" font-weight="bold">INGESTA</text>
+              <text x="115" y="58" text-anchor="middle" fill="#64748b" font-size="5" font-family="monospace">RSS/Atom</text>
+              <text x="115" y="67" text-anchor="middle" fill="#64748b" font-size="5" font-family="monospace">Scraper</text>
+
+              <!-- NLP Processing -->
+              <rect x="170" y="10" width="70" height="80" rx="6" fill="#2d7aff" opacity="0.06" stroke="#2d7aff" stroke-width="0.8"/>
+              <text x="205" y="25" text-anchor="middle" fill="#2d7aff" font-size="6" font-family="monospace" font-weight="bold">NLP</text>
+              <text x="205" y="38" text-anchor="middle" fill="#64748b" font-size="5" font-family="monospace">SimHash</text>
+              <text x="205" y="48" text-anchor="middle" fill="#64748b" font-size="5" font-family="monospace">Classify</text>
+              <text x="205" y="58" text-anchor="middle" fill="#64748b" font-size="5" font-family="monospace">Score</text>
+              <text x="205" y="68" text-anchor="middle" fill="#64748b" font-size="5" font-family="monospace">Summarize</text>
+              <text x="205" y="78" text-anchor="middle" fill="#64748b" font-size="5" font-family="monospace">Trending</text>
+
+              <!-- Output -->
+              <rect x="265" y="10" width="55" height="26" rx="4" fill="#f59e0b" opacity="0.08" stroke="#f59e0b" stroke-width="0.6"/><text x="293" y="27" text-anchor="middle" fill="#f59e0b" font-size="5.5" font-family="monospace">Web App</text>
+              <rect x="265" y="42" width="55" height="26" rx="4" fill="#f59e0b" opacity="0.08" stroke="#f59e0b" stroke-width="0.6"/><text x="293" y="59" text-anchor="middle" fill="#f59e0b" font-size="5.5" font-family="monospace">Newsletter</text>
+              <rect x="265" y="74" width="55" height="26" rx="4" fill="#f59e0b" opacity="0.08" stroke="#f59e0b" stroke-width="0.6"/><text x="293" y="91" text-anchor="middle" fill="#f59e0b" font-size="5.5" font-family="monospace">REST API</text>
+
+              <!-- Flow arrows -->
+              <line x1="63" y1="50" x2="85" y2="50" stroke="#00d4aa" stroke-width="0.8" opacity="0.3" stroke-dasharray="2 2"><animate attributeName="stroke-dashoffset" from="0" to="-8" dur="1.5s" repeatCount="indefinite"/></line>
+              <line x1="145" y1="50" x2="170" y2="50" stroke="#2d7aff" stroke-width="0.8" opacity="0.3" stroke-dasharray="2 2"><animate attributeName="stroke-dashoffset" from="0" to="-8" dur="2s" repeatCount="indefinite"/></line>
+              <line x1="240" y1="40" x2="265" y2="23" stroke="#f59e0b" stroke-width="0.6" opacity="0.2" stroke-dasharray="2 2"><animate attributeName="stroke-dashoffset" from="0" to="-8" dur="2s" repeatCount="indefinite"/></line>
+              <line x1="240" y1="50" x2="265" y2="55" stroke="#f59e0b" stroke-width="0.6" opacity="0.2" stroke-dasharray="2 2"><animate attributeName="stroke-dashoffset" from="0" to="-8" dur="2.5s" repeatCount="indefinite"/></line>
+              <line x1="240" y1="60" x2="265" y2="87" stroke="#f59e0b" stroke-width="0.6" opacity="0.2" stroke-dasharray="2 2"><animate attributeName="stroke-dashoffset" from="0" to="-8" dur="3s" repeatCount="indefinite"/></line>
+
+              <!-- Particles -->
+              <circle r="1.5" fill="#00d4aa" opacity="0.7"><animateMotion dur="1.5s" repeatCount="indefinite" path="M63,50 L85,50"/></circle>
+              <circle r="1.5" fill="#2d7aff" opacity="0.7"><animateMotion dur="2s" repeatCount="indefinite" path="M145,50 L170,50"/></circle>
+
+              <!-- Stats bar below -->
+              <line x1="8" y1="110" x2="370" y2="110" stroke="#64748b" stroke-width="0.3" opacity="0.2"/>
+              <text x="8" y="128" fill="#64748b" font-size="5.5" font-family="monospace" opacity="0.5">THROUGHPUT 24H</text>
+              <!-- Bar chart of processed articles -->
+              <rect x="8" y="138" width="52" height="8" rx="2" fill="#00d4aa" opacity="0.3"/><text x="66" y="146" fill="#00d4aa" font-size="5.5" font-family="monospace">BBC 520</text>
+              <rect x="8" y="150" width="44" height="8" rx="2" fill="#00d4aa" opacity="0.25"/><text x="58" y="158" fill="#00d4aa" font-size="5.5" font-family="monospace">Cooperativa 430</text>
+              <rect x="8" y="162" width="38" height="8" rx="2" fill="#2d7aff" opacity="0.25"/><text x="52" y="170" fill="#2d7aff" font-size="5.5" font-family="monospace">La Tercera 380</text>
+              <rect x="8" y="174" width="32" height="8" rx="2" fill="#2d7aff" opacity="0.2"/><text x="46" y="182" fill="#2d7aff" font-size="5.5" font-family="monospace">El País 310</text>
+              <rect x="8" y="186" width="26" height="8" rx="2" fill="#f59e0b" opacity="0.2"/><text x="40" y="194" fill="#f59e0b" font-size="5.5" font-family="monospace">NYT 260</text>
+              <rect x="8" y="198" width="68" height="8" rx="2" fill="#64748b" opacity="0.1"/><text x="82" y="206" fill="#64748b" font-size="5.5" font-family="monospace">+92 fuentes</text>
+            </svg>
           </div>
         </div>
-        <div class="card-hover rounded-lg border border-gray-200 dark:border-dark-line bg-white dark:bg-dark-paper overflow-hidden">
-          <div class="px-5 py-3 border-b border-gray-200 dark:border-dark-line">
-            <strong class="text-sm">Tecnologías</strong>
+
+        <div class="glass-card overflow-hidden">
+          <div class="px-5 py-3.5 border-b border-gray-200/50 dark:border-cochid-surface-border">
+            <strong class="text-sm">Stack</strong>
           </div>
           <div class="px-5 py-4 flex flex-wrap gap-1.5">
-            <span class="text-xs px-2 py-1 rounded border border-gray-200 dark:border-dark-line text-gray-600 dark:text-dark-muted">scikit-learn</span>
-            <span class="text-xs px-2 py-1 rounded border border-gray-200 dark:border-dark-line text-gray-600 dark:text-dark-muted">XGBoost</span>
-            <span class="text-xs px-2 py-1 rounded border border-gray-200 dark:border-dark-line text-gray-600 dark:text-dark-muted">PyTorch</span>
-            <span class="text-xs px-2 py-1 rounded border border-gray-200 dark:border-dark-line text-gray-600 dark:text-dark-muted">Grafana</span>
-            <span class="text-xs px-2 py-1 rounded border border-gray-200 dark:border-dark-line text-gray-600 dark:text-dark-muted">Plotly</span>
-            <span class="text-xs px-2 py-1 rounded border border-gray-200 dark:border-dark-line text-gray-600 dark:text-dark-muted">R</span>
+            <span class="text-[0.65rem] font-mono px-2.5 py-1 rounded-md bg-light-surface-alt dark:bg-cochid-navy border border-gray-100 dark:border-cochid-surface-border text-light-muted dark:text-gray-400">Flask</span>
+            <span class="text-[0.65rem] font-mono px-2.5 py-1 rounded-md bg-light-surface-alt dark:bg-cochid-navy border border-gray-100 dark:border-cochid-surface-border text-light-muted dark:text-gray-400">FastAPI</span>
+            <span class="text-[0.65rem] font-mono px-2.5 py-1 rounded-md bg-light-surface-alt dark:bg-cochid-navy border border-gray-100 dark:border-cochid-surface-border text-light-muted dark:text-gray-400">Celery</span>
+            <span class="text-[0.65rem] font-mono px-2.5 py-1 rounded-md bg-light-surface-alt dark:bg-cochid-navy border border-gray-100 dark:border-cochid-surface-border text-light-muted dark:text-gray-400">Next.js</span>
+            <span class="text-[0.65rem] font-mono px-2.5 py-1 rounded-md bg-light-surface-alt dark:bg-cochid-navy border border-gray-100 dark:border-cochid-surface-border text-light-muted dark:text-gray-400">PostgreSQL</span>
+            <span class="text-[0.65rem] font-mono px-2.5 py-1 rounded-md bg-light-surface-alt dark:bg-cochid-navy border border-gray-100 dark:border-cochid-surface-border text-light-muted dark:text-gray-400">Redis</span>
+            <span class="text-[0.65rem] font-mono px-2.5 py-1 rounded-md bg-light-surface-alt dark:bg-cochid-navy border border-gray-100 dark:border-cochid-surface-border text-light-muted dark:text-gray-400">Qdrant</span>
           </div>
         </div>
       </div>
     </div>
   </div>
-</div>
+</section>
 
-<div class="gradient-hr max-w-5xl mx-auto"></div>
+<div class="section-divider max-w-6xl mx-auto"></div>
 
-<!-- ═══ CONSULTORÍA ESTRATÉGICA ═══ -->
-<div class="py-16 md:py-20" id="consultoria">
-  <div class="max-w-5xl mx-auto px-4 sm:px-6">
-    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-      <div>
-        <span class="text-xs px-2.5 py-1 rounded-full bg-amber-50 dark:bg-amber-900/20 text-amber-600 dark:text-amber-400 border border-amber-200 dark:border-amber-800 inline-block mb-4 hover:scale-105 transition-transform">Servicio 03</span>
-        <h2 class="text-2xl sm:text-3xl font-bold mb-3">Consultoría Estratégica</h2>
-        <p class="text-gray-600 dark:text-dark-muted leading-relaxed mb-6">Acompañamos a organizaciones en la definición e implementación de su estrategia de datos. Desde el diagnóstico inicial hasta la capacitación del equipo, aseguramos que la inversión en datos genere retorno medible y sostenible.</p>
+<!-- ═══ LÍNEA 3: PRODUCTOS CIUDADANOS ═══ -->
+<section class="py-20 md:py-28 relative" id="ciudadano">
+  <div class="max-w-6xl mx-auto px-4 sm:px-6">
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16">
+      <div class="reveal">
+        <div class="w-14 h-14 rounded-xl bg-amber-500/5 border border-amber-400/20 flex items-center justify-center mb-6">
+          <svg class="w-7 h-7 text-amber-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9"/>
+          </svg>
+        </div>
+        <span class="tag tag-amber mb-4">Línea 03</span>
+        <h2 class="text-3xl sm:text-4xl font-bold mb-4">Productos Ciudadanos</h2>
+        <p class="text-light-muted dark:text-gray-400 leading-relaxed mb-6">Herramientas y plataformas orientadas al público general y la sociedad civil. Hosting accesible, monitoreo de señales públicas, observatorios electorales — tecnología al servicio de la ciudadanía.</p>
 
-        <h4 class="font-semibold text-sm mb-4">Proceso</h4>
-        <div class="cochid-timeline">
-          <div class="cochid-timeline-item">
-            <span class="font-mono font-bold text-xs text-cochid-accent">01</span>
-            <strong class="block mt-1">Diagnóstico de madurez</strong>
-            <p class="text-sm text-gray-500 dark:text-dark-muted mt-1">Evaluación de capacidades, procesos, tecnología y cultura de datos.</p>
+        <div class="space-y-4">
+          <div class="glass-card p-5 border-l-2 border-l-amber-400">
+            <div class="flex items-center gap-2 mb-2">
+              <h4 class="font-bold">indieweb.cl</h4>
+              <a href="https://indieweb.cl" target="_blank" class="text-amber-500 hover:text-amber-600">
+                <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/></svg>
+              </a>
+            </div>
+            <p class="text-sm text-light-muted dark:text-gray-400 leading-relaxed">Hosting donde personas no técnicas construyen apps web con IA. Chat con Claude integrado, deploy automático a subdominios, SSO con Authentik. Democratizar la web.</p>
           </div>
-          <div class="cochid-timeline-item">
-            <span class="font-mono font-bold text-xs text-cochid-accent">02</span>
-            <strong class="block mt-1">Hoja de ruta</strong>
-            <p class="text-sm text-gray-500 dark:text-dark-muted mt-1">Definición de estrategia, priorización de iniciativas y roadmap de implementación.</p>
+
+          <div class="glass-card p-5 border-l-2 border-l-cochid-electric">
+            <div class="flex items-center gap-2 mb-2">
+              <h4 class="font-bold">situacion.cl</h4>
+              <a href="https://situacion.cl" target="_blank" class="text-cochid-electric hover:text-cochid-electric-hover">
+                <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/></svg>
+              </a>
+            </div>
+            <p class="text-sm text-light-muted dark:text-gray-400 leading-relaxed">Monitoreo OSINT de Chile. Detección de anomalías en tráfico de red gubernamental via Cloudflare Radar. Z-score sobre ASN del Estado. Inteligencia de situación abierta.</p>
           </div>
-          <div class="cochid-timeline-item">
-            <span class="font-mono font-bold text-xs text-cochid-accent">03</span>
-            <strong class="block mt-1">Acompañamiento</strong>
-            <p class="text-sm text-gray-500 dark:text-dark-muted mt-1">Implementación guiada con mentoring al equipo y revisiones periódicas.</p>
+
+          <div class="glass-card p-5 border-l-2 border-l-cochid-cyan">
+            <div class="flex items-center gap-2 mb-2">
+              <h4 class="font-bold">discursos.illanes00.cl</h4>
+              <a href="https://discursos.illanes00.cl" target="_blank" class="text-cochid-cyan hover:text-cochid-cyan-hover">
+                <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/></svg>
+              </a>
+            </div>
+            <p class="text-sm text-light-muted dark:text-gray-400 leading-relaxed">Análisis de discursos presidenciales 2018-2023. Corpus completo de Piñera y Boric con búsqueda por palabra clave, gráficos de frecuencia (absoluta y relativa) y marcadores de hitos políticos: estallido social, COVID, plebiscito.</p>
           </div>
-          <div class="cochid-timeline-item">
-            <span class="font-mono font-bold text-xs text-cochid-accent">04</span>
-            <strong class="block mt-1">Capacitación</strong>
-            <p class="text-sm text-gray-500 dark:text-dark-muted mt-1">Transferencia de conocimiento, talleres prácticos y material de referencia.</p>
+
+          <div class="glass-card p-5 border-l-2 border-l-cochid-cyan">
+            <div class="flex items-center gap-2 mb-2">
+              <h4 class="font-bold">Observatorio Electoral</h4>
+            </div>
+            <p class="text-sm text-light-muted dark:text-gray-400 leading-relaxed">Datos SERVEL normalizados, candidatos, resultados históricos, coaliciones. Sistema de forecast con ingesta de encuestas y mercados de predicción.</p>
           </div>
         </div>
       </div>
-      <div class="space-y-4">
-        <div class="card-hover rounded-lg border border-gray-200 dark:border-dark-line bg-white dark:bg-dark-paper overflow-hidden">
-          <div class="px-5 py-3 border-b border-gray-200 dark:border-dark-line">
-            <strong class="text-sm">Entregables</strong>
+
+      <div class="space-y-4 reveal" style="transition-delay:0.15s">
+        <div class="glass-card overflow-hidden">
+          <div class="px-5 py-3.5 border-b border-gray-200/50 dark:border-cochid-surface-border">
+            <strong class="text-sm">Más herramientas del ecosistema</strong>
           </div>
-          <div class="divide-y divide-gray-100 dark:divide-dark-line">
-            <div class="px-5 py-3 text-sm">Informe de diagnóstico de madurez</div>
-            <div class="px-5 py-3 text-sm">Estrategia de datos documentada</div>
-            <div class="px-5 py-3 text-sm">Roadmap de implementación priorizado</div>
-            <div class="px-5 py-3 text-sm">Evaluación de herramientas y proveedores</div>
-            <div class="px-5 py-3 text-sm">Programa de capacitación a medida</div>
-            <div class="px-5 py-3 text-sm">Guías y documentación de referencia</div>
+          <div class="divide-y divide-gray-100 dark:divide-cochid-surface-border">
+            <div class="px-5 py-3 text-sm flex items-center gap-2"><span class="w-1 h-1 rounded-full bg-cochid-cyan flex-shrink-0"></span><strong class="mr-1">Discursos</strong> — Análisis de discursos presidenciales 2018-2023</div>
+            <div class="px-5 py-3 text-sm flex items-center gap-2"><span class="w-1 h-1 rounded-full bg-cochid-electric flex-shrink-0"></span><strong class="mr-1">Lex</strong> — RAG sobre corpus de leyes chilenas</div>
+            <div class="px-5 py-3 text-sm flex items-center gap-2"><span class="w-1 h-1 rounded-full bg-cochid-cyan flex-shrink-0"></span><strong class="mr-1">Scribe</strong> — Escritura académica + verificación IA</div>
+            <div class="px-5 py-3 text-sm flex items-center gap-2"><span class="w-1 h-1 rounded-full bg-amber-500 flex-shrink-0"></span><strong class="mr-1">Finance</strong> — Polymarket + mercados predictivos</div>
+            <div class="px-5 py-3 text-sm flex items-center gap-2"><span class="w-1 h-1 rounded-full bg-cochid-electric flex-shrink-0"></span><strong class="mr-1">Maps</strong> — Geoespacial sobre datos territoriales</div>
+            <div class="px-5 py-3 text-sm flex items-center gap-2"><span class="w-1 h-1 rounded-full bg-cochid-cyan flex-shrink-0"></span><strong class="mr-1">Graphs</strong> — Presupuesto funcional COFOG + deflactación</div>
           </div>
         </div>
-        <div class="card-hover rounded-lg border border-gray-200 dark:border-dark-line bg-white dark:bg-dark-paper overflow-hidden">
-          <div class="px-5 py-3 border-b border-gray-200 dark:border-dark-line">
-            <strong class="text-sm">Tecnologías</strong>
+        <div class="glass-card overflow-hidden">
+          <div class="px-5 py-3.5 border-b border-gray-200/50 dark:border-cochid-surface-border">
+            <strong class="text-sm">Stack compartido</strong>
           </div>
           <div class="px-5 py-4 flex flex-wrap gap-1.5">
-            <span class="text-xs px-2 py-1 rounded border border-gray-200 dark:border-dark-line text-gray-600 dark:text-dark-muted">Frameworks de madurez</span>
-            <span class="text-xs px-2 py-1 rounded border border-gray-200 dark:border-dark-line text-gray-600 dark:text-dark-muted">DAMA-DMBOK</span>
-            <span class="text-xs px-2 py-1 rounded border border-gray-200 dark:border-dark-line text-gray-600 dark:text-dark-muted">TOGAF</span>
-            <span class="text-xs px-2 py-1 rounded border border-gray-200 dark:border-dark-line text-gray-600 dark:text-dark-muted">LangChain</span>
+            <span class="text-[0.65rem] font-mono px-2.5 py-1 rounded-md bg-light-surface-alt dark:bg-cochid-navy border border-gray-100 dark:border-cochid-surface-border text-light-muted dark:text-gray-400">Python</span>
+            <span class="text-[0.65rem] font-mono px-2.5 py-1 rounded-md bg-light-surface-alt dark:bg-cochid-navy border border-gray-100 dark:border-cochid-surface-border text-light-muted dark:text-gray-400">Flask</span>
+            <span class="text-[0.65rem] font-mono px-2.5 py-1 rounded-md bg-light-surface-alt dark:bg-cochid-navy border border-gray-100 dark:border-cochid-surface-border text-light-muted dark:text-gray-400">FastAPI</span>
+            <span class="text-[0.65rem] font-mono px-2.5 py-1 rounded-md bg-light-surface-alt dark:bg-cochid-navy border border-gray-100 dark:border-cochid-surface-border text-light-muted dark:text-gray-400">Express.js</span>
+            <span class="text-[0.65rem] font-mono px-2.5 py-1 rounded-md bg-light-surface-alt dark:bg-cochid-navy border border-gray-100 dark:border-cochid-surface-border text-light-muted dark:text-gray-400">PostgreSQL</span>
+            <span class="text-[0.65rem] font-mono px-2.5 py-1 rounded-md bg-light-surface-alt dark:bg-cochid-navy border border-gray-100 dark:border-cochid-surface-border text-light-muted dark:text-gray-400">Caddy</span>
+            <span class="text-[0.65rem] font-mono px-2.5 py-1 rounded-md bg-light-surface-alt dark:bg-cochid-navy border border-gray-100 dark:border-cochid-surface-border text-light-muted dark:text-gray-400">systemd</span>
+            <span class="text-[0.65rem] font-mono px-2.5 py-1 rounded-md bg-light-surface-alt dark:bg-cochid-navy border border-gray-100 dark:border-cochid-surface-border text-light-muted dark:text-gray-400">Cloudflare</span>
           </div>
         </div>
       </div>
     </div>
   </div>
-</div>
+</section>
 
 <!-- ═══ CTA ═══ -->
-<div class="py-16 md:py-20 bg-gray-50 dark:bg-dark-bg">
-  <div class="max-w-5xl mx-auto px-4 sm:px-6">
-    <div class="bg-cochid-accent-subtle border border-cochid-accent-border rounded-lg p-8 md:p-12 text-center">
-      <h2 class="text-xl sm:text-2xl font-bold mb-3">¿Necesita un servicio a medida?</h2>
-      <p class="text-gray-500 dark:text-dark-muted mb-6">Combinamos nuestras tres líneas de servicio para crear soluciones integrales adaptadas a su organización.</p>
-      <a href="/contacto" class="inline-block px-5 py-2.5 bg-cochid-accent hover:bg-cochid-accent-hover active:scale-95 text-white rounded-md text-sm font-medium transition-all">Conversemos</a>
+<section class="py-20 md:py-28 relative network-bg">
+  <div class="max-w-6xl mx-auto px-4 sm:px-6">
+    <div class="relative overflow-hidden rounded-2xl reveal">
+      <div class="absolute inset-0 bg-gradient-to-br from-cochid-electric via-blue-600 to-cochid-cyan opacity-90"></div>
+      <div class="absolute inset-0 dot-pattern opacity-10"></div>
+      <div class="relative p-8 md:p-14 text-center">
+        <h2 class="text-2xl sm:text-3xl font-bold text-white mb-4">¿Necesita algo parecido?</h2>
+        <p class="text-blue-100 mb-8 max-w-md mx-auto">Construimos plataformas de datos a medida. Desde la ingesta hasta la API documentada.</p>
+        <a href="/contacto" class="inline-flex items-center gap-2 px-6 py-3 rounded-lg text-sm font-semibold bg-white text-cochid-electric hover:bg-gray-100 active:scale-[0.97] transition-all shadow-lg">
+          Contactar
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+        </a>
+      </div>
     </div>
   </div>
-</div>
+</section>
 
 {% endblock %}

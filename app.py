@@ -20,10 +20,6 @@ def create_app():
     def contacto():
         return render_template("contacto.html", nav_page="contacto")
 
-    @app.route("/propuestas")
-    def propuestas():
-        return render_template("propuestas.html")
-
     @app.route("/health")
     def health():
         return "ok", 200

@@ -3,18 +3,16 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>COCHID — Propuestas Visuales</title>
+  <title>COCHID — Propuestas Visuales v2</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;700&family=Inter:wght@400;500;600;700&family=DM+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;700&family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <script src="https://cdn.tailwindcss.com"></script>
   <style>
     * { box-sizing: border-box; }
     body { font-family: 'IBM Plex Sans', system-ui, sans-serif; background: #0f1115; color: #e4e8ec; }
     .proposal { transition: all 0.3s ease; }
     .proposal:hover { transform: translateY(-2px); }
-    .tab-btn { transition: all 0.2s; }
-    .tab-btn.active { background: var(--accent); color: white; }
   </style>
 </head>
 <body class="min-h-screen">
@@ -24,7 +22,7 @@
     <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
       <div>
         <span class="font-mono font-bold tracking-widest text-sm">COCHID</span>
-        <span class="text-xs text-gray-500 ml-3">Propuestas Visuales</span>
+        <span class="text-xs text-gray-500 ml-3">Propuestas v2 — Electric Variants</span>
       </div>
       <a href="/" class="text-xs text-gray-400 hover:text-white transition-colors px-3 py-1.5 rounded border border-white/10 hover:border-white/30">&larr; Volver al sitio</a>
     </div>
@@ -34,98 +32,194 @@
 
     <!-- Intro -->
     <div class="mb-12">
-      <h1 class="text-3xl font-bold mb-3">3 Direcciones Visuales</h1>
-      <p class="text-gray-400 max-w-2xl">Cada propuesta muestra una paleta de colores, tipografía y mood distinto aplicado a los mismos componentes del sitio COCHID. Haz click en cada una para ver el detalle completo.</p>
+      <h1 class="text-3xl font-bold mb-3">4 Variantes de Corporate Electric</h1>
+      <p class="text-gray-400 max-w-2xl">Todas mantienen el azul como ADN, pero cada una sube la intensidad visual de diferente forma: gradientes, colores secundarios más vivos, fondos con más carácter, y tipografías con más peso.</p>
     </div>
 
     <!-- ═══════════════════════════════════════════ -->
-    <!-- PROPUESTA A: Corporate Electric -->
+    <!-- PROPUESTA 1: Electric Gradient -->
     <!-- ═══════════════════════════════════════════ -->
-    <div class="proposal mb-16 rounded-2xl border border-white/10 overflow-hidden" style="--accent: #3763e0">
-      <div class="p-8 bg-gradient-to-br from-[#3763e0]/10 to-transparent border-b border-white/10">
+    <div class="proposal mb-16 rounded-2xl border border-white/10 overflow-hidden">
+      <div class="p-8 bg-gradient-to-br from-[#3763e0]/15 via-[#7c3aed]/10 to-transparent border-b border-white/10">
         <div class="flex items-start justify-between flex-wrap gap-4">
           <div>
-            <span class="text-xs font-mono tracking-wider text-[#3763e0] uppercase">Propuesta A</span>
-            <h2 class="text-2xl font-bold mt-1">Corporate Electric</h2>
-            <p class="text-gray-400 text-sm mt-2 max-w-lg">El estilo actual refinado. Azul eléctrico corporativo con acentos saturados. Transmite tecnología, confianza institucional y seriedad técnica. Ideal si el público principal es sector público y corporativo.</p>
+            <span class="text-xs font-mono tracking-wider text-[#3763e0] uppercase">Propuesta 1</span>
+            <h2 class="text-2xl font-bold mt-1">Electric Gradient</h2>
+            <p class="text-gray-400 text-sm mt-2 max-w-lg">El azul base con <strong class="text-white">gradientes azul→violeta</strong> en botones, badges y acentos. Fondo light con tinte lavanda sutil. Agrega dinamismo sin perder profesionalismo. Plus Jakarta Sans para más personalidad en headings.</p>
           </div>
           <div class="flex gap-2">
-            <div class="w-10 h-10 rounded-lg bg-[#3763e0]" title="#3763e0 Accent"></div>
-            <div class="w-10 h-10 rounded-lg bg-[#2c52c4]" title="#2c52c4 Hover"></div>
-            <div class="w-10 h-10 rounded-lg bg-[#1b1e22]" title="#1b1e22 Dark BG"></div>
-            <div class="w-10 h-10 rounded-lg bg-white" title="#ffffff Light BG"></div>
-            <div class="w-10 h-10 rounded-lg bg-[#10b981]" title="#10b981 Success"></div>
+            <div class="w-10 h-10 rounded-lg bg-gradient-to-r from-[#3763e0] to-[#7c3aed]" title="Gradient primary"></div>
+            <div class="w-10 h-10 rounded-lg bg-[#3763e0]" title="#3763e0 Blue"></div>
+            <div class="w-10 h-10 rounded-lg bg-[#7c3aed]" title="#7c3aed Violet"></div>
+            <div class="w-10 h-10 rounded-lg bg-[#f8f7ff]" title="#f8f7ff Lavender white"></div>
+            <div class="w-10 h-10 rounded-lg bg-[#0f1219]" title="#0f1219 Deep dark"></div>
           </div>
         </div>
         <div class="flex flex-wrap gap-2 mt-4">
-          <span class="text-xs px-2 py-1 rounded bg-[#3763e0]/20 text-[#3763e0] border border-[#3763e0]/30">IBM Plex Sans</span>
-          <span class="text-xs px-2 py-1 rounded bg-[#3763e0]/20 text-[#3763e0] border border-[#3763e0]/30">JetBrains Mono</span>
-          <span class="text-xs px-2 py-1 rounded bg-white/5 text-gray-400 border border-white/10">Mood: Institucional + Técnico</span>
+          <span class="text-xs px-2 py-1 rounded bg-[#3763e0]/20 text-[#7c9af7] border border-[#3763e0]/30">Plus Jakarta Sans</span>
+          <span class="text-xs px-2 py-1 rounded bg-[#7c3aed]/20 text-[#a78bfa] border border-[#7c3aed]/30">JetBrains Mono</span>
+          <span class="text-xs px-2 py-1 rounded bg-white/5 text-gray-400 border border-white/10">Gradientes en CTA + badges</span>
+          <span class="text-xs px-2 py-1 rounded bg-white/5 text-gray-400 border border-white/10">Mood: Tech dinámico + moderno</span>
         </div>
       </div>
       <!-- Preview -->
       <div class="grid grid-cols-1 lg:grid-cols-2 gap-0">
-        <!-- Light mode -->
-        <div class="p-8 bg-white text-gray-900" style="font-family: 'IBM Plex Sans', sans-serif">
+        <!-- Light -->
+        <div class="p-8 bg-[#f8f7ff] text-gray-900" style="font-family: 'Plus Jakarta Sans', sans-serif">
+          <span class="text-[10px] uppercase tracking-wider text-gray-400 mb-4 block">Light Mode</span>
+          <div class="border-l-[3px] border-transparent pl-4 mb-6" style="border-image: linear-gradient(to bottom, #3763e0, #7c3aed) 1;">
+            <p class="font-mono text-[0.65rem] tracking-[0.12em] uppercase text-[#3763e0] mb-1">Corporación Chilena de Inteligencia de Datos</p>
+            <h3 class="text-xl font-extrabold leading-tight">Convertimos datos complejos en ventaja competitiva</h3>
+          </div>
+          <div class="flex gap-2 mb-6">
+            <span class="px-4 py-2 bg-gradient-to-r from-[#3763e0] to-[#7c3aed] text-white text-xs font-semibold rounded-lg shadow-lg shadow-[#3763e0]/25">Agendar reunión</span>
+            <span class="px-4 py-2 border border-[#3763e0]/30 text-[#3763e0] text-xs font-medium rounded-lg hover:bg-[#3763e0]/5">Ver servicios</span>
+          </div>
+          <div class="rounded-xl border border-[#e0ddf5] overflow-hidden bg-white shadow-sm">
+            <div class="px-4 py-2.5 border-b border-[#e0ddf5] flex justify-between items-center">
+              <strong class="text-xs">Panel de métricas</strong>
+              <span class="text-[10px] px-2 py-0.5 rounded-full bg-gradient-to-r from-emerald-500 to-teal-500 text-white font-medium">Operativo</span>
+            </div>
+            <div class="divide-y divide-[#f0eef8]">
+              <div class="px-4 py-2.5 flex justify-between text-xs"><span class="text-gray-500">Fuentes integradas</span><strong class="font-mono text-base bg-gradient-to-r from-[#3763e0] to-[#7c3aed] bg-clip-text text-transparent">142</strong></div>
+              <div class="px-4 py-2.5 flex justify-between text-xs"><span class="text-gray-500">Precisión del modelo</span><strong class="font-mono text-base bg-gradient-to-r from-[#3763e0] to-[#7c3aed] bg-clip-text text-transparent">96.7%</strong></div>
+            </div>
+          </div>
+          <div class="grid grid-cols-2 gap-2 mt-4">
+            <div class="rounded-xl border border-[#e0ddf5] bg-white p-3 text-center shadow-sm hover:shadow-md transition-shadow">
+              <div class="font-mono text-xl font-bold bg-gradient-to-r from-[#3763e0] to-[#7c3aed] bg-clip-text text-transparent">50+</div>
+              <div class="text-[10px] text-gray-500 uppercase tracking-wide">Proyectos</div>
+            </div>
+            <div class="rounded-xl border border-[#e0ddf5] bg-white p-3 text-center shadow-sm hover:shadow-md transition-shadow">
+              <div class="font-mono text-xl font-bold bg-gradient-to-r from-[#3763e0] to-[#7c3aed] bg-clip-text text-transparent">20+</div>
+              <div class="text-[10px] text-gray-500 uppercase tracking-wide">Clientes</div>
+            </div>
+          </div>
+        </div>
+        <!-- Dark -->
+        <div class="p-8 bg-[#0f1219] text-[#e4e8ec]" style="font-family: 'Plus Jakarta Sans', sans-serif">
+          <span class="text-[10px] uppercase tracking-wider text-gray-500 mb-4 block">Dark Mode</span>
+          <div class="border-l-[3px] border-transparent pl-4 mb-6" style="border-image: linear-gradient(to bottom, #3763e0, #7c3aed) 1;">
+            <p class="font-mono text-[0.65rem] tracking-[0.12em] uppercase text-[#7c9af7] mb-1">Corporación Chilena de Inteligencia de Datos</p>
+            <h3 class="text-xl font-extrabold leading-tight">Convertimos datos complejos en ventaja competitiva</h3>
+          </div>
+          <div class="flex gap-2 mb-6">
+            <span class="px-4 py-2 bg-gradient-to-r from-[#3763e0] to-[#7c3aed] text-white text-xs font-semibold rounded-lg shadow-lg shadow-[#3763e0]/30">Agendar reunión</span>
+            <span class="px-4 py-2 border border-[#3763e0]/40 text-[#7c9af7] text-xs font-medium rounded-lg">Ver servicios</span>
+          </div>
+          <div class="rounded-xl border border-[#1e2235] overflow-hidden bg-[#161a28]">
+            <div class="px-4 py-2.5 border-b border-[#1e2235] flex justify-between items-center">
+              <strong class="text-xs">Panel de métricas</strong>
+              <span class="text-[10px] px-2 py-0.5 rounded-full bg-gradient-to-r from-emerald-500 to-teal-500 text-white font-medium">Operativo</span>
+            </div>
+            <div class="divide-y divide-[#1e2235]">
+              <div class="px-4 py-2.5 flex justify-between text-xs"><span class="text-[#6b7394]">Fuentes integradas</span><strong class="font-mono text-base bg-gradient-to-r from-[#7c9af7] to-[#a78bfa] bg-clip-text text-transparent">142</strong></div>
+              <div class="px-4 py-2.5 flex justify-between text-xs"><span class="text-[#6b7394]">Precisión</span><strong class="font-mono text-base bg-gradient-to-r from-[#7c9af7] to-[#a78bfa] bg-clip-text text-transparent">96.7%</strong></div>
+            </div>
+          </div>
+          <div class="grid grid-cols-2 gap-2 mt-4">
+            <div class="rounded-xl border border-[#1e2235] bg-[#161a28] p-3 text-center">
+              <div class="font-mono text-xl font-bold bg-gradient-to-r from-[#7c9af7] to-[#a78bfa] bg-clip-text text-transparent">50+</div>
+              <div class="text-[10px] text-[#6b7394] uppercase tracking-wide">Proyectos</div>
+            </div>
+            <div class="rounded-xl border border-[#1e2235] bg-[#161a28] p-3 text-center">
+              <div class="font-mono text-xl font-bold bg-gradient-to-r from-[#7c9af7] to-[#a78bfa] bg-clip-text text-transparent">20+</div>
+              <div class="text-[10px] text-[#6b7394] uppercase tracking-wide">Clientes</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ═══════════════════════════════════════════ -->
+    <!-- PROPUESTA 2: Electric + Cyan -->
+    <!-- ═══════════════════════════════════════════ -->
+    <div class="proposal mb-16 rounded-2xl border border-white/10 overflow-hidden">
+      <div class="p-8 bg-gradient-to-br from-[#3763e0]/15 via-[#06b6d4]/10 to-transparent border-b border-white/10">
+        <div class="flex items-start justify-between flex-wrap gap-4">
+          <div>
+            <span class="text-xs font-mono tracking-wider text-[#06b6d4] uppercase">Propuesta 2</span>
+            <h2 class="text-2xl font-bold mt-1">Electric + Cyan</h2>
+            <p class="text-gray-400 text-sm mt-2 max-w-lg">Azul primario con <strong class="text-white">cyan como segundo acento</strong> para badges, estados y métricas. Crea un sistema bicolor que se siente como un dashboard real. Fondo light con toque azulado. Más agresivo en contraste.</p>
+          </div>
+          <div class="flex gap-2">
+            <div class="w-10 h-10 rounded-lg bg-[#3763e0]" title="#3763e0 Electric blue"></div>
+            <div class="w-10 h-10 rounded-lg bg-[#06b6d4]" title="#06b6d4 Cyan"></div>
+            <div class="w-10 h-10 rounded-lg bg-[#0e7490]" title="#0e7490 Dark cyan"></div>
+            <div class="w-10 h-10 rounded-lg bg-[#f0f9ff]" title="#f0f9ff Ice white"></div>
+            <div class="w-10 h-10 rounded-lg bg-[#0c1222]" title="#0c1222 Navy dark"></div>
+          </div>
+        </div>
+        <div class="flex flex-wrap gap-2 mt-4">
+          <span class="text-xs px-2 py-1 rounded bg-[#3763e0]/20 text-[#7c9af7] border border-[#3763e0]/30">Space Grotesk</span>
+          <span class="text-xs px-2 py-1 rounded bg-[#06b6d4]/20 text-[#22d3ee] border border-[#06b6d4]/30">JetBrains Mono</span>
+          <span class="text-xs px-2 py-1 rounded bg-white/5 text-gray-400 border border-white/10">Bicolor system: blue + cyan</span>
+          <span class="text-xs px-2 py-1 rounded bg-white/5 text-gray-400 border border-white/10">Mood: Dashboard + Data-driven</span>
+        </div>
+      </div>
+      <!-- Preview -->
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-0">
+        <!-- Light -->
+        <div class="p-8 bg-[#f0f9ff] text-gray-900" style="font-family: 'Space Grotesk', sans-serif">
           <span class="text-[10px] uppercase tracking-wider text-gray-400 mb-4 block">Light Mode</span>
           <div class="border-l-[3px] border-[#3763e0] pl-4 mb-6">
-            <p class="font-mono text-[0.65rem] tracking-[0.12em] uppercase text-[#3763e0] mb-1">Corporación Chilena de Inteligencia de Datos</p>
-            <h3 class="text-xl font-bold leading-tight">Convertimos datos complejos en ventaja competitiva</h3>
+            <p class="font-mono text-[0.65rem] tracking-[0.12em] uppercase text-[#06b6d4] mb-1">Corporación Chilena de Inteligencia de Datos</p>
+            <h3 class="text-xl font-bold leading-tight">Convertimos datos complejos en <span class="text-[#3763e0]">ventaja competitiva</span></h3>
           </div>
           <div class="flex gap-2 mb-6">
-            <span class="px-4 py-2 bg-[#3763e0] text-white text-xs font-medium rounded-md">Agendar reunión</span>
-            <span class="px-4 py-2 border border-gray-300 text-xs font-medium rounded-md">Ver servicios</span>
+            <span class="px-4 py-2 bg-[#3763e0] text-white text-xs font-semibold rounded-md">Agendar reunión</span>
+            <span class="px-4 py-2 border-2 border-[#06b6d4]/40 text-[#0e7490] text-xs font-medium rounded-md">Ver servicios</span>
           </div>
-          <div class="rounded-lg border border-gray-200 overflow-hidden">
-            <div class="px-4 py-2.5 border-b border-gray-200 flex justify-between items-center">
+          <div class="rounded-lg border border-[#bae6fd] overflow-hidden bg-white shadow-sm">
+            <div class="px-4 py-2.5 border-b border-[#bae6fd] flex justify-between items-center bg-gradient-to-r from-[#f0f9ff] to-white">
               <strong class="text-xs">Panel de métricas</strong>
-              <span class="text-[10px] px-1.5 py-0.5 rounded-full bg-emerald-50 text-emerald-600 border border-emerald-200">Operativo</span>
+              <span class="text-[10px] px-2 py-0.5 rounded-full bg-[#06b6d4] text-white font-mono font-medium">LIVE</span>
             </div>
-            <div class="divide-y divide-gray-100">
-              <div class="px-4 py-2 flex justify-between text-xs"><span class="text-gray-500">Fuentes integradas</span><strong class="font-mono text-base">142</strong></div>
-              <div class="px-4 py-2 flex justify-between text-xs"><span class="text-gray-500">Precisión</span><strong class="font-mono text-base">96.7%</strong></div>
+            <div class="divide-y divide-[#e0f2fe]">
+              <div class="px-4 py-2.5 flex justify-between text-xs"><span class="text-gray-500">Fuentes integradas</span><span class="flex items-center gap-2"><strong class="font-mono text-base text-[#3763e0]">142</strong><span class="text-[9px] px-1.5 py-0.5 rounded bg-[#06b6d4]/10 text-[#06b6d4] font-mono">sync</span></span></div>
+              <div class="px-4 py-2.5 flex justify-between text-xs"><span class="text-gray-500">Precisión</span><span class="flex items-center gap-2"><strong class="font-mono text-base text-[#3763e0]">96.7%</strong><span class="text-[9px] px-1.5 py-0.5 rounded bg-emerald-500/10 text-emerald-600 font-mono">prod</span></span></div>
             </div>
           </div>
           <div class="grid grid-cols-2 gap-2 mt-4">
-            <div class="rounded-lg border border-gray-200 p-3 text-center shadow-sm hover:shadow-md transition-shadow">
+            <div class="rounded-lg border border-[#bae6fd] bg-white p-3 text-center">
               <div class="font-mono text-xl font-bold text-[#3763e0]">50+</div>
-              <div class="text-[10px] text-gray-500 uppercase">Proyectos</div>
+              <div class="text-[10px] text-[#06b6d4] uppercase font-medium tracking-wide">Proyectos</div>
             </div>
-            <div class="rounded-lg border border-gray-200 p-3 text-center shadow-sm hover:shadow-md transition-shadow">
+            <div class="rounded-lg border border-[#bae6fd] bg-white p-3 text-center">
               <div class="font-mono text-xl font-bold text-[#3763e0]">20+</div>
-              <div class="text-[10px] text-gray-500 uppercase">Clientes</div>
+              <div class="text-[10px] text-[#06b6d4] uppercase font-medium tracking-wide">Clientes</div>
             </div>
           </div>
         </div>
-        <!-- Dark mode -->
-        <div class="p-8 bg-[#1b1e22] text-[#e4e8ec]" style="font-family: 'IBM Plex Sans', sans-serif">
+        <!-- Dark -->
+        <div class="p-8 bg-[#0c1222] text-[#e4e8ec]" style="font-family: 'Space Grotesk', sans-serif">
           <span class="text-[10px] uppercase tracking-wider text-gray-500 mb-4 block">Dark Mode</span>
           <div class="border-l-[3px] border-[#3763e0] pl-4 mb-6">
-            <p class="font-mono text-[0.65rem] tracking-[0.12em] uppercase text-[#3763e0] mb-1">Corporación Chilena de Inteligencia de Datos</p>
-            <h3 class="text-xl font-bold leading-tight">Convertimos datos complejos en ventaja competitiva</h3>
+            <p class="font-mono text-[0.65rem] tracking-[0.12em] uppercase text-[#22d3ee] mb-1">Corporación Chilena de Inteligencia de Datos</p>
+            <h3 class="text-xl font-bold leading-tight">Convertimos datos complejos en <span class="text-[#7c9af7]">ventaja competitiva</span></h3>
           </div>
           <div class="flex gap-2 mb-6">
-            <span class="px-4 py-2 bg-[#3763e0] text-white text-xs font-medium rounded-md">Agendar reunión</span>
-            <span class="px-4 py-2 border border-[#333840] text-xs font-medium rounded-md">Ver servicios</span>
+            <span class="px-4 py-2 bg-[#3763e0] text-white text-xs font-semibold rounded-md">Agendar reunión</span>
+            <span class="px-4 py-2 border-2 border-[#06b6d4]/30 text-[#22d3ee] text-xs font-medium rounded-md">Ver servicios</span>
           </div>
-          <div class="rounded-lg border border-[#333840] overflow-hidden">
-            <div class="px-4 py-2.5 border-b border-[#333840] bg-[#242830] flex justify-between items-center">
+          <div class="rounded-lg border border-[#164e63] overflow-hidden bg-[#0f1a2e]">
+            <div class="px-4 py-2.5 border-b border-[#164e63] flex justify-between items-center">
               <strong class="text-xs">Panel de métricas</strong>
-              <span class="text-[10px] px-1.5 py-0.5 rounded-full bg-emerald-900/30 text-emerald-400 border border-emerald-800">Operativo</span>
+              <span class="text-[10px] px-2 py-0.5 rounded-full bg-[#06b6d4] text-white font-mono font-medium">LIVE</span>
             </div>
-            <div class="divide-y divide-[#333840] bg-[#242830]">
-              <div class="px-4 py-2 flex justify-between text-xs"><span class="text-[#8b95a3]">Fuentes integradas</span><strong class="font-mono text-base">142</strong></div>
-              <div class="px-4 py-2 flex justify-between text-xs"><span class="text-[#8b95a3]">Precisión</span><strong class="font-mono text-base">96.7%</strong></div>
+            <div class="divide-y divide-[#164e63]/50">
+              <div class="px-4 py-2.5 flex justify-between text-xs"><span class="text-[#5b7a9e]">Fuentes integradas</span><span class="flex items-center gap-2"><strong class="font-mono text-base text-[#7c9af7]">142</strong><span class="text-[9px] px-1.5 py-0.5 rounded bg-[#06b6d4]/15 text-[#22d3ee] font-mono">sync</span></span></div>
+              <div class="px-4 py-2.5 flex justify-between text-xs"><span class="text-[#5b7a9e]">Precisión</span><span class="flex items-center gap-2"><strong class="font-mono text-base text-[#7c9af7]">96.7%</strong><span class="text-[9px] px-1.5 py-0.5 rounded bg-emerald-500/15 text-emerald-400 font-mono">prod</span></span></div>
             </div>
           </div>
           <div class="grid grid-cols-2 gap-2 mt-4">
-            <div class="rounded-lg border border-[#333840] bg-[#242830] p-3 text-center">
-              <div class="font-mono text-xl font-bold text-[#3763e0]">50+</div>
-              <div class="text-[10px] text-[#8b95a3] uppercase">Proyectos</div>
+            <div class="rounded-lg border border-[#164e63] bg-[#0f1a2e] p-3 text-center">
+              <div class="font-mono text-xl font-bold text-[#7c9af7]">50+</div>
+              <div class="text-[10px] text-[#22d3ee] uppercase font-medium tracking-wide">Proyectos</div>
             </div>
-            <div class="rounded-lg border border-[#333840] bg-[#242830] p-3 text-center">
-              <div class="font-mono text-xl font-bold text-[#3763e0]">20+</div>
-              <div class="text-[10px] text-[#8b95a3] uppercase">Clientes</div>
+            <div class="rounded-lg border border-[#164e63] bg-[#0f1a2e] p-3 text-center">
+              <div class="font-mono text-xl font-bold text-[#7c9af7]">20+</div>
+              <div class="text-[10px] text-[#22d3ee] uppercase font-medium tracking-wide">Clientes</div>
             </div>
           </div>
         </div>
@@ -133,93 +227,94 @@
     </div>
 
     <!-- ═══════════════════════════════════════════ -->
-    <!-- PROPUESTA B: Warm Terracotta -->
+    <!-- PROPUESTA 3: Electric Bold -->
     <!-- ═══════════════════════════════════════════ -->
-    <div class="proposal mb-16 rounded-2xl border border-white/10 overflow-hidden" style="--accent: #c2652a">
-      <div class="p-8 bg-gradient-to-br from-[#c2652a]/10 to-transparent border-b border-white/10">
+    <div class="proposal mb-16 rounded-2xl border border-white/10 overflow-hidden">
+      <div class="p-8 bg-gradient-to-br from-[#2563eb]/15 via-[#f59e0b]/8 to-transparent border-b border-white/10">
         <div class="flex items-start justify-between flex-wrap gap-4">
           <div>
-            <span class="text-xs font-mono tracking-wider text-[#c2652a] uppercase">Propuesta B</span>
-            <h2 class="text-2xl font-bold mt-1">Warm Terracotta</h2>
-            <p class="text-gray-400 text-sm mt-2 max-w-lg">Paleta cálida con terracotta como acento. Transmite cercanía, confianza humana y sofisticación. Diferencia a COCHID de la estética fría de las consultoras tech. Backgrounds cálidos con tonos crema.</p>
+            <span class="text-xs font-mono tracking-wider text-[#f59e0b] uppercase">Propuesta 3</span>
+            <h2 class="text-2xl font-bold mt-1">Electric Bold</h2>
+            <p class="text-gray-400 text-sm mt-2 max-w-lg">Azul más saturado con <strong class="text-white">ámbar/dorado como acento complementario</strong>. Cards con bordes más gruesos, badges con color. Tipografía más pesada. El contraste azul-dorado transmite autoridad y excelencia.</p>
           </div>
           <div class="flex gap-2">
-            <div class="w-10 h-10 rounded-lg bg-[#c2652a]" title="#c2652a Terracotta"></div>
-            <div class="w-10 h-10 rounded-lg bg-[#a3531f]" title="#a3531f Hover"></div>
-            <div class="w-10 h-10 rounded-lg bg-[#1a1714]" title="#1a1714 Dark BG"></div>
-            <div class="w-10 h-10 rounded-lg bg-[#faf8f5]" title="#faf8f5 Warm White"></div>
-            <div class="w-10 h-10 rounded-lg bg-[#2d7a4f]" title="#2d7a4f Forest"></div>
+            <div class="w-10 h-10 rounded-lg bg-[#2563eb]" title="#2563eb Royal blue"></div>
+            <div class="w-10 h-10 rounded-lg bg-[#f59e0b]" title="#f59e0b Amber"></div>
+            <div class="w-10 h-10 rounded-lg bg-[#92400e]" title="#92400e Dark amber"></div>
+            <div class="w-10 h-10 rounded-lg bg-[#fffbf5]" title="#fffbf5 Warm light"></div>
+            <div class="w-10 h-10 rounded-lg bg-[#111827]" title="#111827 Ink dark"></div>
           </div>
         </div>
         <div class="flex flex-wrap gap-2 mt-4">
-          <span class="text-xs px-2 py-1 rounded bg-[#c2652a]/20 text-[#c2652a] border border-[#c2652a]/30">DM Sans</span>
-          <span class="text-xs px-2 py-1 rounded bg-[#c2652a]/20 text-[#c2652a] border border-[#c2652a]/30">JetBrains Mono</span>
-          <span class="text-xs px-2 py-1 rounded bg-white/5 text-gray-400 border border-white/10">Mood: Cálido + Humano + Premium</span>
+          <span class="text-xs px-2 py-1 rounded bg-[#2563eb]/20 text-[#60a5fa] border border-[#2563eb]/30">Inter (heavy)</span>
+          <span class="text-xs px-2 py-1 rounded bg-[#f59e0b]/20 text-[#f59e0b] border border-[#f59e0b]/30">JetBrains Mono</span>
+          <span class="text-xs px-2 py-1 rounded bg-white/5 text-gray-400 border border-white/10">Contraste azul + dorado</span>
+          <span class="text-xs px-2 py-1 rounded bg-white/5 text-gray-400 border border-white/10">Mood: Autoridad + Premium + Confianza</span>
         </div>
       </div>
       <!-- Preview -->
       <div class="grid grid-cols-1 lg:grid-cols-2 gap-0">
-        <!-- Light mode -->
-        <div class="p-8 bg-[#faf8f5] text-[#2a2520]" style="font-family: 'DM Sans', sans-serif">
-          <span class="text-[10px] uppercase tracking-wider text-[#9e9389] mb-4 block">Light Mode</span>
-          <div class="border-l-[3px] border-[#c2652a] pl-4 mb-6">
-            <p class="font-mono text-[0.65rem] tracking-[0.12em] uppercase text-[#c2652a] mb-1">Corporación Chilena de Inteligencia de Datos</p>
-            <h3 class="text-xl font-bold leading-tight">Convertimos datos complejos en ventaja competitiva</h3>
+        <!-- Light -->
+        <div class="p-8 bg-[#fffbf5] text-gray-900" style="font-family: 'Inter', sans-serif">
+          <span class="text-[10px] uppercase tracking-wider text-gray-400 mb-4 block">Light Mode</span>
+          <div class="border-l-4 border-[#2563eb] pl-4 mb-6">
+            <p class="font-mono text-[0.65rem] tracking-[0.12em] uppercase text-[#f59e0b] font-bold mb-1">Corporación Chilena de Inteligencia de Datos</p>
+            <h3 class="text-xl font-extrabold leading-tight">Convertimos datos complejos en ventaja competitiva</h3>
           </div>
           <div class="flex gap-2 mb-6">
-            <span class="px-4 py-2 bg-[#c2652a] text-white text-xs font-medium rounded-md">Agendar reunión</span>
-            <span class="px-4 py-2 border border-[#d4cdc5] text-xs font-medium rounded-md text-[#5a5048]">Ver servicios</span>
+            <span class="px-4 py-2.5 bg-[#2563eb] text-white text-xs font-bold rounded-md shadow-md shadow-[#2563eb]/20">Agendar reunión</span>
+            <span class="px-4 py-2.5 border-2 border-[#2563eb] text-[#2563eb] text-xs font-bold rounded-md">Ver servicios</span>
           </div>
-          <div class="rounded-lg border border-[#e8e2da] overflow-hidden bg-white">
-            <div class="px-4 py-2.5 border-b border-[#e8e2da] flex justify-between items-center">
-              <strong class="text-xs">Panel de métricas</strong>
-              <span class="text-[10px] px-1.5 py-0.5 rounded-full bg-[#2d7a4f]/10 text-[#2d7a4f] border border-[#2d7a4f]/20">Operativo</span>
+          <div class="rounded-lg border-2 border-[#e5e7eb] overflow-hidden bg-white shadow-md">
+            <div class="px-4 py-2.5 border-b-2 border-[#e5e7eb] flex justify-between items-center">
+              <strong class="text-sm font-bold">Panel de métricas</strong>
+              <span class="text-[10px] px-2 py-0.5 rounded-full bg-[#f59e0b] text-white font-bold">Operativo</span>
             </div>
-            <div class="divide-y divide-[#f0ebe5]">
-              <div class="px-4 py-2 flex justify-between text-xs"><span class="text-[#9e9389]">Fuentes integradas</span><strong class="font-mono text-base">142</strong></div>
-              <div class="px-4 py-2 flex justify-between text-xs"><span class="text-[#9e9389]">Precisión</span><strong class="font-mono text-base">96.7%</strong></div>
+            <div class="divide-y divide-gray-100">
+              <div class="px-4 py-3 flex justify-between text-xs items-center"><span class="text-gray-500 font-medium">Fuentes integradas</span><strong class="font-mono text-2xl font-extrabold text-[#2563eb]">142</strong></div>
+              <div class="px-4 py-3 flex justify-between text-xs items-center"><span class="text-gray-500 font-medium">Precisión del modelo</span><strong class="font-mono text-2xl font-extrabold text-[#2563eb]">96.7%</strong></div>
             </div>
           </div>
-          <div class="grid grid-cols-2 gap-2 mt-4">
-            <div class="rounded-lg border border-[#e8e2da] bg-white p-3 text-center shadow-sm">
-              <div class="font-mono text-xl font-bold text-[#c2652a]">50+</div>
-              <div class="text-[10px] text-[#9e9389] uppercase">Proyectos</div>
+          <div class="grid grid-cols-2 gap-3 mt-4">
+            <div class="rounded-lg border-2 border-[#2563eb]/20 bg-white p-4 text-center shadow-sm">
+              <div class="font-mono text-2xl font-extrabold text-[#2563eb]">50+</div>
+              <div class="text-[10px] text-[#f59e0b] uppercase font-bold tracking-wider mt-1">Proyectos</div>
             </div>
-            <div class="rounded-lg border border-[#e8e2da] bg-white p-3 text-center shadow-sm">
-              <div class="font-mono text-xl font-bold text-[#c2652a]">20+</div>
-              <div class="text-[10px] text-[#9e9389] uppercase">Clientes</div>
+            <div class="rounded-lg border-2 border-[#2563eb]/20 bg-white p-4 text-center shadow-sm">
+              <div class="font-mono text-2xl font-extrabold text-[#2563eb]">20+</div>
+              <div class="text-[10px] text-[#f59e0b] uppercase font-bold tracking-wider mt-1">Clientes</div>
             </div>
           </div>
         </div>
-        <!-- Dark mode -->
-        <div class="p-8 bg-[#1a1714] text-[#e8e2da]" style="font-family: 'DM Sans', sans-serif">
+        <!-- Dark -->
+        <div class="p-8 bg-[#111827] text-[#f3f4f6]" style="font-family: 'Inter', sans-serif">
           <span class="text-[10px] uppercase tracking-wider text-gray-500 mb-4 block">Dark Mode</span>
-          <div class="border-l-[3px] border-[#c2652a] pl-4 mb-6">
-            <p class="font-mono text-[0.65rem] tracking-[0.12em] uppercase text-[#c2652a] mb-1">Corporación Chilena de Inteligencia de Datos</p>
-            <h3 class="text-xl font-bold leading-tight">Convertimos datos complejos en ventaja competitiva</h3>
+          <div class="border-l-4 border-[#2563eb] pl-4 mb-6">
+            <p class="font-mono text-[0.65rem] tracking-[0.12em] uppercase text-[#f59e0b] font-bold mb-1">Corporación Chilena de Inteligencia de Datos</p>
+            <h3 class="text-xl font-extrabold leading-tight">Convertimos datos complejos en ventaja competitiva</h3>
           </div>
           <div class="flex gap-2 mb-6">
-            <span class="px-4 py-2 bg-[#c2652a] text-white text-xs font-medium rounded-md">Agendar reunión</span>
-            <span class="px-4 py-2 border border-[#3a332c] text-xs font-medium rounded-md">Ver servicios</span>
+            <span class="px-4 py-2.5 bg-[#2563eb] text-white text-xs font-bold rounded-md shadow-md shadow-[#2563eb]/30">Agendar reunión</span>
+            <span class="px-4 py-2.5 border-2 border-[#2563eb] text-[#60a5fa] text-xs font-bold rounded-md">Ver servicios</span>
           </div>
-          <div class="rounded-lg border border-[#3a332c] overflow-hidden">
-            <div class="px-4 py-2.5 border-b border-[#3a332c] bg-[#252018] flex justify-between items-center">
-              <strong class="text-xs">Panel de métricas</strong>
-              <span class="text-[10px] px-1.5 py-0.5 rounded-full bg-[#2d7a4f]/20 text-[#5dbd7e] border border-[#2d7a4f]/30">Operativo</span>
+          <div class="rounded-lg border-2 border-[#1f2937] overflow-hidden bg-[#1a2236] shadow-md">
+            <div class="px-4 py-2.5 border-b-2 border-[#1f2937] flex justify-between items-center">
+              <strong class="text-sm font-bold">Panel de métricas</strong>
+              <span class="text-[10px] px-2 py-0.5 rounded-full bg-[#f59e0b] text-white font-bold">Operativo</span>
             </div>
-            <div class="divide-y divide-[#3a332c] bg-[#252018]">
-              <div class="px-4 py-2 flex justify-between text-xs"><span class="text-[#8a7f73]">Fuentes integradas</span><strong class="font-mono text-base">142</strong></div>
-              <div class="px-4 py-2 flex justify-between text-xs"><span class="text-[#8a7f73]">Precisión</span><strong class="font-mono text-base">96.7%</strong></div>
+            <div class="divide-y divide-[#1f2937]">
+              <div class="px-4 py-3 flex justify-between text-xs items-center"><span class="text-[#6b7280] font-medium">Fuentes integradas</span><strong class="font-mono text-2xl font-extrabold text-[#60a5fa]">142</strong></div>
+              <div class="px-4 py-3 flex justify-between text-xs items-center"><span class="text-[#6b7280] font-medium">Precisión</span><strong class="font-mono text-2xl font-extrabold text-[#60a5fa]">96.7%</strong></div>
             </div>
           </div>
-          <div class="grid grid-cols-2 gap-2 mt-4">
-            <div class="rounded-lg border border-[#3a332c] bg-[#252018] p-3 text-center">
-              <div class="font-mono text-xl font-bold text-[#c2652a]">50+</div>
-              <div class="text-[10px] text-[#8a7f73] uppercase">Proyectos</div>
+          <div class="grid grid-cols-2 gap-3 mt-4">
+            <div class="rounded-lg border-2 border-[#2563eb]/30 bg-[#1a2236] p-4 text-center">
+              <div class="font-mono text-2xl font-extrabold text-[#60a5fa]">50+</div>
+              <div class="text-[10px] text-[#f59e0b] uppercase font-bold tracking-wider mt-1">Proyectos</div>
             </div>
-            <div class="rounded-lg border border-[#3a332c] bg-[#252018] p-3 text-center">
-              <div class="font-mono text-xl font-bold text-[#c2652a]">20+</div>
-              <div class="text-[10px] text-[#8a7f73] uppercase">Clientes</div>
+            <div class="rounded-lg border-2 border-[#2563eb]/30 bg-[#1a2236] p-4 text-center">
+              <div class="font-mono text-2xl font-extrabold text-[#60a5fa]">20+</div>
+              <div class="text-[10px] text-[#f59e0b] uppercase font-bold tracking-wider mt-1">Clientes</div>
             </div>
           </div>
         </div>
@@ -227,93 +322,94 @@
     </div>
 
     <!-- ═══════════════════════════════════════════ -->
-    <!-- PROPUESTA C: Emerald Data -->
+    <!-- PROPUESTA 4: Electric Neon -->
     <!-- ═══════════════════════════════════════════ -->
-    <div class="proposal mb-16 rounded-2xl border border-white/10 overflow-hidden" style="--accent: #0d9465">
-      <div class="p-8 bg-gradient-to-br from-[#0d9465]/10 to-transparent border-b border-white/10">
+    <div class="proposal mb-16 rounded-2xl border border-white/10 overflow-hidden">
+      <div class="p-8 bg-gradient-to-br from-[#4f46e5]/15 via-[#10b981]/10 to-transparent border-b border-white/10">
         <div class="flex items-start justify-between flex-wrap gap-4">
           <div>
-            <span class="text-xs font-mono tracking-wider text-[#0d9465] uppercase">Propuesta C</span>
-            <h2 class="text-2xl font-bold mt-1">Emerald Data</h2>
-            <p class="text-gray-400 text-sm mt-2 max-w-lg">Verde esmeralda como color primario con acentos en azul profundo. Transmite crecimiento, confianza financiera y precisión. Perfecto para posicionar COCHID como consultora premium de datos con identidad chilena.</p>
+            <span class="text-xs font-mono tracking-wider text-[#10b981] uppercase">Propuesta 4</span>
+            <h2 class="text-2xl font-bold mt-1">Electric Neon</h2>
+            <p class="text-gray-400 text-sm mt-2 max-w-lg">Indigo profundo como primario con <strong class="text-white">verde neón como acento de estado/éxito</strong>. El más tech-forward de todos. Backgrounds ligeramente más oscuros incluso en light mode. Glow effects sutiles en hover. Estética fintech/SaaS moderna.</p>
           </div>
           <div class="flex gap-2">
-            <div class="w-10 h-10 rounded-lg bg-[#0d9465]" title="#0d9465 Emerald"></div>
-            <div class="w-10 h-10 rounded-lg bg-[#0a7a53]" title="#0a7a53 Hover"></div>
-            <div class="w-10 h-10 rounded-lg bg-[#0f1419]" title="#0f1419 Deep Dark"></div>
-            <div class="w-10 h-10 rounded-lg bg-[#f7faf9]" title="#f7faf9 Mint White"></div>
-            <div class="w-10 h-10 rounded-lg bg-[#2563eb]" title="#2563eb Accent Blue"></div>
+            <div class="w-10 h-10 rounded-lg bg-[#4f46e5]" title="#4f46e5 Indigo"></div>
+            <div class="w-10 h-10 rounded-lg bg-[#10b981]" title="#10b981 Emerald neon"></div>
+            <div class="w-10 h-10 rounded-lg bg-[#6366f1]" title="#6366f1 Light indigo"></div>
+            <div class="w-10 h-10 rounded-lg bg-[#f5f5f7]" title="#f5f5f7 Cool gray"></div>
+            <div class="w-10 h-10 rounded-lg bg-[#0a0e1a]" title="#0a0e1a Void"></div>
           </div>
         </div>
         <div class="flex flex-wrap gap-2 mt-4">
-          <span class="text-xs px-2 py-1 rounded bg-[#0d9465]/20 text-[#0d9465] border border-[#0d9465]/30">Inter</span>
-          <span class="text-xs px-2 py-1 rounded bg-[#0d9465]/20 text-[#0d9465] border border-[#0d9465]/30">JetBrains Mono</span>
-          <span class="text-xs px-2 py-1 rounded bg-white/5 text-gray-400 border border-white/10">Mood: Premium + Growth + Precision</span>
+          <span class="text-xs px-2 py-1 rounded bg-[#4f46e5]/20 text-[#818cf8] border border-[#4f46e5]/30">Plus Jakarta Sans</span>
+          <span class="text-xs px-2 py-1 rounded bg-[#10b981]/20 text-[#34d399] border border-[#10b981]/30">JetBrains Mono</span>
+          <span class="text-xs px-2 py-1 rounded bg-white/5 text-gray-400 border border-white/10">Glow on hover</span>
+          <span class="text-xs px-2 py-1 rounded bg-white/5 text-gray-400 border border-white/10">Mood: SaaS + Fintech + Cutting-edge</span>
         </div>
       </div>
       <!-- Preview -->
       <div class="grid grid-cols-1 lg:grid-cols-2 gap-0">
-        <!-- Light mode -->
-        <div class="p-8 bg-[#f7faf9] text-[#1a2e28]" style="font-family: 'Inter', sans-serif">
-          <span class="text-[10px] uppercase tracking-wider text-[#8fa39b] mb-4 block">Light Mode</span>
-          <div class="border-l-[3px] border-[#0d9465] pl-4 mb-6">
-            <p class="font-mono text-[0.65rem] tracking-[0.12em] uppercase text-[#0d9465] mb-1">Corporación Chilena de Inteligencia de Datos</p>
-            <h3 class="text-xl font-bold leading-tight">Convertimos datos complejos en ventaja competitiva</h3>
+        <!-- Light -->
+        <div class="p-8 bg-[#f5f5f7] text-gray-900" style="font-family: 'Plus Jakarta Sans', sans-serif">
+          <span class="text-[10px] uppercase tracking-wider text-gray-400 mb-4 block">Light Mode</span>
+          <div class="border-l-[3px] border-[#4f46e5] pl-4 mb-6">
+            <p class="font-mono text-[0.65rem] tracking-[0.12em] uppercase text-[#4f46e5] mb-1">Corporación Chilena de Inteligencia de Datos</p>
+            <h3 class="text-xl font-extrabold leading-tight">Convertimos datos complejos en ventaja competitiva</h3>
           </div>
           <div class="flex gap-2 mb-6">
-            <span class="px-4 py-2 bg-[#0d9465] text-white text-xs font-medium rounded-md">Agendar reunión</span>
-            <span class="px-4 py-2 border border-[#c8d9d2] text-xs font-medium rounded-md text-[#3d5a50]">Ver servicios</span>
+            <span class="px-4 py-2 bg-[#4f46e5] text-white text-xs font-semibold rounded-lg shadow-lg shadow-[#4f46e5]/20">Agendar reunión</span>
+            <span class="px-4 py-2 bg-white border border-gray-200 text-gray-700 text-xs font-medium rounded-lg shadow-sm">Ver servicios</span>
           </div>
-          <div class="rounded-lg border border-[#d4e4dd] overflow-hidden bg-white">
-            <div class="px-4 py-2.5 border-b border-[#d4e4dd] flex justify-between items-center">
+          <div class="rounded-xl border border-gray-200 overflow-hidden bg-white shadow-sm">
+            <div class="px-4 py-2.5 border-b border-gray-200 flex justify-between items-center">
               <strong class="text-xs">Panel de métricas</strong>
-              <span class="text-[10px] px-1.5 py-0.5 rounded-full bg-[#0d9465]/10 text-[#0d9465] border border-[#0d9465]/20">Operativo</span>
+              <span class="flex items-center gap-1.5 text-[10px]"><span class="w-1.5 h-1.5 rounded-full bg-[#10b981] animate-pulse"></span><span class="text-[#10b981] font-mono font-medium">LIVE</span></span>
             </div>
-            <div class="divide-y divide-[#edf4f0]">
-              <div class="px-4 py-2 flex justify-between text-xs"><span class="text-[#8fa39b]">Fuentes integradas</span><strong class="font-mono text-base">142</strong></div>
-              <div class="px-4 py-2 flex justify-between text-xs"><span class="text-[#8fa39b]">Precisión</span><strong class="font-mono text-base">96.7%</strong></div>
+            <div class="divide-y divide-gray-100">
+              <div class="px-4 py-2.5 flex justify-between text-xs"><span class="text-gray-500">Fuentes integradas</span><span class="flex items-center gap-2"><strong class="font-mono text-base text-gray-900">142</strong><span class="text-[9px] px-1.5 py-0.5 rounded-full bg-[#10b981]/10 text-[#10b981] font-mono font-medium">sync</span></span></div>
+              <div class="px-4 py-2.5 flex justify-between text-xs"><span class="text-gray-500">Precisión</span><span class="flex items-center gap-2"><strong class="font-mono text-base text-gray-900">96.7%</strong><span class="text-[9px] px-1.5 py-0.5 rounded-full bg-[#4f46e5]/10 text-[#4f46e5] font-mono font-medium">prod</span></span></div>
             </div>
           </div>
           <div class="grid grid-cols-2 gap-2 mt-4">
-            <div class="rounded-lg border border-[#d4e4dd] bg-white p-3 text-center shadow-sm">
-              <div class="font-mono text-xl font-bold text-[#0d9465]">50+</div>
-              <div class="text-[10px] text-[#8fa39b] uppercase">Proyectos</div>
+            <div class="rounded-xl bg-white border border-gray-200 p-3 text-center shadow-sm hover:shadow-md hover:border-[#4f46e5]/30 transition-all">
+              <div class="font-mono text-xl font-extrabold text-[#4f46e5]">50+</div>
+              <div class="text-[10px] text-gray-500 uppercase tracking-wide">Proyectos</div>
             </div>
-            <div class="rounded-lg border border-[#d4e4dd] bg-white p-3 text-center shadow-sm">
-              <div class="font-mono text-xl font-bold text-[#0d9465]">20+</div>
-              <div class="text-[10px] text-[#8fa39b] uppercase">Clientes</div>
+            <div class="rounded-xl bg-white border border-gray-200 p-3 text-center shadow-sm hover:shadow-md hover:border-[#4f46e5]/30 transition-all">
+              <div class="font-mono text-xl font-extrabold text-[#4f46e5]">20+</div>
+              <div class="text-[10px] text-gray-500 uppercase tracking-wide">Clientes</div>
             </div>
           </div>
         </div>
-        <!-- Dark mode -->
-        <div class="p-8 bg-[#0f1419] text-[#d4e4dd]" style="font-family: 'Inter', sans-serif">
+        <!-- Dark -->
+        <div class="p-8 bg-[#0a0e1a] text-[#e4e8ec]" style="font-family: 'Plus Jakarta Sans', sans-serif">
           <span class="text-[10px] uppercase tracking-wider text-gray-500 mb-4 block">Dark Mode</span>
-          <div class="border-l-[3px] border-[#0d9465] pl-4 mb-6">
-            <p class="font-mono text-[0.65rem] tracking-[0.12em] uppercase text-[#0d9465] mb-1">Corporación Chilena de Inteligencia de Datos</p>
-            <h3 class="text-xl font-bold leading-tight">Convertimos datos complejos en ventaja competitiva</h3>
+          <div class="border-l-[3px] border-[#6366f1] pl-4 mb-6">
+            <p class="font-mono text-[0.65rem] tracking-[0.12em] uppercase text-[#818cf8] mb-1">Corporación Chilena de Inteligencia de Datos</p>
+            <h3 class="text-xl font-extrabold leading-tight">Convertimos datos complejos en ventaja competitiva</h3>
           </div>
           <div class="flex gap-2 mb-6">
-            <span class="px-4 py-2 bg-[#0d9465] text-white text-xs font-medium rounded-md">Agendar reunión</span>
-            <span class="px-4 py-2 border border-[#1e3029] text-xs font-medium rounded-md">Ver servicios</span>
+            <span class="px-4 py-2 bg-[#4f46e5] text-white text-xs font-semibold rounded-lg shadow-lg shadow-[#4f46e5]/40">Agendar reunión</span>
+            <span class="px-4 py-2 bg-[#141830] border border-[#2a2f4a] text-[#c7d2fe] text-xs font-medium rounded-lg">Ver servicios</span>
           </div>
-          <div class="rounded-lg border border-[#1e3029] overflow-hidden">
-            <div class="px-4 py-2.5 border-b border-[#1e3029] bg-[#141e1a] flex justify-between items-center">
+          <div class="rounded-xl border border-[#1e2340] overflow-hidden bg-[#0e1226]">
+            <div class="px-4 py-2.5 border-b border-[#1e2340] flex justify-between items-center">
               <strong class="text-xs">Panel de métricas</strong>
-              <span class="text-[10px] px-1.5 py-0.5 rounded-full bg-[#0d9465]/20 text-[#3dbd8a] border border-[#0d9465]/30">Operativo</span>
+              <span class="flex items-center gap-1.5 text-[10px]"><span class="w-1.5 h-1.5 rounded-full bg-[#10b981] animate-pulse"></span><span class="text-[#10b981] font-mono font-medium">LIVE</span></span>
             </div>
-            <div class="divide-y divide-[#1e3029] bg-[#141e1a]">
-              <div class="px-4 py-2 flex justify-between text-xs"><span class="text-[#5d7a6e]">Fuentes integradas</span><strong class="font-mono text-base">142</strong></div>
-              <div class="px-4 py-2 flex justify-between text-xs"><span class="text-[#5d7a6e]">Precisión</span><strong class="font-mono text-base">96.7%</strong></div>
+            <div class="divide-y divide-[#1e2340]">
+              <div class="px-4 py-2.5 flex justify-between text-xs"><span class="text-[#6b7394]">Fuentes integradas</span><span class="flex items-center gap-2"><strong class="font-mono text-base">142</strong><span class="text-[9px] px-1.5 py-0.5 rounded-full bg-[#10b981]/15 text-[#34d399] font-mono font-medium">sync</span></span></div>
+              <div class="px-4 py-2.5 flex justify-between text-xs"><span class="text-[#6b7394]">Precisión</span><span class="flex items-center gap-2"><strong class="font-mono text-base">96.7%</strong><span class="text-[9px] px-1.5 py-0.5 rounded-full bg-[#4f46e5]/20 text-[#818cf8] font-mono font-medium">prod</span></span></div>
             </div>
           </div>
           <div class="grid grid-cols-2 gap-2 mt-4">
-            <div class="rounded-lg border border-[#1e3029] bg-[#141e1a] p-3 text-center">
-              <div class="font-mono text-xl font-bold text-[#0d9465]">50+</div>
-              <div class="text-[10px] text-[#5d7a6e] uppercase">Proyectos</div>
+            <div class="rounded-xl bg-[#0e1226] border border-[#1e2340] p-3 text-center hover:border-[#4f46e5]/40 hover:shadow-[0_0_15px_rgba(79,70,229,0.15)] transition-all">
+              <div class="font-mono text-xl font-extrabold text-[#818cf8]">50+</div>
+              <div class="text-[10px] text-[#6b7394] uppercase tracking-wide">Proyectos</div>
             </div>
-            <div class="rounded-lg border border-[#1e3029] bg-[#141e1a] p-3 text-center">
-              <div class="font-mono text-xl font-bold text-[#0d9465]">20+</div>
-              <div class="text-[10px] text-[#5d7a6e] uppercase">Clientes</div>
+            <div class="rounded-xl bg-[#0e1226] border border-[#1e2340] p-3 text-center hover:border-[#4f46e5]/40 hover:shadow-[0_0_15px_rgba(79,70,229,0.15)] transition-all">
+              <div class="font-mono text-xl font-extrabold text-[#818cf8]">20+</div>
+              <div class="text-[10px] text-[#6b7394] uppercase tracking-wide">Clientes</div>
             </div>
           </div>
         </div>
@@ -331,58 +427,79 @@
         <table class="w-full text-sm">
           <thead>
             <tr class="border-b border-white/10">
-              <th class="text-left px-6 py-3 text-xs uppercase tracking-wider text-gray-500">Aspecto</th>
-              <th class="text-left px-6 py-3 text-xs uppercase tracking-wider text-[#3763e0]">A · Corporate Electric</th>
-              <th class="text-left px-6 py-3 text-xs uppercase tracking-wider text-[#c2652a]">B · Warm Terracotta</th>
-              <th class="text-left px-6 py-3 text-xs uppercase tracking-wider text-[#0d9465]">C · Emerald Data</th>
+              <th class="text-left px-5 py-3 text-xs uppercase tracking-wider text-gray-500">Aspecto</th>
+              <th class="text-left px-5 py-3 text-xs uppercase tracking-wider"><span class="bg-gradient-to-r from-[#3763e0] to-[#7c3aed] bg-clip-text text-transparent">1 · Gradient</span></th>
+              <th class="text-left px-5 py-3 text-xs uppercase tracking-wider text-[#06b6d4]">2 · Cyan</th>
+              <th class="text-left px-5 py-3 text-xs uppercase tracking-wider text-[#f59e0b]">3 · Bold</th>
+              <th class="text-left px-5 py-3 text-xs uppercase tracking-wider text-[#10b981]">4 · Neon</th>
             </tr>
           </thead>
           <tbody class="divide-y divide-white/5">
             <tr>
-              <td class="px-6 py-3 text-gray-400">Color primario</td>
-              <td class="px-6 py-3"><span class="inline-block w-3 h-3 rounded bg-[#3763e0] mr-2"></span>#3763e0</td>
-              <td class="px-6 py-3"><span class="inline-block w-3 h-3 rounded bg-[#c2652a] mr-2"></span>#c2652a</td>
-              <td class="px-6 py-3"><span class="inline-block w-3 h-3 rounded bg-[#0d9465] mr-2"></span>#0d9465</td>
+              <td class="px-5 py-3 text-gray-400">Primario</td>
+              <td class="px-5 py-3">Blue → Violet gradient</td>
+              <td class="px-5 py-3">Blue #3763e0</td>
+              <td class="px-5 py-3">Royal #2563eb</td>
+              <td class="px-5 py-3">Indigo #4f46e5</td>
             </tr>
             <tr>
-              <td class="px-6 py-3 text-gray-400">Tipografía</td>
-              <td class="px-6 py-3">IBM Plex Sans</td>
-              <td class="px-6 py-3">DM Sans</td>
-              <td class="px-6 py-3">Inter</td>
+              <td class="px-5 py-3 text-gray-400">Segundo acento</td>
+              <td class="px-5 py-3">Violet #7c3aed</td>
+              <td class="px-5 py-3">Cyan #06b6d4</td>
+              <td class="px-5 py-3">Amber #f59e0b</td>
+              <td class="px-5 py-3">Emerald #10b981</td>
             </tr>
             <tr>
-              <td class="px-6 py-3 text-gray-400">BG Light</td>
-              <td class="px-6 py-3">Blanco puro #fff</td>
-              <td class="px-6 py-3">Crema cálido #faf8f5</td>
-              <td class="px-6 py-3">Mint tenue #f7faf9</td>
+              <td class="px-5 py-3 text-gray-400">Tipografía</td>
+              <td class="px-5 py-3">Plus Jakarta Sans</td>
+              <td class="px-5 py-3">Space Grotesk</td>
+              <td class="px-5 py-3">Inter (heavy)</td>
+              <td class="px-5 py-3">Plus Jakarta Sans</td>
             </tr>
             <tr>
-              <td class="px-6 py-3 text-gray-400">Mood</td>
-              <td class="px-6 py-3">Institucional, tech</td>
-              <td class="px-6 py-3">Humano, premium</td>
-              <td class="px-6 py-3">Growth, precision</td>
+              <td class="px-5 py-3 text-gray-400">BG Light</td>
+              <td class="px-5 py-3">Lavanda #f8f7ff</td>
+              <td class="px-5 py-3">Ice blue #f0f9ff</td>
+              <td class="px-5 py-3">Warm #fffbf5</td>
+              <td class="px-5 py-3">Cool gray #f5f5f7</td>
             </tr>
             <tr>
-              <td class="px-6 py-3 text-gray-400">Mejor para</td>
-              <td class="px-6 py-3">Sector público, corp</td>
-              <td class="px-6 py-3">Diferenciarse del tech</td>
-              <td class="px-6 py-3">Fintech, consultoría</td>
+              <td class="px-5 py-3 text-gray-400">Efecto especial</td>
+              <td class="px-5 py-3">Gradient text + buttons</td>
+              <td class="px-5 py-3">Bicolor dashboard</td>
+              <td class="px-5 py-3">Bordes gruesos, bold</td>
+              <td class="px-5 py-3">Glow hover, pulse dots</td>
             </tr>
             <tr>
-              <td class="px-6 py-3 text-gray-400">Esfuerzo de cambio</td>
-              <td class="px-6 py-3 text-emerald-400">Mínimo (actual)</td>
-              <td class="px-6 py-3 text-amber-400">Medio (font + colores)</td>
-              <td class="px-6 py-3 text-amber-400">Medio (font + colores)</td>
+              <td class="px-5 py-3 text-gray-400">Nivel de "audacia"</td>
+              <td class="px-5 py-3">
+                <div class="flex gap-0.5"><span class="w-3 h-1.5 rounded-full bg-[#7c3aed]"></span><span class="w-3 h-1.5 rounded-full bg-[#7c3aed]"></span><span class="w-3 h-1.5 rounded-full bg-[#7c3aed]"></span><span class="w-3 h-1.5 rounded-full bg-[#7c3aed]/30"></span></div>
+              </td>
+              <td class="px-5 py-3">
+                <div class="flex gap-0.5"><span class="w-3 h-1.5 rounded-full bg-[#06b6d4]"></span><span class="w-3 h-1.5 rounded-full bg-[#06b6d4]"></span><span class="w-3 h-1.5 rounded-full bg-[#06b6d4]/30"></span><span class="w-3 h-1.5 rounded-full bg-[#06b6d4]/30"></span></div>
+              </td>
+              <td class="px-5 py-3">
+                <div class="flex gap-0.5"><span class="w-3 h-1.5 rounded-full bg-[#f59e0b]"></span><span class="w-3 h-1.5 rounded-full bg-[#f59e0b]"></span><span class="w-3 h-1.5 rounded-full bg-[#f59e0b]"></span><span class="w-3 h-1.5 rounded-full bg-[#f59e0b]"></span></div>
+              </td>
+              <td class="px-5 py-3">
+                <div class="flex gap-0.5"><span class="w-3 h-1.5 rounded-full bg-[#10b981]"></span><span class="w-3 h-1.5 rounded-full bg-[#10b981]"></span><span class="w-3 h-1.5 rounded-full bg-[#10b981]"></span><span class="w-3 h-1.5 rounded-full bg-[#10b981]/30"></span></div>
+              </td>
+            </tr>
+            <tr>
+              <td class="px-5 py-3 text-gray-400">Mejor para</td>
+              <td class="px-5 py-3">Versatilidad, moderno</td>
+              <td class="px-5 py-3">Clientes tech/data</td>
+              <td class="px-5 py-3">Impacto máximo</td>
+              <td class="px-5 py-3">SaaS/Fintech look</td>
             </tr>
           </tbody>
         </table>
       </div>
     </div>
 
-    <!-- Footer note -->
     <div class="text-center text-gray-500 text-sm pb-8">
-      <p>Elige una propuesta y la implementamos en el sitio completo.</p>
-      <p class="text-xs mt-1 text-gray-600">También se pueden combinar elementos entre propuestas (ej: paleta de B con tipografía de C).</p>
+      <p>Elige una propuesta (o mezcla elementos) y la implemento en el sitio.</p>
+      <p class="text-xs mt-1 text-gray-600">Ejemplo: "Quiero los gradientes de la 1 pero con la paleta cyan de la 2"</p>
     </div>
 
   </div>

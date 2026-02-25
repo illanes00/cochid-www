@@ -1,98 +1,175 @@
 {% extends "base.html" %}
 
 {% block title %}Contacto — COCHID{% endblock %}
-{% block meta_description %}Contacte a COCHID para consultoría en inteligencia de datos, ingeniería de datos y analítica avanzada.{% endblock %}
+{% block meta_description %}Contacte al equipo técnico de COCHID. Plataformas de datos, inteligencia periodística e ingeniería de datos a medida.{% endblock %}
 
 {% block body %}
 
 <!-- ═══ HERO ═══ -->
-<section class="py-12 md:py-16 border-b border-gray-200 dark:border-dark-line">
-  <div class="max-w-5xl mx-auto px-4 sm:px-6">
-    <p class="font-mono text-[0.72rem] tracking-[0.15em] uppercase text-cochid-accent mb-2">Hablemos</p>
-    <h1 class="text-3xl sm:text-4xl font-bold mb-2">Contacto</h1>
-    <p class="text-gray-500 dark:text-dark-muted max-w-2xl">Conversemos sobre cómo podemos ayudar a su organización a tomar mejores decisiones con datos.</p>
+<section class="relative py-16 md:py-20 network-bg overflow-hidden">
+  <div class="max-w-6xl mx-auto px-4 sm:px-6 relative">
+    <span class="tag mb-4 animate-fade-in-up">contacto@cochid.cl</span>
+    <h1 class="text-4xl sm:text-5xl font-bold mb-3 animate-fade-in-up-d1">Contacto</h1>
+    <p class="text-lg text-light-muted dark:text-gray-400 max-w-2xl animate-fade-in-up-d2">Escriba directo al equipo técnico. Le respondemos en un día hábil.</p>
   </div>
 </section>
 
-<!-- ═══ CONTACTO ═══ -->
-<div class="py-16 md:py-20">
-  <div class="max-w-5xl mx-auto px-4 sm:px-6">
-    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-      <div>
-        <h3 class="text-lg font-semibold mb-2">Información de contacto</h3>
-        <p class="text-sm text-gray-500 dark:text-dark-muted mb-6">Estamos disponibles para conversar sobre sus necesidades de datos y explorar cómo podemos colaborar.</p>
+<div class="section-divider"></div>
 
-        <div class="divide-y divide-gray-100 dark:divide-dark-line border border-gray-200 dark:border-dark-line rounded-lg overflow-hidden mb-6">
-          <div class="px-5 py-3.5 bg-white dark:bg-dark-paper hover:bg-gray-50 dark:hover:bg-dark-bg/50 transition-colors">
-            <strong class="text-sm block mb-0.5">Email</strong>
-            <a href="mailto:contacto@cochid.cl" class="text-sm text-cochid-accent hover:text-cochid-accent-hover transition-colors">contacto@cochid.cl</a>
-          </div>
-          <div class="px-5 py-3.5 bg-white dark:bg-dark-paper hover:bg-gray-50 dark:hover:bg-dark-bg/50 transition-colors">
-            <strong class="text-sm block mb-0.5">Teléfono</strong>
-            <span class="text-sm text-gray-600 dark:text-dark-muted">+56 2 2345 6789</span>
-          </div>
-          <div class="px-5 py-3.5 bg-white dark:bg-dark-paper hover:bg-gray-50 dark:hover:bg-dark-bg/50 transition-colors">
-            <strong class="text-sm block mb-0.5">Ubicación</strong>
-            <span class="text-sm text-gray-600 dark:text-dark-muted">Santiago, Chile</span>
-          </div>
-          <div class="px-5 py-3.5 bg-white dark:bg-dark-paper hover:bg-gray-50 dark:hover:bg-dark-bg/50 transition-colors">
-            <strong class="text-sm block mb-0.5">Horario de atención</strong>
-            <span class="text-sm text-gray-600 dark:text-dark-muted">Lunes a viernes, 09:00 — 18:00 hrs (CLT)</span>
+<!-- ═══ CONTACTO ═══ -->
+<section class="py-20 md:py-28 relative">
+  <div class="max-w-6xl mx-auto px-4 sm:px-6">
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16">
+
+      <!-- Left: Info -->
+      <div class="reveal">
+        <h3 class="text-2xl font-bold mb-3">Información de contacto</h3>
+        <p class="text-sm text-light-muted dark:text-gray-400 mb-8">Directo al equipo técnico. Sin intermediarios.</p>
+
+        <div class="glass-card overflow-hidden mb-6">
+          <div class="divide-y divide-gray-100 dark:divide-cochid-surface-border">
+            <div class="p-5 flex items-start gap-4 hover:bg-light-surface-alt/50 dark:hover:bg-cochid-surface/30 transition-colors">
+              <div class="w-10 h-10 rounded-lg bg-cochid-glow border border-cochid-electric/20 flex items-center justify-center flex-shrink-0 mt-0.5">
+                <svg class="w-5 h-5 text-cochid-electric" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+              </div>
+              <div>
+                <strong class="text-sm block mb-0.5">Email</strong>
+                <a href="mailto:contacto@cochid.cl" class="text-sm text-cochid-electric hover:text-cochid-electric-hover transition-colors">contacto@cochid.cl</a>
+              </div>
+            </div>
+            <div class="p-5 flex items-start gap-4 hover:bg-light-surface-alt/50 dark:hover:bg-cochid-surface/30 transition-colors">
+              <div class="w-10 h-10 rounded-lg bg-cochid-glow-cyan border border-cochid-cyan/20 flex items-center justify-center flex-shrink-0 mt-0.5">
+                <svg class="w-5 h-5 text-cochid-cyan" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1"/></svg>
+              </div>
+              <div>
+                <strong class="text-sm block mb-0.5">Plataforma de datos</strong>
+                <a href="https://datos.illanes00.cl" target="_blank" class="text-sm text-cochid-cyan hover:text-cochid-cyan-hover transition-colors">datos.illanes00.cl</a>
+              </div>
+            </div>
+            <div class="p-5 flex items-start gap-4 hover:bg-light-surface-alt/50 dark:hover:bg-cochid-surface/30 transition-colors">
+              <div class="w-10 h-10 rounded-lg bg-amber-500/5 border border-amber-400/20 flex items-center justify-center flex-shrink-0 mt-0.5">
+                <svg class="w-5 h-5 text-amber-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+              </div>
+              <div>
+                <strong class="text-sm block mb-0.5">Ubicación</strong>
+                <span class="text-sm text-light-muted dark:text-gray-400">Santiago, Chile</span>
+              </div>
+            </div>
+            <div class="p-5 flex items-start gap-4 hover:bg-light-surface-alt/50 dark:hover:bg-cochid-surface/30 transition-colors">
+              <div class="w-10 h-10 rounded-lg bg-cochid-glow border border-cochid-electric/20 flex items-center justify-center flex-shrink-0 mt-0.5">
+                <svg class="w-5 h-5 text-cochid-electric" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+              </div>
+              <div>
+                <strong class="text-sm block mb-0.5">Horario</strong>
+                <span class="text-sm text-light-muted dark:text-gray-400">Lunes a viernes, 09:00 — 18:00 hrs (CLT)</span>
+              </div>
+            </div>
           </div>
         </div>
 
-        <div class="info-box">
-          <strong>Respuesta en 24 horas:</strong> Nos comprometemos a responder toda consulta dentro de un día hábil.
+        <!-- Response time badge -->
+        <div class="glass-card p-4 border-l-2 border-l-cochid-cyan">
+          <div class="flex items-center gap-3">
+            <span class="inline-flex items-center gap-1.5 text-[0.65rem] font-mono px-2 py-0.5 rounded-full bg-cochid-glow-cyan text-cochid-cyan border border-cochid-cyan/20">
+              <span class="w-1.5 h-1.5 rounded-full bg-cochid-cyan animate-pulse"></span>
+              24h
+            </span>
+            <p class="text-sm text-light-muted dark:text-gray-400">Respondemos toda consulta dentro de un día hábil.</p>
+          </div>
         </div>
       </div>
 
-      <div>
-        <form class="shadow-md rounded-lg border border-gray-200 dark:border-dark-line bg-white dark:bg-dark-paper overflow-hidden" action="mailto:contacto@cochid.cl" method="post" enctype="text/plain">
-          <div class="px-5 py-3 border-b border-gray-200 dark:border-dark-line">
-            <strong class="text-sm">Escríbenos</strong>
+      <!-- Right: Form -->
+      <div class="reveal" style="transition-delay:0.1s">
+        <div class="glass-card overflow-hidden">
+          <div class="px-5 py-3.5 border-b border-gray-200/50 dark:border-cochid-surface-border flex items-center gap-2">
+            <div class="flex gap-1">
+              <div class="w-2 h-2 rounded-full bg-red-400/70"></div>
+              <div class="w-2 h-2 rounded-full bg-amber-400/70"></div>
+              <div class="w-2 h-2 rounded-full bg-emerald-400/70"></div>
+            </div>
+            <span class="font-mono text-[0.7rem] text-light-muted dark:text-gray-500 ml-2">formulario_contacto</span>
           </div>
-          <div class="p-5 space-y-4">
+
+          <form id="contactForm" class="p-6 space-y-5">
             <div>
-              <label for="nombre" class="block text-sm font-medium mb-1.5">Nombre</label>
+              <label for="nombre" class="block text-sm font-medium mb-2">Nombre</label>
               <input type="text" id="nombre" name="nombre" placeholder="Su nombre completo" required
-                class="w-full px-3 py-2 rounded-md border border-gray-300 dark:border-dark-line bg-white dark:bg-dark-bg text-sm placeholder:text-gray-400 dark:placeholder:text-dark-muted focus:outline-none focus:ring-2 focus:ring-cochid-accent focus:border-transparent transition-shadow">
+                class="w-full px-4 py-2.5 rounded-lg border border-gray-200 dark:border-cochid-surface-border bg-light-surface-alt dark:bg-cochid-navy text-sm placeholder:text-light-muted/50 dark:placeholder:text-gray-600 focus:outline-none focus:ring-2 focus:ring-cochid-electric/40 focus:border-cochid-electric/40 transition-all">
             </div>
             <div>
-              <label for="email" class="block text-sm font-medium mb-1.5">Email</label>
+              <label for="email" class="block text-sm font-medium mb-2">Email</label>
               <input type="email" id="email" name="email" placeholder="correo@ejemplo.cl" required
-                class="w-full px-3 py-2 rounded-md border border-gray-300 dark:border-dark-line bg-white dark:bg-dark-bg text-sm placeholder:text-gray-400 dark:placeholder:text-dark-muted focus:outline-none focus:ring-2 focus:ring-cochid-accent focus:border-transparent transition-shadow">
+                class="w-full px-4 py-2.5 rounded-lg border border-gray-200 dark:border-cochid-surface-border bg-light-surface-alt dark:bg-cochid-navy text-sm placeholder:text-light-muted/50 dark:placeholder:text-gray-600 focus:outline-none focus:ring-2 focus:ring-cochid-electric/40 focus:border-cochid-electric/40 transition-all">
             </div>
             <div>
-              <label for="organizacion" class="block text-sm font-medium mb-1.5">Organización</label>
+              <label for="organizacion" class="block text-sm font-medium mb-2">Organización</label>
               <input type="text" id="organizacion" name="organizacion" placeholder="Nombre de su organización"
-                class="w-full px-3 py-2 rounded-md border border-gray-300 dark:border-dark-line bg-white dark:bg-dark-bg text-sm placeholder:text-gray-400 dark:placeholder:text-dark-muted focus:outline-none focus:ring-2 focus:ring-cochid-accent focus:border-transparent transition-shadow">
+                class="w-full px-4 py-2.5 rounded-lg border border-gray-200 dark:border-cochid-surface-border bg-light-surface-alt dark:bg-cochid-navy text-sm placeholder:text-light-muted/50 dark:placeholder:text-gray-600 focus:outline-none focus:ring-2 focus:ring-cochid-electric/40 focus:border-cochid-electric/40 transition-all">
             </div>
             <div>
-              <label for="servicio" class="block text-sm font-medium mb-1.5">Servicio de interés</label>
+              <label for="servicio" class="block text-sm font-medium mb-2">Servicio de interés</label>
               <select id="servicio" name="servicio"
-                class="w-full px-3 py-2 rounded-md border border-gray-300 dark:border-dark-line bg-white dark:bg-dark-bg text-sm focus:outline-none focus:ring-2 focus:ring-cochid-accent focus:border-transparent transition-shadow">
+                class="w-full px-4 py-2.5 rounded-lg border border-gray-200 dark:border-cochid-surface-border bg-light-surface-alt dark:bg-cochid-navy text-sm focus:outline-none focus:ring-2 focus:ring-cochid-electric/40 focus:border-cochid-electric/40 transition-all">
                 <option value="">Seleccione un servicio</option>
-                <option value="ingenieria">Ingeniería de Datos</option>
-                <option value="analitica">Analítica Avanzada</option>
-                <option value="consultoria">Consultoría Estratégica</option>
-                <option value="integral">Solución Integral</option>
+                <option value="plataformas-datos">Plataformas de Datos</option>
+                <option value="inteligencia-periodistica">Inteligencia Periodística</option>
+                <option value="ingenieria-datos">Ingeniería de Datos</option>
+                <option value="analitica-avanzada">Analítica Avanzada</option>
                 <option value="otro">Otro</option>
               </select>
             </div>
             <div>
-              <label for="mensaje" class="block text-sm font-medium mb-1.5">Mensaje</label>
-              <textarea id="mensaje" name="mensaje" placeholder="Cuéntenos sobre su proyecto o necesidad..." required
-                class="w-full px-3 py-2 rounded-md border border-gray-300 dark:border-dark-line bg-white dark:bg-dark-bg text-sm min-h-[120px] resize-y placeholder:text-gray-400 dark:placeholder:text-dark-muted focus:outline-none focus:ring-2 focus:ring-cochid-accent focus:border-transparent transition-shadow"></textarea>
+              <label for="mensaje" class="block text-sm font-medium mb-2">Mensaje</label>
+              <textarea id="mensaje" name="mensaje" placeholder="Describa su proyecto o necesidad..." required
+                class="w-full px-4 py-2.5 rounded-lg border border-gray-200 dark:border-cochid-surface-border bg-light-surface-alt dark:bg-cochid-navy text-sm min-h-[130px] resize-y placeholder:text-light-muted/50 dark:placeholder:text-gray-600 focus:outline-none focus:ring-2 focus:ring-cochid-electric/40 focus:border-cochid-electric/40 transition-all"></textarea>
             </div>
-            <button type="submit"
-              class="w-full px-5 py-2.5 bg-cochid-accent hover:bg-cochid-accent-hover active:scale-95 text-white rounded-md text-sm font-medium transition-all cursor-pointer">
+            <button type="submit" id="submitBtn" class="btn-primary w-full justify-center">
               Enviar mensaje
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
             </button>
-          </div>
-        </form>
+            <!-- Status messages -->
+            <div id="formStatus" class="hidden text-sm text-center py-2 rounded-lg"></div>
+          </form>
+        </div>
       </div>
     </div>
   </div>
-</div>
+</section>
 
+{% endblock %}
+
+{% block scripts_extra %}
+<script>
+(function() {
+  var form = document.getElementById('contactForm');
+  var btn = document.getElementById('submitBtn');
+  var status = document.getElementById('formStatus');
+
+  form.addEventListener('submit', function(e) {
+    e.preventDefault();
+
+    var nombre = form.nombre.value.trim();
+    var email = form.email.value.trim();
+    var org = form.organizacion.value.trim();
+    var servicio = form.servicio.value;
+    var mensaje = form.mensaje.value.trim();
+
+    var subject = encodeURIComponent('Contacto COCHID' + (servicio ? ' — ' + form.servicio.options[form.servicio.selectedIndex].text : ''));
+    var body = encodeURIComponent(
+      'Nombre: ' + nombre + '\n' +
+      'Email: ' + email + '\n' +
+      (org ? 'Organización: ' + org + '\n' : '') +
+      (servicio ? 'Servicio: ' + form.servicio.options[form.servicio.selectedIndex].text + '\n' : '') +
+      '\n' + mensaje
+    );
+
+    window.location.href = 'mailto:contacto@cochid.cl?subject=' + subject + '&body=' + body;
+
+    status.className = 'text-sm text-center py-2 rounded-lg bg-cochid-glow text-cochid-electric border border-cochid-electric/20';
+    status.textContent = 'Se abrió su cliente de correo. Si no se abrió, escriba directamente a contacto@cochid.cl';
+    status.classList.remove('hidden');
+  });
+})();
+</script>
 {% endblock %}
