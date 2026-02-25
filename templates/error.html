@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+
+{% block title %}{{ code }} — COCHID{% endblock %}
+{% block meta_description %}{{ message }}{% endblock %}
+
+{% block body %}
+
+<section class="relative py-20 md:py-32 network-bg overflow-hidden">
+  <div class="max-w-6xl mx-auto px-4 sm:px-6 relative text-center">
+    <span class="tag mb-4 animate-fade-in-up">error {{ code }}</span>
+    <h1 class="text-6xl sm:text-8xl font-bold mb-4 animate-fade-in-up-d1 gradient-text">{{ code }}</h1>
+    <p class="text-lg text-light-muted dark:text-gray-400 max-w-md mx-auto mb-8 animate-fade-in-up-d2">{{ message }}</p>
+    <a href="/" class="btn-primary animate-fade-in-up-d3">
+      Volver al inicio
+      <svg class="w-4 h-4" aria-hidden="true" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+    </a>
+  </div>
+</section>
+
+{% endblock %}
