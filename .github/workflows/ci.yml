@@ -1,0 +1,19 @@
+# CI · callable a core-python-base (ADR-018, ADR-034)
+# Migrated to innovacionsantiago org per ADR-035 · cochid-* housing hibrido D
+name: CI
+
+on:
+  push:
+    branches: [main, master, develop]
+  pull_request:
+
+jobs:
+  ci:
+    uses: innovacionsantiago/core-python-base/.github/workflows/ci-python.yml@main
+    with:
+      coverage_min: 60
+      validators_layers: "data,api,security,structure"
+      python_version: "3.12"
+      working_directory: "."
+      skip_coverage_gate: true
+    secrets: inherit
