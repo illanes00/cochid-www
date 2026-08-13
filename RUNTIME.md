@@ -11,10 +11,9 @@ histórica de este repositorio.
 | `runtime-static/index.html` | Canónica | Fuente del release público |
 | `app.py`, `templates/`, `static/`, Tailwind | Legado | No desplegar; pendiente retiro en un corte separado |
 
-La separación es deliberada: permite versionar de inmediato el sitio que está
-en producción sin mezclar ni borrar la historia Flask. La siguiente limpieza
-debe eliminar el legado y retirar el workflow CD antiguo sólo después de
-aprobar el contrato de despliegue estático.
+La separación es deliberada: permite versionar el sitio que está en producción
+sin mezclar ni borrar la historia Flask. El workflow CD antiguo fue retirado:
+ya no hay despliegue por `push`, acceso SSH ni reinicio de `cochid-www`.
 
 ## Release vigente
 
@@ -25,5 +24,5 @@ aprobar el contrato de despliegue estático.
 - Rollback: restaurar el bloque Caddy respaldado según
   [`runtime-static/docs/RELEASE_AND_ROLLBACK.md`](runtime-static/docs/RELEASE_AND_ROLLBACK.md).
 
-El workflow `.github/workflows/cd.yml` pertenece al runtime Flask histórico y
-no autoriza ni describe el despliegue del apex actual.
+El workflow `.github/workflows/cd.yml` es sólo un preflight manual informativo.
+No tiene acceso al VPS ni autoriza el despliegue del apex actual.

@@ -1,8 +1,9 @@
 # Propuesta de liberación y reversión
 
-Esta rama es un candidato local. La liberación publica un directorio inmutable
-y cambia exclusivamente el `root` del bloque `cochid.cl` en Caddy. No modifica
-el checkout legado ni los bloques de `www.cochid.cl` o `datos.cochid.cl`.
+La liberación publica un directorio inmutable y cambia exclusivamente el `root`
+del bloque `cochid.cl` en Caddy. No modifica el checkout legado ni los bloques
+de `www.cochid.cl` o `datos.cochid.cl`. El workflow remoto no ejecuta este
+procedimiento ni conserva acceso SSH a producción.
 
 ## Alcance verificable
 

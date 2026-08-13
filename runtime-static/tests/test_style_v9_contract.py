@@ -3,6 +3,7 @@ import unittest
 
 
 ROOT = Path(__file__).resolve().parents[1]
+REPO_ROOT = Path(__file__).resolve().parents[2]
 HTML = (ROOT / "index.html").read_text(encoding="utf-8")
 STYLE_ROOT = "https://style.innovacionsantiago.cl/v9/f417275cbb1c390a6b158f2f6574db1b36e2a6cc61e734029530ef90b9d1dd77"
 
@@ -44,6 +45,20 @@ class CochidMainStyleV9ContractTests(unittest.TestCase):
         self.assertIn('<details class="mobile-nav">', HTML)
         for label in ("Datos", "Temas", "Explorar", "Metodología", "Quiénes somos", "FAQ"):
             self.assertIn(f">{label}</a>", HTML)
+
+    def test_legacy_flask_cd_cannot_mutate_production(self):
+        workflow = (REPO_ROOT / ".github/workflows/cd.yml").read_text(
+            encoding="utf-8"
+        )
+
+        self.assertIn("workflow_dispatch:", workflow)
+        self.assertNotIn("  push:", workflow)
+        self.assertNotIn("self-hosted", workflow)
+        self.assertNotIn("appleboy/ssh-action", workflow)
+        self.assertNotIn("git reset --hard", workflow)
+        self.assertNotIn("systemctl restart cochid-www", workflow)
+        self.assertIn("release inmutable", workflow)
+        self.assertIn("deploy-cis", workflow)
 
 
 if __name__ == "__main__":
