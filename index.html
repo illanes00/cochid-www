@@ -9,7 +9,7 @@
   <meta property="og:description" content="Compañía Chilena de Inteligencia de Datos. Explora 5 datasets, 7 temas, 30+ indicadores con trazabilidad completa.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://cochid.cl">
-  <link rel="icon" type="image/svg+xml" href="https://style.innovacionsantiago.cl/v6/brands/cochid/logo.svg">
+  <link rel="icon" type="image/svg+xml" href="https://style.innovacionsantiago.cl/v9/f417275cbb1c390a6b158f2f6574db1b36e2a6cc61e734029530ef90b9d1dd77/brands/cochid/lockup.svg">
 
   <!-- Indieweb: rel=me identity links + authorization endpoint -->
   <link rel="me" href="https://github.com/illanes00">
@@ -26,7 +26,7 @@
     "name": "COCHID",
     "alternateName": "Compañía Chilena de Inteligencia de Datos",
     "url": "https://cochid.cl",
-    "logo": "https://style.innovacionsantiago.cl/v6/brands/cochid/logo.svg",
+    "logo": "https://style.innovacionsantiago.cl/v9/f417275cbb1c390a6b158f2f6574db1b36e2a6cc61e734029530ef90b9d1dd77/brands/cochid/lockup.svg",
     "parentOrganization": {
       "@type": "Organization",
       "name": "Compañía de Innovación de Santiago SpA",
@@ -106,8 +106,12 @@
   }
   </script>
 
-  <link rel="stylesheet" href="https://style.innovacionsantiago.cl/v6/cis.min.css">
-  <link rel="stylesheet" href="https://style.innovacionsantiago.cl/v6/brands/cochid/tokens.css" id="brand-tokens">
+  <link rel="stylesheet" href="https://style.innovacionsantiago.cl/v9/f417275cbb1c390a6b158f2f6574db1b36e2a6cc61e734029530ef90b9d1dd77/fonts/css/ibm-plex-sans.css">
+  <link rel="stylesheet" href="https://style.innovacionsantiago.cl/v9/f417275cbb1c390a6b158f2f6574db1b36e2a6cc61e734029530ef90b9d1dd77/fonts/css/jetbrains-mono.css">
+  <link rel="stylesheet" href="https://style.innovacionsantiago.cl/v9/f417275cbb1c390a6b158f2f6574db1b36e2a6cc61e734029530ef90b9d1dd77/base/tokens.css">
+  <link rel="stylesheet" href="https://style.innovacionsantiago.cl/v9/f417275cbb1c390a6b158f2f6574db1b36e2a6cc61e734029530ef90b9d1dd77/base/chrome.css">
+  <link rel="stylesheet" href="https://style.innovacionsantiago.cl/v9/f417275cbb1c390a6b158f2f6574db1b36e2a6cc61e734029530ef90b9d1dd77/base/components.css">
+  <link rel="stylesheet" href="https://style.innovacionsantiago.cl/v9/f417275cbb1c390a6b158f2f6574db1b36e2a6cc61e734029530ef90b9d1dd77/brands/cochid/tokens.css" id="brand-tokens">
   <script>
     /* Light por default · prevenir flash · solo respeta dark/auto explícitos */
     (function() {
@@ -126,32 +130,10 @@
       }
     })();
   </script>
-  <script src="https://style.innovacionsantiago.cl/v6/theme.js" defer></script>
-  <script src="https://style.innovacionsantiago.cl/v6/shell.min.js" defer></script>
-
-  <!-- GA4 · gtag.js (cochid.cl)
-       Vault: vault get cochid-www GA4_MEASUREMENT_ID
-       Reemplazar __GA4_ID__ con el G-XXX en el deploy (sed -i o pipeline).
-       No-op si __GA4_ID__ queda como placeholder o usuario opta out. -->
-  <script>
-    (function() {
-      var GA4_ID = "__GA4_ID__";
-      if (!GA4_ID || /^G-X+$/i.test(GA4_ID) || GA4_ID === "__GA4_ID__") return;
-      try { if (localStorage.getItem('cis-analytics') === 'off') return; } catch (e) {}
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){ window.dataLayer.push(arguments); }
-      window.gtag = gtag;
-      gtag('js', new Date());
-      gtag('config', GA4_ID, { anonymize_ip: true });
-      var s = document.createElement('script');
-      s.async = true;
-      s.src = 'https://www.googletagmanager.com/gtag/js?id=' + encodeURIComponent(GA4_ID);
-      document.head.appendChild(s);
-    })();
-  </script>
 
   <style>
-    body { background: var(--bg); color: var(--ink); font-family: var(--font-sans); }
+    :root { --bg: var(--paper); --muted: var(--ink-muted); --cis-accent: var(--accent); --shell-bg: var(--paper-raised); }
+    body { background: var(--bg); color: var(--ink); font-family: "IBM Plex Sans", sans-serif; }
 
     .hero { max-width: 1100px; margin: 0 auto; padding: 4rem 1rem 2rem; }
     .hero-kicker { font-family: var(--font-mono); font-size: 0.75rem; color: var(--cis-accent); letter-spacing: 0.12em; text-transform: uppercase; margin: 0 0 0.75rem; }
@@ -165,6 +147,7 @@
     .btn-secondary { background: transparent; color: var(--cis-accent); }
 
     .stats { max-width: 1100px; margin: 1.5rem auto 0; padding: 0 1rem; display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 0.75rem; }
+    @media (max-width: 700px) { .stats { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
     .stat { background: var(--paper); border: 1px solid var(--line); padding: 1rem; }
     .stat .num { font-size: 2rem; font-weight: 800; color: var(--cis-accent); font-family: var(--font-mono); line-height: 1; margin-bottom: 0.25rem; }
     .stat .label { font-size: 0.8125rem; color: var(--muted); }
@@ -199,8 +182,7 @@
   .ccnav { background: var(--paper); border-bottom: 1px solid var(--line); position: sticky; top: 0; z-index: 50; }
   .ccnav-inner { max-width: 1100px; margin: 0 auto; padding: 0.625rem 1rem; display: flex; align-items: center; gap: 1rem; font-size: 0.875rem; }
   .ccnav .brand { display: flex; align-items: center; gap: 0.625rem; text-decoration: none; flex-shrink: 0; }
-  .ccnav .brand-sq { width: 36px; height: 36px; background: var(--cis-accent); flex-shrink: 0; }
-  .ccnav .brand-stack { font-family: var(--font-mono); font-weight: 700; text-transform: uppercase; font-size: 0.625rem; line-height: 1.2; letter-spacing: 0.04em; color: var(--ink); white-space: nowrap; }
+  .ccnav .brand-lockup { display: block; width: auto; height: 36px; max-width: 180px; }
   .ccnav .links { display: flex; gap: 0.25rem; flex-grow: 1; flex-wrap: wrap; }
   .ccnav .links a { color: var(--muted); text-decoration: none; padding: 0.4rem 0.75rem; border-radius: 4px; transition: background 120ms; }
   .ccnav .links a:hover { background: var(--shell-bg); color: var(--ink); }
@@ -209,7 +191,16 @@
   .ccnav .theme-btn:hover { background: var(--shell-bg); color: var(--ink); }
   .ccnav .login { padding: 0.4rem 0.85rem; border: 1px solid var(--cis-accent); color: var(--cis-accent); font-weight: 600; font-size: 0.75rem; text-decoration: none; border-radius: 4px; transition: all 120ms; }
   .ccnav .login:hover { background: var(--cis-accent); color: #fff; }
-  @media (max-width: 700px) { .ccnav .brand-stack { display: none; } .ccnav .links { display: none; } }
+  .mobile-nav { display: none; }
+  @media (max-width: 700px) {
+    .ccnav-inner { flex-wrap: wrap; gap: 0.5rem; }
+    .ccnav .links { display: none; }
+    .mobile-nav { display: block; flex-basis: 100%; }
+    .mobile-nav summary { color: var(--cis-accent); cursor: pointer; font-family: var(--font-mono); font-size: 0.75rem; font-weight: 700; padding: 0.5rem 0; }
+    .mobile-nav-links { background: var(--paper); border: 1px solid var(--line); display: grid; gap: 0.25rem; grid-template-columns: repeat(2, minmax(0, 1fr)); margin-top: 0.25rem; padding: 0.5rem; }
+    .mobile-nav-links a { color: var(--ink); font-size: 0.8125rem; padding: 0.5rem; text-decoration: none; }
+    .mobile-nav-links a:hover { background: var(--paper-raised); }
+  }
   .ccfooter { background: var(--paper); border-top: 1px solid var(--line); margin-top: 4rem; padding: 2rem 1rem; }
   .ccfooter-inner { max-width: 1100px; margin: 0 auto; }
   .ccfooter-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 2rem; font-size: 0.8125rem; margin-bottom: 1.5rem; }
@@ -227,8 +218,7 @@
 <nav class="ccnav">
   <div class="ccnav-inner">
     <a href="/" class="brand">
-      <span class="brand-sq" aria-hidden="true"></span>
-      <span class="brand-stack">COMPAÑÍA CHILENA<br>DE INTELIGENCIA<br>DE DATOS</span>
+      <img class="brand-lockup" src="https://style.innovacionsantiago.cl/v9/f417275cbb1c390a6b158f2f6574db1b36e2a6cc61e734029530ef90b9d1dd77/brands/cochid/lockup.svg" alt="COCHID">
     </a>
     <div class="links">
       <a href="https://cochid.cl/">Inicio</a>
@@ -243,6 +233,18 @@
       <button class="theme-btn" id="themeToggle" title="Cambiar tema" aria-label="Cambiar tema claro/oscuro">☼</button>
       <a class="login" href="https://auth.innovacionsantiago.cl/?next=https%3A%2F%2Fcochid.cl%2F">Iniciar sesión</a>
     </div>
+    <details class="mobile-nav">
+      <summary>Navegación</summary>
+      <div class="mobile-nav-links">
+        <a href="https://cochid.cl/">Inicio</a>
+        <a href="https://datos.cochid.cl/">Datos</a>
+        <a href="https://datos.cochid.cl/temas">Temas</a>
+        <a href="https://datos.cochid.cl/explorar">Explorar</a>
+        <a href="https://datos.cochid.cl/metodologia">Metodología</a>
+        <a href="https://datos.cochid.cl/quienes-somos">Quiénes somos</a>
+        <a href="https://datos.cochid.cl/faq">FAQ</a>
+      </div>
+    </details>
   </div>
 </nav>
 
