@@ -1,0 +1,508 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>COCHID · Compañía Chilena de Inteligencia de Datos</title>
+  <meta name="description" content="COCHID — Compañía Chilena de Inteligencia de Datos. Presupuesto, indicadores económicos, seguridad, demografía, política y centros de estudio chilenos. Datos públicos con trazabilidad completa.">
+  <meta property="og:title" content="COCHID · Datos chilenos abiertos">
+  <meta property="og:description" content="Compañía Chilena de Inteligencia de Datos. Explora 5 datasets, 7 temas, 30+ indicadores con trazabilidad completa.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://cochid.cl">
+  <link rel="icon" type="image/svg+xml" href="https://style.innovacionsantiago.cl/v9/f417275cbb1c390a6b158f2f6574db1b36e2a6cc61e734029530ef90b9d1dd77/brands/cochid/lockup.svg">
+
+  <!-- Indieweb: rel=me identity links + authorization endpoint -->
+  <link rel="me" href="https://github.com/illanes00">
+  <link rel="me" href="https://illanes00.cl">
+  <link rel="me" href="mailto:martin@cochid.cl">
+  <link rel="authorization_endpoint" href="https://indieauth.com/auth">
+  <link rel="token_endpoint" href="https://tokens.indieauth.com/token">
+
+  <!-- JSON-LD: Organization with product catalog -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "COCHID",
+    "alternateName": "Compañía Chilena de Inteligencia de Datos",
+    "url": "https://cochid.cl",
+    "logo": "https://style.innovacionsantiago.cl/v9/f417275cbb1c390a6b158f2f6574db1b36e2a6cc61e734029530ef90b9d1dd77/brands/cochid/lockup.svg",
+    "parentOrganization": {
+      "@type": "Organization",
+      "name": "Compañía de Innovación de Santiago SpA",
+      "url": "https://innovacionsantiago.cl",
+      "taxID": "78.384.591-1"
+    },
+    "founder": {
+      "@type": "Person",
+      "name": "Martín Illanes",
+      "url": "https://illanes00.cl"
+    },
+    "makesOffer": [
+      {
+        "@type": "Offer",
+        "name": "Cochid · Datos",
+        "url": "https://datos.cochid.cl/",
+        "description": "Plataforma de datos chilenos cruzados con trazabilidad completa.",
+        "price": "0",
+        "priceCurrency": "CLP",
+        "category": "Data Platform"
+      },
+      {
+        "@type": "Offer",
+        "name": "Cochid · Scribe",
+        "url": "https://scribe.cochid.cl/",
+        "description": "Escritura colaborativa con IA, claims verificables y bibliografía APA.",
+        "price": "0",
+        "priceCurrency": "CLP",
+        "category": "Writing Platform"
+      },
+      {
+        "@type": "Offer",
+        "name": "Cochid · Thesis",
+        "url": "https://thesis.cochid.cl/",
+        "description": "Dashboard de investigación · SII biotech · evidence engine para tesis.",
+        "price": "0",
+        "priceCurrency": "CLP",
+        "category": "Research Dashboard"
+      },
+      {
+        "@type": "Offer",
+        "name": "Cochid · Tesis",
+        "url": "https://scribe.cochid.cl/thesis",
+        "description": "Ecosistema multi-usuario para escribir tesis con claims verificables, bibliografía APA y evidence linkeable.",
+        "price": "0",
+        "priceCurrency": "CLP",
+        "category": "Thesis Writing Platform"
+      },
+      {
+        "@type": "Offer",
+        "name": "Cochid · Lex",
+        "url": "https://lex.cochid.cl/",
+        "description": "RAG legal chileno con pgvector y búsqueda semántica.",
+        "price": "0",
+        "priceCurrency": "CLP",
+        "category": "Legal Search"
+      },
+      {
+        "@type": "Offer",
+        "name": "Cochid · Graphs",
+        "url": "https://graphs.cochid.cl/",
+        "description": "Chart-as-a-service con Plotly y permalinks reproducibles.",
+        "price": "0",
+        "priceCurrency": "CLP",
+        "category": "Visualization"
+      },
+      {
+        "@type": "Offer",
+        "name": "Cochid · Congreso",
+        "url": "https://congreso.cochid.cl/",
+        "description": "30 tablas del Congreso Nacional: proyectos, votaciones, autores.",
+        "price": "0",
+        "priceCurrency": "CLP",
+        "category": "Government Data"
+      }
+    ]
+  }
+  </script>
+
+  <link rel="stylesheet" href="https://style.innovacionsantiago.cl/v9/f417275cbb1c390a6b158f2f6574db1b36e2a6cc61e734029530ef90b9d1dd77/fonts/css/ibm-plex-sans.css">
+  <link rel="stylesheet" href="https://style.innovacionsantiago.cl/v9/f417275cbb1c390a6b158f2f6574db1b36e2a6cc61e734029530ef90b9d1dd77/fonts/css/jetbrains-mono.css">
+  <link rel="stylesheet" href="https://style.innovacionsantiago.cl/v9/f417275cbb1c390a6b158f2f6574db1b36e2a6cc61e734029530ef90b9d1dd77/base/tokens.css">
+  <link rel="stylesheet" href="https://style.innovacionsantiago.cl/v9/f417275cbb1c390a6b158f2f6574db1b36e2a6cc61e734029530ef90b9d1dd77/base/chrome.css">
+  <link rel="stylesheet" href="https://style.innovacionsantiago.cl/v9/f417275cbb1c390a6b158f2f6574db1b36e2a6cc61e734029530ef90b9d1dd77/base/components.css">
+  <link rel="stylesheet" href="https://style.innovacionsantiago.cl/v9/f417275cbb1c390a6b158f2f6574db1b36e2a6cc61e734029530ef90b9d1dd77/brands/cochid/tokens.css" id="brand-tokens">
+  <script>
+    /* Light por default · prevenir flash · solo respeta dark/auto explícitos */
+    (function() {
+      var stored = localStorage.getItem('theme');
+      if (stored === 'dark') {
+        document.documentElement.setAttribute('data-theme', 'dark');
+        document.documentElement.classList.add('cis-dark');
+      } else if (stored === 'auto') {
+        /* deja data-theme sin setear · prefers-color-scheme decide via CSS */
+        if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+          document.documentElement.classList.add('cis-dark');
+        }
+      } else {
+        /* default: light forzado */
+        document.documentElement.setAttribute('data-theme', 'light');
+      }
+    })();
+  </script>
+
+  <style>
+    :root { --bg: var(--paper); --muted: var(--ink-muted); --cis-accent: var(--accent); --shell-bg: var(--paper-raised); }
+    body { background: var(--bg); color: var(--ink); font-family: "IBM Plex Sans", sans-serif; }
+
+    .hero { max-width: 1100px; margin: 0 auto; padding: 4rem 1rem 2rem; }
+    .hero-kicker { font-family: var(--font-mono); font-size: 0.75rem; color: var(--cis-accent); letter-spacing: 0.12em; text-transform: uppercase; margin: 0 0 0.75rem; }
+    .hero h1 { font-size: clamp(2.25rem, 5.5vw, 4rem); font-weight: 800; letter-spacing: -0.025em; line-height: 1.02; margin: 0 0 1.25rem; max-width: 880px; }
+    .hero h1 em { font-style: normal; color: var(--cis-accent); }
+    .hero p.lead { font-size: 1.0625rem; color: var(--muted); max-width: 720px; margin: 0; line-height: 1.55; }
+    .hero-cta { display: flex; gap: 0.75rem; margin-top: 2rem; flex-wrap: wrap; }
+    .btn-primary, .btn-secondary { display: inline-flex; align-items: center; gap: 0.5rem; padding: 0.75rem 1.5rem; font-weight: 600; text-decoration: none; border: 1px solid var(--cis-accent); transition: transform 120ms; }
+    .btn-primary:hover, .btn-secondary:hover { transform: translateY(-1px); }
+    .btn-primary { background: var(--cis-accent); color: #fff; }
+    .btn-secondary { background: transparent; color: var(--cis-accent); }
+
+    .stats { max-width: 1100px; margin: 1.5rem auto 0; padding: 0 1rem; display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 0.75rem; }
+    @media (max-width: 700px) { .stats { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+    .stat { background: var(--paper); border: 1px solid var(--line); padding: 1rem; }
+    .stat .num { font-size: 2rem; font-weight: 800; color: var(--cis-accent); font-family: var(--font-mono); line-height: 1; margin-bottom: 0.25rem; }
+    .stat .label { font-size: 0.8125rem; color: var(--muted); }
+
+    main { max-width: 1100px; margin: 0 auto; padding: 0 1rem 4rem; }
+    h2 { font-weight: 700; font-size: 1.5rem; margin: 4rem 0 0.5rem; letter-spacing: -0.01em; }
+    .h2-sub { color: var(--muted); margin: 0 0 1.5rem; font-size: 0.9375rem; }
+
+    .viz-frame { background: var(--paper); border: 1px solid var(--line); padding: 1rem; margin: 1rem 0 2rem; }
+    .viz-frame iframe { width: 100%; border: 0; display: block; }
+    .viz-cta { font-size: 0.875rem; color: var(--muted); margin-top: 0.75rem; text-align: right; }
+    .viz-cta a { color: var(--cis-accent); text-decoration: none; font-weight: 600; }
+    .viz-cta a:hover { text-decoration: underline; }
+
+    .temas-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 0.75rem; }
+    .tema-card { background: var(--paper); border: 1px solid var(--line); padding: 1.25rem; text-decoration: none; color: inherit; transition: border-color 120ms, transform 120ms; display: flex; flex-direction: column; gap: 0.5rem; }
+    .tema-card:hover { border-color: var(--cis-accent); transform: translateY(-2px); }
+    .tema-card .icon { font-size: 1.75rem; line-height: 1; }
+    .tema-card h3 { font-size: 1rem; font-weight: 700; margin: 0; }
+    .tema-card .desc { font-size: 0.8125rem; color: var(--muted); flex-grow: 1; line-height: 1.45; }
+    .tema-card .meta { font-family: var(--font-mono); font-size: 0.7rem; color: var(--muted); border-top: 1px solid var(--line); padding-top: 0.5rem; margin-top: 0.25rem; }
+
+    .who { background: var(--paper); border: 1px solid var(--line); padding: 1.5rem; margin-top: 3rem; font-size: 0.875rem; color: var(--muted); line-height: 1.6; }
+    .who strong { color: var(--ink); }
+    .who a { color: var(--cis-accent); text-decoration: none; font-weight: 500; }
+    .who a:hover { text-decoration: underline; }
+  </style>
+</head>
+<body class="cis-brand">
+
+<style>
+  .ccnav { background: var(--paper); border-bottom: 1px solid var(--line); position: sticky; top: 0; z-index: 50; }
+  .ccnav-inner { max-width: 1100px; margin: 0 auto; padding: 0.625rem 1rem; display: flex; align-items: center; gap: 1rem; font-size: 0.875rem; }
+  .ccnav .brand { display: flex; align-items: center; gap: 0.625rem; text-decoration: none; flex-shrink: 0; }
+  .ccnav .brand-lockup { display: block; width: auto; height: 36px; max-width: 180px; }
+  .ccnav .links { display: flex; gap: 0.25rem; flex-grow: 1; flex-wrap: wrap; }
+  .ccnav .links a { color: var(--muted); text-decoration: none; padding: 0.4rem 0.75rem; border-radius: 4px; transition: background 120ms; }
+  .ccnav .links a:hover { background: var(--shell-bg); color: var(--ink); }
+  .ccnav .right { display: flex; gap: 0.5rem; align-items: center; flex-shrink: 0; }
+  .ccnav .theme-btn { width: 32px; height: 32px; background: none; border: 0; cursor: pointer; color: var(--muted); display: inline-flex; align-items: center; justify-content: center; border-radius: 4px; }
+  .ccnav .theme-btn:hover { background: var(--shell-bg); color: var(--ink); }
+  .ccnav .login { padding: 0.4rem 0.85rem; border: 1px solid var(--cis-accent); color: var(--cis-accent); font-weight: 600; font-size: 0.75rem; text-decoration: none; border-radius: 4px; transition: all 120ms; }
+  .ccnav .login:hover { background: var(--cis-accent); color: #fff; }
+  .mobile-nav { display: none; }
+  @media (max-width: 700px) {
+    .ccnav-inner { flex-wrap: wrap; gap: 0.5rem; }
+    .ccnav .links { display: none; }
+    .mobile-nav { display: block; flex-basis: 100%; }
+    .mobile-nav summary { color: var(--cis-accent); cursor: pointer; font-family: var(--font-mono); font-size: 0.75rem; font-weight: 700; padding: 0.5rem 0; }
+    .mobile-nav-links { background: var(--paper); border: 1px solid var(--line); display: grid; gap: 0.25rem; grid-template-columns: repeat(2, minmax(0, 1fr)); margin-top: 0.25rem; padding: 0.5rem; }
+    .mobile-nav-links a { color: var(--ink); font-size: 0.8125rem; padding: 0.5rem; text-decoration: none; }
+    .mobile-nav-links a:hover { background: var(--paper-raised); }
+  }
+  .ccfooter { background: var(--paper); border-top: 1px solid var(--line); margin-top: 4rem; padding: 2rem 1rem; }
+  .ccfooter-inner { max-width: 1100px; margin: 0 auto; }
+  .ccfooter-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 2rem; font-size: 0.8125rem; margin-bottom: 1.5rem; }
+  .ccfooter h6 { font-size: 0.6875rem; text-transform: uppercase; letter-spacing: 0.08em; color: var(--ink); margin: 0 0 0.5rem; font-weight: 700; }
+  .ccfooter ul { margin: 0; padding: 0; list-style: none; color: var(--muted); }
+  .ccfooter li { padding: 0.2rem 0; }
+  .ccfooter a { color: var(--muted); text-decoration: none; }
+  .ccfooter a:hover { color: var(--cis-accent); }
+  .ccfooter-attribution { border-top: 1px solid var(--line); padding-top: 1rem; font-size: 0.75rem; color: var(--muted); }
+  .ccfooter-attribution strong { color: var(--ink); }
+  .ccfooter-attribution a { color: var(--cis-accent); }
+  @media (max-width: 700px) { .ccfooter-grid { grid-template-columns: repeat(2, 1fr); } }
+</style>
+
+<nav class="ccnav">
+  <div class="ccnav-inner">
+    <a href="/" class="brand">
+      <img class="brand-lockup" src="https://style.innovacionsantiago.cl/v9/f417275cbb1c390a6b158f2f6574db1b36e2a6cc61e734029530ef90b9d1dd77/brands/cochid/lockup.svg" alt="COCHID">
+    </a>
+    <div class="links">
+      <a href="https://cochid.cl/">Inicio</a>
+      <a href="https://datos.cochid.cl/">Datos</a>
+      <a href="https://datos.cochid.cl/temas">Temas</a>
+      <a href="https://datos.cochid.cl/explorar">Explorar</a>
+      <a href="https://datos.cochid.cl/metodologia">Metodología</a>
+      <a href="https://datos.cochid.cl/quienes-somos">Quiénes somos</a>
+      <a href="https://datos.cochid.cl/faq">FAQ</a>
+    </div>
+    <div class="right">
+      <button class="theme-btn" id="themeToggle" title="Cambiar tema" aria-label="Cambiar tema claro/oscuro">☼</button>
+      <a class="login" href="https://auth.innovacionsantiago.cl/?next=https%3A%2F%2Fcochid.cl%2F">Iniciar sesión</a>
+    </div>
+    <details class="mobile-nav">
+      <summary>Navegación</summary>
+      <div class="mobile-nav-links">
+        <a href="https://cochid.cl/">Inicio</a>
+        <a href="https://datos.cochid.cl/">Datos</a>
+        <a href="https://datos.cochid.cl/temas">Temas</a>
+        <a href="https://datos.cochid.cl/explorar">Explorar</a>
+        <a href="https://datos.cochid.cl/metodologia">Metodología</a>
+        <a href="https://datos.cochid.cl/quienes-somos">Quiénes somos</a>
+        <a href="https://datos.cochid.cl/faq">FAQ</a>
+      </div>
+    </details>
+  </div>
+</nav>
+
+<section class="hero">
+  <p class="hero-kicker">COCHID · Compañía Chilena de Inteligencia de Datos</p>
+  <h1>La <em>data pública</em> de Chile, accesible y trazable.</h1>
+  <p class="lead">Presupuesto fiscal, indicadores económicos, seguridad ciudadana, demografía, posicionamiento de centros de estudio. Todo cruzado, normalizado, con linaje desde la fuente original. Hecho para periodistas, abogados, analistas, investigadores y aplicaciones.</p>
+  <div class="hero-cta">
+    <a href="https://datos.cochid.cl" class="btn-primary">Explorar los datos →</a>
+    <a href="https://indieweb.cl" class="btn-secondary">API access (paid)</a>
+  </div>
+</section>
+
+<section class="stats">
+  <div class="stat"><div class="num">5</div><div class="label">datasets activos</div></div>
+  <div class="stat"><div class="num">7</div><div class="label">temas explorables</div></div>
+  <div class="stat"><div class="num">37</div><div class="label">años de cobertura</div></div>
+  <div class="stat"><div class="num">+5K</div><div class="label">filas en gold</div></div>
+</section>
+
+<main>
+  <h2>Presupuesto público de Chile 2024</h2>
+  <p class="h2-sub">Gasto corriente del gobierno general, año 2024, por función (clasificación COFOG). Fuente: DIPRES · construido en Cochid Datos.</p>
+  <div class="viz-frame">
+    <div id="presupuesto-bars" style="min-height:380px;display:flex;flex-direction:column;gap:0.5rem;padding:1rem 0">
+      <div style="color:var(--muted);text-align:center;padding:2rem 0">cargando datos DIPRES…</div>
+    </div>
+    <div class="viz-cta"><a href="https://datos.cochid.cl/tema/presupuesto">Ver presupuesto completo (15 años · series · COFOG drill-down) →</a></div>
+  </div>
+
+  <h2>Temas con datos en vivo</h2>
+  <p class="h2-sub">Cada tema cruza fuentes oficiales (DIPRES, INE, Banco Mundial, SII, Servel) y agrega visualizaciones, comparadores y APIs.</p>
+  <div class="temas-grid">
+    <a href="https://datos.cochid.cl/tema/presupuesto" class="tema-card">
+      <span class="icon">💰</span>
+      <h3>Presupuesto Público</h3>
+      <p class="desc">Gasto fiscal, ejecución presupuestaria, COFOG. Fuente: DIPRES.</p>
+      <span class="meta">880 filas · 15 años</span>
+    </a>
+    <a href="https://datos.cochid.cl/tema/economia" class="tema-card">
+      <span class="icon">📈</span>
+      <h3>Economía</h3>
+      <p class="desc">PIB, inflación, desempleo, comercio exterior. Fuente: Banco Mundial.</p>
+      <span class="meta">877 filas · 66 años</span>
+    </a>
+    <a href="https://datos.cochid.cl/tema/seguridad" class="tema-card">
+      <span class="icon">🛡️</span>
+      <h3>Seguridad Ciudadana</h3>
+      <p class="desc">Denuncias, casos judiciales, victimización. Fuente: INE.</p>
+      <span class="meta">157 filas · 12 años</span>
+    </a>
+    <a href="https://datos.cochid.cl/tema/demografia" class="tema-card">
+      <span class="icon">👥</span>
+      <h3>Demografía y Pobreza</h3>
+      <p class="desc">Población, censos, ingresos. Fuente: WB + INE.</p>
+      <span class="meta">66 años</span>
+    </a>
+    <a href="https://datos.cochid.cl/tema/centros-estudio" class="tema-card">
+      <span class="icon">🧭</span>
+      <h3>Centros de Estudio</h3>
+      <p class="desc">Political Compass de 18 think tanks chilenos 1990-2026.</p>
+      <span class="meta">396 filas matview</span>
+    </a>
+    <a href="https://datos.cochid.cl/tema/legislacion" class="tema-card">
+      <span class="icon">⚖️</span>
+      <h3>Legislación</h3>
+      <p class="desc">Leyes vigentes, proyectos en trámite. Próximamente.</p>
+      <span class="meta">en proceso</span>
+    </a>
+    <a href="https://datos.cochid.cl/tema/elecciones" class="tema-card">
+      <span class="icon">🗳️</span>
+      <h3>Elecciones</h3>
+      <p class="desc">Padrón, resultados históricos, participación. Próximamente.</p>
+      <span class="meta">en proceso</span>
+    </a>
+  </div>
+
+  <h2>Productos Cochid</h2>
+  <p class="h2-sub">Aplicaciones persistentes con login Authentik. Datos cruzados, datos privados, escritura colaborativa, investigación reproducible.</p>
+  <div class="temas-grid" role="list">
+    <a href="https://datos.cochid.cl/" class="tema-card h-product" role="listitem">
+      <span class="icon">🏛️</span>
+      <h3 class="p-name">Datos</h3>
+      <p class="desc p-summary">Plataforma de datos chilenos cruzados con trazabilidad completa.</p>
+      <data class="p-price" value="0">Acceso libre · API paga vía <span class="p-brand">indieweb.cl</span></data>
+      <a class="u-url" href="https://datos.cochid.cl/" hidden>datos.cochid.cl</a>
+      <span class="meta">live · 5 datasets · 7 temas</span>
+    </a>
+    <a href="https://scribe.cochid.cl/" class="tema-card h-product" role="listitem">
+      <span class="icon">✍️</span>
+      <h3 class="p-name">Scribe</h3>
+      <p class="desc p-summary">Escritura colaborativa con IA · claims verificables · bibliografía APA · dictado por bloques · export PDF/DOCX.</p>
+      <data class="p-price" value="0">Gratis con SSO Cochid</data>
+      <a class="u-url" href="https://scribe.cochid.cl/" hidden>scribe.cochid.cl</a>
+      <span class="p-brand" hidden>Cochid</span>
+      <span class="meta">login · multi-user · Authentik</span>
+    </a>
+    <a href="https://thesis.cochid.cl/" class="tema-card h-product" role="listitem">
+      <span class="icon">🎓</span>
+      <h3 class="p-name">Thesis</h3>
+      <p class="desc p-summary">Dashboard de investigación con datos chilenos · SII biotech · indicadores agregados · evidence engine para tesis.</p>
+      <data class="p-price" value="0">Gratis con SSO Cochid</data>
+      <a class="u-url" href="https://thesis.cochid.cl/" hidden>thesis.cochid.cl</a>
+      <span class="p-brand" hidden>Cochid</span>
+      <span class="meta">login · clusters biotech · evidence engine</span>
+    </a>
+    <a href="https://scribe.cochid.cl/thesis" class="tema-card h-product" role="listitem">
+      <span class="icon">📚</span>
+      <h3 class="p-name">Tesis</h3>
+      <p class="desc p-summary">Ecosistema de tesis con capítulos versionados · claims verificables · bibliografía APA · evidence dashboard linkeable · export Quarto/Pandoc PDF.</p>
+      <data class="p-price" value="0">Gratis con SSO Cochid</data>
+      <a class="u-url" href="https://scribe.cochid.cl/thesis" hidden>scribe.cochid.cl/thesis</a>
+      <span class="p-brand" hidden>Cochid</span>
+      <span class="meta">multi-user · privacy default · chapters</span>
+    </a>
+    <a href="https://graphs.cochid.cl/" class="tema-card h-product" role="listitem">
+      <span class="icon">📊</span>
+      <h3 class="p-name">Graphs</h3>
+      <p class="desc p-summary">Chart-as-a-service con Plotly · permalinks reproducibles · embebibles en cualquier site.</p>
+      <data class="p-price" value="0">Acceso libre</data>
+      <a class="u-url" href="https://graphs.cochid.cl/" hidden>graphs.cochid.cl</a>
+      <span class="p-brand" hidden>Cochid</span>
+      <span class="meta">live · Plotly · embebible</span>
+    </a>
+    <a href="https://lex.cochid.cl/" class="tema-card h-product" role="listitem">
+      <span class="icon">⚖️</span>
+      <h3 class="p-name">Lex</h3>
+      <p class="desc p-summary">RAG legal chileno con pgvector · búsqueda semántica sobre leyes y reglamentos.</p>
+      <data class="p-price" value="0">Acceso libre</data>
+      <a class="u-url" href="https://lex.cochid.cl/" hidden>lex.cochid.cl</a>
+      <span class="p-brand" hidden>Cochid</span>
+      <span class="meta">live · pgvector · semantic</span>
+    </a>
+    <a href="https://congreso.cochid.cl/" class="tema-card h-product" role="listitem">
+      <span class="icon">🏛️</span>
+      <h3 class="p-name">Congreso</h3>
+      <p class="desc p-summary">30 tablas absorbidas del Congreso Nacional · proyectos, votaciones, autores.</p>
+      <data class="p-price" value="0">Acceso libre</data>
+      <a class="u-url" href="https://congreso.cochid.cl/" hidden>congreso.cochid.cl</a>
+      <span class="p-brand" hidden>Cochid</span>
+      <span class="meta">live · ETL absorbido</span>
+    </a>
+  </div>
+
+  <h2>Cómo se consume</h2>
+  <p class="h2-sub">El sitio público en <a href="https://datos.cochid.cl" style="color:var(--cis-accent);font-weight:600">datos.cochid.cl</a> es libre para explorar y consultar. La API completa, descargas masivas y endpoints de bulk access se ofrecen como producto pago en <a href="https://indieweb.cl" style="color:var(--cis-accent);font-weight:600">indieweb.cl</a>.</p>
+
+  <div class="who">
+    <strong>COCHID</strong> · Compañía Chilena de Inteligencia de Datos SpA (RUT 78.374.391-4) ·
+    operada por <a href="https://innovacionsantiago.cl">Compañía de Innovación de Santiago SpA</a> (CIS, RUT 78.384.591-1)
+    bajo licencia.
+    <br><br>
+    Misma plataforma de auth (Authentik), misma facturación, mismos créditos del marketplace
+    <a href="https://indieweb.cl">indieweb.cl</a>.
+  </div>
+</main>
+
+<footer class="ccfooter">
+  <div class="ccfooter-inner">
+    <div class="ccfooter-grid">
+      <div>
+        <h6>Datos</h6>
+        <ul>
+          <li><a href="https://datos.cochid.cl/catalogo">Catálogo</a></li>
+          <li><a href="https://datos.cochid.cl/temas">Temas</a></li>
+          <li><a href="https://datos.cochid.cl/explorar">Explorar</a></li>
+          <li><a href="https://datos.cochid.cl/comparar">Comparar</a></li>
+          <li><a href="https://datos.cochid.cl/centros-estudio">Political Compass</a></li>
+        </ul>
+      </div>
+      <div>
+        <h6>Trazabilidad</h6>
+        <ul>
+          <li><a href="https://datos.cochid.cl/metodologia">Metodología</a></li>
+          <li><a href="https://datos.cochid.cl/lineage">Lineage</a></li>
+          <li><a href="https://datos.cochid.cl/calidad">Calidad</a></li>
+          <li><a href="https://datos.cochid.cl/referencia">Referencia</a></li>
+        </ul>
+      </div>
+      <div>
+        <h6>Plataforma</h6>
+        <ul>
+          <li><a href="https://datos.cochid.cl/api/docs">API docs</a></li>
+          <li><a href="https://style.cochid.cl/">Style guide</a></li>
+          <li><a href="https://indieweb.cl">API access (paid)</a></li>
+          <li><a href="https://datos.cochid.cl/api/health/deep">Status</a></li>
+        </ul>
+      </div>
+      <div>
+        <h6>Sobre</h6>
+        <ul>
+          <li><a href="https://datos.cochid.cl/quienes-somos">Quiénes somos</a></li>
+          <li><a href="https://datos.cochid.cl/faq">FAQ</a></li>
+          <li><a href="https://datos.cochid.cl/contacto">Contacto</a></li>
+          <li><a href="https://innovacionsantiago.cl">CIS</a></li>
+          <li><a href="https://illanes00.cl">Martín Illanes</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="ccfooter-attribution">
+      <strong>COCHID</strong> · Compañía Chilena de Inteligencia de Datos SpA (RUT 78.374.391-4) ·
+      operada por <a href="https://innovacionsantiago.cl">Compañía de Innovación de Santiago SpA</a> (CIS, RUT 78.384.591-1)
+      bajo licencia.
+    </div>
+  </div>
+</footer>
+
+<script>
+(async function loadPresupuesto() {
+  const target = document.getElementById('presupuesto-bars');
+  if (!target) return;
+  const palette = ['#1d4ed8','#2563eb','#3b82f6','#60a5fa','#7c3aed','#dc2626','#d97706','#059669','#0891b2','#52525b'];
+  function el(tag, props) {
+    const node = document.createElement(tag);
+    if (props) for (const k in props) {
+      if (k === 'text') node.textContent = props[k];
+      else if (k === 'style') node.style.cssText = props[k];
+      else node.setAttribute(k, props[k]);
+    }
+    return node;
+  }
+  function showError(msg) {
+    target.replaceChildren();
+    const wrap = el('div', { style: 'color:var(--muted);text-align:center;padding:2rem 0' });
+    wrap.append(msg + ' · ');
+    const link = el('a', { href: 'https://datos.cochid.cl/tema/presupuesto', style: 'color:var(--cis-accent)', text: 'Ver en datos.cochid.cl →' });
+    wrap.append(link);
+    target.append(wrap);
+  }
+  try {
+    const r = await fetch('https://datos.cochid.cl/api/cofog/composition?year=2024');
+    if (!r.ok) throw new Error('HTTP ' + r.status);
+    const rows = await r.json();
+    const top = rows.slice(0, 10);
+    const max = Math.max(...top.map(x => Number(x.pct_gasto_total)));
+    target.replaceChildren();
+    top.forEach((row, i) => {
+      const pct = Number(row.pct_gasto_total);
+      const widthPct = (pct / max) * 100;
+      const wrap = el('div', { style: 'display:flex;align-items:center;gap:0.75rem;font-size:0.875rem' });
+      wrap.append(el('div', { style: 'flex-basis:200px;font-weight:600;color:var(--ink)', text: String(row.name_es) }));
+      const barOuter = el('div', { style: 'flex-grow:1;background:var(--shell-bg);border:1px solid var(--line);height:24px;position:relative' });
+      barOuter.append(el('div', { style: `background:${palette[i % palette.length]};height:100%;width:${widthPct}%` }));
+      wrap.append(barOuter);
+      wrap.append(el('div', { style: 'flex-basis:80px;text-align:right;font-family:var(--font-mono);color:var(--cis-accent);font-weight:700', text: pct.toFixed(1) + '%' }));
+      target.append(wrap);
+    });
+    const total = rows.find(r => r.code === '7') || top[0];
+    if (total) {
+      const gastoMM = Number(total.gasto_corriente);
+      const gastoBn = (gastoMM / 1_000_000).toFixed(1).replace('.', ',');
+      const txt = `Gasto total 2024: $${gastoBn} billones CLP · ${Number(total.pct_pib).toFixed(1)}% del PIB`;
+      target.append(el('div', { style: 'margin-top:0.75rem;padding-top:0.75rem;border-top:1px solid var(--line);font-size:0.75rem;color:var(--muted);font-family:var(--font-mono)', text: txt }));
+    }
+  } catch (err) {
+    showError('No se pudo cargar el presupuesto');
+  }
+})();
+</script>
+</body>
+</html>
