@@ -146,10 +146,14 @@
     .viz-cta { font-size: 0.875rem; color: var(--muted); margin-top: 0.75rem; text-align: right; }
     .viz-cta a { color: var(--cis-accent); text-decoration: none; font-weight: 600; }
     .viz-cta a:hover { text-decoration: underline; }
-    .budget-row { align-items: center; display: grid; font-size: 0.875rem; gap: 0.75rem; grid-template-columns: minmax(8rem, 12.5rem) minmax(4rem, 1fr) 5rem; min-width: 0; }
+    .budget-item { min-width: 0; }
+    .budget-row { align-items: center; appearance: none; background: transparent; border: 0; color: inherit; cursor: pointer; display: grid; font: inherit; font-size: 0.875rem; gap: 0.75rem; grid-template-columns: minmax(8rem, 12.5rem) minmax(4rem, 1fr) 5rem; min-width: 0; padding: 0.35rem; text-align: left; width: 100%; }
+    .budget-row:hover { background: var(--paper-raised); }
+    .budget-row:focus-visible { outline: 2px solid var(--cis-accent); outline-offset: 2px; }
     .budget-label { color: var(--ink); font-weight: 600; min-width: 0; }
     .budget-bar { background: var(--shell-bg); border: 1px solid var(--line); height: 24px; min-width: 0; position: relative; }
     .budget-value { color: var(--cis-accent); font-family: var(--font-mono); font-weight: 700; text-align: right; }
+    .budget-details { color: var(--muted); font-family: var(--font-mono); font-size: 0.72rem; padding: 0.25rem 0.35rem 0.65rem; }
     @media (max-width: 520px) {
       .budget-row { gap: 0.35rem 0.75rem; grid-template-columns: minmax(0, 1fr) auto; }
       .budget-bar { grid-column: 1 / -1; grid-row: 2; }
@@ -507,13 +511,27 @@
     top.forEach((row, i) => {
       const pct = Number(row.pct_gasto_total);
       const widthPct = (pct / max) * 100;
-      const wrap = el('div', { class: 'budget-row' });
+      const item = el('div', { class: 'budget-item' });
+      const detailsId = 'cofog-detail-' + String(row.code || i).replace(/[^a-zA-Z0-9_-]/g, '-');
+      const wrap = el('button', { class: 'budget-row', type: 'button', 'aria-expanded': 'false', 'aria-controls': detailsId });
       wrap.append(el('div', { class: 'budget-label', text: String(row.name_es) }));
       const barOuter = el('div', { class: 'budget-bar' });
       barOuter.append(el('div', { style: `background:${palette[i % palette.length]};height:100%;width:${widthPct}%` }));
       wrap.append(barOuter);
       wrap.append(el('div', { class: 'budget-value', text: pct.toFixed(1) + '%' }));
-      target.append(wrap);
+      const amount = Number(row.gasto_corriente);
+      const pib = Number(row.pct_pib);
+      const detailParts = [];
+      if (Number.isFinite(amount)) detailParts.push(new Intl.NumberFormat('es-CL', { maximumFractionDigits: 0 }).format(amount) + ' millones de CLP');
+      if (Number.isFinite(pib)) detailParts.push(pib.toFixed(1) + '% del PIB');
+      const details = el('div', { id: detailsId, class: 'budget-details', text: detailParts.join(' · '), hidden: '' });
+      wrap.addEventListener('click', function () {
+        const expanded = wrap.getAttribute('aria-expanded') === 'true';
+        wrap.setAttribute('aria-expanded', String(!expanded));
+        details.hidden = expanded;
+      });
+      item.append(wrap, details);
+      target.append(item);
     });
     const total = rows.find(r => r.code === '7') || top[0];
     if (total) {

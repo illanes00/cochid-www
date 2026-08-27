@@ -55,6 +55,14 @@ class CochidMainStyleV10ContractTests(unittest.TestCase):
         self.assertIn("min-width: 0", HTML)
         self.assertIn("max-width: 100%", HTML)
 
+    def test_budget_chart_supports_pointer_and_keyboard_disclosure(self):
+        self.assertIn("class: 'budget-row'", HTML)
+        self.assertIn("'aria-expanded': 'false'", HTML)
+        self.assertIn("'aria-controls': detailsId", HTML)
+        self.assertIn("wrap.addEventListener('click'", HTML)
+        self.assertIn("class: 'budget-details'", HTML)
+        self.assertIn("details.hidden = expanded", HTML)
+
 
 if __name__ == "__main__":
     unittest.main()

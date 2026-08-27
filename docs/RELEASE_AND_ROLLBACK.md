@@ -22,12 +22,12 @@ un servicio de aplicación para esta portada estática.
 
 La verificación observable cubrió:
 
-- 5 pruebas de contrato;
+- 6 pruebas de contrato;
 - HTTP 200 en `https://cochid.cl/` y en la API COFOG pública;
 - carga real de Style v10 con SRI y ausencia de Style v9;
 - 320, 768 y 1440 px sin desborde horizontal;
 - modo claro inicial, toggle oscuro y persistencia al recargar;
-- gráfico real con 10 filas;
+- gráfico real con 10 filas y detalle expandible por clic o teclado;
 - Axe en claro y oscuro, 0 violaciones en los tres anchos;
 - Caddy activo, `NRestarts=0` y sin errores nuevos en la ventana del corte.
 
