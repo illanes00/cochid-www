@@ -1,29 +1,48 @@
-# Propuesta de liberación y reversión
+# Liberación y reversión de `cochid.cl`
 
-Esta rama es un candidato local. La liberación publica un directorio inmutable
-y cambia exclusivamente el `root` del bloque `cochid.cl` en Caddy. No modifica
-el checkout legado ni los bloques de `www.cochid.cl` o `datos.cochid.cl`.
+La portada institucional se publica desde releases estáticas e inmutables. El
+corte cambia exclusivamente el `root` del bloque `cochid.cl` en Caddy. No
+modifica el checkout legado ni los bloques de `www.cochid.cl` o
+`datos.cochid.cl`.
 
 ## Alcance verificable
 
-- Fuente candidata: `index.html` de esta rama.
-- Fuente actualmente servida: `/srv/projects/cis/projects/cochid/frontend/index.html`.
-- Proxy actual: `/etc/caddy/sites.d/cochid.cl.caddy` usa ese directorio como
-  `root`.
-- Baseline de contenido: commit `71488874e26653c8d6e3a8ce59408c14b0f6aca5`.
+- Fuente desplegada: commit `3ceeb0a54a8051c855377378f096bfc664a1e8d4`.
+- Release activa: `/srv/projects/releases/cochid-main/3ceeb0a54a8051c855377378f096bfc664a1e8d4`.
+- Release anterior: `/srv/projects/releases/cochid-main/acb8eb3546837192a5c4baa45293656daf4f7fab`.
+- Configuración: `/etc/caddy/sites.d/cochid.cl.caddy`.
+- Respaldo fechado: `/srv/projects/backups/cochid-main/style-v10-20260827T101128Z`.
+- Style: `10.0.0-candidate.16`, digest `c9aa1c7530c1050549aaa013253f0059b147abe1f725a2979c07e11b35c06c69`.
 
-## Liberación propuesta
+## Corte del 27 de agosto de 2026
 
-Un operador autorizado debe respaldar con fecha el archivo servido y la
-configuración efectiva de Caddy. Luego debe exportar este commit a
-`/srv/projects/releases/cochid-main/<commit>/`, cambiar el `root` del bloque
-`cochid.cl` a ese directorio, validar Caddy y recargarlo. El corte se comprueba
-con `https://cochid.cl/`, los recursos Style v9 y el endpoint público de
-presupuesto. No hay build ni servicio de aplicación para este sitio estático.
+El release se exportó desde Git sin symlinks, se agregó `RELEASE.json`, se
+generó `SHA256SUMS` y se selló sin archivos escribibles. No existe un build ni
+un servicio de aplicación para esta portada estática.
+
+La verificación observable cubrió:
+
+- 5 pruebas de contrato;
+- HTTP 200 en `https://cochid.cl/` y en la API COFOG pública;
+- carga real de Style v10 con SRI y ausencia de Style v9;
+- 320, 768 y 1440 px sin desborde horizontal;
+- modo claro inicial, toggle oscuro y persistencia al recargar;
+- gráfico real con 10 filas;
+- Axe en claro y oscuro, 0 violaciones en los tres anchos;
+- Caddy activo, `NRestarts=0` y sin errores nuevos en la ventana del corte.
+
+La portada no instala cookies ni carga analítica. La telemetría operativa
+disponible es el access log filtrado de Caddy. Una futura analítica de producto
+debe usar un endpoint first-party, consentimiento verificable y documentación
+de retención antes de agregarse.
 
 ## Reversión propuesta
 
-Si falla la comprobación HTTP, visual o de datos, restaurar el archivo Caddy
-respaldado, validarlo y recargarlo. Esto devuelve el `root` al directorio
-legado sin modificarlo. Repetir las mismas comprobaciones y conservar el
-respaldo fechado hasta cerrar la ventana.
+Restaurar `cochid.cl.caddy.before` desde el respaldo fechado, validar Caddy con
+sus `EnvironmentFile` efectivos y recargarlo. Esto devuelve el `root` a
+`acb8eb3546837192a5c4baa45293656daf4f7fab` sin modificar ningún release.
+
+La reversión se probó durante el corte: v10 volvió a v9 f417 con HTTP 200 y
+luego se reaplicó v10 con HTTP 200. Como no cambió ningún `EnvironmentFile`, la
+operación correcta fue `reload`; si ese archivo cambia, corresponde `stop` y
+`start`.
