@@ -120,6 +120,23 @@ class CochidHomeContractTests(unittest.TestCase):
         for field in ("data-source", "data-retrieved-at", "data-freshness-status"):
             self.assertIn(field, HTML)
 
+    def test_explains_cochid_and_offers_three_services_through_cis(self):
+        self.assertIn('<section id="que-es-cochid"', HTML)
+        self.assertIn('<section id="servicios"', HTML)
+        self.assertEqual(1, HTML.count('data-service-slug="consultoria"'))
+        self.assertEqual(1, HTML.count('data-service-slug="datos"'))
+        self.assertEqual(1, HTML.count('data-service-slug="api"'))
+        self.assertIn("Los servicios comerciales son contratados y facturados por", HTML)
+        self.assertIn("Compañía de Innovación de Santiago SpA", HTML)
+        self.assertIn('href="https://innovacionsantiago.cl/contacto"', HTML)
+        self.assertNotIn("API paga vía", HTML)
+
+    def test_hero_uses_clear_spanish_and_routes_into_the_ecosystem(self):
+        self.assertIn("datos públicos", HTML)
+        self.assertNotIn("La <em>data pública</em>", HTML)
+        for destination in ("#productos", "#servicios", "https://datos.cochid.cl"):
+            self.assertIn(f'href="{destination}"', HTML)
+
 
 if __name__ == "__main__":
     unittest.main()

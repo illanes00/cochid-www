@@ -4,9 +4,9 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <title>COCHID · Compañía Chilena de Inteligencia de Datos</title>
-  <meta name="description" content="COCHID — Compañía Chilena de Inteligencia de Datos. Presupuesto, indicadores económicos, seguridad, demografía, política y centros de estudio chilenos. Datos públicos con trazabilidad completa.">
+  <meta name="description" content="COCHID organiza datos públicos de Chile en productos, mapas, herramientas de investigación y APIs trazables. Operación técnica y servicios comerciales a cargo de CIS.">
   <meta property="og:title" content="COCHID · Datos chilenos abiertos">
-  <meta property="og:description" content="Compañía Chilena de Inteligencia de Datos. Explora 5 datasets, 7 temas, 30+ indicadores con trazabilidad completa.">
+  <meta property="og:description" content="Ecosistema de datos públicos, mapas, investigación y APIs trazables para comprender Chile.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://cochid.cl">
   <meta name="color-scheme" content="light dark">
@@ -151,6 +151,11 @@
     main { max-width: 1100px; margin: 0 auto; padding: 0 1rem 4rem; }
     h2 { font-weight: 700; font-size: 1.5rem; margin: 4rem 0 0.5rem; letter-spacing: -0.01em; }
     .h2-sub { color: var(--muted); margin: 0 0 1.5rem; font-size: 0.9375rem; }
+    .explain-grid { display: grid; gap: 0.75rem; grid-template-columns: repeat(3, minmax(0, 1fr)); }
+    .explain-item { border-top: 2px solid var(--cis-accent); padding: 1rem 0; }
+    .explain-item h3 { font-size: 1rem; margin: 0 0 0.5rem; }
+    .explain-item p { color: var(--muted); font-size: 0.875rem; line-height: 1.55; margin: 0; }
+    @media (max-width: 700px) { .explain-grid { grid-template-columns: minmax(0, 1fr); } }
 
     .viz-frame { background: var(--paper); border: 1px solid var(--line); padding: 1rem; margin: 1rem 0 2rem; min-width: 0; overflow: hidden; }
     .viz-frame iframe { width: 100%; border: 0; display: block; }
@@ -272,12 +277,13 @@
 </nav>
 
 <section class="hero">
-  <p class="hero-kicker">COCHID · Compañía Chilena de Inteligencia de Datos</p>
-  <h1>La <em>data pública</em> de Chile, accesible y trazable.</h1>
-  <p class="lead">Presupuesto fiscal, indicadores económicos, seguridad ciudadana, demografía, posicionamiento de centros de estudio. Todo cruzado, normalizado, con linaje desde la fuente original. Hecho para periodistas, abogados, analistas, investigadores y aplicaciones.</p>
+  <p class="hero-kicker">COCHID · Ecosistema de inteligencia de datos</p>
+  <h1>Datos públicos para <em>comprender Chile</em> y tomar mejores decisiones.</h1>
+  <p class="lead">COCHID conecta fuentes oficiales, territorio, investigación y herramientas de publicación. Permite explorar la evidencia, seguir su origen y convertirla en análisis, productos digitales e integraciones.</p>
   <div class="hero-cta">
-    <a href="https://datos.cochid.cl" class="btn-primary">Explorar los datos →</a>
-    <a href="https://indieweb.cl" class="btn-secondary">Acceso a la API</a>
+    <a href="#productos" class="btn-primary">Conocer el ecosistema</a>
+    <a href="https://datos.cochid.cl" class="btn-secondary">Explorar los datos</a>
+    <a href="#servicios" class="btn-secondary">Servicios para organizaciones</a>
   </div>
 </section>
 
@@ -303,6 +309,25 @@
 </header>
 
 <main id="contenido" tabindex="-1">
+  <section id="que-es-cochid" aria-labelledby="que-es-cochid-titulo">
+    <h2 id="que-es-cochid-titulo">Qué es COCHID</h2>
+    <p class="h2-sub">Una infraestructura común para que los datos públicos se puedan encontrar, relacionar, verificar y volver a utilizar.</p>
+    <div class="explain-grid">
+      <article class="explain-item">
+        <h3>Integra</h3>
+        <p>Normaliza fuentes distintas y conserva su procedencia, período, cobertura y transformaciones.</p>
+      </article>
+      <article class="explain-item">
+        <h3>Hace visible</h3>
+        <p>Publica catálogos, mapas, indicadores y herramientas especializadas para distintos oficios.</p>
+      </article>
+      <article class="explain-item">
+        <h3>Permite construir</h3>
+        <p>Ofrece datos y APIs para informes, medios, investigación, productos internos y servicios públicos.</p>
+      </article>
+    </div>
+  </section>
+
   <h2>Presupuesto público de Chile 2024</h2>
   <p class="h2-sub">Gasto corriente del gobierno general, año 2024, por función (clasificación COFOG). Fuente: DIPRES · construido en Cochid Datos.</p>
   <div class="viz-frame" data-contract-resource="budget_composition" data-source="https://datos.cochid.cl/api/cofog/composition?year=2024" data-retrieved-at="" data-freshness-status="loading">
@@ -428,16 +453,39 @@
     </div>
   </section>
 
-  <h2>Cómo se consume</h2>
-  <p class="h2-sub">El sitio público en <a href="https://datos.cochid.cl" style="color:var(--cis-accent);font-weight:600">datos.cochid.cl</a> es libre para explorar y consultar. La API completa, descargas masivas y endpoints de bulk access se ofrecen como producto pago en <a href="https://indieweb.cl" style="color:var(--cis-accent);font-weight:600">indieweb.cl</a>.</p>
+  <section id="servicios" aria-labelledby="servicios-titulo">
+    <h2 id="servicios-titulo">Servicios para organizaciones</h2>
+    <p class="h2-sub">El ecosistema también se puede adaptar a preguntas, equipos y procesos concretos.</p>
+    <div class="temas-grid">
+      <article class="tema-card" data-service-slug="consultoria">
+        <h3>Consultoría de datos</h3>
+        <p class="desc">Diseño de indicadores, auditoría de fuentes, modelos de datos, tableros y sistemas de evidencia.</p>
+        <span class="meta">diagnóstico · implementación · transferencia</span>
+      </article>
+      <article class="tema-card" data-service-slug="datos">
+        <h3>Productos de datos</h3>
+        <p class="desc">Conjuntos normalizados, cruces reproducibles, reportes y componentes listos para usar.</p>
+        <span class="meta">trazabilidad · documentación · actualización</span>
+      </article>
+      <article class="tema-card" data-service-slug="api">
+        <h3>API e integraciones</h3>
+        <p class="desc">Acceso programático, contratos de consumo, endpoints dedicados y soporte de integración.</p>
+        <span class="meta">contratos · monitoreo · soporte</span>
+      </article>
+    </div>
+    <div class="hero-cta">
+      <a href="https://innovacionsantiago.cl/contacto" class="btn-primary">Conversar un proyecto</a>
+      <a href="https://datos.cochid.cl/api/docs" class="btn-secondary">Revisar la API</a>
+    </div>
+  </section>
 
   <div class="who">
-    <strong>COCHID</strong> · Compañía Chilena de Inteligencia de Datos SpA (RUT 78.374.391-4) ·
-    operada por <a href="https://innovacionsantiago.cl">Compañía de Innovación de Santiago SpA</a> (CIS, RUT 78.384.591-1)
-    bajo licencia.
-    <br><br>
-    Misma plataforma de auth (Authentik), misma facturación, mismos créditos del marketplace
-    <a href="https://indieweb.cl">indieweb.cl</a>.
+    <strong>COCHID</strong> · Compañía Chilena de Inteligencia de Datos SpA (RUT 78.374.391-4),
+    con operación técnica a cargo de
+    <a href="https://innovacionsantiago.cl">Compañía de Innovación de Santiago SpA</a>
+    (CIS, RUT 78.384.591-1) bajo licencia.
+    Los servicios comerciales son contratados y facturados por
+    <a href="https://innovacionsantiago.cl">Compañía de Innovación de Santiago SpA</a>.
   </div>
 </main>
 
