@@ -72,8 +72,17 @@ class CochidMainStyleV10ContractTests(unittest.TestCase):
 
     def test_exposes_the_existing_primary_navigation_on_mobile(self):
         self.assertIn('<details class="mobile-nav">', HTML)
-        for label in ("Datos", "Temas", "Explorar", "Metodología", "Quiénes somos", "FAQ"):
+        for label in ("Qué es COCHID", "Servicios", "Datos", "Mapas", "Transporte", "Lex", "Congreso", "Elecciones", "Scribe", "Thesis"):
             self.assertIn(f">{label}</a>", HTML)
+
+    def test_uses_the_canonical_lockup_and_grouped_ecosystem_navigation(self):
+        self.assertIn("/assets/brands/cochid-lockup.svg", HTML)
+        self.assertNotIn('class="brand-wordmark"', HTML)
+        self.assertIn('<details class="ecosystem-menu">', HTML)
+        self.assertIn('href="#que-es-cochid"', HTML)
+        self.assertIn('href="#servicios"', HTML)
+        self.assertIn("Iniciar sesión</a>", HTML)
+        self.assertIn('id="themeToggle"', HTML)
 
     def test_contains_long_content_and_avoids_syllable_breaking(self):
         self.assertIn("overflow-wrap: anywhere", HTML)
