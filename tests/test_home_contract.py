@@ -131,6 +131,13 @@ class CochidHomeContractTests(unittest.TestCase):
         self.assertIn('href="https://innovacionsantiago.cl/contacto"', HTML)
         self.assertNotIn("API paga vía", HTML)
 
+    def test_footer_routes_commercial_access_through_cis(self):
+        self.assertNotIn('<li><a href="https://indieweb.cl">API access (paid)</a></li>', HTML)
+        self.assertIn("Documentación de la API", HTML)
+        self.assertIn("Contratar datos y API", HTML)
+        self.assertIn("Estado de la plataforma", HTML)
+        self.assertIn("servicios comerciales son contratados y facturados por", HTML)
+
     def test_hero_uses_clear_spanish_and_routes_into_the_ecosystem(self):
         self.assertIn("datos públicos", HTML)
         self.assertNotIn("La <em>data pública</em>", HTML)
