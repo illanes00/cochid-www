@@ -145,6 +145,8 @@
     .stat { background: var(--paper); border: 1px solid var(--line); padding: 1rem; }
     .stat .num { font-size: 2rem; font-weight: 800; color: var(--cis-accent); font-family: var(--font-mono); line-height: 1; margin-bottom: 0.25rem; }
     .stat .label { font-size: 0.8125rem; color: var(--muted); }
+    .data-meta { color: var(--muted); font-family: var(--font-mono); font-size: 0.7rem; line-height: 1.5; margin: 0.75rem 0 0; }
+    .data-meta a { color: var(--cis-accent); }
 
     main { max-width: 1100px; margin: 0 auto; padding: 0 1rem 4rem; }
     h2 { font-weight: 700; font-size: 1.5rem; margin: 4rem 0 0.5rem; letter-spacing: -0.01em; }
@@ -279,21 +281,35 @@
   </div>
 </section>
 
-<section class="stats">
-  <div class="stat"><div class="num">5</div><div class="label">datasets activos</div></div>
-  <div class="stat"><div class="num">7</div><div class="label">temas explorables</div></div>
-  <div class="stat"><div class="num">37</div><div class="label">años de cobertura</div></div>
-  <div class="stat"><div class="num">+5K</div><div class="label">filas en gold</div></div>
+<section class="stats" aria-label="Estado del catálogo COCHID Datos">
+  <article class="stat" data-contract-resource="platform_health" data-source="https://datos.cochid.cl/api/health/deep" data-retrieved-at="" data-freshness-status="loading">
+    <div class="num" id="datasets-count" aria-live="polite">…</div>
+    <div class="label">datasets registrados</div>
+  </article>
+  <article class="stat" data-contract-resource="themes" data-source="https://datos.cochid.cl/api/temas/" data-retrieved-at="" data-freshness-status="loading">
+    <div class="num" id="themes-count" aria-live="polite">…</div>
+    <div class="label">temas en el explorador</div>
+  </article>
+  <article class="stat">
+    <div class="num" id="ingestion-status" aria-live="polite">…</div>
+    <div class="label">última ingesta registrada</div>
+  </article>
+  <article class="stat">
+    <div class="num" id="platform-status" aria-live="polite">…</div>
+    <div class="label">estado de la plataforma</div>
+  </article>
+  <p class="data-meta" id="platform-data-meta">Fuente: <a href="https://datos.cochid.cl/api/health/deep">COCHID Datos</a> · recuperando corte actual…</p>
 </section>
 </header>
 
 <main id="contenido" tabindex="-1">
   <h2>Presupuesto público de Chile 2024</h2>
   <p class="h2-sub">Gasto corriente del gobierno general, año 2024, por función (clasificación COFOG). Fuente: DIPRES · construido en Cochid Datos.</p>
-  <div class="viz-frame">
+  <div class="viz-frame" data-contract-resource="budget_composition" data-source="https://datos.cochid.cl/api/cofog/composition?year=2024" data-retrieved-at="" data-freshness-status="loading">
     <div id="presupuesto-bars" style="min-height:380px;display:flex;flex-direction:column;gap:0.5rem;padding:1rem 0">
       <div style="color:var(--muted);text-align:center;padding:2rem 0">cargando datos DIPRES…</div>
     </div>
+    <p class="data-meta" id="budget-data-meta">Fuente: DIPRES vía COCHID Datos · período observado: 2024 · recuperando datos…</p>
     <div class="viz-cta"><a href="https://datos.cochid.cl/tema/presupuesto">Ver presupuesto completo (15 años · series · COFOG drill-down) →</a></div>
   </div>
 
@@ -497,9 +513,75 @@
   });
 })();
 
+(async function loadPlatformSummary() {
+  const healthCard = document.querySelector('[data-contract-resource="platform_health"]');
+  const themesCard = document.querySelector('[data-contract-resource="themes"]');
+  const datasetsCount = document.getElementById('datasets-count');
+  const themesCount = document.getElementById('themes-count');
+  const ingestionStatus = document.getElementById('ingestion-status');
+  const platformStatus = document.getElementById('platform-status');
+  const meta = document.getElementById('platform-data-meta');
+  const retrievedAt = new Date();
+
+  function stamp(target, status) {
+    target.dataset.retrievedAt = retrievedAt.toISOString();
+    target.dataset.freshnessStatus = status;
+  }
+
+  function parseProducerDate(value) {
+    if (typeof value !== 'string') return null;
+    const normalized = value.replace(' ', 'T').replace(/([+-]\d{2})$/, '$1:00');
+    const parsed = new Date(normalized);
+    return Number.isNaN(parsed.getTime()) ? null : parsed;
+  }
+
+  try {
+    const [healthResponse, themesResponse] = await Promise.all([
+      fetch('https://datos.cochid.cl/api/health/deep'),
+      fetch('https://datos.cochid.cl/api/temas/'),
+    ]);
+    if (!healthResponse.ok || !themesResponse.ok) throw new Error('respuesta no disponible');
+
+    const health = await healthResponse.json();
+    const themes = await themesResponse.json();
+    if (
+      health.service !== 'cochid-datos' ||
+      typeof health.db_ok !== 'boolean' ||
+      !Number.isFinite(Number(health.datasets_registered)) ||
+      !health.last_ingestion ||
+      typeof health.last_ingestion.started_at !== 'string' ||
+      !Array.isArray(themes) ||
+      themes.some(theme => !theme.slug || !theme.name || !theme.description)
+    ) throw new Error('respuesta fuera de contrato');
+
+    const observedAt = parseProducerDate(health.last_ingestion.started_at);
+    const ageSeconds = observedAt ? (retrievedAt.getTime() - observedAt.getTime()) / 1000 : Infinity;
+    const freshness = ageSeconds <= 172800 ? 'fresh' : 'delayed';
+    stamp(healthCard, freshness);
+    stamp(themesCard, 'fresh');
+    datasetsCount.textContent = new Intl.NumberFormat('es-CL').format(Number(health.datasets_registered));
+    themesCount.textContent = new Intl.NumberFormat('es-CL').format(themes.length);
+    ingestionStatus.textContent = observedAt
+      ? new Intl.DateTimeFormat('es-CL', { day: '2-digit', month: 'short', timeZone: 'America/Santiago' }).format(observedAt)
+      : 's/d';
+    platformStatus.textContent = health.status === 'ok' && health.db_ok ? 'operativa' : 'degradada';
+    meta.textContent = `Fuente: COCHID Datos · ingesta observada ${health.last_ingestion.started_at} · recuperado ${retrievedAt.toISOString()} · ${freshness === 'fresh' ? 'actual' : 'con rezago'}. El total corresponde al catálogo registrado, no solo a datasets con filas.`;
+  } catch (error) {
+    stamp(healthCard, 'unavailable');
+    stamp(themesCard, 'unavailable');
+    datasetsCount.textContent = 's/d';
+    themesCount.textContent = 's/d';
+    ingestionStatus.textContent = 's/d';
+    platformStatus.textContent = 'sin señal';
+    meta.textContent = `Fuente: COCHID Datos · consulta fallida ${retrievedAt.toISOString()} · se mantienen disponibles los enlaces al catálogo.`;
+  }
+})();
+
 (async function loadPresupuesto() {
   const target = document.getElementById('presupuesto-bars');
   if (!target) return;
+  const panel = target.closest('[data-contract-resource="budget_composition"]');
+  const meta = document.getElementById('budget-data-meta');
   const palette = ['#1d4ed8','#2563eb','#3b82f6','#60a5fa','#7c3aed','#dc2626','#d97706','#059669','#0891b2','#52525b'];
   function el(tag, props) {
     const node = document.createElement(tag);
@@ -511,6 +593,10 @@
     return node;
   }
   function showError(msg) {
+    const retrievedAt = new Date().toISOString();
+    panel.dataset.retrievedAt = retrievedAt;
+    panel.dataset.freshnessStatus = 'unavailable';
+    meta.textContent = `Fuente: DIPRES vía COCHID Datos · período observado: 2024 · consulta fallida ${retrievedAt}.`;
     target.replaceChildren();
     const wrap = el('div', { style: 'color:var(--muted);text-align:center;padding:2rem 0' });
     wrap.append(msg + ' · ');
@@ -522,6 +608,13 @@
     const r = await fetch('https://datos.cochid.cl/api/cofog/composition?year=2024');
     if (!r.ok) throw new Error('HTTP ' + r.status);
     const rows = await r.json();
+    if (!Array.isArray(rows) || rows.some(row => !row.code || !row.name_es || row.gasto_corriente == null || row.pct_pib == null || row.pct_gasto_total == null)) {
+      throw new Error('respuesta fuera de contrato');
+    }
+    const retrievedAt = new Date().toISOString();
+    panel.dataset.retrievedAt = retrievedAt;
+    panel.dataset.freshnessStatus = 'historical';
+    meta.textContent = `Fuente: DIPRES vía COCHID Datos · período observado: 2024 · recuperado ${retrievedAt} · serie histórica.`;
     const top = rows.slice(0, 10);
     const max = Math.max(...top.map(x => Number(x.pct_gasto_total)));
     target.replaceChildren();

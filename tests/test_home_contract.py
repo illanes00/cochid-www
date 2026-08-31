@@ -7,6 +7,7 @@ import unittest
 
 ROOT = Path(__file__).resolve().parents[1]
 HTML = (ROOT / "index.html").read_text(encoding="utf-8")
+DATA_CONTRACT_PATH = ROOT / "contracts" / "cochid-datos-home.v1.json"
 
 
 class ProductSectionParser(HTMLParser):
@@ -88,6 +89,36 @@ class CochidHomeContractTests(unittest.TestCase):
             ],
             [offer["name"] for offer in organization["makesOffer"]],
         )
+
+    def test_declares_every_cochid_datos_request_in_a_versioned_contract(self):
+        self.assertTrue(DATA_CONTRACT_PATH.exists(), "falta el contrato consumidor")
+        contract = json.loads(DATA_CONTRACT_PATH.read_text(encoding="utf-8"))
+        self.assertEqual("1.0.0", contract["contract_version"])
+        self.assertEqual("cochid-home", contract["consumer"])
+        self.assertEqual("cochid-datos", contract["producer"])
+
+        resources = contract["resources"]
+        self.assertEqual(
+            {"platform_health", "themes", "budget_composition"},
+            set(resources),
+        )
+        declared_urls = {resource["url"] for resource in resources.values()}
+        requested_urls = set(
+            re.findall(r"fetch\(['\"](https://datos\.cochid\.cl/[^'\"]+)", HTML)
+        )
+        self.assertEqual(declared_urls, requested_urls)
+
+        for resource in resources.values():
+            self.assertEqual("GET", resource["method"])
+            self.assertGreater(resource["ttl_seconds"], 0)
+            self.assertTrue(resource["required_fields"])
+            self.assertTrue(resource["fallback"])
+
+    def test_data_modules_expose_source_retrieval_and_freshness_metadata(self):
+        for resource in ("platform_health", "themes", "budget_composition"):
+            self.assertIn(f'data-contract-resource="{resource}"', HTML)
+        for field in ("data-source", "data-retrieved-at", "data-freshness-status"):
+            self.assertIn(field, HTML)
 
 
 if __name__ == "__main__":
