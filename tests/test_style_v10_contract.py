@@ -7,7 +7,7 @@ ROOT = Path(__file__).resolve().parents[1]
 HTML = (ROOT / "index.html").read_text(encoding="utf-8")
 KIT_HOST = "https://kit.innovacionsantiago.cl"
 CANONICAL_BASE = re.compile(re.escape(KIT_HOST) + r"/v10/[0-9a-f]{64}")
-STABLE_DIGEST = "bd04fc0dac0b1497e8cd7a70c73433f46a5eb0ff7ae6c5a23234dd8077b1c35c"
+STABLE_DIGEST = "c2c15cacc312f95345ab31bbb720bb0d197ccb668003990a2ba50fa2d914f68c"
 
 
 def _kit_bases():
@@ -18,7 +18,7 @@ class CochidMainStyleV10ContractTests(unittest.TestCase):
     def test_pins_the_published_stable_digest_without_incompatible_chrome(self):
         base = f"{KIT_HOST}/v10/{STABLE_DIGEST}"
         self.assertEqual(5, HTML.count(base))
-        self.assertIn('integrity="sha384-XOqnmXzzTTi2HeNgwYcWZU1UWWGYntmWzaTutoIFsT/q/8Emxcq/+b2EPBKAhUa0"', HTML)
+        self.assertIn('integrity="sha384-p7gJ7xPkv/lL5RjkXAPzt8mg95i/8QMz7NFSf8bi/hHtKOkEkneKNOw/TkX5M2xh"', HTML)
         self.assertNotIn("5303c30dbc9afc51586b1d4659e3072cd360882a5c15827eca350d9eb4f644ec", HTML)
         self.assertNotIn("chrome.js", HTML)
 
