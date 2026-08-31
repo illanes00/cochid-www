@@ -147,6 +147,17 @@
     .stat .label { font-size: 0.8125rem; color: var(--muted); }
     .data-meta { color: var(--muted); font-family: var(--font-mono); font-size: 0.7rem; line-height: 1.5; margin: 0.75rem 0 0; }
     .data-meta a { color: var(--cis-accent); }
+    .theme-list { border-top: 1px solid var(--line); display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    .theme-item { border-bottom: 1px solid var(--line); color: inherit; display: grid; gap: 0.25rem; grid-template-columns: minmax(0, 1fr) auto; padding: 1rem 0; text-decoration: none; }
+    .theme-item:nth-child(odd) { padding-right: 1rem; }
+    .theme-item:nth-child(even) { padding-left: 1rem; }
+    .theme-item strong { font-size: 0.9375rem; }
+    .theme-item p { color: var(--muted); font-size: 0.8125rem; grid-column: 1 / -1; line-height: 1.45; margin: 0; }
+    .theme-item span { color: var(--muted); font-family: var(--font-mono); font-size: 0.6875rem; }
+    @media (max-width: 700px) {
+      .theme-list { grid-template-columns: minmax(0, 1fr); }
+      .theme-item:nth-child(odd), .theme-item:nth-child(even) { padding-inline: 0; }
+    }
 
     main { max-width: 1100px; margin: 0 auto; padding: 0 1rem 4rem; }
     h2 { font-weight: 700; font-size: 1.5rem; margin: 4rem 0 0.5rem; letter-spacing: -0.01em; }
@@ -353,52 +364,16 @@
     <div class="viz-cta"><a href="https://datos.cochid.cl/tema/presupuesto">Ver presupuesto completo (15 años · series · COFOG drill-down) →</a></div>
   </div>
 
-  <h2>Temas con datos en vivo</h2>
-  <p class="h2-sub">Cada tema cruza fuentes oficiales (DIPRES, INE, Banco Mundial, SII, Servel) y agrega visualizaciones, comparadores y APIs.</p>
-  <div class="temas-grid">
-    <a href="https://datos.cochid.cl/tema/presupuesto" class="tema-card">
-      <span class="icon">💰</span>
-      <h3>Presupuesto Público</h3>
-      <p class="desc">Gasto fiscal, ejecución presupuestaria, COFOG. Fuente: DIPRES.</p>
-      <span class="meta">880 filas · 15 años</span>
-    </a>
-    <a href="https://datos.cochid.cl/tema/economia" class="tema-card">
-      <span class="icon">📈</span>
-      <h3>Economía</h3>
-      <p class="desc">PIB, inflación, desempleo, comercio exterior. Fuente: Banco Mundial.</p>
-      <span class="meta">877 filas · 66 años</span>
-    </a>
-    <a href="https://datos.cochid.cl/tema/seguridad" class="tema-card">
-      <span class="icon">🛡️</span>
-      <h3>Seguridad Ciudadana</h3>
-      <p class="desc">Denuncias, casos judiciales, victimización. Fuente: INE.</p>
-      <span class="meta">157 filas · 12 años</span>
-    </a>
-    <a href="https://datos.cochid.cl/tema/demografia" class="tema-card">
-      <span class="icon">👥</span>
-      <h3>Demografía y Pobreza</h3>
-      <p class="desc">Población, censos, ingresos. Fuente: WB + INE.</p>
-      <span class="meta">66 años</span>
-    </a>
-    <a href="https://datos.cochid.cl/tema/centros-estudio" class="tema-card">
-      <span class="icon">🧭</span>
-      <h3>Centros de Estudio</h3>
-      <p class="desc">Political Compass de 18 think tanks chilenos 1990-2026.</p>
-      <span class="meta">396 filas matview</span>
-    </a>
-    <a href="https://datos.cochid.cl/tema/legislacion" class="tema-card">
-      <span class="icon">⚖️</span>
-      <h3>Legislación</h3>
-      <p class="desc">Leyes vigentes, proyectos en trámite. Próximamente.</p>
-      <span class="meta">en proceso</span>
-    </a>
-    <a href="https://datos.cochid.cl/tema/elecciones" class="tema-card">
-      <span class="icon">🗳️</span>
-      <h3>Elecciones</h3>
-      <p class="desc">Padrón, resultados históricos, participación. Próximamente.</p>
-      <span class="meta">en proceso</span>
-    </a>
-  </div>
+  <section id="areas" aria-labelledby="areas-titulo">
+    <h2 id="areas-titulo">Áreas de datos</h2>
+    <p class="h2-sub">Directorio generado desde el contrato público de COCHID Datos. Cada área lleva al detalle de sus fuentes e indicadores.</p>
+    <div class="theme-list" id="theme-list" aria-live="polite">
+      <a class="theme-item" href="https://datos.cochid.cl/temas">
+        <strong>Explorar todos los temas</strong>
+        <span>cargando directorio…</span>
+      </a>
+    </div>
+  </section>
 
   <section id="productos" aria-labelledby="productos-titulo">
   <h2 id="productos-titulo">Productos COCHID</h2>
@@ -584,6 +559,7 @@
   const ingestionStatus = document.getElementById('ingestion-status');
   const platformStatus = document.getElementById('platform-status');
   const meta = document.getElementById('platform-data-meta');
+  const themeList = document.getElementById('theme-list');
   const retrievedAt = new Date();
 
   function stamp(target, status) {
@@ -614,7 +590,7 @@
       !health.last_ingestion ||
       typeof health.last_ingestion.started_at !== 'string' ||
       !Array.isArray(themes) ||
-      themes.some(theme => !theme.slug || !theme.name || !theme.description)
+      themes.some(theme => !theme.slug || !theme.name || !theme.description || !Array.isArray(theme.featured_indicators))
     ) throw new Error('respuesta fuera de contrato');
 
     const observedAt = parseProducerDate(health.last_ingestion.started_at);
@@ -629,6 +605,20 @@
       : 's/d';
     platformStatus.textContent = health.status === 'ok' && health.db_ok ? 'operativa' : 'degradada';
     meta.textContent = `Fuente: COCHID Datos · ingesta observada ${health.last_ingestion.started_at} · recuperado ${retrievedAt.toISOString()} · ${freshness === 'fresh' ? 'actual' : 'con rezago'}. El total corresponde al catálogo registrado, no solo a datasets con filas.`;
+    themeList.replaceChildren();
+    themes.forEach(theme => {
+      const link = document.createElement('a');
+      link.className = 'theme-item';
+      link.href = `https://datos.cochid.cl/tema/${encodeURIComponent(theme.slug)}`;
+      const name = document.createElement('strong');
+      name.textContent = theme.name;
+      const count = document.createElement('span');
+      count.textContent = `${theme.featured_indicators.length} indicadores destacados`;
+      const description = document.createElement('p');
+      description.textContent = theme.description;
+      link.append(name, count, description);
+      themeList.append(link);
+    });
   } catch (error) {
     stamp(healthCard, 'unavailable');
     stamp(themesCard, 'unavailable');
@@ -637,6 +627,12 @@
     ingestionStatus.textContent = 's/d';
     platformStatus.textContent = 'sin señal';
     meta.textContent = `Fuente: COCHID Datos · consulta fallida ${retrievedAt.toISOString()} · se mantienen disponibles los enlaces al catálogo.`;
+    themeList.replaceChildren();
+    const fallback = document.createElement('a');
+    fallback.className = 'theme-item';
+    fallback.href = 'https://datos.cochid.cl/temas';
+    fallback.textContent = 'Abrir el directorio de temas en COCHID Datos';
+    themeList.append(fallback);
   }
 })();
 
@@ -645,7 +641,6 @@
   if (!target) return;
   const panel = target.closest('[data-contract-resource="budget_composition"]');
   const meta = document.getElementById('budget-data-meta');
-  const palette = ['#1d4ed8','#2563eb','#3b82f6','#60a5fa','#7c3aed','#dc2626','#d97706','#059669','#0891b2','#52525b'];
   function el(tag, props) {
     const node = document.createElement(tag);
     if (props) for (const k in props) {
@@ -689,7 +684,7 @@
       const wrap = el('button', { class: 'budget-row', type: 'button', 'aria-expanded': 'false', 'aria-controls': detailsId });
       wrap.append(el('div', { class: 'budget-label', text: String(row.name_es) }));
       const barOuter = el('div', { class: 'budget-bar' });
-      barOuter.append(el('div', { style: `background:${palette[i % palette.length]};height:100%;width:${widthPct}%` }));
+      barOuter.append(el('div', { style: `background:var(--cis-accent);height:100%;width:${widthPct}%` }));
       wrap.append(barOuter);
       wrap.append(el('div', { class: 'budget-value', text: pct.toFixed(1) + '%' }));
       const amount = Number(row.gasto_corriente);

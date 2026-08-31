@@ -137,6 +137,22 @@ class CochidHomeContractTests(unittest.TestCase):
         for destination in ("#productos", "#servicios", "https://datos.cochid.cl"):
             self.assertIn(f'href="{destination}"', HTML)
 
+    def test_theme_directory_is_rendered_from_the_contracted_api(self):
+        self.assertIn('id="theme-list"', HTML)
+        self.assertIn("encodeURIComponent(theme.slug)", HTML)
+        self.assertIn("theme.featured_indicators.length", HTML)
+        for stale_copy in (
+            "880 filas · 15 años",
+            "877 filas · 66 años",
+            "396 filas matview",
+            "Próximamente.",
+        ):
+            self.assertNotIn(stale_copy, HTML)
+
+    def test_budget_comparison_uses_one_semantic_color(self):
+        self.assertNotIn("const palette =", HTML)
+        self.assertIn("background:var(--cis-accent)", HTML)
+
 
 if __name__ == "__main__":
     unittest.main()

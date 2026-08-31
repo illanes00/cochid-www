@@ -28,7 +28,8 @@
       "required_fields": [
         "[].slug",
         "[].name",
-        "[].description"
+        "[].description",
+        "[].featured_indicators"
       ],
       "observation_field": null,
       "freshness_threshold_seconds": 86400,
