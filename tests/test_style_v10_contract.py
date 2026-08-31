@@ -1,21 +1,47 @@
 from pathlib import Path
+import re
 import unittest
 
 
 ROOT = Path(__file__).resolve().parents[1]
 HTML = (ROOT / "index.html").read_text(encoding="utf-8")
-KIT_ROOT = "https://kit.innovacionsantiago.cl/releases/10.0.0-candidate.16/c9aa1c7530c1050549aaa013253f0059b147abe1f725a2979c07e11b35c06c69"
-STYLE_SRI = "sha384-ooe8iwt0KS7V9q2BRMfVeC3cf/hgK0QdII5jSGBXM4GBHdy1+rnjSQAxukVu9Dw9"
-THEME_SRI = "sha384-4z/J3/xbpw17qJScwLAq3N2hW5F9+5M9by+yIDuu63LedHlPJq2cZE716lDAxL3c"
+KIT_HOST = "https://kit.innovacionsantiago.cl"
+CANONICAL_BASE = re.compile(re.escape(KIT_HOST) + r"/v10/[0-9a-f]{64}")
+STABLE_DIGEST = "bd04fc0dac0b1497e8cd7a70c73433f46a5eb0ff7ae6c5a23234dd8077b1c35c"
+
+
+def _kit_bases():
+    return set(re.findall(re.escape(KIT_HOST) + r"/[^\"'\s]+?/(?=style\.css|theme\.js|assets/)", HTML))
 
 
 class CochidMainStyleV10ContractTests(unittest.TestCase):
-    def test_uses_the_pinned_v10_runtime_and_cochid_identity(self):
-        self.assertIn(f'href="{KIT_ROOT}/style.css"', HTML)
-        self.assertIn(f'integrity="{STYLE_SRI}"', HTML)
-        self.assertIn(f'src="{KIT_ROOT}/theme.js"', HTML)
-        self.assertIn(f'integrity="{THEME_SRI}"', HTML)
-        self.assertIn(f'src="{KIT_ROOT}/assets/brands/cochid-mark.svg"', HTML)
+    def test_pins_the_published_stable_digest_without_incompatible_chrome(self):
+        base = f"{KIT_HOST}/v10/{STABLE_DIGEST}"
+        self.assertEqual(5, HTML.count(base))
+        self.assertIn('integrity="sha384-XOqnmXzzTTi2HeNgwYcWZU1UWWGYntmWzaTutoIFsT/q/8Emxcq/+b2EPBKAhUa0"', HTML)
+        self.assertNotIn("5303c30dbc9afc51586b1d4659e3072cd360882a5c15827eca350d9eb4f644ec", HTML)
+        self.assertNotIn("chrome.js", HTML)
+
+    def test_uses_a_single_canonical_v10_anchor(self):
+        bases = _kit_bases()
+        self.assertTrue(bases, "el HTML no referencia el kit")
+        self.assertEqual(1, len(bases), f"hay más de un anclaje del kit: {sorted(bases)}")
+        base = bases.pop().rstrip("/")
+        self.assertRegex(base, CANONICAL_BASE)
+
+    def test_rejects_the_legacy_releases_path_scheme(self):
+        self.assertNotIn(f"{KIT_HOST}/releases/", HTML)
+
+    def test_pins_both_entrypoints_with_subresource_integrity(self):
+        for tag in re.findall(r"<(?:link|script)\b[^>]*kit\.innovacionsantiago\.cl[^>]*>", HTML):
+            if "style.css" in tag or "theme.js" in tag:
+                self.assertIn('integrity="sha384-', tag)
+                self.assertIn('crossorigin="anonymous"', tag)
+        self.assertIn("/style.css", HTML)
+        self.assertIn("/theme.js", HTML)
+
+    def test_declares_the_cochid_identity_without_legacy_runtimes(self):
+        self.assertIn("/assets/brands/cochid-mark.svg", HTML)
         self.assertIn('data-brand="cochid"', HTML)
         self.assertIn('data-theme="light"', HTML)
         self.assertNotIn("style.innovacionsantiago.cl/v9", HTML)
