@@ -51,9 +51,54 @@
       },
       {
         "@type": "Offer",
+        "name": "Cochid · Mapas",
+        "url": "https://mapas.cochid.cl/",
+        "description": "Atlas territorial para explorar capas, ciudades y redes de Chile.",
+        "price": "0",
+        "priceCurrency": "CLP",
+        "category": "Geospatial Data Platform"
+      },
+      {
+        "@type": "Offer",
+        "name": "Cochid · Transporte",
+        "url": "https://tpte.cochid.cl/",
+        "description": "Datos de movilidad y transporte público conectados con Datos y Mapas.",
+        "price": "0",
+        "priceCurrency": "CLP",
+        "category": "Transport Data Platform"
+      },
+      {
+        "@type": "Offer",
+        "name": "Cochid · Lex",
+        "url": "https://lex.cochid.cl/",
+        "description": "Búsqueda semántica y evidencia sobre leyes y reglamentos chilenos.",
+        "price": "0",
+        "priceCurrency": "CLP",
+        "category": "Legal Search"
+      },
+      {
+        "@type": "Offer",
+        "name": "Cochid · Congreso",
+        "url": "https://congreso.cochid.cl/",
+        "description": "Proyectos, votaciones, autores y actividad del Congreso Nacional.",
+        "price": "0",
+        "priceCurrency": "CLP",
+        "category": "Government Data"
+      },
+      {
+        "@type": "Offer",
+        "name": "Cochid · Elecciones",
+        "url": "https://elecciones.cochid.cl/",
+        "description": "Resultados, participación y lectura territorial de procesos electorales.",
+        "price": "0",
+        "priceCurrency": "CLP",
+        "category": "Election Data"
+      },
+      {
+        "@type": "Offer",
         "name": "Cochid · Scribe",
         "url": "https://scribe.cochid.cl/",
-        "description": "Escritura colaborativa con IA, claims verificables y bibliografía APA.",
+        "description": "Escritura colaborativa con evidencia, bibliografía y exportación de documentos.",
         "price": "0",
         "priceCurrency": "CLP",
         "category": "Writing Platform"
@@ -62,46 +107,10 @@
         "@type": "Offer",
         "name": "Cochid · Thesis",
         "url": "https://thesis.cochid.cl/",
-        "description": "Dashboard de investigación · SII biotech · evidence engine para tesis.",
+        "description": "Entorno de investigación para relacionar indicadores, empresas y evidencia.",
         "price": "0",
         "priceCurrency": "CLP",
         "category": "Research Dashboard"
-      },
-      {
-        "@type": "Offer",
-        "name": "Cochid · Tesis",
-        "url": "https://scribe.cochid.cl/thesis",
-        "description": "Ecosistema multi-usuario para escribir tesis con claims verificables, bibliografía APA y evidence linkeable.",
-        "price": "0",
-        "priceCurrency": "CLP",
-        "category": "Thesis Writing Platform"
-      },
-      {
-        "@type": "Offer",
-        "name": "Cochid · Lex",
-        "url": "https://lex.cochid.cl/",
-        "description": "RAG legal chileno con pgvector y búsqueda semántica.",
-        "price": "0",
-        "priceCurrency": "CLP",
-        "category": "Legal Search"
-      },
-      {
-        "@type": "Offer",
-        "name": "Cochid · Graphs",
-        "url": "https://graphs.cochid.cl/",
-        "description": "Chart-as-a-service con Plotly y permalinks reproducibles.",
-        "price": "0",
-        "priceCurrency": "CLP",
-        "category": "Visualization"
-      },
-      {
-        "@type": "Offer",
-        "name": "Cochid · Congreso",
-        "url": "https://congreso.cochid.cl/",
-        "description": "30 tablas del Congreso Nacional: proyectos, votaciones, autores.",
-        "price": "0",
-        "priceCurrency": "CLP",
-        "category": "Government Data"
       }
     ]
   }
@@ -335,65 +344,73 @@
     </a>
   </div>
 
-  <h2>Productos Cochid</h2>
-  <p class="h2-sub">Aplicaciones persistentes con login Authentik. Datos cruzados, datos privados, escritura colaborativa, investigación reproducible.</p>
+  <section id="productos" aria-labelledby="productos-titulo">
+  <h2 id="productos-titulo">Productos COCHID</h2>
+  <p class="h2-sub">Ocho puertas de entrada a un mismo ecosistema de datos, territorio, investigación y evidencia.</p>
   <div class="temas-grid">
-    <a href="https://datos.cochid.cl/" class="tema-card h-product u-url">
+    <a href="https://datos.cochid.cl/" class="tema-card h-product u-url" data-product-slug="datos">
       <span class="icon">🏛️</span>
       <h3 class="p-name">Datos</h3>
       <p class="desc p-summary">Plataforma de datos chilenos cruzados con trazabilidad completa.</p>
-      <data class="p-price" value="0">Acceso libre · API paga vía <span class="p-brand">indieweb.cl</span></data>
-      <span class="meta">live · 5 datasets · 7 temas</span>
+      <span class="meta">catálogo · API · linaje</span>
     </a>
-    <a href="https://scribe.cochid.cl/" class="tema-card h-product u-url">
-      <span class="icon">✍️</span>
-      <h3 class="p-name">Scribe</h3>
-      <p class="desc p-summary">Escritura colaborativa con IA · claims verificables · bibliografía APA · dictado por bloques · export PDF/DOCX.</p>
-      <data class="p-price" value="0">Gratis con SSO Cochid</data>
-      <span class="p-brand" hidden>Cochid</span>
-      <span class="meta">login · multi-user · Authentik</span>
+    <a href="https://mapas.cochid.cl/" class="tema-card h-product u-url" data-product-slug="mapas">
+      <span class="icon">⌖</span>
+      <h3 class="p-name">Mapas</h3>
+      <p class="desc p-summary">Atlas territorial para explorar capas, ciudades, cables, trenes y bicicleta.</p>
+      <span class="meta">territorio · capas · vistas</span>
     </a>
-    <a href="https://thesis.cochid.cl/" class="tema-card h-product u-url">
-      <span class="icon">🎓</span>
-      <h3 class="p-name">Thesis</h3>
-      <p class="desc p-summary">Dashboard de investigación con datos chilenos · SII biotech · indicadores agregados · evidence engine para tesis.</p>
-      <data class="p-price" value="0">Gratis con SSO Cochid</data>
-      <span class="p-brand" hidden>Cochid</span>
-      <span class="meta">login · clusters biotech · evidence engine</span>
+    <a href="https://tpte.cochid.cl/" class="tema-card h-product u-url" data-product-slug="transporte">
+      <span class="icon">T</span>
+      <h3 class="p-name">Transporte</h3>
+      <p class="desc p-summary">Datos de movilidad y transporte público conectados con Datos y Mapas.</p>
+      <span class="meta">movilidad · red · Santiago</span>
     </a>
-    <a href="https://scribe.cochid.cl/thesis" class="tema-card h-product u-url">
-      <span class="icon">📚</span>
-      <h3 class="p-name">Tesis</h3>
-      <p class="desc p-summary">Ecosistema de tesis con capítulos versionados · claims verificables · bibliografía APA · evidence dashboard linkeable · export Quarto/Pandoc PDF.</p>
-      <data class="p-price" value="0">Gratis con SSO Cochid</data>
-      <span class="p-brand" hidden>Cochid</span>
-      <span class="meta">multi-user · privacy default · chapters</span>
-    </a>
-    <a href="https://graphs.cochid.cl/" class="tema-card h-product u-url">
-      <span class="icon">📊</span>
-      <h3 class="p-name">Graphs</h3>
-      <p class="desc p-summary">Chart-as-a-service con Plotly · permalinks reproducibles · embebibles en cualquier site.</p>
-      <data class="p-price" value="0">Acceso libre</data>
-      <span class="p-brand" hidden>Cochid</span>
-      <span class="meta">live · Plotly · embebible</span>
-    </a>
-    <a href="https://lex.cochid.cl/" class="tema-card h-product u-url">
+    <a href="https://lex.cochid.cl/" class="tema-card h-product u-url" data-product-slug="lex">
       <span class="icon">⚖️</span>
       <h3 class="p-name">Lex</h3>
-      <p class="desc p-summary">RAG legal chileno con pgvector · búsqueda semántica sobre leyes y reglamentos.</p>
-      <data class="p-price" value="0">Acceso libre</data>
-      <span class="p-brand" hidden>Cochid</span>
-      <span class="meta">live · pgvector · semantic</span>
+      <p class="desc p-summary">Búsqueda semántica y evidencia sobre leyes y reglamentos chilenos.</p>
+      <span class="meta">legislación · búsqueda · evidencia</span>
     </a>
-    <a href="https://congreso.cochid.cl/" class="tema-card h-product u-url">
+    <a href="https://congreso.cochid.cl/" class="tema-card h-product u-url" data-product-slug="congreso">
       <span class="icon">🏛️</span>
       <h3 class="p-name">Congreso</h3>
-      <p class="desc p-summary">30 tablas absorbidas del Congreso Nacional · proyectos, votaciones, autores.</p>
-      <data class="p-price" value="0">Acceso libre</data>
-      <span class="p-brand" hidden>Cochid</span>
-      <span class="meta">live · ETL absorbido</span>
+      <p class="desc p-summary">Proyectos, votaciones, autores y actividad del Congreso Nacional.</p>
+      <span class="meta">proyectos · votaciones · autores</span>
+    </a>
+    <a href="https://elecciones.cochid.cl/" class="tema-card h-product u-url" data-product-slug="elecciones">
+      <span class="icon">E</span>
+      <h3 class="p-name">Elecciones</h3>
+      <p class="desc p-summary">Resultados, participación y lectura territorial de procesos electorales.</p>
+      <span class="meta">resultados · participación · territorio</span>
+    </a>
+    <a href="https://scribe.cochid.cl/" class="tema-card h-product u-url" data-product-slug="scribe">
+      <span class="icon">S</span>
+      <h3 class="p-name">Scribe</h3>
+      <p class="desc p-summary">Escritura colaborativa con evidencia, bibliografía y exportación de documentos.</p>
+      <span class="meta" data-feature-slug="scribe-thesis">incluye flujo de tesis · SSO</span>
+    </a>
+    <a href="https://thesis.cochid.cl/" class="tema-card h-product u-url" data-product-slug="thesis">
+      <span class="icon">T</span>
+      <h3 class="p-name">Thesis</h3>
+      <p class="desc p-summary">Entorno de investigación para relacionar indicadores, empresas y evidencia.</p>
+      <span class="meta">investigación · evidencia · SSO</span>
     </a>
   </div>
+  </section>
+
+  <section id="componentes" aria-labelledby="componentes-titulo">
+    <h2 id="componentes-titulo">Componentes de la plataforma</h2>
+    <p class="h2-sub">Servicios reutilizables que sostienen los productos y permiten publicar resultados verificables.</p>
+    <div class="temas-grid">
+      <a href="https://graphs.cochid.cl/" class="tema-card" data-component-slug="graphs">
+        <span class="icon">G</span>
+        <h3>Graphs</h3>
+        <p class="desc">Gráficos reproducibles, enlazables y embebibles para productos y clientes.</p>
+        <span class="meta">visualización · permalink · embed</span>
+      </a>
+    </div>
+  </section>
 
   <h2>Cómo se consume</h2>
   <p class="h2-sub">El sitio público en <a href="https://datos.cochid.cl" style="color:var(--cis-accent);font-weight:600">datos.cochid.cl</a> es libre para explorar y consultar. La API completa, descargas masivas y endpoints de bulk access se ofrecen como producto pago en <a href="https://indieweb.cl" style="color:var(--cis-accent);font-weight:600">indieweb.cl</a>.</p>
