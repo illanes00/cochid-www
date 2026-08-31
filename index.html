@@ -209,7 +209,8 @@
   .ccnav { background: var(--paper); border-bottom: 1px solid var(--line); position: sticky; top: 0; z-index: 50; }
   .ccnav-inner { max-width: 1100px; margin: 0 auto; padding: 0.625rem 1rem; display: flex; align-items: center; gap: 1rem; font-size: 0.875rem; }
   .ccnav .brand { display: flex; align-items: center; gap: 0.625rem; text-decoration: none; flex-shrink: 0; }
-  .ccnav .brand-lockup { display: block; height: 40px; width: 160px; }
+  .ccnav .brand-lockup { display: block; height: 48px; width: 192px; }
+  [data-theme="dark"] .ccnav .brand-lockup { filter: invert(1) hue-rotate(180deg); }
   .ccnav .links { align-items: center; display: flex; gap: 0.25rem; flex-grow: 1; flex-wrap: wrap; }
   .ccnav .links a, .ecosystem-menu summary { color: var(--muted); cursor: pointer; font: inherit; list-style: none; padding: 0.4rem 0.75rem; text-decoration: none; }
   .ecosystem-menu { position: relative; }
@@ -236,7 +237,7 @@
   }
   @media (max-width: 420px) {
     .ccnav-inner { gap: 0.5rem; }
-    .ccnav .brand-lockup { height: 32px; width: 128px; }
+    .ccnav .brand-lockup { height: 40px; width: 160px; }
     .ccnav .right { margin-left: auto; }
     .ccnav .login { padding-inline: 0.65rem; }
   }

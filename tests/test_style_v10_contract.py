@@ -78,6 +78,9 @@ class CochidMainStyleV10ContractTests(unittest.TestCase):
     def test_uses_the_canonical_lockup_and_grouped_ecosystem_navigation(self):
         self.assertIn("/assets/brands/cochid-lockup.svg", HTML)
         self.assertNotIn('class="brand-wordmark"', HTML)
+        self.assertIn("[data-theme=\"dark\"] .ccnav .brand-lockup", HTML)
+        self.assertIn("filter: invert(1) hue-rotate(180deg)", HTML)
+        self.assertIn("height: 48px; width: 192px", HTML)
         self.assertIn('<details class="ecosystem-menu">', HTML)
         self.assertIn('href="#que-es-cochid"', HTML)
         self.assertIn('href="#servicios"', HTML)
