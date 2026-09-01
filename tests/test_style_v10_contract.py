@@ -7,7 +7,7 @@ ROOT = Path(__file__).resolve().parents[1]
 HTML = (ROOT / "index.html").read_text(encoding="utf-8")
 KIT_HOST = "https://kit.innovacionsantiago.cl"
 CANONICAL_BASE = re.compile(re.escape(KIT_HOST) + r"/v10/[0-9a-f]{64}")
-CANDIDATE_DIGEST = "7bfd2f185fda94a4b44fe62530df1477a9ee6f64d9acc3f8bc4eb37c1c709c86"
+CANDIDATE_DIGEST = "dffe4d69846645c5ce8576c41e30070b27c4612d7316bd871b9baf2c291ca4fc"
 
 
 def _kit_bases():
@@ -18,7 +18,7 @@ class CochidMainStyleV10ContractTests(unittest.TestCase):
     def test_pins_the_published_candidate_with_shared_chrome(self):
         base = f"{KIT_HOST}/v10/{CANDIDATE_DIGEST}"
         self.assertGreaterEqual(HTML.count(base), 6)
-        self.assertIn('integrity="sha384-4gPYauhZAOlgKjBpo9G+sBfv3fJvQNtXhwS/gCvIPOA74Arw50JG3LZFr8mcxAPb"', HTML)
+        self.assertIn('integrity="sha384-ld/zDrAQJrBnicsN9GsAKfNCOwaOOu5vfOrU/nEaxB1XjHv46sart7RW4NkZxLRT"', HTML)
         self.assertIn('integrity="sha384-SfOYNfiltvNBhqAT+uSrMTrpQbSsiVqUJByllcrOkitokI9xKgSe2owoYOHCBXp5"', HTML)
         self.assertIn("chrome.js", HTML)
         self.assertNotIn("4cb4a4f28aeb26aa5b8c33c591c54a418c280db53be46a5d0d0cfd2c2c803bc4", HTML)
