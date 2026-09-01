@@ -7,7 +7,7 @@ ROOT = Path(__file__).resolve().parents[1]
 HTML = (ROOT / "index.html").read_text(encoding="utf-8")
 KIT_HOST = "https://kit.innovacionsantiago.cl"
 CANONICAL_BASE = re.compile(re.escape(KIT_HOST) + r"/v10/[0-9a-f]{64}")
-STABLE_DIGEST = "4cb4a4f28aeb26aa5b8c33c591c54a418c280db53be46a5d0d0cfd2c2c803bc4"
+CANDIDATE_DIGEST = "7bfd2f185fda94a4b44fe62530df1477a9ee6f64d9acc3f8bc4eb37c1c709c86"
 
 
 def _kit_bases():
@@ -15,13 +15,13 @@ def _kit_bases():
 
 
 class CochidMainStyleV10ContractTests(unittest.TestCase):
-    def test_pins_the_published_stable_digest_without_incompatible_chrome(self):
-        base = f"{KIT_HOST}/v10/{STABLE_DIGEST}"
-        self.assertEqual(5, HTML.count(base))
+    def test_pins_the_published_candidate_with_shared_chrome(self):
+        base = f"{KIT_HOST}/v10/{CANDIDATE_DIGEST}"
+        self.assertGreaterEqual(HTML.count(base), 6)
         self.assertIn('integrity="sha384-4gPYauhZAOlgKjBpo9G+sBfv3fJvQNtXhwS/gCvIPOA74Arw50JG3LZFr8mcxAPb"', HTML)
-        self.assertNotIn("c2c15cacc312f95345ab31bbb720bb0d197ccb668003990a2ba50fa2d914f68c", HTML)
-        self.assertNotIn("5303c30dbc9afc51586b1d4659e3072cd360882a5c15827eca350d9eb4f644ec", HTML)
-        self.assertNotIn("chrome.js", HTML)
+        self.assertIn('integrity="sha384-SfOYNfiltvNBhqAT+uSrMTrpQbSsiVqUJByllcrOkitokI9xKgSe2owoYOHCBXp5"', HTML)
+        self.assertIn("chrome.js", HTML)
+        self.assertNotIn("4cb4a4f28aeb26aa5b8c33c591c54a418c280db53be46a5d0d0cfd2c2c803bc4", HTML)
 
     def test_uses_a_single_canonical_v10_anchor(self):
         bases = _kit_bases()
@@ -41,8 +41,9 @@ class CochidMainStyleV10ContractTests(unittest.TestCase):
         self.assertIn("/style.css", HTML)
         self.assertIn("/theme.js", HTML)
 
-    def test_declares_the_cochid_identity_without_legacy_runtimes(self):
+    def test_declares_the_cochid_identity_and_circular_favicon(self):
         self.assertIn("/assets/brands/cochid-mark.svg", HTML)
+        self.assertIn("/assets/chrome/favicons/cochid.svg", HTML)
         self.assertIn('data-brand="cochid"', HTML)
         self.assertIn('data-theme="light"', HTML)
         self.assertNotIn("style.innovacionsantiago.cl/v9", HTML)
@@ -66,14 +67,30 @@ class CochidMainStyleV10ContractTests(unittest.TestCase):
         self.assertNotIn("border-left:", HTML)
 
     def test_theme_and_keyboard_contracts_are_explicit(self):
-        self.assertIn('localStorage.setItem("cis-style:theme"', HTML)
+        self.assertIn('data-theme-toggle', HTML)
         self.assertIn('aria-pressed="false"', HTML)
+        self.assertNotIn('id="themeToggle"', HTML)
+        self.assertNotIn('bindThemeToggle', HTML)
         self.assertIn('<a class="skip-link" href="#contenido">', HTML)
         self.assertIn('<main id="contenido"', HTML)
 
-    def test_exposes_the_existing_primary_navigation_on_mobile(self):
-        self.assertIn('<details class="mobile-nav">', HTML)
-        for label in ("Qué es COCHID", "Servicios", "Datos", "Mapas", "Transporte", "Lex", "Congreso", "Elecciones", "Scribe", "Thesis"):
+    def test_header_and_footer_use_the_shared_chrome_contract(self):
+        for selector in (
+            'class="gr-nav"',
+            'class="gr-nav__inner"',
+            'class="gr-nav__links"',
+            'class="gr-nav__toggle"',
+            'class="gr-nav__actions"',
+            'class="gr-footer"',
+            'class="gr-footer__top"',
+            'class="gr-footer__grid"',
+            'class="gr-footer__attrib"',
+        ):
+            self.assertIn(selector, HTML)
+        self.assertNotIn("ccnav", HTML)
+        self.assertNotIn("ccfooter", HTML)
+        self.assertNotIn("mobile-nav", HTML)
+        for label in ("Datos", "Qué es COCHID", "Ecosistema", "Servicios", "Metodología"):
             self.assertIn(f">{label}</a>", HTML)
 
     def test_uses_the_canonical_lockup_and_grouped_ecosystem_navigation(self):
@@ -82,14 +99,13 @@ class CochidMainStyleV10ContractTests(unittest.TestCase):
         self.assertNotIn("un proyecto de la Compañía de Innovación de Santiago", HTML)
         self.assertNotIn('"parentOrganization"', HTML)
         self.assertNotIn('class="brand-wordmark"', HTML)
-        self.assertIn("[data-theme=\"dark\"] .ccnav .brand-lockup", HTML)
-        self.assertIn("filter: invert(1) hue-rotate(180deg)", HTML)
-        self.assertIn("height: auto; width: 192px", HTML)
-        self.assertIn('<details class="ecosystem-menu">', HTML)
+        self.assertIn('class="cochid-brand-plate"', HTML)
+        self.assertIn("background: #fff", HTML)
+        self.assertIn("height: 40px", HTML)
         self.assertIn('href="#que-es-cochid"', HTML)
         self.assertIn('href="#servicios"', HTML)
         self.assertIn("Iniciar sesión</a>", HTML)
-        self.assertIn('id="themeToggle"', HTML)
+        self.assertNotIn("filter: invert", HTML)
 
     def test_contains_long_content_and_avoids_syllable_breaking(self):
         self.assertIn("overflow-wrap: anywhere", HTML)

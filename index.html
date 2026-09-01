@@ -11,7 +11,7 @@
   <meta property="og:url" content="https://cochid.cl/">
   <meta name="color-scheme" content="light dark">
   <link rel="canonical" href="https://cochid.cl/">
-  <link rel="icon" type="image/svg+xml" href="https://kit.innovacionsantiago.cl/v10/4cb4a4f28aeb26aa5b8c33c591c54a418c280db53be46a5d0d0cfd2c2c803bc4/assets/brands/cochid-mark.svg">
+  <link rel="icon" type="image/svg+xml" href="https://kit.innovacionsantiago.cl/v10/7bfd2f185fda94a4b44fe62530df1477a9ee6f64d9acc3f8bc4eb37c1c709c86/assets/chrome/favicons/cochid.svg">
 
   <!-- Indieweb: rel=me identity links + authorization endpoint -->
   <link rel="me" href="https://github.com/illanes00">
@@ -28,7 +28,7 @@
     "name": "COCHID",
     "alternateName": "Compañía Chilena de Inteligencia de Datos",
     "url": "https://cochid.cl",
-    "logo": "https://kit.innovacionsantiago.cl/v10/4cb4a4f28aeb26aa5b8c33c591c54a418c280db53be46a5d0d0cfd2c2c803bc4/assets/brands/cochid-mark.svg",
+    "logo": "https://kit.innovacionsantiago.cl/v10/7bfd2f185fda94a4b44fe62530df1477a9ee6f64d9acc3f8bc4eb37c1c709c86/assets/brands/cochid-mark.svg",
     "founder": {
       "@type": "Person",
       "name": "Martín Illanes",
@@ -111,18 +111,37 @@
   }
   </script>
 
-  <link rel="stylesheet" href="https://kit.innovacionsantiago.cl/v10/4cb4a4f28aeb26aa5b8c33c591c54a418c280db53be46a5d0d0cfd2c2c803bc4/style.css" integrity="sha384-4gPYauhZAOlgKjBpo9G+sBfv3fJvQNtXhwS/gCvIPOA74Arw50JG3LZFr8mcxAPb" crossorigin="anonymous">
-  <script src="https://kit.innovacionsantiago.cl/v10/4cb4a4f28aeb26aa5b8c33c591c54a418c280db53be46a5d0d0cfd2c2c803bc4/theme.js" integrity="sha384-4z/J3/xbpw17qJScwLAq3N2hW5F9+5M9by+yIDuu63LedHlPJq2cZE716lDAxL3c" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://kit.innovacionsantiago.cl/v10/7bfd2f185fda94a4b44fe62530df1477a9ee6f64d9acc3f8bc4eb37c1c709c86/style.css" integrity="sha384-4gPYauhZAOlgKjBpo9G+sBfv3fJvQNtXhwS/gCvIPOA74Arw50JG3LZFr8mcxAPb" crossorigin="anonymous">
+  <script src="https://kit.innovacionsantiago.cl/v10/7bfd2f185fda94a4b44fe62530df1477a9ee6f64d9acc3f8bc4eb37c1c709c86/theme.js" integrity="sha384-4z/J3/xbpw17qJScwLAq3N2hW5F9+5M9by+yIDuu63LedHlPJq2cZE716lDAxL3c" crossorigin="anonymous"></script>
+  <script defer src="https://kit.innovacionsantiago.cl/v10/7bfd2f185fda94a4b44fe62530df1477a9ee6f64d9acc3f8bc4eb37c1c709c86/chrome.js" integrity="sha384-SfOYNfiltvNBhqAT+uSrMTrpQbSsiVqUJByllcrOkitokI9xKgSe2owoYOHCBXp5" crossorigin="anonymous"></script>
 
   <style>
     :root { --bg: var(--paper); --muted: var(--ink-muted); --cis-accent: var(--accent); --shell-bg: var(--paper-raised); }
     html, body { max-width: 100%; overflow-x: clip; }
     body { background: var(--bg); color: var(--ink); font-family: "IBM Plex Sans", sans-serif; hyphens: none; }
-    body, main, section, .ccnav-inner, .ccfooter-inner, .temas-grid, .tema-card { min-width: 0; }
-    code, .ccfooter a { overflow-wrap: anywhere; }
+    body, main, section, .gr-nav__inner, .gr-footer__top, .temas-grid, .tema-card { min-width: 0; }
+    code, .gr-footer a { overflow-wrap: anywhere; }
     img, iframe, svg { max-width: 100%; }
     .skip-link { background: var(--paper); border: 2px solid var(--cis-accent); color: var(--ink); left: 1rem; padding: 0.65rem 1rem; position: fixed; top: -5rem; z-index: 100; }
     .skip-link:focus { top: 1rem; }
+
+    .gr-nav__inner, .gr-footer__top, .gr-footer__attrib-inner { max-width: 1100px; }
+    .cochid-brand-plate { align-items: center; background: #fff; display: inline-flex; padding: 4px 6px; }
+    .cochid-brand-plate img { display: block; height: 40px; max-width: none; width: auto; }
+    .gr-nav__links { justify-content: flex-end; }
+    .gr-footer { margin-top: 4rem; }
+    .gr-footer__brand .cochid-brand-plate img { height: 48px; }
+    @media (max-width: 760px) {
+      .gr-nav__inner { gap: 8px; grid-template-columns: minmax(0, 1fr) auto; }
+      .gr-nav__brand { grid-column: 1; grid-row: 1; }
+      .gr-nav__toggle { grid-column: 2; grid-row: 1; }
+      .gr-nav__actions { border-top: 1px solid var(--line); grid-column: 1 / -1; grid-row: 2; padding-top: 8px; width: 100%; }
+      .gr-nav__actions .gr-nav__cta { flex: 1 1 0; justify-content: center; }
+      .gr-nav__links { grid-row: 3; }
+    }
+    @media (max-width: 420px) {
+      .cochid-brand-plate img { height: 34px; }
+    }
 
     .hero { max-width: 1100px; margin: 0 auto; padding: 4rem 1rem 2rem; }
     .hero-kicker { font-family: var(--font-mono); font-size: 0.75rem; color: var(--cis-accent); letter-spacing: 0.12em; text-transform: uppercase; margin: 0 0 0.75rem; }
@@ -176,103 +195,27 @@
 <body class="cis-brand">
 <a class="skip-link" href="#contenido">Saltar al contenido</a>
 
-<style>
-  .ccnav { background: var(--paper); border-bottom: 1px solid var(--line); position: sticky; top: 0; z-index: 50; }
-  .ccnav-inner { max-width: 1100px; margin: 0 auto; padding: 0.625rem 1rem; display: flex; align-items: center; gap: 1rem; font-size: 0.875rem; }
-  .ccnav .brand { display: flex; align-items: center; gap: 0.625rem; text-decoration: none; flex-shrink: 0; }
-  .ccnav .brand-lockup { display: block; height: auto; width: 192px; }
-  [data-theme="dark"] .ccnav .brand-lockup { filter: invert(1) hue-rotate(180deg); }
-  .ccnav .links { align-items: center; display: flex; gap: 0.25rem; flex-grow: 1; flex-wrap: wrap; }
-  .ccnav .links a, .ecosystem-menu summary { color: var(--muted); cursor: pointer; font: inherit; list-style: none; padding: 0.4rem 0.75rem; text-decoration: none; }
-  .ecosystem-menu { position: relative; }
-  .ecosystem-menu summary::-webkit-details-marker { display: none; }
-  .ecosystem-menu summary::after { content: " +"; font-family: var(--font-mono); }
-  .ecosystem-menu[open] summary::after { content: " −"; }
-  .ecosystem-panel { background: var(--paper); border: 1px solid var(--line); display: grid; grid-template-columns: repeat(2, minmax(9rem, 1fr)); left: 0; min-width: 22rem; padding: 0.5rem; position: absolute; top: calc(100% + 0.5rem); }
-  .ecosystem-panel a { border-bottom: 1px solid var(--line); }
-  .ccnav .links a:hover { background: var(--shell-bg); color: var(--ink); }
-  .ccnav .right { display: flex; gap: 0.5rem; align-items: center; flex-shrink: 0; }
-  .ccnav .theme-btn { width: 32px; height: 32px; background: none; border: 0; cursor: pointer; color: var(--muted); display: inline-flex; align-items: center; justify-content: center; border-radius: 4px; }
-  .ccnav .theme-btn:hover { background: var(--shell-bg); color: var(--ink); }
-  .ccnav .login { padding: 0.4rem 0.85rem; border: 1px solid var(--cis-accent); color: var(--cis-accent); font-weight: 600; font-size: 0.75rem; text-decoration: none; border-radius: 4px; transition: all 120ms; }
-  .ccnav .login:hover { background: var(--cis-accent); color: #fff; }
-  .mobile-nav { display: none; }
-  @media (max-width: 800px) {
-    .ccnav-inner { flex-wrap: wrap; gap: 0.5rem; }
-    .ccnav .links { display: none; }
-    .mobile-nav { display: block; flex-basis: 100%; }
-    .mobile-nav summary { color: var(--cis-accent); cursor: pointer; font-family: var(--font-mono); font-size: 0.75rem; font-weight: 700; padding: 0.5rem 0; }
-    .mobile-nav-links { background: var(--paper); border: 1px solid var(--line); display: grid; gap: 0.25rem; grid-template-columns: repeat(2, minmax(0, 1fr)); margin-top: 0.25rem; padding: 0.5rem; }
-    .mobile-nav-links a { color: var(--ink); font-size: 0.8125rem; padding: 0.5rem; text-decoration: none; }
-    .mobile-nav-links a:hover { background: var(--paper-raised); }
-  }
-  @media (max-width: 420px) {
-    .ccnav-inner { gap: 0.5rem; }
-    .ccnav .brand-lockup { width: 160px; }
-    .ccnav .right { margin-left: auto; }
-    .ccnav .login { padding-inline: 0.65rem; }
-  }
-  .ccfooter { background: var(--paper); border-top: 1px solid var(--line); margin-top: 4rem; padding: 2rem 1rem; }
-  .ccfooter-inner { max-width: 1100px; margin: 0 auto; }
-  .ccfooter-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 2rem; font-size: 0.8125rem; margin-bottom: 1.5rem; }
-  .ccfooter h3 { font-size: 0.6875rem; text-transform: uppercase; letter-spacing: 0.08em; color: var(--ink); margin: 0 0 0.5rem; font-weight: 700; }
-  .ccfooter ul { margin: 0; padding: 0; list-style: none; color: var(--muted); }
-  .ccfooter li { padding: 0.2rem 0; }
-  .ccfooter a { color: var(--muted); text-decoration: none; }
-  .ccfooter a:hover { color: var(--cis-accent); }
-  .ccfooter-attribution { border-top: 1px solid var(--line); padding-top: 1rem; font-size: 0.75rem; color: var(--muted); }
-  .ccfooter-attribution strong { color: var(--ink); }
-  .ccfooter-attribution a { color: var(--cis-accent); text-decoration: underline; text-underline-offset: 0.15em; }
-  @media (max-width: 700px) { .ccfooter-grid { gap: 1.25rem; grid-template-columns: repeat(2, minmax(0, 1fr)); } }
-  @media (max-width: 380px) { .ccfooter-grid { grid-template-columns: minmax(0, 1fr); } }
-</style>
-
-<header class="site-header">
-<nav class="ccnav">
-  <div class="ccnav-inner">
-    <a href="/" class="brand">
-      <img class="brand-lockup" src="https://kit.innovacionsantiago.cl/v10/4cb4a4f28aeb26aa5b8c33c591c54a418c280db53be46a5d0d0cfd2c2c803bc4/assets/namebrands/compania-chilena-inteligencia-datos-lockup.svg" alt="Compañía Chilena de Inteligencia de Datos" width="400" height="120">
+<header class="gr-nav">
+  <div class="gr-nav__inner">
+    <a href="/" class="gr-nav__brand cochid-brand-plate" aria-label="COCHID, inicio">
+      <img src="https://kit.innovacionsantiago.cl/v10/7bfd2f185fda94a4b44fe62530df1477a9ee6f64d9acc3f8bc4eb37c1c709c86/assets/namebrands/compania-chilena-inteligencia-datos-lockup.svg" alt="Compañía Chilena de Inteligencia de Datos" width="720" height="120">
     </a>
-    <div class="links">
-      <a href="https://datos.cochid.cl/"><strong>Datos</strong></a>
-      <a href="#que-es-cochid">Qué es COCHID</a>
-      <details class="ecosystem-menu">
-        <summary>Ecosistema</summary>
-        <div class="ecosystem-panel">
-          <a href="https://mapas.cochid.cl/">Mapas</a>
-          <a href="https://tpte.cochid.cl/">Transporte</a>
-          <a href="https://lex.cochid.cl/">Lex</a>
-          <a href="https://congreso.cochid.cl/">Congreso</a>
-          <a href="https://elecciones.cochid.cl/">Elecciones</a>
-          <a href="https://scribe.cochid.cl/">Scribe</a>
-          <a href="https://thesis.cochid.cl/">Thesis</a>
-        </div>
-      </details>
-      <a href="#servicios">Servicios</a>
-      <a href="https://datos.cochid.cl/metodologia">Metodología</a>
-    </div>
-    <div class="right">
-      <button class="theme-btn" id="themeToggle" type="button" title="Usar modo oscuro" aria-label="Usar modo oscuro" aria-pressed="false">☾</button>
-      <a class="login" href="https://auth.innovacionsantiago.cl/?next=https%3A%2F%2Fcochid.cl%2F">Iniciar sesión</a>
-    </div>
-    <details class="mobile-nav">
-      <summary>Navegación</summary>
-      <div class="mobile-nav-links">
-        <a href="#que-es-cochid">Qué es COCHID</a>
-        <a href="#servicios">Servicios</a>
-        <a href="https://datos.cochid.cl/">Datos</a>
-        <a href="https://mapas.cochid.cl/">Mapas</a>
-        <a href="https://tpte.cochid.cl/">Transporte</a>
-        <a href="https://lex.cochid.cl/">Lex</a>
-        <a href="https://congreso.cochid.cl/">Congreso</a>
-        <a href="https://elecciones.cochid.cl/">Elecciones</a>
-        <a href="https://scribe.cochid.cl/">Scribe</a>
-        <a href="https://thesis.cochid.cl/">Thesis</a>
-        <a href="https://datos.cochid.cl/metodologia">Metodología</a>
+    <button class="gr-nav__toggle" type="button" aria-label="Abrir menú" aria-expanded="false"><span></span><span></span><span></span></button>
+    <nav class="gr-nav__links" aria-label="Navegación principal">
+      <div class="gr-nav__group">
+        <a class="gr-nav__link is-active" href="https://datos.cochid.cl/">Datos</a>
+        <a class="gr-nav__link" href="#que-es-cochid">Qué es COCHID</a>
+        <a class="gr-nav__link" href="#productos">Ecosistema</a>
+        <a class="gr-nav__link" href="#servicios">Servicios</a>
+        <a class="gr-nav__link" href="https://datos.cochid.cl/metodologia">Metodología</a>
       </div>
-    </details>
+    </nav>
+    <div class="gr-nav__actions">
+      <button class="gr-nav__theme" type="button" data-theme-toggle aria-label="Cambiar tema" aria-pressed="false"><span class="icon-sun" aria-hidden="true">☼</span><span class="icon-moon" aria-hidden="true">◐</span></button>
+      <a class="gr-nav__cta" href="https://auth.innovacionsantiago.cl/if/flow/cis-primary-auth/">Iniciar sesión</a>
+    </div>
   </div>
-</nav>
+</header>
 
 <section class="hero">
   <p class="hero-kicker">COCHID SpA · Compañía Chilena de Inteligencia de Datos</p>
@@ -284,7 +227,6 @@
     <a href="#productos" class="btn-secondary">Ver productos</a>
   </div>
 </section>
-</header>
 
 <main id="contenido" tabindex="-1">
   <section class="primary-product" aria-labelledby="producto-principal-titulo">
@@ -428,11 +370,14 @@
   </div>
 </main>
 
-<footer class="ccfooter">
-  <div class="ccfooter-inner">
-    <div class="ccfooter-grid">
-      <div>
-        <h3>Datos</h3>
+<footer class="gr-footer">
+  <div class="gr-footer__top">
+    <div class="gr-footer__brand">
+      <span class="cochid-brand-plate"><img src="https://kit.innovacionsantiago.cl/v10/7bfd2f185fda94a4b44fe62530df1477a9ee6f64d9acc3f8bc4eb37c1c709c86/assets/namebrands/compania-chilena-inteligencia-datos-lockup.svg" alt="Compañía Chilena de Inteligencia de Datos" width="720" height="120"></span>
+    </div>
+    <div class="gr-footer__grid">
+      <section class="gr-footer__col">
+        <h4>Datos</h4>
         <ul>
           <li><a href="https://datos.cochid.cl/catalogo">Catálogo</a></li>
           <li><a href="https://datos.cochid.cl/temas">Temas</a></li>
@@ -440,27 +385,27 @@
           <li><a href="https://datos.cochid.cl/comparar">Comparar</a></li>
           <li><a href="https://datos.cochid.cl/centros-estudio">Political Compass</a></li>
         </ul>
-      </div>
-      <div>
-        <h3>Trazabilidad</h3>
+      </section>
+      <section class="gr-footer__col">
+        <h4>Trazabilidad</h4>
         <ul>
           <li><a href="https://datos.cochid.cl/metodologia">Metodología</a></li>
           <li><a href="https://datos.cochid.cl/lineage">Lineage</a></li>
           <li><a href="https://datos.cochid.cl/calidad">Calidad</a></li>
           <li><a href="https://datos.cochid.cl/referencia">Referencia</a></li>
         </ul>
-      </div>
-      <div>
-        <h3>Plataforma</h3>
+      </section>
+      <section class="gr-footer__col">
+        <h4>Plataforma</h4>
         <ul>
           <li><a href="https://datos.cochid.cl/api/docs">Documentación de la API</a></li>
           <li><a href="https://style.cochid.cl/">Guía de estilo</a></li>
           <li><a href="https://innovacionsantiago.cl/contacto">Contratar datos y API</a></li>
           <li><a href="https://datos.cochid.cl/api/health/deep">Estado de la plataforma</a></li>
         </ul>
-      </div>
-      <div>
-        <h3>Sobre</h3>
+      </section>
+      <section class="gr-footer__col">
+        <h4>Sobre</h4>
         <ul>
           <li><a href="https://datos.cochid.cl/quienes-somos">Quiénes somos</a></li>
           <li><a href="https://datos.cochid.cl/faq">FAQ</a></li>
@@ -468,37 +413,17 @@
           <li><a href="https://innovacionsantiago.cl">CIS</a></li>
           <li><a href="https://illanes00.cl">Martín Illanes</a></li>
         </ul>
-      </div>
+      </section>
     </div>
-    <div class="ccfooter-attribution">
+  </div>
+  <div class="gr-footer__attrib">
+    <div class="gr-footer__attrib-inner gr-footer__attrib-inner--line">
       <strong>COCHID</strong> · Compañía Chilena de Inteligencia de Datos SpA (RUT 78.374.391-4) ·
       operada por <a href="https://innovacionsantiago.cl">Compañía de Innovación de Santiago SpA</a> (CIS, RUT 78.384.591-1)
       bajo licencia. Los servicios comerciales son contratados y facturados por CIS.
     </div>
   </div>
+  <div class="gr-footer__base"><div class="gr-footer__base-inner"><span>COCHID · Datos públicos con trazabilidad.</span><span class="gr-footer__sites">cochid.cl</span></div></div>
 </footer>
-
-<script>
-(function bindThemeToggle() {
-  const toggle = document.getElementById("themeToggle");
-  if (!toggle) return;
-
-  function sync(theme) {
-    const isDark = theme === "dark";
-    toggle.setAttribute("aria-pressed", String(isDark));
-    toggle.setAttribute("aria-label", isDark ? "Usar modo claro" : "Usar modo oscuro");
-    toggle.setAttribute("title", isDark ? "Usar modo claro" : "Usar modo oscuro");
-    toggle.textContent = isDark ? "☼" : "☾";
-  }
-
-  sync(document.documentElement.dataset.theme || "light");
-  toggle.addEventListener("click", function () {
-    const next = document.documentElement.dataset.theme === "dark" ? "light" : "dark";
-    document.documentElement.dataset.theme = next;
-    try { localStorage.setItem("cis-style:theme", next); } catch {}
-    sync(next);
-  });
-})();
-</script>
 </body>
 </html>
