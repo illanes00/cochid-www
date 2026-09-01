@@ -4,12 +4,13 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <title>COCHID · Compañía Chilena de Inteligencia de Datos</title>
-  <meta name="description" content="COCHID organiza datos públicos de Chile en productos, mapas, herramientas de investigación y APIs trazables. Operación técnica y servicios comerciales a cargo de CIS.">
-  <meta property="og:title" content="COCHID · Datos chilenos abiertos">
-  <meta property="og:description" content="Ecosistema de datos públicos, mapas, investigación y APIs trazables para comprender Chile.">
+  <meta name="description" content="COCHID es la Compañía Chilena de Inteligencia de Datos. Desarrolla infraestructura, productos e investigación para comprender Chile con evidencia pública.">
+  <meta property="og:title" content="COCHID · Compañía Chilena de Inteligencia de Datos">
+  <meta property="og:description" content="Empresa chilena de infraestructura de datos e investigación. COCHID Datos es su plataforma pública principal.">
   <meta property="og:type" content="website">
-  <meta property="og:url" content="https://cochid.cl">
+  <meta property="og:url" content="https://cochid.cl/">
   <meta name="color-scheme" content="light dark">
+  <link rel="canonical" href="https://cochid.cl/">
   <link rel="icon" type="image/svg+xml" href="https://kit.innovacionsantiago.cl/v10/4cb4a4f28aeb26aa5b8c33c591c54a418c280db53be46a5d0d0cfd2c2c803bc4/assets/brands/cochid-mark.svg">
 
   <!-- Indieweb: rel=me identity links + authorization endpoint -->
@@ -118,7 +119,7 @@
     html, body { max-width: 100%; overflow-x: clip; }
     body { background: var(--bg); color: var(--ink); font-family: "IBM Plex Sans", sans-serif; hyphens: none; }
     body, main, section, .ccnav-inner, .ccfooter-inner, .temas-grid, .tema-card { min-width: 0; }
-    code, .ccfooter a, .viz-cta a { overflow-wrap: anywhere; }
+    code, .ccfooter a { overflow-wrap: anywhere; }
     img, iframe, svg { max-width: 100%; }
     .skip-link { background: var(--paper); border: 2px solid var(--cis-accent); color: var(--ink); left: 1rem; padding: 0.65rem 1rem; position: fixed; top: -5rem; z-index: 100; }
     .skip-link:focus { top: 1rem; }
@@ -134,25 +135,6 @@
     .btn-primary { background: #1d4ed8; border-color: #1d4ed8; color: #fff; }
     .btn-secondary { background: transparent; color: var(--cis-accent); }
 
-    .stats { max-width: 1100px; margin: 1.5rem auto 0; padding: 0 1rem; display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 0.75rem; }
-    @media (max-width: 700px) { .stats { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
-    .stat { background: var(--paper); border: 1px solid var(--line); padding: 1rem; }
-    .stat .num { font-size: 2rem; font-weight: 800; color: var(--cis-accent); font-family: var(--font-mono); line-height: 1; margin-bottom: 0.25rem; }
-    .stat .label { font-size: 0.8125rem; color: var(--muted); }
-    .data-meta { color: var(--muted); font-family: var(--font-mono); font-size: 0.7rem; line-height: 1.5; margin: 0.75rem 0 0; }
-    .data-meta a { color: var(--cis-accent); }
-    .theme-list { border-top: 1px solid var(--line); display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); }
-    .theme-item { border-bottom: 1px solid var(--line); color: inherit; display: grid; gap: 0.25rem; grid-template-columns: minmax(0, 1fr) auto; padding: 1rem 0; text-decoration: none; }
-    .theme-item:nth-child(odd) { padding-right: 1rem; }
-    .theme-item:nth-child(even) { padding-left: 1rem; }
-    .theme-item strong { font-size: 0.9375rem; }
-    .theme-item p { color: var(--muted); font-size: 0.8125rem; grid-column: 1 / -1; line-height: 1.45; margin: 0; }
-    .theme-item span { color: var(--muted); font-family: var(--font-mono); font-size: 0.6875rem; }
-    @media (max-width: 700px) {
-      .theme-list { grid-template-columns: minmax(0, 1fr); }
-      .theme-item:nth-child(odd), .theme-item:nth-child(even) { padding-inline: 0; }
-    }
-
     main { max-width: 1100px; margin: 0 auto; padding: 0 1rem 4rem; }
     h2 { font-weight: 700; font-size: 1.5rem; margin: 4rem 0 0.5rem; letter-spacing: -0.01em; }
     .h2-sub { color: var(--muted); margin: 0 0 1.5rem; font-size: 0.9375rem; }
@@ -162,25 +144,19 @@
     .explain-item p { color: var(--muted); font-size: 0.875rem; line-height: 1.55; margin: 0; }
     @media (max-width: 700px) { .explain-grid { grid-template-columns: minmax(0, 1fr); } }
 
-    .viz-frame { background: var(--paper); border: 1px solid var(--line); padding: 1rem; margin: 1rem 0 2rem; min-width: 0; overflow: hidden; }
-    .viz-frame iframe { width: 100%; border: 0; display: block; }
-    .viz-cta { font-size: 0.875rem; color: var(--muted); margin-top: 0.75rem; text-align: right; }
-    .viz-cta a { color: var(--cis-accent); text-decoration: none; font-weight: 600; }
-    .viz-cta a:hover { text-decoration: underline; }
-    .budget-item { min-width: 0; }
-    .budget-row { align-items: center; appearance: none; background: transparent; border: 0; color: inherit; cursor: pointer; display: grid; font: inherit; font-size: 0.875rem; gap: 0.75rem; grid-template-columns: minmax(8rem, 12.5rem) minmax(4rem, 1fr) 5rem; min-width: 0; padding: 0.35rem; text-align: left; width: 100%; }
-    .budget-row:hover { background: var(--paper-raised); }
-    .budget-row:focus-visible { outline: 2px solid var(--cis-accent); outline-offset: 2px; }
-    .budget-label { color: var(--ink); font-weight: 600; min-width: 0; }
-    .budget-bar { background: var(--shell-bg); border: 1px solid var(--line); height: 24px; min-width: 0; position: relative; }
-    .budget-value { color: var(--cis-accent); font-family: var(--font-mono); font-weight: 700; text-align: right; }
-    .budget-details { color: var(--muted); font-family: var(--font-mono); font-size: 0.72rem; padding: 0.25rem 0.35rem 0.65rem; }
     @media (max-width: 520px) {
-      .budget-row { gap: 0.35rem 0.75rem; grid-template-columns: minmax(0, 1fr) auto; }
-      .budget-bar { grid-column: 1 / -1; grid-row: 2; }
       .hero { padding-top: 2.5rem; }
-      .stats { grid-template-columns: minmax(0, 1fr); }
     }
+
+    .primary-product { background: var(--paper); border: 1px solid var(--line); display: grid; gap: 1.5rem; grid-template-columns: minmax(0, 1.4fr) minmax(16rem, 0.8fr); margin: 1.5rem 0 0; padding: clamp(1.25rem, 3vw, 2rem); }
+    .primary-product .eyebrow { color: var(--cis-accent); font-family: var(--font-mono); font-size: 0.72rem; font-weight: 700; letter-spacing: 0.1em; margin: 0 0 0.75rem; text-transform: uppercase; }
+    .primary-product h2 { font-size: clamp(1.75rem, 4vw, 2.5rem); margin: 0 0 0.75rem; }
+    .primary-product p { color: var(--muted); line-height: 1.6; margin: 0; max-width: 42rem; }
+    .primary-links { border-top: 1px solid var(--line); display: grid; }
+    .primary-links a { align-items: center; color: var(--ink); display: flex; font-weight: 600; justify-content: space-between; padding: 0.8rem 0; text-decoration: none; }
+    .primary-links a + a { border-top: 1px solid var(--line); }
+    .primary-links a::after { color: var(--cis-accent); content: "→"; }
+    @media (max-width: 700px) { .primary-product { grid-template-columns: minmax(0, 1fr); } }
 
     .temas-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 0.75rem; }
     .tema-card { background: var(--paper); border: 1px solid var(--line); padding: 1.25rem; text-decoration: none; color: inherit; transition: border-color 120ms, transform 120ms; display: flex; flex-direction: column; gap: 0.5rem; }
@@ -189,6 +165,7 @@
     .tema-card h3 { font-size: 1rem; font-weight: 700; margin: 0; }
     .tema-card .desc { font-size: 0.8125rem; color: var(--muted); flex-grow: 1; line-height: 1.45; }
     .tema-card .meta { font-family: var(--font-mono); font-size: 0.7rem; color: var(--muted); border-top: 1px solid var(--line); padding-top: 0.5rem; margin-top: 0.25rem; }
+    .tema-card[data-product-slug="datos"] { border-color: var(--cis-accent); }
 
     .who { background: var(--paper); border: 1px solid var(--line); padding: 1.5rem; margin-top: 3rem; font-size: 0.875rem; color: var(--muted); line-height: 1.6; }
     .who strong { color: var(--ink); }
@@ -257,11 +234,11 @@
       <img class="brand-lockup" src="https://kit.innovacionsantiago.cl/v10/4cb4a4f28aeb26aa5b8c33c591c54a418c280db53be46a5d0d0cfd2c2c803bc4/assets/namebrands/compania-chilena-inteligencia-datos-lockup.svg" alt="Compañía Chilena de Inteligencia de Datos" width="400" height="120">
     </a>
     <div class="links">
+      <a href="https://datos.cochid.cl/"><strong>Datos</strong></a>
       <a href="#que-es-cochid">Qué es COCHID</a>
       <details class="ecosystem-menu">
         <summary>Ecosistema</summary>
         <div class="ecosystem-panel">
-          <a href="https://datos.cochid.cl/">Datos</a>
           <a href="https://mapas.cochid.cl/">Mapas</a>
           <a href="https://tpte.cochid.cl/">Transporte</a>
           <a href="https://lex.cochid.cl/">Lex</a>
@@ -298,41 +275,39 @@
 </nav>
 
 <section class="hero">
-  <p class="hero-kicker">COCHID · Ecosistema de inteligencia de datos</p>
-  <h1>Datos públicos para <em>comprender Chile</em> y tomar mejores decisiones.</h1>
-  <p class="lead">COCHID conecta fuentes oficiales, territorio, investigación y herramientas de publicación. Permite explorar la evidencia, seguir su origen y convertirla en análisis, productos digitales e integraciones.</p>
+  <p class="hero-kicker">COCHID SpA · Compañía Chilena de Inteligencia de Datos</p>
+  <h1>Infraestructura de datos para <em>comprender Chile</em>.</h1>
+  <p class="lead">COCHID desarrolla plataformas, investigación y productos que conectan fuentes públicas, territorio y evidencia. Nuestra plataforma principal es COCHID Datos.</p>
   <div class="hero-cta">
-    <a href="#productos" class="btn-primary">Conocer el ecosistema</a>
-    <a href="https://datos.cochid.cl" class="btn-secondary">Explorar los datos</a>
-    <a href="#servicios" class="btn-secondary">Servicios para organizaciones</a>
+    <a href="https://datos.cochid.cl/" class="btn-primary">Abrir COCHID Datos</a>
+    <a href="#que-es-cochid" class="btn-secondary">Conocer la compañía</a>
+    <a href="#productos" class="btn-secondary">Ver productos</a>
   </div>
-</section>
-
-<section class="stats" aria-label="Estado del catálogo COCHID Datos">
-  <article class="stat" data-contract-resource="platform_health" data-source="https://datos.cochid.cl/api/health/deep" data-retrieved-at="" data-freshness-status="loading">
-    <div class="num" id="datasets-count" aria-live="polite">…</div>
-    <div class="label">datasets registrados</div>
-  </article>
-  <article class="stat" data-contract-resource="themes" data-source="https://datos.cochid.cl/api/temas/" data-retrieved-at="" data-freshness-status="loading">
-    <div class="num" id="themes-count" aria-live="polite">…</div>
-    <div class="label">temas en el explorador</div>
-  </article>
-  <article class="stat">
-    <div class="num" id="ingestion-status" aria-live="polite">…</div>
-    <div class="label">última ingesta registrada</div>
-  </article>
-  <article class="stat">
-    <div class="num" id="platform-status" aria-live="polite">…</div>
-    <div class="label">estado de la plataforma</div>
-  </article>
-  <p class="data-meta" id="platform-data-meta">Fuente: <a href="https://datos.cochid.cl/api/health/deep">COCHID Datos</a> · recuperando corte actual…</p>
 </section>
 </header>
 
 <main id="contenido" tabindex="-1">
+  <section class="primary-product" aria-labelledby="producto-principal-titulo">
+    <div>
+      <p class="eyebrow">Producto principal</p>
+      <h2 id="producto-principal-titulo">COCHID Datos</h2>
+      <p>El portal público reúne el catálogo, los indicadores y las series de tiempo. Permite comparar períodos, explorar presupuesto, abrir mapas y revisar la fuente, calidad y linaje de cada conjunto.</p>
+      <div class="hero-cta">
+        <a href="https://datos.cochid.cl/" class="btn-primary">Explorar la plataforma</a>
+        <a href="https://datos.cochid.cl/metodologia" class="btn-secondary">Cómo trabajamos los datos</a>
+      </div>
+    </div>
+    <nav class="primary-links" aria-label="Entradas principales de COCHID Datos">
+      <a href="https://datos.cochid.cl/catalogo">Buscar datasets</a>
+      <a href="https://datos.cochid.cl/presupuesto">Comparar presupuestos</a>
+      <a href="https://datos.cochid.cl/explorar">Explorar indicadores y series</a>
+      <a href="https://mapas.cochid.cl/">Abrir mapas</a>
+    </nav>
+  </section>
+
   <section id="que-es-cochid" aria-labelledby="que-es-cochid-titulo">
     <h2 id="que-es-cochid-titulo">Qué es COCHID</h2>
-    <p class="h2-sub">Una infraestructura común para que los datos públicos se puedan encontrar, relacionar, verificar y volver a utilizar.</p>
+    <p class="h2-sub">Una compañía chilena que construye infraestructura común para encontrar, relacionar, verificar y reutilizar datos públicos.</p>
     <div class="explain-grid">
       <article class="explain-item">
         <h3>Integra</h3>
@@ -349,36 +324,15 @@
     </div>
   </section>
 
-  <h2>Presupuesto público de Chile 2024</h2>
-  <p class="h2-sub">Gasto corriente del gobierno general, año 2024, por función (clasificación COFOG). Fuente: DIPRES · construido en Cochid Datos.</p>
-  <div class="viz-frame" data-contract-resource="budget_composition" data-source="https://datos.cochid.cl/api/cofog/composition?year=2024" data-retrieved-at="" data-freshness-status="loading">
-    <div id="presupuesto-bars" style="min-height:380px;display:flex;flex-direction:column;gap:0.5rem;padding:1rem 0">
-      <div style="color:var(--muted);text-align:center;padding:2rem 0">cargando datos DIPRES…</div>
-    </div>
-    <p class="data-meta" id="budget-data-meta">Fuente: DIPRES vía COCHID Datos · período observado: 2024 · recuperando datos…</p>
-    <div class="viz-cta"><a href="https://datos.cochid.cl/tema/presupuesto">Ver presupuesto completo (15 años · series · COFOG drill-down) →</a></div>
-  </div>
-
-  <section id="areas" aria-labelledby="areas-titulo">
-    <h2 id="areas-titulo">Áreas de datos</h2>
-    <p class="h2-sub">Directorio generado desde el contrato público de COCHID Datos. Cada área lleva al detalle de sus fuentes e indicadores.</p>
-    <div class="theme-list" id="theme-list" aria-live="polite">
-      <a class="theme-item" href="https://datos.cochid.cl/temas">
-        <strong>Explorar todos los temas</strong>
-        <span>cargando directorio…</span>
-      </a>
-    </div>
-  </section>
-
   <section id="productos" aria-labelledby="productos-titulo">
   <h2 id="productos-titulo">Productos COCHID</h2>
-  <p class="h2-sub">Ocho puertas de entrada a un mismo ecosistema de datos, territorio, investigación y evidencia.</p>
+  <p class="h2-sub">Datos es la plataforma principal. Los demás productos aplican la misma infraestructura a territorio, movilidad, legislación, democracia, escritura e investigación.</p>
   <div class="temas-grid">
     <a href="https://datos.cochid.cl/" class="tema-card h-product u-url" data-product-slug="datos">
       <span class="icon">🏛️</span>
       <h3 class="p-name">Datos</h3>
-      <p class="desc p-summary">Plataforma de datos chilenos cruzados con trazabilidad completa.</p>
-      <span class="meta">catálogo · API · linaje</span>
+      <p class="desc p-summary">La plataforma pública principal para buscar, comparar y conectar datos chilenos con trazabilidad completa.</p>
+      <span class="meta">producto principal · catálogo · API · linaje</span>
     </a>
     <a href="https://mapas.cochid.cl/" class="tema-card h-product u-url" data-product-slug="mapas">
       <span class="icon">⌖</span>
@@ -413,8 +367,8 @@
     <a href="https://scribe.cochid.cl/" class="tema-card h-product u-url" data-product-slug="scribe">
       <span class="icon">S</span>
       <h3 class="p-name">Scribe</h3>
-      <p class="desc p-summary">Escritura colaborativa con evidencia, bibliografía y exportación de documentos.</p>
-      <span class="meta" data-feature-slug="scribe-thesis">incluye flujo de tesis · SSO</span>
+      <p class="desc p-summary">Escritura colaborativa con evidencia, bibliografía y exportación de documentos. Requiere una cuenta.</p>
+      <span class="meta" data-feature-slug="scribe-thesis">incluye flujo de tesis · acceso con cuenta</span>
     </a>
     <a href="https://thesis.cochid.cl/" class="tema-card h-product u-url" data-product-slug="thesis">
       <span class="icon">T</span>
@@ -544,168 +498,6 @@
     try { localStorage.setItem("cis-style:theme", next); } catch {}
     sync(next);
   });
-})();
-
-(async function loadPlatformSummary() {
-  const healthCard = document.querySelector('[data-contract-resource="platform_health"]');
-  const themesCard = document.querySelector('[data-contract-resource="themes"]');
-  const datasetsCount = document.getElementById('datasets-count');
-  const themesCount = document.getElementById('themes-count');
-  const ingestionStatus = document.getElementById('ingestion-status');
-  const platformStatus = document.getElementById('platform-status');
-  const meta = document.getElementById('platform-data-meta');
-  const themeList = document.getElementById('theme-list');
-  const retrievedAt = new Date();
-
-  function stamp(target, status) {
-    target.dataset.retrievedAt = retrievedAt.toISOString();
-    target.dataset.freshnessStatus = status;
-  }
-
-  function parseProducerDate(value) {
-    if (typeof value !== 'string') return null;
-    const normalized = value.replace(' ', 'T').replace(/([+-]\d{2})$/, '$1:00');
-    const parsed = new Date(normalized);
-    return Number.isNaN(parsed.getTime()) ? null : parsed;
-  }
-
-  try {
-    const [healthResponse, themesResponse] = await Promise.all([
-      fetch('https://datos.cochid.cl/api/health/deep'),
-      fetch('https://datos.cochid.cl/api/temas/'),
-    ]);
-    if (!healthResponse.ok || !themesResponse.ok) throw new Error('respuesta no disponible');
-
-    const health = await healthResponse.json();
-    const themes = await themesResponse.json();
-    if (
-      health.service !== 'cochid-datos' ||
-      typeof health.db_ok !== 'boolean' ||
-      !Number.isFinite(Number(health.datasets_registered)) ||
-      !health.last_ingestion ||
-      typeof health.last_ingestion.started_at !== 'string' ||
-      !Array.isArray(themes) ||
-      themes.some(theme => !theme.slug || !theme.name || !theme.description || !Array.isArray(theme.featured_indicators))
-    ) throw new Error('respuesta fuera de contrato');
-
-    const observedAt = parseProducerDate(health.last_ingestion.started_at);
-    const ageSeconds = observedAt ? (retrievedAt.getTime() - observedAt.getTime()) / 1000 : Infinity;
-    const freshness = ageSeconds <= 172800 ? 'fresh' : 'delayed';
-    stamp(healthCard, freshness);
-    stamp(themesCard, 'fresh');
-    datasetsCount.textContent = new Intl.NumberFormat('es-CL').format(Number(health.datasets_registered));
-    themesCount.textContent = new Intl.NumberFormat('es-CL').format(themes.length);
-    ingestionStatus.textContent = observedAt
-      ? new Intl.DateTimeFormat('es-CL', { day: '2-digit', month: 'short', timeZone: 'America/Santiago' }).format(observedAt)
-      : 's/d';
-    platformStatus.textContent = health.status === 'ok' && health.db_ok ? 'operativa' : 'degradada';
-    meta.textContent = `Fuente: COCHID Datos · ingesta observada ${health.last_ingestion.started_at} · recuperado ${retrievedAt.toISOString()} · ${freshness === 'fresh' ? 'actual' : 'con rezago'}. El total corresponde al catálogo registrado, no solo a datasets con filas.`;
-    themeList.replaceChildren();
-    themes.forEach(theme => {
-      const link = document.createElement('a');
-      link.className = 'theme-item';
-      link.href = `https://datos.cochid.cl/tema/${encodeURIComponent(theme.slug)}`;
-      const name = document.createElement('strong');
-      name.textContent = theme.name;
-      const count = document.createElement('span');
-      count.textContent = `${theme.featured_indicators.length} indicadores destacados`;
-      const description = document.createElement('p');
-      description.textContent = theme.description;
-      link.append(name, count, description);
-      themeList.append(link);
-    });
-  } catch (error) {
-    stamp(healthCard, 'unavailable');
-    stamp(themesCard, 'unavailable');
-    datasetsCount.textContent = 's/d';
-    themesCount.textContent = 's/d';
-    ingestionStatus.textContent = 's/d';
-    platformStatus.textContent = 'sin señal';
-    meta.textContent = `Fuente: COCHID Datos · consulta fallida ${retrievedAt.toISOString()} · se mantienen disponibles los enlaces al catálogo.`;
-    themeList.replaceChildren();
-    const fallback = document.createElement('a');
-    fallback.className = 'theme-item';
-    fallback.href = 'https://datos.cochid.cl/temas';
-    fallback.textContent = 'Abrir el directorio de temas en COCHID Datos';
-    themeList.append(fallback);
-  }
-})();
-
-(async function loadPresupuesto() {
-  const target = document.getElementById('presupuesto-bars');
-  if (!target) return;
-  const panel = target.closest('[data-contract-resource="budget_composition"]');
-  const meta = document.getElementById('budget-data-meta');
-  function el(tag, props) {
-    const node = document.createElement(tag);
-    if (props) for (const k in props) {
-      if (k === 'text') node.textContent = props[k];
-      else if (k === 'style') node.style.cssText = props[k];
-      else node.setAttribute(k, props[k]);
-    }
-    return node;
-  }
-  function showError(msg) {
-    const retrievedAt = new Date().toISOString();
-    panel.dataset.retrievedAt = retrievedAt;
-    panel.dataset.freshnessStatus = 'unavailable';
-    meta.textContent = `Fuente: DIPRES vía COCHID Datos · período observado: 2024 · consulta fallida ${retrievedAt}.`;
-    target.replaceChildren();
-    const wrap = el('div', { style: 'color:var(--muted);text-align:center;padding:2rem 0' });
-    wrap.append(msg + ' · ');
-    const link = el('a', { href: 'https://datos.cochid.cl/tema/presupuesto', style: 'color:var(--cis-accent)', text: 'Ver en datos.cochid.cl →' });
-    wrap.append(link);
-    target.append(wrap);
-  }
-  try {
-    const r = await fetch('https://datos.cochid.cl/api/cofog/composition?year=2024');
-    if (!r.ok) throw new Error('HTTP ' + r.status);
-    const rows = await r.json();
-    if (!Array.isArray(rows) || rows.some(row => !row.code || !row.name_es || row.gasto_corriente == null || row.pct_pib == null || row.pct_gasto_total == null)) {
-      throw new Error('respuesta fuera de contrato');
-    }
-    const retrievedAt = new Date().toISOString();
-    panel.dataset.retrievedAt = retrievedAt;
-    panel.dataset.freshnessStatus = 'historical';
-    meta.textContent = `Fuente: DIPRES vía COCHID Datos · período observado: 2024 · recuperado ${retrievedAt} · serie histórica.`;
-    const top = rows.slice(0, 10);
-    const max = Math.max(...top.map(x => Number(x.pct_gasto_total)));
-    target.replaceChildren();
-    top.forEach((row, i) => {
-      const pct = Number(row.pct_gasto_total);
-      const widthPct = (pct / max) * 100;
-      const item = el('div', { class: 'budget-item' });
-      const detailsId = 'cofog-detail-' + String(row.code || i).replace(/[^a-zA-Z0-9_-]/g, '-');
-      const wrap = el('button', { class: 'budget-row', type: 'button', 'aria-expanded': 'false', 'aria-controls': detailsId });
-      wrap.append(el('div', { class: 'budget-label', text: String(row.name_es) }));
-      const barOuter = el('div', { class: 'budget-bar' });
-      barOuter.append(el('div', { style: `background:var(--cis-accent);height:100%;width:${widthPct}%` }));
-      wrap.append(barOuter);
-      wrap.append(el('div', { class: 'budget-value', text: pct.toFixed(1) + '%' }));
-      const amount = Number(row.gasto_corriente);
-      const pib = Number(row.pct_pib);
-      const detailParts = [];
-      if (Number.isFinite(amount)) detailParts.push(new Intl.NumberFormat('es-CL', { maximumFractionDigits: 0 }).format(amount) + ' millones de CLP');
-      if (Number.isFinite(pib)) detailParts.push(pib.toFixed(1) + '% del PIB');
-      const details = el('div', { id: detailsId, class: 'budget-details', text: detailParts.join(' · '), hidden: '' });
-      wrap.addEventListener('click', function () {
-        const expanded = wrap.getAttribute('aria-expanded') === 'true';
-        wrap.setAttribute('aria-expanded', String(!expanded));
-        details.hidden = expanded;
-      });
-      item.append(wrap, details);
-      target.append(item);
-    });
-    const total = rows.find(r => r.code === '7') || top[0];
-    if (total) {
-      const gastoMM = Number(total.gasto_corriente);
-      const gastoBn = (gastoMM / 1_000_000).toFixed(1).replace('.', ',');
-      const txt = `Gasto total 2024: $${gastoBn} billones CLP · ${Number(total.pct_pib).toFixed(1)}% del PIB`;
-      target.append(el('div', { style: 'margin-top:0.75rem;padding-top:0.75rem;border-top:1px solid var(--line);font-size:0.75rem;color:var(--muted);font-family:var(--font-mono)', text: txt }));
-    }
-  } catch (err) {
-    showError('No se pudo cargar el presupuesto');
-  }
 })();
 </script>
 </body>

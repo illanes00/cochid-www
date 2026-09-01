@@ -7,7 +7,6 @@ import unittest
 
 ROOT = Path(__file__).resolve().parents[1]
 HTML = (ROOT / "index.html").read_text(encoding="utf-8")
-DATA_CONTRACT_PATH = ROOT / "contracts" / "cochid-datos-home.v1.json"
 
 
 class ProductSectionParser(HTMLParser):
@@ -43,6 +42,29 @@ class ProductSectionParser(HTMLParser):
 
 
 class CochidHomeContractTests(unittest.TestCase):
+    def test_presents_cochid_as_the_company_and_datos_as_its_primary_product(self):
+        self.assertIn('<link rel="canonical" href="https://cochid.cl/">', HTML)
+        self.assertIn("Compañía Chilena de Inteligencia de Datos", HTML)
+        hero = re.search(r'<section class="hero">(.*?)</section>', HTML, re.DOTALL)
+        self.assertIsNotNone(hero, "falta el hero institucional")
+        primary = re.search(
+            r'<a href="([^"]+)" class="btn-primary">([^<]+)</a>',
+            hero.group(1),
+        )
+        self.assertIsNotNone(primary, "falta la acción principal")
+        self.assertEqual("https://datos.cochid.cl/", primary.group(1))
+        self.assertEqual("Abrir COCHID Datos", primary.group(2))
+
+    def test_publishes_search_engine_controls_for_the_company_site(self):
+        robots = ROOT / "robots.txt"
+        sitemap = ROOT / "sitemap.xml"
+        self.assertTrue(robots.exists(), "falta robots.txt")
+        self.assertTrue(sitemap.exists(), "falta sitemap.xml")
+        self.assertIn("Sitemap: https://cochid.cl/sitemap.xml", robots.read_text())
+        sitemap_text = sitemap.read_text()
+        self.assertIn("<loc>https://cochid.cl/</loc>", sitemap_text)
+        self.assertIn("<lastmod>2026-09-01</lastmod>", sitemap_text)
+
     def test_exposes_exactly_the_eight_canonical_products(self):
         parser = ProductSectionParser()
         parser.feed(HTML)
@@ -90,35 +112,18 @@ class CochidHomeContractTests(unittest.TestCase):
             [offer["name"] for offer in organization["makesOffer"]],
         )
 
-    def test_declares_every_cochid_datos_request_in_a_versioned_contract(self):
-        self.assertTrue(DATA_CONTRACT_PATH.exists(), "falta el contrato consumidor")
-        contract = json.loads(DATA_CONTRACT_PATH.read_text(encoding="utf-8"))
-        self.assertEqual("1.0.0", contract["contract_version"])
-        self.assertEqual("cochid-home", contract["consumer"])
-        self.assertEqual("cochid-datos", contract["producer"])
-
-        resources = contract["resources"]
-        self.assertEqual(
-            {"platform_health", "themes", "budget_composition"},
-            set(resources),
-        )
-        declared_urls = {resource["url"] for resource in resources.values()}
-        requested_urls = set(
-            re.findall(r"fetch\(['\"](https://datos\.cochid\.cl/[^'\"]+)", HTML)
-        )
-        self.assertEqual(declared_urls, requested_urls)
-
-        for resource in resources.values():
-            self.assertEqual("GET", resource["method"])
-            self.assertGreater(resource["ttl_seconds"], 0)
-            self.assertTrue(resource["required_fields"])
-            self.assertTrue(resource["fallback"])
-
-    def test_data_modules_expose_source_retrieval_and_freshness_metadata(self):
-        for resource in ("platform_health", "themes", "budget_composition"):
-            self.assertIn(f'data-contract-resource="{resource}"', HTML)
-        for field in ("data-source", "data-retrieved-at", "data-freshness-status"):
-            self.assertIn(field, HTML)
+    def test_keeps_the_company_home_static_and_routes_data_work_to_the_portal(self):
+        self.assertNotIn("fetch(", HTML)
+        self.assertNotIn("data-contract-resource=", HTML)
+        self.assertNotIn("Presupuesto público de Chile 2024", HTML)
+        for destination in (
+            "https://datos.cochid.cl/catalogo",
+            "https://datos.cochid.cl/presupuesto",
+            "https://datos.cochid.cl/explorar",
+            "https://datos.cochid.cl/metodologia",
+            "https://mapas.cochid.cl/",
+        ):
+            self.assertIn(f'href="{destination}"', HTML)
 
     def test_explains_cochid_and_offers_three_services_through_cis(self):
         self.assertIn('<section id="que-es-cochid"', HTML)
@@ -138,27 +143,23 @@ class CochidHomeContractTests(unittest.TestCase):
         self.assertIn("Estado de la plataforma", HTML)
         self.assertIn("servicios comerciales son contratados y facturados por", HTML)
 
-    def test_hero_uses_clear_spanish_and_routes_into_the_ecosystem(self):
-        self.assertIn("datos públicos", HTML)
+    def test_hero_uses_clear_spanish_and_routes_into_the_company(self):
+        self.assertIn("fuentes públicas", HTML)
         self.assertNotIn("La <em>data pública</em>", HTML)
-        for destination in ("#productos", "#servicios", "https://datos.cochid.cl"):
+        for destination in ("#productos", "#que-es-cochid", "https://datos.cochid.cl/"):
             self.assertIn(f'href="{destination}"', HTML)
 
-    def test_theme_directory_is_rendered_from_the_contracted_api(self):
-        self.assertIn('id="theme-list"', HTML)
-        self.assertIn("encodeURIComponent(theme.slug)", HTML)
-        self.assertIn("theme.featured_indicators.length", HTML)
+    def test_does_not_repeat_unverified_or_stale_data_metrics(self):
         for stale_copy in (
+            "datasets registrados",
+            "temas en el explorador",
+            "Presupuesto público de Chile 2024",
             "880 filas · 15 años",
             "877 filas · 66 años",
             "396 filas matview",
             "Próximamente.",
         ):
             self.assertNotIn(stale_copy, HTML)
-
-    def test_budget_comparison_uses_one_semantic_color(self):
-        self.assertNotIn("const palette =", HTML)
-        self.assertIn("background:var(--cis-accent)", HTML)
 
 
 if __name__ == "__main__":

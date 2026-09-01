@@ -54,7 +54,7 @@ class CochidMainStyleV10ContractTests(unittest.TestCase):
             'href="https://datos.cochid.cl/temas"',
             'href="https://datos.cochid.cl/explorar"',
             'href="https://datos.cochid.cl/metodologia"',
-            "https://datos.cochid.cl/api/cofog/composition?year=2024",
+            'href="https://datos.cochid.cl/presupuesto"',
         )
 
         for public_surface in navigation_and_api:
@@ -97,13 +97,10 @@ class CochidMainStyleV10ContractTests(unittest.TestCase):
         self.assertIn("min-width: 0", HTML)
         self.assertIn("max-width: 100%", HTML)
 
-    def test_budget_chart_supports_pointer_and_keyboard_disclosure(self):
-        self.assertIn("class: 'budget-row'", HTML)
-        self.assertIn("'aria-expanded': 'false'", HTML)
-        self.assertIn("'aria-controls': detailsId", HTML)
-        self.assertIn("wrap.addEventListener('click'", HTML)
-        self.assertIn("class: 'budget-details'", HTML)
-        self.assertIn("details.hidden = expanded", HTML)
+    def test_primary_product_navigation_is_semantic_and_keyboard_native(self):
+        self.assertIn('<nav class="primary-links" aria-label="Entradas principales de COCHID Datos">', HTML)
+        self.assertNotIn('role="link"', HTML)
+        self.assertNotIn('tabindex="0"', HTML)
 
 
 if __name__ == "__main__":
