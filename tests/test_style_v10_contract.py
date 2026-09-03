@@ -104,7 +104,7 @@ class CochidMainStyleV10ContractTests(unittest.TestCase):
         self.assertIn("height: 40px", HTML)
         self.assertIn('href="#que-es-cochid"', HTML)
         self.assertIn('href="#servicios"', HTML)
-        self.assertIn("Iniciar sesión</a>", HTML)
+        self.assertNotIn("Iniciar sesión</a>", HTML)
         self.assertNotIn("filter: invert", HTML)
 
     def test_contains_long_content_and_avoids_syllable_breaking(self):

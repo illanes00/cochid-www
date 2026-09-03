@@ -55,6 +55,29 @@ class CochidHomeContractTests(unittest.TestCase):
         self.assertEqual("https://datos.cochid.cl/", primary.group(1))
         self.assertEqual("Abrir COCHID Datos", primary.group(2))
 
+    def test_featured_study_states_its_commission_and_independent_authorship(self):
+        study = re.search(
+            r'<section class="primary-product" id="estudio-destacado".*?</section>',
+            HTML,
+            re.DOTALL,
+        )
+        self.assertIsNotNone(study, "falta el estudio destacado")
+        self.assertIn("Espacio Público", study.group(0))
+        self.assertIn("encargado por la Cámara de la Innovación Farmacéutica (CIF)", study.group(0))
+        self.assertIn("análisis y las conclusiones son de Espacio Público", study.group(0))
+        self.assertNotIn("con apoyo de la Cámara", study.group(0))
+
+    def test_featured_study_has_share_metadata_and_no_primary_login_cta(self):
+        self.assertIn(
+            '<meta property="og:description" content="Infraestructura de datos para comprender Chile. Estudio destacado: Cobertura y protección financiera de medicamentos en Chile, de Espacio Público para la CIF.">',
+            HTML,
+        )
+        self.assertIn(
+            '<meta property="og:image" content="https://medicamentos.cochid.cl/og.png">',
+            HTML,
+        )
+        self.assertNotIn('class="gr-nav__cta"', HTML)
+
     def test_publishes_search_engine_controls_for_the_company_site(self):
         robots = ROOT / "robots.txt"
         sitemap = ROOT / "sitemap.xml"
@@ -63,7 +86,7 @@ class CochidHomeContractTests(unittest.TestCase):
         self.assertIn("Sitemap: https://cochid.cl/sitemap.xml", robots.read_text())
         sitemap_text = sitemap.read_text()
         self.assertIn("<loc>https://cochid.cl/</loc>", sitemap_text)
-        self.assertIn("<lastmod>2026-09-01</lastmod>", sitemap_text)
+        self.assertIn("<lastmod>2026-09-03</lastmod>", sitemap_text)
 
     def test_exposes_exactly_the_eight_canonical_products(self):
         parser = ProductSectionParser()
