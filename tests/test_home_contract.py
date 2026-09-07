@@ -86,7 +86,7 @@ class CochidHomeContractTests(unittest.TestCase):
         self.assertIn("Sitemap: https://cochid.cl/sitemap.xml", robots.read_text())
         sitemap_text = sitemap.read_text()
         self.assertIn("<loc>https://cochid.cl/</loc>", sitemap_text)
-        self.assertIn("<lastmod>2026-09-03</lastmod>", sitemap_text)
+        self.assertIn("<lastmod>2026-09-07</lastmod>", sitemap_text)
 
     def test_exposes_exactly_the_eight_canonical_products(self):
         parser = ProductSectionParser()
