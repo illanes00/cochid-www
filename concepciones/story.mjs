@@ -409,13 +409,12 @@ function figura4(datos) {
     txt(g, izqA, oyA - 8, 'Probabilidad de nacer por día de la semana', {'font-size': 11, class: 'anota'});
     DOW_KEY.forEach((k, i) => {
       const d = ds.p_dow[k], y = oyA + i * altoBarra;
-      caja(g, xA(0.09), y + 3, xA(d.p) - xA(0.09), altoBarra - 8, i < 5 ? '--parto' : '--parto-crudo');
+      const barra = caja(g, xA(0.09), y + 3, xA(d.p) - xA(0.09), altoBarra - 8, i < 5 ? '--parto' : '--parto-crudo');
+      add(barra, 'title', {}, `${DOW_LARGO[i]}: ${f(d.p * 100)}% de los nacimientos, IC95 ${f(d.lo * 100)} a ${f(d.hi * 100)}.`);
       linea(g, xA(d.lo), y + altoBarra / 2 - 6, xA(d.lo), y + altoBarra / 2 + 2, {class: 'ref'});
       linea(g, xA(d.hi), y + altoBarra / 2 - 6, xA(d.hi), y + altoBarra / 2 + 2, {class: 'ref'});
       txt(g, izqA - 8, y + altoBarra / 2, modo === 'compacto' ? DOW_CORTO[i] : DOW_LARGO[i], {'text-anchor': 'end', 'font-size': 11});
       txt(g, xA(d.p) + 6, y + altoBarra / 2, f(d.p * 100) + '%', {class: 'cifra', 'font-size': 10});
-      const t = add(g, 'title', {}, `${DOW_LARGO[i]}: ${f(d.p * 100)}% de los nacimientos, IC95 ${f(d.lo * 100)} a ${f(d.hi * 100)}.`);
-      t.remove();
     });
     linea(g, xA(1 / 7), oyA, xA(1 / 7), oyA + hA - 24, {class: 'ref'});
     txt(g, xA(1 / 7), oyA + hA - 8, 'si todos los días fueran iguales, 14,29%', {'text-anchor': 'middle', 'font-size': 10});
@@ -518,7 +517,6 @@ function figura5(datos) {
       const ox = (n % cols) * (pw + gapX), oy = 22 + Math.floor(n / cols) * (ph + gapY);
       const x = k => ox + izq + ((k + 7) / 14) * (pw - izq - 8);
       const y = v => oy + ((11 - v) / (11 + 38)) * ph;
-      caja(g, ox + izq, oy, pw - izq - 8, ph, '--paper', {opacity: 0, class: 'marco'});
       linea(g, ox + izq, y(0), ox + pw - 8, y(0), {class: 'ref'});
       if (p.clave !== 'lun') trazo(g, lunes.map((q, i) => `${i ? 'L' : 'M'}${x(q.k)},${y(q.pct)}`).join(''), '--line', 1, {opacity: 0.35});
       if (p.puntos[0].lo !== null) {
@@ -790,6 +788,7 @@ function figura3(datos) {
       });
       decir('f3', textoCasilla(i));
     });
+    decir('f3', 'Mueve el puntero sobre una casilla, o usa las flechas con el foco puesto en la figura, para leer una fecha concreta.');
   });
 }
 
