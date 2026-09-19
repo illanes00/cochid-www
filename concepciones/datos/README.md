@@ -224,7 +224,7 @@ Población, período, `n_nacimientos` 5.073.711, `n_anios` 19, `n_dias` 6.939, `
 `media_gestacion_dias`, `de_gestacion_dias`, `lam`, `unidad_concepcion`, las cuatro
 `advertencias` que la página debe declarar, `generado`, `base` (la versión de `base.py` que
 produjo las cifras), `bloques_regenerados_v3`, `fuente` y `archivos` con el tamaño en bytes de
-cada archivo de este directorio.
+los otros diez archivos JSON de este directorio.
 
 ## CSV descargables
 
@@ -260,6 +260,19 @@ se copia a mano.
 
 Los bloques `cumpleanos` y `estratos` se recalcularon con `base.py` v3, que sacó el regresor del
 día 31 del grupo de conservación de feriados. El resto de `pagina.json` viene de v2, porque se
-mueve menos de 0,3 puntos de índice. `meta.json` lo registra en `base` y
+mueve menos de 0,3 puntos de índice. `meta.json` lo registra en `base`, `parcheado_v3` y
 `bloques_regenerados_v3`, y `pagina.json` guarda el detalle en `meta.regenerado_v3`, incluidas
-las cifras de la síntesis editorial que quedaron desactualizadas.
+las siete cifras de la síntesis editorial que quedaron desactualizadas.
+
+`meta.generado` es la fecha de la consolidación original; `meta.parcheado_v3` es la del
+recálculo.
+
+Eso deja dos versiones del día 31 conviviendo acá.
+
+`feriados.json` trae el coeficiente del GLM v2, que descuenta 3,87% al día 31.
+`cumpleanos.json` trae el índice limpio v3, donde ese descuento ya llega a la serie: el 31 de
+enero pasa de 0,9941 a 1,0337.
+
+Las dos cifras miden cosas distintas y no se contradicen. Bajo v2 el descuento quedaba anulado
+por la reescala de conservación, y ese es justamente el defecto que v3 corrige. Conviene no
+ponerlas en la misma frase de la página.
