@@ -1,0 +1,449 @@
+<!doctype html>
+<html lang="es" data-brand="cochid" data-theme="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Cuándo se concibe en Chile · COCHID</title>
+<meta name="description" content="Cinco millones de nacimientos con fecha exacta, cohortes 1989 a 2007. El máximo de concepciones cae entre el 24 de diciembre y el 7 de enero. El mínimo es una meseta de dos meses en pleno invierno.">
+<link rel="canonical" href="https://cochid.cl/concepciones/">
+<meta property="og:title" content="Cuándo se concibe en Chile">
+<meta property="og:description" content="La semana 52 concentra 8,71% más concepciones que el promedio del año. El invierno pierde 4,6%. La unidad que el dato permite leer es la semana, nunca el día.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://cochid.cl/concepciones/">
+<meta property="og:site_name" content="COCHID">
+<meta property="og:image" content="https://cochid.cl/concepciones/social.png">
+<meta property="og:image:width" content="1200"><meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Curva semanal del índice de concepción en Chile, con el máximo de fin de año y la meseta baja de invierno.">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Cuándo se concibe en Chile">
+<meta name="twitter:description" content="La semana 52 concentra 8,71% más concepciones que el promedio del año. El invierno pierde 4,6%. La unidad que el dato permite leer es la semana, nunca el día.">
+<meta name="twitter:image" content="https://cochid.cl/concepciones/social.png">
+<meta name="twitter:image:alt" content="Curva semanal del índice de concepción en Chile, con el máximo de fin de año y la meseta baja de invierno.">
+<!--KIT_HEAD-->
+<link rel="stylesheet" href="./story.css">
+<script type="module" src="./story.mjs"></script>
+</head>
+<body class="cis-brand">
+<a class="skip-link" href="#contenido">Saltar al contenido</a>
+<!--HEADER-->
+<main id="contenido" tabindex="-1">
+
+<section class="story-hero wrap" aria-labelledby="titulo">
+ <h1 id="titulo">En Chile se concibe más entre Navidad y Año Nuevo</h1>
+ <p class="bajada">La semana del 24 al 31 de diciembre concentra 8,71% más concepciones que una semana promedio [+7,74; +9,75]. La medición cubre 5.073.711 nacimientos con fecha exacta, de personas nacidas en Chile entre 1989 y 2007.</p>
+
+ <p class="doc-meta">Cuadernos COCHID · cohortes 1989 a 2007 · publicado el 19 de septiembre de 2026</p>
+ <div class="hero-facts">
+  <div><strong>+8,71<span>%</span></strong><p>la semana del año con más concepciones, del 24 al 31 de diciembre.<sup>1</sup></p></div>
+  <div><strong>-4,61<span>%</span></strong><p>el punto más bajo de una meseta de dos meses, entre el 9 de julio y el 1 de septiembre.<sup>2</sup></p></div>
+  <div><strong>13,3<span> puntos</span></strong><p>la distancia entre la semana más alta y la más baja del año.<sup>3</sup></p></div>
+ </div>
+ <p class="footnote">¹ Semana 52, del 24 al 31 de diciembre, IC95 de +7,74 a +9,75 sobre una distribución uniforme. La semana 1, del 1 al 7 de enero, queda en +8,47% [+7,44; +9,69] y no se distingue de ella: la diferencia es 0,24 puntos con IC95 de -0,14 a +0,58. Lo identificado es la quincena del 24 de diciembre al 7 de enero.<br>
+ ² Semana 34, del 20 al 26 de agosto, IC95 de -5,25 a -3,97. El bootstrap no identifica una semana mínima: reparte el mínimo entre la 34 (0,588), la 29 (0,225) y la 30 (0,172). La lectura correcta es un valle ancho entre las semanas 28 y 35.<br>
+ ³ Diferencia entre la semana 52 y la semana 34 del índice semanal de concepción, cohortes 1989 a 2007. De las 52 semanas, 47 se distinguen de la uniforme.</p>
+ <noscript><p class="notice">Activa JavaScript para ver los gráficos. Las tablas de datos de cada figura están disponibles más abajo, dentro de cada figura, y no necesitan JavaScript.</p></noscript>
+</section>
+
+<section class="wrap seccion" id="curva" aria-labelledby="curva-title">
+ <div class="section-heading">
+  <h2 id="curva-title">01 · La curva del año</h2>
+  <p>El año tiene una cima de fin de año y un piso de invierno. La cima es una quincena y el piso es una meseta de dos meses. Ninguna de las dos es una fecha.</p>
+ </div>
+
+ <figure class="fig" id="f1">
+  <figcaption id="f1-cap">
+   <h3>Cuándo se concibe, por semana</h3>
+   <p class="fig-meta"><span class="badge">Concepción</span> Figura 1</p>
+
+   <p class="fig-bajada">La quincena del 24 de diciembre al 7 de enero es el máximo del año, con 8,7% y 8,5% sobre el día promedio, dos semanas empatadas. El mínimo, entre 4,6% y 4,0% bajo el promedio, no es una semana sino una meseta que va del 9 de julio al 1 de septiembre. La amplitud entre máximo y mínimo es 13,3 puntos. El panel de abajo usa la misma escala de días y muestra por qué. Los nacimientos crudos tienen caídas de un solo día, como el 32% del 25 de diciembre. Esas caídas desaparecen al descontar el feriado y nunca llegan a la curva de concepción.</p>
+  </figcaption>
+  <div class="leyenda" id="f1-leyenda"></div>
+  <div class="chart" id="f1-chart"></div>
+  <p class="lectura" id="f1-lectura" aria-live="polite">Mueve el puntero sobre la figura, o usa las flechas con el foco puesto en ella, para leer un día concreto.</p>
+
+  <p class="fig-pie">Las 52 semanas del año, con banda de IC95. La quincena del 24 de diciembre al 7 de enero está marcada como empate: el dato no separa las dos semanas. El valle está sombreado como bloque entre las semanas 28 y 35 porque tampoco hay una semana mínima identificable. El eje no parte de cero; el día promedio es 1,000. Cohortes 1989 a 2007.</p>
+
+  <p class="aviso">La banda de IC95 que aparece en esta curva cubre la verdad en 61,5% de las semanas al contrastarla con los registros vitales de 1999 a 2003, y en 60,8% en simulación nula, no en 95%. Captura la variación entre años y no el sesgo de regularización ni el del tratamiento de feriados. Leerla como banda de variación entre años, no como intervalo de cobertura nominal.</p>
+  <details class="data-table">
+   <summary>Ver los datos de esta figura</summary>
+   <p class="tabla-intro">El máximo está en la semana 52, del 24 al 31 de diciembre, con +8,71%. La semana 1, del 1 al 7 de enero, queda en +8,47% y no se distingue de ella. El mínimo medido está en la semana 34, del 20 al 26 de agosto, con -4,61%, dentro de una meseta que va de la semana 28 a la 35 y en la que el dato no identifica una semana más baja que las otras.</p>
+   <div class="table-scroll" role="region" aria-label="Tabla del índice semanal de concepción" tabindex="0"><!--T_F1_SEMANAL--></div>
+   <details class="data-table anidada">
+    <summary>Ver el índice mensual de concepción</summary>
+    <div class="table-scroll" role="region" aria-label="Tabla del índice mensual de concepción" tabindex="0"><!--T_MENSUAL--></div>
+   </details>
+   <details class="data-table anidada">
+    <summary>Ver las tres series diarias del panel inferior, 365 filas</summary>
+    <div class="table-scroll" role="region" aria-label="Tabla de las series diarias de concepción y nacimientos" tabindex="0"><!--T_F1_DIARIA--></div>
+   </details>
+  </details>
+  <p class="footnote">Fuente: <a href="./datos/semanal.json">datos/semanal.json</a> para la curva de concepción y <a href="./datos/cumpleanos.json">datos/cumpleanos.json</a> para las dos series diarias de nacimientos. Son dos pipelines distintos y el panel inferior los compara en forma, no en nivel.</p>
+ </figure>
+
+ <div class="cuerpo">
+  <p>El máximo cae en la semana del 24 al 31 de diciembre, con 8,71% más concepciones que una semana promedio [+7,74; +9,75]. La semana siguiente, del 1 al 7 de enero, queda en +8,47% [+7,44; +9,69]. La diferencia entre las dos es 0,24 puntos con IC95 de -0,14 a +0,58, y la probabilidad bootstrap de que gane la semana 52 es 0,892 contra 0,107 de la semana 1. Con una penalización más fuerte en el mismo método gana la semana 1. Lo que el dato identifica es la quincena del 24 de diciembre al 7 de enero, y lo identifica con solidez: en las 21 variantes del método el pico cae dentro de esa quincena, y en 400 de 400 remuestreos bootstrap también.</p>
+
+  <p>Las dos semanas vecinas sostienen la misma cima. La semana 51, del 17 al 23 de diciembre, queda en +6,59% [+5,84; +7,33] y la semana 2, del 8 al 14 de enero, en +6,52% [+5,44; +7,77].</p>
+
+  <p>El mínimo no es una semana. La curva queda entre 0,954 y 1,000 desde la semana 20 hasta la 47, y el bootstrap reparte el mínimo entre la semana 34 con probabilidad 0,588, la 29 con 0,225 y la 30 con 0,172. Entre las variantes del método el mínimo cae en la 34 en 15 de 21 casos, en la 29 en 4, y en la 28 y la 36 en uno cada una. Lo que hay es un valle ancho entre las semanas 28 y 35, es decir entre el 9 de julio y el 1 de septiembre, sin semana identificable dentro de él. El punto más bajo medido es la semana 34, del 20 al 26 de agosto, con -4,61% [-5,25; -3,97].</p>
+
+  <p>La distancia entre la semana más alta y la más baja es de 13,32 puntos porcentuales. De las 52 semanas del año, 47 se distinguen de la uniforme.</p>
+
+  <p>Por mes de concepción, de mayor a menor: enero +5,27%, diciembre +4,42%, febrero +3,64%, marzo +1,97%, abril +1,20%, mayo -0,16%, septiembre -1,27%, junio -2,02%, octubre -2,17%, noviembre -2,30%, julio -4,00% y agosto -4,35%. Enero supera a diciembre con 95% de confianza; julio y agosto están empatados en el último lugar; mayo no se distingue de cero. El resultado mensual no depende del método de deconvolución: correr los nacimientos limpios 260 días y agregar por mes da lo mismo dentro de 0,8 puntos en los doce meses.</p>
+
+  <p>Fiestas Patrias no aparece en este ranking. La semana del 17 al 23 de septiembre queda en +0,01% con IC95 de -0,67 a +0,63, es decir exactamente en el promedio anual. El feriado sí mueve algo, pero lo que mueve es levantar una semana desde el fondo del valle de invierno hasta el promedio, no crear un segundo máximo. La sección 03 lo separa del efecto sobre los partos.</p>
+ </div>
+</section>
+
+<section class="wrap seccion" id="semana" aria-labelledby="semana-title">
+ <div class="section-heading">
+  <h2 id="semana-title">02 · Por qué esto no se puede contar por día</h2>
+  <p>Entre la concepción y el parto pasan 260,3 días en promedio, con un desvío de 12,5 días. Ese desvío es el que decide qué se puede leer en los datos y qué no.</p>
+ </div>
+
+ <div class="cuerpo">
+  <p>El dato de partida son fechas de nacimiento. Para llegar a la concepción hay que deshacer la gestación, y la gestación no dura lo mismo en todos los embarazos: dura 260,3 días en promedio con un desvío de 12,5 días, medido en los microdatos de los registros vitales. El día más probable de esa distribución concentra apenas 4,1% de la masa.</p>
+
+  <p>De ahí sale la regla que gobierna toda la página. Si un día concreto de un año concreto tuviera un exceso de concepciones, esos nacimientos llegarían repartidos en más de un mes y con la altura reducida a un cuarto. Por lo tanto, cualquier rasgo abrupto de uno a tres días que se vea en los nacimientos viene del lado del parto: una cesárea programada, una inducción, un feriado que vacía el pabellón, o el propio registro. No puede venir de la concepción.</p>
+ </div>
+
+ <figure class="fig" id="f2">
+  <figcaption id="f2-cap">
+   <h3>Las variantes del método, y qué recupera el método</h3>
+   <p class="fig-meta"><span class="badge">Concepción</span> Figura 2</p>
+
+   <p class="fig-bajada">Cada línea gris es la curva obtenida con una variante del método: distinto número de armónicos, distinta ventana de años, distinto núcleo gestacional, distinto tratamiento de feriados. La línea negra es la especificación base. El pico cae dentro de la quincena del 24 de diciembre al 7 de enero en todas las variantes. El mínimo se mueve entre las semanas 28 y 36, y esa dispersión es la razón por la que el valle se publica como bloque. A la derecha, la única validación con verdad conocida: en los registros vitales de 1999 a 2003 la concepción se puede fechar registro a registro.</p>
+  </figcaption>
+  <div class="leyenda" id="f2-leyenda"></div>
+  <div class="chart" id="f2-chart"></div>
+  <p class="lectura" id="f2-lectura" aria-live="polite">Mueve el puntero sobre la figura, o usa las flechas con el foco puesto en ella, para leer una semana concreta.</p>
+
+  <p class="fig-pie">Izquierda: el abanico de variantes sobre la curva base. Una de las variantes es un estimador local sin deconvolución: apenas correlaciona con la base, con r de 0,30, y aplana la curva. Aun así su máximo cae en la semana 52, y por eso se dibuja igual que las demás. Derecha: r de 0,877 entre estimado y verdad, RMSE de 0,0156, cuatro años de microdatos de los registros vitales. El método acierta la semana del pico y lo atenúa: recupera 71,7% del exceso de la semana 52 y 65,3% del de la semana 1.</p>
+  <details class="data-table">
+   <summary>Ver los datos de esta figura</summary>
+   <p class="tabla-intro">El pico cae dentro de la quincena del 24 de diciembre al 7 de enero en las 21 variantes del método y en 400 de 400 remuestreos bootstrap. El mínimo no se estabiliza. Cae en la semana 34 en 15 variantes, en la 29 en 4, y en la 28 y la 36 en una cada una. En bootstrap, la probabilidad de que el mínimo sea la semana 34 es 0,588; la 29, 0,225; la 30, 0,172.</p>
+   <div class="table-scroll" role="region" aria-label="Tabla resumen de las variantes del método" tabindex="0"><!--T_F2_VARIANTES--></div>
+   <details class="data-table anidada">
+    <summary>Ver la comparación semana a semana contra la verdad conocida</summary>
+    <div class="table-scroll" role="region" aria-label="Tabla de validación contra los registros vitales" tabindex="0"><!--T_F2_DEIS--></div>
+   </details>
+  </details>
+  <p class="footnote">Fuente: <a href="./datos/metodo.json">datos/metodo.json</a>. El valor de r de la validación se cita del informe de síntesis y no se lee del archivo, donde viene nulo.</p>
+ </figure>
+
+ <div class="cuerpo">
+  <p>La regla se lee en los dos sentidos. Un pico de nacimientos de un solo día no informa nada sobre concepciones. Y un pico de concepciones de un solo día es invisible en estos datos, salvo que sea enorme.</p>
+
+  <p>Cuánto de enorme es medible. Un impulso de concepciones de un día o de una semana vuelve a aparecer en los nacimientos como una campana de 25 a 26 días de ancho a media altura, que retiene entre 79% y 84% de la masa. Dos picos de una semana se separan solo si están a 35 días o más uno del otro. Con 19 años de datos, el método detecta un pico semanal de concepciones desde +3,4% en una zona del calendario sin feriados y desde +4,1% si sus nacimientos caen sobre Fiestas Patrias. Un pico de un solo día necesita entre +25% y +29% para ser detectado.</p>
+
+  <p>Lo que el método sí recupera es la forma del año a escala de semana, y lo recupera con un sesgo conocido: atenúa. Contra la verdad medida en los registros vitales de 1999 a 2003, donde la concepción se puede fechar registro a registro, la deconvolución acierta la semana del pico y recupera 71,7% del exceso de la semana 52 y 65,3% del de la semana 1. La curva publicada es entonces una versión aplanada de la verdadera, no una versión exagerada.</p>
+
+  <p>Por eso la unidad publicable de concepción en esta página es la semana. Ningún número de concepciones de esta página está referido a un día.</p>
+ </div>
+</section>
+
+<section class="wrap seccion" id="parto" aria-labelledby="parto-title">
+ <div class="section-heading">
+  <h2 id="parto-title">03 · El calendario del parto</h2>
+  <p>Acá nada habla de concepciones. Todo lo de esta sección ocurre en la fecha de nacimiento, y casi todo apunta a que en Chile la fecha del parto se elige.</p>
+ </div>
+
+ <div class="cuerpo">
+  <p><strong>El día de la semana.</strong> En una semana sin feriados, la probabilidad de nacer es 15,94% un martes y 10,15% un domingo. El reparto completo es lunes 15,38%, martes 15,94%, miércoles 15,45%, jueves 15,49%, viernes 15,56%, sábado 12,04% y domingo 10,15%, con un IC95 de 0,04 puntos en cada uno. La uniforme sería 14,29%. Un domingo tiene 0,6525 veces los partos de un día hábil [0,6501; 0,6548] y un sábado 0,7734 [0,7707; 0,7761].</p>
+
+  <p><strong>Cuánto parto tiene fecha elegida.</strong> El déficit de domingo permite construir una cota inferior de la proporción de partos con fecha elegida. La fórmula supone que ningún parto programado cae en domingo y que los espontáneos se reparten parejo, y por eso entrega un piso, no una estimación. Ese piso es 28,92% para el conjunto 1989 a 2007 [28,70; 29,15]. Sube de 22,20% en 1989 a 34,56% en 2007, con una pendiente de +0,62 puntos por año [+0,58; +0,67]. Crece en los cuatro quinquenios, con valores de 0,2447, 0,2882, 0,3053 y 0,3387, pero no crece año a año: hay cuatro retrocesos, en 1999, 2000, 2001 y 2007, el mayor de ellos de 1,4 errores estándar.</p>
+ </div>
+
+ <figure class="fig" id="f4">
+  <figcaption id="f4-cap">
+   <h3>El día de la semana y la programación del parto</h3>
+   <p class="fig-meta"><span class="badge badge-parto">Parto</span> Figura 3</p>
+
+   <p class="fig-bajada">Izquierda: probabilidad de nacer por día de la semana en semanas sin feriado, 1989 a 2007. El intervalo de confianza mide 0,04 puntos, más angosto que el trazo, y se dibuja igual. Derecha: piso de la proporción de partos con fecha elegida, año a año, con las tres dependencias del colegio dibujadas como escalones por quinquenio, que es la forma en que están medidas. Es un piso, no una estimación: supone que ningún parto programado cae en domingo.</p>
+  </figcaption>
+  <div class="leyenda" id="f4-leyenda"></div>
+  <div class="chart" id="f4-chart"></div>
+  <p class="lectura" id="f4-lectura" aria-live="polite">Mueve el puntero sobre el panel derecho, o usa las flechas con el foco puesto en la figura, para leer un año concreto.</p>
+
+  <p class="fig-pie">La cota es f igual a 1 menos 7 por la probabilidad de domingo. El orden por dependencia del colegio calza con la cesárea de la literatura clínica, pero la cesárea no se puede medir con estos datos: los agregados de registros vitales disponibles no traen vía de parto. La dependencia del colegio es un proxy del nivel socioeconómico del alumno, no el prestador que atendió el parto.</p>
+  <details class="data-table">
+   <summary>Ver los datos de esta figura</summary>
+   <p class="tabla-intro">El martes es el día con más nacimientos, con 15,94%, y el domingo el que menos, con 10,15%. El piso de partos con fecha elegida pasa de 22,20% en 1989 a 34,56% en 2007, con retrocesos en 1999, 2000, 2001 y 2007. Por dependencia del colegio el piso es 50,13% en particular pagado, 29,57% en particular subvencionado y 23,07% en municipal.</p>
+   <div class="table-scroll" role="region" aria-label="Tabla de probabilidad por día de la semana" tabindex="0"><!--T_F4_DOW--></div>
+   <div class="table-scroll" role="region" aria-label="Tabla del piso de partos con fecha elegida por año" tabindex="0"><!--T_F4_ANIOS--></div>
+  </details>
+  <p class="footnote">Fuente: <a href="./datos/dia-semana.json">datos/dia-semana.json</a>.</p>
+ </figure>
+
+ <div class="cuerpo">
+  <p><strong>Qué semana de gestación carga la programación.</strong> En los microdatos de los registros vitales de 1999 a 2003, la razón entre partos de domingo y de día hábil es 0,481 en la semana 38 de gestación, 0,645 en la 39, 0,713 en la 40 y 0,791 entre las semanas 24 y 33. La semana 38 es 23% de los partos y explica 32,8% del déficit de domingo [32,25; 33,31]; las semanas 37 a 39 juntas son 59% de los partos y 67% del déficit. No todo el déficit es de término temprano: la semana 41 también lo tiene, con 0,619, lo que apunta a inducción por embarazo prolongado.</p>
+
+  <p><strong>El gradiente socioeconómico.</strong> El piso de partos con fecha elegida es 50,13% en particular pagado [49,35; 50,77], 29,57% en particular subvencionado [29,22; 29,92] y 23,07% en municipal [22,70; 23,44]. En zona rural es 21,73% y en urbana 29,08%. La dependencia del colegio del alumno es un proxy del nivel socioeconómico, no el prestador que atendió el parto. El mismo cálculo sobre sexo del nacido, que no debería mostrar nada, no muestra nada: hombres menos mujeres da -0,37 puntos con IC95 de -0,85 a +0,09.</p>
+
+  <p><strong>Los feriados.</strong> El tamaño del hoyo de un feriado depende casi por completo del día de la semana en que cae. Un feriado en lunes tiene -34,4% de nacimientos [-36,4; -32,3]; en martes -32,0%; en miércoles -27,0%; en jueves -27,7%; en viernes -27,9%; en sábado -6,6%; y en domingo -0,8% [-3,5; +1,9]. El feriado en domingo no es nulo, es pequeño, del orden de -1% a -4%: el modelo no lo distingue de cero, un estimador local independiente da -3,7% [-6,3; -1,0] y el fin de semana agrupado da -3,8% [-5,6; -1,9]. La muestra son 121 feriados-año, 36 de ellos en fin de semana.</p>
+ </div>
+
+ <figure class="fig" id="f5">
+  <figcaption id="f5-cap">
+   <h3>La matriz del feriado, y Semana Santa</h3>
+   <p class="fig-meta"><span class="badge badge-parto">Parto</span> Figura 4</p>
+
+   <p class="fig-bajada">Cada panel es un día de la semana en que cayó el feriado, y el octavo es Semana Santa. El eje horizontal va de siete días antes a siete días después, y los ocho paneles comparten la escala vertical: eso es lo que los vuelve comparables de un vistazo. El día 0 pasa de -34,4% cuando el feriado cae en lunes a -0,8% cuando cae en domingo. La curva del panel de lunes se repite al fondo de los otros siete para comparar contra la más profunda sin mover la vista.</p>
+  </figcaption>
+  <div class="leyenda" id="f5-leyenda"></div>
+  <div class="chart" id="f5-chart"></div>
+  <p class="lectura" id="f5-lectura" aria-live="polite">Mueve el puntero sobre cualquiera de los paneles, o usa las flechas con el foco puesto en la figura, para leer un día relativo.</p>
+
+  <p class="fig-pie">La víspera hábil de un feriado que cae miércoles, jueves o viernes tiene +6,6% de partos [+5,2; +8,1]. El día hábil posterior no rebota: +0,8% con p de 0,25. El promedio de los siete feriados menores en el día 0 es -22,0% [-24,1; -19,8] sobre 121 ocurrencias. El panel de Semana Santa está recortado de once días a siete por lado para compartir el eje; los cuatro puntos recortados están en la tabla. Los intervalos por fecha son entre ocurrencias: el intervalo de Wald condiciona en la mezcla de días de semana y subestima la incertidumbre unas 2,5 veces. En pantallas angostas se dibujan solo los paneles de lunes, miércoles y domingo, más Semana Santa; los otros cuatro están completos en la tabla.</p>
+  <details class="data-table">
+   <summary>Ver los datos de esta figura</summary>
+   <p class="tabla-intro">El tamaño del hoyo depende del día de la semana en que cae el feriado: -34,4% en lunes y -0,8% en domingo. El feriado en domingo es pequeño, del orden de -1% a -4%, no nulo. La víspera hábil de un feriado de miércoles, jueves o viernes tiene +6,6% de partos y el día siguiente no rebota. El Viernes Santo tiene -27,4% de nacimientos respecto de un viernes normal [-29,1; -25,6]. Los partos se adelantan a los días previos: lunes +6,1%, martes +5,0%, miércoles +4,2% y jueves santo +2,2%.</p>
+   <div class="table-scroll" role="region" aria-label="Tabla de la matriz del feriado y Semana Santa" tabindex="0"><!--T_F5_MATRIZ--></div>
+  </details>
+  <p class="footnote">Fuente: <a href="./datos/feriados.json">datos/feriados.json</a>.</p>
+ </figure>
+
+ <div class="cuerpo">
+  <p>Feriado por feriado, promediando los días de semana en que cayó cada fecha, hay cuatro con el hoyo más profundo, todos entre -32% y -35%, y sus intervalos se solapan casi por completo. Son el 25 de diciembre con -34,3% [-39,0; -29,2], el 19 de septiembre con -33,0% [-38,3; -27,2], el 18 de septiembre con -32,1% [-37,1; -26,7] y el 1 de enero con -31,9% [-37,6; -25,7]. Detrás vienen el 1 de noviembre -26,1%, el 1 de mayo -24,2%, el 15 de agosto -23,5% y el 8 de diciembre -21,8%. Cierran el 21 de mayo -20,2%, el 12 de octubre -17,8% y el 29 de junio -16,9%. El promedio de los siete feriados menores es -22,0% [-24,1; -19,8] sobre 121 ocurrencias.</p>
+
+  <p><strong>Adónde van los partos que el feriado no recibe.</strong> La víspera hábil de un feriado que cae miércoles, jueves o viernes tiene +6,6% de partos [+5,2; +8,1]. El día hábil siguiente no rebota, con +0,8% y p de 0,25; el exceso se reparte entre los días +2 a +4. Cuando el feriado cae en martes, el lunes sándwich no baja bajo un lunes normal, pero pierde toda la anticipación de víspera: la diferencia es -5,6 puntos [-7,9; -3,2]. El sábado que sigue a un feriado en viernes cae -6,1%.</p>
+
+  <p><strong>Dos fechas que no son feriado legal y se evitan igual.</strong> El 24 de diciembre tiene -16,4% de nacimientos [-20,0; -12,6] y el 31 de diciembre -17,2% [-20,7; -13,6]. El rebote se concentra el 26 y 27 de diciembre, con +13,3% y +17,7%, y del 3 al 5 de enero, con +10,6%, +7,8% y +8,2%.</p>
+
+  <p><strong>Lo que se evita es el feriado, no la fecha.</strong> Cuando el 29 de junio y el 12 de octubre se trasladaron a lunes, la fecha original quedó normal: +0,2% y +2,1%, en seis años cada una. La excepción es el 11 de septiembre, que se siguió evitando después de dejar de ser feriado en 1999, con -8,1% [-10,3; -6,0] en nueve días, contra +1,7% del 12 de septiembre. Ese dato no distingue evitación de la fecha de menor actividad programada por disturbios.</p>
+
+  <p><strong>Semana Santa.</strong> El Viernes Santo tiene -27,4% de nacimientos respecto de un viernes normal [-29,1; -25,6], sobre 19 ocurrencias y 10.657 nacimientos. El Sábado Santo tiene -12,2% [-14,4; -9,9] y el Domingo de Pascua -3,2% [-5,7; -0,6]. Los partos se adelantan a la semana: lunes +6,1%, martes +5,0%, miércoles +4,2% y jueves santo +2,2%, y casi no rebotan después.</p>
+
+  <p><strong>Fiestas Patrias.</strong> Durante el descanso faltan 0,642 días-equivalentes de nacimientos por sobre el efecto normal de fin de semana, con error estándar de 0,069, lo que equivale a unos 507 nacimientos por año. Frente a un día promedio la falta es de 0,928 días-equivalentes. El 18 y el 19 de septiembre quedan en -28,0% y -29,1%, con errores estándar de 2,9 y 3,0. El déficit crece con el largo del descanso: -0,175 días-equivalentes por cada día adicional, con error estándar de 0,037, IC95 de -0,255 a -0,096 y p de permutación de 0,00015, controlando tendencia. Por grupo, un descanso de 2 días pierde 0,15 días-equivalentes, uno de 3 pierde 0,50, uno de 4 pierde 0,80 y uno de 5 pierde 0,76, lo que se satura entre 4 y 5 días. El déficit además crece -0,032 días-equivalentes por año.</p>
+ </div>
+
+ <figure class="fig" id="f6">
+  <figcaption id="f6-cap">
+   <h3>Fiestas Patrias y el largo del descanso</h3>
+   <p class="fig-meta"><span class="badge badge-parto">Parto</span> Figura 5</p>
+
+   <p class="fig-bajada">Panel superior: perfil medio de nacimientos alrededor del 18 de septiembre, separado por largo del descanso, con el grosor de línea creciendo con el largo. Panel inferior: déficit del descanso contra su largo, año por año, con la recta controlada por tendencia. Cada día adicional de descanso quita 0,175 días-equivalentes de nacimientos.</p>
+  </figcaption>
+  <div class="leyenda" id="f6-leyenda"></div>
+  <div class="chart" id="f6-chart"></div>
+  <p class="lectura" id="f6-lectura" aria-live="polite">Mueve el puntero sobre el panel superior, o usa las flechas con el foco puesto en la figura, para leer un día relativo al 18.</p>
+
+  <p class="fig-pie">Del lado de las concepciones hay un bulto alrededor del 18 de septiembre. Vale 1,17 días-equivalentes [0,72; 1,62], medido por datación directa en microdatos de registros vitales. No escala de forma detectable con el largo del descanso: la pendiente es -3,1% por día con IC95 de -25,0 a +18,9. Y la semana 38 del índice de concepción está en +0,01%, es decir en el promedio anual: es un levantamiento local desde el fondo del valle de invierno, no un segundo máximo del año. Por eso esta figura no tiene panel de concepciones.</p>
+  <details class="data-table">
+   <summary>Ver los datos de esta figura</summary>
+   <p class="tabla-intro">Durante el descanso faltan 0,642 días-equivalentes de nacimientos por sobre el efecto normal de fin de semana, unos 507 nacimientos por año. El déficit crece 0,175 días-equivalentes por cada día adicional de descanso, con p de permutación de 0,00015, y se satura entre los 4 y los 5 días. El 18 y el 19 de septiembre quedan en -28,0% y -29,1%.</p>
+   <div class="table-scroll" role="region" aria-label="Tabla del perfil de Fiestas Patrias por largo del descanso" tabindex="0"><!--T_F6_PERFIL--></div>
+   <div class="table-scroll" role="region" aria-label="Tabla del déficit del descanso año por año" tabindex="0"><!--T_F6_ANIOS--></div>
+  </details>
+  <p class="footnote">Fuente: <a href="./datos/patrias.json">datos/patrias.json</a>.</p>
+ </figure>
+
+ <div class="cuerpo">
+  <p><strong>El déficit del feriado creció, y el salto está en los noventa.</strong> Un feriado menor en día hábil tenía -24,1% en 1989 a 1995, -30,0% en 1996 a 2001 y -32,0% en 2002 a 2007. El paso del primer al segundo período es una caída de 7,8% relativo con p menor a 0,001; el paso del segundo al tercero es de 2,9% con p de 0,079, y no alcanza significación. Atribuir ese cambio a la cesárea programada es plausible y no está probado: los agregados de registros vitales disponibles no traen vía de parto.</p>
+
+  <p class="aviso">Ninguna cifra de esta sección mide cesáreas. La vía de parto no está en los datos disponibles. El respaldo de la interpretación por programación es el gradiente por dependencia del colegio y la literatura clínica, no una medición.</p>
+ </div>
+</section>
+
+<section class="wrap seccion" id="cumpleanos" aria-labelledby="cumpleanos-title">
+ <div class="section-heading">
+  <h2 id="cumpleanos-title">04 · Tu cumpleaños</h2>
+  <p>El calendario de cumpleaños de Chile es, en buena medida, el calendario de los feriados. Cuando se le quita esa capa, algunas fechas cambian de lugar por completo.</p>
+ </div>
+
+ <figure class="fig" id="f3">
+  <figcaption id="f3-cap">
+   <h3>El calendario de cumpleaños, crudo y limpio</h3>
+   <p class="fig-meta"><span class="badge badge-parto">Parto</span> Figura 6</p>
+
+   <p class="fig-bajada">En crudo, el 27 de diciembre es la fecha más común, con una de cada 300,5 personas, y el 25 de diciembre la menos común, con una de cada 543,8. Descontado el día de semana y el feriado, ninguna fecha se aleja más de 11% del promedio. Las 186 fechas que reciben coeficiente de feriado en al menos un año están marcadas con trama: sobre ellas el índice limpio no es interpretable. El orden interno entre fechas cercanas no es un ranking, porque el IC95 de una fecha no feriada es de más o menos 0,09 en índice.</p>
+  </figcaption>
+  <div class="leyenda" id="f3-leyenda"></div>
+  <div class="chart" id="f3-chart"></div>
+  <p class="lectura" id="f3-lectura" aria-live="polite">Mueve el puntero sobre una casilla, o usa las flechas con el foco puesto en la figura, para leer una fecha concreta.</p>
+
+  <p class="fig-pie">Izquierda: índice crudo de cumpleaños, tal como se vive. Derecha: índice una vez descontados el día de la semana y el feriado. Los dos paneles comparten la escala de color, fijada por los extremos del panel crudo: el panel limpio se ve lavado a propósito, y esa palidez es el hallazgo. Volver a escalarlo a su propio rango haría parecer que el 27 de diciembre limpio, con 1,007, es tan extremo como el crudo, con 1,232.</p>
+  <details class="data-table">
+   <summary>Ver los datos de esta figura</summary>
+   <p class="tabla-intro">El 27 de diciembre es el cumpleaños más común, con 16.886 personas, una de cada 300,5. El 25 de diciembre es el menos común, con una de cada 543,8. La razón entre el día más y el menos común es 1,823. El orden dentro de cada lista no es publicable como ranking, porque el IC95 de una fecha no feriada es de más o menos 0,09 en índice. Una vez quitados el día de la semana y el feriado, el 18 y el 19 de septiembre pasan del grupo de abajo al centro del máximo estacional, con 1,100 y 1,096.</p>
+   <div class="table-scroll" role="region" aria-label="Tabla del calendario de cumpleaños" tabindex="0"><!--T_F3_CALENDARIO--></div>
+  </details>
+  <p class="footnote">Fuente: <a href="./datos/cumpleanos.json">datos/cumpleanos.json</a>.</p>
+ </figure>
+
+ <div class="cuerpo">
+  <p>El cumpleaños más común de las cohortes 1989 a 2007 es el 27 de diciembre: 16.886 personas, una de cada 300,5. Es el rebote de Navidad. Detrás viene un bloque de septiembre, con el 21, el 14, el 22 y el 12, todos entre una de cada 308 y una de cada 314 personas.</p>
+
+  <p>Los menos comunes son feriados. El 25 de diciembre es el último, con una de cada 543,8 personas, seguido del 1 de enero con una de cada 537 y del 1 de mayo con una de cada 498. Completan el piso el 21 de mayo, el 15 de agosto, el 19 de septiembre, el 1 de noviembre, el 18 de septiembre, el 8 de diciembre y el 31 de diciembre. Entre el día más común y el menos común hay una razón de 1,823. El 29 de febrero le toca a una de cada 1.780 personas en un ciclo de cuatro años [1.498; 2.206].</p>
+
+  <p><strong>El orden interno de estas listas no se publica como ranking.</strong> El conjunto de las diez fechas de arriba y de las diez de abajo es estable. El orden dentro de cada grupo no lo es: el intervalo de confianza de una fecha que no es feriado es de más o menos 0,09 en índice, porque el día de la semana de cada fecha rota entre años. Quien lea esta lista está viendo diez fechas altas y diez bajas, no un primero, un segundo y un tercero.</p>
+
+  <p><strong>El 18 y el 19 de septiembre son el caso que vale la pena mirar.</strong> En el calendario crudo están entre las diez fechas menos comunes del año. Una vez descontados el día de la semana y el feriado, quedan en 1,100 y 1,096, es decir en el centro del máximo estacional del año. El contraste entre las dos versiones es el hallazgo: el déficit del dieciocho es programación de partos, no falta de embarazos de término. Lo que no se puede decir es que sean las fechas más altas del calendario limpio. Ninguna de las dos se distingue del bloque de fechas vecinas de septiembre: la diferencia es +0,024 con error estándar de 0,014 para el 18 y +0,020 con error estándar de 0,013 para el 19.</p>
+
+  <p><strong>El calendario limpio solo es legible en parte del año.</strong> El regresor que recoge los días previos a un feriado toca 186 de las 365 fechas en al menos un año, y en esas fechas el índice limpio arrastra estructura del propio modelo. Sobre las 179 fechas que nunca reciben coeficiente de feriado en ningún año, el máximo va del 28 de septiembre al 1 de octubre, entre 1,094 y 1,088, y el mínimo está en la primera quincena de mayo, con el 8 de mayo en 0,951.</p>
+
+  <p><strong>Un control que salió bien.</strong> No hay acumulación de nacimientos en el día 1 de cada mes, que era lo que haría sospechar de fechas imputadas en masa. La razón entre el día 01 y los días 02 a 28 está entre 0,97 y 1,03 en todo el año, salvo en enero, mayo y noviembre, y en esos tres casos la explicación es que el día 1 es feriado.</p>
+
+  <p><strong>Lo que sí es real es el déficit del día 31</strong> con -3,87% [-4,93; -2,80]. No es un error de digitación de la fuente escolar: el mismo déficit está en los registros vitales. El día 13 tiene un déficit genérico de -1,84% [-2,85; -0,82], y ni el martes 13 ni el viernes 13 agregan nada distinguible por encima de ese déficit genérico.</p>
+ </div>
+</section>
+
+<section class="wrap seccion" id="quien" aria-labelledby="quien-title">
+ <div class="section-heading">
+  <h2 id="quien-title">05 · Lo que cambia según quién y dónde</h2>
+  <p>La fecha del máximo es la misma para todos. Lo que cambia de un grupo a otro es cuánto pesa el calendario.</p>
+ </div>
+
+ <div class="cuerpo">
+  <p>En los 16 estratos principales de la muestra, por sexo, dependencia del colegio, zona, ruralidad y período, el máximo semanal de concepción cae en la semana 52 o en la 1. Entre las 13 regiones tampoco se mueve, con dos excepciones que el bootstrap deja sin resolver. Borrar por completo los nacimientos del 11 al 28 de septiembre, que es donde la programación alrededor del dieciocho deforma la serie, deja el pico en la misma semana y le quita solo un octavo de su altura.</p>
+
+  <p>Lo que varía es la amplitud, es decir la distancia entre la semana más alta y la más baja de cada grupo. Sobre la serie por estratos, la amplitud nacional es 0,1257 [0,1119; 0,1418]. El particular pagado llega a 0,1794 [0,1517; 0,2065], el particular subvencionado a 0,1378 [0,1226; 0,1578] y el municipal a 0,1119 [0,1008; 0,1356]. La zona rural marca 0,1805 [0,1398; 0,2348] contra 0,1190 [0,1055; 0,1336] de la urbana. La zona sur marca 0,1911 [0,1726; 0,2125] contra 0,0993 [0,0850; 0,1203] de la norte. Comparando los mismos remuestreos de años en ambos estratos, pagado menos municipal da +0,0675 [0,0376; 0,0916], pagado menos subvencionado +0,0417 [0,0117; 0,0689] y rural menos urbano +0,0615 [0,0242; 0,1124].</p>
+ </div>
+
+ <figure class="fig" id="f8">
+  <figcaption id="f8-cap">
+   <h3>Quién tiene más estacionalidad</h3>
+   <p class="fig-meta"><span class="badge">Concepción</span> Figura 7</p>
+
+   <p class="fig-bajada">Arriba: nueve curvas semanales de concepción por estrato, en la misma escala, con la curva nacional de fondo en cada panel. El pico de fin de año aparece en todos. Lo que cambia es la amplitud: 0,179 en particular pagado contra 0,112 en municipal, 0,181 en rural contra 0,119 en urbano, 0,191 en la zona sur contra 0,099 en la norte. Abajo: la escala de cada región contra la curva nacional, ordenada por latitud. Sube de forma monótona desde Tarapacá y Arica hasta la Araucanía. Aysén se muestra sin valor porque su dato de origen está contaminado.</p>
+  </figcaption>
+  <div class="leyenda" id="f8-leyenda"></div>
+  <div class="chart" id="f8-chart"></div>
+  <p class="lectura" id="f8-lectura" aria-live="polite">Mueve el puntero sobre los paneles superiores, o usa las flechas con el foco puesto en la figura, para leer una semana concreta.</p>
+
+  <p class="fig-pie">Arriba: curvas semanales de concepción por estrato, con IC95. Estas curvas salen del pipeline por estrato, que no es el mismo de la figura 1: la curva nacional de aquí sirve de referencia interna del panel y no se debe leer junto a las cifras de la figura 1. Abajo: escala de cada región contra la curva nacional, ordenadas de norte a sur, sin recta ajustada. El código de región 11 del archivo de estratos está contaminado con alumnos de otra región, con 5.575 nacimientos por año contra unos 1.800 reales, así que Aysén va hueco y sin intervalo, y la zona austral queda fuera de los paneles superiores. En pantallas angostas se dibujan solo cuatro estratos: particular pagado, municipal, rural y zona sur; los nueve están en la tabla.</p>
+  <details class="data-table">
+   <summary>Ver los datos de esta figura</summary>
+   <p class="tabla-intro">El máximo de fin de año es el mismo en todos los grupos. Lo que cambia es la amplitud: 0,1794 en particular pagado contra 0,1119 en municipal, 0,1805 en zona rural contra 0,1190 en urbana, y 0,1911 en la zona sur contra 0,0993 en la norte. Entre las 11 regiones continentales la amplitud crece de forma monótona con la latitud, con una correlación de rango de 0,927.</p>
+   <div class="table-scroll" role="region" aria-label="Tabla de amplitud por estrato" tabindex="0"><!--T_F8_ESTRATOS--></div>
+   <div class="table-scroll" role="region" aria-label="Tabla de escala por región" tabindex="0"><!--T_F8_REGIONES--></div>
+  </details>
+  <p class="footnote">Fuente: <a href="./datos/estratos.json">datos/estratos.json</a>. La advertencia sobre la región 11 está en <a href="./datos/README.md">datos/README.md</a> y en el propio archivo de origen.</p>
+ </figure>
+
+ <div class="cuerpo">
+  <p>El sexo del nacido no cambia nada. La amplitud de los hombres es 0,1272 y la de las mujeres 0,1254, con una diferencia de 0,0018 [-0,0104; +0,0134] y una correlación de 0,992 entre ambas curvas. La razón de sexos por mes de concepción tampoco tiene estacionalidad detectable.</p>
+
+  <p>La ruralidad amplifica sin cambiar la forma. La curva rural es 1,458 veces la nacional [1,250; 1,707] y la urbana 0,941 [0,909; 0,968], con una correlación de 0,956 entre las dos, la misma semana de pico y ningún pico secundario. Un calendario agrícola propio no aparece. El exceso rural se concentra en febrero y el déficit en julio.</p>
+
+  <p><strong>La latitud describe una joroba, no una recta.</strong> La escala de cada región contra la curva nacional, de norte a sur, va así. Tarapacá y Arica 0,176; Antofagasta 0,419; Atacama 0,920; Coquimbo 1,047; Valparaíso 0,941; Metropolitana 0,774; O'Higgins 1,071; Maule 1,224; Biobío 1,435; Araucanía 1,781; Los Lagos y Los Ríos 1,511; Magallanes 0,784. Entre las 11 regiones continentales, sin Aysén ni Magallanes, la correlación de rango entre amplitud y latitud es 0,927 con p de 4,0e-5. Por eso esta página no publica una pendiente por grado de latitud: ajustar una recta a 13 puntos que forman una joroba entrega un número que cambia según cómo se ponderen las regiones.</p>
+
+  <p>El dato de Aysén no se publica. El código de región 11 del archivo de estratos trae entre 3.627 y 11.338 nacimientos por año en 1989 a 2004, contra 1.779 a 1.880 en 2006 y 2007, y Aysén tiene alrededor de 1.800: el código está contaminado con alumnos de otra región. Con una sola región austral limpia no hay evidencia suficiente para afirmar una reversión en el extremo sur, así que esta página no la afirma.</p>
+
+  <p>La ruralidad sigue siendo un confusor fuerte. El cruce entre zona y ruralidad muestra que el exceso del sur es territorial y no de composición: el sur urbano, con escala 1,420, ya supera con holgura al centro urbano, con 0,852. Dentro del centro, en cambio, lo rural no se distingue de lo urbano.</p>
+
+  <p><strong>Un rasgo propio del particular pagado.</strong> Su curva tiene un valle profundo a fines de mayo, en la semana 22, de -0,0627 contra el municipal [-0,0800; -0,0478]. En nacimientos eso corresponde a un déficit de febrero. El hecho no depende del modelo. En el índice mensual crudo, sin ajuste ni deconvolución, febrero de pagado menos municipal da -0,0662, con error estándar entre cohortes de 0,0095 y t de -6,99. Es negativo en 18 de las 19 cohortes y no aparece en enero ni en diciembre. El déficit dura cuatro semanas sin exceso vecino, de modo que no es reprogramación de partos, que mueve días y no semanas.</p>
+
+  <p>La interpretación queda abierta entre dos lecturas y el dato no separa una de la otra. La primera es concepción evitada, es decir no querer parir en febrero. La segunda es selección por fecha de nacimiento en la admisión a colegios pagados: con corte al 31 de marzo, los nacidos en verano son los menores del curso.</p>
+ </div>
+</section>
+
+<section class="wrap seccion" id="noventa" aria-labelledby="noventa-title">
+ <div class="section-heading">
+  <h2 id="noventa-title">06 · Noventa años</h2>
+  <p>El calendario de los nacimientos chilenos se fue aplanando durante casi un siglo. Y después de 2010 dejó de tener la forma que esta página describe.</p>
+ </div>
+
+ <div class="cuerpo">
+  <p>Empalmando fuentes escolares antiguas con los registros modernos se puede seguir la estacionalidad de los nacimientos desde 1930 hasta 2023. La medida es la semi-amplitud del primer armónico del año. Entre los nacidos en los años treinta era 10,84% [7,86; 14,22]. En los cuarenta 9,21% [7,52; 10,83] y en los cincuenta 9,48% [8,09; 10,99]. Después cae: 5,10% en los sesenta [4,05; 6,56], 6,73% en los setenta [5,66; 7,97] y 5,11% en los ochenta [3,72; 6,84]. En los registros vitales la caída sigue: 3,21% entre 1992 y 1999 [2,61; 4,09], 2,19% entre 2000 y 2009 [1,29; 3,18], 1,69% entre 2010 y 2019 [1,12; 2,40] y 1,73% entre 2020 y 2023 [0,49; 4,01].</p>
+ </div>
+
+ <figure class="fig" id="f9">
+  <figcaption id="f9-cap">
+   <h3>Noventa años de fondo</h3>
+   <p class="fig-meta"><span class="badge">Concepción</span> Figura 8</p>
+
+   <p class="fig-bajada">Arriba: la semi-amplitud estacional de los nacimientos cae de 10,8% en los nacidos en los años treinta a 1,7% en los nacidos entre 2010 y 2019, medida en fuentes distintas cuyo error sistemático está marcado. Abajo: el índice mensual de concepciones según registros vitales, por período. El máximo se mantuvo en enero durante setenta años y después de 2008 se corre a mayo o junio.</p>
+  </figcaption>
+  <div class="leyenda" id="f9-leyenda"></div>
+  <div class="chart" id="f9-chart"></div>
+  <p class="lectura" id="f9-lectura" aria-live="polite">Mueve el puntero sobre el panel inferior, o usa las flechas con el foco puesto en la figura, para leer un mes concreto.</p>
+
+  <p class="fig-pie">Arriba: semi-amplitud del primer armónico anual de nacimientos, por tramo y por fuente, con IC bootstrap por año. La banda marca el error sistemático entre fuentes, de cerca de un punto en los noventa por la rampa de cobertura y de hasta seis puntos antes de 1980 por selección. Abajo: índice mensual de concepciones por período en registros vitales, donde el máximo se corre de enero a mayo y junio después de 2008. <strong>La respuesta de esta página vale para las cohortes 1989 a 2007 y no describe al Chile de 2020.</strong></p>
+  <details class="data-table">
+   <summary>Ver los datos de esta figura</summary>
+   <p class="tabla-intro">La estacionalidad de los nacimientos chilenos bajó de cerca de 10% en las cohortes de 1930 a 1959 a menos de 2% en 2010 a 2019. Era 1,68 veces mayor entre 1930 y 1959 que entre 1960 y 1989. En los registros vitales, la probabilidad de que septiembre sea el mes con más nacimientos pasa de 1,00 entre 1993 y 2009 a 0,08 entre 2010 y 2019, y el máximo de concepciones se corre a mayo o junio.</p>
+   <div class="table-scroll" role="region" aria-label="Tabla de semi-amplitud por tramo" tabindex="0"><!--T_F9_EMPALME--></div>
+   <div class="table-scroll" role="region" aria-label="Tabla del índice mensual de concepciones por período" tabindex="0"><!--T_F9_MENSUAL--></div>
+  </details>
+  <p class="footnote">Fuente: <a href="./datos/serie-larga.json">datos/serie-larga.json</a>.</p>
+ </figure>
+
+ <div class="cuerpo">
+  <p>La estacionalidad era 1,68 veces mayor entre 1930 y 1959 que entre 1960 y 1989 [1,40; 2,04], y la caída ocurre entre los nacidos en los cincuenta y los nacidos en los sesenta. Antes de 1989 el nivel queda acotado y no fijado: las fuentes escolares antiguas dan una cota baja y la educación de adultos una cota alta, y para los sesenta esas cotas son 5,1% y 11,4%. El máximo de concepción, en cambio, se mantiene en enero durante setenta años, de 1930 a 2003, con un margen de unas dos semanas.</p>
+
+  <p>Dentro de la ventana principal el aplanamiento también se ve, y ahí hay que descontar algo. La amplitud de concepción pasa de 0,1561 [0,1410; 0,1731] en las cohortes 1989 a 1995, a 0,1261 [0,1061; 0,1539] en 1996 a 2002 y a 0,1019 [0,0892; 0,1301] en 2003 a 2007. La diferencia entre el último y el primer período es -0,0542 [-0,0783; -0,0192]. Lo que se rellena es el valle de julio.</p>
+
+  <p>El descuento es que una parte de esa caída es cobertura de la fuente escolar y no población. En la fuente escolar la escala cae 4,17% por año, con error estándar de 0,82 y p menor a 0,0001. En los registros vitales cae 2,36% por año, con error estándar de 1,28 y p de 0,086. La diferencia entre ambas pendientes es significativa. El fenómeno es real, y está sobreestimado entre un cuarto y la mitad según la métrica que se use.</p>
+
+  <p><strong>La respuesta de esta página no describe al Chile de hoy.</strong> En los registros vitales, el pico de septiembre dejó de ser el máximo anual: la probabilidad de que septiembre sea el mes con más nacimientos es 1,00 entre 1993 y 1999, 1,00 entre 2000 y 2009 y 0,08 entre 2010 y 2019. El rasgo local no desapareció, lo que cambió es el fondo: enero a marzo suben 3,20 puntos y octubre a diciembre bajan. Leído como concepciones, el máximo de diciembre y enero bajó de 104,97 a 100,44 y el máximo anual se corrió a mayo o junio, sin que el orden entre esos dos meses sea robusto al método. Todo lo que dice esta página vale para las cohortes 1989 a 2007.</p>
+ </div>
+</section>
+
+<section class="wrap seccion metodo" id="metodo" aria-labelledby="metodo-title">
+ <div class="section-heading">
+  <h2 id="metodo-title">07 · Método, datos y límites</h2>
+  <p>Qué se midió, con qué, contra qué se verificó y qué queda fuera del alcance de estos datos.</p>
+ </div>
+
+ <div class="cuerpo metodo-grid">
+  <div>
+   <h3>La fuente</h3>
+   <p>La población son 5.073.711 personas nacidas en Chile entre el 1 de enero de 1989 y el 31 de diciembre de 2007 que llegaron a matricularse en el sistema escolar. Están identificadas de forma única en los registros de matrícula 2004 a 2014 y rendimiento 2002 a 2014 del Ministerio de Educación. No son todos los nacidos vivos: faltan los fallecidos en la infancia y los emigrados, y sobran inmigrantes e inscripciones tardías. La cohorte 2008 se excluye porque su cobertura cae dentro del año por el corte de edad escolar.</p>
+   <h3>Por qué esta fuente y no los registros vitales</h3>
+   <p>Porque tiene fecha exacta de nacimiento para cinco millones de personas a lo largo de 19 años seguidos, que es lo que el análisis diario necesita. Los registros vitales aportan lo que a esta fuente le falta: la distribución de duración de la gestación y una verificación externa.</p>
+   <h3>Qué se estima</h3>
+   <p>Un modelo lineal generalizado cuasi-Poisson separa el efecto del día de la semana, estimado año por año, y el del feriado, estimado por fecha real, de la estacionalidad suave del año. La serie limpia resultante se deconvoluciona con la distribución de días entre concepción y parto medida en los registros vitales, de media 260,3 días y desvío 12,5 días, para obtener un índice diario de concepción que después se agrega por semana.</p>
+   <h3>La verificación externa</h3>
+   <p>El índice mensual de esta fuente reproduce el de los registros vitales con una correlación de 0,9431 [0,914; 0,971] sobre 16 años y 192 meses. El error absoluto medio es 0,724% y el RMSE 1,129%, contra un desvío del índice de referencia de 3,14%. El ajuste mejora con la cohorte: 1,85% de error en 1992 y entre 0,17% y 0,29% en 2003 a 2005. En los días de 1999, 2000, 2002 y 2003 los conteos diarios de ambas fuentes son casi idénticos, con una correlación de niveles de 0,99737 [0,9971; 0,9976]. El desvío de la log razón diaria entre fuentes es 1,44%, contra 5,5% que se esperaría de dos muestras independientes: son las mismas personas.</p>
+   <h3>El sesgo conocido de la fuente y su signo</h3>
+   <p>La fuente escolar tiene proporcionalmente más nacimientos de fin de semana y feriado que los registros vitales. Por eso subestima la amplitud del efecto de día de semana en 0,67 puntos y subestima el piso de partos con fecha elegida en 0,84 puntos [0,60; 1,14]. Es un sesgo conservador: atenúa todos los efectos de programación sin cambiar ninguna conclusión. No se detecta selección contra prematuros, y ese control solo descarta una pérdida mayor al 11% de ellos.</p>
+   <h3>Qué recupera el método y qué atenúa</h3>
+   <p>Contra la verdad conocida de los registros vitales de 1999 a 2003, la deconvolución recupera la curva semanal con correlación 0,877 y RMSE 0,0156. Acierta la semana del pico y lo atenúa: devuelve 71,7% del exceso de la semana 52 y 65,3% del de la semana 1, es decir alrededor de 28% de atenuación del pico. El RMSE del método no se distingue del piso de ruido de la propia verdad. A escala de resolución, un impulso de un día o de una semana vuelve como una campana de 25 a 26 días de ancho a media altura. Dos picos de una semana se separan solo si distan 35 días o más. El método no recupera rasgos de concepción a escala de día.</p>
+  </div>
+  <div>
+   <h3>Los cuatro supuestos declarados</h3>
+   <ol class="supuestos">
+    <li><strong>Un feriado solo redistribuye partos.</strong> El ajuste reescala dentro de cada ventana de feriado para conservar el total. Ese supuesto no está verificado. Con un fondo estacional de 6 armónicos, la ventana de Año Nuevo muestra un déficit de 287 partos por año, a 7,7 errores estándar, que lo contradice. Con los 14 armónicos del modelo base el mismo déficit cae a 1,6 errores estándar. Es una decisión de modelamiento cuya evidencia depende de la especificación.</li>
+    <li><strong>La distribución de duración de la gestación se toma como fija.</strong> No lo es. Su estacionalidad medida, de 0,644 días de rango entre máximo y mínimo, propagada por el mismo solver, mueve la curva semanal de concepciones entre 0,914% y 1,703%, contra un semiancho de IC95 medio de 0,770%. El sesgo por núcleo fijo es del mismo orden que la banda publicada y no está dentro de ella.</li>
+    <li><strong>El efecto de día de semana se estima por año, sin estructura estacional dentro del año.</strong> El desvío entre las 52 semanas del residuo medio por día de la semana es 1,53 puntos en sábado y 1,39 en domingo, contra 1,06 a 1,19 en días hábiles, y los sábados de febrero quedan entre -2,0% y -3,7%. El error estándar del modelo subestima la incertidumbre de cualquier afirmación sobre un día de la semana en una semana concreta del año.</li>
+    <li><strong>La banda de confianza publicada no tiene cobertura nominal.</strong> El IC95 bootstrap por año cubre la verdad en 61,5% de las semanas contra los registros vitales de 1999 a 2003, y en 60,8% en simulación nula. Captura la variación entre años y no el sesgo de regularización ni el del tratamiento de feriados.</li>
+   </ol>
+   <h3>Lo que estos datos no permiten concluir</h3>
+   <ul class="limites">
+    <li><strong>La cesárea no se mide acá.</strong> Los agregados de registros vitales disponibles no traen vía de parto. Todo lo que esta página dice sobre programación de partos se apoya en el déficit de domingo, en el gradiente por dependencia del colegio y en la literatura clínica, y es una atribución plausible, no una medición.</li>
+    <li><strong>La pérdida fetal temprana no está en los datos.</strong> Sobre la mortinatalidad tardía sí hay una cota. Con una tasa de 3,79 por 1.000 nacidos vivos y una variación estacional estimada de 11,0% entre pico y valle, el efecto sobre los nacidos vivos es de 0,042 puntos porcentuales, es decir 0,31% de la amplitud semanal de concepción. Aun con un escenario deliberadamente generoso la cota no pasa de 7,0%. Sobre la pérdida anterior a la semana 20, que es donde ocurre la mayor parte del desgaste, no hay ningún dato.</li>
+    <li><strong>Si el largo del descanso de Fiestas Patrias cambia las concepciones no se sabe.</strong> En nacimientos la relación con el largo del descanso sí es sólida y está en la sección 03. En concepciones, la pendiente estimada año a año es -3,1% por día con IC95 de -25,0 a +18,9 y p de 0,77, y la variante con nivel local da +11,3% con IC95 de -14,3 a +36,8. La potencia solo alcanza para detectar efectos de 31% por día. El dato no permite concluir en ninguna dirección.</li>
+    <li><strong>La duración de la gestación es estacional y el lado no está identificado.</strong> El ciclo existe por mes de concepción, pero la atenuación del armónico anual por el núcleo es de solo 2,3%, así que ver la serie aplanarse al indexar por mes de concepción no prueba nada sobre de qué lado está el efecto.</li>
+   </ul>
+   <h3>Dos resultados sugerentes que no son titular</h3>
+   <p><strong>Un exceso de concepciones concentrado en los días de fin de año, por encima del pico estacional ancho.</strong> El pico estacional de la quincena no está en duda. Lo que no está identificado es un exceso adicional encima de él. El tamaño estimado depende por completo de cuántos armónicos tenga el fondo estacional: 2,39 días-equivalentes con 6 armónicos, 0,82 con 8 y 0,39 con los 14 del modelo base. La diferencia entre las dos primeras especificaciones supera el error estándar de cualquiera de ellas.</p>
+
+   <p>Hay tres razones más para no titular con una cifra. El máximo local de la curva de placebo cae el 28 y 29 de diciembre y no en las fechas señaladas. Las plantillas de Navidad y Año Nuevo están correlacionadas 0,815, de modo que el dato no las separa. Y la segunda mayor estructura de toda la curva de placebo aparece el 9 y 10 de abril, una fecha sin significado cuyos nacimientos caen justo sobre las ventanas de feriado de fin de año.</p>
+
+   <p>La evidencia más limpia a favor de un exceso real viene de otro diseño: el cruce de microdatos de registros vitales 1999 a 2003 por semanas de gestación. Ese cruce estima entre 1,0 y 1,3 días-equivalentes entre el 24 de diciembre y el 6 de enero. <strong>Esa cifra proviene de una verificación independiente y no está replicada en el análisis principal.</strong></p>
+
+   <p><strong>El 14 de febrero mueve nacimientos, no concepciones.</strong> Tiene +4,80% de nacimientos respecto del mismo día de la semana del mismo año en la misma posición estacional [+2,26; +7,40], sobre 19 ocurrencias y 14.613 nacimientos, y se replica en los registros vitales. No sobrevive la corrección por multiplicidad: en un barrido de los 365 días del año, su p familywise es 0,61. Lo que lo sostiene es estar preespecificado como fecha civil antes de mirar los datos, más la réplica externa y la estabilidad año a año. Es sugerente, no más. Y no pasa a concepciones: para producir un pico de nacimientos de un solo día de +4,80% haría falta un pulso de concepciones de +117% ese día, y el bulto resultante duraría unos 49 días.</p>
+   <h3>Qué haría falta para responder esto sobre el Chile de hoy</h3>
+   <p>La ventana de este análisis termina en 2007 porque la cobertura de la fuente escolar se derrumba después: la razón contra los nacidos vivos pasa de 0,980 en 2008 a 0,885 en 2009 y a 0,481 en 2010. Lo que este análisis pudo usar para los años posteriores es mensual, y una serie mensual no permite separar el día de la semana del feriado ni deconvolucionar a escala de semana. El camino para extender la respuesta a las cohortes posteriores a 2010 es una solicitud por Ley de Transparencia de la serie diaria de nacimientos al Departamento de Estadísticas e Información de Salud o al Servicio de Registro Civil e Identificación.</p>
+  </div>
+ </div>
+
+ <div class="descargas">
+  <h3>Descargar los datos</h3>
+  <p>Las series completas, con los encabezados sin tildes y el separador decimal en punto.</p>
+  <div class="download-row">
+   <a class="button" href="./concepciones-semanal.csv" download>Curva semanal, 52 filas</a>
+   <a class="button" href="./concepciones-mensual.csv" download>Índice mensual, 12 filas</a>
+   <a class="button" href="./cumpleanos-diario.csv" download>Calendario de cumpleaños, 366 filas</a>
+   <a class="button" href="./nacimientos-dia-semana.csv" download>Día de la semana, 7 filas</a>
+  </div>
+  <p class="footnote">Los once archivos JSON que alimentan las figuras están en <a href="./datos/README.md">datos/</a>, con un diccionario que explica qué mide cada número.</p>
+ </div>
+
+ <p class="cierre">Publicado por COCHID. Análisis sobre 5.073.711 nacimientos con fecha exacta, cohortes 1989 a 2007, con verificación externa contra los registros vitales. Toda cifra de esta página tiene su origen declarado en esta sección. Las cifras referidas a concepciones son semanales; las referidas a fechas concretas son de nacimientos.</p>
+</section>
+
+</main>
+<!--FOOTER-->
+</body></html>
