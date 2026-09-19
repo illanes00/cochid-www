@@ -11,11 +11,27 @@ Desde este árbol:
 
 ```sh
 python3 -m unittest discover -s tests -p 'test_*.py' -v
-node --test tests/solar.test.mjs
+node --test tests/*.test.mjs
 node --check cambio-de-hora/story.mjs
+node --check concepciones/story.mjs
 prosa-lint cambio-de-hora/index.html
+prosa-lint concepciones/index.html
 cis-build node scripts/build.mjs
 ```
+
+El especial `/concepciones/` lee `concepciones/datos/*.json`, que es el recorte
+publicable de `data/out/pagina.json` del repositorio `cochid-concepciones`. El
+build verifica el largo de cada serie antes de escribir nada y aborta si una
+cambió aguas arriba. Las quince tablas equivalentes se generan en el build, de
+modo que la página sirve completa sin JavaScript.
+
+La imagen social no la produce el build, porque necesita Python con matplotlib:
+
+```sh
+/srv/projects/cochid/cochid-concepciones/.venv/bin/python scripts/social-concepciones.py
+```
+
+Regenerarla solo cuando cambie la curva semanal. El PNG está versionado.
 
 Ejecutar navegador real en 1440, 390 y 320 px: fecha, slider, reproducción y
 pausa, antes y después del salto, crepúsculo, selección mensual, rutina,
