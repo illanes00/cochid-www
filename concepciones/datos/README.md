@@ -1,7 +1,7 @@
 # Datos de la página "Cuándo se concibe en Chile"
 
 Once archivos JSON, uno por figura, recortados de `data/out/pagina.json` del repositorio
-`cochid-concepciones`. Pesan 177 KB en total. Los genera
+`cochid-concepciones`. Pesan 179 KB en total. Los genera
 `scripts/gen_datos_pagina.py` de ese repositorio, que no calcula nada: recorta, redondea y
 renombra. Ninguna cifra de la página puede salir de otro lado.
 
@@ -15,7 +15,7 @@ cd /srv/projects/cochid/cochid-concepciones
 ## Qué mide cada número
 
 **Índice.** 1 es el día promedio del año, una vez descontadas la tendencia larga y, en las
-series limpias, el día de semana y los feriados. Un índice de 1,0871 significa 8,71% sobre el
+series limpias, el día de semana y los feriados. Un índice de 1,0870 significa 8,70% sobre el
 día promedio. Los índices vienen con 4 decimales y los porcentajes con 2.
 
 **Concepción y parto.** Las series de concepción salen de deconvolucionar los nacimientos
@@ -24,9 +24,10 @@ días. Ese desvío borra todo rasgo más fino que dos semanas, así que la unida
 concepción es la semana. Todo rasgo de 1 a 3 días que aparezca en los nacimientos es del lado
 del parto, no de la concepción.
 
-**Intervalos.** `_lo` y `_hi` son los percentiles 2,5 y 97,5 de un bootstrap de 400 remuestreos
-de los 19 años de nacimiento. Cubren la variación entre años, no el sesgo de regularización ni
-el del núcleo gestacional fijo: en la validación contra el DEIS cubren la verdad en 61,5% de
+**Intervalos.** `_lo` y `_hi` son los percentiles 2,5 y 97,5 de un bootstrap de los 19 años de
+nacimiento: 2.000 remuestreos en las desviaciones y las probabilidades, 400 en las series de
+índice de `semanal.json` y de `metodo.json` y en los estratos. Cubren la variación entre años, no
+el sesgo de regularización ni el del núcleo gestacional fijo: en la validación contra el DEIS cubren la verdad en 61,5% de
 las semanas. `meta.json` lo repite en `advertencias`.
 
 **Semanas.** Son 52 semanas fijas desde el 1 de enero; la 52 tiene ocho días y el 29 de febrero
@@ -34,7 +35,7 @@ queda fuera de la grilla de 365.
 
 ## Archivos
 
-### `semanal.json` (14,4 KB) · figura principal
+### `semanal.json` (14,5 KB) · figura principal
 
 Curva semanal de concepción, 52 puntos, más la curva diaria que hace visible la regla de la
 semana.
@@ -45,8 +46,8 @@ semana.
 | `etiqueta` | 52 | rango de fechas, por ejemplo `01-ene a 07-ene` |
 | `indice`, `indice_lo`, `indice_hi` | 52 | índice de concepción con IC95 |
 | `desv_pct`, `desv_lo`, `desv_hi` | 52 | desviación sobre la uniforme, en puntos porcentuales |
-| `significativo` | 52 | `true` si el IC95 de la desviación excluye cero (47 de 52). No corrige multiplicidad: son 52 pruebas a la vez y con 400 remuestreos no hay resolución para un conteo corregido |
-| `amplitud_pp` | 1 | 13,32: máximo menos mínimo semanal. IC95 bootstrap de 11,81 a 15,12; entre lambda 300 y 10.000 recorre de 14,8 a 11,3 |
+| `significativo` | 52 | `true` si el IC95 de la desviación excluye cero (47 de 52). No corrige multiplicidad: son 52 pruebas a la vez, y corrigiendo quedan 45 con Holm y 39 con Bonferroni |
+| `amplitud_pp` | 1 | 13,35: máximo menos mínimo semanal. IC95 bootstrap de 11,81 a 15,12; entre lambda 300 y 10.000 recorre de 14,8 a 11,3 |
 | `n_semanas_significativas` | 1 | 47 |
 | `quincena_pico` | dict | `semanas` [52, 1], `etiqueta`, `p_argmax` (probabilidad bootstrap de que cada semana sea el máximo) y `duelo` (52 contra 1: `dif_pp`, `ic95`, `p_a_mayor_b`) |
 | `valle_meseta` | dict | igual para el valle ancho de las semanas 28 a 35 |
@@ -54,14 +55,14 @@ semana.
 | `doy_concepcion`, `doy_lo`, `doy_hi` | 365 | índice diario de concepción con IC95 |
 
 La quincena y la meseta se dibujan como bloques, nunca como un punto máximo o mínimo: las
-semanas 52 y 1 están empatadas y el mínimo se reparte entre la 34, la 29 y la 30.
+semanas 52 y 1 están empatadas y el mínimo se reparte entre la 34, la 30 y la 29.
 
 `doy_concepcion` está para la figura pedagógica de día contra semana. No sirve para leer un día
 concreto: el método devuelve un impulso de un día como una campana de 25 a 26 días de ancho. Ese
 ancho es del método y no del embarazo: la distribución de la gestación mide 21,2 días a media
 altura, y con una penalización diez veces menor la campana baja a 19 o 20 días.
 
-### `mensual.json` (2,0 KB)
+### `mensual.json` (3,2 KB)
 
 `meses`, 12 entradas con `id` (1 a 12), `etiqueta` (`ene` a `dic`), `p`, `p_lo`, `p_hi`
 (probabilidad de concebir en ese mes), `p_uniforme` (la proporción de días del mes),
@@ -77,15 +78,15 @@ altura, y con una penalización diez veces menor la campana baja a 19 o 20 días
 | `boot_sem_pico` | 2 | conteo de remuestreos en que cada semana fue el máximo, sobre 400 |
 | `boot_sem_valle` | 6 | lo mismo para el mínimo |
 | `validacion_deis` | 4 | `verdad_semanal`, `estimado_semanal`, `estimado_lo`, `estimado_hi`, 52 cada una, sobre el DEIS 1999 a 2003. El máximo de `verdad_semanal` cae en la semana 1 y el de `estimado_semanal` en la 52: el método acierta la quincena, no la semana exacta |
-| `cobertura_ic95` | dict | `media` 0,608, `por_sim` (5 simulaciones) y `n_sims`. Son 5 corridas con rango 0,481 a 0,750: leer "cerca de 60%", no tres cifras |
+| `cobertura_ic95` | dict | `media` 0,588, `por_sim` (5 simulaciones) y `n_sims`. Son 5 corridas con rango 0,481 a 0,654: leer "cerca de 60%", no tres cifras |
 | `se_boot_semanal_medio` | 1 | error estándar bootstrap medio de la curva semanal. Cubre la verdad en 61,5% de las semanas y no en 95%, así que todo umbral de detección calculado con él es optimista |
 | `robustez_lam` | 3 | curva con penalización 300, 1000 y 3000. La amplitud del pico va de +9,71% a +7,63% entre los extremos: un recorrido tan ancho como el IC95 de la semana 52 y no contenido en él |
 
 El nombre de la variante es la clave del diccionario. El abanico sostiene que el pico es robusto
 y el valle no: en las 22 variantes el pico cae dentro de la quincena y el valle salta entre las
-semanas 28 y 36.
+semanas 29 y 36.
 
-### `cumpleanos.json` (39,6 KB) · calendario de 366 casillas
+### `cumpleanos.json` (40,0 KB) · calendario de 366 casillas
 
 Columnas paralelas de 366 valores, en orden del 1 de enero al 31 de diciembre con el 29 de
 febrero incluido: `fecha`, `mes`, `dia`, `n` (nacimientos en 19 años), `uno_en` (1 de cada
@@ -261,12 +262,12 @@ lo que infla la amplitud de las cohortes viejas.
 | `dedup_concepcion_semanal` | efecto del criterio de deduplicación sobre la curva semanal |
 | `borde_final` | cobertura de las cohortes 2006 a 2010, que es por qué la ventana termina en 2007 |
 
-### `meta.json` (1,5 KB)
+### `meta.json` (1,7 KB)
 
 Población, período, `n_nacimientos` 5.073.711, `n_anios` 19, `n_dias` 6.939, `dispersion_glm`,
 `media_gestacion_dias`, `de_gestacion_dias`, `lam`, `unidad_concepcion`, las cuatro
 `advertencias` que la página debe declarar, `generado`, `base` (la versión de `base.py` que
-produjo las cifras), `bloques_regenerados_v3`, `fuente` y `archivos` con el tamaño en bytes de
+produjo las cifras), `base_version`, `base_v3`, `bloques_en_v3`, `fuente` y `archivos` con el tamaño en bytes de
 los otros diez archivos JSON de este directorio.
 
 ## CSV descargables
@@ -299,23 +300,14 @@ entre otras:
 Si la página necesita una de esas series, se agrega en `gen_datos_pagina.py` y se regenera. No
 se copia a mano.
 
-## Una advertencia sobre la versión del modelo
+## La versión del modelo
 
-Los bloques `cumpleanos` y `estratos` se recalcularon con `base.py` v3, que sacó el regresor del
-día 31 del grupo de conservación de feriados. El resto de `pagina.json` viene de v2, porque se
-mueve menos de 0,3 puntos de índice. `meta.json` lo registra en `base`, `parcheado_v3` y
-`bloques_regenerados_v3`, y `pagina.json` guarda el detalle en `meta.regenerado_v3`, incluidas
-las siete cifras de la síntesis editorial que quedaron desactualizadas.
+Los nueve bloques de `pagina.json` salen de `base.py` v3, que sacó el regresor del día 31 del
+grupo de conservación de feriados, puso una guarda contra bloques de conservación sin partos y
+admite `nboot=0`. `meta.json` lo declara en `base`, con el hash del archivo, y en
+`base_version`, `base_v3` y `bloques_en_v3`. No queda ningún bloque en v2.
 
-`meta.generado` es la fecha de la consolidación original; `meta.parcheado_v3` es la del
-recálculo.
-
-Eso deja dos versiones del día 31 conviviendo acá.
-
-`feriados.json` trae el coeficiente del GLM v2, que descuenta 3,87% al día 31.
-`cumpleanos.json` trae el índice limpio v3, donde ese descuento ya llega a la serie: el 31 de
-enero pasa de 0,9941 a 1,0337.
-
-Las dos cifras miden cosas distintas y no se contradicen. Bajo v2 el descuento quedaba anulado
-por la reescala de conservación, y ese es justamente el defecto que v3 corrige. Conviene no
-ponerlas en la misma frase de la página.
+`feriados.json` trae el coeficiente del GLM, que descuenta 3,87% al día 31, y es el mismo bajo
+v2 y bajo v3: el GLM no cambió, el regresor solo cambió de grupo. Lo que cambió es que ese
+descuento ahora llega a la serie limpia: el 31 de enero pasó de 0,9941 a 1,0337 en
+`cumpleanos.json`. Bajo v2 la reescala de conservación lo anulaba, y ese era el defecto.

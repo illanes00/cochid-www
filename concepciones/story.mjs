@@ -245,13 +245,13 @@ function figura1(datos) {
 
     /* Anotaciones de bloque. Nunca un punto: el dato no identifica una semana. */
     const compacto = modo === 'compacto';
-    const notaMax = compacto ? ['Máximo: 24-dic a 7-ene'] : ['Máximo: 24-dic a 7-ene', '+8,7% y +8,5%, empate', 'diferencia 0,24 puntos, IC95 -0,14 a +0,58;'];
-    if (modo === 'amplio') notaMax.push('la 52 gana en 357 de 400 remuestreos');
+    const notaMax = compacto ? ['Máximo: 24-dic a 7-ene'] : ['Máximo: 24-dic a 7-ene', '+8,7% y +8,4%, empate', 'diferencia 0,32 puntos, IC95 -0,06 a +0,67;'];
+    if (modo === 'amplio') notaMax.push('la 52 gana en 379 de 400 remuestreos');
     notaMax.forEach((t, k) => txt(g, x(358) - 10, topSup + 16 + k * 14, t, {
       'text-anchor': 'end', class: k ? '' : 'anota', 'font-size': k ? 10 : compacto ? 11 : 12, 'font-weight': k ? 400 : 600
     }));
-    const notaMin = compacto ? ['Mínimo: meseta de 9-jul a 1-sep'] : ['Mínimo: una meseta de casi dos meses', 'entre -4,6% y -4,0%, sin semana identificable'];
-    if (modo === 'amplio') notaMin.push('la 34 gana en 235 de 400 remuestreos, la 29 en 90 y la 30 en 69');
+    const notaMin = compacto ? ['Mínimo: meseta de 9-jul a 1-sep'] : ['Mínimo: una meseta de casi dos meses', 'entre -4,7% y -3,9%, sin semana identificable'];
+    if (modo === 'amplio') notaMin.push('la 34 gana en 272 de 400 remuestreos, la 30 en 83 y la 29 en 35');
     notaMin.forEach((t, k) => txt(g, x(217), topSup + (compacto ? 36 : 16) + k * 14, t, {
       'text-anchor': 'middle', class: k ? '' : 'anota', 'font-size': k ? 10 : compacto ? 11 : 12, 'font-weight': k ? 400 : 600
     }));
@@ -337,7 +337,7 @@ function figura2(datos) {
        necesita los mismos 32 px de margen que el modo lado a lado. */
     const alto = lado ? ph + 54 : ph * 2 + 128;
     const gapX = 26;
-    const aria = 'Izquierda: las variantes del método sobre la curva semanal de concepción. Todas ponen el máximo en la semana 52 o en la 1, y reparten el mínimo entre las semanas 28, 29, 34 y 36. Derecha: comparación con la verdad medida en microdatos de registros vitales de 1999 a 2003. El método acierta la quincena del máximo y recupera 72% de su altura.';
+    const aria = 'Izquierda: las variantes del método sobre la curva semanal de concepción. Todas ponen el máximo en la semana 52 o en la 1, y reparten el mínimo entre las semanas 29, 31, 33, 34 y 36. Derecha: comparación con la verdad medida en microdatos de registros vitales de 1999 a 2003. El método acierta la quincena del máximo y recupera 72% de su altura.';
     const {svg, g} = lienzo(cont, w, alto, aria, 'f2-cap');
     const izq = 44;
     const panel = (ox, oy, titulo) => {
@@ -366,8 +366,8 @@ function figura2(datos) {
     for (const [, v] of variantes) trazo(g, v.semanal.map((y, k) => `${k ? 'L' : 'M'}${a.x(k)},${a.y(y)}`).join(''), '--variante', modo === 'compacto' ? 0.8 : 1, {opacity: modo === 'compacto' ? 0.45 : 0.55});
     trazo(g, s.indice.map((y, k) => `${k ? 'L' : 'M'}${a.x(k)},${a.y(y)}`).join(''), '--conc', 2.5);
     const notaA = modo === 'compacto'
-      ? ['El pico cae en la semana 52 o en la 1', 'en todas las variantes. El valle se', 'reparte entre la 28, la 29, la 34 y la 36.']
-      : ['El pico cae en la semana 52 o en la 1 en todas las variantes.', 'El valle se reparte entre la 28, la 29, la 34 y la 36.'];
+      ? ['El pico cae en la semana 52 o en la 1', 'en todas las variantes. El valle se', 'reparte entre la 29, la 31, la 33, la 34 y la 36.']
+      : ['El pico cae en la semana 52 o en la 1 en todas las variantes.', 'El valle se reparte entre la 29, la 31, la 33, la 34 y la 36.'];
     notaA.forEach((t, k) => txt(g, a.x(2), a.y(0.945) + k * 13, t, {'font-size': 10, class: k ? '' : 'anota'}));
 
     const b = panel(lado ? pw + gapX : 0, lado ? 22 : ph + 96, 'Contra la verdad conocida');
@@ -387,7 +387,7 @@ function figura2(datos) {
     trazo(g, vd.estimado_semanal.map((y, k) => `${k ? 'L' : 'M'}${b.x(k)},${b.y(y)}`).join(''), '--conc', 2);
     linea(g, b.x(51), b.y(vd.estimado_semanal[51]), b.x(51), b.y(vd.verdad_semanal[51]), {class: 'ref'});
     txt(g, b.x(49), b.y(1.1), 'acierta la quincena y atenúa el exceso:', {'text-anchor': 'end', 'font-size': 10, class: 'anota'});
-    txt(g, b.x(49), b.y(1.1) + 13, 'recupera 71,7% del pico de la 52 y 65,3% del de la 1', {'text-anchor': 'end', 'font-size': 10});
+    txt(g, b.x(49), b.y(1.1) + 13, 'recupera 71,9% del pico de la 52 y 65,2% del de la 1', {'text-anchor': 'end', 'font-size': 10});
     if (modo !== 'compacto') txt(g, b.x(2), b.y(0.945), 'La zona sombreada es el piso de ruido de la propia verdad.', {'font-size': 10});
 
     const cursorA = add(g, 'line', {y1: 22, y2: 22 + ph, class: 'cursor', opacity: 0});

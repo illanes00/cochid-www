@@ -32,7 +32,7 @@ test('el máximo semanal cae en la quincena de fin de año, semana 52 o 1', () =
   assert.ok(semana === 52 || semana === 1, `el máximo cayó en la semana ${semana}`);
   assert.deepEqual(semanal.quincena_pico.semanas, [52, 1]);
   assert.equal(semanal.quincena_pico.etiqueta, '24-dic a 07-ene');
-  assert.equal(Math.max(...semanal.desv_pct).toFixed(2), '8.71');
+  assert.equal(Math.max(...semanal.desv_pct).toFixed(2), '8.70');
 });
 
 test('el mínimo es una meseta y no una semana identificable', () => {
@@ -94,8 +94,7 @@ test('el calendario de cumpleaños tiene 366 fechas en todas sus columnas', () =
   assert.ok(cumpleanos.fecha.includes('29-feb'));
 });
 
-/* La página afirma 186 fechas tocadas y 179 limpias. Son cifras de la versión
-   v3 del modelo y no las de la síntesis editorial, que quedó en v2. */
+/* La página afirma 186 fechas tocadas y 179 limpias, ambas de base v3. */
 test('la máscara de feriados deja 179 fechas limpias y toca 186', () => {
   assert.equal(cumpleanos.n_fechas_sin_coef_feriado, 179);
   const tocadas = cumpleanos.frac_anios_con_coef_feriado.filter(v => v > 0).length;
@@ -189,6 +188,15 @@ test('la validación externa cubre 204 meses y 17 años', () => {
   assert.equal(validacion.mensual_serie.length, 204);
   assert.equal(validacion.por_anio.length, 17);
   assert.equal(validacion.corr_1992_2007.r, 0.9431);
+});
+
+/* El desfase de versión (E6 de la verificación) fue publicar siete bloques
+   calculados con base v2 mientras la base ya estaba en v3. Este contrato lo
+   fija: los nueve bloques declaran la misma versión. */
+test('el metadato declara los nueve bloques en base v3', () => {
+  assert.equal(meta.base_version, 'v3');
+  assert.match(meta.base, /base\.py v3 \(sha256 [0-9a-f]{12}\)/);
+  assert.deepEqual(meta.bloques_en_v3, ['concepcion', 'metodo', 'dia_semana', 'feriados', 'fiestas_patrias', 'cumpleanos', 'estratos', 'serie_larga', 'validacion']);
 });
 
 test('el metadato declara la población y la unidad publicable', () => {
