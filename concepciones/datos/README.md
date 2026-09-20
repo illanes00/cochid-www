@@ -111,10 +111,12 @@ es estable; el orden interno no lo es y no se publica como ranking.
 al 1 de octubre: `bloque_04sep_01oct` y una entrada por fecha con `indice_limpio`,
 `dif_vs_bloque`, `ee_dif`, `t`, `n_anios` y `en_ventana_feriado`.
 
-`feb29` trae el 29 de febrero aparte, con `uno_en_ciclo_de_4_anios` 1.790,8 y su IC95. El valor se
+`feb29` trae el 29 de febrero aparte, con `uno_en_ciclo_de_4_anios` 1.790,8 y su IC95. Los tres se
 corrigió el 2026-09-19: el denominador anterior, 1.461, suponía que la media del índice de los 365
-días es exactamente 1, y mide 1,0060934. El IC95 sigue construido sobre el denominador anterior y
-no se recalculó; el campo `nota_correccion` del propio archivo lo declara.
+días es exactamente 1, y mide 1,0060934. Los dos extremos del IC95 eran 1.461 dividido por los
+extremos del IC del índice, es decir la misma aritmética con el mismo sesgo, así que se reescalaron
+con el mismo denominador; el campo `nota_correccion` del propio archivo lo declara. Siguen siendo
+propagación de una fórmula cerrada y no un remuestreo propio del cociente.
 
 `ranking_semanal_limpio` agrega el índice limpio de nacimientos a 52 semanas: `semana`,
 `fecha_inicio`, `idx_limpio`, `se_entre_anios`, `top5` y `bottom5`. Es la escala a la que el
@@ -217,7 +219,7 @@ de `comparaciones` descansa en la misma serie y tampoco se publica.
 ambos lados. Dos avisos. Su `max_dif` elige la semana donde la diferencia es mayor y reporta el
 percentil puntual del bootstrap en esa misma semana, sin corregir por esa búsqueda: el intervalo
 honesto es una banda simultánea sobre las 52 semanas, que para el par pagado menos municipal va de
--0,0899 a -0,0355 en vez de -0,0826 a -0,0475. Y el archivo trae catorce comparaciones de
+-0,0899 a -0,0355, cerca de 1,6 veces más ancha que el intervalo puntual de este archivo. Y el archivo trae catorce comparaciones de
 amplitud, así que citar tres sin corregir por multiplicidad las presenta más firmes de lo que son.
 
 `latitud` trae `escala_vs_nacional` y `arm1_amp` por región. Su `spearman_11_sin_XI_XII` de 0,927
