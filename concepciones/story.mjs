@@ -243,15 +243,21 @@ function figura1(datos) {
     txt(g, izq - 8, topSup - 4, 'índice', {'text-anchor': 'end', 'font-size': 10});
     if (modo === 'amplio') txt(g, w - der + 8, topSup - 4, 'desviación', {'font-size': 10});
 
-    /* Anotaciones de bloque. Nunca un punto: el dato no identifica una semana. */
+    /* Anotaciones de bloque. Nunca un punto: el dato no identifica una semana.
+       Las probabilidades del duelo se leen de semanal.json y no se escriben a
+       mano: el número de remuestreos del bloque de concepción cambió de 400 a
+       2.000 y un conteo fijo queda mintiendo sobre el denominador. */
     const compacto = modo === 'compacto';
+    const gana = o => Object.entries(o || {}).sort((a, b) => b[1] - a[1]);
+    const gMax = gana(s.quincena_pico && s.quincena_pico.p_argmax);
+    const gMin = gana(s.valle_meseta && s.valle_meseta.p_argmin).slice(0, 3);
     const notaMax = compacto ? ['Máximo: 24-dic a 7-ene'] : ['Máximo: 24-dic a 7-ene', '+8,7% y +8,4%, empate', 'diferencia 0,32 puntos, IC95 -0,06 a +0,67;'];
-    if (modo === 'amplio') notaMax.push('la 52 gana en 379 de 400 remuestreos');
+    if (modo === 'amplio' && gMax.length) notaMax.push(`la ${gMax[0][0]} gana en ${f(gMax[0][1], 2)} de los remuestreos`);
     notaMax.forEach((t, k) => txt(g, x(358) - 10, topSup + 16 + k * 14, t, {
       'text-anchor': 'end', class: k ? '' : 'anota', 'font-size': k ? 10 : compacto ? 11 : 12, 'font-weight': k ? 400 : 600
     }));
     const notaMin = compacto ? ['Mínimo: meseta de 9-jul a 1-sep'] : ['Mínimo: una meseta de casi dos meses', 'entre -4,7% y -3,9%, sin semana identificable'];
-    if (modo === 'amplio') notaMin.push('la 34 gana en 272 de 400 remuestreos, la 30 en 83 y la 29 en 35');
+    if (modo === 'amplio' && gMin.length === 3) notaMin.push(`la ${gMin[0][0]} gana en ${f(gMin[0][1], 2)} de los remuestreos, la ${gMin[1][0]} en ${f(gMin[1][1], 2)} y la ${gMin[2][0]} en ${f(gMin[2][1], 2)}`);
     notaMin.forEach((t, k) => txt(g, x(217), topSup + (compacto ? 36 : 16) + k * 14, t, {
       'text-anchor': 'middle', class: k ? '' : 'anota', 'font-size': k ? 10 : compacto ? 11 : 12, 'font-weight': k ? 400 : 600
     }));
