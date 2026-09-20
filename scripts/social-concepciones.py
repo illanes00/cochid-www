@@ -92,11 +92,11 @@ def main():
 
     ax.annotate("Máximo: 24-dic a 7-ene", xy=(356, 1.093), ha="right", va="bottom",
                 fontfamily=SANS, fontsize=15, color=TINTA, fontweight="semibold")
-    ax.annotate("+8,7% y +8,5%, dos semanas empatadas", xy=(356, 1.077), ha="right", va="bottom",
+    ax.annotate("+8,7% y +8,4%, dos semanas empatadas", xy=(356, 1.077), ha="right", va="bottom",
                 fontfamily=SANS, fontsize=12, color=SUAVE)
     ax.annotate("Mínimo: una meseta de casi dos meses", xy=(217, 1.063), ha="center", va="bottom",
                 fontfamily=SANS, fontsize=14, color=TINTA, fontweight="semibold")
-    ax.annotate("entre -4,6% y -4,0%, sin semana identificable", xy=(217, 1.048), ha="center", va="bottom",
+    ax.annotate("entre -4,7% y -3,9%, sin semana identificable", xy=(217, 1.048), ha="center", va="bottom",
                 fontfamily=SANS, fontsize=11, color=SUAVE)
 
     fig.text(0.055, 0.885, "Cuándo se concibe en Chile", fontfamily=SANS, fontsize=40,
