@@ -6,18 +6,23 @@
 :root{
  --conc:#1f5d78;            /* curva y puntos de concepción */
  --conc-banda:#c4dde7;      /* relleno de la banda IC95 de concepción */
- --conc-suave:#6f9fb3;      /* curvas de estratos no destacados */
+ --conc-suave:#4d7b90;      /* curvas de estratos no destacados */
  --parto:#a8500d;           /* series del lado del parto */
  --parto-banda:#f0d7b8;     /* relleno de IC del lado del parto */
- --parto-crudo:#d79a5a;     /* serie cruda de nacimientos */
+ --parto-crudo:#b8752f;     /* serie cruda de nacimientos */
  --bloque:#e8eef1;          /* valle sombreado y bandas de descanso */
  --empate:#2f7d63;          /* quincena máxima leída como empate */
  --variante:#9aa8b2;        /* líneas del abanico de variantes */
  --verdad:#7a3f6d;          /* serie de verdad de los registros vitales */
- --rayado:#b8c3ca;          /* trama de fechas con coeficiente de feriado */
+ --rayado:#828f99;          /* trama de fechas con coeficiente de feriado */
+ --eje:#828f99;             /* ejes y ticks: 3,3 contra el papel, no 1,5 */
  --nulo:#8c96a0;            /* estimación no interpretable */
- --div-b4:#1b4f66;--div-b3:#3d7893;--div-b2:#79a8bd;--div-b1:#b9d3de;
- --div-a1:#f0cfa8;--div-a2:#dda36a;--div-a3:#c07636;--div-a4:#96470f;
+ /* Escala divergente del calendario. Los escalones interiores se oscurecen
+    hasta el tope que permite la rampa: un paso más y --div-a1 adelantaría a
+    --div-a2 y la escala dejaría de ser monótona. El escalón central usa el
+    papel, así que lleva contorno para no confundirse con el vacío. */
+ --div-b4:#1b4f66;--div-b3:#3d7893;--div-b2:#79a8bd;--div-b1:#9ec1d2;
+ --div-a1:#e2b884;--div-a2:#dda36a;--div-a3:#c07636;--div-a4:#96470f;
 }
 [data-theme=dark]{
  --conc:#8ecbe4;
@@ -30,7 +35,8 @@
  --empate:#83d6c5;
  --variante:#5d6d78;
  --verdad:#dda6cf;
- --rayado:#3c4b56;
+ --rayado:#6a757f;
+ --eje:#6a757f;
  --nulo:#6a757f;
  --div-b4:#a8dcef;--div-b3:#7fc2d9;--div-b2:#5a9cb4;--div-b1:#3a6d82;
  --div-a1:#7a5220;--div-a2:#a87335;--div-a3:#d3954a;--div-a4:#f4b878;
@@ -102,7 +108,8 @@ h2{font-size:clamp(1.8rem,2.9vw,2.7rem);line-height:1.12;font-weight:500;letter-
 .chart svg{width:100%;height:auto;display:block;overflow:visible;font-family:'IBM Plex Sans',sans-serif}
 .chart svg text{fill:var(--ink-muted)}
 .chart .cifra{font-family:'JetBrains Mono',monospace}
-.chart .eje{stroke:var(--line);stroke-width:1;fill:none}
+.chart .eje{stroke:var(--eje);stroke-width:1;fill:none}
+.chart .limite{stroke:var(--line-strong);stroke-width:1;fill:none}
 .chart .ref{stroke:var(--ink-muted);stroke-width:1;fill:none}
 .chart .marco{fill:none;stroke:var(--line)}
 .chart .anota{fill:var(--ink)}
@@ -119,7 +126,7 @@ h2{font-size:clamp(1.8rem,2.9vw,2.7rem);line-height:1.12;font-weight:500;letter-
 .chart .q-3{fill:var(--div-b3)}
 .chart .q-2{fill:var(--div-b2)}
 .chart .q-1{fill:var(--div-b1)}
-.chart .q0{fill:var(--paper-raised)}
+.chart .q0{fill:var(--paper-raised);stroke:var(--line);stroke-width:1}
 .chart .q1{fill:var(--div-a1)}
 .chart .q2{fill:var(--div-a2)}
 .chart .q3{fill:var(--div-a3)}
@@ -128,7 +135,7 @@ h2{font-size:clamp(1.8rem,2.9vw,2.7rem);line-height:1.12;font-weight:500;letter-
 .leyenda .q-3{background:var(--div-b3)}
 .leyenda .q-2{background:var(--div-b2)}
 .leyenda .q-1{background:var(--div-b1)}
-.leyenda .q0{background:var(--paper);border:1px solid var(--line)}
+.leyenda .q0{background:var(--paper-raised);border:1px solid var(--line)}
 .leyenda .q1{background:var(--div-a1)}
 .leyenda .q2{background:var(--div-a2)}
 .leyenda .q3{background:var(--div-a3)}

@@ -55,6 +55,26 @@ class ConcepcionesContractTests(unittest.TestCase):
         self.assertNotIn("class=\"overline\"", PAGINA)
         self.assertNotIn("class=\"eyebrow\"", PAGINA)
 
+    def test_the_home_block_of_the_study_carries_no_eyebrow(self):
+        """La regla H28 prohíbe la ceja sobre un título, también en la portada.
+
+        La aserción se acota a los dos bloques de cuaderno, que son los que
+        esta rama toca; las cejas del catálogo institucional son anteriores.
+        """
+        for ancla in ('id="cuaderno-concepciones"', 'id="cuaderno-luz"'):
+            inicio = HOME.index(ancla)
+            bloque = HOME[inicio:HOME.index("</section>", inicio)]
+            self.assertNotIn('class="eyebrow"', bloque)
+            self.assertNotIn('class="kicker"', bloque)
+
+    def test_the_shared_footer_spells_the_company_out(self):
+        """CANON prohíbe la sigla suelta en público, y el pie viaja a la página."""
+        footer = HOME[HOME.index('<footer class="gr-footer">'):]
+        self.assertNotIn(">CIS<", footer)
+        self.assertNotIn("(CIS,", footer)
+        self.assertNotIn("facturados por CIS", footer)
+        self.assertIn("Compañía de Innovación de Santiago", footer)
+
 
 if __name__ == "__main__":
     unittest.main()

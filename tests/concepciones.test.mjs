@@ -162,7 +162,16 @@ test('los estratos son 19 curvas de 52 puntos y 13 regiones', () => {
   assert.equal(estratos.curvas.nacional.escala_vs_nacional, null);
 });
 
-test('la región 11 queda marcada como contaminada por su volumen', () => {
+/* El archivo de origen marca el código de región 11 como NO VALIDO. La
+   advertencia vive en pagina.json, en dia_semana.estratos["region:Aysén"], y el
+   recorte publicado la reproduce textualmente en datos/README.md para que quien
+   descargue los datos pueda verificar las cifras que la página cita. */
+test('la advertencia textual de la región 11 viaja con los datos publicados', () => {
+  const dicc = leer('concepciones/datos/README.md');
+  assert.match(dicc, /NO VALIDO/);
+  for (const cifra of ['3627', '11338', '1779', '1880']) {
+    assert.ok(dicc.includes(cifra), `falta ${cifra} en la advertencia publicada`);
+  }
   const aysen = estratos.regiones['11'];
   assert.ok(aysen.n / 19 > 3000, 'la región 11 trae más nacimientos por año que el Aysén real');
 });

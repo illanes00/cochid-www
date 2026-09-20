@@ -232,16 +232,17 @@ neutra · `var(--accent)` solo para el foco y para el elemento seleccionado por 
 |---|---|---|---|
 | `--conc` | `#1f5d78` | `#8ecbe4` | curva y puntos de concepción (F1, F2, F8, F9, método) |
 | `--conc-banda` | `#c4dde7` | `#22485a` | relleno de la banda IC95 de concepción |
-| `--conc-suave` | `#6f9fb3` | `#4f7f93` | curvas de estratos no destacados en F8 |
+| `--conc-suave` | `#4d7b90` | `#4f7f93` | curvas de estratos no destacados en F8 |
 | `--parto` | `#a8500d` | `#ffd082` | series del lado del parto (F4, F5, F6, F7, panel inferior de F1) |
 | `--parto-banda` | `#f0d7b8` | `#4a3418` | relleno de IC del lado del parto |
-| `--parto-crudo` | `#d79a5a` | `#a8712f` | serie cruda de nacimientos en el panel inferior de F1 |
+| `--parto-crudo` | `#b8752f` | `#a8712f` | serie cruda de nacimientos en el panel inferior de F1 |
 | `--bloque` | `#e8eef1` | `#1d2b34` | relleno del valle sombreado y de las bandas de descanso |
 | `--empate` | `#2f7d63` | `#83d6c5` | marca de la quincena máxima leída como empate (F1) |
 | `--variante` | `#9aa8b2` | `#5d6d78` | las 22 líneas grises del abanico (F2) |
 | `--verdad` | `#7a3f6d` | `#dda6cf` | serie de verdad DEIS en la figura de método |
-| `--rayado` | `#b8c3ca` | `#3c4b56` | trama de las 187 fechas con coeficiente de feriado (F3) |
-| `--nulo` | `#8c96a0` | `#6a757f` | punto hueco de Aysén y de cualquier estimación no interpretable |
+| `--rayado` | `#828f99` | `#6a757f` | trama de las 186 fechas con coeficiente de feriado (F3) |
+| `--eje` | `#828f99` | `#6a757f` | ejes y ticks de las ocho figuras, sobre 3:1 contra el papel |
+| `--nulo` | `#8c96a0` | `#6a757f` | punto hueco de Aysén y círculo de los años de retroceso en F4 |
 
 ### 3.3 Escala divergente de F3
 
@@ -253,9 +254,9 @@ y se aplica con clase (`.q-4` a `.q4`), sin interpolación en JavaScript y sin r
 | `.q-4` | `--div-b4` | `#1b4f66` | `#a8dcef` |
 | `.q-3` | `--div-b3` | `#3d7893` | `#7fc2d9` |
 | `.q-2` | `--div-b2` | `#79a8bd` | `#5a9cb4` |
-| `.q-1` | `--div-b1` | `#b9d3de` | `#3a6d82` |
-| `.q0` | `--div-c0` | `var(--paper-raised)` | `var(--paper-raised)` |
-| `.q1` | `--div-a1` | `#f0cfa8` | `#7a5220` |
+| `.q-1` | `--div-b1` | `#9ec1d2` | `#3a6d82` |
+| `.q0` | `--div-c0` | `var(--paper-raised)` con contorno `var(--line)` | igual |
+| `.q1` | `--div-a1` | `#e2b884` | `#7a5220` |
 | `.q2` | `--div-a2` | `#dda36a` | `#a87335` |
 | `.q3` | `--div-a3` | `#c07636` | `#d3954a` |
 | `.q4` | `--div-a4` | `#96470f` | `#f4b878` |

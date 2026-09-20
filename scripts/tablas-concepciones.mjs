@@ -134,13 +134,13 @@ export function tablas(d) {
   const mb = d.feriados.matriz_B, ss = d.feriados.semana_santa_perfil;
   const ssPorK = new Map(ss.map(p => [p.dia_rel, p]));
   t.T_F5_MATRIZ = tabla({
-    caption: 'Cambio porcentual de nacimientos alrededor del feriado, por día de la semana en que cae, con IC95. La última columna es Semana Santa, con el día 0 en el Viernes Santo y la razón de observados sobre esperados convertida a porcentaje.',
+    caption: 'Cambio porcentual de nacimientos alrededor del feriado, por día de la semana en que cae, con IC95. La última columna es Semana Santa, con el día 0 en el Viernes Santo y la razón de observados sobre esperados convertida a porcentaje. El perfil de Semana Santa llega a diez días por lado y por eso la tabla va de -10 a +10; las columnas de día de semana solo tienen dato entre -7 y +7, que es donde están medidas.',
     head: ['Día relativo', ...DOW_LABEL, 'Semana Santa'],
-    rows: Array.from({length: 15}, (_, i) => {
-      const k = i - 7;
+    rows: Array.from({length: 21}, (_, i) => {
+      const k = i - 10;
       const celdas = MATRIZ_KEYS.map(key => {
         const p = mb[key].find(x => x.k === k);
-        return `${num(p.pct)}% [${num(p.lo)}; ${num(p.hi)}]`;
+        return p ? `${num(p.pct)}% [${num(p.lo)}; ${num(p.hi)}]` : 'sin dato';
       });
       const p = ssPorK.get(k);
       return [k > 0 ? `+${k}` : String(k), ...celdas, p ? `${num((p.razon - 1) * 100)}%` : 'sin dato'];
@@ -180,12 +180,16 @@ export function tablas(d) {
   /* F8 · estratos y regiones */
   const cu = d.estratos.curvas;
   t.T_F8_ESTRATOS = tabla({
-    caption: 'Amplitud de la curva semanal de concepción por estrato, con IC95. Estas curvas salen del pipeline por estrato, que no es el de la figura 1.',
+    caption: 'Amplitud de la curva semanal de concepción por estrato, con IC95. Estas curvas salen del pipeline por estrato, que no es el de la figura 1. La serie semanal completa de cada estrato está en el archivo de datos. La zona austral no es interpretable: la región 11, cuyo código de origen está contaminado, es dos tercios de ese estrato.',
     head: ['Estrato', 'Amplitud', 'IC95', 'Semana del pico', 'Semana del valle', 'Escala contra la nacional'],
-    rows: Object.entries(cu).map(([k, x]) => [
-      ESTRATOS_NOMBRE[k] || k, num(x.amplitud, 4), ic(x.amplitud_ic), x.semana_pico, x.semana_valle,
-      x.escala_vs_nacional === null ? 'referencia' : `${num(x.escala_vs_nacional, 3)} [${ic(x.escala_ic, 3)}]`
-    ])
+    rows: Object.entries(cu).map(([k, x]) => {
+      const nulo = k === 'zona:austral';
+      return [
+        ESTRATOS_NOMBRE[k] || k, nulo ? 'no interpretable' : num(x.amplitud, 4),
+        nulo ? 'no interpretable' : ic(x.amplitud_ic), x.semana_pico, x.semana_valle,
+        nulo ? 'no interpretable' : x.escala_vs_nacional === null ? 'referencia' : `${num(x.escala_vs_nacional, 3)} [${ic(x.escala_ic, 3)}]`
+      ];
+    })
   });
   const reg = d.estratos.regiones;
   t.T_F8_REGIONES = tabla({

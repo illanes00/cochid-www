@@ -183,13 +183,27 @@ calcula la escala.
 norte a sur se arma con `lat`. La escala sube hasta la Araucanía y cae en Aysén y Magallanes:
 es una joroba, no una recta, y no se debe citar una pendiente lineal sobre las 13.
 
+**La región 11 no es interpretable.** El archivo de origen la marca como no válida, y la
+advertencia se reproduce acá textual, tal como viene en `pagina.json`, en
+`dia_semana.estratos["region:Aysén"].advertencia`:
+
+> NO VALIDO: region=11 en nac_diario_estratos.csv trae 3627-11338 nacimientos por año en
+> 1989-2004 contra 1779-1880 en 2006-2007 (Aysén real ~1.800); el código 11 está contaminado
+> con alumnos de otra región. No interpretar.
+
+El defecto alcanza al estrato `zona:austral`, porque la región 11 aporta 105.934 de los 150.271
+nacimientos de las dos regiones australes, o sea cerca de dos tercios. Por eso la página dibuja
+Aysén hueco y marca las dos filas como no interpretables. El contraste `zona:sur - zona:austral`
+de `comparaciones` descansa en la misma serie y tampoco se publica.
+
 `comparaciones` son 17 contrastes pareados entre estratos, con los mismos remuestreos de años en
 ambos lados. `latitud` trae `escala_vs_nacional` y `arm1_amp` por región. `febrero_crudo` es el
 valle de febrero del particular pagado medido sin modelo. `parto_domingo` da el déficit de
 domingo y sábado por estrato.
 
-El pico cae en la semana 52 o en la 1 en los 19 estratos y en las 13 regiones. Lo que varía es
-la amplitud.
+El pico cae en la semana 52 o en la 1 en los 19 estratos, y en 11 de las 13 regiones:
+O'Higgins marca semana 16 y Antofagasta 51, dos excepciones que el bootstrap deja sin
+resolver. Lo que varía es la amplitud.
 
 ### `serie-larga.json` (11,5 KB) · noventa años de fondo
 
