@@ -45,8 +45,8 @@ semana.
 | `etiqueta` | 52 | rango de fechas, por ejemplo `01-ene a 07-ene` |
 | `indice`, `indice_lo`, `indice_hi` | 52 | índice de concepción con IC95 |
 | `desv_pct`, `desv_lo`, `desv_hi` | 52 | desviación sobre la uniforme, en puntos porcentuales |
-| `significativo` | 52 | `true` si el IC95 de la desviación excluye cero (47 de 52) |
-| `amplitud_pp` | 1 | 13,32: máximo menos mínimo semanal |
+| `significativo` | 52 | `true` si el IC95 de la desviación excluye cero (47 de 52). No corrige multiplicidad: son 52 pruebas a la vez y con 400 remuestreos no hay resolución para un conteo corregido |
+| `amplitud_pp` | 1 | 13,32: máximo menos mínimo semanal. IC95 bootstrap de 11,81 a 15,12; entre lambda 300 y 10.000 recorre de 14,8 a 11,3 |
 | `n_semanas_significativas` | 1 | 47 |
 | `quincena_pico` | dict | `semanas` [52, 1], `etiqueta`, `p_argmax` (probabilidad bootstrap de que cada semana sea el máximo) y `duelo` (52 contra 1: `dif_pp`, `ic95`, `p_a_mayor_b`) |
 | `valle_meseta` | dict | igual para el valle ancho de las semanas 28 a 35 |
@@ -57,7 +57,9 @@ La quincena y la meseta se dibujan como bloques, nunca como un punto máximo o m
 semanas 52 y 1 están empatadas y el mínimo se reparte entre la 34, la 29 y la 30.
 
 `doy_concepcion` está para la figura pedagógica de día contra semana. No sirve para leer un día
-concreto: el método devuelve un impulso de un día como una campana de 25 a 26 días de ancho.
+concreto: el método devuelve un impulso de un día como una campana de 25 a 26 días de ancho. Ese
+ancho es del método y no del embarazo: la distribución de la gestación mide 21,2 días a media
+altura, y con una penalización diez veces menor la campana baja a 19 o 20 días.
 
 ### `mensual.json` (2,0 KB)
 
@@ -74,10 +76,10 @@ concreto: el método devuelve un impulso de un día como una campana de 25 a 26 
 | `variantes` | 22 | una por especificación alternativa. Cada una trae `semanal` (52), `r_vs_base`, `sem_pico`, `sem_valle`, `valor_pico`, `valor_valle` |
 | `boot_sem_pico` | 2 | conteo de remuestreos en que cada semana fue el máximo, sobre 400 |
 | `boot_sem_valle` | 6 | lo mismo para el mínimo |
-| `validacion_deis` | 4 | `verdad_semanal`, `estimado_semanal`, `estimado_lo`, `estimado_hi`, 52 cada una, sobre el DEIS 1999 a 2003 |
-| `cobertura_ic95` | dict | `media` 0,608, `por_sim` (5 simulaciones) y `n_sims` |
-| `se_boot_semanal_medio` | 1 | error estándar bootstrap medio de la curva semanal |
-| `robustez_lam` | 3 | curva con penalización 300, 1000 y 3000 |
+| `validacion_deis` | 4 | `verdad_semanal`, `estimado_semanal`, `estimado_lo`, `estimado_hi`, 52 cada una, sobre el DEIS 1999 a 2003. El máximo de `verdad_semanal` cae en la semana 1 y el de `estimado_semanal` en la 52: el método acierta la quincena, no la semana exacta |
+| `cobertura_ic95` | dict | `media` 0,608, `por_sim` (5 simulaciones) y `n_sims`. Son 5 corridas con rango 0,481 a 0,750: leer "cerca de 60%", no tres cifras |
+| `se_boot_semanal_medio` | 1 | error estándar bootstrap medio de la curva semanal. Cubre la verdad en 61,5% de las semanas y no en 95%, así que todo umbral de detección calculado con él es optimista |
+| `robustez_lam` | 3 | curva con penalización 300, 1000 y 3000. La amplitud del pico va de +9,71% a +7,63% entre los extremos: un recorrido tan ancho como el IC95 de la semana 52 y no contenido en él |
 
 El nombre de la variante es la clave del diccionario. El abanico sostiene que el pico es robusto
 y el valle no: en las 22 variantes el pico cae dentro de la quincena y el valle salta entre las
@@ -109,7 +111,10 @@ es estable; el orden interno no lo es y no se publica como ranking.
 al 1 de octubre: `bloque_04sep_01oct` y una entrada por fecha con `indice_limpio`,
 `dif_vs_bloque`, `ee_dif`, `t`, `n_anios` y `en_ventana_feriado`.
 
-`feb29` trae el 29 de febrero aparte, con `uno_en_ciclo_de_4_anios` 1.780 y su IC95.
+`feb29` trae el 29 de febrero aparte, con `uno_en_ciclo_de_4_anios` 1.790,8 y su IC95. El valor se
+corrigió el 2026-09-19: el denominador anterior, 1.461, suponía que la media del índice de los 365
+días es exactamente 1, y mide 1,0060934. El IC95 sigue construido sobre el denominador anterior y
+no se recalculó; el campo `nota_correccion` del propio archivo lo declara.
 
 `ranking_semanal_limpio` agrega el índice limpio de nacimientos a 52 semanas: `semana`,
 `fecha_inicio`, `idx_limpio`, `se_entre_anios`, `top5` y `bottom5`. Es la escala a la que el
@@ -161,14 +166,20 @@ de septiembre.
 `por_largo` agrupa esos 19 años en los cuatro largos.
 
 `reg_deficit_descanso` trae la regresión del déficit contra el largo, con sus dos pruebas de
-permutación.
+permutación. **Su pendiente no es una dosis-respuesta.** El déficit del descanso es la suma sobre
+una ventana cuyo largo es la variable explicativa, así que bajo un déficit por día constante la
+pendiente iguala ese déficit por día y no puede ser cero; el intercepto de +0,031 con p 0,84
+confirma que la recta pasa por el origen. El contraste que sí separa dosis de aritmética es el
+déficit por día contra el largo, y da -0,0123 con p 0,24. Las dos pruebas de permutación del
+archivo son además la misma prueba: `habiles` es igual a `largo - 2` en los 19 años.
 
 `concepcion_semanal_33_43` son 11 semanas alrededor de septiembre con `indice`, `lo` y `hi`, y
 `concepcion_deis_integral` es la integral del bulto de concepciones medida por datación directa
-en microdatos DEIS, 1,169 días equivalentes.
+en microdatos DEIS, 1,169 días equivalentes. Su IC95 solo cubre la dispersión entre los cinco años
+medidos: con otras ventanas de integración razonables la cifra va de 0,87 a 1,78.
 
-El déficit del descanso crece con el largo; el bulto de concepciones no escala con el largo de
-forma detectable.
+El déficit total del descanso crece con el largo porque hay más días libres, no porque cada día
+libre cueste más; y el bulto de concepciones no escala con el largo de forma detectable.
 
 ### `estratos.json` (37,7 KB) · heterogeneidad
 
@@ -177,6 +188,12 @@ por ruralidad y tres períodos. Cada uno trae `semanal`, `lo`, `hi` (52 cada una
 `amplitud_ic`, `semana_pico`, `semana_valle`, `escala_vs_nacional` y `escala_ic`. Las dos
 últimas son `null` en `nacional`, porque la curva nacional es la referencia contra la que se
 calcula la escala.
+
+**Aviso sobre `escala_ic` de los tres estratos de período.** En `per:1989-1995`, `per:1996-2002` y
+`per:2003-2007` ese intervalo se construyó contra la curva nacional puntual y no contra el arreglo
+de remuestreos, de modo que ignora la incertidumbre de la referencia y es sistemáticamente más
+angosto que el `escala_ic` de los otros dieciséis estratos, pese a llamarse igual. No son
+comparables entre sí. Las `amplitud` y `amplitud_ic` de esos tres estratos no tienen el problema.
 
 `regiones` tiene las 13 regiones, con `lat` (latitud de la capital regional), `n`, `amplitud`,
 `amplitud_ic`, `escala_vs_nacional`, `escala_ic`, `semana_pico` y `semana_valle`. El orden de
@@ -197,7 +214,17 @@ Aysén hueco y marca las dos filas como no interpretables. El contraste `zona:su
 de `comparaciones` descansa en la misma serie y tampoco se publica.
 
 `comparaciones` son 17 contrastes pareados entre estratos, con los mismos remuestreos de años en
-ambos lados. `latitud` trae `escala_vs_nacional` y `arm1_amp` por región. `febrero_crudo` es el
+ambos lados. Dos avisos. Su `max_dif` elige la semana donde la diferencia es mayor y reporta el
+percentil puntual del bootstrap en esa misma semana, sin corregir por esa búsqueda: el intervalo
+honesto es una banda simultánea sobre las 52 semanas, que para el par pagado menos municipal va de
+-0,0899 a -0,0355 en vez de -0,0826 a -0,0475. Y el archivo trae catorce comparaciones de
+amplitud, así que citar tres sin corregir por multiplicidad las presenta más firmes de lo que son.
+
+`latitud` trae `escala_vs_nacional` y `arm1_amp` por región. Su `spearman_11_sin_XI_XII` de 0,927
+es la correlación de rango de la ESCALA (y del semi-armónico anual, que coincide por rangos), no
+de la columna `amplitud`: sobre esas mismas 11 regiones la de la amplitud es 0,791. Y esas 11
+regiones dejan fuera a Magallanes, que no tiene defecto de datos. Sobre las 12 regiones
+publicables, es decir todas menos la 11, la correlación es 0,797 en amplitud y 0,671 en escala. `febrero_crudo` es el
 valle de febrero del particular pagado medido sin modelo. `parto_domingo` da el déficit de
 domingo y sábado por estrato.
 

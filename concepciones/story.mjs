@@ -337,7 +337,7 @@ function figura2(datos) {
        necesita los mismos 32 px de margen que el modo lado a lado. */
     const alto = lado ? ph + 54 : ph * 2 + 128;
     const gapX = 26;
-    const aria = 'Izquierda: las variantes del método sobre la curva semanal de concepción. Todas ponen el máximo en la semana 52 o en la 1, y reparten el mínimo entre las semanas 28, 29, 34 y 36. Derecha: comparación con la verdad medida en microdatos de registros vitales de 1999 a 2003. El método acierta la semana del máximo y recupera 72% de su altura.';
+    const aria = 'Izquierda: las variantes del método sobre la curva semanal de concepción. Todas ponen el máximo en la semana 52 o en la 1, y reparten el mínimo entre las semanas 28, 29, 34 y 36. Derecha: comparación con la verdad medida en microdatos de registros vitales de 1999 a 2003. El método acierta la quincena del máximo y recupera 72% de su altura.';
     const {svg, g} = lienzo(cont, w, alto, aria, 'f2-cap');
     const izq = 44;
     const panel = (ox, oy, titulo) => {
@@ -386,7 +386,7 @@ function figura2(datos) {
     trazo(g, vd.verdad_semanal.map((y, k) => `${k ? 'L' : 'M'}${b.x(k)},${b.y(y)}`).join(''), '--verdad', 2);
     trazo(g, vd.estimado_semanal.map((y, k) => `${k ? 'L' : 'M'}${b.x(k)},${b.y(y)}`).join(''), '--conc', 2);
     linea(g, b.x(51), b.y(vd.estimado_semanal[51]), b.x(51), b.y(vd.verdad_semanal[51]), {class: 'ref'});
-    txt(g, b.x(49), b.y(1.1), 'acierta la semana y atenúa el exceso:', {'text-anchor': 'end', 'font-size': 10, class: 'anota'});
+    txt(g, b.x(49), b.y(1.1), 'acierta la quincena y atenúa el exceso:', {'text-anchor': 'end', 'font-size': 10, class: 'anota'});
     txt(g, b.x(49), b.y(1.1) + 13, 'recupera 71,7% del pico de la 52 y 65,3% del de la 1', {'text-anchor': 'end', 'font-size': 10});
     if (modo !== 'compacto') txt(g, b.x(2), b.y(0.945), 'La zona sombreada es el piso de ruido de la propia verdad.', {'font-size': 10});
 
@@ -641,7 +641,7 @@ function figura6(datos) {
     /* Los rótulos de largo del descanso del eje inferior se escriben 16 px bajo
        el borde del panel: el lienzo los tiene que contener. */
     const alto = hA + hB + 112;
-    const aria = 'Arriba: perfil de nacimientos alrededor del 18 de septiembre, de siete días antes a catorce después, separado por el largo del descanso. El 18 y el 19 caen 28,0% y 29,1%. Abajo: el déficit crece con el largo del descanso, 0,175 días equivalentes menos por cada día adicional, intervalo de 0,255 a 0,096, y se satura entre cuatro y cinco días.';
+    const aria = 'Arriba: perfil de nacimientos alrededor del 18 de septiembre, de siete días antes a catorce después, separado por el largo del descanso. El 18 y el 19 caen 28,0% y 29,1%. Abajo: el déficit total crece con el largo del descanso porque hay más días libres, no porque cada día libre cueste más: el déficit por día no crece con el largo.';
     const {svg, g} = lienzo(cont, w, alto, aria, 'f6-cap');
 
     const oyA = 22;
@@ -713,10 +713,10 @@ function figura6(datos) {
     }
     linea(g, xB(1.6), oyB + hB, xB(5.6), oyB + hB, {class: 'eje'});
     const notaReg = modo === 'amplio'
-      ? [`${f(reg.b, 3)} días equivalentes por cada día adicional, IC95 ${f(reg.ic95[0], 3)} a ${f(reg.ic95[1], 3)}`,
-        'p de permutación 0,00015. Se satura entre 4 y 5 días: el día sándwich se trabaja en parte.']
-      : [`${f(reg.b, 3)} días equivalentes por cada`, `día adicional, IC95 ${f(reg.ic95[0], 3)} a ${f(reg.ic95[1], 3)}`,
-        'p de permutación 0,00015. Se satura', 'entre 4 y 5 días.'];
+      ? [`La recta cae ${f(-reg.b, 3)} días equivalentes por cada día adicional y pasa por el origen:`,
+        'es la suma de más días libres, no un costo mayor por día. El déficit por día no crece con el largo.']
+      : [`La recta cae ${f(-reg.b, 3)} días equivalentes por`, 'cada día adicional y pasa por el origen:',
+        'es la suma de más días libres, no un costo', 'mayor por día.'];
     notaReg.forEach((t, k) => txt(g, xB(1.7), yB(-1.15) + k * 13, t, {'font-size': 10, class: k ? '' : 'anota'}));
 
     const cursor = add(g, 'line', {y1: oyA, y2: oyA + hA, class: 'cursor', opacity: 0});
@@ -958,10 +958,10 @@ function figura8(datos) {
     });
     if (modo !== 'compacto') {
       const pie = modo === 'amplio'
-        ? ['Entre las 11 regiones continentales la escala sube de norte a sur con tres inversiones en la zona central: la correlación de rango es 0,927.',
+        ? ['Sobre las doce regiones publicables la escala sube de norte a sur con tres inversiones en la zona central: la correlación de rango es 0,671.',
           'No se dibuja ninguna recta ajustada: una recta sobre una joroba entrega un número que cambia según cómo se ponderen las regiones.']
-        : ['Entre las 11 regiones continentales la escala sube de norte a sur',
-          'con tres inversiones en la zona central: la correlación de rango es 0,927.',
+        : ['Sobre las doce regiones publicables la escala sube de norte a sur',
+          'con tres inversiones en la zona central: la correlación de rango es 0,671.',
           'No se dibuja ninguna recta ajustada: una recta sobre una joroba',
           'entrega un número que cambia según cómo se ponderen las regiones.'];
       pie.forEach((t, k) => txt(g, 0, oyB + altoB - 8 + k * 13, t, {'font-size': 10, class: k ? '' : 'anota'}));
