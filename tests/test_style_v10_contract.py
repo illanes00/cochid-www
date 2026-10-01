@@ -7,7 +7,7 @@ ROOT = Path(__file__).resolve().parents[1]
 HTML = (ROOT / "index.html").read_text(encoding="utf-8")
 KIT_HOST = "https://kit.innovacionsantiago.cl"
 CANONICAL_BASE = re.compile(re.escape(KIT_HOST) + r"/v10/[0-9a-f]{64}")
-CANDIDATE_DIGEST = "727a7caf75e1908ba6faa3fb74e39cc2de938344664004ed11a7c3afc72e083a"
+CANDIDATE_DIGEST = "d4b1a31b65e7ded392140cd72deaca3b05cb9975f328985439981f90a16eb2c0"
 
 
 def _kit_bases():
@@ -18,8 +18,8 @@ class CochidMainStyleV10ContractTests(unittest.TestCase):
     def test_pins_the_published_candidate_with_shared_chrome(self):
         base = f"{KIT_HOST}/v10/{CANDIDATE_DIGEST}"
         self.assertGreaterEqual(HTML.count(base), 6)
-        self.assertIn('integrity="sha384-cVmsxwBCIPKChOBf+YELNul4lAO8gpYg+3ohBx1kcxLwJaRDIYiNumldit5Pv2jU"', HTML)
-        self.assertIn('integrity="sha384-m7Z9oSweI4b5oNbXyiG20aM+4PFgYOH9muFaRgRfR70HoFMFRf/58yaEThT64SNL"', HTML)
+        self.assertIn('integrity="sha384-F79J0AwbjOCoa3a6TYu0MEw4+hxR2YbW5818yuXZir7+HRkyHw/6GEeZk6CCY1YX"', HTML)
+        self.assertIn('integrity="sha384-MT1HZ0Cf/qwgiPQgwBeNKATmOJRCuPYZSGoSyk8APosCSwULDjCwKTlt6htx+YFH"', HTML)
         self.assertIn("chrome.js", HTML)
         self.assertNotIn("4cb4a4f28aeb26aa5b8c33c591c54a418c280db53be46a5d0d0cfd2c2c803bc4", HTML)
 
@@ -90,7 +90,7 @@ class CochidMainStyleV10ContractTests(unittest.TestCase):
         self.assertNotIn("ccnav", HTML)
         self.assertNotIn("ccfooter", HTML)
         self.assertNotIn("mobile-nav", HTML)
-        for label in ("Datos", "Qué es COCHID", "Ecosistema", "Servicios", "Metodología"):
+        for label in ("Datos", "Mapas", "Investigación", "Metodología"):
             self.assertIn(f">{label}</a>", HTML)
 
     def test_uses_the_canonical_lockup_and_grouped_ecosystem_navigation(self):
@@ -99,11 +99,12 @@ class CochidMainStyleV10ContractTests(unittest.TestCase):
         self.assertNotIn("un proyecto de la Compañía de Innovación de Santiago", HTML)
         self.assertNotIn('"parentOrganization"', HTML)
         self.assertNotIn('class="brand-wordmark"', HTML)
-        self.assertIn('class="cochid-brand-plate"', HTML)
-        self.assertIn("background: #fff", HTML)
-        self.assertIn("height: 40px", HTML)
-        self.assertIn('href="#que-es-cochid"', HTML)
-        self.assertIn('href="#servicios"', HTML)
+        self.assertIn('class="gr-logo-claro"', HTML)
+        self.assertIn('class="gr-logo-oscuro"', HTML)
+        self.assertIn("/assets/brands/cochid-lockup-dark.svg", HTML)
+        self.assertNotIn("cochid-brand-plate", HTML)
+        self.assertIn('href="/#que-es-cochid"', HTML)
+        self.assertIn('id="servicios"', HTML)
         self.assertNotIn("Iniciar sesión</a>", HTML)
         self.assertNotIn("filter: invert", HTML)
 

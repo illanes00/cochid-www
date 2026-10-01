@@ -8,7 +8,7 @@ for(const file of ['index.html','robots.txt','sitemap.xml'])await cp(new URL(fil
 const kit=home.match(/^.*(?:<link[^>]+(?:style\.css|rel="icon")|<script[^>]+(?:theme\.js|chrome\.js)).*$/gm).join('\n');
 const footer=home.match(/<footer class="gr-footer">[\s\S]*?<\/footer>/)[0];
 const baseHeader=home.match(/<header class="gr-nav">[\s\S]*?<\/header>/)[0]
- .replace(/href="#que-es-cochid"/g,'href="/#que-es-cochid"').replace(/href="#productos"/g,'href="/#productos"').replace(/href="#servicios"/g,'href="/#servicios"');
+ .replace(/href="#investigaciones"/g,'href="/#investigaciones"').replace(/href="#productos"/g,'href="/#productos"').replace(/href="#servicios"/g,'href="/#servicios"');
 const enlace=(href,texto)=>`<a class="gr-nav__link" href="${href}">${texto}</a>`;
 /* El chrome de la portada trae su propio grupo de anclas; cada especial lo
    reemplaza por el suyo. */

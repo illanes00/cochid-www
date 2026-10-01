@@ -45,15 +45,14 @@ class CochidHomeContractTests(unittest.TestCase):
     def test_presents_cochid_as_the_company_and_datos_as_its_primary_product(self):
         self.assertIn('<link rel="canonical" href="https://cochid.cl/">', HTML)
         self.assertIn("Compañía Chilena de Inteligencia de Datos", HTML)
-        hero = re.search(r'<section class="hero">(.*?)</section>', HTML, re.DOTALL)
-        self.assertIsNotNone(hero, "falta el hero institucional")
-        primary = re.search(
-            r'<a href="([^"]+)" class="btn-primary">([^<]+)</a>',
-            hero.group(1),
-        )
-        self.assertIsNotNone(primary, "falta la acción principal")
-        self.assertEqual("https://datos.cochid.cl/", primary.group(1))
-        self.assertEqual("Abrir COCHID Datos", primary.group(2))
+        hero = re.search(r'<section class="hero"[^>]*>(.*?)</section>', HTML, re.DOTALL)
+        self.assertIsNotNone(hero, "falta la entrada del sitio")
+        self.assertIn('href="https://datos.cochid.cl/catalogo"', hero.group(1))
+        self.assertIn("Buscar datos", hero.group(1))
+        self.assertIn("Explorar territorio", hero.group(1))
+        self.assertIn("Leer investigaciones", hero.group(1))
+        self.assertIn('<details id="mas-cochid">', HTML)
+        self.assertNotIn('<details id="mas-cochid" open', HTML)
 
     def test_featured_study_states_its_commission_and_independent_authorship(self):
         study = re.search(
@@ -169,7 +168,7 @@ class CochidHomeContractTests(unittest.TestCase):
     def test_hero_uses_clear_spanish_and_routes_into_the_company(self):
         self.assertIn("fuentes públicas", HTML)
         self.assertNotIn("La <em>data pública</em>", HTML)
-        for destination in ("#productos", "#que-es-cochid", "https://datos.cochid.cl/"):
+        for destination in ("#investigaciones", "https://datos.cochid.cl/catalogo", "https://datos.cochid.cl/"):
             self.assertIn(f'href="{destination}"', HTML)
 
     def test_does_not_repeat_unverified_or_stale_data_metrics(self):

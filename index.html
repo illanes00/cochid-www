@@ -16,7 +16,7 @@
   <meta property="og:image:alt" content="Cobertura y protección financiera de medicamentos en Chile">
   <meta name="color-scheme" content="light dark">
   <link rel="canonical" href="https://cochid.cl/">
-  <link rel="icon" type="image/svg+xml" href="https://kit.innovacionsantiago.cl/v10/727a7caf75e1908ba6faa3fb74e39cc2de938344664004ed11a7c3afc72e083a/assets/chrome/favicons/cochid.svg">
+  <link rel="icon" type="image/svg+xml" href="https://kit.innovacionsantiago.cl/v10/d4b1a31b65e7ded392140cd72deaca3b05cb9975f328985439981f90a16eb2c0/assets/chrome/favicons/cochid.svg">
 
   <!-- Indieweb: rel=me identity links + authorization endpoint -->
   <link rel="me" href="https://github.com/illanes00">
@@ -33,7 +33,7 @@
     "name": "COCHID",
     "alternateName": "Compañía Chilena de Inteligencia de Datos",
     "url": "https://cochid.cl",
-    "logo": "https://kit.innovacionsantiago.cl/v10/727a7caf75e1908ba6faa3fb74e39cc2de938344664004ed11a7c3afc72e083a/assets/brands/cochid-mark.svg",
+    "logo": "https://kit.innovacionsantiago.cl/v10/d4b1a31b65e7ded392140cd72deaca3b05cb9975f328985439981f90a16eb2c0/assets/brands/cochid-mark.svg",
     "founder": {
       "@type": "Person",
       "name": "Martín Illanes",
@@ -116,85 +116,57 @@
   }
   </script>
 
-  <link rel="stylesheet" href="https://kit.innovacionsantiago.cl/v10/727a7caf75e1908ba6faa3fb74e39cc2de938344664004ed11a7c3afc72e083a/style.css" integrity="sha384-cVmsxwBCIPKChOBf+YELNul4lAO8gpYg+3ohBx1kcxLwJaRDIYiNumldit5Pv2jU" crossorigin="anonymous">
-  <script src="https://kit.innovacionsantiago.cl/v10/727a7caf75e1908ba6faa3fb74e39cc2de938344664004ed11a7c3afc72e083a/theme.js" integrity="sha384-4z/J3/xbpw17qJScwLAq3N2hW5F9+5M9by+yIDuu63LedHlPJq2cZE716lDAxL3c" crossorigin="anonymous"></script>
-  <script defer src="https://kit.innovacionsantiago.cl/v10/727a7caf75e1908ba6faa3fb74e39cc2de938344664004ed11a7c3afc72e083a/chrome.js" integrity="sha384-m7Z9oSweI4b5oNbXyiG20aM+4PFgYOH9muFaRgRfR70HoFMFRf/58yaEThT64SNL" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://kit.innovacionsantiago.cl/v10/d4b1a31b65e7ded392140cd72deaca3b05cb9975f328985439981f90a16eb2c0/style.css" integrity="sha384-F79J0AwbjOCoa3a6TYu0MEw4+hxR2YbW5818yuXZir7+HRkyHw/6GEeZk6CCY1YX" crossorigin="anonymous">
+  <script src="https://kit.innovacionsantiago.cl/v10/d4b1a31b65e7ded392140cd72deaca3b05cb9975f328985439981f90a16eb2c0/theme.js" integrity="sha384-4z/J3/xbpw17qJScwLAq3N2hW5F9+5M9by+yIDuu63LedHlPJq2cZE716lDAxL3c" crossorigin="anonymous"></script>
+  <script defer src="https://kit.innovacionsantiago.cl/v10/d4b1a31b65e7ded392140cd72deaca3b05cb9975f328985439981f90a16eb2c0/chrome.js" integrity="sha384-MT1HZ0Cf/qwgiPQgwBeNKATmOJRCuPYZSGoSyk8APosCSwULDjCwKTlt6htx+YFH" crossorigin="anonymous"></script>
 
   <style>
-    :root { --bg: var(--paper); --muted: var(--ink-muted); --cis-accent: var(--accent); --shell-bg: var(--paper-raised); }
-    html, body { max-width: 100%; overflow-x: clip; }
-    body { background: var(--bg); color: var(--ink); font-family: "IBM Plex Sans", sans-serif; hyphens: none; }
-    body, main, section, .gr-nav__inner, .gr-footer__top, .temas-grid, .tema-card { min-width: 0; }
-    code, .gr-footer a { overflow-wrap: anywhere; }
-    img, iframe, svg { max-width: 100%; }
-    .skip-link { background: var(--paper); border: 2px solid var(--cis-accent); color: var(--ink); left: 1rem; padding: 0.65rem 1rem; position: fixed; top: -5rem; z-index: 100; }
+    html, body { max-width: 100%; }
+    body { color: var(--ink); background: var(--paper); font-family: var(--font-sans); hyphens: none; }
+    main, section, article, nav, .task-grid > * { min-width: 0; }
+    img, svg { max-width: 100%; }
+    a, p { overflow-wrap: anywhere; }
+    .skip-link { background: var(--paper); border: 2px solid var(--accent); color: var(--ink); left: 1rem; padding: .65rem 1rem; position: fixed; top: -5rem; z-index: 100; }
     .skip-link:focus { top: 1rem; }
-
-    .gr-nav__inner, .gr-footer__top, .gr-footer__attrib-inner { max-width: 1100px; }
-    .cochid-brand-plate { align-items: center; background: #fff; display: inline-flex; padding: 4px 6px; }
-    .cochid-brand-plate img { display: block; height: 40px; max-width: none; width: auto; }
-    .gr-nav__links { justify-content: flex-end; }
-    .gr-footer { margin-top: 4rem; }
-    .gr-footer__brand .cochid-brand-plate img { height: 48px; }
-    @media (max-width: 760px) {
-      .gr-nav__inner { gap: 8px; grid-template-columns: minmax(0, 1fr) auto; }
-      .gr-nav__brand { grid-column: 1; grid-row: 1; }
-      .gr-nav__toggle { grid-column: 2; grid-row: 1; }
-      .gr-nav__actions { border-top: 1px solid var(--line); grid-column: 1 / -1; grid-row: 2; padding-top: 8px; width: 100%; }
-      .gr-nav__actions .gr-nav__cta { flex: 1 1 0; justify-content: center; }
-      .gr-nav__links { grid-row: 3; }
-    }
-    @media (max-width: 420px) {
-      .cochid-brand-plate img { height: 34px; }
-    }
-
-    .hero { max-width: 1100px; margin: 0 auto; padding: 4rem 1rem 2rem; }
-    .hero-kicker { font-family: var(--font-mono); font-size: 0.75rem; color: var(--cis-accent); letter-spacing: 0.12em; text-transform: uppercase; margin: 0 0 0.75rem; }
-    .hero h1 { font-size: clamp(2.25rem, 5.5vw, 4rem); font-weight: 800; letter-spacing: -0.025em; line-height: 1.02; margin: 0 0 1.25rem; max-width: 880px; }
-    .hero h1 em { font-style: normal; color: var(--cis-accent); }
-    .hero p.lead { font-size: 1.0625rem; color: var(--muted); max-width: 720px; margin: 0; line-height: 1.55; }
-    .hero-cta { display: flex; gap: 0.75rem; margin-top: 2rem; flex-wrap: wrap; }
-    .btn-primary, .btn-secondary { display: inline-flex; align-items: center; gap: 0.5rem; padding: 0.75rem 1.5rem; font-weight: 600; text-decoration: none; border: 1px solid var(--cis-accent); transition: transform 120ms; }
-    .btn-primary:hover, .btn-secondary:hover { transform: translateY(-1px); }
-    .btn-primary { background: #1d4ed8; border-color: #1d4ed8; color: #fff; }
-    .btn-secondary { background: transparent; color: var(--cis-accent); }
-
-    main { max-width: 1100px; margin: 0 auto; padding: 0 1rem 4rem; }
-    h2 { font-weight: 700; font-size: 1.5rem; margin: 4rem 0 0.5rem; letter-spacing: -0.01em; }
-    .h2-sub { color: var(--muted); margin: 0 0 1.5rem; font-size: 0.9375rem; }
-    .explain-grid { display: grid; gap: 0.75rem; grid-template-columns: repeat(3, minmax(0, 1fr)); }
-    .explain-item { border-top: 2px solid var(--cis-accent); padding: 1rem 0; }
-    .explain-item h3 { font-size: 1rem; margin: 0 0 0.5rem; }
-    .explain-item p { color: var(--muted); font-size: 0.875rem; line-height: 1.55; margin: 0; }
-    @media (max-width: 700px) { .explain-grid { grid-template-columns: minmax(0, 1fr); } }
-
-    @media (max-width: 520px) {
-      .hero { padding-top: 2.5rem; }
-    }
-
-    .primary-product { background: var(--paper); border: 1px solid var(--line); display: grid; gap: 1.5rem; grid-template-columns: minmax(0, 1.4fr) minmax(16rem, 0.8fr); margin: 1.5rem 0 0; padding: clamp(1.25rem, 3vw, 2rem); }
-    .primary-product .eyebrow { color: var(--cis-accent); font-family: var(--font-mono); font-size: 0.72rem; font-weight: 700; letter-spacing: 0.1em; margin: 0 0 0.75rem; text-transform: uppercase; }
-    .primary-product h2 { font-size: clamp(1.75rem, 4vw, 2.5rem); margin: 0 0 0.75rem; }
-    .primary-product p { color: var(--muted); line-height: 1.6; margin: 0; max-width: 42rem; }
-    .primary-links { border-top: 1px solid var(--line); display: grid; }
-    .primary-links a { align-items: center; color: var(--ink); display: flex; font-weight: 600; justify-content: space-between; padding: 0.8rem 0; text-decoration: none; }
-    .primary-links a + a { border-top: 1px solid var(--line); }
-    .primary-links a::after { color: var(--cis-accent); content: "→"; }
-    @media (max-width: 700px) { .primary-product { grid-template-columns: minmax(0, 1fr); } }
-
-    .temas-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 0.75rem; }
-    .tema-card { background: var(--paper); border: 1px solid var(--line); padding: 1.25rem; text-decoration: none; color: inherit; transition: border-color 120ms, transform 120ms; display: flex; flex-direction: column; gap: 0.5rem; }
-    .tema-card:hover { border-color: var(--cis-accent); transform: translateY(-2px); }
-    .tema-card .icon { font-size: 1.75rem; line-height: 1; }
-    .tema-card h3 { font-size: 1rem; font-weight: 700; margin: 0; }
-    .tema-card .desc { font-size: 0.8125rem; color: var(--muted); flex-grow: 1; line-height: 1.45; }
-    .tema-card .meta { font-family: var(--font-mono); font-size: 0.7rem; color: var(--muted); border-top: 1px solid var(--line); padding-top: 0.5rem; margin-top: 0.25rem; }
-    .tema-card[data-product-slug="datos"] { border-color: var(--cis-accent); }
-
-    .who { background: var(--paper); border: 1px solid var(--line); padding: 1.5rem; margin-top: 3rem; font-size: 0.875rem; color: var(--muted); line-height: 1.6; }
-    .who strong { color: var(--ink); }
-    .who a { color: var(--cis-accent); text-decoration: none; font-weight: 500; }
-    .who a:hover { text-decoration: underline; }
+    .hero, main { width: min(100%, var(--container)); margin: 0 auto; padding-inline: var(--pad-x); }
+    .hero { padding-block: clamp(2.5rem, 6vw, 5rem) 2rem; }
+    .hero h1 { max-width: 20ch; font-size: clamp(2.2rem, 5.5vw, 4rem); line-height: 1.1; letter-spacing: -.025em; font-weight: 700; margin-bottom: 1rem; }
+    .lead { max-width: 55ch; color: var(--ink-muted); font-size: 1.15rem; line-height: 1.6; }
+    main { padding-bottom: 3rem; }
+    main > section, main > details { margin-block: 2rem; }
+    h2 { font-size: clamp(1.4rem, 3vw, 2rem); line-height: 1.25; font-weight: 600; margin-bottom: .75rem; }
+    h3 { font-size: 1.1rem; font-weight: 600; margin-bottom: .5rem; }
+    p { line-height: 1.6; }
+    .task-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1rem; margin-top: 2rem; }
+    .task-card { display: flex; flex-direction: column; gap: .65rem; padding: 1.25rem; border: 1px solid var(--line); text-decoration: none; }
+    .task-card strong { color: var(--accent); font-size: 1.2rem; font-weight: 600; }
+    .task-card span, .h2-sub, .desc { color: var(--ink-muted); }
+    .task-card:hover, .tema-card:hover { border-color: var(--accent); }
+    .task-card:focus-visible, summary:focus-visible { outline: 2px solid var(--accent); outline-offset: 4px; }
+    .primary-product { display: grid; grid-template-columns: minmax(0, 1.5fr) minmax(14rem, 1fr); gap: 1.5rem; border: 1px solid var(--line); padding: clamp(1rem, 3vw, 2rem); }
+    #estudio-destacado-titulo { font-size: clamp(1.4rem, 3vw, 2rem); line-height: 1.25; }
+    .primary-product p { max-width: 65ch; color: var(--ink-muted); }
+    .primary-links, .research-links { display: grid; align-content: start; }
+    .primary-links a, .research-links a { color: var(--accent); padding-block: .6rem; text-decoration: underline; text-underline-offset: .2em; }
+    .primary-links a + a, .research-links a + a { border-top: 1px solid var(--line); }
+    .hero-cta { display: flex; flex-wrap: wrap; align-items: center; gap: .75rem; margin-top: 1.25rem; }
+    .btn-primary, .btn-secondary { display: inline-flex; align-items: center; justify-content: center; padding: .65rem 1rem; border: 1px solid var(--line); font-weight: 600; text-decoration: none; }
+    .btn-primary { color: var(--paper); background: var(--accent); border-color: var(--accent); }
+    .btn-secondary { color: var(--accent); }
+    .research-links { margin-block: 1rem; }
+    .research-links a { display: block; }
+    .research-links span { display: block; color: var(--ink-muted); font-size: .9rem; margin-top: .2rem; }
+    details { border: 1px solid var(--line); padding: 1rem; }
+    summary { cursor: pointer; font-weight: 600; list-style: revert; }
+    details[open] > summary { margin-bottom: 1.5rem; }
+    details section + section { margin-top: 2rem; }
+    .temas-grid, .explain-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 14rem), 1fr)); gap: .75rem; }
+    .tema-card, .explain-item { padding: 1rem; border: 1px solid var(--line); text-decoration: none; }
+    .meta { display: block; color: var(--ink-muted); font-size: .85rem; margin-top: .5rem; }
+    .who { color: var(--ink-muted); font-size: .9rem; line-height: 1.6; margin-top: 2rem; }
+    .who a { color: var(--accent); }
+    section[id] { scroll-margin-top: 6rem; }
+    @media (max-width: 700px) { .task-grid, .primary-product { grid-template-columns: minmax(0, 1fr); } }
   </style>
 </head>
 <body class="cis-brand">
@@ -202,83 +174,63 @@
 
 <header class="gr-nav">
   <div class="gr-nav__inner">
-    <a href="/" class="gr-nav__brand cochid-brand-plate" aria-label="COCHID, inicio">
-      <img src="https://kit.innovacionsantiago.cl/v10/727a7caf75e1908ba6faa3fb74e39cc2de938344664004ed11a7c3afc72e083a/assets/namebrands/compania-chilena-inteligencia-datos-lockup.svg" alt="Compañía Chilena de Inteligencia de Datos" width="720" height="120">
+    <a href="/" class="gr-nav__brand" aria-label="COCHID, inicio">
+      <img class="gr-logo-claro" src="https://kit.innovacionsantiago.cl/v10/d4b1a31b65e7ded392140cd72deaca3b05cb9975f328985439981f90a16eb2c0/assets/namebrands/compania-chilena-inteligencia-datos-lockup.svg" alt="Compañía Chilena de Inteligencia de Datos" width="720" height="120"><img class="gr-logo-oscuro" src="https://kit.innovacionsantiago.cl/v10/d4b1a31b65e7ded392140cd72deaca3b05cb9975f328985439981f90a16eb2c0/assets/brands/cochid-lockup-dark.svg" alt="Compañía Chilena de Inteligencia de Datos" width="720" height="120">
     </a>
     <button class="gr-nav__toggle" type="button" aria-label="Abrir menú" aria-expanded="false"><span></span><span></span><span></span></button>
     <nav class="gr-nav__links" aria-label="Navegación principal">
       <div class="gr-nav__group">
-        <a class="gr-nav__link is-active" href="https://datos.cochid.cl/">Datos</a>
-        <a class="gr-nav__link" href="#que-es-cochid">Qué es COCHID</a>
-        <a class="gr-nav__link" href="#productos">Ecosistema</a>
-        <a class="gr-nav__link" href="#servicios">Servicios</a>
-        <a class="gr-nav__link" href="https://datos.cochid.cl/metodologia">Metodología</a>
+        <a class="gr-nav__link" href="https://datos.cochid.cl/">Datos</a>
+        <a class="gr-nav__link" href="https://mapas.cochid.cl/">Mapas</a>
+        <a class="gr-nav__link" href="#investigaciones">Investigación</a>
       </div>
     </nav>
     <div class="gr-nav__actions">
-      <button class="gr-nav__theme" type="button" data-theme-toggle aria-label="Cambiar tema" aria-pressed="false"><span class="icon-sun" aria-hidden="true">☼</span><span class="icon-moon" aria-hidden="true">◐</span></button>
+      <button class="gr-nav__theme" type="button" data-theme-toggle aria-label="Cambiar tema" aria-pressed="false"><svg class="icon-sun" aria-hidden="true" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4"/><path d="M12 2v2m0 16v2M2 12h2m16 0h2M5 5l2 2m10 10l2 2M5 19l2-2M17 7l2-2"/></svg><svg class="icon-moon" aria-hidden="true" viewBox="0 0 24 24"><path d="M20 14a8 8 0 0 1-10-10A8 8 0 1 0 20 14Z"/></svg></button>
     </div>
   </div>
 </header>
 
-<section class="hero">
-  <p class="hero-kicker">COCHID SpA · Compañía Chilena de Inteligencia de Datos</p>
-  <h1>Infraestructura de datos para <em>comprender Chile</em>.</h1>
-  <p class="lead">COCHID desarrolla plataformas, investigación y productos que conectan fuentes públicas, territorio y evidencia. Nuestra plataforma principal es COCHID Datos.</p>
-  <div class="hero-cta">
-    <a href="https://datos.cochid.cl/" class="btn-primary">Abrir COCHID Datos</a>
-    <a href="#que-es-cochid" class="btn-secondary">Conocer la compañía</a>
-    <a href="#productos" class="btn-secondary">Ver productos</a>
-  </div>
+<section class="hero" aria-labelledby="inicio-titulo">
+  <h1 id="inicio-titulo">Datos para comprender Chile.</h1>
+  <p class="lead">Busca cifras de fuentes públicas, explora el territorio y lee investigaciones con sus datos y fuentes.</p>
+  <nav class="task-grid" aria-label="Qué puedes hacer en COCHID">
+    <a class="task-card" href="https://datos.cochid.cl/catalogo"><strong>Buscar datos</strong><span>Encuentra conjuntos e indicadores y consulta sus fuentes.</span></a>
+    <a class="task-card" href="https://mapas.cochid.cl/"><strong>Explorar territorio</strong><span>Relaciona lugares, capas y redes en el mapa.</span></a>
+    <a class="task-card" href="#investigaciones"><strong>Leer investigaciones</strong><span>Abre estudios, gráficos y datos descargables.</span></a>
+  </nav>
 </section>
 
 <main id="contenido" tabindex="-1">
-  <section class="primary-product" aria-labelledby="producto-principal-titulo">
+  <section class="primary-product" id="presupuesto" aria-labelledby="presupuesto-titulo">
     <div>
-      <p class="eyebrow">Producto principal</p>
-      <h2 id="producto-principal-titulo">COCHID Datos</h2>
-      <p>El portal público reúne el catálogo, los indicadores y las series de tiempo. Permite comparar períodos, explorar presupuesto, abrir mapas y revisar la fuente, calidad y linaje de cada conjunto.</p>
-      <div class="hero-cta">
-        <a href="https://datos.cochid.cl/" class="btn-primary">Explorar la plataforma</a>
-        <a href="https://datos.cochid.cl/metodologia" class="btn-secondary">Cómo trabajamos los datos</a>
-      </div>
+      <h2 id="presupuesto-titulo">Presupuesto público</h2>
+      <p>Consulta cuánto se asigna a cada institución, compara años y revisa la ejecución disponible. Puedes llegar al programa y al detalle de cada gasto.</p>
+      <div class="hero-cta"><a href="https://datos.cochid.cl/presupuesto" class="btn-primary">Entender el presupuesto</a><a href="https://datos.cochid.cl/presupuesto/comparacion" class="btn-secondary">Comparar años</a></div>
     </div>
     <nav class="primary-links" aria-label="Entradas principales de COCHID Datos">
-      <a href="https://datos.cochid.cl/catalogo">Buscar datasets</a>
-      <a href="https://datos.cochid.cl/presupuesto">Comparar presupuestos</a>
-      <a href="https://datos.cochid.cl/explorar">Explorar indicadores y series</a>
-      <a href="https://mapas.cochid.cl/">Abrir mapas</a>
+      <a href="https://datos.cochid.cl/presupuesto/ministerios">Explorar por institución</a>
+      <details><summary>Otros datos y fuentes</summary><a href="https://datos.cochid.cl/explorar">Explorar otros indicadores</a><a href="https://datos.cochid.cl/metodologia">Cómo se trabajan los datos</a></details>
     </nav>
   </section>
 
+  <section id="investigaciones" aria-labelledby="investigaciones-titulo"><h2 id="investigaciones-titulo">Investigaciones</h2>
   <section class="primary-product" id="estudio-destacado" aria-labelledby="estudio-destacado-titulo">
     <div>
-      <p class="eyebrow">Estudio destacado · Espacio Público</p>
-      <h2 id="estudio-destacado-titulo">Cobertura y protección financiera de medicamentos en Chile</h2>
+      <h3 id="estudio-destacado-titulo">Cobertura y protección financiera de medicamentos en Chile</h3>
       <p>Cuánto gasta Chile en medicamentos, quién lo paga y sobre qué hogares recae la carga. Estudio de Espacio Público encargado por la Cámara de la Innovación Farmacéutica (CIF). El análisis y las conclusiones son de Espacio Público. Se publica sobre la infraestructura COCHID con resumen ejecutivo, informe, anexos, explorador de datos y bibliografía verificable.</p>
-      <div class="hero-cta">
-        <a href="https://medicamentos.cochid.cl/" class="btn-primary">Abrir el estudio</a>
-        <a href="https://medicamentos.cochid.cl/datos/" class="btn-secondary">Explorar los datos</a>
-      </div>
+
     </div>
-    <nav class="primary-links" aria-label="Entradas principales del estudio de medicamentos">
-      <a href="https://medicamentos.cochid.cl/leer/">Leer el resumen ejecutivo</a>
-      <a href="https://medicamentos.cochid.cl/informe/">Informe en versión web</a>
-      <a href="https://medicamentos.cochid.cl/bibliografia/">Fuentes y bibliografía</a>
-      <a href="https://medicamentos.cochid.cl/datos/">Explorador de datos</a>
-    </nav>
+    <div><a href="https://medicamentos.cochid.cl/leer/" class="btn-primary">Leer el resumen ejecutivo</a><details style="margin-top:1rem"><summary>Informe y fuentes</summary><nav class="primary-links" aria-label="Entradas principales del estudio de medicamentos"><a href="https://medicamentos.cochid.cl/informe/">Informe en versión web</a><a href="https://medicamentos.cochid.cl/bibliografia/">Fuentes y bibliografía</a><a href="https://medicamentos.cochid.cl/datos/">Explorador de datos</a></nav></details></div>
   </section>
 
-  <section class="primary-product" id="cuaderno-luz" aria-labelledby="cuaderno-luz-titulo">
-    <div><h2 id="cuaderno-luz-titulo">El reloj y el Sol</h2><p>Cuadernos COCHID, Santiago 2026. La primavera ya alarga la tarde. Explora el costo del cambio de hora para la mañana, con animaciones, gráficos mensuales y datos descargables.</p></div>
-    <div class="hero-cta"><a class="btn-primary" href="/cambio-de-hora/">Explorar el cambio de hora</a></div>
+  <nav class="research-links" aria-label="Cuadernos COCHID">
+    <a id="cuaderno-luz" href="/cambio-de-hora/"><strong>El reloj y el Sol</strong><span>Explora cómo el cambio de hora afecta las mañanas y las tardes de Santiago.</span></a>
+    <a id="cuaderno-concepciones" href="/concepciones/"><strong>Cuándo se concibe en Chile</strong><span>Compara el calendario de concepciones y nacimientos con figuras y datos descargables.</span></a>
+  </nav>
   </section>
 
-  <section class="primary-product" id="cuaderno-concepciones" aria-labelledby="cuaderno-concepciones-titulo">
-    <div><h2 id="cuaderno-concepciones-titulo">Cuándo se concibe en Chile</h2><p>Cuadernos COCHID. Cinco millones de nacimientos con fecha exacta, cohortes 1989 a 2007. El máximo de concepciones cae entre el 24 de diciembre y el 7 de enero; el mínimo es una meseta de dos meses en invierno. Con ocho figuras, tablas completas y datos descargables.</p></div>
-    <div class="hero-cta"><a class="btn-primary" href="/concepciones/">Explorar el calendario de las concepciones</a></div>
-  </section>
-
+  <details id="mas-cochid"><summary>Más sobre COCHID y sus herramientas</summary>
   <section id="que-es-cochid" aria-labelledby="que-es-cochid-titulo">
     <h2 id="que-es-cochid-titulo">Qué es COCHID</h2>
     <p class="h2-sub">Una compañía chilena que construye infraestructura común para encontrar, relacionar, verificar y reutilizar datos públicos.</p>
@@ -299,53 +251,45 @@
   </section>
 
   <section id="productos" aria-labelledby="productos-titulo">
-  <h2 id="productos-titulo">Productos COCHID</h2>
-  <p class="h2-sub">Datos es la plataforma principal. Los demás productos aplican la misma infraestructura a territorio, movilidad, legislación, democracia, escritura e investigación.</p>
+  <h2 id="productos-titulo">Herramientas COCHID</h2>
+  <p class="h2-sub">Datos es la plataforma principal. Estas herramientas permiten trabajar con territorio, movilidad, legislación, democracia, escritura e investigación.</p>
   <div class="temas-grid">
     <a href="https://datos.cochid.cl/" class="tema-card h-product u-url" data-product-slug="datos">
-      <span class="icon">🏛️</span>
       <h3 class="p-name">Datos</h3>
       <p class="desc p-summary">La plataforma pública principal para buscar, comparar y conectar datos chilenos con trazabilidad completa.</p>
       <span class="meta">producto principal · catálogo · API · linaje</span>
     </a>
     <a href="https://mapas.cochid.cl/" class="tema-card h-product u-url" data-product-slug="mapas">
-      <span class="icon">⌖</span>
       <h3 class="p-name">Mapas</h3>
       <p class="desc p-summary">Atlas territorial para explorar capas, ciudades, cables, trenes y bicicleta.</p>
       <span class="meta">territorio · capas · vistas</span>
     </a>
     <a href="https://tpte.cochid.cl/" class="tema-card h-product u-url" data-product-slug="transporte">
-      <span class="icon">T</span>
       <h3 class="p-name">Transporte</h3>
       <p class="desc p-summary">Datos de movilidad y transporte público conectados con Datos y Mapas.</p>
       <span class="meta">movilidad · red · Santiago</span>
     </a>
     <a href="https://lex.cochid.cl/" class="tema-card h-product u-url" data-product-slug="lex">
-      <span class="icon">⚖️</span>
       <h3 class="p-name">Lex</h3>
       <p class="desc p-summary">Búsqueda semántica y evidencia sobre leyes y reglamentos chilenos.</p>
       <span class="meta">legislación · búsqueda · evidencia</span>
     </a>
     <a href="https://congreso.cochid.cl/" class="tema-card h-product u-url" data-product-slug="congreso">
-      <span class="icon">🏛️</span>
       <h3 class="p-name">Congreso</h3>
       <p class="desc p-summary">Proyectos, votaciones, autores y actividad del Congreso Nacional.</p>
       <span class="meta">proyectos · votaciones · autores</span>
     </a>
     <a href="https://elecciones.cochid.cl/" class="tema-card h-product u-url" data-product-slug="elecciones">
-      <span class="icon">E</span>
       <h3 class="p-name">Elecciones</h3>
       <p class="desc p-summary">Resultados, participación y lectura territorial de procesos electorales.</p>
       <span class="meta">resultados · participación · territorio</span>
     </a>
     <a href="https://scribe.cochid.cl/" class="tema-card h-product u-url" data-product-slug="scribe">
-      <span class="icon">S</span>
       <h3 class="p-name">Scribe</h3>
       <p class="desc p-summary">Escritura colaborativa con evidencia, bibliografía y exportación de documentos. Requiere una cuenta.</p>
       <span class="meta" data-feature-slug="scribe-thesis">incluye flujo de tesis · acceso con cuenta</span>
     </a>
     <a href="https://thesis.cochid.cl/" class="tema-card h-product u-url" data-product-slug="thesis">
-      <span class="icon">T</span>
       <h3 class="p-name">Thesis</h3>
       <p class="desc p-summary">Entorno de investigación para relacionar indicadores, empresas y evidencia.</p>
       <span class="meta">investigación · evidencia · SSO</span>
@@ -358,7 +302,6 @@
     <p class="h2-sub">Servicios reutilizables que sostienen los productos y permiten publicar resultados verificables.</p>
     <div class="temas-grid">
       <a href="https://graphs.cochid.cl/" class="tema-card" data-component-slug="graphs">
-        <span class="icon">G</span>
         <h3>Graphs</h3>
         <p class="desc">Gráficos reproducibles, enlazables y embebibles para productos y clientes.</p>
         <span class="meta">visualización · permalink · embed</span>
@@ -400,53 +343,21 @@
     Los servicios comerciales son contratados y facturados por
     <a href="https://innovacionsantiago.cl">Compañía de Innovación de Santiago SpA</a>.
   </div>
+  </details>
 </main>
 
 <footer class="gr-footer">
   <div class="gr-footer__top">
     <div class="gr-footer__brand">
-      <span class="cochid-brand-plate"><img src="https://kit.innovacionsantiago.cl/v10/727a7caf75e1908ba6faa3fb74e39cc2de938344664004ed11a7c3afc72e083a/assets/namebrands/compania-chilena-inteligencia-datos-lockup.svg" alt="Compañía Chilena de Inteligencia de Datos" width="720" height="120"></span>
+      <span><img class="gr-logo-claro" src="https://kit.innovacionsantiago.cl/v10/d4b1a31b65e7ded392140cd72deaca3b05cb9975f328985439981f90a16eb2c0/assets/namebrands/compania-chilena-inteligencia-datos-lockup.svg" alt="Compañía Chilena de Inteligencia de Datos" width="720" height="120"><img class="gr-logo-oscuro" src="https://kit.innovacionsantiago.cl/v10/d4b1a31b65e7ded392140cd72deaca3b05cb9975f328985439981f90a16eb2c0/assets/brands/cochid-lockup-dark.svg" alt="Compañía Chilena de Inteligencia de Datos" width="720" height="120"></span>
     </div>
     <div class="gr-footer__grid">
-      <section class="gr-footer__col">
-        <h4>Datos</h4>
-        <ul>
-          <li><a href="https://datos.cochid.cl/catalogo">Catálogo</a></li>
-          <li><a href="https://datos.cochid.cl/temas">Temas</a></li>
-          <li><a href="https://datos.cochid.cl/explorar">Explorar</a></li>
-          <li><a href="https://datos.cochid.cl/comparar">Comparar</a></li>
-        </ul>
-      </section>
-      <section class="gr-footer__col">
-        <h4>Trazabilidad</h4>
-        <ul>
-          <li><a href="https://datos.cochid.cl/metodologia">Metodología</a></li>
-          <li><a href="https://datos.cochid.cl/lineage">Lineage</a></li>
-          <li><a href="https://datos.cochid.cl/calidad">Calidad</a></li>
-          <li><a href="https://datos.cochid.cl/referencia">Referencia</a></li>
-        </ul>
-      </section>
-      <section class="gr-footer__col">
-        <h4>Plataforma</h4>
-        <ul>
-          <li><a href="https://datos.cochid.cl/api/docs">Documentación de la API</a></li>
-          <li><a href="https://style.cochid.cl/">Guía de estilo</a></li>
-          <li><a href="https://innovacionsantiago.cl/contacto">Contratar datos y API</a></li>
-          <li><a href="https://datos.cochid.cl/api/health/deep">Estado de la plataforma</a></li>
-        </ul>
-      </section>
-      <section class="gr-footer__col">
-        <h4>Sobre</h4>
-        <ul>
-          <li><a href="https://datos.cochid.cl/quienes-somos">Quiénes somos</a></li>
-          <li><a href="https://datos.cochid.cl/faq">FAQ</a></li>
-          <li><a href="https://datos.cochid.cl/contacto">Contacto</a></li>
-          <li><a href="https://innovacionsantiago.cl">Compañía de Innovación de Santiago</a></li>
-          <li><a href="https://illanes00.cl">Martín Illanes</a></li>
-        </ul>
-      </section>
+      <section class="gr-footer__col"><h4>Explorar</h4><ul><li><a href="https://datos.cochid.cl/">Datos</a></li><li><a href="https://mapas.cochid.cl/">Mapas</a></li><li><a href="/#investigaciones">Investigaciones</a></li></ul></section>
+      <section class="gr-footer__col"><h4>COCHID</h4><ul><li><a href="/#que-es-cochid">Qué es COCHID</a></li><li><a href="https://innovacionsantiago.cl/contacto">Contacto</a></li><li><a href="https://innovacionsantiago.cl/contacto">Contratar datos y API</a></li></ul></section>
+      <section class="gr-footer__col"><h4>Datos y fuentes</h4><ul><li><a href="https://datos.cochid.cl/metodologia">Metodología</a></li></ul><details><summary>Acceso técnico</summary><ul><li><a href="https://datos.cochid.cl/api/docs">Documentación de la API</a></li><li><a href="https://datos.cochid.cl/lineage">Linaje</a></li><li><a href="https://datos.cochid.cl/calidad">Calidad</a></li><li><a href="https://datos.cochid.cl/referencia">Referencia</a></li><li><a href="https://datos.cochid.cl/temas">Temas</a></li><li><a href="https://datos.cochid.cl/api/health/deep">Estado de la plataforma</a></li><li><a href="https://style.cochid.cl/">Guía de estilo</a></li></ul></details></section>
     </div>
   </div>
+
   <div class="gr-footer__attrib">
     <div class="gr-footer__attrib-inner gr-footer__attrib-inner--line">
       <strong>COCHID</strong> · Compañía Chilena de Inteligencia de Datos SpA (RUT 78.374.391-4) ·

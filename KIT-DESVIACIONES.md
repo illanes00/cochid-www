@@ -5,9 +5,10 @@
   repo: cochid/cochid-www
   regla: kit
   que: >-
-    index.html y cambio-de-hora/story.css conservan CSS e inline CSS propios
-    para la composición del hub institucional, tarjetas del catálogo y la
-    visualización accesible del especial Cambio de hora.
+    index.html y cambio-de-hora/story.css conservan la composición editorial
+    de la portada por tres tareas, tarjetas y disclosures nativos, y la
+    visualización accesible del especial Cambio de hora. La portada utiliza
+    los tokens publicados y no redefine clases gr-* del chrome.
   por_que: >-
     La composición editorial y la visualización del especial son funcionales
     al contenido; Style v10 aporta tokens, tipografía, tema y chrome mediante
