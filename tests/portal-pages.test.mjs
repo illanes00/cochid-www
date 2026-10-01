@@ -1,0 +1,91 @@
+import test from 'node:test';
+import assert from 'node:assert/strict';
+import {existsSync, readFileSync} from 'node:fs';
+import {join} from 'node:path';
+
+const raiz = new URL('../', import.meta.url);
+const dist = new URL('../dist/', import.meta.url);
+const rutas = [
+  '/', '/quienes-somos/', '/contacto/', '/servicios/', '/datos/', '/mapas/',
+  '/herramientas/', '/investigaciones/', '/documentacion/', '/mapa-del-sitio/',
+];
+const archivoRuta = ruta => ruta === '/'
+  ? new URL('index.html', dist)
+  : new URL(`${ruta.slice(1)}index.html`, dist);
+const leer = ruta => readFileSync(archivoRuta(ruta), 'utf8');
+
+test('publica todas las puertas editoriales con el chrome de familia', () => {
+  for (const ruta of rutas) {
+    assert.ok(existsSync(archivoRuta(ruta)), `falta ${ruta}`);
+    const html = leer(ruta);
+    assert.match(html, /<main id="contenido" tabindex="-1"(?: class="[^"]+")?>/);
+    assert.match(html, /data-site-header/);
+    assert.match(html, /data-footer-owner="cochid"/);
+    assert.equal((html.match(/<h1\b/g) || []).length, 1, `${ruta}: debe tener un h1`);
+    assert.doesNotMatch(html, /\[\[VERIFICAR/);
+    assert.doesNotMatch(html, /<!--|Nota de implementación|Árbol generado|Precarga:/);
+    assert.doesNotMatch(html, /\bCIS\b/);
+  }
+});
+
+test('reescribe la asesoría en un solo destino público', () => {
+  for (const ruta of rutas) {
+    const html = leer(ruta);
+    assert.doesNotMatch(html, /href="\/asesoria\//);
+  }
+  const servicios = leer('/servicios/');
+  for (const servicio of ['dato-a-medida', 'descarga-masiva', 'informe', 'mas-cuota']) {
+    assert.match(servicios, new RegExp(`https://innovacionsantiago\\.cl/contacto\\?servicio=${servicio}`));
+  }
+});
+
+test('mantiene todos los enlaces internos resolubles en dist', () => {
+  for (const ruta of rutas) {
+    const html = leer(ruta);
+    const ids = new Set([...html.matchAll(/\bid="([^"]+)"/g)].map(coincidencia => coincidencia[1]));
+    for (const coincidencia of html.matchAll(/\bhref="([^"]+)"/g)) {
+      const href = coincidencia[1];
+      if (href.startsWith('#')) {
+        assert.ok(ids.has(href.slice(1)), `${ruta}: no existe ${href}`);
+        continue;
+      }
+      if (!href.startsWith('/')) continue;
+      const url = new URL(href, 'https://cochid.cl');
+      const destino = url.pathname.endsWith('/')
+        ? join(new URL('.', dist).pathname, url.pathname, 'index.html')
+        : join(new URL('.', dist).pathname, url.pathname);
+      assert.ok(existsSync(destino), `${ruta}: ${href} no resuelve en dist`);
+      if (url.hash) {
+        const destinoHtml = readFileSync(destino, 'utf8');
+        assert.match(destinoHtml, new RegExp(`\\bid="${url.hash.slice(1)}"`), `${ruta}: no existe ${href}`);
+      }
+    }
+  }
+});
+
+test('publica el registro y genera desde él el mapa del sitio', () => {
+  const rutaRegistro = new URL('destinos.json', dist);
+  assert.ok(existsSync(rutaRegistro));
+  const registro = JSON.parse(readFileSync(rutaRegistro, 'utf8'));
+  assert.ok(registro.destinos.some(destino => destino.id === 'cochid.mapas.ciudad' && destino.ruta === '/ciudad'));
+  const mapa = leer('/mapa-del-sitio/');
+  assert.match(mapa, /Verificado el 1 de octubre de 2026/);
+  assert.match(mapa, /https:\/\/mapas\.cochid\.cl\/ciudad/);
+  assert.match(mapa, /mapas\.cochid\.cl\/ciudad/);
+  assert.ok(existsSync(new URL('sitemap-hosts.xml', dist)));
+});
+
+test('la portada enlaza las páginas nuevas y conserva sus anclas públicas', () => {
+  const home = leer('/');
+  for (const ruta of rutas.slice(1)) assert.match(home, new RegExp(`href="${ruta}"`));
+  assert.match(home, /id="investigaciones"/);
+  assert.match(home, /id="proyectos"/);
+});
+
+test('sitemap y robots describen la candidata completa', () => {
+  const sitemap = readFileSync(new URL('sitemap.xml', dist), 'utf8');
+  for (const ruta of rutas) assert.match(sitemap, new RegExp(`<loc>https://cochid\\.cl${ruta}</loc>`));
+  const robots = readFileSync(new URL('robots.txt', dist), 'utf8');
+  assert.match(robots, /Allow: \//);
+  assert.match(robots, /Sitemap: https:\/\/cochid\.cl\/sitemap\.xml/);
+});

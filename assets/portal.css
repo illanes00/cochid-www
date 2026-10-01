@@ -15,9 +15,18 @@
 .portal-cuerpo table{width:100%;border-collapse:collapse}
 .portal-cuerpo th,.portal-cuerpo td{padding:.65rem;border:1px solid var(--line);text-align:left;vertical-align:top}
 .portal-cuerpo pre{max-width:100%;overflow:auto;padding:1rem;border:1px solid var(--line);background:var(--paper-raised)}
+.portal-cuerpo p{line-height:1.65}
+.portal-cuerpo li{margin-block:.35rem}
+.portal-cuerpo a{overflow-wrap:anywhere}
+.portal-accesos ul{display:flex;flex-wrap:wrap;gap:.65rem 1.1rem;list-style:none;padding:0}
+.portal-accesos h2{margin-top:0}
 .portal-meta{margin-top:3rem;padding-top:1rem;border-top:1px solid var(--line);color:var(--ink-muted);font-size:.9rem}
 .portal-arbol{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,18rem),1fr));gap:1rem;max-width:none}
 .portal-arbol section{padding:1rem;border:1px solid var(--line)}
 .portal-arbol ul{padding-left:1.2rem}
 .portal-tipo{color:var(--ink-muted);font-size:.85rem}
+.portal-host{display:block;color:var(--ink-muted);font-family:var(--font-mono);font-size:.78rem;overflow-wrap:anywhere}
+.portal-arbol li>p{margin:.25rem 0 .5rem;font-size:.9rem}
+.portal-filtro{display:grid;gap:.4rem;max-width:32rem;margin:1.5rem 0}
+.portal-filtro input{font:inherit;color:var(--ink);background:var(--paper);border:1px solid var(--line-strong,var(--line));padding:.65rem .75rem}
 @media (max-width:420px){.gr-nav__brand .gr-logo-claro,.gr-nav__brand .gr-logo-oscuro{max-width:132px;height:auto}.portal-contenido{width:min(100% - 1.25rem,var(--container));padding-top:1.5rem}.portal-cuerpo table{font-size:.9rem}}
