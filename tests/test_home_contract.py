@@ -18,7 +18,7 @@ class ProductSectionParser(HTMLParser):
 
     def handle_starttag(self, tag, attrs):
         attributes = dict(attrs)
-        if tag == "section" and attributes.get("id") == "productos":
+        if tag == "section" and attributes.get("id") == "proyectos":
             self.in_products = True
             self.depth = 1
             return
@@ -91,7 +91,7 @@ class CochidHomeContractTests(unittest.TestCase):
         parser = ProductSectionParser()
         parser.feed(HTML)
 
-        self.assertEqual(
+        self.assertCountEqual(
             [
                 "datos",
                 "mapas",
@@ -147,21 +147,19 @@ class CochidHomeContractTests(unittest.TestCase):
         ):
             self.assertIn(f'href="{destination}"', HTML)
 
-    def test_explains_cochid_and_offers_three_services_through_cis(self):
+    def test_explains_cochid_and_routes_contact_without_unverified_service_offers(self):
         self.assertIn('<section id="que-es-cochid"', HTML)
         self.assertIn('<section id="servicios"', HTML)
-        self.assertEqual(1, HTML.count('data-service-slug="consultoria"'))
-        self.assertEqual(1, HTML.count('data-service-slug="datos"'))
-        self.assertEqual(1, HTML.count('data-service-slug="api"'))
-        self.assertIn("Los servicios comerciales son contratados y facturados por", HTML)
+        self.assertIn("Contactar a la compañía", HTML)
         self.assertIn("Compañía de Innovación de Santiago SpA", HTML)
         self.assertIn('href="https://innovacionsantiago.cl/contacto"', HTML)
+        self.assertNotIn("data-service-slug=", HTML)
         self.assertNotIn("API paga vía", HTML)
 
     def test_footer_routes_commercial_access_through_cis(self):
         self.assertNotIn('<li><a href="https://indieweb.cl">API access (paid)</a></li>', HTML)
         self.assertIn("Documentación de la API", HTML)
-        self.assertIn("Contratar datos y API", HTML)
+        self.assertNotIn("Contratar datos y API", HTML)
         self.assertIn("Estado de la plataforma", HTML)
         self.assertIn("servicios comerciales son contratados y facturados por", HTML)
 
