@@ -90,7 +90,7 @@ class CochidMainStyleV10ContractTests(unittest.TestCase):
         self.assertNotIn("ccnav", HTML)
         self.assertNotIn("ccfooter", HTML)
         self.assertNotIn("mobile-nav", HTML)
-        for label in ("Datos", "Mapas", "Investigación", "Metodología"):
+        for label in ("Datos", "Mapas", "Investigaciones", "Presupuesto", "Metodología"):
             self.assertIn(f">{label}</a>", HTML)
 
     def test_uses_the_canonical_lockup_and_grouped_ecosystem_navigation(self):

@@ -76,6 +76,19 @@ class ProjectsContract(unittest.TestCase):
         self.assertNotIn('href="#investigaciones"', header)
         self.assertNotIn("trazabilidad completa", self.html)
 
+    def test_footer_exploration_routes_are_canonical_and_ordered(self):
+        footer = self.html.split('<footer class="gr-footer">', 1)[1].split('</footer>', 1)[0]
+        expected = [
+            ('Datos', 'https://datos.cochid.cl/'),
+            ('Mapas', 'https://mapas.cochid.cl/'),
+            ('Investigaciones', 'https://cochid.cl/#investigaciones'),
+            ('Presupuesto', 'https://datos.cochid.cl/presupuesto'),
+            ('Todos los proyectos', 'https://cochid.cl/#proyectos'),
+        ]
+        anchors = [f'<a href="{href}">{label}</a>' for label, href in expected]
+        positions = [footer.index(anchor) for anchor in anchors]
+        self.assertEqual(positions, sorted(positions))
+
 
 if __name__ == "__main__":
     unittest.main()
