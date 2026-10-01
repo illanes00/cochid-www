@@ -27,7 +27,7 @@ class Links(HTMLParser):
 
 class ProjectsContract(unittest.TestCase):
     def setUp(self):
-        self.html = (ROOT / "index.html").read_text()
+        self.html = (ROOT / "dist" / "index.html").read_text()
         self.links = Links()
         self.links.feed(self.html)
 
@@ -63,23 +63,24 @@ class ProjectsContract(unittest.TestCase):
 
     def test_alias_api_and_login_roles_are_explicit(self):
         self.assertIn("comparte el proyecto Mapas", self.html)
-        self.assertIn("devuelve datos y no una página de exploración", self.html)
+        self.assertIn('href="https://mapas.cochid.cl/ciudad"', self.html)
+        self.assertNotIn('href="https://ciudad.cochid.cl/"', self.html)
         for host in ("peru", "sdr"):
             card = self.html.split(f'href="https://{host}.cochid.cl/"', 1)[1].split("</a>", 1)[0]
             self.assertIn("Requiere iniciar sesión", card)
             self.assertNotIn("data-product-slug", card)
         self.assertIn("Requiere una cuenta", self.html)
         self.assertIn("https://datos.cochid.cl/metodologia", self.links.hrefs)
-        header = self.html.split('<header class="gr-nav">', 1)[1].split('</header>', 1)[0]
-        for href in ("https://datos.cochid.cl/catalogo", "https://mapas.cochid.cl/", "#proyectos"):
+        header = self.html.split('<header class="gr-nav"', 1)[1].split('</header>', 1)[0]
+        for href in ("/datos/", "/mapas/", "/investigaciones/", "https://datos.cochid.cl/presupuesto", "https://cochid.cl/#proyectos"):
             self.assertIn(f'href="{href}"', header)
-        self.assertNotIn('href="#investigaciones"', header)
+        self.assertNotIn('href="/blog/"', header)
         self.assertNotIn("trazabilidad completa", self.html)
 
     def test_footer_exploration_routes_are_canonical_and_ordered(self):
-        footer = self.html.split('<footer class="gr-footer">', 1)[1].split('</footer>', 1)[0]
+        footer = self.html.split('<footer class="gr-footer"', 1)[1].split('</footer>', 1)[0]
         expected = [
-            ('Datos', 'https://datos.cochid.cl/'),
+            ('Datos', 'https://datos.cochid.cl/catalogo'),
             ('Mapas', 'https://mapas.cochid.cl/'),
             ('Investigaciones', 'https://cochid.cl/#investigaciones'),
             ('Presupuesto', 'https://datos.cochid.cl/presupuesto'),

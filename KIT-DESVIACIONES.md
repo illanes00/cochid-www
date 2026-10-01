@@ -22,6 +22,25 @@
 ```
 
 ```yaml
+- sitio: cochid.cl
+  repo: cochid/cochid-www
+  regla: H29
+  que: >-
+    assets/portal.css añade la composición de la marca y el nombre Portal del
+    contrato de familia, las migas, el ancho de lectura y el árbol del mapa del
+    sitio sobre el kit v10 candidate.43.
+  por_que: >-
+    El kit no incluye todavía la composición de familia ni una plantilla de
+    contenido editorial estático. La capa usa sus tokens, no redefine el chrome
+    gr-*, y no agrega gradientes, sombras, desenfoque, radios, escalado en hover
+    ni transiciones sobre 200 ms.
+  quien: martin
+  fecha: 2026-10-01
+  revisar_en: 2026-12-01
+  estado: justificada
+```
+
+```yaml
 - sitio: cochid.cl/concepciones/
   repo: cochid/cochid-www
   regla: H29

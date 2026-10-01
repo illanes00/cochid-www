@@ -4,7 +4,7 @@ import unittest
 
 
 ROOT = Path(__file__).resolve().parents[1]
-HTML = (ROOT / "index.html").read_text(encoding="utf-8")
+HTML = (ROOT / "dist" / "index.html").read_text(encoding="utf-8")
 KIT_HOST = "https://kit.innovacionsantiago.cl"
 CANONICAL_BASE = re.compile(re.escape(KIT_HOST) + r"/v10/[0-9a-f]{64}")
 CANDIDATE_DIGEST = "d4b1a31b65e7ded392140cd72deaca3b05cb9975f328985439981f90a16eb2c0"
@@ -103,7 +103,7 @@ class CochidMainStyleV10ContractTests(unittest.TestCase):
         self.assertIn('class="gr-logo-oscuro"', HTML)
         self.assertIn("/assets/brands/cochid-lockup-dark.svg", HTML)
         self.assertNotIn("cochid-brand-plate", HTML)
-        self.assertIn('href="/#que-es-cochid"', HTML)
+        self.assertIn('href="/quienes-somos/"', HTML)
         self.assertIn('id="servicios"', HTML)
         self.assertNotIn("Iniciar sesión</a>", HTML)
         self.assertNotIn("filter: invert", HTML)

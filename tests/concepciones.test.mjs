@@ -237,13 +237,15 @@ test('los encabezados de los CSV van sin tildes', () => {
 /* Contrato de la página: marcadores del chrome, tablas inyectadas en build y
    signos permitidos. */
 const pagina = leer('concepciones/index.html');
+const paginaConstruida = leer('dist/concepciones/index.html');
 
 test('la página trae los marcadores del chrome compartido', () => {
   for (const marca of ['<!--KIT_HEAD-->', '<!--HEADER-->', '<!--FOOTER-->']) {
     assert.ok(pagina.includes(marca), `falta ${marca}`);
   }
   assert.ok(pagina.includes('<html lang="es" data-brand="cochid"'));
-  assert.ok(pagina.includes('class="skip-link"'));
+  assert.ok(paginaConstruida.includes('class="skip-link"'));
+  assert.equal((paginaConstruida.match(/class="skip-link"/g) || []).length, 1);
   assert.ok(pagina.includes('<link rel="canonical" href="https://cochid.cl/concepciones/">'));
   assert.ok(pagina.includes('property="og:image"'));
   assert.ok(pagina.includes('name="twitter:card"'));

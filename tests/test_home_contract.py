@@ -6,7 +6,7 @@ import unittest
 
 
 ROOT = Path(__file__).resolve().parents[1]
-HTML = (ROOT / "index.html").read_text(encoding="utf-8")
+HTML = (ROOT / "dist" / "index.html").read_text(encoding="utf-8")
 
 
 class ProductSectionParser(HTMLParser):
@@ -158,9 +158,10 @@ class CochidHomeContractTests(unittest.TestCase):
 
     def test_footer_routes_commercial_access_through_cis(self):
         self.assertNotIn('<li><a href="https://indieweb.cl">API access (paid)</a></li>', HTML)
-        self.assertIn("Documentación de la API", HTML)
+        self.assertIn("Documentación API", HTML)
         self.assertNotIn("Contratar datos y API", HTML)
-        self.assertIn("Estado de la plataforma", HTML)
+        self.assertIn("Metodología", HTML)
+        self.assertIn("Calidad", HTML)
         self.assertIn("servicios comerciales son contratados y facturados por", HTML)
 
     def test_hero_uses_clear_spanish_and_routes_into_the_company(self):

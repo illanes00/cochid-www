@@ -10,9 +10,10 @@ import unittest
 
 
 ROOT = Path(__file__).resolve().parents[1]
-HOME = (ROOT / "index.html").read_text(encoding="utf-8")
+HOME = (ROOT / "dist" / "index.html").read_text(encoding="utf-8")
 PAGINA = (ROOT / "concepciones" / "index.html").read_text(encoding="utf-8")
-SITEMAP = (ROOT / "sitemap.xml").read_text(encoding="utf-8")
+PAGINA_COMPILADA = (ROOT / "dist" / "concepciones" / "index.html").read_text(encoding="utf-8")
+SITEMAP = (ROOT / "dist" / "sitemap.xml").read_text(encoding="utf-8")
 SOCIAL = ROOT / "concepciones" / "social.png"
 
 
@@ -32,7 +33,9 @@ class ConcepcionesContractTests(unittest.TestCase):
         self.assertIn('<link rel="canonical" href="https://cochid.cl/concepciones/">', PAGINA)
         for marker in ("<!--KIT_HEAD-->", "<!--HEADER-->", "<!--FOOTER-->"):
             self.assertIn(marker, PAGINA)
-        self.assertIn('<a class="skip-link" href="#contenido">', PAGINA)
+            self.assertNotIn(marker, PAGINA_COMPILADA)
+        self.assertIn('<a class="skip-link" href="#contenido">', PAGINA_COMPILADA)
+        self.assertIn('data-site-header', PAGINA_COMPILADA)
         self.assertIn("<noscript>", PAGINA)
 
     def test_page_ships_its_own_layer_and_no_external_dependency(self):
@@ -69,7 +72,7 @@ class ConcepcionesContractTests(unittest.TestCase):
 
     def test_the_shared_footer_spells_the_company_out(self):
         """CANON prohíbe la sigla suelta en público, y el pie viaja a la página."""
-        footer = HOME[HOME.index('<footer class="gr-footer">'):]
+        footer = HOME[HOME.index('<footer class="gr-footer"'):]
         self.assertNotIn(">CIS<", footer)
         self.assertNotIn("(CIS,", footer)
         self.assertNotIn("facturados por CIS", footer)

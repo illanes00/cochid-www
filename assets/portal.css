@@ -1,0 +1,23 @@
+/* Capa común del portal estático sobre el kit v10 candidate.43. */
+.cochid-marca{display:flex;align-items:center;gap:12px;min-width:0}
+.cochid-producto{font-weight:600;font-size:var(--fs-body,1rem);color:var(--ink);text-decoration:none;padding-left:12px;border-left:1px solid var(--line-strong,var(--line));white-space:nowrap;line-height:1.2}
+.cochid-producto:hover{text-decoration:underline;text-underline-offset:3px}
+.cochid-producto:focus-visible,.gr-nav__brand:focus-visible{outline:2px solid var(--accent);outline-offset:3px}
+.cochid-marca .gr-nav__brand{order:0}
+.portal-migas ol{display:flex;flex-wrap:wrap;gap:.35rem;list-style:none;padding:0;margin:0 0 1.5rem;color:var(--ink-muted)}
+.portal-migas li+li::before{content:"/";margin-right:.35rem;color:var(--ink-soft)}
+.portal-contenido{width:min(100% - 2rem,var(--container));margin:0 auto;padding:2.5rem 0 4rem}
+.portal-contenido>header{max-width:52rem;margin-bottom:2rem}
+.portal-contenido>header p{font-size:var(--fs-lg,1.125rem);color:var(--ink-muted)}
+.portal-cuerpo{max-width:52rem}
+.portal-cuerpo h2{margin-top:2.5rem}
+.portal-cuerpo h3{margin-top:1.75rem}
+.portal-cuerpo table{width:100%;border-collapse:collapse}
+.portal-cuerpo th,.portal-cuerpo td{padding:.65rem;border:1px solid var(--line);text-align:left;vertical-align:top}
+.portal-cuerpo pre{max-width:100%;overflow:auto;padding:1rem;border:1px solid var(--line);background:var(--paper-raised)}
+.portal-meta{margin-top:3rem;padding-top:1rem;border-top:1px solid var(--line);color:var(--ink-muted);font-size:.9rem}
+.portal-arbol{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,18rem),1fr));gap:1rem;max-width:none}
+.portal-arbol section{padding:1rem;border:1px solid var(--line)}
+.portal-arbol ul{padding-left:1.2rem}
+.portal-tipo{color:var(--ink-muted);font-size:.85rem}
+@media (max-width:420px){.gr-nav__brand .gr-logo-claro,.gr-nav__brand .gr-logo-oscuro{max-width:132px;height:auto}.portal-contenido{width:min(100% - 1.25rem,var(--container));padding-top:1.5rem}.portal-cuerpo table{font-size:.9rem}}
