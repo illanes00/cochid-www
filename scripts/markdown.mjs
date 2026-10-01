@@ -71,7 +71,7 @@ export function markdownAHtml(markdown, extras = {}) {
       indice += 1;
       while (indice < lineas.length && !lineas[indice].startsWith('```')) codigo.push(lineas[indice++]);
       indice += 1;
-      salida.push(`<pre><code>${escapar(codigo.join('\n'))}</code></pre>`);
+      salida.push(`<pre tabindex="0"><code>${escapar(codigo.join('\n'))}</code></pre>`);
       continue;
     }
     const encabezado = linea.match(/^(#{1,6})\s+(.+)$/);
@@ -86,7 +86,7 @@ export function markdownAHtml(markdown, extras = {}) {
       indice += 2;
       const filas = [];
       while (indice < lineas.length && lineas[indice].trim().startsWith('|')) filas.push(celdas(lineas[indice++]));
-      salida.push(`<div class="portal-tabla"><table><thead><tr>${cabeceras.map(celda => `<th scope="col">${inline(celda)}</th>`).join('')}</tr></thead><tbody>${filas.map(fila => `<tr>${fila.map(celda => `<td>${inline(celda)}</td>`).join('')}</tr>`).join('')}</tbody></table></div>`);
+      salida.push(`<div class="portal-tabla" role="region" aria-label="Tabla de contenido" tabindex="0"><table><thead><tr>${cabeceras.map(celda => `<th scope="col">${inline(celda)}</th>`).join('')}</tr></thead><tbody>${filas.map(fila => `<tr>${fila.map(celda => `<td>${inline(celda)}</td>`).join('')}</tr>`).join('')}</tbody></table></div>`);
       continue;
     }
     const lista = linea.match(/^\s*(-|\d+\.)\s+(.+)$/);

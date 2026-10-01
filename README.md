@@ -1,11 +1,31 @@
-# Cochid principal
+# Portal estático de COCHID
 
-Baseline local del contenido efectivamente servido por `https://cochid.cl/` al
-2026-08-13. Caddy lo entrega desde
-`/srv/projects/cis/projects/cochid/frontend/index.html`; ese directorio no era
-un repositorio Git. Este repositorio aislado existe para revisar cambios sin
-alterar el runtime.
+Fuente del apex `https://cochid.cl/`. El sitio no usa un framework ni un proceso
+de aplicación: `scripts/build.mjs` compone HTML estático en `dist/` a partir de
+la portada, los especiales, los Markdown de `content/pages/` y los parciales de
+`partials/`.
 
-El único contenido del sitio es `index.html`. La configuración de Caddy, los
-logs y los releases quedan fuera de este árbol. `cochid-www` no es esta fuente:
-es una aplicación Flask archivada que no atiende el apex.
+La cabecera, el pie y el mapa del sitio se derivan del registro vendorizado en
+`data/`. `data/SHA256SUMS` permite comprobar que `destinos.mjs` y
+`destinos.publico.json` corresponden al mismo corte de core-style. Para cambiar
+el registro se actualiza primero su fuente canónica, se regenera allí y luego se
+vendorizan juntos ambos archivos y sus sumas.
+
+## Build y pruebas
+
+```sh
+cis-build --dir "$PWD" node scripts/build.mjs
+cis-build --dir "$PWD" python3 -m unittest discover -s tests -p 'test_*.py' -v
+cis-build --dir "$PWD" node --test
+```
+
+La salida pública incluye las nueve puertas editoriales, los dos cuadernos,
+`destinos.json`, `sitemap.xml`, `sitemap-hosts.xml` y `robots.txt`. El build
+elimina comentarios de implementación y nunca publica fragmentos
+`[[VERIFICAR]]`. Mientras `/asesoria/` no exista, una única función de
+`scripts/markdown.mjs` dirige esos enlaces al contacto de Compañía de
+Innovación de Santiago SpA.
+
+La publicación usa releases inmutables y un cambio atómico del enlace ya
+existente. No requiere editar Caddy ni reiniciar unidades. Consulta
+`docs/DEPLOY.md`; preparar una candidata no autoriza activarla.

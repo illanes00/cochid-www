@@ -14,8 +14,11 @@
 .portal-cuerpo h3{margin-top:1.75rem}
 .portal-cuerpo table{width:100%;border-collapse:collapse}
 .portal-cuerpo th,.portal-cuerpo td{padding:.65rem;border:1px solid var(--line);text-align:left;vertical-align:top}
-.portal-cuerpo pre{max-width:100%;overflow:auto;padding:1rem;border:1px solid var(--line);background:var(--paper-raised)}
-.portal-cuerpo p{line-height:1.65}
+.portal-cuerpo pre{box-sizing:border-box;max-width:100%;overflow:auto;padding:1rem;border:1px solid var(--line);background:var(--paper-raised);white-space:pre-wrap;overflow-wrap:anywhere}
+.portal-cuerpo :not(pre)>code{white-space:normal;overflow-wrap:anywhere;word-break:break-word}
+.portal-tabla{max-width:100%;overflow-x:auto}
+.portal-tabla:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+.portal-cuerpo p{line-height:1.65;overflow-wrap:anywhere}
 .portal-cuerpo li{margin-block:.35rem}
 .portal-cuerpo a{overflow-wrap:anywhere}
 .portal-accesos ul{display:flex;flex-wrap:wrap;gap:.65rem 1.1rem;list-style:none;padding:0}

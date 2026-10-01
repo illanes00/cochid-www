@@ -1,22 +1,20 @@
-# Publicar el sitio estático de COCHID
+# Publicar el portal estático de COCHID
 
-El sitio conserva HTML estático y el chrome compartido de COCHID. El especial
-`/cambio-de-hora/` calcula Santiago 2026 en el navegador, sin backend ni datos
-del lake. `scripts/build.mjs` genera la tabla accesible y los CSV con el mismo
-modelo que alimenta las visualizaciones.
+El apex conserva HTML estático y el chrome compartido de COCHID. El build
+compone la portada, nueve páginas editoriales y los especiales
+`/cambio-de-hora/` y `/concepciones/`. No hay backend ni proceso Node en
+producción para esta superficie.
 
 ## Verificaciones y build
 
 Desde este árbol:
 
 ```sh
-python3 -m unittest discover -s tests -p 'test_*.py' -v
-node --test tests/*.test.mjs
-node --check cambio-de-hora/story.mjs
-node --check concepciones/story.mjs
-prosa-lint cambio-de-hora/index.html
-prosa-lint concepciones/index.html
-cis-build node scripts/build.mjs
+free -g
+cis-build --dir "$PWD" node scripts/build.mjs
+cis-build --dir "$PWD" python3 -m unittest discover -s tests -p 'test_*.py' -v
+cis-build --dir "$PWD" node --test
+sha256sum -c data/SHA256SUMS
 ```
 
 El especial `/concepciones/` lee `concepciones/datos/*.json`, que es el recorte
@@ -33,23 +31,22 @@ La imagen social no la produce el build, porque necesita Python con matplotlib:
 
 Regenerarla solo cuando cambie la curva semanal. El PNG está versionado.
 
-Ejecutar navegador real en 1440, 390 y 320 px: fecha, slider, reproducción y
-pausa, antes y después del salto, crepúsculo, selección mensual, rutina,
-tabla sin JavaScript, CSV, SVG y tema claro/oscuro. Revisar etiquetas a tamaño
-real y contrastes con Axe. La unidad Caddy sirve archivos; no hay un proceso
-Node de producción ni una compilación Next para esta superficie existente.
+La QA del portal recorre todas las páginas a 1440, 768 y 320 px, en claro y
+oscuro, siempre bajo `flock /tmp/cochid-ui-browser.lock`. Verifica Axe, desborde,
+foco de teclado y menú móvil. La unidad Caddy sirve archivos; no hay una
+compilación Next ni un servicio de aplicación para el apex.
 
 ## Destino efectivo
 
 Consultar `/etc/caddy/sites.d/cochid.cl.caddy` y la configuración activa antes
-de cada corte. En el corte de 7 septiembre 2026, el root existente es el enlace:
+de cada corte. Al preparar esta candidata, el root existente es el enlace:
 
 `/srv/projects/releases/cochid-main/91132ff-medicamentos-20260903T183955Z`
 
-Antes de este cambio apuntaba a
-`/srv/projects/releases/cochid-main/f5dd842-medicamentos-20260903T205438Z`.
-Su fuente es f5dd842; el árbol de trabajo parte de ese commit y preserva el
-estudio de medicamentos. No desplegar desde el main antiguo del repo legado.
+Ese enlace apunta a
+`/srv/projects/releases/cochid-main/baf59070d2d2-home-connections-20261001T195509Z`.
+La candidata debe comparar ese destino por CAS antes de preparar o activar. No
+desplegar desde el checkout antiguo ni cambiar el enlace desde dos flujos.
 
 ## Corte y reversión
 
@@ -59,9 +56,10 @@ estudio de medicamentos. No desplegar desde el main antiguo del repo legado.
 3. Crear una ref Git recuperable y un bundle en el respaldo. Copiar `dist/`
    a una release nueva, añadir `RELEASE.json` y `SHA256SUMS`, verificar hashes
    y sellar todos los archivos (0444) y directorios (0555).
-4. Preparar un symlink temporal al nuevo destino y sustituir atómicamente
-   el enlace existente con `os.replace`. No modificar la configuración de
-   Caddy, no reiniciar Caddy y no escribir sobre la release anterior.
+4. Solo con revisión y autorización de la sesión supervisora, preparar un
+   symlink temporal al nuevo destino y sustituir atómicamente el enlace
+   existente con `os.replace`. No modificar Caddy, reiniciar unidades ni
+   escribir sobre la release anterior.
 5. Verificar hashes servidos por Caddy local con SNI y en el borde público;
    comprobar el especial, portada, recursos, 404, logs y estado de Caddy.
 6. Repetir navegador y accesibilidad en la URL pública; registrar receipt.

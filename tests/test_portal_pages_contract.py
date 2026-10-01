@@ -55,6 +55,12 @@ class PortalPagesContractTests(unittest.TestCase):
         self.assertIn("Verificado el 1 de octubre de 2026", mapa)
         self.assertIn("265 páginas revisadas, 3 con problemas", mapa)
 
+    def test_new_editorial_html_stays_below_the_page_budget(self):
+        for route in ROUTES:
+            with self.subTest(route=route):
+                size = (DIST / route / "index.html").stat().st_size
+                self.assertLessEqual(size, 120 * 1024)
+
 
 if __name__ == "__main__":
     unittest.main()

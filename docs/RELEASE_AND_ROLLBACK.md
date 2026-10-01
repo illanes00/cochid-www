@@ -1,5 +1,10 @@
 # Liberación y reversión de `cochid.cl`
 
+> Registro histórico del corte del 27 de agosto de 2026. No usar estas rutas
+> para una publicación actual. El runbook vigente está en `docs/DEPLOY.md` y
+> conserva la configuración de Caddy: solo sustituye por CAS el symlink ya
+> existente después de una revisión explícita.
+
 La portada institucional se publica desde releases estáticas e inmutables. El
 corte cambia exclusivamente el `root` del bloque `cochid.cl` en Caddy. No
 modifica el checkout legado ni los bloques de `www.cochid.cl` o
