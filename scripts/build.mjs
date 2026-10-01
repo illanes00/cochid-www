@@ -71,6 +71,7 @@ const etiquetasGrupo={
  datos:'Datos',territorio:'Mapas y territorio',investigaciones:'Investigaciones',
  herramientas:'Herramientas',servicios:'Servicios',sobre:'Sobre COCHID'
 };
+const etiquetasTipo={portal:'Portal',pagina:'Página',producto:'Producto',vista:'Vista',herramienta:'Herramienta'};
 const ordenGrupos=['datos','territorio','investigaciones','herramientas','servicios','sobre'];
 const destinosMapa=()=>destinos.filter(destino=>destino.visible.mapa_del_sitio
  && destino.robots==='indexable' && !destino.alias_de && destino.clase!=='api'
@@ -83,7 +84,7 @@ function arbolDestinos(){
  const item=destino=>{
   const hijos=incluidos.filter(candidato=>candidato.padre===destino.id)
    .sort((a,b)=>a.orden-b.orden||a.etiqueta.localeCompare(b.etiqueta,'es'));
-  const tipo=destino.grupo==='investigaciones'?'Investigación':destino.clase[0].toUpperCase()+destino.clase.slice(1);
+  const tipo=destino.grupo==='investigaciones'?'Investigación':etiquetasTipo[destino.clase]||destino.clase;
   return `<li data-map-item><a href="${escapar(hrefDestino(destino))}">${escapar(destino.etiqueta)}</a> <span class="portal-tipo">${escapar(tipo)}</span><span class="portal-host">${escapar(destino.host+destino.ruta)}</span><p>${escapar(destino.resumen)}</p>${hijos.length?`<ul>${hijos.map(item).join('')}</ul>`:''}</li>`;
  };
  return `<div class="portal-arbol">${ordenGrupos.map(grupo=>{
