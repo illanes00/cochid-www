@@ -34,7 +34,7 @@ Fuente published-sites.json fechado01oct03:40UTC, SHA412d052419f454843dc48f05205
 | economia.cochid.cl | Proyecto, vista o herramienta con propósito visible |
 | tpte.cochid.cl | Proyecto, vista o herramienta con propósito visible |
 | prosa.cochid.cl | Alias: se enlaza destino canónico prosa.medicamentos.cochid.cl |
-| thesis.cochid.cl | Excluido: proyecto personal de Martín Illanes, fuera de la familia COCHID (2 de octubre de 2026) |
+| thesis.cochid.cl | Excluido: proyecto personal de Martín Illanes, fuera de la familia Compañía Chilena de Inteligencia de Datos (2 de octubre de 2026) |
 | www.cochid.cl | Entrada institucional; www alias de apex |
 | cochid.cl | Entrada institucional; www alias de apex |
 | datos.cochid.cl | Proyecto, vista o herramienta con propósito visible |

@@ -2,12 +2,12 @@
 titulo: Cargos públicos, deuda y anuario financiero de DIPRES, con fichas nuevas
 slug: cargos-publicos-deuda-y-anuario
 fecha: 2026-10-01
-autor: Equipo COCHID
+autor: Equipo Compañía Chilena de Inteligencia de Datos
 resumen: Tres series de DIPRES entran al catálogo con fichas propias: 874.586 observaciones de cargos del sector público, la deuda del Gobierno Central desde 1990 y el Anuario de Estadísticas de Finanzas Públicas.
-descripcion: COCHID publica las series de cargos públicos (2014 a 2025), deuda del Gobierno Central (1990 a 2025) y Anuario de Estadísticas de Finanzas Públicas (2015 a 2024) de DIPRES, con fichas de lectura y descarga.
+descripcion: Compañía Chilena de Inteligencia de Datos publica las series de cargos públicos (2014 a 2025), deuda del Gobierno Central (1990 a 2025) y Anuario de Estadísticas de Finanzas Públicas (2015 a 2024) de DIPRES, con fichas de lectura y descarga.
 ruta: /blog/cargos-publicos-deuda-y-anuario/
 tipo: datos-nuevos
-dominio: presupuesto-gasto-publico
+dominio: finanzas-publicas
 etiquetas: [dipres, empleo-publico, deuda, finanzas-publicas]
 datos: [dataset:dipres_macro_empleo_sector_publico, dataset:dipres_macro_deuda_gobierno_central, dataset:dipres_macro_anuario_efp]
 imagen: /blog/cargos-publicos-deuda-y-anuario/portada.png
@@ -25,7 +25,7 @@ El 30 de septiembre de 2026 cargamos tres series que DIPRES publica en planillas
 - 800 observaciones del Anuario de Estadísticas de Finanzas Públicas, 2015 a 2024
 :::
 
-Fuente: Dirección de Presupuestos. Cifras contadas en la base de COCHID el 1 de octubre de 2026.
+Fuente: Dirección de Presupuestos. Cifras contadas en la base de Compañía Chilena de Inteligencia de Datos el 1 de octubre de 2026.
 
 ## Cargos del sector público
 
@@ -33,7 +33,7 @@ Es la serie más grande de las tres. Cada observación es un número de cargos e
 
 En la [ficha de cargos públicos](https://datos.cochid.cl/dataset/dipres_macro_empleo_sector_publico) eliges un año y una fecha de corte, y luego una institución y uno de sus servicios. La ficha muestra una tabla de cargos por perfil. Al elegir un perfil, muestra cómo cambió su número de cargos entre cortes.
 
-Hay cuatro cortes por año: 31 de marzo, 30 de junio, 30 de septiembre y 31 de diciembre. No todas las combinaciones tienen dato en todos los cortes. Una combinación que no está en el archivo de origen tampoco está en COCHID; no se completa con ceros.
+Hay cuatro cortes por año: 31 de marzo, 30 de junio, 30 de septiembre y 31 de diciembre. No todas las combinaciones tienen dato en todos los cortes. Una combinación que no está en el archivo de origen tampoco está en Compañía Chilena de Inteligencia de Datos; no se completa con ceros.
 
 ## Deuda del Gobierno Central
 

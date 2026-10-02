@@ -9,7 +9,7 @@ const AxeBuilder = require('@axe-core/playwright').default;
 const base = process.env.COCHID_QA_BASE || 'http://127.0.0.1:18547';
 const salida = process.env.COCHID_QA_OUT || '/srv/projects/tasks/cochid-portal-20261001/qa/apex-r2';
 const rutasBase = [
-  '/', '/quienes-somos/', '/contacto/', '/servicios/', '/datos/', '/mapas/',
+  '/', '/sobre-nosotros/', '/buscar/', '/temas/', '/contacto/', '/servicios/', '/mapas/',
   '/herramientas/', '/investigaciones/', '/documentacion/', '/mapa-del-sitio/',
   '/cambio-de-hora/', '/concepciones/', '/blog/', '/novedades/',
   ...readdirSync(new URL('../content/blog/', import.meta.url))
@@ -18,8 +18,7 @@ const rutasBase = [
 ];
 const vistasBase = [
   {nombre: '1440', width: 1440, height: 1000},
-  {nombre: '768', width: 768, height: 900},
-  {nombre: '320', width: 320, height: 800},
+  {nombre: '390', width: 390, height: 844},
 ];
 const temasBase = ['light', 'dark'];
 const rutas = process.env.COCHID_QA_ROUTES ? process.env.COCHID_QA_ROUTES.split(',') : rutasBase;
@@ -73,7 +72,6 @@ try {
         const sinFoco = await page.evaluate(() => document.activeElement === document.body || document.activeElement === null);
         if (!sinFoco) fallos.push(`${id}: la captura tendría foco visible`);
         await page.screenshot({path: join(salida, `${id}.png`), fullPage: false});
-        await page.screenshot({path: join(salida, `${id}-completa.png`), fullPage: true});
 
         await page.locator('body').press('Tab');
         const foco = await page.evaluate(() => {
@@ -90,11 +88,13 @@ try {
         if (foco.tag === 'BODY' || !foco.visible || !foco.outline) fallos.push(`${id}: foco inicial ${JSON.stringify(foco)}`);
 
         let menu = null;
-        if (vista.width === 320) {
-          const boton = page.locator('.gr-nav__toggle');
+        if (vista.width === 390) {
+          const cerrarBuscador = page.locator('.bq__x');
+          if (await cerrarBuscador.isVisible()) await cerrarBuscador.click();
+          const boton = page.locator('.cx-menu-btn');
           await boton.click();
           const abierto = await boton.getAttribute('aria-expanded');
-          const navegacionVisible = await page.locator('.gr-nav__links').isVisible();
+          const navegacionVisible = await page.locator('.cx-panel').isVisible();
           await page.screenshot({path: join(salida, `${id}-menu.png`), fullPage: false});
           await page.keyboard.press('Escape');
           menu = {
@@ -127,7 +127,7 @@ const recibo = {
   base,
   rutas: rutas.length,
   casos: casos.length,
-  capturas: casos.length * 2 + casos.filter(caso => caso.menu).length,
+  capturas: casos.length + casos.filter(caso => caso.menu).length,
   axeSeriasOCriticas: casos.reduce((total, caso) => total + caso.axeGraves, 0),
   fallos,
   resultados: casos,

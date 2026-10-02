@@ -1,14 +1,14 @@
 ---
-titulo: Quiénes somos
-descripcion: COCHID reúne datos públicos de Chile con su fuente, su fecha y el archivo original del que salen. Quién lo hace, cómo trabaja y quién opera la plataforma.
-ruta: /quienes-somos/
+titulo: Sobre nosotros
+descripcion: La Compañía Chilena de Inteligencia de Datos reúne datos públicos de Chile con su fuente, su fecha y el archivo original del que salen. Quién lo hace, cómo trabaja y quién opera la plataforma.
+ruta: /sobre-nosotros/
 ---
 
 <!-- Nota de implementación: las cifras de «Qué hay hoy» salen de la instantánea de build (data/inventario.snapshot.json), no se escriben a mano. Si la instantánea tiene más de 14 días, el bloque se omite (SPEC §4.1 y §4.6). Los valores de abajo son los verificados el 1-oct-2026 21:08 UTC. -->
 
-# Quiénes somos
+# Sobre nosotros
 
-COCHID, Compañía Chilena de Inteligencia de Datos, reúne datos públicos de Chile en un catálogo único. Cada conjunto indica de dónde viene, cuándo se actualizó y desde qué archivo original se cargó. Está pensado para periodistas, equipos de investigación, organismos públicos y quienes construyen aplicaciones con datos chilenos.
+Compañía Chilena de Inteligencia de Datos, Compañía Chilena de Inteligencia de Datos, reúne datos públicos de Chile en un catálogo único. Cada conjunto indica de dónde viene, cuándo se actualizó y desde qué archivo original se cargó. Está pensado para periodistas, equipos de investigación, organismos públicos y quienes construyen aplicaciones con datos chilenos.
 
 ## Qué hay hoy
 
@@ -42,9 +42,9 @@ Martín Illanes, fundador.
 
 ## Relación institucional
 
-COCHID es la marca de Compañía Chilena de Inteligencia de Datos SpA (COCHID SpA, RUT 78.374.391-4), que mantiene este ecosistema de datos. La operación técnica está a cargo de [Compañía de Innovación de Santiago SpA](https://innovacionsantiago.cl) (RUT 78.384.591-1), bajo licencia.
+Compañía Chilena de Inteligencia de Datos es la marca de Compañía Chilena de Inteligencia de Datos SpA (Compañía Chilena de Inteligencia de Datos SpA, RUT 78.374.391-4), que mantiene este ecosistema de datos. La operación técnica está a cargo de [Compañía de Innovación de Santiago SpA](https://innovacionsantiago.cl) (RUT 78.384.591-1), bajo licencia.
 
-Compañía de Innovación de Santiago SpA también vende y factura, bajo esa licencia, los servicios de COCHID: asesorías, datos a medida, informes a pedido, descargas completas y planes de la API.
+Compañía de Innovación de Santiago SpA también vende y factura, bajo esa licencia, los servicios de Compañía Chilena de Inteligencia de Datos: asesorías, datos a medida, informes a pedido, descargas completas y planes de la API.
 
 ## Contacto
 

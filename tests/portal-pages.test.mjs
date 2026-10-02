@@ -6,9 +6,9 @@ import {join} from 'node:path';
 const raiz = new URL('../', import.meta.url);
 const dist = new URL('../dist/', import.meta.url);
 const rutas = [
-  '/', '/quienes-somos/', '/contacto/', '/servicios/', '/datos/', '/mapas/',
+  '/', '/sobre-nosotros/', '/contacto/', '/servicios/', '/mapas/',
   '/herramientas/', '/investigaciones/', '/documentacion/', '/mapa-del-sitio/',
-  '/asesoria/', '/asesoria/gracias/', '/blog/', '/novedades/',
+  '/asesoria/', '/asesoria/gracias/', '/blog/', '/novedades/', '/buscar/', '/temas/',
 ];
 const rutasNavegables = rutas.filter(ruta => ruta !== '/asesoria/gracias/');
 const archivoRuta = ruta => ruta === '/'
@@ -20,7 +20,7 @@ test('publica todas las puertas editoriales con el chrome de familia', () => {
   for (const ruta of rutas) {
     assert.ok(existsSync(archivoRuta(ruta)), `falta ${ruta}`);
     const html = leer(ruta);
-    assert.match(html, /<main id="contenido" tabindex="-1"(?: class="[^"]+")?>/);
+    assert.match(html, /<main id="contenido"[^>]*tabindex="-1"[^>]*>/);
     assert.match(html, /data-site-header/);
     assert.match(html, /data-footer-owner="cochid"/);
     assert.equal((html.match(/<h1\b/g) || []).length, 1, `${ruta}: debe tener un h1`);
@@ -90,7 +90,7 @@ test('publica el registro y genera desde él el mapa del sitio', () => {
   const grupos = [...mapa.matchAll(/<section><h2>([^<]+)<\/h2>/g)].map(coincidencia => coincidencia[1]);
   assert.deepEqual(grupos, ['Datos', 'Territorio', 'Investigaciones', 'Herramientas', 'Especiales']);
   assert.match(mapa, /Mundial[\s\S]{0,500}Proyecto terminado el 19 de julio de 2026/);
-  assert.doesNotMatch(mapa, /Fuera de COCHID/);
+  assert.doesNotMatch(mapa, /Fuera de Compañía Chilena de Inteligencia de Datos/);
   const cuerpo = mapa.match(/<main[\s\S]*?<div class="portal-arbol">([\s\S]*?)<\/div>[\s\S]*?<\/main>/)[1];
   const esperados = {
     Datos: [
@@ -129,7 +129,9 @@ test('publica el registro y genera desde él el mapa del sitio', () => {
 
 test('la portada enlaza las páginas nuevas y conserva sus anclas públicas', () => {
   const home = leer('/');
-  for (const ruta of rutasNavegables.slice(1)) assert.match(home, new RegExp(`href="${ruta}"`));
+  for (const ruta of ['/sobre-nosotros/', '/contacto/', '/investigaciones/', '/blog/', '/temas/']) {
+    assert.match(home, new RegExp(`href="(?:https://cochid\\.cl)?${ruta}"`));
+  }
   assert.match(home, /id="investigaciones"/);
   assert.match(home, /id="proyectos"/);
 });

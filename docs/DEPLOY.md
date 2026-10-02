@@ -1,6 +1,6 @@
-# Publicar el portal estático de COCHID
+# Publicar el portal estático de Compañía Chilena de Inteligencia de Datos
 
-El apex conserva HTML estático y el chrome compartido de COCHID. El build
+El apex conserva HTML estático y el chrome compartido de Compañía Chilena de Inteligencia de Datos. El build
 compone la portada, nueve páginas editoriales, el blog (`/blog/`, cinco
 entradas y `/blog/feed.xml` en RSS 2.0), `/novedades/` y los especiales
 `/cambio-de-hora/` y `/concepciones/`. Las novedades son una instantánea del

@@ -1,6 +1,6 @@
 # El reloj y el Sol
 
-Especial de COCHID basado en la conversación compartida por Martín:
+Especial de Compañía Chilena de Inteligencia de Datos basado en la conversación compartida por Martín:
 https://chatgpt.com/share/6a9edcbe-8554-83e9-9fa9-24c342f9b617
 
 ## Alcance y argumento

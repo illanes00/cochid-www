@@ -1,4 +1,4 @@
-"""Contrato de la página /concepciones/ en el sitio estático de COCHID.
+"""Contrato de la página /concepciones/ en el sitio estático de Compañía Chilena de Inteligencia de Datos.
 
 Cubre lo que el resto de las pruebas no ve: el enlace desde la portada, el
 sitemap, la imagen social y los marcadores que el build necesita. Las series
@@ -19,9 +19,8 @@ SOCIAL = ROOT / "concepciones" / "social.png"
 
 class ConcepcionesContractTests(unittest.TestCase):
     def test_home_links_to_the_study_like_the_other_cuaderno(self):
-        self.assertIn('href="/concepciones/"', HOME)
-        self.assertIn('id="cuaderno-concepciones"', HOME)
-        self.assertIn('href="/cambio-de-hora/"', HOME)
+        self.assertIn('href="https://cochid.cl/concepciones/"', HOME)
+        self.assertIn('href="https://cochid.cl/cambio-de-hora/"', HOME)
         self.assertIn("Cuándo se concibe en Chile", HOME)
 
     def test_sitemap_lists_the_study(self):
@@ -64,15 +63,14 @@ class ConcepcionesContractTests(unittest.TestCase):
         La aserción se acota a los dos bloques de cuaderno, que son los que
         esta rama toca; las cejas del catálogo institucional son anteriores.
         """
-        for ancla in ('id="cuaderno-concepciones"', 'id="cuaderno-luz"'):
-            inicio = HOME.index(ancla)
-            bloque = HOME[inicio:HOME.index("</section>", inicio)]
-            self.assertNotIn('class="eyebrow"', bloque)
-            self.assertNotIn('class="kicker"', bloque)
+        inicio = HOME.index('id="publicaciones"')
+        bloque = HOME[inicio:HOME.index("</section>", inicio)]
+        self.assertNotIn('class="eyebrow"', bloque)
+        self.assertNotIn('class="kicker"', bloque)
 
     def test_the_shared_footer_spells_the_company_out(self):
         """CANON prohíbe la sigla suelta en público, y el pie viaja a la página."""
-        footer = HOME[HOME.index('<footer class="gr-footer"'):]
+        footer = HOME[HOME.index('<footer class="cx-pie"'):]
         self.assertNotIn(">CIS<", footer)
         self.assertNotIn("(CIS,", footer)
         self.assertNotIn("facturados por CIS", footer)

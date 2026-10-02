@@ -103,7 +103,7 @@ def main():
              fontweight="semibold", color=TINTA, va="top")
     fig.text(0.055, 0.755, "Índice semanal de concepción, cohortes 1989 a 2007. El día promedio es 1,00.",
              fontfamily=SANS, fontsize=16, color=SUAVE, va="top")
-    fig.text(0.055, 0.055, "COCHID · cochid.cl/concepciones", fontfamily=CIFRA, fontsize=13, color=SUAVE)
+    fig.text(0.055, 0.055, "Compañía Chilena de Inteligencia de Datos · cochid.cl/concepciones", fontfamily=CIFRA, fontsize=13, color=SUAVE)
     fig.text(0.945, 0.055, "5.073.711 nacimientos con fecha exacta", fontfamily=CIFRA, fontsize=13,
              color=SUAVE, ha="right")
 

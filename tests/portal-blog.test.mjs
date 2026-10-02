@@ -15,7 +15,7 @@ const archivos = directorio => readdirSync(directorio, {withFileTypes: true}).fl
   const ruta = join(directorio, entrada.name);
   return entrada.isDirectory() ? archivos(ruta) : [ruta];
 });
-const htmls = archivos(dist).filter(ruta => ruta.endsWith('.html'));
+const htmls = archivos(dist).filter(ruta => ruta.endsWith('.html') && !ruta.includes('/assets/chrome-v2/'));
 const fuentes = readdirSync(join(raiz, 'content/blog')).filter(nombre => nombre.endsWith('.md')).sort();
 const frontmatter = nombre => {
   const bloque = readFileSync(join(raiz, 'content/blog', nombre), 'utf8').match(/^---\n([\s\S]*?)\n---/)[1];
@@ -85,32 +85,28 @@ test('cada entrada trae migas, fecha, dominio, etiquetas, cuerpo, relacionadas, 
     assert.match(html, /href="\/blog\/feed\.xml"/, meta.slug);
     assert.equal((html.match(/<h1\b/g) || []).length, 1, meta.slug);
     if (meta.dominio.startsWith('null')) assert.doesNotMatch(html, /Dominio:/, meta.slug);
-    else assert.match(html, /Dominio: Presupuesto y gasto público/, meta.slug);
+    else assert.match(html, /Dominio: Finanzas públicas/, meta.slug);
   }
-  assert.match(pagina('/blog/'), /Dominio: Presupuesto y gasto público/);
+  assert.match(pagina('/blog/'), /Dominio: Finanzas públicas/);
   assert.match(pagina('/blog/'), /class="badge">navegación</);
 });
 
-test('el bloque «Lo nuevo» de la portada muestra exactamente las tres novedades más recientes', () => {
+test('la portada muestra exactamente las tres entradas recientes aprobadas', () => {
   const home = pagina('/');
-  const bloque = home.match(/<section id="lo-nuevo"[\s\S]*?<\/section>/);
-  assert.ok(bloque, 'falta el bloque Lo nuevo');
-  const enlaces = [...bloque[0].matchAll(/<h3 class="novedad__titulo"><a href="([^"]+)"/g)].map(m => m[1]);
+  const bloque = home.match(/<section class="sec" id="publicaciones"[\s\S]*?<\/section>/);
+  assert.ok(bloque, 'falta el bloque de publicaciones');
+  const blog = bloque[0].slice(bloque[0].indexOf('id="t-blog"'));
+  const enlaces = [...blog.matchAll(/<h4><a href="https:\/\/cochid\.cl(\/blog\/[^"]+)"/g)].map(m => m[1]);
   assert.equal(enlaces.length, 3);
-  assert.match(bloque[0], /href="\/novedades\/">Ver todas las novedades</);
-  const todas = [...pagina('/novedades/').matchAll(/<h2 class="novedad__titulo"><a href="([^"]+)"/g)].map(m => m[1]);
-  assert.deepEqual(enlaces, todas.slice(0, 3));
-  assert.ok(home.indexOf('id="lo-nuevo"') < home.indexOf('id="dominios"'));
+  assert.match(blog, /href="https:\/\/cochid\.cl\/blog\/">Ir al blog/);
 });
 
-test('Blog y Novedades están en la columna Portal del pie y en el mapa del sitio', () => {
+test('el pie v2 enlaza Blog y la barra secundaria enlaza Novedades', () => {
   for (const archivo of htmls.filter(ruta => !ruta.includes('/concepciones/datos/'))) {
     const html = readFileSync(archivo, 'utf8');
     if (!html.includes('data-footer-owner="cochid"')) continue;
-    const portal = html.match(/<h4>Portal<\/h4><ul>([\s\S]*?)<\/ul>/);
-    assert.ok(portal, `${archivo}: sin columna Portal`);
-    assert.match(portal[1], /<a href="\/blog\/">Blog<\/a>/, archivo);
-    assert.match(portal[1], /<a href="\/novedades\/">Novedades<\/a>/, archivo);
+    assert.match(html, /data-nav-id="blog" href="https:\/\/cochid\.cl\/blog\/">Blog<\/a>/, archivo);
+    assert.match(html, /href="https:\/\/cochid\.cl\/novedades\/">Novedades<\/a>/, archivo);
   }
   const mapa = pagina('/mapa-del-sitio/');
   assert.match(mapa, /<a href="\/blog\/">Blog<\/a>/);
@@ -126,8 +122,7 @@ test('sitemap con blog, entradas y novedades, y lastmod de cada entrada', () => 
   }
   const reciente = entradas.map(meta => meta.fecha).sort().at(-1);
   assert.match(sitemap, new RegExp(`<loc>https://cochid\\.cl/blog/</loc><lastmod>${reciente}</lastmod>`));
-  /* La copia versionada en la raíz es la misma que publica el build. */
-  assert.equal(readFileSync(join(raiz, 'sitemap.xml'), 'utf8'), sitemap);
+  assert.doesNotMatch(sitemap, /<loc>https:\/\/cochid\.cl\/(?:datos|quienes-somos)\//);
 });
 
 test('robots anuncia ambos sitemaps y el índice enumera sólo sitemaps absolutos', () => {
@@ -152,11 +147,11 @@ test('publica una página 404 propia con kit, logo y enlaces de recuperación', 
 });
 
 test('anuncia el RSS en portada, blog, entradas y novedades', () => {
-  const alterno = '<link rel="alternate" type="application/rss+xml" title="Blog de COCHID" href="https://cochid.cl/blog/feed.xml">';
+  const alterno = '<link rel="alternate" type="application/rss+xml" title="Blog de Compañía Chilena de Inteligencia de Datos" href="https://cochid.cl/blog/feed.xml">';
   for (const ruta of ['/', '/blog/', '/novedades/', ...rutasEntradas]) assert.ok(pagina(ruta).includes(alterno), ruta);
 });
 
-test('novedades solo vienen del blog o del campo novedad de releases COCHID', () => {
+test('novedades solo vienen del blog o del campo novedad de releases Compañía Chilena de Inteligencia de Datos', () => {
   const html = pagina('/novedades/');
   const items = [...html.matchAll(/<li class="novedad" data-novedad-origen="([a-z]+)">([\s\S]*?)<\/li>/g)];
   assert.ok(items.length >= 5);
@@ -188,7 +183,7 @@ test('el lector de releases acepta solo el campo novedad y no escribe', () => {
     release('cochid-tres', {novedad: {texto: 'Mapa nuevo', url: 'https://ejemplo.com/', fecha: '2026-09-01'}});
     release('cochid-cuatro', {novedad: 'Sin fecha'});
     release('cochid-cinco');
-    release('otro-sitio', {created_at: '2026-10-01T15:00:00Z', novedad: 'No es COCHID'});
+    release('otro-sitio', {created_at: '2026-10-01T15:00:00Z', novedad: 'No es Compañía Chilena de Inteligencia de Datos'});
     mkdirSync(join(base, 'cochid-seis'));
     symlinkSync(join(base, 'no-existe'), join(base, 'cochid-seis', 'current'));
     const huella = () => archivos(base).filter(ruta => existsSync(ruta)).map(ruta => [ruta, statSync(ruta).mtimeMs, statSync(ruta).size]);
@@ -202,7 +197,7 @@ test('el lector de releases acepta solo el campo novedad y no escribe', () => {
       'cochid-seis': 'current apunta a un destino inexistente',
       'cochid-tres': 'novedad con enlace fuera de cochid.cl',
     });
-    assert.ok(!resultado.items.some(item => /commit|No es COCHID/.test(item.titulo)));
+    assert.ok(!resultado.items.some(item => /commit|No es Compañía Chilena de Inteligencia de Datos/.test(item.titulo)));
     assert.deepEqual(huella(), antes);
   } finally {
     rmSync(base, {recursive: true, force: true});

@@ -1,0 +1,13 @@
+{
+  "schema": "cochid.chrome.v2",
+  "version": 2,
+  "destinos": 7,
+  "registro_sha256": "226d64701e8ea9e916b717e562636d5cfb789b0e504c8f8d43b627a7f3f37831",
+  "sha256": {
+    "chrome.css": "d695d51843d4439c06c7be5cbceac9f03b1d9295cd884b64ac70fc60b074a406",
+    "chrome.js": "1effe6fa24cee5db9978a09c5e2d7e300c47a11c9ba07066b1c5084496fa09f8",
+    "footer.html": "2bd637f313a681fc521ca38418dfab54303ff2bbf1d00da1170f52818311f3e1",
+    "header.html": "7ea3f24f21b2531a948fdd7b0d34e66e392f24358d7d51b0920a49263c826152",
+    "iconos.json": "b9c48a6c248b5e4667518472ff34db4286a4a8686f1aa4bbfbefc036c3f5a5ca"
+  }
+}

@@ -2,12 +2,12 @@
 titulo: El visor de presupuesto, ordenado en tres tareas
 slug: visor-de-presupuesto-tres-tareas
 fecha: 2026-10-01
-autor: Equipo COCHID
-resumen: El visor de presupuesto de COCHID se reorganizó en tres tareas: entender el presupuesto, explorar instituciones y comparar años. Los controles, las tablas y las descargas quedan plegados hasta que los necesitas.
-descripcion: Cómo usar el visor de presupuesto de COCHID después de su reorganización del 1 de octubre de 2026: tres tareas, gráficos legibles en el teléfono, descargas y verificación de cada consulta.
+autor: Equipo Compañía Chilena de Inteligencia de Datos
+resumen: El visor de presupuesto de Compañía Chilena de Inteligencia de Datos se reorganizó en tres tareas: entender el presupuesto, explorar instituciones y comparar años. Los controles, las tablas y las descargas quedan plegados hasta que los necesitas.
+descripcion: Cómo usar el visor de presupuesto de Compañía Chilena de Inteligencia de Datos después de su reorganización del 1 de octubre de 2026: tres tareas, gráficos legibles en el teléfono, descargas y verificación de cada consulta.
 ruta: /blog/visor-de-presupuesto-tres-tareas/
 tipo: metodologia
-dominio: presupuesto-gasto-publico
+dominio: finanzas-publicas
 etiquetas: [presupuesto, visor, dipres]
 datos: [dataset:dipres_ley_linea, dataset:dipres_glosas]
 imagen: /blog/visor-de-presupuesto-tres-tareas/portada.png
@@ -50,7 +50,7 @@ Las barras se ajustan al ancho de la pantalla y las etiquetas se muestran comple
 
 ## Verificación por consulta
 
-Cada vista tiene un bloque «Verificación por consulta». Indica qué conjunto y qué archivos originales de DIPRES producen las cifras de esa consulta en particular, con enlace a cada archivo en la [Biblioteca](https://datos.cochid.cl/biblioteca). La verificación se hace consulta por consulta: COCHID no certifica el presupuesto completo de una vez.
+Cada vista tiene un bloque «Verificación por consulta». Indica qué conjunto y qué archivos originales de DIPRES producen las cifras de esa consulta en particular, con enlace a cada archivo en la [Biblioteca](https://datos.cochid.cl/biblioteca). La verificación se hace consulta por consulta: Compañía Chilena de Inteligencia de Datos no certifica el presupuesto completo de una vez.
 
 ## Cuéntanos si algo no se entiende
 

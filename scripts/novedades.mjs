@@ -5,7 +5,7 @@ import {TIPOS, fechaLarga} from './blog.mjs';
 /* Novedades del apex (SPEC §6), instantánea tomada al construir. Solo dos
    fuentes locales y verificables:
    1. las entradas del blog ya validadas;
-   2. el campo explícito `novedad` del RELEASE.json de cada release COCHID
+   2. el campo explícito `novedad` del RELEASE.json de cada release Compañía Chilena de Inteligencia de Datos
       alcanzable como <releases>/cochid-<servicio>/current, leído sin escribir.
    No se leen mensajes de commit, ni la red, ni ninguna API. Un RELEASE.json
    sin `novedad` no produce ítem. */
@@ -24,7 +24,7 @@ export function novedadesDesdeBlog(entradas) {
     fecha: entrada.fecha,
     url: entrada.ruta,
     dominio: entrada.dominioEtiqueta,
-    fuente: `Blog de COCHID, entrada del ${fechaLarga(entrada.fecha)}`,
+    fuente: `Blog de Compañía Chilena de Inteligencia de Datos, entrada del ${fechaLarga(entrada.fecha)}`,
   }));
 }
 
@@ -125,7 +125,7 @@ ${resumen && item.resumen ? `<p>${escapar(item.resumen)}</p>` : ''}
 }
 
 export function paginaNovedades(items) {
-  return `<p>Esta lista se genera al publicar el sitio a partir de dos fuentes: las entradas del <a href="/blog/">blog de COCHID</a> y las notas de publicación que cada servicio de COCHID declara en su release. No incluye mensajes internos de desarrollo. Última novedad: <time datetime="${items[0].fecha}">${fechaLarga(items[0].fecha)}</time>.</p>
+  return `<p>Esta lista se genera al publicar el sitio a partir de dos fuentes: las entradas del <a href="/blog/">blog de Compañía Chilena de Inteligencia de Datos</a> y las notas de publicación que cada servicio de Compañía Chilena de Inteligencia de Datos declara en su release. No incluye mensajes internos de desarrollo. Última novedad: <time datetime="${items[0].fecha}">${fechaLarga(items[0].fecha)}</time>.</p>
 <ol class="novedades-lista">
 ${items.map(item => itemHtml(item, 2, {resumen: true})).join('\n')}
 </ol>
@@ -136,7 +136,7 @@ export function loNuevo(items) {
   if (items.length < 3) throw new Error(`«Lo nuevo» necesita tres novedades y hay ${items.length}`);
   return `<section id="lo-nuevo" aria-labelledby="lo-nuevo-titulo">
     <h2 id="lo-nuevo-titulo">Lo nuevo</h2>
-    <p class="h2-sub">Las tres novedades más recientes del blog y de las publicaciones de COCHID.</p>
+    <p class="h2-sub">Las tres novedades más recientes del blog y de las publicaciones de Compañía Chilena de Inteligencia de Datos.</p>
     <ol class="novedades-lista novedades-lista--portada">
 ${items.slice(0, 3).map(item => itemHtml(item, 3, {resumen: false})).join('\n')}
     </ol>

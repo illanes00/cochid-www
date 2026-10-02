@@ -201,7 +201,7 @@ export function cuerpoEntrada(entrada, entradas) {
 ${entrada.html}
 </div>
 ${datos.length ? `<section class="blog-seccion" aria-labelledby="datos-entrada"><h2 id="datos-entrada">Datos de esta entrada</h2><ul>${datos.map(id => `<li><a href="https://datos.cochid.cl/dataset/${id}"><code>${escapar(id)}</code></a></li>`).join('')}</ul></section>` : ''}
-<section class="blog-seccion" aria-labelledby="como-citar"><h2 id="como-citar">Cómo citar esta entrada</h2><p>${escapar(entrada.autor)} (${entrada.fecha.slice(0, 4)}). ${escapar(entrada.titulo)}. Blog de COCHID, ${fechaLarga(entrada.fecha)}. ${url}</p></section>
+<section class="blog-seccion" aria-labelledby="como-citar"><h2 id="como-citar">Cómo citar esta entrada</h2><p>${escapar(entrada.autor)} (${entrada.fecha.slice(0, 4)}). ${escapar(entrada.titulo)}. Blog de Compañía Chilena de Inteligencia de Datos, ${fechaLarga(entrada.fecha)}. ${url}</p></section>
 <nav class="blog-seccion blog-vecinas" aria-label="Entradas anterior y siguiente">
 <h2>Más entradas</h2>
 <ul>
@@ -236,9 +236,9 @@ ${categorias.map(categoria => `      <category>${escapar(categoria)}</category>`
   return `<?xml version="1.0" encoding="UTF-8"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Blog de COCHID</title>
+    <title>Blog de Compañía Chilena de Inteligencia de Datos</title>
     <link>${SITIO}/blog/</link>
-    <description>Datos nuevos, métodos y cambios de COCHID, Compañía Chilena de Inteligencia de Datos.</description>
+    <description>Datos nuevos, métodos y cambios de Compañía Chilena de Inteligencia de Datos, Compañía Chilena de Inteligencia de Datos.</description>
     <language>es-cl</language>
     <lastBuildDate>${fechaRfc822(reciente)}</lastBuildDate>
     <atom:link href="${SITIO}/blog/feed.xml" rel="self" type="application/rss+xml"/>

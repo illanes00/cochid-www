@@ -1,4 +1,4 @@
-# Portal público COCHID
+# Portal público Compañía Chilena de Inteligencia de Datos
 User-agent: *
 Allow: /
 Disallow: /api/

@@ -35,7 +35,7 @@ sección final, "Procedencia". Ninguna cifra sale de otro lado.
 
 ## Metadatos
 
-**Title.** Cuándo se concibe en Chile · COCHID
+**Title.** Cuándo se concibe en Chile · Compañía Chilena de Inteligencia de Datos
 
 **Meta description.** Cinco millones de nacimientos con fecha exacta, cohortes
 1989 a 2007. El máximo de concepciones cae entre el 24 de diciembre y el 7 de
@@ -922,7 +922,7 @@ Servicio de Registro Civil e Identificación.
 
 ## Nota de cierre, para el pie de la página
 
-Publicado por COCHID. Análisis sobre 5.073.711 nacimientos con fecha exacta,
+Publicado por Compañía Chilena de Inteligencia de Datos. Análisis sobre 5.073.711 nacimientos con fecha exacta,
 cohortes 1989 a 2007, con verificación externa contra los registros vitales. Toda
 cifra de esta página tiene su origen declarado en la sección 07. Las cifras
 referidas a concepciones son semanales; las referidas a fechas concretas son de

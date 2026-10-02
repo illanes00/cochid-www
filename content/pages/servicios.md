@@ -1,6 +1,6 @@
 ---
 titulo: Servicios
-descripcion: Datos a medida, informes a pedido, descargas completas y planes de la API de COCHID. Qué incluye el acceso gratuito y qué se cotiza.
+descripcion: Datos a medida, informes a pedido, descargas completas y planes de la API de Compañía Chilena de Inteligencia de Datos. Qué incluye el acceso gratuito y qué se cotiza.
 ruta: /servicios/
 ---
 
@@ -8,7 +8,7 @@ ruta: /servicios/
 
 # Servicios
 
-Los datos de COCHID se consultan y descargan gratis. Si necesitas algo que el catálogo no entrega tal cual, estos son los servicios disponibles. Los vende y factura Compañía de Innovación de Santiago SpA (RUT 78.384.591-1), que opera COCHID bajo licencia de Compañía Chilena de Inteligencia de Datos SpA.
+Los datos de Compañía Chilena de Inteligencia de Datos se consultan y descargan gratis. Si necesitas algo que el catálogo no entrega tal cual, estos son los servicios disponibles. Los vende y factura Compañía de Innovación de Santiago SpA (RUT 78.384.591-1), que opera Compañía Chilena de Inteligencia de Datos bajo licencia de Compañía Chilena de Inteligencia de Datos SpA.
 
 ## Acceso gratuito
 

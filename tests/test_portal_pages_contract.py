@@ -6,7 +6,7 @@ import unittest
 ROOT = Path(__file__).resolve().parents[1]
 DIST = ROOT / "dist"
 ROUTES = (
-    "quienes-somos", "contacto", "servicios", "datos", "mapas",
+    "sobre-nosotros", "contacto", "servicios", "mapas",
     "herramientas", "investigaciones", "documentacion", "mapa-del-sitio",
     "asesoria", "asesoria/gracias",
 )
@@ -30,7 +30,7 @@ class PortalPagesContractTests(unittest.TestCase):
                 self.assertNotRegex(html, r"\bCIS\b")
 
     def test_resolved_business_decisions_are_visible(self):
-        about = self.page("quienes-somos")
+        about = self.page("sobre-nosotros")
         self.assertIn("Martín Illanes, fundador.", about)
         self.assertIn("Compañía Chilena de Inteligencia de Datos SpA", about)
         self.assertIn("Compañía de Innovación de Santiago SpA", about)
@@ -48,6 +48,10 @@ class PortalPagesContractTests(unittest.TestCase):
         self.assertIn("no tienen una licencia formal", docs)
         self.assertNotIn("X-API-Key", docs)
         self.assertNotIn("gateway/cochid-datos", docs)
+
+    def test_old_routes_redirect_to_the_v2_canonical_routes(self):
+        self.assertIn('url=/sobre-nosotros/', self.page("quienes-somos"))
+        self.assertIn('url=/temas/', self.page("datos"))
 
     def test_generated_navigation_files_are_public(self):
         for name in ("destinos.json", "sitemap.xml", "sitemap-hosts.xml", "robots.txt"):

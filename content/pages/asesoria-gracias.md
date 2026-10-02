@@ -6,4 +6,4 @@ ruta: /asesoria/gracias/
 
 # Recibimos tu solicitud
 
-La solicitud quedó registrada. Puedes volver al [portal de COCHID](/) o revisar los [servicios disponibles](/servicios/).
+La solicitud quedó registrada. Puedes volver al [portal de Compañía Chilena de Inteligencia de Datos](/) o revisar los [servicios disponibles](/servicios/).

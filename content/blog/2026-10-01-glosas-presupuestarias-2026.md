@@ -2,12 +2,12 @@
 titulo: Las 3.048 glosas de la Ley de Presupuestos 2026, cada una con su página
 slug: glosas-presupuestarias-2026
 fecha: 2026-10-01
-autor: Equipo COCHID
+autor: Equipo Compañía Chilena de Inteligencia de Datos
 resumen: Leímos los 470 documentos de glosas de la Ley de Presupuestos 2026 publicados por DIPRES. Cada glosa queda ligada a su programa y a la página del PDF de donde sale.
-descripcion: COCHID publica las 3.048 glosas de la Ley de Presupuestos 2026, leídas de 470 documentos de DIPRES, con el programa, la página y el PDF original de cada una.
+descripcion: Compañía Chilena de Inteligencia de Datos publica las 3.048 glosas de la Ley de Presupuestos 2026, leídas de 470 documentos de DIPRES, con el programa, la página y el PDF original de cada una.
 ruta: /blog/glosas-presupuestarias-2026/
 tipo: datos-nuevos
-dominio: presupuesto-gasto-publico
+dominio: finanzas-publicas
 etiquetas: [presupuesto, dipres, glosas, ley-de-presupuestos]
 datos: [dataset:dipres_glosas, dataset:dipres_law_documents]
 imagen: /blog/glosas-presupuestarias-2026/portada.png
@@ -17,7 +17,7 @@ borrador: false
 
 <!-- Nota: el id de dominio `presupuesto-gasto-publico` es provisional (SPEC §2.4). -->
 
-Desde el 1 de octubre de 2026, COCHID publica **3.048 glosas** de la Ley de Presupuestos 2026, leídas de los **470 documentos** de glosas que DIPRES publica para ese año. Cada glosa queda ligada a su partida, capítulo y programa, y a la página del PDF original donde aparece.
+Desde el 1 de octubre de 2026, Compañía Chilena de Inteligencia de Datos publica **3.048 glosas** de la Ley de Presupuestos 2026, leídas de los **470 documentos** de glosas que DIPRES publica para ese año. Cada glosa queda ligada a su partida, capítulo y programa, y a la página del PDF original donde aparece.
 
 :::cifras
 - 3.048 glosas de la Ley de Presupuestos 2026

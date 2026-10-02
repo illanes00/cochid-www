@@ -1,10 +1,10 @@
 {
   "schema": "cochid.destinos.v1",
-  "generado": "2026-10-02T03:00:00Z",
+  "generado": "2026-10-02T21:40:00Z",
   "fuentes": {
     "registro_sha": "dd408498bb03d12583e6111ee4fa0b8567759cd53fbb3388cb04a4cb57c13025",
     "portfolio_sha": "b746b87f014309d9617973e164de83079036cda94dfb8578b60c4c5c8fd15f5f",
-    "presentacion_sha": "4e60340d1d0afe33f3bdd3751a976376f9b16bd451f9d7c4e4118bc9f85e1683"
+    "presentacion_sha": "89b62b992dabea578f265c7e3bef50a32e2a14790130ac464f08d0b19a119d08"
   },
   "grupos": [
     {
@@ -44,7 +44,7 @@
     },
     {
       "id": "fuera",
-      "etiqueta": "Fuera de COCHID",
+      "etiqueta": "Fuera del portal",
       "icono": "external-link",
       "orden": 6,
       "visible": false
@@ -52,171 +52,2208 @@
   ],
   "dominios": [
     {
-      "id": "presupuesto-gasto-publico",
-      "etiqueta": "Presupuesto y gasto público",
-      "icono": "moneda",
-      "resumen": "Presupuesto, ejecución y compra pública.",
+      "id": "salud",
+      "etiqueta": "Salud",
+      "icono": "heart-pulse",
+      "icono_svg": "<path d=\"M2 9.5a5.5 5.5 0 0 1 9.591-3.676.56.56 0 0 0 .818 0A5.49 5.49 0 0 1 22 9.5c0 2.29-1.5 4-3 5.5l-5.492 5.313a2 2 0 0 1-3 .019L5 15c-1.5-1.5-3-3.2-3-5.5\"/><path d=\"M3.22 13H9.5l.5-1 2 4.5 2-7 1.5 3.5h5.27\"/>",
+      "resumen": "Medicamentos, gasto en salud, mortalidad y servicios sanitarios.",
       "temas": [
-        "presupuesto"
+        "medicamentos",
+        "financiamiento",
+        "mortalidad",
+        "servicios"
       ],
-      "destino": "cochid.datos.dominio.presupuesto",
+      "subtemas": [
+        {
+          "id": "medicamentos",
+          "etiqueta": "Medicamentos y farmacia",
+          "frase": "Compra pública, licitaciones y gasto en fármacos.",
+          "icono": {
+            "nombre": "pill",
+            "svg_hijos": "<path d=\"m10.5 20.5 10-10a4.95 4.95 0 1 0-7-7l-10 10a4.95 4.95 0 1 0 7 7Z\"/><path d=\"m8.5 8.5 7 7\"/>"
+          },
+          "conteos": {
+            "conjuntos": 4,
+            "indicadores": 3,
+            "conjuntos_secundarios": 0,
+            "indicadores_secundarios": 0
+          },
+          "conjuntos_secundarios": [],
+          "conjuntos": [
+            "cenabast_farmacia",
+            "mercado_publico_medicamentos",
+            "mercado_publico_licitaciones_med",
+            "sinim_medicamentos"
+          ],
+          "indicadores": [
+            "cenabast_gasto_farmacia_clp",
+            "mp_gasto_medicamentos_clp",
+            "sinim_gasto_medicamentos_clp"
+          ],
+          "sitios": [
+            "cochid.medicamentos"
+          ],
+          "investigaciones": [
+            "medicamentos"
+          ]
+        },
+        {
+          "id": "financiamiento",
+          "etiqueta": "Gasto y financiamiento",
+          "frase": "Cuánto se gasta en salud y quién lo paga.",
+          "icono": {
+            "nombre": "hand-coins",
+            "svg_hijos": "<path d=\"M11 15h2a2 2 0 1 0 0-4h-3c-.6 0-1.1.2-1.4.6L3 17\"/><path d=\"m7 21 1.6-1.4c.3-.4.8-.6 1.4-.6h4c1.1 0 2.1-.4 2.8-1.2l4.6-4.4a2 2 0 0 0-2.75-2.91l-4.2 3.9\"/><path d=\"m2 16 6 6\"/><circle cx=\"16\" cy=\"9\" r=\"2.9\"/><circle cx=\"6\" cy=\"5\" r=\"3\"/>"
+          },
+          "conteos": {
+            "conjuntos": 3,
+            "indicadores": 1,
+            "conjuntos_secundarios": 0,
+            "indicadores_secundarios": 0
+          },
+          "conjuntos_secundarios": [],
+          "conjuntos": [
+            "datos_gob_salud__finanzas_salud_mostazal_pasivos_salud_2018",
+            "datos_gob_salud__finanzas_salud_mostazal_pasivos_salud_2020",
+            "datos_gob_salud__finanzas_salud_mostazal_pasivos_salud_2021"
+          ],
+          "indicadores": [
+            "gasto_salud_pib"
+          ],
+          "sitios": [],
+          "investigaciones": []
+        },
+        {
+          "id": "mortalidad",
+          "etiqueta": "Mortalidad y estadísticas vitales",
+          "frase": "Defunciones, esperanza de vida y mortalidad infantil.",
+          "icono": {
+            "nombre": "activity",
+            "svg_hijos": "<path d=\"M22 12h-2.48a2 2 0 0 0-1.93 1.46l-2.35 8.36a.25.25 0 0 1-.48 0L9.24 2.18a.25.25 0 0 0-.48 0l-2.35 8.36A2 2 0 0 1 4.49 12H2\"/>"
+          },
+          "conteos": {
+            "conjuntos": 6,
+            "indicadores": 2,
+            "conjuntos_secundarios": 2,
+            "indicadores_secundarios": 0
+          },
+          "conjuntos_secundarios": [
+            "worldbank_chile",
+            "datos_gob_vitales__estadisticas_vitales"
+          ],
+          "conjuntos": [
+            "datos_gob_defuncion__11087",
+            "datos_gob_defuncion__11090",
+            "datos_gob_defuncion__defunciones_por_semana_epidemiologica",
+            "datos_gob_vitales__3731",
+            "datos_gob_vitales__8669",
+            "minsal_deis_mortalidad"
+          ],
+          "indicadores": [
+            "esperanza_vida",
+            "mortalidad_infantil"
+          ],
+          "sitios": [],
+          "investigaciones": []
+        },
+        {
+          "id": "servicios",
+          "etiqueta": "Servicios y prevención",
+          "frase": "Salud municipal, médicos y vacunación.",
+          "icono": {
+            "nombre": "stethoscope",
+            "svg_hijos": "<path d=\"M11 2v2\"/><path d=\"M5 2v2\"/><path d=\"M5 3H4a2 2 0 0 0-2 2v4a6 6 0 0 0 12 0V5a2 2 0 0 0-2-2h-1\"/><path d=\"M8 15a6 6 0 0 0 12 0v-3\"/><circle cx=\"20\" cy=\"10\" r=\"2\"/>"
+          },
+          "conteos": {
+            "conjuntos": 3,
+            "indicadores": 1,
+            "conjuntos_secundarios": 0,
+            "indicadores_secundarios": 0
+          },
+          "conjuntos_secundarios": [],
+          "conjuntos": [
+            "datos_gob_sinim__1146",
+            "datos_gob_sinim__1285",
+            "mineduc_estado_de_vacunacion_por_curso"
+          ],
+          "indicadores": [
+            "medicos_per_capita"
+          ],
+          "sitios": [],
+          "investigaciones": []
+        }
+      ],
+      "destino": "cochid.medicamentos",
       "sitios": [
-        "cochid.datos.presupuesto"
+        "cochid.medicamentos"
       ],
-      "orden": 1
+      "orden": 1,
+      "conteos": {
+        "conjuntos_primarios": 16,
+        "por_nivel": {
+          "crudos_bronze": 12,
+          "normalizados_silver": 4,
+          "listos_gold": 0,
+          "tematicos_congreso_lex": 0,
+          "referencia_ref_meta": 0
+        },
+        "consultables": 4,
+        "planificados": 12,
+        "ingesta": {
+          "al_dia": 4,
+          "desactualizada": 0,
+          "por_verificar": 12
+        },
+        "conjuntos_secundarios": 2,
+        "indicadores": 7,
+        "indicadores_secundarios": 0
+      }
     },
     {
-      "id": "seguridad-justicia",
-      "etiqueta": "Seguridad y justicia",
-      "icono": "escudo",
-      "resumen": "Delitos, victimización, justicia y sistema penitenciario.",
+      "id": "educacion",
+      "etiqueta": "Educación",
+      "icono": "graduation-cap",
+      "icono_svg": "<path d=\"M21.42 10.922a1 1 0 0 0-.019-1.838L12.83 5.18a2 2 0 0 0-1.66 0L2.6 9.08a1 1 0 0 0 0 1.832l8.57 3.908a2 2 0 0 0 1.66 0z\"/><path d=\"M22 10v6\"/><path d=\"M6 12.5V16a6 3 0 0 0 12 0v-3.5\"/>",
+      "resumen": "Matrícula, docentes, aprendizaje, financiamiento y educación superior.",
       "temas": [
-        "seguridad",
-        "seguridad-justicia",
-        "seguridad-victimizacion",
-        "sistema-penitenciario"
+        "matricula",
+        "docentes",
+        "aprendizaje",
+        "financiamiento",
+        "superior"
       ],
-      "destino": "cochid.datos.dominio.seguridad",
+      "subtemas": [
+        {
+          "id": "matricula",
+          "etiqueta": "Matrícula y establecimientos",
+          "frase": "Estudiantes, escuelas, sostenedores y parvularia.",
+          "icono": {
+            "nombre": "school",
+            "svg_hijos": "<path d=\"M14 21v-3a2 2 0 0 0-4 0v3\"/><path d=\"M18 4.933V21\"/><path d=\"m4 6 7.106-3.79a2 2 0 0 1 1.788 0L20 6\"/><path d=\"m6 11-3.52 2.147a1 1 0 0 0-.48.854V19a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2v-5a1 1 0 0 0-.48-.853L18 11\"/><path d=\"M6 4.933V21\"/><circle cx=\"12\" cy=\"9\" r=\"2\"/>"
+          },
+          "conteos": {
+            "conjuntos": 30,
+            "indicadores": 8,
+            "conjuntos_secundarios": 0,
+            "indicadores_secundarios": 0
+          },
+          "conjuntos_secundarios": [],
+          "conjuntos": [
+            "datos_gob_matricula__33367",
+            "datos_gob_matricula__matricula_oficial_educacion_parvularia",
+            "datos_gob_matricula__matricula_oficial_por_estudiante",
+            "datos_gob_matricula__resumen_de_matricula_por_establecimient",
+            "datos_gob_sinim__1144",
+            "datos_gob_sinim__1281",
+            "mineduc",
+            "mineduc_extra",
+            "mineduc_directorio_de_establecimientos_educacionales",
+            "mineduc_extra_directorio_ee",
+            "mineduc_directorio_oficial_de_establecimientos",
+            "mineduc_directorio_oficial_de_sostenedores",
+            "mineduc_extra_sostenedores",
+            "mineduc_establecimientos",
+            "mineduc_establecimientos_jornada_escolar_completa_jec_2",
+            "mineduc_estado_apertura_de_establecimientos",
+            "mineduc_matricula_anual_region",
+            "mineduc_matricula_educacion_parvularia",
+            "mineduc_matricula_longitudinal",
+            "mineduc_extra_parvularia",
+            "mineduc_matricula_por_establecimiento",
+            "mineduc_matricula",
+            "mineduc_matricula_por_estudiante_2",
+            "mineduc_registro_publico_digital_anotate_en_la_lista",
+            "mineduc_resumen_de_matricula_en_educacion_parvularia_por_est",
+            "mineduc_resumen_de_matricula_por_curso",
+            "mineduc_resumen_de_matricula_por_establecimiento_educacional",
+            "mineduc_resumen_de_matricula_por_unidad_educativa",
+            "mineduc_extra_sae",
+            "mineduc_sistema_de_admision_escolar_sae"
+          ],
+          "indicadores": [
+            "mineduc_matricula_basica",
+            "mineduc_matricula_media",
+            "mineduc_matricula_total",
+            "mineduc_n_establecimientos_rurales",
+            "mineduc_matricula_basica_ee",
+            "mineduc_matricula_media_ee",
+            "mineduc_matricula_total_ee",
+            "mineduc_n_establecimientos"
+          ],
+          "sitios": [],
+          "investigaciones": []
+        },
+        {
+          "id": "docentes",
+          "etiqueta": "Docentes y asistentes",
+          "frase": "Cargos, evaluación y horas de docentes y asistentes.",
+          "icono": {
+            "nombre": "users-round",
+            "svg_hijos": "<path d=\"M18 21a8 8 0 0 0-16 0\"/><circle cx=\"10\" cy=\"8\" r=\"5\"/><path d=\"M22 20c0-3.37-2-6.5-4-8a5 5 0 0 0-.45-8.3\"/>"
+          },
+          "conteos": {
+            "conjuntos": 15,
+            "indicadores": 7,
+            "conjuntos_secundarios": 0,
+            "indicadores_secundarios": 0
+          },
+          "conjuntos_secundarios": [],
+          "conjuntos": [
+            "mineduc_asignacion_a_la_excelencia_pedagogica_aep",
+            "mineduc_asignacion_variable_al_desempeno_individual_avdi",
+            "mineduc_asistentes_de_la_educacion",
+            "mineduc_extra_asistentes",
+            "mineduc_cargos_docentes",
+            "mineduc_desvinculacion",
+            "mineduc_docentes",
+            "mineduc_docentes_anual_region",
+            "mineduc_docentes_por_curso_y_subsector_2",
+            "mineduc_evaluacion_de_conocimientos_especificos_y_pedagogico",
+            "mineduc_evaluacion_docente",
+            "mineduc_extra_evaluacion_docente",
+            "mineduc_evaluacion_inicia",
+            "mineduc_resumen_de_asistentes_de_la_educacion_por_establecim",
+            "mineduc_resumen_de_docentes_por_establecimiento"
+          ],
+          "indicadores": [
+            "mineduc_docentes_n",
+            "mineduc_estudiantes_por_docente",
+            "mineduc_evaluacion_docente_satisfactoria_pct",
+            "mineduc_horas_docentes_ee",
+            "mineduc_evaluacion_docente_n_evaluados",
+            "mineduc_n_docentes_ee",
+            "mineduc_evaluacion_docente_portafolio_pje"
+          ],
+          "sitios": [],
+          "investigaciones": []
+        },
+        {
+          "id": "aprendizaje",
+          "etiqueta": "Aprendizaje y asistencia",
+          "frase": "Notas, SIMCE, asistencia, repitencia y evaluaciones.",
+          "icono": {
+            "nombre": "book-open-check",
+            "svg_hijos": "<path d=\"M12 21V7\"/><path d=\"m16 12 2 2 4-4\"/><path d=\"M22 6V4a1 1 0 0 0-1-1h-5a4 4 0 0 0-4 4 4 4 0 0 0-4-4H3a1 1 0 0 0-1 1v13a1 1 0 0 0 1 1h6a3 3 0 0 1 3 3 3 3 0 0 1 3-3h6a1 1 0 0 0 1-1v-1.3\"/>"
+          },
+          "conteos": {
+            "conjuntos": 25,
+            "indicadores": 13,
+            "conjuntos_secundarios": 1,
+            "indicadores_secundarios": 0
+          },
+          "conjuntos_secundarios": [
+            "mineduc_estado_de_vacunacion_por_curso"
+          ],
+          "conjuntos": [
+            "datos_gob_sinim__indicadores_de_desarrollo_personal_y_social",
+            "mineduc_anuario_indicadores_estadisticos_del_mercosur",
+            "mineduc_asistencia",
+            "mineduc_asistencia_anual_por_estudiante",
+            "mineduc_asistencia_anual_region",
+            "mineduc_asistencia_declarada_mensual_2",
+            "mineduc_cumplimiento_requisitos_postergacion",
+            "mineduc_encuesta_nacional_de_desarrollo_digital_e_innovacion",
+            "mineduc_evaluacion_nacional_diagnostica",
+            "mineduc_indices_de_eficiencia_interna",
+            "mineduc_ipe_ievcu",
+            "mineduc_notas_de_ensenanza_media_y_percentil_adultos",
+            "mineduc_notas_de_ensenanza_media_y_percentil_jovenes",
+            "mineduc_notas_y_egresados_de_ensenanza_media",
+            "mineduc_planes_de_mejoramiento_educativo_2",
+            "mineduc_planes_y_programas_de_estudio",
+            "mineduc_rendimiento_anual_region",
+            "mineduc_rendimiento_por_estudiante_2",
+            "mineduc_rendimiento",
+            "mineduc_resumen_de_rendimiento_por_unidad_educativa",
+            "mineduc_saber_comprender",
+            "mineduc_sistema_nacional_evaluacion_del_desempeno_sned_2",
+            "mineduc_validacion_de_estudios",
+            "mineduc_vulnerabilidad_ive",
+            "agenciaeducacion_simce"
+          ],
+          "indicadores": [
+            "mineduc_asistencia_estudiantes_evaluados",
+            "mineduc_aprobacion_pct",
+            "mineduc_asistencia_promedio_pct",
+            "mineduc_asistencia_inasistencia_cronica_pct",
+            "mineduc_repitencia_pct",
+            "mineduc_retiro_pct",
+            "mineduc_asistencia_promedio",
+            "mineduc_repitencia",
+            "mineduc_retiro",
+            "simce_4basico_lectura_promedio",
+            "simce_4basico_matematica_promedio",
+            "simce_2medio_lectura_promedio",
+            "simce_2medio_matematica_promedio"
+          ],
+          "sitios": [],
+          "investigaciones": []
+        },
+        {
+          "id": "financiamiento",
+          "etiqueta": "Subvenciones y financiamiento",
+          "frase": "Subvención por estudiante y financiamiento escolar.",
+          "icono": {
+            "nombre": "coins",
+            "svg_hijos": "<path d=\"M13.744 17.736a6 6 0 1 1-7.48-7.48\"/><path d=\"M15 6h1v4\"/><path d=\"m6.134 14.768.866-.5 2 3.464\"/><circle cx=\"16\" cy=\"8\" r=\"6\"/>"
+          },
+          "conteos": {
+            "conjuntos": 7,
+            "indicadores": 3,
+            "conjuntos_secundarios": 0,
+            "indicadores_secundarios": 0
+          },
+          "conjuntos_secundarios": [],
+          "conjuntos": [
+            "x_educacion_pobreza_region",
+            "mineduc_alumnos_preferentes_prioritarios_y_beneficiarios_sep",
+            "mineduc_establecimientos_educacionales_con_financiamiento_co",
+            "mineduc_f_resumen_alumnos_preferentes_prioritarios_beneficia",
+            "mineduc_subvenciones",
+            "mineduc_subvenciones_a_establecimientos_educacionales",
+            "mineduc_subvenciones_anual_region"
+          ],
+          "indicadores": [
+            "gasto_educacion_pib",
+            "mineduc_subvencion_per_capita",
+            "mineduc_subvencion_total"
+          ],
+          "sitios": [],
+          "investigaciones": []
+        },
+        {
+          "id": "superior",
+          "etiqueta": "Educación superior",
+          "frase": "Matrícula, titulados, becas, créditos y admisión.",
+          "icono": {
+            "nombre": "university",
+            "svg_hijos": "<path d=\"M14 21v-3a2 2 0 0 0-4 0v3\"/><path d=\"M18 12h.01\"/><path d=\"M18 16h.01\"/><path d=\"M22 7a1 1 0 0 0-1-1h-2a2 2 0 0 1-1.143-.359L13.143 2.36a2 2 0 0 0-2.286-.001L6.143 5.64A2 2 0 0 1 5 6H3a1 1 0 0 0-1 1v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2z\"/><path d=\"M6 12h.01\"/><path d=\"M6 16h.01\"/><circle cx=\"12\" cy=\"10\" r=\"2\"/>"
+          },
+          "conteos": {
+            "conjuntos": 14,
+            "indicadores": 1,
+            "conjuntos_secundarios": 0,
+            "indicadores_secundarios": 0
+          },
+          "conjuntos_secundarios": [],
+          "conjuntos": [
+            "datos_gob_educacion__1113",
+            "datos_gob_educacion__4891",
+            "datos_gob_educacion__matricula_en_educacion_superior",
+            "datos_gob_educacion__pruebas_de_admision_a_la_educacion_supe",
+            "datos_gob_educacion__titulados_en_educacion_superior",
+            "datos_gob_matricula__matricula_en_educacion_superior",
+            "mineduc_asignaciones_de_becas_y_creditos_en_educacion_superi",
+            "mineduc_extra_matricula_es",
+            "mineduc_matricula_en_educacion_superior",
+            "mineduc_postulaciones_a_becas_y_creditos_en_educacion_superi",
+            "mineduc_practicantes_y_titulados_tecnico_profesional",
+            "mineduc_pruebas_de_admision_a_la_educacion_superior",
+            "mineduc_extra_titulados_es",
+            "mineduc_titulados_en_educacion_superior"
+          ],
+          "indicadores": [
+            "matricula_terciaria"
+          ],
+          "sitios": [],
+          "investigaciones": []
+        }
+      ],
+      "destino": "cochid.datos.temas",
       "sitios": [],
-      "orden": 2
-    },
-    {
-      "id": "poblacion-sociedad-educacion",
-      "etiqueta": "Población, sociedad y educación",
-      "icono": "personas",
-      "resumen": "Demografía, condiciones sociales y educación.",
-      "temas": [
-        "demografia",
-        "educacion"
-      ],
-      "destino": "cochid.datos.dominio.poblacion",
-      "sitios": [
-        "cochid.apex.concepciones"
-      ],
-      "orden": 3
+      "orden": 2,
+      "conteos": {
+        "conjuntos_primarios": 91,
+        "por_nivel": {
+          "crudos_bronze": 76,
+          "normalizados_silver": 9,
+          "listos_gold": 6,
+          "tematicos_congreso_lex": 0,
+          "referencia_ref_meta": 0
+        },
+        "consultables": 15,
+        "planificados": 64,
+        "ingesta": {
+          "al_dia": 8,
+          "desactualizada": 18,
+          "por_verificar": 65
+        },
+        "conjuntos_secundarios": 1,
+        "indicadores": 32,
+        "indicadores_secundarios": 0
+      }
     },
     {
       "id": "economia-trabajo",
       "etiqueta": "Economía y trabajo",
-      "icono": "grafico",
-      "resumen": "Actividad económica, empleo y condiciones laborales.",
+      "icono": "briefcase-business",
+      "icono_svg": "<path d=\"M12 12h.01\"/><path d=\"M16 6V4a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2\"/><path d=\"M22 13a18.15 18.15 0 0 1-20 0\"/><rect width=\"20\" height=\"14\" x=\"2\" y=\"6\" rx=\"2\"/>",
+      "resumen": "Actividad, precios, empleo, comercio exterior y producción del campo y el mar.",
       "temas": [
-        "economia",
-        "economia-laboral"
+        "actividad",
+        "empleo",
+        "comercio-exterior",
+        "agro-pesca"
       ],
-      "destino": "cochid.datos.dominio.economia",
+      "subtemas": [
+        {
+          "id": "actividad",
+          "etiqueta": "Actividad y precios",
+          "frase": "PIB, inflación, tasas, dólar y series macroeconómicas.",
+          "icono": {
+            "nombre": "chart-line",
+            "svg_hijos": "<path d=\"M3 3v16a2 2 0 0 0 2 2h16\"/><path d=\"m19 9-5 5-4-4-3 3\"/>"
+          },
+          "conteos": {
+            "conjuntos": 6,
+            "indicadores": 19,
+            "conjuntos_secundarios": 0,
+            "indicadores_secundarios": 0
+          },
+          "conjuntos_secundarios": [],
+          "conjuntos": [
+            "bcentral_indicadores",
+            "bcentral_bond_inflation_comparison",
+            "bcentral_oficial",
+            "worldbank_chile",
+            "ine_ipc",
+            "oecd_chile_official"
+          ],
+          "indicadores": [
+            "inflacion",
+            "pib_usd",
+            "pib_per_capita",
+            "bcentral_inflacion_implicita_10y",
+            "bcentral_inflacion_implicita_1y",
+            "bcentral_inflacion_implicita_2y",
+            "bcentral_inflacion_implicita_5y",
+            "bcentral_inflacion_bonos_10y",
+            "bcentral_inflacion_bonos_2y",
+            "bcentral_inflacion_bonos_5y",
+            "oecd_gdp_growth_chile",
+            "bcentral_dolar",
+            "bcentral_ipc",
+            "bcentral_ivp",
+            "bcentral_imacec",
+            "bcentral_pib",
+            "bcentral_tpm",
+            "bcentral_uf",
+            "bcentral_utm"
+          ],
+          "sitios": [
+            "cochid.economia"
+          ],
+          "investigaciones": []
+        },
+        {
+          "id": "empleo",
+          "etiqueta": "Empleo y trabajo",
+          "frase": "Ocupación, desempleo y empleo por sector.",
+          "icono": {
+            "nombre": "users",
+            "svg_hijos": "<path d=\"M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2\"/><path d=\"M16 3.128a4 4 0 0 1 0 7.744\"/><path d=\"M22 21v-2a4 4 0 0 0-3-3.87\"/><circle cx=\"9\" cy=\"7\" r=\"4\"/>"
+          },
+          "conteos": {
+            "conjuntos": 7,
+            "indicadores": 7,
+            "conjuntos_secundarios": 0,
+            "indicadores_secundarios": 0
+          },
+          "conjuntos_secundarios": [],
+          "conjuntos": [
+            "datos_gob_encuesta__encuesta_nacional_de_empleo_ene",
+            "datos_gob_trabajo__7469",
+            "economia_microdata_full",
+            "economia",
+            "ene_employment_ai",
+            "ene_empleo_por_ocupacion",
+            "ene"
+          ],
+          "indicadores": [
+            "empleo_ai_exposure_pct",
+            "ene_employment_total",
+            "ene_ai_exposure_aggregate",
+            "tasa_desempleo",
+            "ene_employment_by_isco1d",
+            "ene_employment_by_sector",
+            "bcentral_tasa_desempleo"
+          ],
+          "sitios": [],
+          "investigaciones": []
+        },
+        {
+          "id": "comercio-exterior",
+          "etiqueta": "Comercio exterior",
+          "frase": "Exportaciones e importaciones por producto y país.",
+          "icono": {
+            "nombre": "ship",
+            "svg_hijos": "<path d=\"M12 10.189V14\"/><path d=\"M12 2v3\"/><path d=\"M19 13V7a2 2 0 0 0-2-2H7a2 2 0 0 0-2 2v6\"/><path d=\"M19.38 20A11.6 11.6 0 0 0 21 14l-8.188-3.639a2 2 0 0 0-1.624 0L3 14a11.6 11.6 0 0 0 2.81 7.76\"/><path d=\"M2 21c.6.5 1.2 1 2.5 1 2.5 0 2.5-2 5-2 1.3 0 1.9.5 2.5 1s1.2 1 2.5 1c2.5 0 2.5-2 5-2 1.3 0 1.9.5 2.5 1\"/>"
+          },
+          "conteos": {
+            "conjuntos": 6,
+            "indicadores": 1,
+            "conjuntos_secundarios": 0,
+            "indicadores_secundarios": 0
+          },
+          "conjuntos_secundarios": [],
+          "conjuntos": [
+            "aduana_estadisticas",
+            "datos_gob_aduana__3782",
+            "datos_gob_aduana__3792",
+            "datos_gob_aduana__comercio_exterior1",
+            "datos_gob_aduana__comercio_exterior2",
+            "datos_gob_aduana__registros_de_comercio_exterior_datos_agreg"
+          ],
+          "indicadores": [
+            "exportaciones_pib"
+          ],
+          "sitios": [],
+          "investigaciones": []
+        },
+        {
+          "id": "agro-pesca",
+          "etiqueta": "Agricultura y pesca",
+          "frase": "Precios agropecuarios, subsidios y pesca.",
+          "icono": {
+            "nombre": "wheat",
+            "svg_hijos": "<path d=\"M2 22 16 8\"/><path d=\"M3.47 12.53 5 11l1.53 1.53a3.5 3.5 0 0 1 0 4.94L5 19l-1.53-1.53a3.5 3.5 0 0 1 0-4.94Z\"/><path d=\"M7.47 8.53 9 7l1.53 1.53a3.5 3.5 0 0 1 0 4.94L9 15l-1.53-1.53a3.5 3.5 0 0 1 0-4.94Z\"/><path d=\"M11.47 4.53 13 3l1.53 1.53a3.5 3.5 0 0 1 0 4.94L13 11l-1.53-1.53a3.5 3.5 0 0 1 0-4.94Z\"/><path d=\"M20 2h2v2a4 4 0 0 1-4 4h-2V6a4 4 0 0 1 4-4Z\"/><path d=\"M11.47 17.47 13 19l-1.53 1.53a3.5 3.5 0 0 1-4.94 0L5 19l1.53-1.53a3.5 3.5 0 0 1 4.94 0Z\"/><path d=\"M15.47 13.47 17 15l-1.53 1.53a3.5 3.5 0 0 1-4.94 0L9 15l1.53-1.53a3.5 3.5 0 0 1 4.94 0Z\"/><path d=\"M19.47 9.47 21 11l-1.53 1.53a3.5 3.5 0 0 1-4.94 0L13 11l1.53-1.53a3.5 3.5 0 0 1 4.94 0Z\"/>"
+          },
+          "conteos": {
+            "conjuntos": 5,
+            "indicadores": 0,
+            "conjuntos_secundarios": 4,
+            "indicadores_secundarios": 0
+          },
+          "conjuntos_secundarios": [
+            "datos_gob_agro__5250",
+            "datos_gob_agro__5335",
+            "datos_gob_agro__7954",
+            "datos_gob_agro__7960"
+          ],
+          "conjuntos": [
+            "datos_gob_agro__categoria_geoespacial_agricultura_y_ganaderi",
+            "datos_gob_pesca__2139",
+            "datos_gob_pesca__2144",
+            "indap_subsidios",
+            "odepa_precios"
+          ],
+          "indicadores": [],
+          "sitios": [],
+          "investigaciones": []
+        }
+      ],
+      "destino": "cochid.economia",
       "sitios": [
         "cochid.economia"
       ],
-      "orden": 4
+      "orden": 3,
+      "conteos": {
+        "conjuntos_primarios": 24,
+        "por_nivel": {
+          "crudos_bronze": 16,
+          "normalizados_silver": 5,
+          "listos_gold": 3,
+          "tematicos_congreso_lex": 0,
+          "referencia_ref_meta": 0
+        },
+        "consultables": 8,
+        "planificados": 16,
+        "ingesta": {
+          "al_dia": 0,
+          "desactualizada": 6,
+          "por_verificar": 18
+        },
+        "conjuntos_secundarios": 4,
+        "indicadores": 27,
+        "indicadores_secundarios": 0
+      }
     },
     {
-      "id": "elecciones-congreso",
-      "etiqueta": "Elecciones y Congreso",
-      "icono": "urna",
-      "resumen": "Resultados electorales y actividad legislativa.",
+      "id": "empresas-innovacion",
+      "etiqueta": "Empresas e innovación",
+      "icono": "factory",
+      "icono_svg": "<path d=\"M12 16h.01\"/><path d=\"M16 16h.01\"/><path d=\"M3 19a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V8.5a.5.5 0 0 0-.769-.422l-4.462 2.844A.5.5 0 0 1 15 10.5v-2a.5.5 0 0 0-.769-.422L9.77 10.922A.5.5 0 0 1 9 10.5V5a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2z\"/><path d=\"M8 16h.01\"/>",
+      "resumen": "Empresas registradas, adopción de tecnología y patentes.",
       "temas": [
-        "elecciones"
+        "empresas",
+        "tecnologia",
+        "patentes"
       ],
-      "destino": "cochid.datos.dominio.elecciones",
-      "sitios": [
-        "cochid.elecciones",
-        "cochid.congreso",
-        "cochid.votos"
+      "subtemas": [
+        {
+          "id": "empresas",
+          "etiqueta": "Empresas y sociedades",
+          "frase": "Empresas por región, comuna y rubro; sociedades y cooperativas.",
+          "icono": {
+            "nombre": "building-2",
+            "svg_hijos": "<path d=\"M10 12h4\"/><path d=\"M10 8h4\"/><path d=\"M14 21v-3a2 2 0 0 0-4 0v3\"/><path d=\"M6 10H4a2 2 0 0 0-2 2v7a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2h-2\"/><path d=\"M6 21V5a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v16\"/>"
+          },
+          "conteos": {
+            "conjuntos": 8,
+            "indicadores": 0,
+            "conjuntos_secundarios": 0,
+            "indicadores_secundarios": 0
+          },
+          "conjuntos_secundarios": [],
+          "conjuntos": [
+            "datos_gob_trabajo__3870",
+            "datos_gob_trabajo__3876",
+            "sii_empresas_biotecnologia",
+            "sii_empresas_comuna_actividad",
+            "sii_empresas_comuna",
+            "sii_contribuyentes",
+            "sii_registro_empresas",
+            "sociedades_chile"
+          ],
+          "indicadores": [],
+          "sitios": [
+            "cochid.thesis"
+          ],
+          "investigaciones": [
+            "empresas-sii"
+          ]
+        },
+        {
+          "id": "tecnologia",
+          "etiqueta": "Adopción de tecnología",
+          "frase": "Uso de software, comercio electrónico e innovación en empresas.",
+          "icono": {
+            "nombre": "cpu",
+            "svg_hijos": "<path d=\"M12 20v2\"/><path d=\"M12 2v2\"/><path d=\"M17 20v2\"/><path d=\"M17 2v2\"/><path d=\"M2 12h2\"/><path d=\"M2 17h2\"/><path d=\"M2 7h2\"/><path d=\"M20 12h2\"/><path d=\"M20 17h2\"/><path d=\"M20 7h2\"/><path d=\"M7 20v2\"/><path d=\"M7 2v2\"/><rect x=\"4\" y=\"4\" width=\"16\" height=\"16\" rx=\"2\"/><rect x=\"8\" y=\"8\" width=\"8\" height=\"8\" rx=\"1\"/>"
+          },
+          "conteos": {
+            "conjuntos": 6,
+            "indicadores": 6,
+            "conjuntos_secundarios": 3,
+            "indicadores_secundarios": 2
+          },
+          "conjuntos_secundarios": [
+            "economia_microdata_full",
+            "economia",
+            "ene_employment_ai"
+          ],
+          "conjuntos": [
+            "datos_gob_encuesta__encuesta_nacional_de_innovacion_eni",
+            "datos_gob_encuesta__encuesta_nacional_industrial_anual_enia",
+            "ele7_tech_adoption",
+            "ele7_tech_por_sector",
+            "ele7_tech_por_tamano",
+            "ele7"
+          ],
+          "indicadores": [
+            "software_empresas_pct",
+            "ele7_pct_ecommerce",
+            "ele7_pct_software_investment",
+            "ele7_pct_teletrabajo",
+            "ele7_tic_spending_clp",
+            "ecommerce_empresas_pct"
+          ],
+          "sitios": [],
+          "investigaciones": []
+        },
+        {
+          "id": "patentes",
+          "etiqueta": "Patentes y biotecnología",
+          "frase": "Patentes y empresas biotecnológicas.",
+          "icono": {
+            "nombre": "flask-conical",
+            "svg_hijos": "<path d=\"M14 2v6a2 2 0 0 0 .245.96l5.51 10.08A2 2 0 0 1 18 22H6a2 2 0 0 1-1.755-2.96l5.51-10.08A2 2 0 0 0 10 8V2\"/><path d=\"M6.453 15h11.094\"/><path d=\"M8.5 2h7\"/>"
+          },
+          "conteos": {
+            "conjuntos": 1,
+            "indicadores": 0,
+            "conjuntos_secundarios": 0,
+            "indicadores_secundarios": 0
+          },
+          "conjuntos_secundarios": [],
+          "conjuntos": [
+            "inapi_patentes_biotecnologia"
+          ],
+          "indicadores": [],
+          "sitios": [],
+          "investigaciones": [
+            "thesis"
+          ]
+        }
       ],
-      "orden": 5
+      "destino": "cochid.datos.temas",
+      "sitios": [],
+      "orden": 4,
+      "conteos": {
+        "conjuntos_primarios": 15,
+        "por_nivel": {
+          "crudos_bronze": 5,
+          "normalizados_silver": 3,
+          "listos_gold": 7,
+          "tematicos_congreso_lex": 0,
+          "referencia_ref_meta": 0
+        },
+        "consultables": 10,
+        "planificados": 6,
+        "ingesta": {
+          "al_dia": 2,
+          "desactualizada": 3,
+          "por_verificar": 10
+        },
+        "conjuntos_secundarios": 3,
+        "indicadores": 6,
+        "indicadores_secundarios": 2
+      }
     },
     {
-      "id": "legislacion",
-      "etiqueta": "Legislación",
-      "icono": "balanza",
-      "resumen": "Normas, jurisprudencia y fuentes legales.",
+      "id": "finanzas-publicas",
+      "etiqueta": "Finanzas públicas",
+      "icono": "landmark",
+      "icono_svg": "<path d=\"M10 18v-7\"/><path d=\"M11.12 2.198a2 2 0 0 1 1.76.006l7.866 3.847c.476.233.31.949-.22.949H3.474c-.53 0-.695-.716-.22-.949z\"/><path d=\"M14 18v-7\"/><path d=\"M18 18v-7\"/><path d=\"M3 22h18\"/><path d=\"M6 18v-7\"/>",
+      "resumen": "Presupuesto, gasto por función, impuestos, deuda y empleo público.",
       "temas": [
-        "legislacion"
+        "presupuesto",
+        "funcion",
+        "ingresos",
+        "deuda-balance",
+        "empleo-publico",
+        "compras"
       ],
-      "destino": "cochid.datos.dominio.legislacion",
+      "subtemas": [
+        {
+          "id": "presupuesto",
+          "etiqueta": "Presupuesto y ejecución",
+          "frase": "Ley de Presupuestos, partidas y ejecución mensual.",
+          "icono": {
+            "nombre": "wallet",
+            "svg_hijos": "<path d=\"M19 7V4a1 1 0 0 0-1-1H5a2 2 0 0 0 0 4h15a1 1 0 0 1 1 1v4h-3a2 2 0 0 0 0 4h3a1 1 0 0 0 1-1v-2a1 1 0 0 0-1-1\"/><path d=\"M3 5v14a2 2 0 0 0 2 2h15a1 1 0 0 0 1-1v-4\"/>"
+          },
+          "conteos": {
+            "conjuntos": 26,
+            "indicadores": 8,
+            "conjuntos_secundarios": 2,
+            "indicadores_secundarios": 0
+          },
+          "conjuntos_secundarios": [
+            "x_justicia_carga_x_gasto",
+            "x_seguridad_eficiencia_anual"
+          ],
+          "conjuntos": [
+            "datos_gob_agro__5250",
+            "datos_gob_agro__5335",
+            "datos_gob_ambiente__1541",
+            "datos_gob_retc__1377",
+            "datos_gob_retc__1541",
+            "dipres_catalogo",
+            "dipres_compare_anual",
+            "dipres_cuenta_t",
+            "dipres_publica",
+            "dipres_next_budget",
+            "dipres_law_documents",
+            "dipres_ejecucion_mensual",
+            "dipres_ejecucion_linea",
+            "dipres_mensual_ejecucion",
+            "dipres_factores_variacion",
+            "dipres_anual_partida",
+            "dipres_consolidado_anual",
+            "dipres_glosas",
+            "dipres_heatmap_partida_subt",
+            "dipres_ley_clasificador",
+            "dipres",
+            "dipres_ley_linea",
+            "dipres_ley_partida",
+            "dipres_ley_programa",
+            "dipres_ley_anual",
+            "dipres_ley_nacional"
+          ],
+          "indicadores": [
+            "dipres_aporte_fiscal",
+            "dipres_gasto_bruto",
+            "dipres_gasto_consolidado",
+            "dipres_gasto_total_clp",
+            "dipres_transferencias_internas",
+            "dipres_factor_vigente_inicial",
+            "gasto_total",
+            "dipres_presupuesto_total_anual"
+          ],
+          "sitios": [
+            "cochid.datos.presupuesto"
+          ],
+          "investigaciones": []
+        },
+        {
+          "id": "funcion",
+          "etiqueta": "Gasto por función",
+          "frase": "En qué se gasta: salud, educación, seguridad y más.",
+          "icono": {
+            "nombre": "chart-pie",
+            "svg_hijos": "<path d=\"M21 12c.552 0 1.005-.449.95-.998a10 10 0 0 0-8.953-8.951c-.55-.055-.998.398-.998.95v8a1 1 0 0 0 1 1z\"/><path d=\"M21.21 15.89A10 10 0 1 1 8 2.83\"/>"
+          },
+          "conteos": {
+            "conjuntos": 2,
+            "indicadores": 0,
+            "conjuntos_secundarios": 3,
+            "indicadores_secundarios": 13
+          },
+          "conjuntos_secundarios": [
+            "cofog_703_detalle",
+            "cofog_division_03",
+            "dipres_seguridad_anual"
+          ],
+          "conjuntos": [
+            "cofog_anual",
+            "dipres_funcional"
+          ],
+          "indicadores": [],
+          "sitios": [],
+          "investigaciones": []
+        },
+        {
+          "id": "ingresos",
+          "etiqueta": "Ingresos e impuestos",
+          "frase": "Recaudación tributaria y su peso en el PIB.",
+          "icono": {
+            "nombre": "receipt",
+            "svg_hijos": "<path d=\"M12 17V7\"/><path d=\"M16 8h-6a2 2 0 0 0 0 4h4a2 2 0 0 1 0 4H8\"/><path d=\"M4 3a1 1 0 0 1 1-1 1.3 1.3 0 0 1 .7.2l.933.6a1.3 1.3 0 0 0 1.4 0l.934-.6a1.3 1.3 0 0 1 1.4 0l.933.6a1.3 1.3 0 0 0 1.4 0l.933-.6a1.3 1.3 0 0 1 1.4 0l.934.6a1.3 1.3 0 0 0 1.4 0l.933-.6A1.3 1.3 0 0 1 19 2a1 1 0 0 1 1 1v18a1 1 0 0 1-1 1 1.3 1.3 0 0 1-.7-.2l-.933-.6a1.3 1.3 0 0 0-1.4 0l-.934.6a1.3 1.3 0 0 1-1.4 0l-.933-.6a1.3 1.3 0 0 0-1.4 0l-.933.6a1.3 1.3 0 0 1-1.4 0l-.934-.6a1.3 1.3 0 0 0-1.4 0l-.933.6a1.3 1.3 0 0 1-.7.2 1 1 0 0 1-1-1z\"/>"
+          },
+          "conteos": {
+            "conjuntos": 1,
+            "indicadores": 3,
+            "conjuntos_secundarios": 0,
+            "indicadores_secundarios": 0
+          },
+          "conjuntos_secundarios": [],
+          "conjuntos": [
+            "sii_ingresos_tributarios"
+          ],
+          "indicadores": [
+            "recaudacion_tributaria",
+            "sii_tax_revenue_amount_mm_clp",
+            "sii_tax_revenue_share_gdp_pct"
+          ],
+          "sitios": [],
+          "investigaciones": []
+        },
+        {
+          "id": "deuda-balance",
+          "etiqueta": "Deuda y balance fiscal",
+          "frase": "Deuda del Gobierno Central, ingresos y gastos.",
+          "icono": {
+            "nombre": "banknote",
+            "svg_hijos": "<rect width=\"20\" height=\"12\" x=\"2\" y=\"6\" rx=\"2\"/><circle cx=\"12\" cy=\"12\" r=\"2\"/><path d=\"M6 12h.01M18 12h.01\"/>"
+          },
+          "conteos": {
+            "conjuntos": 5,
+            "indicadores": 7,
+            "conjuntos_secundarios": 0,
+            "indicadores_secundarios": 0
+          },
+          "conjuntos_secundarios": [],
+          "conjuntos": [
+            "dipres_macro_anuario_efp",
+            "dipres_efp_operaciones",
+            "dipres_macro_overview",
+            "dipres_macro",
+            "dipres_macro_deuda_gobierno_central"
+          ],
+          "indicadores": [
+            "deuda_publica",
+            "dipres_gasto_gc_pib",
+            "dipres_gasto_gobierno_central",
+            "dipres_ingresos_gobierno_central",
+            "dipres_prestamo_neto_gc",
+            "oecd_general_government_debt_pct_gdp",
+            "oecd_central_government_debt"
+          ],
+          "sitios": [],
+          "investigaciones": []
+        },
+        {
+          "id": "empleo-publico",
+          "etiqueta": "Empleo público",
+          "frase": "Cargos del sector público por trimestre.",
+          "icono": {
+            "nombre": "users",
+            "svg_hijos": "<path d=\"M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2\"/><path d=\"M16 3.128a4 4 0 0 1 0 7.744\"/><path d=\"M22 21v-2a4 4 0 0 0-3-3.87\"/><circle cx=\"9\" cy=\"7\" r=\"4\"/>"
+          },
+          "conteos": {
+            "conjuntos": 1,
+            "indicadores": 0,
+            "conjuntos_secundarios": 0,
+            "indicadores_secundarios": 0
+          },
+          "conjuntos_secundarios": [],
+          "conjuntos": [
+            "dipres_macro_empleo_sector_publico"
+          ],
+          "indicadores": [],
+          "sitios": [],
+          "investigaciones": []
+        },
+        {
+          "id": "compras",
+          "etiqueta": "Compras públicas",
+          "frase": "Órdenes de compra y licitaciones del Estado.",
+          "icono": {
+            "nombre": "shopping-cart",
+            "svg_hijos": "<circle cx=\"8\" cy=\"21\" r=\"1\"/><circle cx=\"19\" cy=\"21\" r=\"1\"/><path d=\"M2.05 2.05h2l2.66 12.42a2 2 0 0 0 2 1.58h9.78a2 2 0 0 0 1.95-1.57l1.65-7.43H5.12\"/>"
+          },
+          "conteos": {
+            "conjuntos": 0,
+            "indicadores": 0,
+            "conjuntos_secundarios": 3,
+            "indicadores_secundarios": 3
+          },
+          "conjuntos_secundarios": [
+            "cenabast_farmacia",
+            "mercado_publico_medicamentos",
+            "mercado_publico_licitaciones_med"
+          ],
+          "conjuntos": [],
+          "indicadores": [],
+          "sitios": [
+            "cochid.datos.mercado"
+          ],
+          "investigaciones": []
+        }
+      ],
+      "destino": "cochid.datos.presupuesto",
       "sitios": [
-        "cochid.lex"
+        "cochid.datos.presupuesto",
+        "cochid.datos.mercado"
       ],
-      "orden": 6
+      "orden": 5,
+      "conteos": {
+        "conjuntos_primarios": 35,
+        "por_nivel": {
+          "crudos_bronze": 9,
+          "normalizados_silver": 14,
+          "listos_gold": 10,
+          "tematicos_congreso_lex": 0,
+          "referencia_ref_meta": 2
+        },
+        "consultables": 24,
+        "planificados": 6,
+        "ingesta": {
+          "al_dia": 19,
+          "desactualizada": 9,
+          "por_verificar": 7
+        },
+        "conjuntos_secundarios": 8,
+        "indicadores": 18,
+        "indicadores_secundarios": 16
+      }
+    },
+    {
+      "id": "seguridad-justicia",
+      "etiqueta": "Seguridad y justicia",
+      "icono": "shield-check",
+      "icono_svg": "<path d=\"M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z\"/><path d=\"m9 12 2 2 4-4\"/>",
+      "resumen": "Delitos, victimización, tribunales, cárceles y gasto en seguridad.",
+      "temas": [
+        "delitos",
+        "victimizacion",
+        "tribunales",
+        "carceles",
+        "gasto"
+      ],
+      "subtemas": [
+        {
+          "id": "delitos",
+          "etiqueta": "Delitos y denuncias",
+          "frase": "Denuncias, detenciones y violencia, por región y año.",
+          "icono": {
+            "nombre": "siren",
+            "svg_hijos": "<path d=\"M7 18v-6a5 5 0 1 1 10 0v6\"/><path d=\"M5 21a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-1a2 2 0 0 0-2-2H7a2 2 0 0 0-2 2z\"/><path d=\"M21 12h1\"/><path d=\"M18.5 4.5 18 5\"/><path d=\"M2 12h1\"/><path d=\"M12 2v1\"/><path d=\"m4.929 4.929.707.707\"/><path d=\"M12 12v6\"/>"
+          },
+          "conteos": {
+            "conjuntos": 7,
+            "indicadores": 11,
+            "conjuntos_secundarios": 0,
+            "indicadores_secundarios": 0
+          },
+          "conjuntos_secundarios": [],
+          "conjuntos": [
+            "carabineros",
+            "datos_gob_violencia_genero__7161",
+            "denuncias_iccs",
+            "detenciones_iccs",
+            "ine_denuncias_policiales",
+            "ine_detenciones_policiales",
+            "ine_crime_metadata"
+          ],
+          "indicadores": [
+            "casos_policiales",
+            "carab_denuncias_total",
+            "detenciones_total",
+            "seguridad_denuncias_per_100k",
+            "tasa_delitos_100k",
+            "tasa_esclarecimiento_iccs",
+            "carab_homicidios_rate_100k",
+            "carab_drogas_rate_100k",
+            "carab_robos_violentos_rate_100k",
+            "carab_violencia_intrafamiliar_rate_100k",
+            "denuncias_total"
+          ],
+          "sitios": [
+            "cochid.datos.seguridad"
+          ],
+          "investigaciones": []
+        },
+        {
+          "id": "victimizacion",
+          "etiqueta": "Victimización y percepción",
+          "frase": "Cuántos hogares sufren delitos y cuántos los denuncian.",
+          "icono": {
+            "nombre": "eye",
+            "svg_hijos": "<path d=\"M2.062 12.348a1 1 0 0 1 0-.696 10.75 10.75 0 0 1 19.876 0 1 1 0 0 1 0 .696 10.75 10.75 0 0 1-19.876 0\"/><circle cx=\"12\" cy=\"12\" r=\"3\"/>"
+          },
+          "conteos": {
+            "conjuntos": 2,
+            "indicadores": 8,
+            "conjuntos_secundarios": 0,
+            "indicadores_secundarios": 0
+          },
+          "conjuntos_secundarios": [],
+          "conjuntos": [
+            "enusc",
+            "enusc_interannual"
+          ],
+          "indicadores": [
+            "percepcion_inseguridad",
+            "tasa_victimizacion",
+            "enusc_victimizacion",
+            "enusc_cifra_negra_pct",
+            "enusc_percepcion_inseguridad_pct",
+            "enusc_denuncia_pct",
+            "enusc_victimizacion_pct_total",
+            "enusc_victimizacion_robo_violencia_pct"
+          ],
+          "sitios": [],
+          "investigaciones": []
+        },
+        {
+          "id": "tribunales",
+          "etiqueta": "Tribunales y fiscalía",
+          "frase": "Causas, términos, condenas y duración de los juicios.",
+          "icono": {
+            "nombre": "gavel",
+            "svg_hijos": "<path d=\"m14 13-8.381 8.38a1 1 0 0 1-3.001-3l8.384-8.381\"/><path d=\"m16 16 6-6\"/><path d=\"m21.5 10.5-8-8\"/><path d=\"m8 8 6-6\"/><path d=\"m8.5 7.5 8 8\"/>"
+          },
+          "conteos": {
+            "conjuntos": 15,
+            "indicadores": 17,
+            "conjuntos_secundarios": 0,
+            "indicadores_secundarios": 0
+          },
+          "conjuntos_secundarios": [],
+          "conjuntos": [
+            "casos_judiciales",
+            "eficiencia_kpis",
+            "eficiencia_region_anual",
+            "fiscalia_chile",
+            "fiscalia",
+            "funnel_stage_matrix",
+            "funnel_region_anual_v3",
+            "funnel_stage_rates",
+            "judicial_ine",
+            "ine_estadisticas_judiciales",
+            "pjud_carga_eficiencia",
+            "pjud_capj_ingresos",
+            "pjud_capj_regional",
+            "pjud_capj_terminos",
+            "tasa_esclarecimiento"
+          ],
+          "indicadores": [
+            "seguridad_condenas_per_100k",
+            "casos_judiciales_total",
+            "pjud_carga_termino_region",
+            "funnel_d_total",
+            "pjud_duracion_promedio",
+            "eficiencia_output_per_clp",
+            "pjud_tasa_absolucion",
+            "pjud_tasa_condena",
+            "pjud_tasa_sobreseimiento",
+            "pjud_resoluciones_total_region",
+            "fisc_archivadas",
+            "fisc_formalizadas_proxy",
+            "jud_terminadas_total",
+            "fisc_terminadas_total",
+            "fiscalia_dotacion_total",
+            "fiscalia_presupuesto_real_clp",
+            "fisc_tasa_termino_judicial"
+          ],
+          "sitios": [
+            "cochid.datos.funnel"
+          ],
+          "investigaciones": []
+        },
+        {
+          "id": "carceles",
+          "etiqueta": "Cárceles y reinserción",
+          "frase": "Población penal, sobrepoblación y reincidencia.",
+          "icono": {
+            "nombre": "lock-keyhole",
+            "svg_hijos": "<circle cx=\"12\" cy=\"16\" r=\"1\"/><rect x=\"3\" y=\"10\" width=\"18\" height=\"12\" rx=\"2\"/><path d=\"M7 10V7a5 5 0 0 1 10 0v3\"/>"
+          },
+          "conteos": {
+            "conjuntos": 10,
+            "indicadores": 11,
+            "conjuntos_secundarios": 0,
+            "indicadores_secundarios": 0
+          },
+          "conjuntos_secundarios": [],
+          "conjuntos": [
+            "gendarmeria_caracterizacion",
+            "gendarmeria_compendios_anuales",
+            "gendarmeria",
+            "gendarmeria_distribucion_subsistema",
+            "gendarmeria_estadistica_general",
+            "gendarmeria_reincidencia",
+            "gendarmeria_reportes_mensuales",
+            "gendarmeria_sobrepoblacion",
+            "gendarmeria_tasa_encarcel",
+            "gendarmeria_uso_capacidad"
+          ],
+          "indicadores": [
+            "gendarmeria_reincidencia_3a",
+            "gend_distribucion_subsistema",
+            "gendarmeria_hacinamiento_pct",
+            "gend_ingresos_anual",
+            "gend_pop_cerrado",
+            "gend_pop_abierto",
+            "gend_pop_penal_total",
+            "gend_pop_postpenit",
+            "gend_tasa_encarcel_100k",
+            "gend_sobrepoblacion",
+            "gendarmeria_uso_capacidad_pct"
+          ],
+          "sitios": [],
+          "investigaciones": []
+        },
+        {
+          "id": "gasto",
+          "etiqueta": "Gasto e instituciones",
+          "frase": "Gasto en seguridad y eficiencia de cada institución.",
+          "icono": {
+            "nombre": "coins",
+            "svg_hijos": "<path d=\"M13.744 17.736a6 6 0 1 1-7.48-7.48\"/><path d=\"M15 6h1v4\"/><path d=\"m6.134 14.768.866-.5 2 3.464\"/><circle cx=\"16\" cy=\"8\" r=\"6\"/>"
+          },
+          "conteos": {
+            "conjuntos": 5,
+            "indicadores": 11,
+            "conjuntos_secundarios": 0,
+            "indicadores_secundarios": 0
+          },
+          "conjuntos_secundarios": [],
+          "conjuntos": [
+            "cofog_703_detalle",
+            "cofog_division_03",
+            "x_justicia_carga_x_gasto",
+            "x_seguridad_eficiencia_anual",
+            "dipres_seguridad_anual"
+          ],
+          "indicadores": [
+            "dipres_gasto_seguridad_clp",
+            "dipres_gasto_carabineros_real",
+            "dipres_gasto_ministerio_publico_real",
+            "dipres_gasto_gendarmeria_real",
+            "dipres_gasto_pdi_real",
+            "dipres_gasto_judicial_real",
+            "dipres_gasto_seguridad_real",
+            "dipres_seguridad_per_capita_real",
+            "gasto_orden_publico",
+            "dipres_cofog_703_total",
+            "dipres_cofog_703_pib"
+          ],
+          "sitios": [],
+          "investigaciones": []
+        }
+      ],
+      "destino": "cochid.datos.seguridad",
+      "sitios": [
+        "cochid.datos.seguridad",
+        "cochid.datos.funnel"
+      ],
+      "orden": 6,
+      "conteos": {
+        "conjuntos_primarios": 39,
+        "por_nivel": {
+          "crudos_bronze": 8,
+          "normalizados_silver": 6,
+          "listos_gold": 25,
+          "tematicos_congreso_lex": 0,
+          "referencia_ref_meta": 0
+        },
+        "consultables": 31,
+        "planificados": 7,
+        "ingesta": {
+          "al_dia": 0,
+          "desactualizada": 27,
+          "por_verificar": 12
+        },
+        "conjuntos_secundarios": 0,
+        "indicadores": 58,
+        "indicadores_secundarios": 0
+      }
+    },
+    {
+      "id": "poblacion-sociedad",
+      "etiqueta": "Población y sociedad",
+      "icono": "users",
+      "icono_svg": "<path d=\"M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2\"/><path d=\"M16 3.128a4 4 0 0 1 0 7.744\"/><path d=\"M22 21v-2a4 4 0 0 0-3-3.87\"/><circle cx=\"9\" cy=\"7\" r=\"4\"/>",
+      "resumen": "Demografía, pobreza, subsidios, migración, juventud y deporte.",
+      "temas": [
+        "demografia",
+        "pobreza",
+        "proteccion",
+        "migracion",
+        "juventud-genero",
+        "deporte"
+      ],
+      "subtemas": [
+        {
+          "id": "demografia",
+          "etiqueta": "Población y demografía",
+          "frase": "Habitantes, nacimientos, fecundidad y estadísticas vitales.",
+          "icono": {
+            "nombre": "users-round",
+            "svg_hijos": "<path d=\"M18 21a8 8 0 0 0-16 0\"/><circle cx=\"10\" cy=\"8\" r=\"5\"/><path d=\"M22 20c0-3.37-2-6.5-4-8a5 5 0 0 0-.45-8.3\"/>"
+          },
+          "conteos": {
+            "conjuntos": 1,
+            "indicadores": 3,
+            "conjuntos_secundarios": 1,
+            "indicadores_secundarios": 2
+          },
+          "conjuntos_secundarios": [
+            "worldbank_chile"
+          ],
+          "conjuntos": [
+            "datos_gob_vitales__estadisticas_vitales"
+          ],
+          "indicadores": [
+            "poblacion_total",
+            "poblacion_urbana",
+            "tasa_fertilidad"
+          ],
+          "sitios": [
+            "cochid.apex.concepciones"
+          ],
+          "investigaciones": [
+            "concepciones"
+          ]
+        },
+        {
+          "id": "pobreza",
+          "etiqueta": "Pobreza e ingresos",
+          "frase": "Resultados de la encuesta CASEN desde 1990.",
+          "icono": {
+            "nombre": "hand-coins",
+            "svg_hijos": "<path d=\"M11 15h2a2 2 0 1 0 0-4h-3c-.6 0-1.1.2-1.4.6L3 17\"/><path d=\"m7 21 1.6-1.4c.3-.4.8-.6 1.4-.6h4c1.1 0 2.1-.4 2.8-1.2l4.6-4.4a2 2 0 0 0-2.75-2.91l-4.2 3.9\"/><path d=\"m2 16 6 6\"/><circle cx=\"16\" cy=\"9\" r=\"2.9\"/><circle cx=\"6\" cy=\"5\" r=\"3\"/>"
+          },
+          "conteos": {
+            "conjuntos": 20,
+            "indicadores": 4,
+            "conjuntos_secundarios": 4,
+            "indicadores_secundarios": 0
+          },
+          "conjuntos_secundarios": [
+            "x_educacion_pobreza_region",
+            "datos_gob_pobreza__1152",
+            "datos_gob_pobreza__1292",
+            "datos_gob_pobreza__3203"
+          ],
+          "conjuntos": [
+            "casen_1990_personas",
+            "casen_1992_personas",
+            "casen_1994_personas",
+            "casen_1996_personas",
+            "casen_1998_personas",
+            "casen_2000_personas",
+            "casen_2003_personas",
+            "casen_2006_personas",
+            "casen_2009_personas",
+            "casen_2011_personas",
+            "casen_2013_personas",
+            "casen_2015_personas",
+            "casen_2017_personas",
+            "casen_2020_personas",
+            "casen_2022_personas",
+            "casen_ingreso_real_2024",
+            "casen_2024_personas",
+            "casen_microdata",
+            "casen_pobreza_region_anual",
+            "casen"
+          ],
+          "indicadores": [
+            "casen_indigencia_regional",
+            "casen_pobreza_regional",
+            "indice_gini",
+            "ingreso_20_inferior"
+          ],
+          "sitios": [
+            "cochid.datos.casen"
+          ],
+          "investigaciones": []
+        },
+        {
+          "id": "proteccion",
+          "etiqueta": "Protección social",
+          "frase": "Subsidios y beneficios entregados a familias.",
+          "icono": {
+            "nombre": "heart-handshake",
+            "svg_hijos": "<path d=\"M19.414 14.414C21 12.828 22 11.5 22 9.5a5.5 5.5 0 0 0-9.591-3.676.6.6 0 0 1-.818.001A5.5 5.5 0 0 0 2 9.5c0 2.3 1.5 4 3 5.5l5.535 5.362a2 2 0 0 0 2.879.052 2.12 2.12 0 0 0-.004-3 2.124 2.124 0 1 0 3-3 2.124 2.124 0 0 0 3.004 0 2 2 0 0 0 0-2.828l-1.881-1.882a2.41 2.41 0 0 0-3.409 0l-1.71 1.71a2 2 0 0 1-2.828 0 2 2 0 0 1 0-2.828l2.823-2.762\"/>"
+          },
+          "conteos": {
+            "conjuntos": 4,
+            "indicadores": 0,
+            "conjuntos_secundarios": 0,
+            "indicadores_secundarios": 0
+          },
+          "conjuntos_secundarios": [],
+          "conjuntos": [
+            "datos_gob_subsidio__https_datos_mpuentealto_cl_dataviews_932",
+            "datos_gob_subsidio__subsidio_discapacidad_mental_sdm",
+            "datos_gob_subsidio__subsidio_y_beneficios",
+            "datos_gob_subsidio__suf_012021"
+          ],
+          "indicadores": [],
+          "sitios": [],
+          "investigaciones": []
+        },
+        {
+          "id": "migracion",
+          "etiqueta": "Migración",
+          "frase": "Permisos de residencia, solicitudes y rechazos.",
+          "icono": {
+            "nombre": "globe",
+            "svg_hijos": "<circle cx=\"12\" cy=\"12\" r=\"10\"/><path d=\"M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20\"/><path d=\"M2 12h20\"/>"
+          },
+          "conteos": {
+            "conjuntos": 1,
+            "indicadores": 0,
+            "conjuntos_secundarios": 0,
+            "indicadores_secundarios": 0
+          },
+          "conjuntos_secundarios": [],
+          "conjuntos": [
+            "migraciones_chile"
+          ],
+          "indicadores": [],
+          "sitios": [],
+          "investigaciones": []
+        },
+        {
+          "id": "juventud-genero",
+          "etiqueta": "Juventud y género",
+          "frase": "Encuestas de juventud y pobreza de hogares con jefatura femenina.",
+          "icono": {
+            "nombre": "venus-and-mars",
+            "svg_hijos": "<path d=\"M10 20h4\"/><path d=\"M12 16v6\"/><path d=\"M17 2h4v4\"/><path d=\"m21 2-5.46 5.46\"/><circle cx=\"12\" cy=\"11\" r=\"5\"/>"
+          },
+          "conteos": {
+            "conjuntos": 4,
+            "indicadores": 0,
+            "conjuntos_secundarios": 2,
+            "indicadores_secundarios": 0
+          },
+          "conjuntos_secundarios": [
+            "datos_gob_violencia_genero__7161",
+            "mineduc_cumplimiento_requisitos_postergacion"
+          ],
+          "conjuntos": [
+            "datos_gob_encuesta__10ma_encuesta_nacional_de_juventud",
+            "datos_gob_encuesta__decima_encuesta_nacional_de_la_juventud",
+            "datos_gob_pobreza__1152",
+            "datos_gob_pobreza__1292"
+          ],
+          "indicadores": [],
+          "sitios": [],
+          "investigaciones": []
+        },
+        {
+          "id": "deporte",
+          "etiqueta": "Deporte",
+          "frase": "Fútbol nacional e internacional.",
+          "icono": {
+            "nombre": "trophy",
+            "svg_hijos": "<path d=\"M10 14.66v1.626a2 2 0 0 1-.976 1.696A5 5 0 0 0 7 21.978\"/><path d=\"M14 14.66v1.626a2 2 0 0 0 .976 1.696A5 5 0 0 1 17 21.978\"/><path d=\"M18 9h1.5a1 1 0 0 0 0-5H18\"/><path d=\"M4 22h16\"/><path d=\"M6 9a6 6 0 0 0 12 0V3a1 1 0 0 0-1-1H7a1 1 0 0 0-1 1z\"/><path d=\"M6 9H4.5a1 1 0 0 1 0-5H6\"/>"
+          },
+          "conteos": {
+            "conjuntos": 3,
+            "indicadores": 2,
+            "conjuntos_secundarios": 0,
+            "indicadores_secundarios": 0
+          },
+          "conjuntos_secundarios": [],
+          "conjuntos": [
+            "mundial_2026",
+            "futbol_territorial",
+            "intl_football"
+          ],
+          "indicadores": [
+            "futbol_postes_clasificados",
+            "futbol_share_equipo_dominante"
+          ],
+          "sitios": [
+            "cochid.datos.futbol",
+            "cochid.mundial"
+          ],
+          "investigaciones": []
+        }
+      ],
+      "destino": "cochid.datos.casen",
+      "sitios": [
+        "cochid.datos.casen",
+        "cochid.apex.concepciones",
+        "cochid.datos.futbol",
+        "cochid.mundial"
+      ],
+      "orden": 7,
+      "conteos": {
+        "conjuntos_primarios": 33,
+        "por_nivel": {
+          "crudos_bronze": 11,
+          "normalizados_silver": 19,
+          "listos_gold": 3,
+          "tematicos_congreso_lex": 0,
+          "referencia_ref_meta": 0
+        },
+        "consultables": 22,
+        "planificados": 11,
+        "ingesta": {
+          "al_dia": 2,
+          "desactualizada": 19,
+          "por_verificar": 12
+        },
+        "conjuntos_secundarios": 7,
+        "indicadores": 9,
+        "indicadores_secundarios": 2
+      }
+    },
+    {
+      "id": "territorio-vivienda",
+      "etiqueta": "Territorio y vivienda",
+      "icono": "map",
+      "icono_svg": "<path d=\"M14.106 5.553a2 2 0 0 0 1.788 0l3.659-1.83A1 1 0 0 1 21 4.619v12.764a1 1 0 0 1-.553.894l-4.553 2.277a2 2 0 0 1-1.788 0l-4.212-2.106a2 2 0 0 0-1.788 0l-3.659 1.83A1 1 0 0 1 3 19.381V6.618a1 1 0 0 1 .553-.894l4.553-2.277a2 2 0 0 1 1.788 0z\"/><path d=\"M15 5.764v15\"/><path d=\"M9 3.236v15\"/>",
+      "resumen": "Regiones, comunas, vivienda y mapas de la ciudad.",
+      "temas": [
+        "regiones",
+        "vivienda",
+        "ciudad",
+        "gobierno-local"
+      ],
+      "subtemas": [
+        {
+          "id": "regiones",
+          "etiqueta": "Regiones y comunas",
+          "frase": "Límites oficiales de regiones, provincias y comunas.",
+          "icono": {
+            "nombre": "map-pin",
+            "svg_hijos": "<path d=\"M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0\"/><circle cx=\"12\" cy=\"10\" r=\"3\"/>"
+          },
+          "conteos": {
+            "conjuntos": 2,
+            "indicadores": 0,
+            "conjuntos_secundarios": 0,
+            "indicadores_secundarios": 0
+          },
+          "conjuntos_secundarios": [],
+          "conjuntos": [
+            "bcn_geo",
+            "cochid_maps"
+          ],
+          "indicadores": [],
+          "sitios": [],
+          "investigaciones": []
+        },
+        {
+          "id": "vivienda",
+          "etiqueta": "Vivienda y construcción",
+          "frase": "Infraestructura habitacional y construcciones.",
+          "icono": {
+            "nombre": "house",
+            "svg_hijos": "<path d=\"M15 21v-8a1 1 0 0 0-1-1h-4a1 1 0 0 0-1 1v8\"/><path d=\"M3 10a2 2 0 0 1 .709-1.528l7-6a2 2 0 0 1 2.582 0l7 6A2 2 0 0 1 21 10v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z\"/>"
+          },
+          "conteos": {
+            "conjuntos": 1,
+            "indicadores": 0,
+            "conjuntos_secundarios": 0,
+            "indicadores_secundarios": 0
+          },
+          "conjuntos_secundarios": [],
+          "conjuntos": [
+            "datos_gob_infra__1290"
+          ],
+          "indicadores": [],
+          "sitios": [],
+          "investigaciones": []
+        },
+        {
+          "id": "ciudad",
+          "etiqueta": "Ciudad y mapas",
+          "frase": "Modelo de Santiago y mapas de indicadores.",
+          "icono": {
+            "nombre": "building-2",
+            "svg_hijos": "<path d=\"M10 12h4\"/><path d=\"M10 8h4\"/><path d=\"M14 21v-3a2 2 0 0 0-4 0v3\"/><path d=\"M6 10H4a2 2 0 0 0-2 2v7a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2h-2\"/><path d=\"M6 21V5a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v16\"/>"
+          },
+          "conteos": {
+            "conjuntos": 1,
+            "indicadores": 0,
+            "conjuntos_secundarios": 0,
+            "indicadores_secundarios": 6
+          },
+          "conjuntos_secundarios": [],
+          "conjuntos": [
+            "datos_gob_violencia_genero__categoria_geoespacial_instalacio"
+          ],
+          "indicadores": [],
+          "sitios": [
+            "cochid.mapas",
+            "cochid.mapas.ciudad",
+            "cochid.datos.mapa"
+          ],
+          "investigaciones": []
+        },
+        {
+          "id": "gobierno-local",
+          "etiqueta": "Gobierno local",
+          "frase": "Datos municipales de salud, educación y gasto (conjuntos que se leen aquí y viven en otro dominio).",
+          "icono": {
+            "nombre": "land-plot",
+            "svg_hijos": "<path d=\"m12 8 6-3-6-3v10\"/><path d=\"m8 11.99-5.5 3.14a1 1 0 0 0 0 1.74l8.5 4.86a2 2 0 0 0 2 0l8.5-4.86a1 1 0 0 0 0-1.74L16 12\"/><path d=\"m6.49 12.85 11.02 6.3\"/><path d=\"M17.51 12.85 6.5 19.15\"/>"
+          },
+          "conteos": {
+            "conjuntos": 0,
+            "indicadores": 0,
+            "conjuntos_secundarios": 10,
+            "indicadores_secundarios": 0
+          },
+          "conjuntos_secundarios": [
+            "datos_gob_matricula__33367",
+            "datos_gob_salud__finanzas_salud_mostazal_pasivos_salud_2018",
+            "datos_gob_salud__finanzas_salud_mostazal_pasivos_salud_2020",
+            "datos_gob_salud__finanzas_salud_mostazal_pasivos_salud_2021",
+            "datos_gob_sinim__1144",
+            "datos_gob_sinim__1146",
+            "datos_gob_sinim__1281",
+            "datos_gob_sinim__1285",
+            "datos_gob_sinim__indicadores_de_desarrollo_personal_y_social",
+            "sinim_medicamentos"
+          ],
+          "conjuntos": [],
+          "indicadores": [],
+          "sitios": [],
+          "investigaciones": []
+        }
+      ],
+      "destino": "cochid.mapas",
+      "sitios": [
+        "cochid.mapas",
+        "cochid.mapas.ciudad",
+        "cochid.datos.mapa"
+      ],
+      "orden": 8,
+      "conteos": {
+        "conjuntos_primarios": 4,
+        "por_nivel": {
+          "crudos_bronze": 3,
+          "normalizados_silver": 0,
+          "listos_gold": 0,
+          "tematicos_congreso_lex": 0,
+          "referencia_ref_meta": 1
+        },
+        "consultables": 0,
+        "planificados": 3,
+        "ingesta": {
+          "al_dia": 0,
+          "desactualizada": 0,
+          "por_verificar": 4
+        },
+        "conjuntos_secundarios": 10,
+        "indicadores": 0,
+        "indicadores_secundarios": 6
+      }
     },
     {
       "id": "transporte-infraestructura",
       "etiqueta": "Transporte e infraestructura",
       "icono": "bus",
-      "resumen": "Movilidad, redes e infraestructura pública.",
+      "icono_svg": "<path d=\"M8 6v6\"/><path d=\"M15 6v6\"/><path d=\"M2 12h19.6\"/><path d=\"M18 18h3s.5-1.7.8-2.8c.1-.4.2-.8.2-1.2 0-.4-.1-.8-.2-1.2l-1.4-5C20.1 6.8 19.1 6 18 6H4a2 2 0 0 0-2 2v10h3\"/><circle cx=\"7\" cy=\"18\" r=\"2\"/><path d=\"M9 18h5\"/><circle cx=\"16\" cy=\"18\" r=\"2\"/>",
+      "resumen": "Transporte público, tránsito, puertos, aeropuertos y telecomunicaciones.",
       "temas": [
-        "transporte",
-        "infraestructura"
+        "transporte-publico",
+        "seguridad-vial",
+        "puertos-aviacion",
+        "trenes-bici",
+        "telecom"
       ],
-      "destino": "cochid.datos.dominio.transporte",
+      "subtemas": [
+        {
+          "id": "transporte-publico",
+          "etiqueta": "Transporte público",
+          "frase": "Paradas, rutas y horarios de la Red Metropolitana.",
+          "icono": {
+            "nombre": "bus-front",
+            "svg_hijos": "<path d=\"M4 6 2 7\"/><path d=\"M10 6h4\"/><path d=\"m22 7-2-1\"/><rect width=\"16\" height=\"16\" x=\"4\" y=\"3\" rx=\"2\"/><path d=\"M4 11h16\"/><path d=\"M8 15h.01\"/><path d=\"M16 15h.01\"/><path d=\"M6 19v2\"/><path d=\"M18 21v-2\"/>"
+          },
+          "conteos": {
+            "conjuntos": 8,
+            "indicadores": 4,
+            "conjuntos_secundarios": 0,
+            "indicadores_secundarios": 0
+          },
+          "conjuntos_secundarios": [],
+          "conjuntos": [
+            "dtpm_gtfs_santiago",
+            "tpte_shape",
+            "tpte_stop_time",
+            "tpte_stop",
+            "tpte_paradas_por_comuna",
+            "transporte_rm",
+            "tpte_rutas_resumen",
+            "tpte_trip"
+          ],
+          "indicadores": [
+            "tpte_rm_n_paradas",
+            "tpte_rm_n_rutas",
+            "tpte_rm_paradas_por_comuna",
+            "tpte_rm_n_servicios_diarios"
+          ],
+          "sitios": [
+            "cochid.tpte"
+          ],
+          "investigaciones": []
+        },
+        {
+          "id": "seguridad-vial",
+          "etiqueta": "Seguridad vial",
+          "frase": "Siniestros de tránsito desde 2000.",
+          "icono": {
+            "nombre": "car-front",
+            "svg_hijos": "<path d=\"m21 8-2 2-1.5-3.7A2 2 0 0 0 15.646 5H8.4a2 2 0 0 0-1.903 1.257L5 10 3 8\"/><path d=\"M7 14h.01\"/><path d=\"M17 14h.01\"/><rect width=\"18\" height=\"8\" x=\"3\" y=\"10\" rx=\"2\"/><path d=\"M5 18v2\"/><path d=\"M19 18v2\"/>"
+          },
+          "conteos": {
+            "conjuntos": 1,
+            "indicadores": 0,
+            "conjuntos_secundarios": 0,
+            "indicadores_secundarios": 0
+          },
+          "conjuntos_secundarios": [],
+          "conjuntos": [
+            "conaset_siniestros"
+          ],
+          "indicadores": [],
+          "sitios": [],
+          "investigaciones": []
+        },
+        {
+          "id": "puertos-aviacion",
+          "etiqueta": "Puertos y aviación",
+          "frase": "Obras portuarias, aeropuertos y aeronaves registradas.",
+          "icono": {
+            "nombre": "plane",
+            "svg_hijos": "<path d=\"M17.8 19.2 16 11l3.5-3.5C21 6 21.5 4 21 3c-1-.5-3 0-4.5 1.5L13 8 4.8 6.2c-.5-.1-.9.1-1.1.5l-.3.5c-.2.5-.1 1 .3 1.3L9 12l-2 3H4l-1 1 3 2 2 3 1-1v-3l3-2 3.5 5.3c.3.4.8.5 1.3.3l.5-.2c.4-.3.6-.7.5-1.2z\"/>"
+          },
+          "conteos": {
+            "conjuntos": 7,
+            "indicadores": 0,
+            "conjuntos_secundarios": 1,
+            "indicadores_secundarios": 0
+          },
+          "conjuntos_secundarios": [
+            "datos_gob_violencia_genero__categoria_geoespacial_instalacio"
+          ],
+          "conjuntos": [
+            "datos_gob_infra__27830",
+            "datos_gob_infra__27834",
+            "datos_gob_infra__28307",
+            "datos_gob_infra__28309",
+            "datos_gob_registro_civil__2729",
+            "datos_gob_registro_civil__32796",
+            "datos_gob_registro_civil__registro_de_aeronaves"
+          ],
+          "indicadores": [],
+          "sitios": [],
+          "investigaciones": []
+        },
+        {
+          "id": "trenes-bici",
+          "etiqueta": "Trenes y bicicletas",
+          "frase": "Red ferroviaria y ciclovías, en mapas.",
+          "icono": {
+            "nombre": "train-front",
+            "svg_hijos": "<path d=\"M8 3.1V7a4 4 0 0 0 8 0V3.1\"/><path d=\"m9 15-1-1\"/><path d=\"m15 15 1-1\"/><path d=\"M9 19c-2.8 0-5-2.2-5-5v-4a8 8 0 0 1 16 0v4c0 2.8-2.2 5-5 5Z\"/><path d=\"m8 19-2 3\"/><path d=\"m16 19 2 3\"/>"
+          },
+          "conteos": {
+            "conjuntos": 0,
+            "indicadores": 0,
+            "conjuntos_secundarios": 0,
+            "indicadores_secundarios": 0
+          },
+          "conjuntos_secundarios": [],
+          "conjuntos": [],
+          "indicadores": [],
+          "sitios": [
+            "cochid.trenes",
+            "cochid.bici"
+          ],
+          "investigaciones": []
+        },
+        {
+          "id": "telecom",
+          "etiqueta": "Telecomunicaciones",
+          "frase": "Cables submarinos, telefonía y estaciones base.",
+          "icono": {
+            "nombre": "radio-tower",
+            "svg_hijos": "<path d=\"M4.9 16.1C1 12.2 1 5.8 4.9 1.9\"/><path d=\"M7.8 4.7a6.14 6.14 0 0 0-.8 7.5\"/><circle cx=\"12\" cy=\"9\" r=\"2\"/><path d=\"M16.2 4.8c2 2 2.26 5.11.8 7.47\"/><path d=\"M19.1 1.9a9.96 9.96 0 0 1 0 14.1\"/><path d=\"M9.5 18h5\"/><path d=\"m8 22 4-11 4 11\"/>"
+          },
+          "conteos": {
+            "conjuntos": 4,
+            "indicadores": 3,
+            "conjuntos_secundarios": 0,
+            "indicadores_secundarios": 0
+          },
+          "conjuntos_secundarios": [],
+          "conjuntos": [
+            "cables_submarinos",
+            "datos_gob_subtel__subtel_cl",
+            "datos_gob_subtel__www_subtel_cl",
+            "subtel_telefonia"
+          ],
+          "indicadores": [
+            "usuarios_internet",
+            "cables_n_chile",
+            "cables_n_landings_chile"
+          ],
+          "sitios": [
+            "cochid.cables"
+          ],
+          "investigaciones": []
+        }
+      ],
+      "destino": "cochid.tpte",
       "sitios": [
         "cochid.tpte",
         "cochid.trenes",
         "cochid.bici",
         "cochid.cables"
       ],
-      "orden": 7
+      "orden": 9,
+      "conteos": {
+        "conjuntos_primarios": 20,
+        "por_nivel": {
+          "crudos_bronze": 12,
+          "normalizados_silver": 6,
+          "listos_gold": 2,
+          "tematicos_congreso_lex": 0,
+          "referencia_ref_meta": 0
+        },
+        "consultables": 8,
+        "planificados": 11,
+        "ingesta": {
+          "al_dia": 0,
+          "desactualizada": 9,
+          "por_verificar": 11
+        },
+        "conjuntos_secundarios": 1,
+        "indicadores": 7,
+        "indicadores_secundarios": 0
+      }
     },
     {
-      "id": "territorio-clima",
-      "etiqueta": "Territorio y clima",
-      "icono": "mapa",
-      "resumen": "Vistas territoriales y herramientas climáticas.",
-      "temas": [],
-      "destino": "cochid.mapas",
-      "sitios": [
-        "cochid.mapas",
-        "cochid.mapas.ciudad",
-        "cochid.clima"
-      ],
-      "orden": 8
-    },
-    {
-      "id": "salud-medicamentos",
-      "etiqueta": "Salud y medicamentos",
-      "icono": "cruz",
-      "resumen": "Investigaciones sobre salud y acceso a medicamentos.",
-      "temas": [],
-      "destino": "cochid.medicamentos",
-      "sitios": [
-        "cochid.medicamentos"
-      ],
-      "orden": 9
-    },
-    {
-      "id": "conocimiento-centros-estudio",
-      "etiqueta": "Conocimiento y centros de estudio",
-      "icono": "brujula",
-      "resumen": "Investigación, evidencia y centros de estudio.",
+      "id": "medio-ambiente-energia",
+      "etiqueta": "Medio ambiente y energía",
+      "icono": "leaf",
+      "icono_svg": "<path d=\"M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10Z\"/><path d=\"M2 21c0-3 1.85-5.36 5.08-6C9.5 14.52 12 13 13 12\"/>",
+      "resumen": "Calidad del aire, emisiones, energía, clima y luz solar.",
       "temas": [
-        "centros-estudio"
+        "aire-ambiente",
+        "energia",
+        "clima"
       ],
-      "destino": "cochid.datos.dominio.conocimiento",
-      "sitios": [],
-      "orden": 10
+      "subtemas": [
+        {
+          "id": "aire-ambiente",
+          "etiqueta": "Aire, emisiones y ambiente",
+          "frase": "Emisiones de fuentes fijas y estado del aire.",
+          "icono": {
+            "nombre": "wind",
+            "svg_hijos": "<path d=\"M12.8 19.6A2 2 0 1 0 14 16H2\"/><path d=\"M17.5 8a2.5 2.5 0 1 1 2 4H2\"/><path d=\"M9.8 4.4A2 2 0 1 1 11 8H2\"/>"
+          },
+          "conteos": {
+            "conjuntos": 9,
+            "indicadores": 0,
+            "conjuntos_secundarios": 3,
+            "indicadores_secundarios": 0
+          },
+          "conjuntos_secundarios": [
+            "datos_gob_ambiente__1541",
+            "datos_gob_retc__1377",
+            "datos_gob_retc__1541"
+          ],
+          "conjuntos": [
+            "datos_gob_aire__32403",
+            "datos_gob_aire__32414",
+            "datos_gob_aire__emisiones_al_aire_de_fuente_puntuales",
+            "datos_gob_ambiente__categoria_geoespacial_medio_ambiente",
+            "datos_gob_ambiente__red_medio_ambiental_2016_angol",
+            "datos_gob_retc__categoria_geoespacial_medio_ambiente",
+            "datos_gob_retc__red_medio_ambiental_2016_angol",
+            "datos_gob_retc__reportes_retc",
+            "retc_emisiones_aire"
+          ],
+          "indicadores": [],
+          "sitios": [],
+          "investigaciones": []
+        },
+        {
+          "id": "energia",
+          "etiqueta": "Energía",
+          "frase": "Capacidad instalada, generación y autogeneración.",
+          "icono": {
+            "nombre": "zap",
+            "svg_hijos": "<path d=\"M4 14a1 1 0 0 1-.78-1.63l9.9-10.2a.5.5 0 0 1 .86.46l-1.92 6.02A1 1 0 0 0 13 10h7a1 1 0 0 1 .78 1.63l-9.9 10.2a.5.5 0 0 1-.86-.46l1.92-6.02A1 1 0 0 0 11 14z\"/>"
+          },
+          "conteos": {
+            "conjuntos": 3,
+            "indicadores": 1,
+            "conjuntos_secundarios": 0,
+            "indicadores_secundarios": 0
+          },
+          "conjuntos_secundarios": [],
+          "conjuntos": [
+            "datos_gob_energia__capacidad_instalada",
+            "datos_gob_energia__generacion_bruta",
+            "datos_gob_energia__netbilling"
+          ],
+          "indicadores": [
+            "consumo_electrico"
+          ],
+          "sitios": [],
+          "investigaciones": []
+        },
+        {
+          "id": "clima",
+          "etiqueta": "Clima y luz solar",
+          "frase": "Tiempo, pronósticos y horario frente al Sol.",
+          "icono": {
+            "nombre": "sun",
+            "svg_hijos": "<circle cx=\"12\" cy=\"12\" r=\"4\"/><path d=\"M12 2v2\"/><path d=\"M12 20v2\"/><path d=\"m4.93 4.93 1.41 1.41\"/><path d=\"m17.66 17.66 1.41 1.41\"/><path d=\"M2 12h2\"/><path d=\"M20 12h2\"/><path d=\"m6.34 17.66-1.41 1.41\"/><path d=\"m19.07 4.93-1.41 1.41\"/>"
+          },
+          "conteos": {
+            "conjuntos": 0,
+            "indicadores": 0,
+            "conjuntos_secundarios": 0,
+            "indicadores_secundarios": 0
+          },
+          "conjuntos_secundarios": [],
+          "conjuntos": [],
+          "indicadores": [],
+          "sitios": [
+            "cochid.clima",
+            "cochid.apex.cambio-hora"
+          ],
+          "investigaciones": [
+            "cambio-hora"
+          ]
+        }
+      ],
+      "destino": "cochid.clima",
+      "sitios": [
+        "cochid.clima",
+        "cochid.apex.cambio-hora"
+      ],
+      "orden": 10,
+      "conteos": {
+        "conjuntos_primarios": 12,
+        "por_nivel": {
+          "crudos_bronze": 12,
+          "normalizados_silver": 0,
+          "listos_gold": 0,
+          "tematicos_congreso_lex": 0,
+          "referencia_ref_meta": 0
+        },
+        "consultables": 0,
+        "planificados": 12,
+        "ingesta": {
+          "al_dia": 0,
+          "desactualizada": 0,
+          "por_verificar": 12
+        },
+        "conjuntos_secundarios": 3,
+        "indicadores": 1,
+        "indicadores_secundarios": 0
+      }
+    },
+    {
+      "id": "politica-instituciones",
+      "etiqueta": "Política e instituciones",
+      "icono": "vote",
+      "icono_svg": "<path d=\"m9 12 2 2 4-4\"/><path d=\"M5 7c0-1.1.9-2 2-2h10a2 2 0 0 1 2 2v12H5V7Z\"/><path d=\"M22 19H2\"/>",
+      "resumen": "Elecciones, Congreso, leyes, opinión pública y organismos del Estado.",
+      "temas": [
+        "elecciones",
+        "congreso",
+        "leyes",
+        "opinion-centros",
+        "gobierno"
+      ],
+      "subtemas": [
+        {
+          "id": "elecciones",
+          "etiqueta": "Elecciones",
+          "frase": "Resultados, participación y padrón desde 2020.",
+          "icono": {
+            "nombre": "clipboard-check",
+            "svg_hijos": "<rect width=\"8\" height=\"4\" x=\"8\" y=\"2\" rx=\"1\" ry=\"1\"/><path d=\"M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2\"/><path d=\"m9 14 2 2 4-4\"/>"
+          },
+          "conteos": {
+            "conjuntos": 2,
+            "indicadores": 3,
+            "conjuntos_secundarios": 0,
+            "indicadores_secundarios": 0
+          },
+          "conjuntos_secundarios": [],
+          "conjuntos": [
+            "elecciones_participacion_anual",
+            "elecciones_servel"
+          ],
+          "indicadores": [
+            "elecciones_mesas_cubiertas",
+            "participacion_electoral",
+            "elecciones_participacion_anual"
+          ],
+          "sitios": [
+            "cochid.elecciones"
+          ],
+          "investigaciones": []
+        },
+        {
+          "id": "congreso",
+          "etiqueta": "Congreso",
+          "frase": "Parlamentarios, proyectos, votaciones y comisiones.",
+          "icono": {
+            "nombre": "landmark",
+            "svg_hijos": "<path d=\"M10 18v-7\"/><path d=\"M11.12 2.198a2 2 0 0 1 1.76.006l7.866 3.847c.476.233.31.949-.22.949H3.474c-.53 0-.695-.716-.22-.949z\"/><path d=\"M14 18v-7\"/><path d=\"M18 18v-7\"/><path d=\"M3 22h18\"/><path d=\"M6 18v-7\"/>"
+          },
+          "conteos": {
+            "conjuntos": 4,
+            "indicadores": 0,
+            "conjuntos_secundarios": 0,
+            "indicadores_secundarios": 0
+          },
+          "conjuntos_secundarios": [],
+          "conjuntos": [
+            "congreso_comisiones",
+            "congreso_parlamentarios",
+            "congreso_proyectos",
+            "congreso_votaciones"
+          ],
+          "indicadores": [],
+          "sitios": [
+            "cochid.congreso",
+            "cochid.votos"
+          ],
+          "investigaciones": []
+        },
+        {
+          "id": "leyes",
+          "etiqueta": "Leyes y jurisprudencia",
+          "frase": "Normas, dictámenes de la Contraloría y sentencias del Tribunal Constitucional.",
+          "icono": {
+            "nombre": "scroll-text",
+            "svg_hijos": "<path d=\"M15 12h-5\"/><path d=\"M15 8h-5\"/><path d=\"M19 17V5a2 2 0 0 0-2-2H4\"/><path d=\"M8 21h12a2 2 0 0 0 2-2v-1a1 1 0 0 0-1-1H11a1 1 0 0 0-1 1v1a2 2 0 1 1-4 0V5a2 2 0 1 0-4 0v2a1 1 0 0 0 1 1h3\"/>"
+          },
+          "conteos": {
+            "conjuntos": 4,
+            "indicadores": 1,
+            "conjuntos_secundarios": 0,
+            "indicadores_secundarios": 0
+          },
+          "conjuntos_secundarios": [],
+          "conjuntos": [
+            "cochid_lex_corpus",
+            "cochid_lex_dictamenes_cgr",
+            "cochid_lex_citations",
+            "cochid_lex_sentencias_tc"
+          ],
+          "indicadores": [
+            "leyes_publicadas"
+          ],
+          "sitios": [
+            "cochid.lex"
+          ],
+          "investigaciones": []
+        },
+        {
+          "id": "opinion-centros",
+          "etiqueta": "Opinión pública y centros de estudio",
+          "frase": "Encuestas del CEP y posición de los centros de estudio.",
+          "icono": {
+            "nombre": "messages-square",
+            "svg_hijos": "<path d=\"M16 10a2 2 0 0 1-2 2H6.828a2 2 0 0 0-1.414.586l-2.202 2.202A.71.71 0 0 1 2 14.286V4a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z\"/><path d=\"M20 9a2 2 0 0 1 2 2v10.286a.71.71 0 0 1-1.212.502l-2.202-2.202A2 2 0 0 0 17.172 19H10a2 2 0 0 1-2-2v-1\"/>"
+          },
+          "conteos": {
+            "conjuntos": 2,
+            "indicadores": 3,
+            "conjuntos_secundarios": 0,
+            "indicadores_secundarios": 0
+          },
+          "conjuntos_secundarios": [],
+          "conjuntos": [
+            "cep_encuestas",
+            "think_tanks"
+          ],
+          "indicadores": [
+            "centros_estudio_influencia",
+            "centros_estudio_y",
+            "centros_estudio_x"
+          ],
+          "sitios": [
+            "cochid.datos.centros"
+          ],
+          "investigaciones": []
+        },
+        {
+          "id": "gobierno",
+          "etiqueta": "Gobierno y administración",
+          "frase": "Nóminas y documentos de organismos públicos.",
+          "icono": {
+            "nombre": "building-2",
+            "svg_hijos": "<path d=\"M10 12h4\"/><path d=\"M10 8h4\"/><path d=\"M14 21v-3a2 2 0 0 0-4 0v3\"/><path d=\"M6 10H4a2 2 0 0 0-2 2v7a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2h-2\"/><path d=\"M6 21V5a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v16\"/>"
+          },
+          "conteos": {
+            "conjuntos": 4,
+            "indicadores": 0,
+            "conjuntos_secundarios": 0,
+            "indicadores_secundarios": 0
+          },
+          "conjuntos_secundarios": [],
+          "conjuntos": [
+            "datos_gob_agro__7954",
+            "datos_gob_agro__7960",
+            "datos_gob_pesca__3328",
+            "datos_gob_pobreza__3203"
+          ],
+          "indicadores": [],
+          "sitios": [],
+          "investigaciones": []
+        }
+      ],
+      "destino": "cochid.elecciones",
+      "sitios": [
+        "cochid.elecciones",
+        "cochid.congreso",
+        "cochid.votos",
+        "cochid.lex",
+        "cochid.datos.centros"
+      ],
+      "orden": 11,
+      "conteos": {
+        "conjuntos_primarios": 16,
+        "por_nivel": {
+          "crudos_bronze": 5,
+          "normalizados_silver": 1,
+          "listos_gold": 2,
+          "tematicos_congreso_lex": 8,
+          "referencia_ref_meta": 0
+        },
+        "consultables": 11,
+        "planificados": 4,
+        "ingesta": {
+          "al_dia": 2,
+          "desactualizada": 5,
+          "por_verificar": 9
+        },
+        "conjuntos_secundarios": 0,
+        "indicadores": 7,
+        "indicadores_secundarios": 0
+      }
+    }
+  ],
+  "barra_principal": [
+    {
+      "id": "sobre",
+      "etiqueta": "Sobre nosotros",
+      "href": "https://cochid.cl/sobre-nosotros/",
+      "icono": "info"
+    },
+    {
+      "id": "datos",
+      "etiqueta": "Datos",
+      "href": "https://datos.cochid.cl/",
+      "icono": "database"
+    },
+    {
+      "id": "mapas",
+      "etiqueta": "Mapas",
+      "href": "https://mapas.cochid.cl/",
+      "icono": "map"
+    },
+    {
+      "id": "investigaciones",
+      "etiqueta": "Investigaciones",
+      "href": "https://cochid.cl/investigaciones/",
+      "icono": "book-open"
+    },
+    {
+      "id": "blog",
+      "etiqueta": "Blog",
+      "href": "https://cochid.cl/blog/",
+      "icono": "newspaper"
+    },
+    {
+      "id": "proyectos",
+      "etiqueta": "Proyectos",
+      "href": "https://cochid.cl/#proyectos",
+      "icono": "layout-grid"
+    },
+    {
+      "id": "contacto",
+      "etiqueta": "Contacto",
+      "href": "https://cochid.cl/contacto/",
+      "icono": "mail"
     }
   ],
   "familia": [
     {
+      "id": "sobre",
+      "etiqueta": "Sobre nosotros",
+      "href": "https://cochid.cl/sobre-nosotros/",
+      "icono": "info"
+    },
+    {
+      "id": "datos",
       "etiqueta": "Datos",
-      "href": "https://datos.cochid.cl/catalogo"
+      "href": "https://datos.cochid.cl/",
+      "icono": "database"
     },
     {
+      "id": "mapas",
       "etiqueta": "Mapas",
-      "href": "https://mapas.cochid.cl/"
+      "href": "https://mapas.cochid.cl/",
+      "icono": "map"
     },
     {
+      "id": "investigaciones",
       "etiqueta": "Investigaciones",
-      "href": "https://cochid.cl/#investigaciones"
+      "href": "https://cochid.cl/investigaciones/",
+      "icono": "book-open"
     },
     {
-      "etiqueta": "Presupuesto",
-      "href": "https://datos.cochid.cl/presupuesto"
+      "id": "blog",
+      "etiqueta": "Blog",
+      "href": "https://cochid.cl/blog/",
+      "icono": "newspaper"
     },
     {
-      "etiqueta": "Todos los proyectos",
-      "href": "https://cochid.cl/#proyectos"
+      "id": "proyectos",
+      "etiqueta": "Proyectos",
+      "href": "https://cochid.cl/#proyectos",
+      "icono": "layout-grid"
+    },
+    {
+      "id": "contacto",
+      "etiqueta": "Contacto",
+      "href": "https://cochid.cl/contacto/",
+      "icono": "mail"
     }
   ],
   "excluidos": [],
@@ -323,6 +2360,7 @@
       },
       "sitemap": {},
       "robots": "noindex",
+      "dominio": null,
       "estado": "vivo",
       "marca": "cochid",
       "titular": "cochid",
@@ -340,7 +2378,7 @@
       "resumen": "Herramienta para consultar condiciones y pronósticos del tiempo.",
       "clase": "herramienta",
       "grupo": "territorio",
-      "dominio": "territorio-clima",
+      "dominio": "medio-ambiente-energia",
       "padre": null,
       "orden": 7,
       "icono": "cloud",
@@ -375,7 +2413,7 @@
       "id": "cochid.apex",
       "host": "cochid.cl",
       "ruta": "/",
-      "etiqueta": "COCHID",
+      "etiqueta": "Compañía Chilena de Inteligencia de Datos",
       "resumen": "Portal de datos públicos, territorio e investigaciones.",
       "clase": "portal",
       "grupo": "datos",
@@ -402,6 +2440,7 @@
         "cochid.mapas",
         "cochid.medicamentos"
       ],
+      "dominio": null,
       "estado": "vivo",
       "marca": "cochid",
       "titular": "cochid",
@@ -437,6 +2476,7 @@
         "fuente": "estatica"
       },
       "robots": "indexable",
+      "dominio": null,
       "marca": "cochid",
       "titular": "cochid",
       "alias_de": null,
@@ -472,6 +2512,7 @@
         "fuente": "estatica"
       },
       "robots": "indexable",
+      "dominio": null,
       "marca": "cochid",
       "titular": "cochid",
       "alias_de": null,
@@ -507,6 +2548,7 @@
         "fuente": "estatica"
       },
       "robots": "indexable",
+      "dominio": null,
       "marca": "cochid",
       "titular": "cochid",
       "alias_de": null,
@@ -542,6 +2584,7 @@
         "fuente": "estatica"
       },
       "robots": "indexable",
+      "dominio": null,
       "marca": "cochid",
       "titular": "cochid",
       "alias_de": null,
@@ -577,6 +2620,7 @@
         "fuente": "estatica"
       },
       "robots": "indexable",
+      "dominio": null,
       "marca": "cochid",
       "titular": "cochid",
       "alias_de": null,
@@ -593,7 +2637,7 @@
       "resumen": "Investigación publicada sobre concepciones y opinión pública.",
       "clase": "pagina",
       "grupo": "investigaciones",
-      "dominio": "poblacion-sociedad-educacion",
+      "dominio": "poblacion-sociedad",
       "padre": "cochid.apex.investigaciones",
       "orden": 2,
       "icono": "book",
@@ -648,6 +2692,7 @@
         "fuente": "estatica"
       },
       "robots": "indexable",
+      "dominio": null,
       "marca": "cochid",
       "titular": "cochid",
       "alias_de": null,
@@ -661,7 +2706,7 @@
       "host": "cochid.cl",
       "ruta": "/novedades/",
       "etiqueta": "Novedades",
-      "resumen": "Datos nuevos, estudios y lanzamientos de COCHID.",
+      "resumen": "Datos nuevos, estudios y lanzamientos de la Compañía Chilena de Inteligencia de Datos.",
       "clase": "pagina",
       "grupo": "datos",
       "padre": "cochid.apex",
@@ -683,6 +2728,7 @@
         "fuente": "estatica"
       },
       "robots": "indexable",
+      "dominio": null,
       "marca": "cochid",
       "titular": "cochid",
       "alias_de": null,
@@ -718,6 +2764,7 @@
         "fuente": "estatica"
       },
       "robots": "indexable",
+      "dominio": null,
       "marca": "cochid",
       "titular": "cochid",
       "alias_de": null,
@@ -752,6 +2799,7 @@
         "fuente": "estatica"
       },
       "robots": "indexable",
+      "dominio": "medio-ambiente-energia",
       "estado": "vivo",
       "marca": "cochid",
       "titular": "cochid",
@@ -764,9 +2812,9 @@
     {
       "id": "cochid.apex.quienes",
       "host": "cochid.cl",
-      "ruta": "/quienes-somos/",
-      "etiqueta": "Quiénes somos",
-      "resumen": "Equipo, principios, método y operación de COCHID.",
+      "ruta": "/sobre-nosotros/",
+      "etiqueta": "Sobre nosotros",
+      "resumen": "Equipo, principios, método y operación de la Compañía Chilena de Inteligencia de Datos.",
       "clase": "pagina",
       "grupo": "datos",
       "padre": "cochid.apex",
@@ -788,6 +2836,7 @@
         "fuente": "estatica"
       },
       "robots": "indexable",
+      "dominio": null,
       "marca": "cochid",
       "titular": "cochid",
       "alias_de": null,
@@ -823,6 +2872,7 @@
         "fuente": "estatica"
       },
       "robots": "indexable",
+      "dominio": null,
       "marca": "cochid",
       "titular": "cochid",
       "alias_de": null,
@@ -858,6 +2908,7 @@
         "fuente": "estatica"
       },
       "robots": "indexable",
+      "dominio": null,
       "marca": "cochid",
       "titular": "cochid",
       "alias_de": null,
@@ -893,6 +2944,7 @@
         "fuente": "estatica"
       },
       "robots": "indexable",
+      "dominio": null,
       "marca": "cochid",
       "titular": "cochid",
       "alias_de": null,
@@ -906,7 +2958,7 @@
       "host": "cochid.cl",
       "ruta": "/mapa-del-sitio/",
       "etiqueta": "Mapa del sitio",
-      "resumen": "Árbol de destinos públicos de COCHID.",
+      "resumen": "Árbol de destinos públicos de la Compañía Chilena de Inteligencia de Datos.",
       "clase": "pagina",
       "grupo": "datos",
       "padre": "cochid.apex",
@@ -928,6 +2980,7 @@
         "fuente": "estatica"
       },
       "robots": "indexable",
+      "dominio": null,
       "marca": "cochid",
       "titular": "cochid",
       "alias_de": null,
@@ -963,6 +3016,7 @@
         "fuente": "estatica"
       },
       "robots": "indexable",
+      "dominio": null,
       "marca": "cochid",
       "titular": "cochid",
       "alias_de": null,
@@ -979,7 +3033,7 @@
       "resumen": "Actividad legislativa, proyectos, votaciones y actores del Congreso.",
       "clase": "producto",
       "grupo": "datos",
-      "dominio": "elecciones-congreso",
+      "dominio": "politica-instituciones",
       "padre": null,
       "orden": 5,
       "icono": "building",
@@ -1043,6 +3097,7 @@
         "cochid.lex",
         "cochid.congreso"
       ],
+      "dominio": null,
       "estado": "vivo",
       "marca": "cochid",
       "titular": "cochid",
@@ -1077,6 +3132,7 @@
         "fuente": "dinamica:/api/catalog/"
       },
       "robots": "indexable",
+      "dominio": null,
       "estado": "vivo",
       "marca": "cochid",
       "titular": "cochid",
@@ -1094,7 +3150,7 @@
       "resumen": "Visor de presupuesto público y ejecución.",
       "clase": "herramienta",
       "grupo": "datos",
-      "dominio": "presupuesto-gasto-publico",
+      "dominio": "finanzas-publicas",
       "padre": "cochid.datos",
       "orden": 2,
       "icono": "moneda",
@@ -1148,6 +3204,7 @@
         "fuente": "dinamica:/api/temas/"
       },
       "robots": "indexable",
+      "dominio": null,
       "estado": "vivo",
       "marca": "cochid",
       "titular": "cochid",
@@ -1184,6 +3241,7 @@
         "fuente": "dinamica:/api/temas/"
       },
       "robots": "indexable",
+      "dominio": null,
       "estado": "vivo",
       "marca": "cochid",
       "titular": "cochid",
@@ -1221,6 +3279,7 @@
         "fuente": "dinamica:/api/dominios"
       },
       "robots": "indexable",
+      "dominio": null,
       "marca": "cochid",
       "titular": "cochid",
       "alias_de": null,
@@ -1256,6 +3315,7 @@
         "fuente": "estatica"
       },
       "robots": "indexable",
+      "dominio": null,
       "marca": "cochid",
       "titular": "cochid",
       "alias_de": null,
@@ -1291,6 +3351,7 @@
         "fuente": "estatica"
       },
       "robots": "indexable",
+      "dominio": null,
       "marca": "cochid",
       "titular": "cochid",
       "alias_de": null,
@@ -1326,6 +3387,7 @@
         "fuente": "estatica"
       },
       "robots": "indexable",
+      "dominio": null,
       "marca": "cochid",
       "titular": "cochid",
       "alias_de": null,
@@ -1361,6 +3423,7 @@
         "fuente": "estatica"
       },
       "robots": "indexable",
+      "dominio": null,
       "marca": "cochid",
       "titular": "cochid",
       "alias_de": null,
@@ -1396,6 +3459,7 @@
         "fuente": "estatica"
       },
       "robots": "indexable",
+      "dominio": null,
       "marca": "cochid",
       "titular": "cochid",
       "alias_de": null,
@@ -1431,6 +3495,7 @@
         "fuente": "estatica"
       },
       "robots": "indexable",
+      "dominio": null,
       "marca": "cochid",
       "titular": "cochid",
       "alias_de": null,
@@ -1466,6 +3531,7 @@
         "fuente": "estatica"
       },
       "robots": "indexable",
+      "dominio": null,
       "marca": "cochid",
       "titular": "cochid",
       "alias_de": null,
@@ -1501,6 +3567,7 @@
         "fuente": "estatica"
       },
       "robots": "indexable",
+      "dominio": null,
       "marca": "cochid",
       "titular": "cochid",
       "alias_de": null,
@@ -1536,6 +3603,7 @@
         "fuente": "dinamica:/api/catalog/"
       },
       "robots": "indexable",
+      "dominio": null,
       "estado": "vivo",
       "marca": "cochid",
       "titular": "cochid",
@@ -1572,6 +3640,7 @@
         "fuente": "dinamica:/api/catalog/"
       },
       "robots": "indexable",
+      "dominio": null,
       "estado": "vivo",
       "marca": "cochid",
       "titular": "cochid",
@@ -1607,6 +3676,7 @@
         "fuente": "estatica"
       },
       "robots": "indexable",
+      "dominio": null,
       "estado": "vivo",
       "marca": "cochid",
       "titular": "cochid",
@@ -1642,6 +3712,7 @@
         "fuente": "estatica"
       },
       "robots": "indexable",
+      "dominio": null,
       "estado": "vivo",
       "marca": "cochid",
       "titular": "cochid",
@@ -1678,6 +3749,7 @@
         "fuente": "estatica"
       },
       "robots": "indexable",
+      "dominio": null,
       "marca": "cochid",
       "titular": "cochid",
       "alias_de": null,
@@ -1712,6 +3784,7 @@
         "fuente": "estatica"
       },
       "robots": "indexable",
+      "dominio": "finanzas-publicas",
       "estado": "vivo",
       "marca": "cochid",
       "titular": "cochid",
@@ -1747,6 +3820,7 @@
         "fuente": "estatica"
       },
       "robots": "indexable",
+      "dominio": "poblacion-sociedad",
       "estado": "vivo",
       "marca": "cochid",
       "titular": "cochid",
@@ -1782,6 +3856,7 @@
         "fuente": "estatica"
       },
       "robots": "indexable",
+      "dominio": "poblacion-sociedad",
       "estado": "vivo",
       "marca": "cochid",
       "titular": "cochid",
@@ -1817,6 +3892,7 @@
         "fuente": "estatica"
       },
       "robots": "indexable",
+      "dominio": "seguridad-justicia",
       "estado": "vivo",
       "marca": "cochid",
       "titular": "cochid",
@@ -1852,6 +3928,7 @@
         "fuente": "estatica"
       },
       "robots": "indexable",
+      "dominio": "seguridad-justicia",
       "estado": "vivo",
       "marca": "cochid",
       "titular": "cochid",
@@ -1887,6 +3964,7 @@
         "fuente": "estatica"
       },
       "robots": "indexable",
+      "dominio": null,
       "estado": "vivo",
       "marca": "cochid",
       "titular": "cochid",
@@ -1922,6 +4000,7 @@
         "fuente": "estatica"
       },
       "robots": "indexable",
+      "dominio": null,
       "estado": "vivo",
       "marca": "cochid",
       "titular": "cochid",
@@ -1958,6 +4037,7 @@
         "fuente": "estatica"
       },
       "robots": "indexable",
+      "dominio": null,
       "marca": "cochid",
       "titular": "cochid",
       "alias_de": null,
@@ -1992,6 +4072,7 @@
         "fuente": "estatica"
       },
       "robots": "indexable",
+      "dominio": null,
       "estado": "vivo",
       "marca": "cochid",
       "titular": "cochid",
@@ -2027,6 +4108,7 @@
         "fuente": "estatica"
       },
       "robots": "indexable",
+      "dominio": null,
       "estado": "vivo",
       "marca": "cochid",
       "titular": "cochid",
@@ -2062,6 +4144,7 @@
         "fuente": "estatica"
       },
       "robots": "indexable",
+      "dominio": null,
       "estado": "vivo",
       "marca": "cochid",
       "titular": "cochid",
@@ -2093,6 +4176,7 @@
       },
       "sitemap": {},
       "robots": "noindex",
+      "dominio": null,
       "estado": "vivo",
       "marca": "cochid",
       "titular": "cochid",
@@ -2128,6 +4212,7 @@
         "fuente": "estatica"
       },
       "robots": "indexable",
+      "dominio": null,
       "estado": "vivo",
       "marca": "cochid",
       "titular": "cochid",
@@ -2164,6 +4249,7 @@
         "fuente": "estatica"
       },
       "robots": "indexable",
+      "dominio": null,
       "marca": "cochid",
       "titular": "cochid",
       "alias_de": null,
@@ -2198,6 +4284,7 @@
         "fuente": "estatica"
       },
       "robots": "indexable",
+      "dominio": null,
       "estado": "vivo",
       "marca": "cochid",
       "titular": "cochid",
@@ -2233,6 +4320,7 @@
         "fuente": "estatica"
       },
       "robots": "indexable",
+      "dominio": "territorio-vivienda",
       "estado": "vivo",
       "marca": "cochid",
       "titular": "cochid",
@@ -2268,6 +4356,7 @@
         "fuente": "estatica"
       },
       "robots": "indexable",
+      "dominio": null,
       "estado": "vivo",
       "marca": "cochid",
       "titular": "cochid",
@@ -2303,6 +4392,7 @@
         "fuente": "estatica"
       },
       "robots": "indexable",
+      "dominio": "politica-instituciones",
       "estado": "vivo",
       "marca": "cochid",
       "titular": "cochid",
@@ -2335,6 +4425,7 @@
       },
       "sitemap": {},
       "robots": "noindex",
+      "dominio": null,
       "estado": "vivo",
       "marca": "cochid",
       "titular": "cochid",
@@ -2366,6 +4457,7 @@
       },
       "sitemap": {},
       "robots": "noindex",
+      "dominio": null,
       "estado": "vivo",
       "marca": "cochid",
       "titular": "cochid",
@@ -2423,7 +4515,7 @@
       "resumen": "Resultados y datos electorales consultables.",
       "clase": "producto",
       "grupo": "datos",
-      "dominio": "elecciones-congreso",
+      "dominio": "politica-instituciones",
       "padre": null,
       "orden": 4,
       "icono": "urna",
@@ -2484,6 +4576,7 @@
         "cochid.taller",
         "cochid.prosa-medicamentos"
       ],
+      "dominio": null,
       "estado": "vivo",
       "marca": "cochid",
       "titular": "cochid",
@@ -2500,7 +4593,7 @@
       "resumen": "Búsqueda y análisis de fuentes legales chilenas.",
       "clase": "producto",
       "grupo": "datos",
-      "dominio": "legislacion",
+      "dominio": "politica-instituciones",
       "padre": null,
       "orden": 7,
       "icono": "balanza",
@@ -2540,7 +4633,7 @@
       "resumen": "Atlas para explorar territorio, movilidad e infraestructura.",
       "clase": "producto",
       "grupo": "territorio",
-      "dominio": "territorio-clima",
+      "dominio": "territorio-vivienda",
       "padre": null,
       "orden": 1,
       "icono": "map",
@@ -2581,7 +4674,7 @@
       "resumen": "Modelo de Santiago para explorar rutas, tiempos de viaje, accesos y servicios cercanos.",
       "clase": "vista",
       "grupo": "territorio",
-      "dominio": "territorio-clima",
+      "dominio": "territorio-vivienda",
       "padre": "cochid.mapas",
       "orden": 2,
       "icono": "city",
@@ -2634,6 +4727,7 @@
       },
       "sitemap": {},
       "robots": "noindex",
+      "dominio": null,
       "estado": "vivo",
       "marca": "cochid",
       "titular": "cochid",
@@ -2651,7 +4745,7 @@
       "resumen": "Investigación sobre acceso sostenible a medicamentos.",
       "clase": "producto",
       "grupo": "investigaciones",
-      "dominio": "salud-medicamentos",
+      "dominio": "salud",
       "padre": null,
       "orden": 1,
       "icono": "cross",
@@ -2709,6 +4803,7 @@
       "robots": "indexable",
       "hermanos": [],
       "estado_presentacion": "Proyecto terminado el 19 de julio de 2026",
+      "dominio": "poblacion-sociedad",
       "estado": "vivo",
       "marca": "cochid",
       "titular": "cochid",
@@ -2738,6 +4833,7 @@
       },
       "sitemap": {},
       "robots": "noindex",
+      "dominio": null,
       "estado": "vivo",
       "marca": "cochid",
       "titular": "cochid",
@@ -2775,6 +4871,7 @@
         "cochid.graphs",
         "cochid.taller"
       ],
+      "dominio": null,
       "estado": "vivo",
       "marca": "cochid",
       "titular": "cochid",
@@ -2806,6 +4903,7 @@
       "sitemap": {},
       "robots": "noindex",
       "hermanos": [],
+      "dominio": null,
       "estado": "vivo",
       "marca": "cochid",
       "titular": "cochid",
@@ -2835,6 +4933,7 @@
       },
       "sitemap": {},
       "robots": "noindex",
+      "dominio": null,
       "estado": "vivo",
       "marca": "cochid",
       "titular": "cochid",
@@ -2873,6 +4972,7 @@
         "cochid.graphs",
         "cochid.prosa-medicamentos"
       ],
+      "dominio": null,
       "estado": "vivo",
       "marca": "cochid",
       "titular": "cochid",
@@ -2905,6 +5005,7 @@
       "portafolio": "fuera",
       "marca": "personal",
       "titular": "martin-illanes",
+      "dominio": null,
       "estado": "vivo",
       "alias_de": null,
       "reemplazado_por": null,
@@ -2932,6 +5033,7 @@
       },
       "sitemap": {},
       "robots": "noindex",
+      "dominio": null,
       "estado": "vivo",
       "marca": "cochid",
       "titular": "cochid",
@@ -3025,7 +5127,7 @@
       "resumen": "Consulta votaciones de la Cámara de Diputadas y Diputados.",
       "clase": "producto",
       "grupo": "datos",
-      "dominio": "elecciones-congreso",
+      "dominio": "politica-instituciones",
       "padre": null,
       "orden": 6,
       "icono": "urna",
@@ -3077,6 +5179,7 @@
       },
       "sitemap": {},
       "robots": "noindex",
+      "dominio": null,
       "estado": "vivo",
       "marca": "cochid",
       "titular": "cochid",
@@ -3090,8 +5193,8 @@
       "id": "cochid.www",
       "host": "www.cochid.cl",
       "ruta": "/",
-      "etiqueta": "COCHID",
-      "resumen": "Alias del portal COCHID.",
+      "etiqueta": "Compañía Chilena de Inteligencia de Datos",
+      "resumen": "Alias del portal principal.",
       "clase": "alias",
       "grupo": "fuera",
       "padre": null,
@@ -3108,6 +5211,7 @@
       },
       "sitemap": {},
       "robots": "noindex",
+      "dominio": null,
       "estado": "vivo",
       "marca": "cochid",
       "titular": "cochid",

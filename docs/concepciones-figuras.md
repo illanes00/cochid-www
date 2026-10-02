@@ -1220,7 +1220,7 @@ introducir sin que nadie lo note.
    Es la advertencia número 2 de `meta.advertencias` y no es opcional.
 10. **La sigla de la sociedad tecnológica no aparece suelta en ninguna parte**, según la regla del
     canon. Ni en epígrafes, ni en pies de figura, ni en `aria-label`. La atribución de la página
-    es COCHID.
+    es Compañía Chilena de Inteligencia de Datos.
 
 ---
 

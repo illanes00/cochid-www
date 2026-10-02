@@ -1,4 +1,4 @@
-# Portal estático de COCHID
+# Portal estático de Compañía Chilena de Inteligencia de Datos
 
 Fuente del apex `https://cochid.cl/`. El sitio no usa un framework ni un proceso
 de aplicación: `scripts/build.mjs` compone HTML estático en `dist/` a partir de

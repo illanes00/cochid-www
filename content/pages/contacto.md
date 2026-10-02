@@ -1,6 +1,6 @@
 ---
 titulo: Contacto
-descripcion: Cómo escribir a COCHID para consultas sobre datos, correcciones, pedidos a medida, uso de la API y prensa.
+descripcion: Cómo escribir a Compañía Chilena de Inteligencia de Datos para consultas sobre datos, correcciones, pedidos a medida, uso de la API y prensa.
 ruta: /contacto/
 ---
 
@@ -14,9 +14,9 @@ Si necesitas un corte de datos que no está en el catálogo, más consultas de A
 
 ## Consultas generales y prensa
 
-Escribe a **hola@innovacionsantiago.cl**. Este buzón lo atiende Compañía de Innovación de Santiago SpA, que opera COCHID.
+Escribe a **hola@innovacionsantiago.cl**. Este buzón lo atiende Compañía de Innovación de Santiago SpA, que opera Compañía Chilena de Inteligencia de Datos.
 
-[[VERIFICAR: buzón propio de COCHID (`asesoria@cochid.cl` u otro) y su regla de ruteo en Cloudflare Email Routing; mientras no exista, no se publica (D-BUZON)]]
+[[VERIFICAR: buzón propio de Compañía Chilena de Inteligencia de Datos (`asesoria@cochid.cl` u otro) y su regla de ruteo en Cloudflare Email Routing; mientras no exista, no se publica (D-BUZON)]]
 
 También puedes usar el [formulario de contacto de Compañía de Innovación de Santiago SpA](https://innovacionsantiago.cl/contacto).
 
@@ -32,7 +32,7 @@ Antes de escribir puedes revisar el archivo original en la [Biblioteca](https://
 
 ## Soporte de cuenta y pagos
 
-Si tienes una cuenta y una consulta sobre una llave de API, tus créditos o un pago, entra a tu cuenta y usa la sección de ayuda. [[VERIFICAR: URL exacta de ayuda de la Cuenta para usuarios de COCHID (`cuenta.innovacionsantiago.cl/…/ayuda`)]]
+Si tienes una cuenta y una consulta sobre una llave de API, tus créditos o un pago, entra a tu cuenta y usa la sección de ayuda. [[VERIFICAR: URL exacta de ayuda de la Cuenta para usuarios de Compañía Chilena de Inteligencia de Datos (`cuenta.innovacionsantiago.cl/…/ayuda`)]]
 
 ## Privacidad
 

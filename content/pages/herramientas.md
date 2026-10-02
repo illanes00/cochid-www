@@ -1,6 +1,6 @@
 ---
 titulo: Herramientas
-descripcion: Herramientas de COCHID para hacer gráficos con fuente, explorar visualizaciones territoriales, revisar textos y escribir documentos con evidencia.
+descripcion: Herramientas de Compañía Chilena de Inteligencia de Datos para hacer gráficos con fuente, explorar visualizaciones territoriales, revisar textos y escribir documentos con evidencia.
 ruta: /herramientas/
 ---
 

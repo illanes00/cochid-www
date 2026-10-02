@@ -1,4 +1,5 @@
-import {readFile,writeFile,mkdir,cp,rm} from 'node:fs/promises';
+import {readFile,writeFile,mkdir,cp,rm,readdir} from 'node:fs/promises';
+import {execFileSync} from 'node:child_process';
 import {yearData,monthlyData,hhmm,MONTHS} from '../cambio-de-hora/solar.mjs';
 import {cargarDatos,tablas,verificarContrato} from './tablas-concepciones.mjs';
 import {destinos,dominios,familia,grupos,navegacionPrimaria,pie} from '../data/destinos.mjs';
@@ -10,9 +11,10 @@ import {loNuevo,novedadesDesdeBlog,novedadesDesdeReleases,paginaNovedades,unirNo
 
 const root=new URL('../',import.meta.url), out=new URL('../dist/',import.meta.url);
 const rutasPortalPublicadas=new Set([
- '/', '/cambio-de-hora/', '/concepciones/', '/contacto/', '/datos/',
+ '/', '/cambio-de-hora/', '/concepciones/', '/contacto/',
  '/documentacion/', '/herramientas/', '/investigaciones/', '/mapa-del-sitio/',
- '/mapas/', '/quienes-somos/', '/servicios/', '/asesoria/', '/blog/', '/novedades/'
+ '/mapas/', '/sobre-nosotros/', '/servicios/', '/asesoria/', '/blog/', '/novedades/',
+ '/buscar/', '/temas/'
 ]);
 const [kitHead,headerTemplate,footerTemplate,migasTemplate,paginaTemplate,articuloTemplate,error404Template]=await Promise.all(
  ['head','header','footer','migas','pagina','articulo','error404'].map(nombre=>readFile(new URL(`partials/${nombre}.html`,root),'utf8'))
@@ -47,7 +49,7 @@ function cabecera(ruta){
 
 function piePortal(){
  const secciones=pie('cochid.cl');
- const explorar=secciones.find(seccion=>seccion.titulo==='Explorar COCHID')?.enlaces||[];
+ const explorar=secciones.find(seccion=>seccion.titulo==='Explorar Compañía Chilena de Inteligencia de Datos')?.enlaces||[];
  const relacionados=secciones.find(seccion=>seccion.titulo==='Relacionados')?.enlaces||[];
  const propios=destinos
   .filter(destino=>destino.host==='cochid.cl' && destino.visible.pie && destino.ruta!=='/' && rutasPortalPublicadas.has(destino.ruta))
@@ -196,7 +198,7 @@ async function paginaArticulo({ruta,titulo,producto,descripcion,bajada,meta='',m
 async function publicarBlog(){
  await paginaArticulo({
   ruta:'/blog/',titulo:'Blog',producto:'Portal',
-  descripcion:'Notas de COCHID sobre datos nuevos, métodos y cambios del sitio, ordenadas de la más reciente a la más antigua.',
+  descripcion:'Notas de Compañía Chilena de Inteligencia de Datos sobre datos nuevos, métodos y cambios del sitio, ordenadas de la más reciente a la más antigua.',
   bajada:'Notas sobre datos nuevos, métodos y cambios del sitio, de la más reciente a la más antigua.',
   migas:[['Inicio','/'],['Blog']],cuerpo:indiceBlog(entradas)
  });
@@ -210,8 +212,8 @@ async function publicarBlog(){
  await writeFile(new URL('blog/feed.xml',out),rss(entradas));
  await paginaArticulo({
   ruta:'/novedades/',titulo:'Novedades',producto:'Portal',
-  descripcion:'Datos nuevos, entradas del blog y publicaciones de COCHID, con fecha y fuente de cada novedad.',
-  bajada:'Datos nuevos, entradas del blog y publicaciones de COCHID, con fecha y fuente de cada novedad.',
+  descripcion:'Datos nuevos, entradas del blog y publicaciones de Compañía Chilena de Inteligencia de Datos, con fecha y fuente de cada novedad.',
+  bajada:'Datos nuevos, entradas del blog y publicaciones de Compañía Chilena de Inteligencia de Datos, con fecha y fuente de cada novedad.',
   migas:[['Inicio','/'],['Novedades']],cuerpo:paginaNovedades(novedades)
  });
 }
@@ -221,21 +223,12 @@ await mkdir(out,{recursive:true});
 await cp(new URL('assets/',root),new URL('assets/',out),{recursive:true});
 await cp(new URL('robots.txt',root),new URL('robots.txt',out));
 await cp(new URL('data/destinos.publico.json',root),new URL('destinos.json',out));
-/* La portada recibe la grilla compacta con los seis primeros dominios y los
-   íconos de sus accesos desde el mismo módulo que las páginas editoriales. */
-let home=chrome(await readFile(new URL('index.html',root),'utf8'),'/');
-const dominiosPortada=(await dominiosPublicados()).slice(0,6).map(dominio=>({...dominio,nivel:3}));
-if(!home.includes('<!--DOMINIOS_COMPACTOS-->'))throw new Error('index.html no tiene el marcador DOMINIOS_COMPACTOS');
-home=home.replace('<!--DOMINIOS_COMPACTOS-->',grillaHtml(dominiosPortada,{compacta:true}))
- .replace(/<!--ICONO:([a-z]+)-->/g,(_,nombre)=>iconoSvg(nombre,{tamano:28,clase:'task-icon'}));
-if(!home.includes('<!--LO_NUEVO-->'))throw new Error('index.html no tiene el marcador LO_NUEVO');
-home=home.replace('<!--LO_NUEVO-->',loNuevo(novedades));
-home=sinComentariosHtml(home);
-await writeFile(new URL('index.html',out),home);
+/* La portada v2 aprobada se incorpora al final junto con las páginas de tema. */
+await cp(new URL('vendor/v2/portada/index.html',root),new URL('index.html',out));
 await writeFile(new URL('404.html',out),reemplazar(error404Template,{
  KIT_HEAD:kitHead,HEADER:cabecera(''),FOOTER:piePortal()
 },'404'));
-for(const nombre of ['quienes-somos','contacto','servicios','datos','mapas','herramientas','investigaciones','documentacion','mapa-del-sitio','asesoria','asesoria-gracias']){
+for(const nombre of ['quienes-somos','contacto','servicios','mapas','herramientas','investigaciones','documentacion','mapa-del-sitio','asesoria','asesoria-gracias']){
  await paginaEditorial(nombre);
 }
 await publicarBlog();
@@ -281,8 +274,10 @@ const fechas={
  '/':'2026-10-01','/cambio-de-hora/':'2026-09-07','/concepciones/':'2026-09-20',
  '/blog/':entradas[0].fecha,'/novedades/':novedades[0].fecha
 };
+const temasV2=['salud','educacion','economia-trabajo','empresas-innovacion','finanzas-publicas','seguridad-justicia','poblacion-sociedad','territorio-vivienda','transporte-infraestructura','medio-ambiente-energia','politica-instituciones'];
 const urlsSitemap=[
  ...[...rutasPortalPublicadas].map(ruta=>[ruta,fechas[ruta]||'2026-10-01']),
+ ...temasV2.map(tema=>[`/temas/${tema}/`,'2026-10-02']),
  ...entradas.map(entrada=>[entrada.ruta,entrada.fecha]),
 ];
 const sitemap=`<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${urlsSitemap.map(([ruta,fecha])=>`  <url><loc>https://cochid.cl${ruta}</loc><lastmod>${fecha}</lastmod></url>`).join('\n')}\n</urlset>\n`;
@@ -291,12 +286,73 @@ const hostsSitemap=['bici.cochid.cl','cables.cochid.cl','clima.cochid.cl','cochi
 const sitemapHosts=`<?xml version="1.0" encoding="UTF-8"?>\n<sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${hostsSitemap.map(host=>`  <sitemap><loc>https://${host}/sitemap.xml</loc></sitemap>`).join('\n')}\n</sitemapindex>\n`;
 await writeFile(new URL('sitemap-hosts.xml',out),sitemapHosts);
 
+/* Esqueleto v2: la portada y las doce páginas de temas vienen de la maqueta
+   aprobada. El chrome se aplica al final a toda página, incluidos los dos
+   especiales heredados, para que la barra principal sea idéntica por bytes. */
+const bundle=new URL('../vendor/chrome-v2/',import.meta.url);
+const bundleHeader=await readFile(new URL('header.html',bundle),'utf8');
+const bundleFooter=await readFile(new URL('footer.html',bundle),'utf8');
+const subnav=`<section class="cx-sub" data-subnav aria-label="Barra del portal">
+  <div class="cx-sub__in">
+    <a class="cx-sub__nombre" href="https://cochid.cl/">Portal</a>
+    <nav class="cx-sub__tareas" aria-label="Secciones del portal">
+      <a href="https://cochid.cl/">Inicio</a><a href="https://cochid.cl/temas/">Temas</a><a href="https://cochid.cl/investigaciones/">Investigaciones</a><a href="https://cochid.cl/novedades/">Novedades</a><a href="https://cochid.cl/servicios/">Servicios</a><a href="https://cochid.cl/documentacion/">Documentación</a>
+    </nav>
+    <details class="cx-sub__movil"><summary>Secciones<svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></summary><div class="cx-mas__lista"><a href="https://cochid.cl/">Inicio</a><a href="https://cochid.cl/temas/">Temas</a><a href="https://cochid.cl/investigaciones/">Investigaciones</a><a href="https://cochid.cl/novedades/">Novedades</a><a href="https://cochid.cl/servicios/">Servicios</a><a href="https://cochid.cl/documentacion/">Documentación</a></div></details>
+  </div>
+</section>`;
+
+await cp(new URL('../vendor/v2/portada/index.html',import.meta.url),new URL('index.html',out));
+await cp(new URL('../vendor/v2/portada/portada.css',import.meta.url),new URL('assets/portal-v2-portada.css',out));
+await cp(new URL('../vendor/v2/portada/portada.js',import.meta.url),new URL('assets/portal-v2-portada.js',out));
+await cp(new URL('../vendor/v2/temas/',import.meta.url),new URL('temas/',out),{recursive:true});
+await cp(bundle,new URL('assets/chrome-v2/',out),{recursive:true});
+execFileSync('python3',['buscador/generar_indice.py','--refrescar'],{cwd:new URL('../',import.meta.url),stdio:'inherit',env:{...process.env,DESTINOS_JSON:'data/destinos.v1.json',TAXONOMIA_JSON:'data/taxonomia.json'}});
+await mkdir(new URL('buscar/',out),{recursive:true});
+await cp(new URL('../buscador/indice.json',import.meta.url),new URL('buscar/indice.json',out));
+const buscar=`<!doctype html><html lang="es-CL" data-brand="cochid" data-theme="light"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Buscar · Compañía Chilena de Inteligencia de Datos</title><meta name="description" content="Busca datos, mapas, investigaciones, herramientas y entradas del blog.">${kitHead}</head><body>${bundleHeader}${subnav}<main id="contenido" class="portal-contenido" tabindex="-1"><header><h1>Buscar</h1><p>Busca datos, mapas, investigaciones, herramientas y entradas del blog.</p></header><p><button class="btn-primary" type="button" data-buscar-abrir>Abrir el buscador</button></p></main>${bundleFooter}<script>addEventListener('load',()=>{document.querySelector('[data-buscar-abrir]')?.click();const q=new URLSearchParams(location.search).get('q');if(q)setTimeout(()=>{const i=document.querySelector('.bq__in');if(i){i.value=q;i.dispatchEvent(new Event('input',{bubbles:true}))}},50)})</script></body></html>`;
+await writeFile(new URL('buscar/index.html',out),buscar);
+const redireccion=`<!doctype html><html lang="es-CL"><head><meta charset="utf-8"><meta http-equiv="refresh" content="0;url=/sobre-nosotros/"><link rel="canonical" href="https://cochid.cl/sobre-nosotros/"><title>Sobre nosotros · Compañía Chilena de Inteligencia de Datos</title></head><body><main id="contenido" tabindex="-1"><h1>Sobre nosotros</h1><p>Esta página se trasladó a <a href="/sobre-nosotros/">Sobre nosotros</a>.</p></main></body></html>`;
+await mkdir(new URL('quienes-somos/',out),{recursive:true});
+await writeFile(new URL('quienes-somos/index.html',out),redireccion);
+const redireccionTemas=`<!doctype html><html lang="es-CL"><head><meta charset="utf-8"><meta http-equiv="refresh" content="0;url=/temas/"><link rel="canonical" href="https://cochid.cl/temas/"><title>Temas · Compañía Chilena de Inteligencia de Datos</title></head><body><main id="contenido" tabindex="-1"><h1>Temas</h1><p>Esta página se trasladó a <a href="/temas/">Temas</a>.</p></main></body></html>`;
+await mkdir(new URL('datos/',out),{recursive:true});
+await writeFile(new URL('datos/index.html',out),redireccionTemas);
+
+async function htmlFiles(directory){
+ const found=[];
+ for(const entry of await readdir(directory,{withFileTypes:true})){
+  const item=new URL(entry.name+(entry.isDirectory()?'/':''),directory);
+  if(entry.isDirectory())found.push(...await htmlFiles(item));
+  else if(entry.name.endsWith('.html'))found.push(item);
+ }
+ return found;
+}
+
+function aplicarChromeV2(html){
+ html=html.replace(/<a class="skip-link"[\s\S]*?<\/a>\s*/g,'');
+ html=html.replace(/<section class="cx-sub"[\s\S]*?<\/section>\s*/g,'');
+ html=html.replace(/<header\b[^>]*data-site-header[^>]*>[\s\S]*?<\/header>/,bundleHeader.trim());
+ if(!html.includes('data-site-header'))html=html.replace(/<body[^>]*>/,m=>m+'\n'+bundleHeader.trim());
+ html=html.replace(/<header class="cx-nav"[\s\S]*?<\/header>/,m=>m+'\n'+subnav);
+ html=html.replace(/<footer\b[^>]*data-site-footer[^>]*>[\s\S]*?<\/footer>/,bundleFooter.trim());
+ if(!html.includes('data-site-footer'))html=html.replace(/<\/body>/,bundleFooter+'\n</body>');
+ html=html.replace(/<(?:link|script)\b[^>]*(?:comun\/(?:chrome|componentes)\.(?:css|js)|buscador\/(?:buscador(?:\.min)?\.(?:css|js)|indice\.json))[^>]*>(?:<\/script>)?\s*/g,'');
+ html=html.replace(/<link rel="stylesheet" href="[^\"]*(?:portada\/)?portada\.css">/g,'<link rel="stylesheet" href="/assets/portal-v2-portada.css">');
+ html=html.replace(/<script defer src="[^\"]*(?:portada\/)?portada\.js"><\/script>/g,'<script defer src="/assets/portal-v2-portada.js"></script>');
+ html=html.replace(/<link rel="stylesheet" href="[^\"]*(?:temas\/)?temas\.css">/g,'<link rel="stylesheet" href="/temas/temas.css">');
+ if(!html.includes('/assets/chrome-v2/chrome.css'))html=html.replace('</head>','<link rel="stylesheet" href="/assets/chrome-v2/chrome.css">\n<script defer src="/assets/chrome-v2/chrome.js" data-indice="https://cochid.cl/buscar/indice.json" data-raiz="https://cochid.cl/"></script>\n</head>');
+ if(!html.includes('type="application/rss+xml"'))html=html.replace('</head>','<link rel="alternate" type="application/rss+xml" title="Blog de Compañía Chilena de Inteligencia de Datos" href="https://cochid.cl/blog/feed.xml">\n</head>');
+ return sinComentariosHtml(html).replace(/\b(?:COCHID|Cochid)\b/g,'Compañía Chilena de Inteligencia de Datos').replace(/\b(?:overline|eyebrow)\b/g,'meta');
+}
+for(const path of await htmlFiles(out))await writeFile(path,aplicarChromeV2(await readFile(path,'utf8')));
+
 /* Se carga desde el principio para que el build falle si el parcial no existe,
    aunque las migas se incorporen al generar las páginas editoriales. */
 if(!migasTemplate.includes('{{MIGAS}}'))throw new Error('partials/migas.html no declara {{MIGAS}}');
 
 console.log(`Blog: ${entradas.length} entradas, ${notasOmitidas.length} notas internas omitidas:`);
 for(const nota of notasOmitidas)console.log(`  - ${nota.archivo} (${nota.lugar}, ${nota.tipo}): ${nota.resumen}`);
-console.log(`Novedades: ${novedades.length} ítems (${novedades.filter(item=>item.origen==='blog').length} del blog, ${releasesNovedad.aceptadas.length} de releases); releases COCHID omitidas: ${releasesNovedad.omitidas.length}.`);
+console.log(`Novedades: ${novedades.length} ítems (${novedades.filter(item=>item.origen==='blog').length} del blog, ${releasesNovedad.aceptadas.length} de releases); releases Compañía Chilena de Inteligencia de Datos omitidas: ${releasesNovedad.omitidas.length}.`);
 for(const omitida of releasesNovedad.omitidas)console.log(`  - ${omitida.release}: ${omitida.motivo}`);
 console.log(`Sitio estático: 9 páginas editoriales, ${days.length} días y ${months.length} promedios del especial solar; ${datos.semanal.semana.length} semanas y ${datos.cumpleanos.fecha.length} fechas del especial de concepciones; parciales y registro vendorizado aplicados en dist/.`);

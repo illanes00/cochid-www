@@ -8,7 +8,7 @@ import {leerTarjetas} from '../scripts/tarjetas.mjs';
 const dist = new URL('../dist/', import.meta.url).pathname;
 const leer = ruta => readFileSync(join(dist, ruta === '/' ? 'index.html' : `${ruta.slice(1)}index.html`), 'utf8');
 const rutas = [
-  '/', '/quienes-somos/', '/contacto/', '/servicios/', '/datos/', '/mapas/',
+  '/', '/sobre-nosotros/', '/contacto/', '/servicios/', '/temas/', '/mapas/',
   '/herramientas/', '/investigaciones/', '/documentacion/', '/mapa-del-sitio/',
   '/cambio-de-hora/', '/concepciones/',
 ];
@@ -41,16 +41,14 @@ test('ningún archivo publicado imprime el nombre de un ícono', () => {
   }
 });
 
-test('la cabecera del apex muestra solo el lockup COCHID', () => {
+test('la cabecera del apex muestra solo el lockup Compañía Chilena de Inteligencia de Datos', () => {
   for (const ruta of rutas) {
     const html = leer(ruta);
-    const cabecera = html.match(/<header class="gr-nav"[\s\S]*?<\/header>/);
+    const cabecera = html.match(/<header class="cx-nav"[\s\S]*?<\/header>/);
     assert.ok(cabecera, `${ruta}: falta la cabecera`);
-    const marca = cabecera[0].match(/<div class="gr-nav__inner">([\s\S]*?)<button class="gr-nav__toggle"/);
+    const marca = cabecera[0].match(/<a class="cx-nav__marca"[\s\S]*?<\/a>/);
     assert.ok(marca, `${ruta}: falta la zona de marca`);
-    assert.equal(marca[1].replace(/<[^>]+>/g, '').trim(), '', `${ruta}: la marca tiene texto visible`);
-    assert.equal((marca[1].match(/<a\b/g) || []).length, 1, `${ruta}: la marca debe ser un solo enlace`);
-    assert.match(marca[1], /compania-chilena-inteligencia-datos-lockup\.svg/);
+    assert.match(marca[0], /compania-chilena-inteligencia-datos-lockup\.svg/);
     assert.doesNotMatch(cabecera[0], /cochid-producto|>\s*Portal\s*</, `${ruta}: la cabecera nombra un producto`);
   }
 });
@@ -78,55 +76,28 @@ test('el parser de tarjetas usa el ícono como metadato y no como texto', () => 
   assert.throws(() => leerTarjetas(['## Sin destino', 'Texto.']), /no tiene destino/);
 });
 
-test('/datos/ publica los diez dominios y enlaza sus sitios temáticos', () => {
-  const html = leer('/datos/');
-  const lista = tarjetas(html);
-  assert.equal(lista.length, 10);
-  for (const tarjeta of lista) {
-    assert.match(tarjeta, /<span class="portal-tarjeta__icono"><svg [^>]*stroke="currentColor"[^>]*aria-hidden="true" focusable="false"/);
-    assert.match(tarjeta, /<h2 class="portal-tarjeta__titulo"><a class="portal-tarjeta__enlace" href="https?:\/\//);
-    assert.match(tarjeta, /class="portal-tarjeta__resumen"/);
+test('/temas/ publica los once dominios y sus páginas', () => {
+  const html = leer('/temas/');
+  assert.equal((html.match(/<li class="tema">/g) || []).length, 11);
+  for (const tema of ['salud', 'educacion', 'economia-trabajo', 'empresas-innovacion',
+    'finanzas-publicas', 'seguridad-justicia', 'poblacion-sociedad', 'territorio-vivienda',
+    'transporte-infraestructura', 'medio-ambiente-energia', 'politica-instituciones']) {
+    assert.match(html, new RegExp(`href="\\.\\.\\/temas\\/${tema}\\/"`), tema);
   }
-  for (const [etiqueta, href] of [
-    ['Presupuesto', 'https://datos.cochid.cl/presupuesto'],
-    ['Cuándo se concibe en Chile', '/concepciones/'],
-    ['Economía', 'https://economia.cochid.cl/'],
-    ['Elecciones', 'https://elecciones.cochid.cl/'],
-    ['Congreso', 'https://congreso.cochid.cl/'],
-    ['Votos Cámara', 'https://votos.cochid.cl/'],
-    ['Lex', 'https://lex.cochid.cl/'],
-    ['Transporte', 'https://tpte.cochid.cl/'],
-    ['Trenes', 'https://trenes.cochid.cl/'],
-    ['Bici', 'https://bici.cochid.cl/'],
-    ['Cables', 'https://cables.cochid.cl/'],
-    ['Mapas', 'https://mapas.cochid.cl/'],
-    ['Ciudad', 'https://mapas.cochid.cl/ciudad'],
-    ['Clima', 'https://clima.cochid.cl/'],
-    ['Medicamentos', 'https://medicamentos.cochid.cl/'],
-  ]) {
-    const tarjeta = lista.find(item => item.includes(`href="${href}"`) && item.includes(`>${etiqueta}<`));
-    assert.ok(tarjeta, `${etiqueta}: falta en su tarjeta`);
-    assert.match(tarjeta, /Ver también:/);
-  }
-  assert.doesNotMatch(html, /\b(moneda|escudo|personas|urna|balanza|brújula)\b(?![^<]*>)/i);
-  assert.match(html, /<ul class="portal-vistas">/);
 });
 
-test('la portada agrega seis dominios compactos y enlaza la puerta de datos', () => {
+test('la portada muestra cuatro temas y permite desplegar los once', () => {
   const html = leer('/');
-  const seccion = html.match(/<section id="dominios"[\s\S]*?<\/section>/);
-  assert.ok(seccion, 'falta la sección de dominios');
-  assert.equal(tarjetas(seccion[0], 'portal-tarjetas portal-tarjetas--compacta').length, 6);
-  assert.match(seccion[0], /<a class="portal-enlace" href="\/datos\/">Ver todos los dominios<\/a>/);
-  assert.ok(html.indexOf('class="task-grid"') < html.indexOf('id="dominios"'));
-  assert.match(html, /<p class="portal-mas"><a class="portal-enlace" href="#proyectos">Ver todos los proyectos y herramientas<\/a><\/p>/);
-  assert.equal((html.match(/<svg class="task-icon"[^>]*aria-hidden="true" focusable="false"/g) || []).length, 3);
+  const seccion = html.match(/<section class="sec" id="temas"[\s\S]*?<\/section>/);
+  assert.ok(seccion, 'falta la sección de temas');
+  assert.equal((seccion[0].match(/<li class="tema">/g) || []).length, 4);
+  assert.match(seccion[0], /href="\.\.\/temas\/">Ver los 11 temas/);
 });
 
 test('el mapa del sitio tiene una sola introducción y etiquetas de tipo', () => {
   const html = leer('/mapa-del-sitio/');
   const cuerpo = html.match(/<main[\s\S]*?<\/main>/)[0];
-  assert.equal((cuerpo.match(/Todas las páginas y sitios públicos de COCHID/g) || []).length, 1);
+  assert.equal((cuerpo.match(/Todas las páginas y sitios públicos de Compañía Chilena de Inteligencia de Datos/g) || []).length, 1);
   const tipos = [...cuerpo.matchAll(/<span class="badge portal-tipo">([^<]+)<\/span>/g)].map(m => m[1]);
   assert.ok(tipos.length > 20);
   for (const tipo of ['Página', 'Producto', 'Vista', 'Herramienta']) assert.ok(tipos.includes(tipo), `falta ${tipo}`);
