@@ -8,6 +8,7 @@ DIST = ROOT / "dist"
 ROUTES = (
     "quienes-somos", "contacto", "servicios", "datos", "mapas",
     "herramientas", "investigaciones", "documentacion", "mapa-del-sitio",
+    "asesoria", "asesoria/gracias",
 )
 
 
@@ -37,7 +38,7 @@ class PortalPagesContractTests(unittest.TestCase):
         services = self.page("servicios")
         self.assertIn("$5.000 IVA incluido", services)
         self.assertIn("$25.000 IVA incluido", services)
-        self.assertNotIn('href="/asesoria/', services)
+        self.assertIn('href="/asesoria/?tipo=dato-a-medida"', services)
 
         maps = self.page("mapas")
         self.assertIn("https://mapas.cochid.cl/ciudad", maps)

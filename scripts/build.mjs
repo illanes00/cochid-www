@@ -12,7 +12,7 @@ const root=new URL('../',import.meta.url), out=new URL('../dist/',import.meta.ur
 const rutasPortalPublicadas=new Set([
  '/', '/cambio-de-hora/', '/concepciones/', '/contacto/', '/datos/',
  '/documentacion/', '/herramientas/', '/investigaciones/', '/mapa-del-sitio/',
- '/mapas/', '/quienes-somos/', '/servicios/', '/blog/', '/novedades/'
+ '/mapas/', '/quienes-somos/', '/servicios/', '/asesoria/', '/blog/', '/novedades/'
 ]);
 const [kitHead,headerTemplate,footerTemplate,migasTemplate,paginaTemplate,articuloTemplate]=await Promise.all(
  ['head','header','footer','migas','pagina','articulo'].map(nombre=>readFile(new URL(`partials/${nombre}.html`,root),'utf8'))
@@ -98,6 +98,24 @@ function arbolDestinos(){
 
 const filtroMapa='<div class="portal-filtro"><label for="filtro-destinos">Filtrar el mapa</label><input id="filtro-destinos" type="search" autocomplete="off" placeholder="Por ejemplo, presupuesto o mapas"></div>';
 const scriptMapa='<script>document.querySelector("#filtro-destinos")?.addEventListener("input",event=>{const consulta=event.target.value.toLocaleLowerCase("es").trim();document.querySelectorAll("[data-map-item]").forEach(item=>{item.hidden=consulta!==""&&!item.textContent.toLocaleLowerCase("es").includes(consulta)})})</script>';
+const formularioAsesoria=`<form class="portal-formulario" method="post" action="/api/asesoria" accept-charset="utf-8" data-asesoria-form>
+<input type="hidden" name="canal" value="cochid">
+<div class="portal-formulario__trampa" aria-hidden="true"><label for="asesoria-sitio-web">Sitio web</label><input id="asesoria-sitio-web" name="sitio_web" type="text" tabindex="-1" autocomplete="off"></div>
+<label>Nombre <span aria-hidden="true">*</span><input name="nombre" type="text" autocomplete="name" maxlength="255" required></label>
+<label>Correo electrónico <span aria-hidden="true">*</span><input name="email" type="email" autocomplete="email" maxlength="255" required><small>Te responderemos a esta dirección.</small></label>
+<label>Organización <span class="portal-opcional">opcional</span><input name="organizacion" type="text" autocomplete="organization" maxlength="255"></label>
+<label>Teléfono <span class="portal-opcional">opcional</span><input name="telefono" type="tel" autocomplete="tel" maxlength="40"></label>
+<label>Qué necesitas <select name="tipo_pedido" required><option value="dato-a-medida">Un dato a medida</option><option value="mas-cuota">Más cuota de API</option><option value="descarga-masiva">Una descarga completa</option><option value="informe">Un informe a pedido</option><option value="otro">Otra cosa</option></select></label>
+<input type="hidden" name="servicio" value="datos-a-medida">
+<label>Sobre qué datos <span class="portal-opcional">opcional</span><textarea name="conjunto" rows="3" maxlength="255" placeholder="Tema, conjunto, territorio y período"></textarea><small>Por ejemplo: denuncias por comuna, Región de Valparaíso, 2015 a 2024.</small></label>
+<label>En qué formato <span class="portal-opcional">opcional</span><select name="formato"><option value="">No lo sé todavía</option><option value="csv-excel">Archivo CSV o Excel</option><option value="api">Acceso por API</option><option value="imagen">Gráfico o imagen</option><option value="informe">Informe escrito</option></select></label>
+<label>Para cuándo <span class="portal-opcional">opcional</span><input name="para_cuando" type="text" maxlength="120" placeholder="Una fecha o un mes aproximado"></label>
+<label>Cómo lo vas a usar <span class="portal-opcional">opcional</span><textarea name="uso" rows="2" maxlength="500" placeholder="Una nota, un estudio, un diagnóstico o una aplicación"></textarea></label>
+<label>Mensaje <span aria-hidden="true">*</span><textarea name="mensaje" rows="6" maxlength="5000" required></textarea></label>
+<button class="btn-primary" type="submit">Enviar solicitud</button>
+<p class="portal-formulario__privacidad">Usamos estos datos solo para responderte. Más detalle en la <a href="https://innovacionsantiago.cl/legal/privacidad/">política de privacidad</a>.</p>
+</form>`;
+const scriptAsesoria='<script>(()=>{const f=document.querySelector("[data-asesoria-form]");if(!f)return;const t=document.createElement("input");t.type="hidden";t.name="tiempo_carga";t.value=String(Math.floor(Date.now()/1000));f.append(t);const q=new URLSearchParams(location.search);for(const [campo,parametro] of [["tipo_pedido","tipo"],["conjunto","conjunto"],["dominio","dominio"]]){const valor=q.get(parametro);const control=f.elements.namedItem(campo);if(valor&&control)control.value=valor}})()</script>';
 
 /* Tarjetas de los Markdown editoriales. Los dominios cruzan su texto con el
    contrato de destinos.json; las demás toman el ícono del registro o de su
@@ -138,6 +156,10 @@ async function paginaEditorial(nombre){
   script=scriptMapa;
  }
  if(meta.ruta==='/datos/')extras['@@VISTAS_DOMINIOS@@']=vistasDominios(await dominiosPublicados());
+ if(meta.ruta==='/asesoria/'){
+  extras['@@FORMULARIO_ASESORIA@@']=formularioAsesoria;
+  script=scriptAsesoria;
+ }
  const cuerpo=markdownAHtml(depurarMarkdown(contenido,meta.ruta),extras,{bloque:bloqueTarjetas});
  const migas=reemplazar(migasTemplate,{MIGAS:`<li><a href="/">Inicio</a></li><li aria-current="page">${escapar(meta.titulo)}</li>`},'migas');
  const pagina=reemplazar(paginaTemplate,{
@@ -209,7 +231,7 @@ if(!home.includes('<!--LO_NUEVO-->'))throw new Error('index.html no tiene el mar
 home=home.replace('<!--LO_NUEVO-->',loNuevo(novedades));
 home=sinComentariosHtml(home);
 await writeFile(new URL('index.html',out),home);
-for(const nombre of ['quienes-somos','contacto','servicios','datos','mapas','herramientas','investigaciones','documentacion','mapa-del-sitio']){
+for(const nombre of ['quienes-somos','contacto','servicios','datos','mapas','herramientas','investigaciones','documentacion','mapa-del-sitio','asesoria','asesoria-gracias']){
  await paginaEditorial(nombre);
 }
 await publicarBlog();

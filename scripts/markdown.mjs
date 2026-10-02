@@ -17,15 +17,6 @@ export function leerFrontmatter(fuente) {
   return {meta, markdown: coincidencia[2]};
 }
 
-export function reescribirAsesoria(texto) {
-  return texto.replace(/\/asesoria\/(?:\?([^\s)"']*))?/g, (_, consulta = '') => {
-    const tipo = new URLSearchParams(consulta).get('tipo');
-    return tipo
-      ? `https://innovacionsantiago.cl/contacto?servicio=${encodeURIComponent(tipo)}`
-      : 'https://innovacionsantiago.cl/contacto';
-  });
-}
-
 /* Comentarios HTML y marcas [[VERIFICAR: …]] son notas de redacción. Esta
    función solo las enumera, para que el build informe qué fragmento omitió;
    el borrado lo hace depurarMarkdown con las mismas expresiones. */
@@ -50,7 +41,7 @@ export function depurarMarkdown(markdown, ruta) {
     .replace(/<!--([\s\S]*?)-->/g, '')
     .replace(/\s*\[\[VERIFICAR:[\s\S]*?\]\]/g, '')
     .replace(/\n{3,}/g, '\n\n');
-  return reescribirAsesoria(limpio).trim();
+  return limpio.trim();
 }
 
 const slug = texto => texto.normalize('NFD').replace(/[\u0300-\u036f]/g, '')
