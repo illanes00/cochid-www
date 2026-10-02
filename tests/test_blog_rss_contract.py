@@ -73,8 +73,9 @@ class BlogRssContractTests(unittest.TestCase):
     def test_sitemap_is_well_formed_and_lists_blog_and_news(self):
         raiz = ET.parse(DIST / "sitemap.xml").getroot()
         urls = {url.findtext(f"{SITEMAP}loc"): url.findtext(f"{SITEMAP}lastmod") for url in raiz}
-        for ruta in ("/blog/", "/blog/feed.xml", "/novedades/"):
+        for ruta in ("/blog/", "/novedades/"):
             self.assertIn(f"https://cochid.cl{ruta}", urls)
+        self.assertNotIn("https://cochid.cl/blog/feed.xml", urls)
         for meta in entradas():
             self.assertEqual(meta["fecha"], urls[f"https://cochid.cl{meta['ruta']}"])
 

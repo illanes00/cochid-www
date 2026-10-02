@@ -117,9 +117,10 @@ test('Blog y Novedades están en la columna Portal del pie y en el mapa del siti
   assert.match(mapa, /<a href="\/novedades\/">Novedades<\/a>/);
 });
 
-test('sitemap con blog, entradas, feed y novedades, y lastmod de cada entrada', () => {
+test('sitemap con blog, entradas y novedades, y lastmod de cada entrada', () => {
   const sitemap = leer('sitemap.xml');
-  for (const ruta of ['/blog/', '/blog/feed.xml', '/novedades/']) assert.match(sitemap, new RegExp(`<loc>https://cochid\\.cl${ruta}</loc>`));
+  for (const ruta of ['/blog/', '/novedades/']) assert.match(sitemap, new RegExp(`<loc>https://cochid\\.cl${ruta}</loc>`));
+  assert.doesNotMatch(sitemap, /blog\/feed\.xml/);
   for (const meta of entradas) {
     assert.match(sitemap, new RegExp(`<loc>https://cochid\\.cl${meta.ruta}</loc><lastmod>${meta.fecha}</lastmod>`));
   }
@@ -127,6 +128,27 @@ test('sitemap con blog, entradas, feed y novedades, y lastmod de cada entrada', 
   assert.match(sitemap, new RegExp(`<loc>https://cochid\\.cl/blog/</loc><lastmod>${reciente}</lastmod>`));
   /* La copia versionada en la raíz es la misma que publica el build. */
   assert.equal(readFileSync(join(raiz, 'sitemap.xml'), 'utf8'), sitemap);
+});
+
+test('robots anuncia ambos sitemaps y el índice enumera sólo sitemaps absolutos', () => {
+  const robots = leer('robots.txt');
+  assert.match(robots, /Disallow: \/api\//);
+  assert.match(robots, /Sitemap: https:\/\/cochid\.cl\/sitemap\.xml/);
+  assert.match(robots, /Sitemap: https:\/\/cochid\.cl\/sitemap-hosts\.xml/);
+  const index = leer('sitemap-hosts.xml');
+  assert.match(index, /<sitemapindex xmlns="http:\/\/www\.sitemaps\.org\/schemas\/sitemap\/0\.9">/);
+  const locations = [...index.matchAll(/<loc>([^<]+)<\/loc>/g)].map(match => match[1]);
+  assert.ok(locations.length >= 10);
+  assert.ok(locations.every(location => /^https:\/\/[^/]+\/sitemap\.xml$/.test(location)));
+  assert.equal(new Set(locations).size, locations.length);
+});
+
+test('publica una página 404 propia con kit, logo y enlaces de recuperación', () => {
+  const page404 = leer('404.html');
+  assert.match(page404, /<meta name="robots" content="noindex">/);
+  assert.match(page404, /kit\.innovacionsantiago\.cl\/v10\//);
+  assert.match(page404, /assets\/namebrands\/compania-chilena-inteligencia-datos-lockup\.svg/);
+  for (const href of ['href="/"', 'href="/datos/"', 'href="/mapas/"', 'href="/contacto/"']) assert.ok(page404.includes(href));
 });
 
 test('anuncia el RSS en portada, blog, entradas y novedades', () => {

@@ -1,5 +1,7 @@
 # Portal público COCHID
 User-agent: *
 Allow: /
+Disallow: /api/
 
 Sitemap: https://cochid.cl/sitemap.xml
+Sitemap: https://cochid.cl/sitemap-hosts.xml

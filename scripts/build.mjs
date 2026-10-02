@@ -14,8 +14,8 @@ const rutasPortalPublicadas=new Set([
  '/documentacion/', '/herramientas/', '/investigaciones/', '/mapa-del-sitio/',
  '/mapas/', '/quienes-somos/', '/servicios/', '/asesoria/', '/blog/', '/novedades/'
 ]);
-const [kitHead,headerTemplate,footerTemplate,migasTemplate,paginaTemplate,articuloTemplate]=await Promise.all(
- ['head','header','footer','migas','pagina','articulo'].map(nombre=>readFile(new URL(`partials/${nombre}.html`,root),'utf8'))
+const [kitHead,headerTemplate,footerTemplate,migasTemplate,paginaTemplate,articuloTemplate,error404Template]=await Promise.all(
+ ['head','header','footer','migas','pagina','articulo','error404'].map(nombre=>readFile(new URL(`partials/${nombre}.html`,root),'utf8'))
 );
 
 const escapar=valor=>String(valor).replaceAll('&','&amp;').replaceAll('<','&lt;').replaceAll('>','&gt;').replaceAll('"','&quot;');
@@ -232,6 +232,9 @@ if(!home.includes('<!--LO_NUEVO-->'))throw new Error('index.html no tiene el mar
 home=home.replace('<!--LO_NUEVO-->',loNuevo(novedades));
 home=sinComentariosHtml(home);
 await writeFile(new URL('index.html',out),home);
+await writeFile(new URL('404.html',out),reemplazar(error404Template,{
+ KIT_HEAD:kitHead,HEADER:cabecera(''),FOOTER:piePortal()
+},'404'));
 for(const nombre of ['quienes-somos','contacto','servicios','datos','mapas','herramientas','investigaciones','documentacion','mapa-del-sitio','asesoria','asesoria-gracias']){
  await paginaEditorial(nombre);
 }
@@ -281,11 +284,11 @@ const fechas={
 const urlsSitemap=[
  ...[...rutasPortalPublicadas].map(ruta=>[ruta,fechas[ruta]||'2026-10-01']),
  ...entradas.map(entrada=>[entrada.ruta,entrada.fecha]),
- ['/blog/feed.xml',entradas[0].fecha]
 ];
 const sitemap=`<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${urlsSitemap.map(([ruta,fecha])=>`  <url><loc>https://cochid.cl${ruta}</loc><lastmod>${fecha}</lastmod></url>`).join('\n')}\n</urlset>\n`;
 await writeFile(new URL('sitemap.xml',out),sitemap);
-const sitemapHosts=`<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${destinosMapa().map(destino=>`  <url><loc>${escapar(hrefDestino(destino))}</loc></url>`).join('\n')}\n</urlset>\n`;
+const hostsSitemap=['bici.cochid.cl','cables.cochid.cl','clima.cochid.cl','cochid.cl','congreso.cochid.cl','datos.cochid.cl','economia.cochid.cl','elecciones.cochid.cl','graphs.cochid.cl','lex.cochid.cl','mapas.cochid.cl','medicamentos.cochid.cl','mundial.cochid.cl','prosa.medicamentos.cochid.cl','taller.cochid.cl','tpte.cochid.cl','votos.cochid.cl'];
+const sitemapHosts=`<?xml version="1.0" encoding="UTF-8"?>\n<sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${hostsSitemap.map(host=>`  <sitemap><loc>https://${host}/sitemap.xml</loc></sitemap>`).join('\n')}\n</sitemapindex>\n`;
 await writeFile(new URL('sitemap-hosts.xml',out),sitemapHosts);
 
 /* Se carga desde el principio para que el build falle si el parcial no existe,
