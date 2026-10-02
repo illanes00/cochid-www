@@ -1,6 +1,7 @@
 """Static navigation contract; no HTTP or authenticated-journey assertion."""
 from html.parser import HTMLParser
 from pathlib import Path
+import re
 import unittest
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -55,6 +56,33 @@ class ProjectsContract(unittest.TestCase):
         mundial = self.html.split('href="https://mundial.cochid.cl/"', 1)[1].split("</a>", 1)[0]
         self.assertIn("Proyecto terminado el 19 de julio de 2026", mundial)
 
+    def test_each_group_lists_the_approved_destinations_in_order(self):
+        expected = {
+            "proyectos-datos": [
+                "https://datos.cochid.cl/", "https://datos.cochid.cl/presupuesto",
+                "https://economia.cochid.cl/", "https://elecciones.cochid.cl/",
+                "https://congreso.cochid.cl/", "https://votos.cochid.cl/", "https://lex.cochid.cl/",
+            ],
+            "proyectos-territorio": [
+                "https://mapas.cochid.cl/", "https://mapas.cochid.cl/ciudad",
+                "https://trenes.cochid.cl/", "https://tpte.cochid.cl/",
+                "https://bici.cochid.cl/", "https://cables.cochid.cl/", "https://clima.cochid.cl/",
+            ],
+            "proyectos-investigaciones": [
+                "https://medicamentos.cochid.cl/", "/concepciones/", "/cambio-de-hora/",
+            ],
+            "proyectos-herramientas": [
+                "https://graphs.cochid.cl/", "https://taller.cochid.cl/",
+                "https://prosa.medicamentos.cochid.cl/", "https://scribe.cochid.cl/",
+            ],
+            "proyectos-especiales": ["https://mundial.cochid.cl/"],
+        }
+        for group_id, hrefs in expected.items():
+            with self.subTest(group=group_id):
+                fragment = self.html.split(f'id="{group_id}"', 1)[1].split("</details>", 1)[0]
+                actual = re.findall(r'<a href="([^"]+)" class="tema-card', fragment)
+                self.assertEqual(actual, hrefs)
+
     def test_personal_thesis_is_not_listed_as_a_cochid_project(self):
         self.assertNotIn("https://thesis.cochid.cl/", self.links.hrefs)
         self.assertNotIn("thesis.cochid.cl", self.html)
@@ -71,7 +99,7 @@ class ProjectsContract(unittest.TestCase):
                 self.assertNotIn("thesis.cochid.cl", ruta.read_text(encoding="utf-8"))
 
     def test_published_project_destinations_are_reachable_from_home_source(self):
-        for host in ("datos", "economia", "congreso", "lex", "elecciones", "mundial", "mapas", "trenes", "tpte", "bici", "cables", "clima", "taller", "medicamentos", "graphs", "scribe"):
+        for host in ("datos", "economia", "congreso", "votos", "lex", "elecciones", "mundial", "mapas", "trenes", "tpte", "bici", "cables", "clima", "taller", "medicamentos", "graphs", "scribe"):
             self.assertIn(f"https://{host}.cochid.cl/", self.links.hrefs)
         self.assertIn("https://prosa.medicamentos.cochid.cl/", self.links.hrefs)
         for path in ("/cambio-de-hora/", "/concepciones/"):

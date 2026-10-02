@@ -18,7 +18,19 @@ const archivos = directorio => readdirSync(directorio).flatMap(nombre => {
 });
 const tarjetas = (html, clase = 'portal-tarjetas') => {
   const inicio = html.indexOf(`<ul class="${clase}">`);
-  return inicio === -1 ? [] : html.slice(inicio).split('<li class="portal-tarjeta">').slice(1);
+  if (inicio === -1) return [];
+  const etiquetas = html.slice(inicio).matchAll(/<ul\b[^>]*>|<\/ul>/g);
+  let profundidad = 0;
+  let fin = -1;
+  for (const etiqueta of etiquetas) {
+    profundidad += etiqueta[0].startsWith('</') ? -1 : 1;
+    if (profundidad === 0) {
+      fin = inicio + etiqueta.index + etiqueta[0].length;
+      break;
+    }
+  }
+  assert.notEqual(fin, -1, 'lista de tarjetas sin cierre');
+  return html.slice(inicio, fin).split('<li class="portal-tarjeta">').slice(1);
 };
 
 test('ningún archivo publicado imprime el nombre de un ícono', () => {
@@ -81,12 +93,20 @@ test('/datos/ publica los diez dominios y enlaza sus sitios temáticos', () => {
     ['Economía', 'https://economia.cochid.cl/'],
     ['Elecciones', 'https://elecciones.cochid.cl/'],
     ['Congreso', 'https://congreso.cochid.cl/'],
+    ['Votos Cámara', 'https://votos.cochid.cl/'],
     ['Lex', 'https://lex.cochid.cl/'],
     ['Transporte', 'https://tpte.cochid.cl/'],
+    ['Trenes', 'https://trenes.cochid.cl/'],
+    ['Bici', 'https://bici.cochid.cl/'],
+    ['Cables', 'https://cables.cochid.cl/'],
     ['Mapas', 'https://mapas.cochid.cl/'],
+    ['Ciudad', 'https://mapas.cochid.cl/ciudad'],
+    ['Clima', 'https://clima.cochid.cl/'],
     ['Medicamentos', 'https://medicamentos.cochid.cl/'],
   ]) {
-    assert.match(html, new RegExp(`Ver también:[\\s\\S]{0,500}href="${href.replaceAll('/', '\\/')}"[^>]*>${etiqueta}<`));
+    const tarjeta = lista.find(item => item.includes(`href="${href}"`) && item.includes(`>${etiqueta}<`));
+    assert.ok(tarjeta, `${etiqueta}: falta en su tarjeta`);
+    assert.match(tarjeta, /Ver también:/);
   }
   assert.doesNotMatch(html, /\b(moneda|escudo|personas|urna|balanza|brújula)\b(?![^<]*>)/i);
   assert.match(html, /<ul class="portal-vistas">/);

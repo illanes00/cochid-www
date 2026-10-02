@@ -5,7 +5,7 @@ const contrato = {
   "fuentes": {
     "registro_sha": "dd408498bb03d12583e6111ee4fa0b8567759cd53fbb3388cb04a4cb57c13025",
     "portfolio_sha": "b746b87f014309d9617973e164de83079036cda94dfb8578b60c4c5c8fd15f5f",
-    "presentacion_sha": "213d3f1d44fdbb72f6825c51b920c2cc337bac32716a4901763d25af8584c8c0"
+    "presentacion_sha": "4e60340d1d0afe33f3bdd3751a976376f9b16bd451f9d7c4e4118bc9f85e1683"
   },
   "grupos": [
     {
@@ -122,7 +122,8 @@ const contrato = {
       "destino": "cochid.datos.dominio.elecciones",
       "sitios": [
         "cochid.elecciones",
-        "cochid.congreso"
+        "cochid.congreso",
+        "cochid.votos"
       ],
       "orden": 5
     },
@@ -271,7 +272,7 @@ const contrato = {
       "grupo": "territorio",
       "dominio": "transporte-infraestructura",
       "padre": null,
-      "orden": 3,
+      "orden": 6,
       "icono": "network",
       "site_id": "site.cochid.cables",
       "node_id": "view.cochid.cables",
@@ -469,41 +470,6 @@ const contrato = {
       "sitemap": {
         "frecuencia": "monthly",
         "prioridad": 0.8,
-        "fuente": "estatica"
-      },
-      "robots": "indexable",
-      "marca": "cochid",
-      "titular": "cochid",
-      "alias_de": null,
-      "reemplazado_por": null,
-      "fragmento_es_ruta": false,
-      "relaciones": [],
-      "hermanos": []
-    },
-    {
-      "id": "cochid.apex.investigaciones",
-      "host": "cochid.cl",
-      "ruta": "/investigaciones/",
-      "etiqueta": "Investigaciones",
-      "resumen": "Índice de estudios y publicaciones de investigación.",
-      "clase": "pagina",
-      "grupo": "investigaciones",
-      "padre": "cochid.apex",
-      "orden": 1,
-      "icono": "book",
-      "site_id": "site.cochid",
-      "node_id": "brand.cochid",
-      "estado": "planificado",
-      "visible": {
-        "cabecera": true,
-        "pie": true,
-        "mapa_del_sitio": true,
-        "sitemap": true,
-        "paleta": true
-      },
-      "sitemap": {
-        "frecuencia": "monthly",
-        "prioridad": 0.9,
         "fuente": "estatica"
       },
       "robots": "indexable",
@@ -972,6 +938,41 @@ const contrato = {
       "hermanos": []
     },
     {
+      "id": "cochid.apex.investigaciones",
+      "host": "cochid.cl",
+      "ruta": "/investigaciones/",
+      "etiqueta": "Investigaciones",
+      "resumen": "Índice de estudios y publicaciones de investigación.",
+      "clase": "pagina",
+      "grupo": "investigaciones",
+      "padre": "cochid.apex",
+      "orden": 90,
+      "icono": "book",
+      "site_id": "site.cochid",
+      "node_id": "brand.cochid",
+      "estado": "planificado",
+      "visible": {
+        "cabecera": true,
+        "pie": true,
+        "mapa_del_sitio": true,
+        "sitemap": true,
+        "paleta": true
+      },
+      "sitemap": {
+        "frecuencia": "monthly",
+        "prioridad": 0.9,
+        "fuente": "estatica"
+      },
+      "robots": "indexable",
+      "marca": "cochid",
+      "titular": "cochid",
+      "alias_de": null,
+      "reemplazado_por": null,
+      "fragmento_es_ruta": false,
+      "relaciones": [],
+      "hermanos": []
+    },
+    {
       "id": "cochid.congreso",
       "host": "congreso.cochid.cl",
       "ruta": "/",
@@ -981,7 +982,7 @@ const contrato = {
       "grupo": "datos",
       "dominio": "elecciones-congreso",
       "padre": null,
-      "orden": 12,
+      "orden": 5,
       "icono": "building",
       "site_id": "site.cochid.congreso",
       "node_id": "product.cochid.congreso",
@@ -1075,6 +1076,42 @@ const contrato = {
         "frecuencia": "daily",
         "prioridad": 0.9,
         "fuente": "dinamica:/api/catalog/"
+      },
+      "robots": "indexable",
+      "estado": "vivo",
+      "marca": "cochid",
+      "titular": "cochid",
+      "alias_de": null,
+      "reemplazado_por": null,
+      "fragmento_es_ruta": false,
+      "relaciones": [],
+      "hermanos": []
+    },
+    {
+      "id": "cochid.datos.presupuesto",
+      "host": "datos.cochid.cl",
+      "ruta": "/presupuesto",
+      "etiqueta": "Presupuesto",
+      "resumen": "Visor de presupuesto público y ejecución.",
+      "clase": "herramienta",
+      "grupo": "datos",
+      "dominio": "presupuesto-gasto-publico",
+      "padre": "cochid.datos",
+      "orden": 2,
+      "icono": "moneda",
+      "site_id": "site.cochid.datos",
+      "node_id": "product.cochid.datos",
+      "visible": {
+        "cabecera": true,
+        "pie": true,
+        "mapa_del_sitio": true,
+        "sitemap": true,
+        "paleta": true
+      },
+      "sitemap": {
+        "frecuencia": "daily",
+        "prioridad": 0.9,
+        "fuente": "estatica"
       },
       "robots": "indexable",
       "estado": "vivo",
@@ -1642,42 +1679,6 @@ const contrato = {
         "fuente": "estatica"
       },
       "robots": "indexable",
-      "marca": "cochid",
-      "titular": "cochid",
-      "alias_de": null,
-      "reemplazado_por": null,
-      "fragmento_es_ruta": false,
-      "relaciones": [],
-      "hermanos": []
-    },
-    {
-      "id": "cochid.datos.presupuesto",
-      "host": "datos.cochid.cl",
-      "ruta": "/presupuesto",
-      "etiqueta": "Presupuesto",
-      "resumen": "Visor de presupuesto público y ejecución.",
-      "clase": "herramienta",
-      "grupo": "datos",
-      "dominio": "presupuesto-gasto-publico",
-      "padre": "cochid.datos",
-      "orden": 33,
-      "icono": "moneda",
-      "site_id": "site.cochid.datos",
-      "node_id": "product.cochid.datos",
-      "visible": {
-        "cabecera": true,
-        "pie": true,
-        "mapa_del_sitio": true,
-        "sitemap": true,
-        "paleta": true
-      },
-      "sitemap": {
-        "frecuencia": "daily",
-        "prioridad": 0.9,
-        "fuente": "estatica"
-      },
-      "robots": "indexable",
-      "estado": "vivo",
       "marca": "cochid",
       "titular": "cochid",
       "alias_de": null,
@@ -2385,7 +2386,7 @@ const contrato = {
       "grupo": "datos",
       "dominio": "economia-trabajo",
       "padre": null,
-      "orden": 10,
+      "orden": 3,
       "icono": "chart",
       "site_id": "site.cochid.economia",
       "node_id": "view.cochid.economia",
@@ -2425,7 +2426,7 @@ const contrato = {
       "grupo": "datos",
       "dominio": "elecciones-congreso",
       "padre": null,
-      "orden": 11,
+      "orden": 4,
       "icono": "urna",
       "site_id": "site.cochid.elecciones",
       "node_id": "product.cochid.elecciones",
@@ -2502,7 +2503,7 @@ const contrato = {
       "grupo": "datos",
       "dominio": "legislacion",
       "padre": null,
-      "orden": 13,
+      "orden": 7,
       "icono": "balanza",
       "site_id": "site.cochid.lex",
       "node_id": "product.cochid.lex",
@@ -2784,6 +2785,37 @@ const contrato = {
       "relaciones": []
     },
     {
+      "id": "cochid.scribe",
+      "host": "scribe.cochid.cl",
+      "ruta": "/",
+      "etiqueta": "Scribe",
+      "resumen": "Asistente de escritura y producción de documentos basado en evidencia. Requiere una cuenta.",
+      "clase": "herramienta",
+      "grupo": "herramientas",
+      "padre": null,
+      "orden": 4,
+      "icono": "edit",
+      "site_id": "site.cochid.scribe",
+      "node_id": "product.cochid.scribe",
+      "visible": {
+        "cabecera": false,
+        "pie": false,
+        "mapa_del_sitio": true,
+        "sitemap": false,
+        "paleta": false
+      },
+      "sitemap": {},
+      "robots": "noindex",
+      "hermanos": [],
+      "estado": "vivo",
+      "marca": "cochid",
+      "titular": "cochid",
+      "alias_de": null,
+      "reemplazado_por": null,
+      "fragmento_es_ruta": false,
+      "relaciones": []
+    },
+    {
       "id": "cochid.style",
       "host": "style.cochid.cl",
       "ruta": "/",
@@ -2865,14 +2897,10 @@ const contrato = {
         "cabecera": false,
         "pie": false,
         "mapa_del_sitio": false,
-        "sitemap": true,
+        "sitemap": false,
         "paleta": false
       },
-      "sitemap": {
-        "frecuencia": "weekly",
-        "prioridad": 0.7,
-        "fuente": "estatica"
-      },
+      "sitemap": {},
       "robots": "indexable",
       "hermanos": [],
       "portafolio": "fuera",
@@ -2924,7 +2952,7 @@ const contrato = {
       "grupo": "territorio",
       "dominio": "transporte-infraestructura",
       "padre": null,
-      "orden": 6,
+      "orden": 4,
       "icono": "bus",
       "site_id": "site.cochid.transporte",
       "node_id": "product.cochid.transporte",
@@ -2964,7 +2992,7 @@ const contrato = {
       "grupo": "territorio",
       "dominio": "transporte-infraestructura",
       "padre": null,
-      "orden": 4,
+      "orden": 3,
       "icono": "train",
       "site_id": "site.cochid.trenes",
       "node_id": "view.cochid.trenes",
@@ -2981,6 +3009,45 @@ const contrato = {
         "cochid.mapas",
         "cochid.cables",
         "cochid.bici"
+      ],
+      "estado": "vivo",
+      "marca": "cochid",
+      "titular": "cochid",
+      "alias_de": null,
+      "reemplazado_por": null,
+      "fragmento_es_ruta": false,
+      "relaciones": []
+    },
+    {
+      "id": "cochid.votos",
+      "host": "votos.cochid.cl",
+      "ruta": "/",
+      "etiqueta": "Votos Cámara",
+      "resumen": "Consulta votaciones de la Cámara de Diputadas y Diputados.",
+      "clase": "producto",
+      "grupo": "datos",
+      "dominio": "elecciones-congreso",
+      "padre": null,
+      "orden": 6,
+      "icono": "urna",
+      "portafolio": "fuera",
+      "visible": {
+        "cabecera": false,
+        "pie": true,
+        "mapa_del_sitio": true,
+        "sitemap": true,
+        "paleta": true
+      },
+      "sitemap": {
+        "frecuencia": "daily",
+        "prioridad": 0.7,
+        "fuente": "estatica"
+      },
+      "robots": "indexable",
+      "hermanos": [
+        "cochid.elecciones",
+        "cochid.congreso",
+        "cochid.lex"
       ],
       "estado": "vivo",
       "marca": "cochid",

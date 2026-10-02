@@ -76,7 +76,7 @@ const etiquetasGrupo=Object.fromEntries(gruposVisibles.map(grupo=>[grupo.id,grup
 const etiquetasTipo={portal:'Portal',pagina:'Página',producto:'Producto',vista:'Vista',herramienta:'Herramienta'};
 const ordenGrupos=gruposVisibles.map(grupo=>grupo.id);
 const destinosMapa=()=>destinos.filter(destino=>destino.visible.mapa_del_sitio
- && destino.robots==='indexable' && !destino.alias_de && destino.clase!=='api'
+ && !destino.alias_de && destino.clase!=='api'
  && !destino.ruta.includes(':')
  && (destino.estado==='vivo' || (destino.host==='cochid.cl' && rutasPortalPublicadas.has(destino.ruta))));
 
@@ -84,7 +84,7 @@ function arbolDestinos(){
  const incluidos=destinosMapa();
  const ids=new Set(incluidos.map(destino=>destino.id));
  const item=destino=>{
-  const hijos=incluidos.filter(candidato=>candidato.padre===destino.id)
+  const hijos=incluidos.filter(candidato=>candidato.padre===destino.id && candidato.grupo===destino.grupo)
    .sort((a,b)=>a.orden-b.orden||a.etiqueta.localeCompare(b.etiqueta,'es'));
   const tipo=destino.grupo==='investigaciones'?'Investigación':etiquetasTipo[destino.clase]||destino.clase;
   return `<li data-map-item><a href="${escapar(hrefDestino(destino))}">${escapar(destino.etiqueta)}</a> <span class="badge portal-tipo">${escapar(tipo)}</span><span class="portal-host">${escapar(destino.host+destino.ruta)}</span><p>${escapar(destino.resumen)}</p>${destino.estado_presentacion?`<p class="meta">${escapar(destino.estado_presentacion)}</p>`:''}${hijos.length?`<ul>${hijos.map(item).join('')}</ul>`:''}</li>`;

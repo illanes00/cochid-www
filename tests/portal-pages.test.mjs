@@ -69,6 +69,8 @@ test('publica el registro y genera desde él el mapa del sitio', () => {
   assert.ok(existsSync(rutaRegistro));
   const registro = JSON.parse(readFileSync(rutaRegistro, 'utf8'));
   assert.ok(registro.destinos.some(destino => destino.id === 'cochid.mapas.ciudad' && destino.ruta === '/ciudad'));
+  assert.ok(registro.destinos.filter(destino => destino.grupo === 'fuera')
+    .every(destino => Object.values(destino.visible).every(valor => valor === false)));
   const mapa = leer('/mapa-del-sitio/');
   assert.match(mapa, /Verificado el 1 de octubre de 2026/);
   assert.match(mapa, /https:\/\/mapas\.cochid\.cl\/ciudad/);
@@ -77,6 +79,39 @@ test('publica el registro y genera desde él el mapa del sitio', () => {
   assert.deepEqual(grupos, ['Datos', 'Territorio', 'Investigaciones', 'Herramientas', 'Especiales']);
   assert.match(mapa, /Mundial[\s\S]{0,500}Proyecto terminado el 19 de julio de 2026/);
   assert.doesNotMatch(mapa, /Fuera de COCHID/);
+  const cuerpo = mapa.match(/<main[\s\S]*?<div class="portal-arbol">([\s\S]*?)<\/div>[\s\S]*?<\/main>/)[1];
+  const esperados = {
+    Datos: [
+      'https://datos.cochid.cl/', 'https://datos.cochid.cl/presupuesto',
+      'https://economia.cochid.cl/', 'https://elecciones.cochid.cl/',
+      'https://congreso.cochid.cl/', 'https://votos.cochid.cl/', 'https://lex.cochid.cl/',
+    ],
+    Territorio: [
+      'https://mapas.cochid.cl/', 'https://mapas.cochid.cl/ciudad',
+      'https://trenes.cochid.cl/', 'https://tpte.cochid.cl/',
+      'https://bici.cochid.cl/', 'https://cables.cochid.cl/', 'https://clima.cochid.cl/',
+    ],
+    Investigaciones: ['https://medicamentos.cochid.cl/', '/concepciones/', '/cambio-de-hora/'],
+    Herramientas: [
+      'https://graphs.cochid.cl/', 'https://taller.cochid.cl/',
+      'https://prosa.medicamentos.cochid.cl/', 'https://scribe.cochid.cl/',
+    ],
+    Especiales: ['https://mundial.cochid.cl/'],
+  };
+  const secciones = [...cuerpo.matchAll(/<section><h2>([^<]+)<\/h2>/g)];
+  for (const [indice, coincidencia] of secciones.entries()) {
+    const fragmento = cuerpo.slice(coincidencia.index, secciones[indice + 1]?.index ?? cuerpo.length);
+    const posiciones = esperados[coincidencia[1]].map(href => fragmento.indexOf(`href="${href}"`));
+    assert.ok(posiciones.every(posicion => posicion >= 0), `${coincidencia[1]}: falta un destino`);
+    assert.deepEqual(posiciones, [...posiciones].sort((a, b) => a - b), `${coincidencia[1]}: orden incorrecto`);
+  }
+  for (const href of Object.values(esperados).flat()) {
+    assert.equal((cuerpo.match(new RegExp(`href="${href.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')}"`, 'g')) || []).length, 1,
+      `${href}: debe aparecer una vez`);
+  }
+  for (const host of ['thesis', 'peru', 'sdr', 'vpn', 'ciudad', 'tiles', 'style', 'medicamentos-staging']) {
+    assert.doesNotMatch(cuerpo, new RegExp(`https://${host}\\.cochid\\.cl`));
+  }
   assert.ok(existsSync(new URL('sitemap-hosts.xml', dist)));
 });
 
