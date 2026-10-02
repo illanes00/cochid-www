@@ -83,6 +83,10 @@ class ProjectsContract(unittest.TestCase):
                 actual = re.findall(r'<a href="([^"]+)" class="tema-card', fragment)
                 self.assertEqual(actual, hrefs)
 
+    def test_featured_research_uses_the_approved_order(self):
+        fragment = self.html.split('<nav class="research-links"', 1)[1].split("</nav>", 1)[0]
+        self.assertLess(fragment.index('href="/concepciones/"'), fragment.index('href="/cambio-de-hora/"'))
+
     def test_personal_thesis_is_not_listed_as_a_cochid_project(self):
         self.assertNotIn("https://thesis.cochid.cl/", self.links.hrefs)
         self.assertNotIn("thesis.cochid.cl", self.html)
