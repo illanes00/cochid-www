@@ -47,6 +47,17 @@ class ProjectsContract(unittest.TestCase):
         self.assertNotIn("https://thesis.cochid.cl/", self.links.hrefs)
         self.assertNotIn("thesis.cochid.cl", self.html)
 
+    def test_published_content_has_no_links_to_the_personal_thesis(self):
+        fuentes = [ROOT / "index.html", *sorted((ROOT / "content").rglob("*.md"))]
+        publicados = [
+            ruta for ruta in sorted((ROOT / "dist").rglob("*"))
+            if ruta.suffix in {".html", ".xml", ".txt"}
+        ]
+        self.assertTrue(publicados, "falta dist/: corre el build antes de las pruebas")
+        for ruta in fuentes + publicados:
+            with self.subTest(ruta=str(ruta.relative_to(ROOT))):
+                self.assertNotIn("thesis.cochid.cl", ruta.read_text(encoding="utf-8"))
+
     def test_published_project_destinations_are_reachable_from_home_source(self):
         for host in ("datos", "economia", "congreso", "lex", "elecciones", "mundial", "mapas", "tpte", "bici", "cables", "clima", "taller", "medicamentos", "graphs", "scribe", "vpn", "peru", "sdr"):
             self.assertIn(f"https://{host}.cochid.cl/", self.links.hrefs)

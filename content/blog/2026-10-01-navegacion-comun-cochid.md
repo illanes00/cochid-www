@@ -3,7 +3,7 @@ titulo: Los mismos cuatro destinos en la cabecera y el pie de COCHID
 slug: navegacion-comun-cochid
 fecha: 2026-10-01
 autor: Equipo COCHID
-resumen: Datos, Mapas, Investigaciones y Presupuesto pasan a ser los destinos comunes de la navegación de COCHID. Desde el 2 de octubre están en la cabecera o el pie de cochid.cl, datos.cochid.cl y once sitios más.
+resumen: Datos, Mapas, Investigaciones y Presupuesto pasan a ser los destinos comunes de la navegación de COCHID. Desde el 2 de octubre están en la cabecera o el pie de cochid.cl, datos.cochid.cl y diez sitios más.
 descripcion: Qué cambió el 1 de octubre de 2026 en la navegación de datos.cochid.cl y cochid.cl, y cómo se llega desde cualquier sitio COCHID a los datos, los mapas, las investigaciones y el presupuesto.
 ruta: /blog/navegacion-comun-cochid/
 tipo: metodologia
@@ -42,7 +42,7 @@ Quien llega a un mapa o a una investigación desde un buscador no siempre sabe q
 
 ## En los demás sitios
 
-El 1 y el 2 de octubre de 2026 la misma cabecera y el mismo pie llegaron a once sitios: [Mapas](https://mapas.cochid.cl/) y su vista de [Trenes](https://trenes.cochid.cl/), [Bici](https://bici.cochid.cl/), [Cables submarinos](https://cables.cochid.cl/), [Clima](https://clima.cochid.cl/), [Taller](https://taller.cochid.cl/), [Gráficos](https://graphs.cochid.cl/), [Economía](https://economia.cochid.cl/), [Elecciones](https://elecciones.cochid.cl/), [Mundial](https://mundial.cochid.cl/), [Lex](https://lex.cochid.cl/) y [Tesis y empresas](https://thesis.cochid.cl/). En cada uno, el logo lleva a cochid.cl, el nombre del sitio lleva a su propia portada y el pie agrega dos a cuatro sitios relacionados por tema: Lex enlaza a Congreso y Elecciones, y Bici a Mapas, Transporte y Clima.
+El 1 y el 2 de octubre de 2026 la misma cabecera y el mismo pie llegaron a diez sitios: [Mapas](https://mapas.cochid.cl/) y su vista de [Trenes](https://trenes.cochid.cl/), [Bici](https://bici.cochid.cl/), [Cables submarinos](https://cables.cochid.cl/), [Clima](https://clima.cochid.cl/), [Taller](https://taller.cochid.cl/), [Gráficos](https://graphs.cochid.cl/), [Economía](https://economia.cochid.cl/), [Elecciones](https://elecciones.cochid.cl/), [Mundial](https://mundial.cochid.cl/) y [Lex](https://lex.cochid.cl/). En cada uno, el logo lleva a cochid.cl, el nombre del sitio lleva a su propia portada y el pie agrega dos a cuatro sitios relacionados por tema: Lex enlaza a Congreso y Elecciones, y Bici a Mapas, Transporte y Clima.
 
 Congreso, Medicamentos y Transporte se suman en una etapa siguiente.
 
