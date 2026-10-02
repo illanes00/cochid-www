@@ -145,12 +145,12 @@ class CochidHomeContractTests(unittest.TestCase):
         ):
             self.assertIn(f'href="{destination}"', HTML)
 
-    def test_explains_cochid_and_routes_contact_without_unverified_service_offers(self):
+    def test_explains_cochid_and_routes_contact_to_the_authorized_advisory(self):
         self.assertIn('<section id="que-es-cochid"', HTML)
         self.assertIn('<section id="servicios"', HTML)
-        self.assertIn("Contactar a la compañía", HTML)
+        self.assertIn("Pedir asesoría o datos a medida", HTML)
         self.assertIn("Compañía de Innovación de Santiago SpA", HTML)
-        self.assertIn('href="https://innovacionsantiago.cl/contacto"', HTML)
+        self.assertIn('href="/asesoria/"', HTML)
         self.assertNotIn("data-service-slug=", HTML)
         self.assertNotIn("API paga vía", HTML)
 

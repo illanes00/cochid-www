@@ -107,6 +107,7 @@ const formularioAsesoria=`<form class="portal-formulario" method="post" action="
 <label>Teléfono <span class="portal-opcional">opcional</span><input name="telefono" type="tel" autocomplete="tel" maxlength="40"></label>
 <label>Qué necesitas <select name="tipo_pedido" required><option value="dato-a-medida">Un dato a medida</option><option value="mas-cuota">Más cuota de API</option><option value="descarga-masiva">Una descarga completa</option><option value="informe">Un informe a pedido</option><option value="otro">Otra cosa</option></select></label>
 <input type="hidden" name="servicio" value="datos-a-medida">
+<input type="hidden" name="dominio" value="">
 <label>Sobre qué datos <span class="portal-opcional">opcional</span><textarea name="conjunto" rows="3" maxlength="255" placeholder="Tema, conjunto, territorio y período"></textarea><small>Por ejemplo: denuncias por comuna, Región de Valparaíso, 2015 a 2024.</small></label>
 <label>En qué formato <span class="portal-opcional">opcional</span><select name="formato"><option value="">No lo sé todavía</option><option value="csv-excel">Archivo CSV o Excel</option><option value="api">Acceso por API</option><option value="imagen">Gráfico o imagen</option><option value="informe">Informe escrito</option></select></label>
 <label>Para cuándo <span class="portal-opcional">opcional</span><input name="para_cuando" type="text" maxlength="120" placeholder="Una fecha o un mes aproximado"></label>

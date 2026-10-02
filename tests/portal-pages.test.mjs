@@ -42,11 +42,13 @@ test('publica el formulario propio de asesoría y conserva sus enlaces', () => {
   const asesoria = leer('/asesoria/');
   assert.match(asesoria, /<form[^>]+method="post"[^>]+action="\/api\/asesoria"/);
   assert.match(asesoria, /name="canal" value="cochid"/);
+  assert.match(asesoria, /name="dominio"/);
   assert.match(asesoria, /name="sitio_web"/);
   assert.match(asesoria, /name="nombre"[^>]+required/);
   assert.match(asesoria, /name="email"[^>]+required/);
   assert.match(asesoria, /name="mensaje"[^>]+required/);
   assert.match(asesoria, /Usamos estos datos solo para responderte/);
+  assert.match(asesoria, /t\.name="tiempo_carga"/);
   assert.doesNotMatch(asesoria, /google-analytics|googletagmanager|recaptcha|turnstile/i);
 });
 
