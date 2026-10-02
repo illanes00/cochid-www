@@ -14,6 +14,7 @@ import {inline} from './markdown.mjs';
 const escapar = valor => String(valor).replaceAll('&', '&amp;').replaceAll('<', '&lt;').replaceAll('>', '&gt;').replaceAll('"', '&quot;');
 const enlaceMd = /^\[([^\]]+)\]\(([^)\s]+)\)$/;
 const normalizar = texto => texto.normalize('NFD').replace(/[̀-ͯ]/g, '').toLowerCase().trim();
+const hrefDestino = destino => destino.host === 'cochid.cl' ? destino.ruta : `https://${destino.host}${destino.ruta}`;
 
 function segmentos(linea) {
   const partes = linea.split(/\s+·\s+/).map(parte => parte.trim()).filter(Boolean);
@@ -68,7 +69,7 @@ export function leerTarjetas(lineas) {
     actual.resumen.push(linea);
   }
   for (const tarjeta of tarjetas) {
-    tarjeta.href ||= tarjeta.acciones[0]?.href || tarjeta.temas[0]?.href;
+    tarjeta.href ||= tarjeta.acciones[0]?.href || tarjeta.temas[0]?.href || tarjeta.vistas[0]?.href;
     if (!tarjeta.href) throw new Error(`La tarjeta «${tarjeta.titulo}» no tiene destino`);
     tarjeta.resumen = tarjeta.resumen.join(' ');
   }
@@ -111,6 +112,7 @@ export function tarjetaHtml(tarjeta, {compacta = false, maxEnlaces = Infinity, r
     + (tarjeta.meta ? `<p class="portal-tarjeta__meta">${inline(tarjeta.meta)}</p>` : '')
     + (tarjeta.resumen ? `<p class="portal-tarjeta__resumen">${inline(tarjeta.resumen)}</p>` : '')
     + (enlaces.length ? `<ul class="portal-tarjeta__enlaces" aria-label="${escapar(`${rotuloEnlaces} de ${tarjeta.titulo}`)}">${enlaces.map(enlace => `<li><a href="${escapar(enlace.href)}">${inline(enlace.texto)}</a></li>`).join('')}</ul>` : '')
+    + (!compacta && tarjeta.relacionados?.length ? `<p class="portal-tarjeta__relacionados"><strong>Ver también:</strong> ${tarjeta.relacionados.map(enlace => `<a href="${escapar(enlace.href)}">${escapar(enlace.texto)}</a>`).join(' · ')}</p>` : '')
     + `</li>`;
 }
 
@@ -121,17 +123,21 @@ export function grillaHtml(tarjetas, opciones = {}) {
 
 /* Dominios de /datos/: el texto viene del Markdown y el contrato del registro.
    Solo se aceptan dominios publicables y con el mismo ícono declarado. */
-export function validarDominios(tarjetas, dominiosRegistro) {
-  const publicables = dominiosRegistro.filter(dominio => dominio.publicar_en_datos !== false && dominio.temas.length);
+export function validarDominios(tarjetas, dominiosRegistro, destinosRegistro = []) {
+  const publicables = dominiosRegistro;
   for (const tarjeta of tarjetas) {
     const dominio = publicables.find(candidato => normalizar(candidato.etiqueta) === normalizar(tarjeta.titulo));
     if (!dominio) throw new Error(`El dominio «${tarjeta.titulo}» no está publicado en destinos.json`);
     if (nombreIcono(dominio.icono) !== tarjeta.icono) {
       throw new Error(`El dominio «${tarjeta.titulo}» declara ${tarjeta.icono} y el registro ${dominio.icono}`);
     }
-    if (!tarjeta.temas.length) throw new Error(`El dominio «${tarjeta.titulo}» no tiene temas`);
     tarjeta.id = dominio.id;
     tarjeta.orden = dominio.orden;
+    tarjeta.relacionados = dominio.sitios.map(id => {
+      const destino = destinosRegistro.find(candidato => candidato.id === id);
+      if (!destino) throw new Error(`El dominio «${tarjeta.titulo}» referencia el sitio desconocido ${id}`);
+      return {texto: destino.etiqueta, href: hrefDestino(destino)};
+    });
   }
   if (tarjetas.length !== publicables.length) {
     throw new Error(`/datos/ publica ${tarjetas.length} dominios y el registro ${publicables.length}`);

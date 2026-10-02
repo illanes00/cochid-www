@@ -17,8 +17,8 @@ const archivos = directorio => readdirSync(directorio).flatMap(nombre => {
   return statSync(ruta).isDirectory() ? archivos(ruta) : [ruta];
 });
 const tarjetas = (html, clase = 'portal-tarjetas') => {
-  const grilla = html.match(new RegExp(`<ul class="${clase}">([\\s\\S]*?)</ul>(?!</li>)`));
-  return grilla ? grilla[1].split('<li class="portal-tarjeta">').slice(1) : [];
+  const inicio = html.indexOf(`<ul class="${clase}">`);
+  return inicio === -1 ? [] : html.slice(inicio).split('<li class="portal-tarjeta">').slice(1);
 };
 
 test('ningún archivo publicado imprime el nombre de un ícono', () => {
@@ -66,16 +66,27 @@ test('el parser de tarjetas usa el ícono como metadato y no como texto', () => 
   assert.throws(() => leerTarjetas(['## Sin destino', 'Texto.']), /no tiene destino/);
 });
 
-test('/datos/ publica una grilla de dominios con SVG, resumen y temas', () => {
+test('/datos/ publica los diez dominios y enlaza sus sitios temáticos', () => {
   const html = leer('/datos/');
   const lista = tarjetas(html);
-  assert.equal(lista.length, 8);
+  assert.equal(lista.length, 10);
   for (const tarjeta of lista) {
     assert.match(tarjeta, /<span class="portal-tarjeta__icono"><svg [^>]*stroke="currentColor"[^>]*aria-hidden="true" focusable="false"/);
-    assert.match(tarjeta, /<h2 class="portal-tarjeta__titulo"><a class="portal-tarjeta__enlace" href="https:\/\/datos\.cochid\.cl\/tema\/[a-z-]+">/);
+    assert.match(tarjeta, /<h2 class="portal-tarjeta__titulo"><a class="portal-tarjeta__enlace" href="https?:\/\//);
     assert.match(tarjeta, /class="portal-tarjeta__resumen"/);
-    const enlaces = (tarjeta.match(/<ul class="portal-tarjeta__enlaces"[\s\S]*?<\/ul>/)?.[0].match(/<a /g) || []).length;
-    assert.ok(enlaces >= 2 && enlaces <= 3, `tarjeta con ${enlaces} enlaces`);
+  }
+  for (const [etiqueta, href] of [
+    ['Presupuesto', 'https://datos.cochid.cl/presupuesto'],
+    ['Cuándo se concibe en Chile', '/concepciones/'],
+    ['Economía', 'https://economia.cochid.cl/'],
+    ['Elecciones', 'https://elecciones.cochid.cl/'],
+    ['Congreso', 'https://congreso.cochid.cl/'],
+    ['Lex', 'https://lex.cochid.cl/'],
+    ['Transporte', 'https://tpte.cochid.cl/'],
+    ['Mapas', 'https://mapas.cochid.cl/'],
+    ['Medicamentos', 'https://medicamentos.cochid.cl/'],
+  ]) {
+    assert.match(html, new RegExp(`Ver también:[\\s\\S]{0,500}href="${href.replaceAll('/', '\\/')}"[^>]*>${etiqueta}<`));
   }
   assert.doesNotMatch(html, /\b(moneda|escudo|personas|urna|balanza|brújula)\b(?![^<]*>)/i);
   assert.match(html, /<ul class="portal-vistas">/);

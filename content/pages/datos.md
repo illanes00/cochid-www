@@ -1,13 +1,12 @@
 ---
 titulo: Datos por dominio
-descripcion: Busca datos públicos de Chile por dominio: presupuesto, seguridad, población y educación, economía y trabajo, elecciones, legislación, transporte y centros de estudio.
+descripcion: Busca datos públicos de Chile por diez dominios y sigue sus temas, conjuntos y sitios relacionados.
 ruta: /datos/
 ---
 
 <!-- Nota de implementación:
-- Solo se publican tarjetas de dominios que hoy tienen temas con conjuntos (SPEC §2.4). «Territorio y clima» y «Salud y medicamentos» no van aquí hasta tener tema; sus productos están en /mapas/ y /investigaciones/.
 - Destino de cada tarjeta: /dominio/<id> no existe hasta la etapa 3. Mientras tanto, dominios de un solo tema enlazan a https://datos.cochid.cl/tema/<slug>; dominios de varios temas enlazan al primer tema listado y muestran los demás como enlaces secundarios. El filtro ?tema= del catálogo hoy se ignora: no usarlo como destino.
-- Ids de dominio provisionales (los fija destinos.json, §3): presupuesto-gasto-publico, seguridad-justicia, poblacion-sociedad-educacion, economia-trabajo, elecciones-congreso, legislacion, transporte-infraestructura, conocimiento-centros-estudio.
+- Los dominios sin tema publicado enlazan a su sitio principal. Las relaciones «Ver también» salen del registro vendorizado, no de este Markdown.
 - Ícono: el del kit v10 indicado; si no existe, se pide al kit (KIT-DESVIACIONES H28).
 - Rótulos de temas con tildes desde la capa de presentación, no desde meta.temas (que hoy no las tiene).
 -->
@@ -58,6 +57,16 @@ Vistas: [Lex](https://lex.cochid.cl/)
 Paradas y recorridos del transporte público de Santiago, cables submarinos y otras redes físicas.
 Temas: [Transporte público](https://datos.cochid.cl/tema/transporte) · [Infraestructura](https://datos.cochid.cl/tema/infraestructura)
 Vistas: [Transporte](https://tpte.cochid.cl/) · [Cables](https://cables.cochid.cl/) · [Trenes](https://trenes.cochid.cl/)
+
+## Territorio y clima
+Ícono: mapa
+Mapas, ciudades y condiciones climáticas para explorar el territorio.
+Vistas: [Mapas](https://mapas.cochid.cl/) · [Ciudad](https://mapas.cochid.cl/ciudad) · [Clima](https://clima.cochid.cl/)
+
+## Salud y medicamentos
+Ícono: cruz
+Investigaciones sobre acceso sostenible a medicamentos y protección financiera.
+Vistas: [Medicamentos](https://medicamentos.cochid.cl/)
 
 ## Conocimiento y centros de estudio
 Ícono: brújula

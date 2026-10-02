@@ -37,7 +37,7 @@ const sinonimos = {
   people: 'personas', users: 'personas', chart: 'grafico', balance: 'balanza', scale: 'balanza',
   compass: 'brujula', city: 'ciudad', bike: 'bicicleta', train: 'tren', network: 'red',
   cloud: 'nube', wrench: 'herramienta', edit: 'editar', book: 'libro', clock: 'reloj',
-  pill: 'pildora', cross: 'pildora',
+  pill: 'pildora', cross: 'pildora', cruz: 'pildora',
 };
 
 const normalizar = nombre => String(nombre).normalize('NFD').replace(/[̀-ͯ]/g, '').trim().toLowerCase();

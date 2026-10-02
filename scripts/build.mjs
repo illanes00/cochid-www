@@ -1,7 +1,7 @@
 import {readFile,writeFile,mkdir,cp,rm} from 'node:fs/promises';
 import {yearData,monthlyData,hhmm,MONTHS} from '../cambio-de-hora/solar.mjs';
 import {cargarDatos,tablas,verificarContrato} from './tablas-concepciones.mjs';
-import {destinos,dominios,familia,navegacionPrimaria,pie} from '../data/destinos.mjs';
+import {destinos,dominios,familia,grupos,navegacionPrimaria,pie} from '../data/destinos.mjs';
 import {depurarMarkdown,leerFrontmatter,markdownAHtml} from './markdown.mjs';
 import {iconoSvg} from './iconos.mjs';
 import {completarIconos,grillaHtml,leerTarjetas,validarDominios} from './tarjetas.mjs';
@@ -71,12 +71,10 @@ function chrome(pagina,ruta){
 }
 const sinComentariosHtml=pagina=>pagina.replace(/<!--[\s\S]*?-->/g,'');
 
-const etiquetasGrupo={
- datos:'Datos',territorio:'Mapas y territorio',investigaciones:'Investigaciones',
- herramientas:'Herramientas',servicios:'Servicios',sobre:'Sobre COCHID'
-};
+const gruposVisibles=grupos.filter(grupo=>grupo.visible).sort((a,b)=>a.orden-b.orden);
+const etiquetasGrupo=Object.fromEntries(gruposVisibles.map(grupo=>[grupo.id,grupo.etiqueta]));
 const etiquetasTipo={portal:'Portal',pagina:'Página',producto:'Producto',vista:'Vista',herramienta:'Herramienta'};
-const ordenGrupos=['datos','territorio','investigaciones','herramientas','servicios','sobre'];
+const ordenGrupos=gruposVisibles.map(grupo=>grupo.id);
 const destinosMapa=()=>destinos.filter(destino=>destino.visible.mapa_del_sitio
  && destino.robots==='indexable' && !destino.alias_de && destino.clase!=='api'
  && !destino.ruta.includes(':')
@@ -89,7 +87,7 @@ function arbolDestinos(){
   const hijos=incluidos.filter(candidato=>candidato.padre===destino.id)
    .sort((a,b)=>a.orden-b.orden||a.etiqueta.localeCompare(b.etiqueta,'es'));
   const tipo=destino.grupo==='investigaciones'?'Investigación':etiquetasTipo[destino.clase]||destino.clase;
-  return `<li data-map-item><a href="${escapar(hrefDestino(destino))}">${escapar(destino.etiqueta)}</a> <span class="badge portal-tipo">${escapar(tipo)}</span><span class="portal-host">${escapar(destino.host+destino.ruta)}</span><p>${escapar(destino.resumen)}</p>${hijos.length?`<ul>${hijos.map(item).join('')}</ul>`:''}</li>`;
+  return `<li data-map-item><a href="${escapar(hrefDestino(destino))}">${escapar(destino.etiqueta)}</a> <span class="badge portal-tipo">${escapar(tipo)}</span><span class="portal-host">${escapar(destino.host+destino.ruta)}</span><p>${escapar(destino.resumen)}</p>${destino.estado_presentacion?`<p class="meta">${escapar(destino.estado_presentacion)}</p>`:''}${hijos.length?`<ul>${hijos.map(item).join('')}</ul>`:''}</li>`;
  };
  return `<div class="portal-arbol">${ordenGrupos.map(grupo=>{
   const grupoDestinos=incluidos.filter(destino=>destino.grupo===grupo && (!destino.padre || !ids.has(destino.padre) || destinos.find(candidato=>candidato.id===destino.padre)?.grupo!==grupo))
@@ -106,7 +104,7 @@ const scriptMapa='<script>document.querySelector("#filtro-destinos")?.addEventLi
    línea «Ícono:», que nunca llega al HTML. */
 function bloqueTarjetas(tipo,lineas){
  const tarjetas=completarIconos(leerTarjetas(lineas),destinos);
- if(tipo==='dominios')return grillaHtml(validarDominios(tarjetas,dominios),{maxEnlaces:3,rotuloEnlaces:'Temas y vistas'});
+ if(tipo==='dominios')return grillaHtml(validarDominios(tarjetas,dominios,destinos),{maxEnlaces:3,rotuloEnlaces:'Temas y vistas'});
  if(tipo==='tarjetas')return grillaHtml(tarjetas);
  throw new Error(`Bloque de tarjetas desconocido: ${tipo}`);
 }
@@ -115,7 +113,7 @@ async function dominiosPublicados(){
  const {meta,markdown}=leerFrontmatter(await readFile(new URL('content/pages/datos.md',root),'utf8'));
  const bloque=depurarMarkdown(markdown,meta.ruta).match(/^::: dominios\n([\s\S]*?)\n:::$/m);
  if(!bloque)throw new Error('content/pages/datos.md no declara el bloque ::: dominios');
- return validarDominios(completarIconos(leerTarjetas(bloque[1].split('\n')),destinos),dominios);
+ return validarDominios(completarIconos(leerTarjetas(bloque[1].split('\n')),destinos),dominios,destinos);
 }
 
 function vistasDominios(lista){

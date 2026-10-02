@@ -5,50 +5,50 @@ const contrato = {
   "fuentes": {
     "registro_sha": "dd408498bb03d12583e6111ee4fa0b8567759cd53fbb3388cb04a4cb57c13025",
     "portfolio_sha": "b746b87f014309d9617973e164de83079036cda94dfb8578b60c4c5c8fd15f5f",
-    "presentacion_sha": "bfe53aa68f7195675aeb225faf0b4b59b928ee0c94f7d0d831567ad7919c224e"
+    "presentacion_sha": "213d3f1d44fdbb72f6825c51b920c2cc337bac32716a4901763d25af8584c8c0"
   },
   "grupos": [
     {
       "id": "datos",
       "etiqueta": "Datos",
       "icono": "database",
-      "orden": 1
+      "orden": 1,
+      "visible": true
     },
     {
       "id": "territorio",
       "etiqueta": "Territorio",
       "icono": "map",
-      "orden": 2
+      "orden": 2,
+      "visible": true
     },
     {
       "id": "investigaciones",
       "etiqueta": "Investigaciones",
       "icono": "book",
-      "orden": 3
+      "orden": 3,
+      "visible": true
     },
     {
       "id": "herramientas",
       "etiqueta": "Herramientas",
       "icono": "wrench",
-      "orden": 4
+      "orden": 4,
+      "visible": true
     },
     {
-      "id": "servicios",
-      "etiqueta": "Servicios",
-      "icono": "briefcase",
-      "orden": 5
+      "id": "especiales",
+      "etiqueta": "Especiales",
+      "icono": "sparkles",
+      "orden": 5,
+      "visible": true
     },
     {
-      "id": "sobre",
-      "etiqueta": "Sobre COCHID",
-      "icono": "info",
-      "orden": 6
-    },
-    {
-      "id": "personal",
-      "etiqueta": "Proyectos personales",
-      "icono": "book",
-      "orden": 7
+      "id": "fuera",
+      "etiqueta": "Fuera de COCHID",
+      "icono": "external-link",
+      "orden": 6,
+      "visible": false
     }
   ],
   "dominios": [
@@ -61,6 +61,9 @@ const contrato = {
         "presupuesto"
       ],
       "destino": "cochid.datos.dominio.presupuesto",
+      "sitios": [
+        "cochid.datos.presupuesto"
+      ],
       "orden": 1
     },
     {
@@ -75,6 +78,7 @@ const contrato = {
         "sistema-penitenciario"
       ],
       "destino": "cochid.datos.dominio.seguridad",
+      "sitios": [],
       "orden": 2
     },
     {
@@ -87,6 +91,9 @@ const contrato = {
         "educacion"
       ],
       "destino": "cochid.datos.dominio.poblacion",
+      "sitios": [
+        "cochid.apex.concepciones"
+      ],
       "orden": 3
     },
     {
@@ -99,6 +106,9 @@ const contrato = {
         "economia-laboral"
       ],
       "destino": "cochid.datos.dominio.economia",
+      "sitios": [
+        "cochid.economia"
+      ],
       "orden": 4
     },
     {
@@ -110,6 +120,10 @@ const contrato = {
         "elecciones"
       ],
       "destino": "cochid.datos.dominio.elecciones",
+      "sitios": [
+        "cochid.elecciones",
+        "cochid.congreso"
+      ],
       "orden": 5
     },
     {
@@ -121,6 +135,9 @@ const contrato = {
         "legislacion"
       ],
       "destino": "cochid.datos.dominio.legislacion",
+      "sitios": [
+        "cochid.lex"
+      ],
       "orden": 6
     },
     {
@@ -133,6 +150,12 @@ const contrato = {
         "infraestructura"
       ],
       "destino": "cochid.datos.dominio.transporte",
+      "sitios": [
+        "cochid.tpte",
+        "cochid.trenes",
+        "cochid.bici",
+        "cochid.cables"
+      ],
       "orden": 7
     },
     {
@@ -142,8 +165,12 @@ const contrato = {
       "resumen": "Vistas territoriales y herramientas climáticas.",
       "temas": [],
       "destino": "cochid.mapas",
-      "orden": 8,
-      "publicar_en_datos": false
+      "sitios": [
+        "cochid.mapas",
+        "cochid.mapas.ciudad",
+        "cochid.clima"
+      ],
+      "orden": 8
     },
     {
       "id": "salud-medicamentos",
@@ -152,8 +179,10 @@ const contrato = {
       "resumen": "Investigaciones sobre salud y acceso a medicamentos.",
       "temas": [],
       "destino": "cochid.medicamentos",
-      "orden": 9,
-      "publicar_en_datos": false
+      "sitios": [
+        "cochid.medicamentos"
+      ],
+      "orden": 9
     },
     {
       "id": "conocimiento-centros-estudio",
@@ -164,6 +193,7 @@ const contrato = {
         "centros-estudio"
       ],
       "destino": "cochid.datos.dominio.conocimiento",
+      "sitios": [],
       "orden": 10
     }
   ],
@@ -199,6 +229,7 @@ const contrato = {
       "resumen": "Vista territorial de ciclovías y accesibilidad en bicicleta.",
       "clase": "vista",
       "grupo": "territorio",
+      "dominio": "transporte-infraestructura",
       "padre": null,
       "orden": 5,
       "icono": "bike",
@@ -238,6 +269,7 @@ const contrato = {
       "resumen": "Vista territorial de infraestructura de telecomunicaciones.",
       "clase": "vista",
       "grupo": "territorio",
+      "dominio": "transporte-infraestructura",
       "padre": null,
       "orden": 3,
       "icono": "network",
@@ -276,7 +308,7 @@ const contrato = {
       "etiqueta": "Ciudad",
       "resumen": "API del modelo territorial de ciudad.",
       "clase": "api",
-      "grupo": "territorio",
+      "grupo": "fuera",
       "padre": null,
       "orden": 2,
       "icono": "city",
@@ -308,6 +340,7 @@ const contrato = {
       "resumen": "Herramienta para consultar condiciones y pronósticos del tiempo.",
       "clase": "herramienta",
       "grupo": "territorio",
+      "dominio": "territorio-clima",
       "padre": null,
       "orden": 7,
       "icono": "cloud",
@@ -345,7 +378,7 @@ const contrato = {
       "etiqueta": "COCHID",
       "resumen": "Portal de datos públicos, territorio e investigaciones.",
       "clase": "portal",
-      "grupo": "sobre",
+      "grupo": "datos",
       "padre": null,
       "orden": 1,
       "icono": "home",
@@ -524,7 +557,7 @@ const contrato = {
       "etiqueta": "Servicios",
       "resumen": "Asesoría, informes a pedido y acceso ampliado a datos.",
       "clase": "pagina",
-      "grupo": "servicios",
+      "grupo": "datos",
       "padre": "cochid.apex",
       "orden": 1,
       "icono": "briefcase",
@@ -559,7 +592,7 @@ const contrato = {
       "etiqueta": "Asesoría",
       "resumen": "Orientación para proyectos que requieren datos y evidencia.",
       "clase": "pagina",
-      "grupo": "servicios",
+      "grupo": "datos",
       "padre": "cochid.apex.servicios",
       "orden": 2,
       "icono": "briefcase",
@@ -591,10 +624,11 @@ const contrato = {
       "id": "cochid.apex.concepciones",
       "host": "cochid.cl",
       "ruta": "/concepciones/",
-      "etiqueta": "Concepciones en Chile",
+      "etiqueta": "Cuándo se concibe en Chile",
       "resumen": "Investigación publicada sobre concepciones y opinión pública.",
       "clase": "pagina",
       "grupo": "investigaciones",
+      "dominio": "poblacion-sociedad-educacion",
       "padre": "cochid.apex.investigaciones",
       "orden": 2,
       "icono": "book",
@@ -664,7 +698,7 @@ const contrato = {
       "etiqueta": "Novedades",
       "resumen": "Datos nuevos, estudios y lanzamientos de COCHID.",
       "clase": "pagina",
-      "grupo": "sobre",
+      "grupo": "datos",
       "padre": "cochid.apex",
       "orden": 2,
       "icono": "sparkles",
@@ -699,7 +733,7 @@ const contrato = {
       "etiqueta": "Blog",
       "resumen": "Notas sobre datos, métodos e investigaciones.",
       "clase": "pagina",
-      "grupo": "sobre",
+      "grupo": "datos",
       "padre": "cochid.apex",
       "orden": 3,
       "icono": "book",
@@ -731,7 +765,7 @@ const contrato = {
       "id": "cochid.apex.cambio-hora",
       "host": "cochid.cl",
       "ruta": "/cambio-de-hora/",
-      "etiqueta": "Cambio de hora",
+      "etiqueta": "El reloj y el Sol",
       "resumen": "Investigación publicada sobre horario y territorio.",
       "clase": "pagina",
       "grupo": "investigaciones",
@@ -769,7 +803,7 @@ const contrato = {
       "etiqueta": "Quiénes somos",
       "resumen": "Equipo, principios, método y operación de COCHID.",
       "clase": "pagina",
-      "grupo": "sobre",
+      "grupo": "datos",
       "padre": "cochid.apex",
       "orden": 4,
       "icono": "people",
@@ -804,7 +838,7 @@ const contrato = {
       "etiqueta": "Contacto",
       "resumen": "Canales para consultas sobre datos, investigaciones y servicios.",
       "clase": "pagina",
-      "grupo": "sobre",
+      "grupo": "datos",
       "padre": "cochid.apex",
       "orden": 5,
       "icono": "mail",
@@ -839,7 +873,7 @@ const contrato = {
       "etiqueta": "Privacidad",
       "resumen": "Información sobre el tratamiento y resguardo de datos personales.",
       "clase": "pagina",
-      "grupo": "sobre",
+      "grupo": "datos",
       "padre": "cochid.apex",
       "orden": 6,
       "icono": "shield",
@@ -874,7 +908,7 @@ const contrato = {
       "etiqueta": "Términos",
       "resumen": "Condiciones de uso de los contenidos y servicios.",
       "clase": "pagina",
-      "grupo": "sobre",
+      "grupo": "datos",
       "padre": "cochid.apex",
       "orden": 7,
       "icono": "file",
@@ -909,7 +943,7 @@ const contrato = {
       "etiqueta": "Mapa del sitio",
       "resumen": "Árbol de destinos públicos de COCHID.",
       "clase": "pagina",
-      "grupo": "sobre",
+      "grupo": "datos",
       "padre": "cochid.apex",
       "orden": 8,
       "icono": "sitemap",
@@ -945,6 +979,7 @@ const contrato = {
       "resumen": "Actividad legislativa, proyectos, votaciones y actores del Congreso.",
       "clase": "producto",
       "grupo": "datos",
+      "dominio": "elecciones-congreso",
       "padre": null,
       "orden": 12,
       "icono": "building",
@@ -1623,6 +1658,7 @@ const contrato = {
       "resumen": "Visor de presupuesto público y ejecución.",
       "clase": "herramienta",
       "grupo": "datos",
+      "dominio": "presupuesto-gasto-publico",
       "padre": "cochid.datos",
       "orden": 33,
       "icono": "moneda",
@@ -2007,7 +2043,7 @@ const contrato = {
       "etiqueta": "Preguntas frecuentes",
       "resumen": "Respuestas sobre consulta, descarga y uso de los datos.",
       "clase": "pagina",
-      "grupo": "sobre",
+      "grupo": "datos",
       "padre": "cochid.datos",
       "orden": 45,
       "icono": "help",
@@ -2073,7 +2109,7 @@ const contrato = {
       "etiqueta": "Acceso a datos y API",
       "resumen": "Formas de descargar y conectar aplicaciones con Datos.",
       "clase": "pagina",
-      "grupo": "servicios",
+      "grupo": "datos",
       "padre": "cochid.datos",
       "orden": 47,
       "icono": "key",
@@ -2108,7 +2144,7 @@ const contrato = {
       "etiqueta": "Planes",
       "resumen": "Opciones de acceso y orientación para usar los datos.",
       "clase": "pagina",
-      "grupo": "servicios",
+      "grupo": "datos",
       "padre": "cochid.datos",
       "orden": 48,
       "icono": "briefcase",
@@ -2347,6 +2383,7 @@ const contrato = {
       "resumen": "Vista temática de indicadores económicos publicados por Datos.",
       "clase": "vista",
       "grupo": "datos",
+      "dominio": "economia-trabajo",
       "padre": null,
       "orden": 10,
       "icono": "chart",
@@ -2386,6 +2423,7 @@ const contrato = {
       "resumen": "Resultados y datos electorales consultables.",
       "clase": "producto",
       "grupo": "datos",
+      "dominio": "elecciones-congreso",
       "padre": null,
       "orden": 11,
       "icono": "urna",
@@ -2462,6 +2500,7 @@ const contrato = {
       "resumen": "Búsqueda y análisis de fuentes legales chilenas.",
       "clase": "producto",
       "grupo": "datos",
+      "dominio": "legislacion",
       "padre": null,
       "orden": 13,
       "icono": "balanza",
@@ -2501,6 +2540,7 @@ const contrato = {
       "resumen": "Atlas para explorar territorio, movilidad e infraestructura.",
       "clase": "producto",
       "grupo": "territorio",
+      "dominio": "territorio-clima",
       "padre": null,
       "orden": 1,
       "icono": "map",
@@ -2541,6 +2581,7 @@ const contrato = {
       "resumen": "Modelo de Santiago para explorar rutas, tiempos de viaje, accesos y servicios cercanos.",
       "clase": "vista",
       "grupo": "territorio",
+      "dominio": "territorio-clima",
       "padre": "cochid.mapas",
       "orden": 2,
       "icono": "city",
@@ -2579,7 +2620,7 @@ const contrato = {
       "etiqueta": "Medicamentos en revisión",
       "resumen": "Superficie de revisión previa a publicación.",
       "clase": "staging",
-      "grupo": "investigaciones",
+      "grupo": "fuera",
       "padre": null,
       "orden": 30,
       "icono": "flask",
@@ -2610,6 +2651,7 @@ const contrato = {
       "resumen": "Investigación sobre acceso sostenible a medicamentos.",
       "clase": "producto",
       "grupo": "investigaciones",
+      "dominio": "salud-medicamentos",
       "padre": null,
       "orden": 1,
       "icono": "cross",
@@ -2646,9 +2688,9 @@ const contrato = {
       "etiqueta": "Mundial",
       "resumen": "Vista temática de datos y contexto del campeonato mundial.",
       "clase": "vista",
-      "grupo": "datos",
+      "grupo": "especiales",
       "padre": null,
-      "orden": 14,
+      "orden": 1,
       "icono": "globe",
       "portafolio": "fuera",
       "fragmento_es_ruta": true,
@@ -2660,16 +2702,13 @@ const contrato = {
         "paleta": true
       },
       "sitemap": {
-        "frecuencia": "weekly",
+        "frecuencia": "yearly",
         "prioridad": 0.5,
         "fuente": "estatica"
       },
       "robots": "indexable",
-      "hermanos": [
-        "cochid.datos",
-        "cochid.elecciones",
-        "cochid.economia"
-      ],
+      "hermanos": [],
+      "estado_presentacion": "Proyecto terminado el 19 de julio de 2026",
       "estado": "vivo",
       "marca": "cochid",
       "titular": "cochid",
@@ -2751,7 +2790,7 @@ const contrato = {
       "etiqueta": "Guía de estilo",
       "resumen": "Referencia técnica de estilo y activos.",
       "clase": "api",
-      "grupo": "herramientas",
+      "grupo": "fuera",
       "padre": null,
       "orden": 30,
       "icono": "palette",
@@ -2818,7 +2857,7 @@ const contrato = {
       "etiqueta": "Martín Illanes · Tesis",
       "resumen": "Proyecto personal de Martín Illanes: tesis sobre empresas biotecnológicas de Chile.",
       "clase": "personal",
-      "grupo": "personal",
+      "grupo": "fuera",
       "padre": null,
       "orden": 2,
       "icono": "book",
@@ -2852,7 +2891,7 @@ const contrato = {
       "etiqueta": "Teselas",
       "resumen": "Infraestructura para servir teselas de mapas.",
       "clase": "api",
-      "grupo": "territorio",
+      "grupo": "fuera",
       "padre": null,
       "orden": 31,
       "icono": "map",
@@ -2883,6 +2922,7 @@ const contrato = {
       "resumen": "Producto de transporte conectado con las vistas territoriales.",
       "clase": "producto",
       "grupo": "territorio",
+      "dominio": "transporte-infraestructura",
       "padre": null,
       "orden": 6,
       "icono": "bus",
@@ -2922,6 +2962,7 @@ const contrato = {
       "resumen": "Vista territorial de red ferroviaria y trazados.",
       "clase": "vista",
       "grupo": "territorio",
+      "dominio": "transporte-infraestructura",
       "padre": null,
       "orden": 4,
       "icono": "train",
@@ -2956,7 +2997,7 @@ const contrato = {
       "etiqueta": "Navegador remoto",
       "resumen": "Herramienta técnica fuera de la navegación pública.",
       "clase": "herramienta",
-      "grupo": "servicios",
+      "grupo": "fuera",
       "padre": null,
       "orden": 22,
       "icono": "lock",
@@ -2986,7 +3027,7 @@ const contrato = {
       "etiqueta": "COCHID",
       "resumen": "Alias del portal COCHID.",
       "clase": "alias",
-      "grupo": "sobre",
+      "grupo": "fuera",
       "padre": null,
       "orden": 31,
       "icono": "home",

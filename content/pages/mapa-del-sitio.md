@@ -1,6 +1,6 @@
 ---
 titulo: Mapa del sitio
-descripcion: Todas las páginas y sitios públicos de COCHID en un solo lugar, agrupados por datos, mapas, investigaciones y herramientas.
+descripcion: Todas las páginas y sitios públicos de COCHID en un solo lugar, agrupados por datos, territorio, investigaciones, herramientas y especiales.
 ruta: /mapa-del-sitio/
 ---
 
@@ -16,7 +16,7 @@ Verificado el {fecha}: {n} destinos revisados, {m} con problemas.
 
 Filtro: Escribe para filtrar el mapa (por ejemplo, «presupuesto» o «mapas»).
 
-<!-- Árbol generado: Datos · Mapas y territorio · Investigaciones · Herramientas · Sobre COCHID -->
+<!-- Árbol generado: Datos · Territorio · Investigaciones · Herramientas · Especiales -->
 
 ## Lo que no está en este mapa
 

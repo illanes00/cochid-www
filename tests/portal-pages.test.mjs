@@ -73,6 +73,10 @@ test('publica el registro y genera desde él el mapa del sitio', () => {
   assert.match(mapa, /Verificado el 1 de octubre de 2026/);
   assert.match(mapa, /https:\/\/mapas\.cochid\.cl\/ciudad/);
   assert.match(mapa, /mapas\.cochid\.cl\/ciudad/);
+  const grupos = [...mapa.matchAll(/<section><h2>([^<]+)<\/h2>/g)].map(coincidencia => coincidencia[1]);
+  assert.deepEqual(grupos, ['Datos', 'Territorio', 'Investigaciones', 'Herramientas', 'Especiales']);
+  assert.match(mapa, /Mundial[\s\S]{0,500}Proyecto terminado el 19 de julio de 2026/);
+  assert.doesNotMatch(mapa, /Fuera de COCHID/);
   assert.ok(existsSync(new URL('sitemap-hosts.xml', dist)));
 });
 
