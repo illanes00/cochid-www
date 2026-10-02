@@ -63,7 +63,7 @@ Vistas: [Transporte](https://tpte.cochid.cl/) · [Cables](https://cables.cochid.
 Ícono: brújula
 Posición de centros de estudio chilenos entre 1990 y 2026, a partir de codificación experta y de sus publicaciones.
 Temas: [Centros de estudio](https://datos.cochid.cl/tema/centros-estudio)
-Vistas: [Thesis](https://thesis.cochid.cl/)
+Vistas: [Fuentes y publicaciones](https://datos.cochid.cl/centros-estudio)
 :::
 
 ## Vistas y observatorios

@@ -38,14 +38,6 @@ Qué pierde la mañana cuando se adelanta el reloj en Santiago: el horario vigen
 [Leer el cuaderno](/cambio-de-hora/)
 :::
 
-## Entornos de investigación
-
-::: tarjetas
-### Thesis
-[thesis.cochid.cl](https://thesis.cochid.cl/)
-Panel de investigación con datos chilenos: empresas, patentes, bibliografía y afirmaciones verificables, para relacionar indicadores y evidencia.
-:::
-
 ## Pedir un estudio
 
 Si necesitas un análisis sobre un tema, una institución o un territorio, [pide un informe](/asesoria/?tipo=informe).

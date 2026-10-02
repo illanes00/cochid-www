@@ -43,8 +43,12 @@ class ProjectsContract(unittest.TestCase):
         self.assertLess(self.html.index('id="estudio-destacado"'), self.html.index('id="proyectos"'))
         self.assertIn('href="#proyectos">Ver todos los proyectos', self.html)
 
+    def test_personal_thesis_is_not_listed_as_a_cochid_project(self):
+        self.assertNotIn("https://thesis.cochid.cl/", self.links.hrefs)
+        self.assertNotIn("thesis.cochid.cl", self.html)
+
     def test_published_project_destinations_are_reachable_from_home_source(self):
-        for host in ("datos", "economia", "congreso", "lex", "elecciones", "mundial", "mapas", "tpte", "bici", "cables", "clima", "taller", "medicamentos", "thesis", "graphs", "scribe", "vpn", "peru", "sdr"):
+        for host in ("datos", "economia", "congreso", "lex", "elecciones", "mundial", "mapas", "tpte", "bici", "cables", "clima", "taller", "medicamentos", "graphs", "scribe", "vpn", "peru", "sdr"):
             self.assertIn(f"https://{host}.cochid.cl/", self.links.hrefs)
         self.assertIn("https://prosa.medicamentos.cochid.cl/", self.links.hrefs)
         for path in ("/cambio-de-hora/", "/concepciones/"):

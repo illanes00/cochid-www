@@ -1,10 +1,10 @@
 {
   "schema": "cochid.destinos.v1",
-  "generado": "2026-10-01T21:43:44Z",
+  "generado": "2026-10-02T03:00:00Z",
   "fuentes": {
     "registro_sha": "dd408498bb03d12583e6111ee4fa0b8567759cd53fbb3388cb04a4cb57c13025",
     "portfolio_sha": "b746b87f014309d9617973e164de83079036cda94dfb8578b60c4c5c8fd15f5f",
-    "presentacion_sha": "4cc1ec1c1f71d25b48de992ab7aba07652383faab6e4de9cab3f649d60cad464"
+    "presentacion_sha": "bfe53aa68f7195675aeb225faf0b4b59b928ee0c94f7d0d831567ad7919c224e"
   },
   "grupos": [
     {
@@ -42,6 +42,12 @@
       "etiqueta": "Sobre COCHID",
       "icono": "info",
       "orden": 6
+    },
+    {
+      "id": "personal",
+      "etiqueta": "Proyectos personales",
+      "icono": "book",
+      "orden": 7
     }
   ],
   "dominios": [
@@ -2621,8 +2627,8 @@
       },
       "robots": "indexable",
       "hermanos": [
-        "cochid.thesis",
-        "cochid.apex.investigaciones"
+        "cochid.apex.investigaciones",
+        "cochid.apex.concepciones"
       ],
       "estado": "vivo",
       "marca": "cochid",
@@ -2808,21 +2814,19 @@
       "id": "cochid.thesis",
       "host": "thesis.cochid.cl",
       "ruta": "/",
-      "etiqueta": "Tesis",
-      "resumen": "Espacio de investigación y desarrollo de tesis.",
-      "clase": "producto",
-      "grupo": "investigaciones",
+      "etiqueta": "Martín Illanes · Tesis",
+      "resumen": "Proyecto personal de Martín Illanes: tesis sobre empresas biotecnológicas de Chile.",
+      "clase": "personal",
+      "grupo": "personal",
       "padre": null,
       "orden": 2,
       "icono": "book",
-      "site_id": "site.cochid.thesis",
-      "node_id": "product.cochid.thesis",
       "visible": {
         "cabecera": false,
-        "pie": true,
-        "mapa_del_sitio": true,
+        "pie": false,
+        "mapa_del_sitio": false,
         "sitemap": true,
-        "paleta": true
+        "paleta": false
       },
       "sitemap": {
         "frecuencia": "weekly",
@@ -2830,13 +2834,11 @@
         "fuente": "estatica"
       },
       "robots": "indexable",
-      "hermanos": [
-        "cochid.medicamentos",
-        "cochid.apex.investigaciones"
-      ],
+      "hermanos": [],
+      "portafolio": "fuera",
+      "marca": "personal",
+      "titular": "martin-illanes",
       "estado": "vivo",
-      "marca": "cochid",
-      "titular": "cochid",
       "alias_de": null,
       "reemplazado_por": null,
       "fragmento_es_ruta": false,

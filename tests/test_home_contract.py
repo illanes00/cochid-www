@@ -100,7 +100,6 @@ class CochidHomeContractTests(unittest.TestCase):
                 "congreso",
                 "elecciones",
                 "scribe",
-                "thesis",
             ],
             parser.products,
         )
@@ -129,7 +128,6 @@ class CochidHomeContractTests(unittest.TestCase):
                 "Cochid · Congreso",
                 "Cochid · Elecciones",
                 "Cochid · Scribe",
-                "Cochid · Thesis",
             ],
             [offer["name"] for offer in organization["makesOffer"]],
         )
