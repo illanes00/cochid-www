@@ -17,7 +17,7 @@ test('compone la portada con los parciales canónicos de la familia', () => {
   for (const parcial of ['partials/head.html', 'partials/header.html', 'partials/footer.html', 'partials/migas.html']) {
     assert.doesNotThrow(() => leer(parcial), `falta ${parcial}`);
   }
-  assert.match(pagina, /class="cochid-producto"[^>]*>Portal<\/a>/);
+  assert.doesNotMatch(pagina, /cochid-producto/);
   for (const rotulo of ['Datos', 'Mapas', 'Investigaciones', 'Presupuesto']) {
     assert.match(pagina, new RegExp(`>${rotulo}<\\/a>`));
   }

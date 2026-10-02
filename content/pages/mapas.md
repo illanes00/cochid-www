@@ -13,8 +13,9 @@ ruta: /mapas/
 
 # Mapas y territorio
 
-Mapas para relacionar lugares, capas y redes. Todos los mapas usan datos con fuente declarada.
+Todos los mapas usan datos con fuente declarada.
 
+::: tarjetas
 ## Atlas
 [mapas.cochid.cl](https://mapas.cochid.cl/)
 Atlas interactivo de datos territoriales de Chile y Sudamérica. Reúne las capas publicadas por COCHID en un mismo mapa, con su fuente, licencia y atribución.
@@ -42,6 +43,7 @@ El recorrido físico de internet: servidores de nombres, redes y cables submarin
 ## Clima
 [clima.cochid.cl](https://clima.cochid.cl/)
 Mapa meteorológico de Chile continental e insular: relieve, pronóstico horario animado, búsqueda de localidades, pronóstico a catorce días e imágenes satelitales, con sus fuentes.
+:::
 
 ## Para equipos que trabajan con mapas
 

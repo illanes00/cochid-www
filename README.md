@@ -5,6 +5,12 @@ de aplicación: `scripts/build.mjs` compone HTML estático en `dist/` a partir d
 la portada, los especiales, los Markdown de `content/pages/` y los parciales de
 `partials/`.
 
+Los bloques `::: tarjetas` y `::: dominios` de los Markdown se convierten en
+grillas con `scripts/tarjetas.mjs`. Los íconos salen solo de
+`scripts/iconos.mjs`: un nombre sin SVG detiene el build y la línea `Ícono:` es
+metadato, nunca texto publicado. La grilla de `/datos/` se valida contra los
+dominios de `destinos.json`, y la portada reutiliza sus seis primeros.
+
 La cabecera, el pie y el mapa del sitio se derivan del registro vendorizado en
 `data/`. `data/SHA256SUMS` permite comprobar que `destinos.mjs` y
 `destinos.publico.json` corresponden al mismo corte de core-style. Para cambiar

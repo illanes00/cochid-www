@@ -12,8 +12,6 @@ ruta: /mapa-del-sitio/
 
 # Mapa del sitio
 
-Todas las páginas y sitios públicos de COCHID, agrupados por lo que permiten hacer. Cada entrada indica su dirección y si es un producto, una vista de otro producto o una herramienta.
-
 Verificado el {fecha}: {n} destinos revisados, {m} con problemas.
 
 Filtro: Escribe para filtrar el mapa (por ejemplo, «presupuesto» o «mapas»).

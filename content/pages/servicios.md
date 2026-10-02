@@ -17,23 +17,22 @@ Los datos de COCHID se consultan y descargan gratis. Si necesitas algo que el ca
 - Descarga de cada conjunto en CSV o Excel, hasta 10.000 filas por archivo.
 - Descarga de los archivos originales de las fuentes desde la [Biblioteca](https://datos.cochid.cl/biblioteca).
 
+::: tarjetas
 ## Datos a medida
-
-Un corte que no está publicado: otra desagregación territorial, otro período, una combinación de fuentes o un formato distinto. Recibes el archivo con la descripción de las columnas, las fuentes usadas y la fecha de corte.
-
-Se cotiza. [Pide una cotización](/asesoria/?tipo=dato-a-medida).
+Ícono: tabla
+Un corte que no está publicado: otra desagregación territorial, otro período, una combinación de fuentes o un formato distinto. Recibes el archivo con la descripción de las columnas, las fuentes usadas y la fecha de corte. Se cotiza.
+[Pide una cotización](/asesoria/?tipo=dato-a-medida)
 
 ## Descarga completa
-
-El conjunto entero cuando supera las 10.000 filas de la descarga gratuita, o varios conjuntos juntos.
-
-Se cotiza. [Pide una cotización](/asesoria/?tipo=descarga-masiva).
+Ícono: descarga
+El conjunto entero cuando supera las 10.000 filas de la descarga gratuita, o varios conjuntos juntos. Se cotiza.
+[Pide una cotización](/asesoria/?tipo=descarga-masiva)
 
 ## Informe a pedido
-
-Un análisis escrito sobre un tema, una institución o un territorio, con cifras, gráficos y la lista de fuentes y archivos usados.
-
-Se cotiza. [Pide una cotización](/asesoria/?tipo=informe).
+Ícono: informe
+Un análisis escrito sobre un tema, una institución o un territorio, con cifras, gráficos y la lista de fuentes y archivos usados. Se cotiza.
+[Pide una cotización](/asesoria/?tipo=informe)
+:::
 
 ## Planes de la API
 

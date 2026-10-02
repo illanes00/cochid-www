@@ -1,8 +1,10 @@
 import {readFile,writeFile,mkdir,cp,rm} from 'node:fs/promises';
 import {yearData,monthlyData,hhmm,MONTHS} from '../cambio-de-hora/solar.mjs';
 import {cargarDatos,tablas,verificarContrato} from './tablas-concepciones.mjs';
-import {destinos,familia,navegacionPrimaria,pie} from '../data/destinos.mjs';
+import {destinos,dominios,familia,navegacionPrimaria,pie} from '../data/destinos.mjs';
 import {depurarMarkdown,leerFrontmatter,markdownAHtml} from './markdown.mjs';
+import {iconoSvg} from './iconos.mjs';
+import {completarIconos,grillaHtml,leerTarjetas,validarDominios} from './tarjetas.mjs';
 
 const root=new URL('../',import.meta.url), out=new URL('../dist/',import.meta.url);
 const rutasPortalPublicadas=new Set([
@@ -85,7 +87,7 @@ function arbolDestinos(){
   const hijos=incluidos.filter(candidato=>candidato.padre===destino.id)
    .sort((a,b)=>a.orden-b.orden||a.etiqueta.localeCompare(b.etiqueta,'es'));
   const tipo=destino.grupo==='investigaciones'?'Investigación':etiquetasTipo[destino.clase]||destino.clase;
-  return `<li data-map-item><a href="${escapar(hrefDestino(destino))}">${escapar(destino.etiqueta)}</a> <span class="portal-tipo">${escapar(tipo)}</span><span class="portal-host">${escapar(destino.host+destino.ruta)}</span><p>${escapar(destino.resumen)}</p>${hijos.length?`<ul>${hijos.map(item).join('')}</ul>`:''}</li>`;
+  return `<li data-map-item><a href="${escapar(hrefDestino(destino))}">${escapar(destino.etiqueta)}</a> <span class="badge portal-tipo">${escapar(tipo)}</span><span class="portal-host">${escapar(destino.host+destino.ruta)}</span><p>${escapar(destino.resumen)}</p>${hijos.length?`<ul>${hijos.map(item).join('')}</ul>`:''}</li>`;
  };
  return `<div class="portal-arbol">${ordenGrupos.map(grupo=>{
   const grupoDestinos=incluidos.filter(destino=>destino.grupo===grupo && (!destino.padre || !ids.has(destino.padre) || destinos.find(candidato=>candidato.id===destino.padre)?.grupo!==grupo))
@@ -96,6 +98,29 @@ function arbolDestinos(){
 
 const filtroMapa='<div class="portal-filtro"><label for="filtro-destinos">Filtrar el mapa</label><input id="filtro-destinos" type="search" autocomplete="off" placeholder="Por ejemplo, presupuesto o mapas"></div>';
 const scriptMapa='<script>document.querySelector("#filtro-destinos")?.addEventListener("input",event=>{const consulta=event.target.value.toLocaleLowerCase("es").trim();document.querySelectorAll("[data-map-item]").forEach(item=>{item.hidden=consulta!==""&&!item.textContent.toLocaleLowerCase("es").includes(consulta)})})</script>';
+
+/* Tarjetas de los Markdown editoriales. Los dominios cruzan su texto con el
+   contrato de destinos.json; las demás toman el ícono del registro o de su
+   línea «Ícono:», que nunca llega al HTML. */
+function bloqueTarjetas(tipo,lineas){
+ const tarjetas=completarIconos(leerTarjetas(lineas),destinos);
+ if(tipo==='dominios')return grillaHtml(validarDominios(tarjetas,dominios),{maxEnlaces:3,rotuloEnlaces:'Temas y vistas'});
+ if(tipo==='tarjetas')return grillaHtml(tarjetas);
+ throw new Error(`Bloque de tarjetas desconocido: ${tipo}`);
+}
+
+async function dominiosPublicados(){
+ const {meta,markdown}=leerFrontmatter(await readFile(new URL('content/pages/datos.md',root),'utf8'));
+ const bloque=depurarMarkdown(markdown,meta.ruta).match(/^::: dominios\n([\s\S]*?)\n:::$/m);
+ if(!bloque)throw new Error('content/pages/datos.md no declara el bloque ::: dominios');
+ return validarDominios(completarIconos(leerTarjetas(bloque[1].split('\n')),destinos),dominios);
+}
+
+function vistasDominios(lista){
+ const vistas=new Map();
+ for(const dominio of lista)for(const vista of dominio.vistas)if(!vistas.has(vista.href))vistas.set(vista.href,vista);
+ return `<ul class="portal-vistas">${[...vistas.values()].map(vista=>`<li><a href="${escapar(vista.href)}">${escapar(vista.texto)}</a></li>`).join('')}</ul>`;
+}
 
 async function paginaEditorial(nombre){
  const fuente=await readFile(new URL(`content/pages/${nombre}.md`,root),'utf8');
@@ -112,7 +137,8 @@ async function paginaEditorial(nombre){
   extras['@@ARBOL_DESTINOS@@']=arbolDestinos();
   script=scriptMapa;
  }
- const cuerpo=markdownAHtml(depurarMarkdown(contenido,meta.ruta),extras);
+ if(meta.ruta==='/datos/')extras['@@VISTAS_DOMINIOS@@']=vistasDominios(await dominiosPublicados());
+ const cuerpo=markdownAHtml(depurarMarkdown(contenido,meta.ruta),extras,{bloque:bloqueTarjetas});
  const migas=reemplazar(migasTemplate,{MIGAS:`<li><a href="/">Inicio</a></li><li aria-current="page">${escapar(meta.titulo)}</li>`},'migas');
  const pagina=reemplazar(paginaTemplate,{
   TITULO:escapar(meta.titulo),DESCRIPCION:escapar(meta.descripcion),RUTA:escapar(meta.ruta),
@@ -129,7 +155,14 @@ await mkdir(out,{recursive:true});
 await cp(new URL('assets/',root),new URL('assets/',out),{recursive:true});
 await cp(new URL('robots.txt',root),new URL('robots.txt',out));
 await cp(new URL('data/destinos.publico.json',root),new URL('destinos.json',out));
-const home=sinComentariosHtml(chrome(await readFile(new URL('index.html',root),'utf8'),'/'));
+/* La portada recibe la grilla compacta con los seis primeros dominios y los
+   íconos de sus accesos desde el mismo módulo que las páginas editoriales. */
+let home=chrome(await readFile(new URL('index.html',root),'utf8'),'/');
+const dominiosPortada=(await dominiosPublicados()).slice(0,6).map(dominio=>({...dominio,nivel:3}));
+if(!home.includes('<!--DOMINIOS_COMPACTOS-->'))throw new Error('index.html no tiene el marcador DOMINIOS_COMPACTOS');
+home=home.replace('<!--DOMINIOS_COMPACTOS-->',grillaHtml(dominiosPortada,{compacta:true}))
+ .replace(/<!--ICONO:([a-z]+)-->/g,(_,nombre)=>iconoSvg(nombre,{tamano:28,clase:'task-icon'}));
+home=sinComentariosHtml(home);
 await writeFile(new URL('index.html',out),home);
 for(const nombre of ['quienes-somos','contacto','servicios','datos','mapas','herramientas','investigaciones','documentacion','mapa-del-sitio']){
  await paginaEditorial(nombre);

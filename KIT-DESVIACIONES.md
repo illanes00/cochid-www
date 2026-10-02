@@ -26,11 +26,15 @@
   repo: cochid/cochid-www
   regla: H29
   que: >-
-    assets/portal.css añade la composición de la marca y el nombre Portal del
-    contrato de familia, las migas, el ancho de lectura y el árbol del mapa del
-    sitio sobre el kit v10 candidate.43.
+    assets/portal.css añade las migas, el ancho de lectura, el enlace de
+    contenido con el trazo de .ui-content, la grilla de tarjetas (dominios,
+    productos, estudios y servicios) con su recuadro de ícono sobre
+    --accent-soft y el árbol del mapa del sitio con etiquetas .badge del kit,
+    sobre el kit v10 candidate.43. Los íconos son SVG de trazo con geometría
+    Lucide (ISC), centralizados en scripts/iconos.mjs, porque el kit no publica
+    todavía un juego de íconos de dominio.
   por_que: >-
-    El kit no incluye todavía la composición de familia ni una plantilla de
+    El kit no incluye todavía tarjetas, íconos de dominio ni una plantilla de
     contenido editorial estático. La capa usa sus tokens, no redefine el chrome
     gr-*, y no agrega gradientes, sombras, desenfoque, radios, escalado en hover
     ni transiciones sobre 200 ms.

@@ -16,6 +16,7 @@ ruta: /datos/
 
 Elige un dominio para ver sus temas, sus conjuntos de datos y las vistas que los usan. Si sabes lo que buscas, usa el [buscador del catálogo](https://datos.cochid.cl/catalogo).
 
+::: dominios
 ## Presupuesto y gasto público
 Ícono: moneda
 Ley de Presupuestos, ejecución, glosas, deuda y empleo público, con el archivo original de DIPRES detrás de cada cifra.
@@ -63,6 +64,13 @@ Vistas: [Transporte](https://tpte.cochid.cl/) · [Cables](https://cables.cochid.
 Posición de centros de estudio chilenos entre 1990 y 2026, a partir de codificación experta y de sus publicaciones.
 Temas: [Centros de estudio](https://datos.cochid.cl/tema/centros-estudio)
 Vistas: [Thesis](https://thesis.cochid.cl/)
+:::
+
+## Vistas y observatorios
+
+Cada dominio se consulta también en estas vistas, que usan los mismos conjuntos de datos.
+
+@@VISTAS_DOMINIOS@@
 
 ## Necesitas otro corte
 

@@ -1,33 +1,67 @@
 /* Capa común del portal estático sobre el kit v10 candidate.43. */
-.cochid-marca{display:flex;align-items:center;gap:12px;min-width:0}
-.cochid-producto{font-weight:600;font-size:var(--fs-body,1rem);color:var(--ink);text-decoration:none;padding-left:12px;border-left:1px solid var(--line-strong,var(--line));white-space:nowrap;line-height:1.2}
-.cochid-producto:hover{text-decoration:underline;text-underline-offset:3px}
-.cochid-producto:focus-visible,.gr-nav__brand:focus-visible{outline:2px solid var(--accent);outline-offset:3px}
-.cochid-marca .gr-nav__brand{order:0}
+.gr-nav__brand:focus-visible{outline:2px solid var(--accent);outline-offset:3px}
 .portal-migas ol{display:flex;flex-wrap:wrap;gap:.35rem;list-style:none;padding:0;margin:0 0 1.5rem;color:var(--ink-muted)}
 .portal-migas li+li::before{content:"/";margin-right:.35rem;color:var(--ink-soft)}
 .portal-contenido{width:min(100% - 2rem,var(--container));margin:0 auto;padding:2.5rem 0 4rem}
 .portal-contenido>header{max-width:52rem;margin-bottom:2rem}
 .portal-contenido>header p{font-size:var(--fs-lg,1.125rem);color:var(--ink-muted)}
-.portal-cuerpo{max-width:52rem}
+.portal-cuerpo>:where(:not(.portal-tarjetas,.portal-arbol)){max-width:52rem}
 .portal-cuerpo h2{margin-top:2.5rem}
 .portal-cuerpo h3{margin-top:1.75rem}
 .portal-cuerpo table{width:100%;border-collapse:collapse}
 .portal-cuerpo th,.portal-cuerpo td{padding:.65rem;border:1px solid var(--line);text-align:left;vertical-align:top}
-.portal-cuerpo pre{box-sizing:border-box;max-width:100%;overflow:auto;padding:1rem;border:1px solid var(--line);background:var(--paper-raised);white-space:pre-wrap;overflow-wrap:anywhere}
+.portal-cuerpo pre{box-sizing:border-box;max-width:min(100%,52rem);overflow:auto;padding:1rem;border:1px solid var(--line);background:var(--paper-raised);white-space:pre-wrap;overflow-wrap:anywhere}
 .portal-cuerpo :not(pre)>code{white-space:normal;overflow-wrap:anywhere;word-break:break-word}
-.portal-tabla{max-width:100%;overflow-x:auto}
+.portal-tabla{max-width:min(100%,52rem);overflow-x:auto}
 .portal-tabla:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
 .portal-cuerpo p{line-height:1.65;overflow-wrap:anywhere}
 .portal-cuerpo li{margin-block:.35rem}
+/* El kit reinicia las listas; las del contenido editorial recuperan viñetas y números. */
+.portal-cuerpo>ul:not([class]){list-style:disc outside;padding-inline-start:1.4em}
+.portal-cuerpo>ol:not([class]){list-style:decimal outside;padding-inline-start:1.6em}
 .portal-cuerpo a{overflow-wrap:anywhere}
+/* Enlace de contenido con el trazo del kit (.ui-content a:not([class])). */
+.portal-cuerpo a:not([class]),.portal-enlace{color:var(--accent);text-decoration-line:underline;text-decoration-thickness:1px;text-underline-offset:3px}
+.portal-cuerpo a:not([class]):hover,.portal-enlace:hover{text-decoration-thickness:2px}
+.portal-cuerpo a:focus-visible,.portal-enlace:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+.portal-mas{margin:1.25rem 0 0}
+.portal-vistas{display:flex;flex-wrap:wrap;gap:.5rem 1.25rem;list-style:none;padding:0}
+.portal-vistas li{margin:0}
+/* Tarjetas: grilla 1/2/3 columnas; el título estira su enlace a toda la tarjeta. */
+.portal-tarjetas{display:grid;grid-template-columns:minmax(0,1fr);gap:1rem;list-style:none;padding:0;margin:1.5rem 0 0}
+@media (min-width:640px){.portal-tarjetas{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (min-width:1024px){.portal-tarjetas{grid-template-columns:repeat(3,minmax(0,1fr))}}
+.portal-tarjetas>li{margin:0}
+.portal-tarjeta{position:relative;display:flex;flex-direction:column;gap:.6rem;min-width:0;padding:1.25rem;border:1px solid var(--line);background:var(--paper)}
+.portal-tarjeta:hover{border-color:var(--accent)}
+.portal-tarjeta:has(.portal-tarjeta__enlace:focus-visible){outline:2px solid var(--accent);outline-offset:2px}
+.portal-tarjeta__icono{display:inline-flex;align-items:center;justify-content:center;flex-shrink:0;width:2.5rem;height:2.5rem;background:var(--accent-soft);color:var(--accent)}
+.portal-cuerpo .portal-tarjeta__titulo,.portal-tarjeta__titulo{margin:.25rem 0 0;font-size:1.15rem;line-height:1.3;font-weight:600}
+.portal-cuerpo .portal-tarjeta__enlace,.portal-tarjeta__enlace{color:var(--ink);text-decoration:none}
+.portal-tarjeta__enlace::after{content:"";position:absolute;inset:0}
+.portal-tarjeta:hover .portal-tarjeta__enlace{color:var(--accent)}
+.portal-tarjeta__enlace:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+.portal-tarjeta p{margin:0}
+.portal-tarjeta__etiquetas{display:flex;flex-wrap:wrap;gap:.35rem}
+.portal-tarjeta__meta,.portal-tarjeta__resumen{color:var(--ink-muted);font-size:.95rem;line-height:1.55}
+.portal-tarjeta__enlaces{position:relative;z-index:1;display:flex;flex-wrap:wrap;gap:.35rem 1rem;list-style:none;margin:auto 0 0;padding:.75rem 0 0;border-top:1px solid var(--line);font-size:.92rem}
+.portal-tarjeta__enlaces li{margin:0}
+.portal-tarjeta__enlaces a{color:var(--accent);text-decoration-line:underline;text-decoration-thickness:1px;text-underline-offset:3px}
+.portal-tarjeta__enlaces a:hover{text-decoration-thickness:2px}
+.portal-tarjeta__enlaces a:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+.portal-tarjetas--compacta{gap:.75rem}
+.portal-tarjetas--compacta .portal-tarjeta{display:grid;grid-template-columns:auto minmax(0,1fr);align-items:center;column-gap:.85rem;row-gap:.35rem;padding:1rem}
+.portal-tarjetas--compacta .portal-tarjeta__icono{width:2.25rem;height:2.25rem}
+.portal-tarjetas--compacta .portal-tarjeta__titulo{margin:0;font-size:1.05rem}
+.portal-tarjetas--compacta .portal-tarjeta__resumen{grid-column:1/-1;font-size:.9rem}
 .portal-accesos ul{display:flex;flex-wrap:wrap;gap:.65rem 1.1rem;list-style:none;padding:0}
 .portal-accesos h2{margin-top:0}
 .portal-meta{margin-top:3rem;padding-top:1rem;border-top:1px solid var(--line);color:var(--ink-muted);font-size:.9rem}
-.portal-arbol{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,18rem),1fr));gap:1rem;max-width:none}
+.portal-arbol{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,18rem),1fr));gap:1rem;align-items:start}
 .portal-arbol section{padding:1rem;border:1px solid var(--line)}
+.portal-cuerpo .portal-arbol h2{margin-top:0}
 .portal-arbol ul{padding-left:1.2rem}
-.portal-tipo{color:var(--ink-muted);font-size:.85rem}
+.portal-tipo{margin-inline-start:.4rem;padding:1px 6px;vertical-align:2px}
 .portal-host{display:block;color:var(--ink-muted);font-family:var(--font-mono);font-size:.78rem;overflow-wrap:anywhere}
 .portal-arbol li>p{margin:.25rem 0 .5rem;font-size:.9rem}
 .portal-filtro{display:grid;gap:.4rem;max-width:32rem;margin:1.5rem 0}

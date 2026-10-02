@@ -7,7 +7,7 @@ const {chromium} = require('@playwright/test');
 const AxeBuilder = require('@axe-core/playwright').default;
 
 const base = process.env.COCHID_QA_BASE || 'http://127.0.0.1:18547';
-const salida = process.env.COCHID_QA_OUT || '/srv/projects/tasks/cochid-portal-20261001/qa/apex';
+const salida = process.env.COCHID_QA_OUT || '/srv/projects/tasks/cochid-portal-20261001/qa/apex-r2';
 const rutasBase = [
   '/', '/quienes-somos/', '/contacto/', '/servicios/', '/datos/', '/mapas/',
   '/herramientas/', '/investigaciones/', '/documentacion/', '/mapa-del-sitio/',
@@ -63,6 +63,15 @@ try {
         }));
         if (desborde.scroll > desborde.viewport + 1) fallos.push(`${id}: desborde ${JSON.stringify(desborde)}`);
 
+        /* Las capturas de revisión van sin foco de teclado ni hover: el foco se
+           prueba aparte, después de capturar. */
+        await page.mouse.move(0, 0);
+        await page.evaluate(() => document.activeElement?.blur?.());
+        const sinFoco = await page.evaluate(() => document.activeElement === document.body || document.activeElement === null);
+        if (!sinFoco) fallos.push(`${id}: la captura tendría foco visible`);
+        await page.screenshot({path: join(salida, `${id}.png`), fullPage: false});
+        await page.screenshot({path: join(salida, `${id}-completa.png`), fullPage: true});
+
         await page.locator('body').press('Tab');
         const foco = await page.evaluate(() => {
           const activo = document.activeElement;
@@ -83,6 +92,7 @@ try {
           await boton.click();
           const abierto = await boton.getAttribute('aria-expanded');
           const navegacionVisible = await page.locator('.gr-nav__links').isVisible();
+          await page.screenshot({path: join(salida, `${id}-menu.png`), fullPage: false});
           await page.keyboard.press('Escape');
           menu = {
             abierto,
@@ -100,8 +110,7 @@ try {
         if (graves.length) fallos.push(`${id}: Axe ${graves.map(v => `${v.id}:${v.impact}`).join(',')}`);
         if (erroresPagina.length) fallos.push(`${id}: errores JS ${erroresPagina.join(' | ')}`);
 
-        await page.screenshot({path: join(salida, `${id}.png`), fullPage: false});
-        casos.push({id, ruta, ancho: vista.width, tema, axeGraves: graves.length, desborde, foco, menu, erroresPagina});
+        casos.push({id, ruta, ancho: vista.width, tema, axeGraves: graves.length, sinFocoEnCaptura: sinFoco, desborde, foco, menu, erroresPagina});
         await context.close();
       }
     }
@@ -115,11 +124,11 @@ const recibo = {
   base,
   rutas: rutas.length,
   casos: casos.length,
-  capturas: casos.length,
+  capturas: casos.length * 2 + casos.filter(caso => caso.menu).length,
   axeSeriasOCriticas: casos.reduce((total, caso) => total + caso.axeGraves, 0),
   fallos,
   resultados: casos,
 };
 writeFileSync(join(salida, 'recibo.json'), `${JSON.stringify(recibo, null, 2)}\n`);
 if (fallos.length) throw new Error(`QA falló (${fallos.length}):\n${fallos.join('\n')}`);
-console.log(JSON.stringify({rutas: recibo.rutas, casos: recibo.casos, capturas: recibo.capturas, axeSeriasOCriticas: 0, fallos: 0}));
+console.log(JSON.stringify({rutas: recibo.rutas, casos: recibo.casos, capturas: recibo.capturas, axeSeriasOCriticas: 0, sinFocoEnCaptura: casos.filter(caso => caso.sinFocoEnCaptura).length, fallos: 0}));

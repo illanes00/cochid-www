@@ -41,7 +41,7 @@ export function depurarMarkdown(markdown, ruta) {
 const slug = texto => texto.normalize('NFD').replace(/[\u0300-\u036f]/g, '')
   .toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '');
 
-function inline(texto) {
+export function inline(texto) {
   const codigos = [];
   let salida = texto.replace(/`([^`]+)`/g, (_, codigo) => {
     const token = `@@CODIGO${codigos.length}@@`;
@@ -58,7 +58,9 @@ function inline(texto) {
 const esSeparadorTabla = linea => /^\|?\s*:?-{3,}/.test(linea);
 const celdas = linea => linea.replace(/^\||\|$/g, '').split('|').map(celda => celda.trim());
 
-export function markdownAHtml(markdown, extras = {}) {
+/* Un bloque `::: tipo` … `:::` se entrega entero a `bloque(tipo, lineas)`,
+   que devuelve su HTML; así las tarjetas no dependen de este parser. */
+export function markdownAHtml(markdown, extras = {}, {bloque} = {}) {
   const lineas = markdown.split('\n');
   const salida = [];
   let indice = 0;
@@ -66,6 +68,17 @@ export function markdownAHtml(markdown, extras = {}) {
     const linea = lineas[indice];
     if (!linea.trim()) { indice += 1; continue; }
     if (extras[linea.trim()]) { salida.push(extras[linea.trim()]); indice += 1; continue; }
+    const apertura = linea.match(/^:::\s*([a-z]+)\s*$/);
+    if (apertura) {
+      const cuerpo = [];
+      indice += 1;
+      while (indice < lineas.length && lineas[indice].trim() !== ':::') cuerpo.push(lineas[indice++]);
+      if (indice >= lineas.length) throw new Error(`Bloque ::: ${apertura[1]} sin cerrar`);
+      if (!bloque) throw new Error(`Bloque ::: ${apertura[1]} sin intérprete`);
+      indice += 1;
+      salida.push(bloque(apertura[1], cuerpo));
+      continue;
+    }
     if (linea.startsWith('```')) {
       const codigo = [];
       indice += 1;
@@ -111,7 +124,7 @@ export function markdownAHtml(markdown, extras = {}) {
     const parrafo = [linea.trim()];
     indice += 1;
     while (indice < lineas.length && lineas[indice].trim()
-      && !/^(#{1,6})\s|^```|^\s*(-|\d+\.)\s+|^>\s|^\|/.test(lineas[indice])
+      && !/^(#{1,6})\s|^```|^:::|^\s*(-|\d+\.)\s+|^>\s|^\|/.test(lineas[indice])
       && !extras[lineas[indice].trim()]) {
       parrafo.push(lineas[indice].trim());
       indice += 1;

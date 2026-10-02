@@ -12,8 +12,7 @@ ruta: /herramientas/
 
 # Herramientas
 
-Herramientas para trabajar con los datos de COCHID.
-
+::: tarjetas
 ## Gráficos
 [graphs.cochid.cl](https://graphs.cochid.cl/)
 Biblioteca de figuras reproducibles. Cada figura guarda su fuente, los datos que usa, las decisiones de diseño y los archivos de descarga. Se puede enlazar o insertar en otra página.
@@ -28,7 +27,9 @@ Editor y revisor de textos del informe de medicamentos: glosario, reglas editori
 
 ## Scribe
 [scribe.cochid.cl](https://scribe.cochid.cl/) · Requiere cuenta
+Ícono: pluma
 Escritura colaborativa con evidencia, bibliografía y exportación de documentos. Incluye un flujo para tesis.
+:::
 
 ## Para desarrollar con los datos
 
