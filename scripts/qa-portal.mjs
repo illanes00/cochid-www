@@ -1,5 +1,5 @@
 import {createRequire} from 'node:module';
-import {mkdirSync, writeFileSync} from 'node:fs';
+import {mkdirSync, readFileSync, readdirSync, writeFileSync} from 'node:fs';
 import {join} from 'node:path';
 
 const require = createRequire('/srv/projects/worktrees/cochid-datos-presupuesto-release-20260930/web/package.json');
@@ -11,7 +11,10 @@ const salida = process.env.COCHID_QA_OUT || '/srv/projects/tasks/cochid-portal-2
 const rutasBase = [
   '/', '/quienes-somos/', '/contacto/', '/servicios/', '/datos/', '/mapas/',
   '/herramientas/', '/investigaciones/', '/documentacion/', '/mapa-del-sitio/',
-  '/cambio-de-hora/', '/concepciones/',
+  '/cambio-de-hora/', '/concepciones/', '/blog/', '/novedades/',
+  ...readdirSync(new URL('../content/blog/', import.meta.url))
+    .filter(nombre => nombre.endsWith('.md'))
+    .map(nombre => readFileSync(new URL(`../content/blog/${nombre}`, import.meta.url), 'utf8').match(/^ruta:\s*(\S+)$/m)[1]),
 ];
 const vistasBase = [
   {nombre: '1440', width: 1440, height: 1000},
@@ -23,7 +26,7 @@ const rutas = process.env.COCHID_QA_ROUTES ? process.env.COCHID_QA_ROUTES.split(
 const anchos = process.env.COCHID_QA_WIDTHS ? new Set(process.env.COCHID_QA_WIDTHS.split(',')) : null;
 const vistas = anchos ? vistasBase.filter(vista => anchos.has(vista.nombre)) : vistasBase;
 const temas = process.env.COCHID_QA_THEMES ? process.env.COCHID_QA_THEMES.split(',') : temasBase;
-const slug = ruta => ruta === '/' ? 'inicio' : ruta.replaceAll('/', '');
+const slug = ruta => ruta === '/' ? 'inicio' : ruta.replace(/^\/|\/$/g, '').replaceAll('/', '--');
 const fallos = [];
 const casos = [];
 

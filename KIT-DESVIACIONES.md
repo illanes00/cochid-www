@@ -30,7 +30,10 @@
     contenido con el trazo de .ui-content, la grilla de tarjetas (dominios,
     productos, estudios y servicios) con su recuadro de ícono sobre
     --accent-soft y el árbol del mapa del sitio con etiquetas .badge del kit,
-    sobre el kit v10 candidate.43. Los íconos son SVG de trazo con geometría
+    sobre el kit v10 candidate.43. Desde el corte 2c agrega el blog, las
+    novedades y el bloque «Lo nuevo» de la portada: listas con borde del kit,
+    metadatos, etiquetas .badge, cifras destacadas en --accent y separadores
+    con --line. Los íconos son SVG de trazo con geometría
     Lucide (ISC), centralizados en scripts/iconos.mjs, porque el kit no publica
     todavía un juego de íconos de dominio.
   por_que: >-

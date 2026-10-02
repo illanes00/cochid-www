@@ -67,3 +67,40 @@
 .portal-filtro{display:grid;gap:.4rem;max-width:32rem;margin:1.5rem 0}
 .portal-filtro input{font:inherit;color:var(--ink);background:var(--paper);border:1px solid var(--line-strong,var(--line));padding:.65rem .75rem}
 @media (max-width:420px){.gr-nav__brand .gr-logo-claro,.gr-nav__brand .gr-logo-oscuro{max-width:132px;height:auto}.portal-contenido{width:min(100% - 1.25rem,var(--container));padding-top:1.5rem}.portal-cuerpo table{font-size:.9rem}}
+/* Blog y novedades: metadatos, etiquetas .badge del kit, cifras y listas. */
+.blog-meta{display:flex;flex-wrap:wrap;gap:.15rem 1rem;margin:.35rem 0 0;color:var(--ink-muted);font-size:.92rem}
+.blog-dominio{margin:.15rem 0 .5rem;color:var(--ink-muted);font-size:.92rem}
+.blog-tipo{color:var(--accent);font-weight:600}
+.portal-contenido>header .blog-meta{margin-top:1rem;font-size:.95rem}
+.portal-contenido>header .blog-dominio{font-size:.95rem}
+.blog-etiquetas{display:flex;flex-wrap:wrap;gap:.35rem;list-style:none;padding:0;margin:.5rem 0 0}
+.blog-etiquetas+.blog-cuerpo{margin-top:2rem}
+.blog-cuerpo>*+*{margin-top:1rem}
+.portal-cuerpo .blog-cuerpo h2{margin:2.5rem 0 .75rem}
+.blog-cuerpo>h2+*{margin-top:0}
+.blog-seccion h2+*{margin-top:.5rem}
+.portal-articulo h1+p{margin-top:.5rem}
+.blog-etiquetas li{margin:0}
+.blog-lista,.novedades-lista{display:grid;gap:1rem;list-style:none;padding:0;margin:1.5rem 0 0}
+.blog-lista>li,.novedades-lista>li{margin:0}
+.blog-tarjeta,.novedad{padding:1.25rem;border:1px solid var(--line);background:var(--paper)}
+.portal-cuerpo .blog-tarjeta__titulo,.portal-cuerpo .novedad__titulo,.novedad__titulo{margin:0;font-size:1.2rem;line-height:1.35}
+.blog-tarjeta p{margin:.25rem 0 0}
+.novedad__fuente{margin:.4rem 0 0;color:var(--ink-muted);font-size:.9rem}
+.novedad__titulo a,.blog-tarjeta__titulo a{color:var(--accent);text-decoration-line:underline;text-decoration-thickness:1px;text-underline-offset:3px}
+.novedad__titulo a:focus-visible,.blog-tarjeta__titulo a:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+.novedades-lista--portada{grid-template-columns:minmax(0,1fr)}
+@media (min-width:900px){.novedades-lista--portada{grid-template-columns:repeat(3,minmax(0,1fr))}}
+.novedades-lista--portada .novedad__titulo{font-size:1.05rem}
+.blog-cuerpo>ul:not([class]){list-style:disc outside;padding-inline-start:1.4em}
+.blog-cuerpo>ol:not([class]){list-style:decimal outside;padding-inline-start:1.6em}
+.blog-cifras{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,14rem),1fr));gap:.75rem;list-style:none;padding:0;margin:1.5rem 0}
+.blog-cifras li{display:flex;flex-direction:column;gap:.25rem;margin:0;padding:1rem;border:1px solid var(--line)}
+.blog-cifra{color:var(--accent);font-size:1.6rem;line-height:1.2;font-weight:700;font-variant-numeric:tabular-nums}
+.blog-cifras span{color:var(--ink-muted);font-size:.95rem;line-height:1.45}
+.blog-aviso{margin:1.5rem 0;padding:1rem;border:1px solid var(--line);background:var(--paper-raised)}
+.blog-seccion{margin-top:2.5rem;padding-top:1.25rem;border-top:1px solid var(--line)}
+.blog-seccion ul{list-style:disc outside;padding-inline-start:1.4em}
+.portal-cuerpo .blog-seccion h2{margin-top:0;font-size:1.25rem}
+.blog-fecha{color:var(--ink-muted);font-size:.92rem}
+.blog-rss{margin:1.5rem 0 0}

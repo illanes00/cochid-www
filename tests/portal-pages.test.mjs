@@ -8,6 +8,7 @@ const dist = new URL('../dist/', import.meta.url);
 const rutas = [
   '/', '/quienes-somos/', '/contacto/', '/servicios/', '/datos/', '/mapas/',
   '/herramientas/', '/investigaciones/', '/documentacion/', '/mapa-del-sitio/',
+  '/blog/', '/novedades/',
 ];
 const archivoRuta = ruta => ruta === '/'
   ? new URL('index.html', dist)

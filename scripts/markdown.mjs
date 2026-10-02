@@ -26,6 +26,21 @@ export function reescribirAsesoria(texto) {
   });
 }
 
+/* Comentarios HTML y marcas [[VERIFICAR: …]] son notas de redacción. Esta
+   función solo las enumera, para que el build informe qué fragmento omitió;
+   el borrado lo hace depurarMarkdown con las mismas expresiones. */
+const resumirNota = texto => texto.replace(/\s+/g, ' ').trim().slice(0, 140);
+export function notasInternas(texto) {
+  const notas = [];
+  for (const [, cuerpo] of texto.matchAll(/<!--([\s\S]*?)-->/g)) {
+    notas.push({tipo: 'comentario', resumen: resumirNota(cuerpo)});
+  }
+  for (const [, cuerpo] of texto.matchAll(/\[\[VERIFICAR:([\s\S]*?)\]\]/g)) {
+    notas.push({tipo: 'verificar', resumen: resumirNota(cuerpo)});
+  }
+  return notas;
+}
+
 export function depurarMarkdown(markdown, ruta) {
   let limpio = markdown;
   if (ruta === '/documentacion/') {

@@ -5,15 +5,17 @@ import {destinos,dominios,familia,navegacionPrimaria,pie} from '../data/destinos
 import {depurarMarkdown,leerFrontmatter,markdownAHtml} from './markdown.mjs';
 import {iconoSvg} from './iconos.mjs';
 import {completarIconos,grillaHtml,leerTarjetas,validarDominios} from './tarjetas.mjs';
+import {cargarEntradas,cuerpoEntrada,indiceBlog,metaEntrada,rss} from './blog.mjs';
+import {loNuevo,novedadesDesdeBlog,novedadesDesdeReleases,paginaNovedades,unirNovedades} from './novedades.mjs';
 
 const root=new URL('../',import.meta.url), out=new URL('../dist/',import.meta.url);
 const rutasPortalPublicadas=new Set([
  '/', '/cambio-de-hora/', '/concepciones/', '/contacto/', '/datos/',
  '/documentacion/', '/herramientas/', '/investigaciones/', '/mapa-del-sitio/',
- '/mapas/', '/quienes-somos/', '/servicios/'
+ '/mapas/', '/quienes-somos/', '/servicios/', '/blog/', '/novedades/'
 ]);
-const [kitHead,headerTemplate,footerTemplate,migasTemplate,paginaTemplate]=await Promise.all(
- ['head','header','footer','migas','pagina'].map(nombre=>readFile(new URL(`partials/${nombre}.html`,root),'utf8'))
+const [kitHead,headerTemplate,footerTemplate,migasTemplate,paginaTemplate,articuloTemplate]=await Promise.all(
+ ['head','header','footer','migas','pagina','articulo'].map(nombre=>readFile(new URL(`partials/${nombre}.html`,root),'utf8'))
 );
 
 const escapar=valor=>String(valor).replaceAll('&','&amp;').replaceAll('<','&lt;').replaceAll('>','&gt;').replaceAll('"','&quot;');
@@ -150,6 +152,49 @@ async function paginaEditorial(nombre){
  await writeFile(new URL('index.html',directorio),pagina);
 }
 
+/* Blog y novedades: páginas con la plantilla de artículo. Las notas internas
+   de las fuentes (comentarios y [[VERIFICAR]]) se omiten y se informan. */
+const {entradas,omisiones:notasOmitidas}=cargarEntradas(new URL('content/blog/',root),dominios);
+if(!entradas.length)throw new Error('content/blog/ no tiene entradas publicables');
+const releasesNovedad=novedadesDesdeReleases();
+const novedades=unirNovedades(novedadesDesdeBlog(entradas),releasesNovedad.items);
+
+async function paginaArticulo({ruta,titulo,producto,descripcion,bajada,meta='',migas,cuerpo,ogTipo='website'}){
+ const pagina=reemplazar(articuloTemplate,{
+  TITULO:escapar(titulo),PRODUCTO:producto,DESCRIPCION:escapar(descripcion),RUTA:escapar(ruta),OG_TIPO:ogTipo,
+  KIT_HEAD:kitHead,HEADER:cabecera(ruta),
+  MIGAS:reemplazar(migasTemplate,{MIGAS:migas.map(([texto,href])=>href?`<li><a href="${href}">${escapar(texto)}</a></li>`:`<li aria-current="page">${escapar(texto)}</li>`).join('')},'migas'),
+  BAJADA:escapar(bajada),META:meta,CUERPO:cuerpo,FOOTER:piePortal()
+ },`artículo ${ruta}`);
+ if(/\[\[VERIFICAR|<!--/.test(pagina))throw new Error(`${ruta} quedó con una nota interna`);
+ const directorio=new URL(`.${ruta}`,out);
+ await mkdir(directorio,{recursive:true});
+ await writeFile(new URL('index.html',directorio),pagina);
+}
+
+async function publicarBlog(){
+ await paginaArticulo({
+  ruta:'/blog/',titulo:'Blog',producto:'Portal',
+  descripcion:'Notas de COCHID sobre datos nuevos, métodos y cambios del sitio, ordenadas de la más reciente a la más antigua.',
+  bajada:'Notas sobre datos nuevos, métodos y cambios del sitio, de la más reciente a la más antigua.',
+  migas:[['Inicio','/'],['Blog']],cuerpo:indiceBlog(entradas)
+ });
+ for(const entrada of entradas){
+  await paginaArticulo({
+   ruta:entrada.ruta,titulo:entrada.titulo,producto:'Blog',ogTipo:'article',
+   descripcion:entrada.descripcion,bajada:entrada.resumen,meta:metaEntrada(entrada,{autor:true}),
+   migas:[['Inicio','/'],['Blog','/blog/'],[entrada.titulo]],cuerpo:cuerpoEntrada(entrada,entradas)
+  });
+ }
+ await writeFile(new URL('blog/feed.xml',out),rss(entradas));
+ await paginaArticulo({
+  ruta:'/novedades/',titulo:'Novedades',producto:'Portal',
+  descripcion:'Datos nuevos, entradas del blog y publicaciones de COCHID, con fecha y fuente de cada novedad.',
+  bajada:'Datos nuevos, entradas del blog y publicaciones de COCHID, con fecha y fuente de cada novedad.',
+  migas:[['Inicio','/'],['Novedades']],cuerpo:paginaNovedades(novedades)
+ });
+}
+
 await rm(out,{recursive:true,force:true});
 await mkdir(out,{recursive:true});
 await cp(new URL('assets/',root),new URL('assets/',out),{recursive:true});
@@ -162,11 +207,14 @@ const dominiosPortada=(await dominiosPublicados()).slice(0,6).map(dominio=>({...
 if(!home.includes('<!--DOMINIOS_COMPACTOS-->'))throw new Error('index.html no tiene el marcador DOMINIOS_COMPACTOS');
 home=home.replace('<!--DOMINIOS_COMPACTOS-->',grillaHtml(dominiosPortada,{compacta:true}))
  .replace(/<!--ICONO:([a-z]+)-->/g,(_,nombre)=>iconoSvg(nombre,{tamano:28,clase:'task-icon'}));
+if(!home.includes('<!--LO_NUEVO-->'))throw new Error('index.html no tiene el marcador LO_NUEVO');
+home=home.replace('<!--LO_NUEVO-->',loNuevo(novedades));
 home=sinComentariosHtml(home);
 await writeFile(new URL('index.html',out),home);
 for(const nombre of ['quienes-somos','contacto','servicios','datos','mapas','herramientas','investigaciones','documentacion','mapa-del-sitio']){
  await paginaEditorial(nombre);
 }
+await publicarBlog();
 
 /* Un especial conserva su contenido y recibe los parciales, sin extraer HTML
    de la portada ni reemplazar grupos mediante expresiones regulares. */
@@ -203,10 +251,18 @@ const datos=await cargarDatos(new URL('concepciones/',root));
 verificarContrato(datos);
 await especial({dir:'concepciones',ruta:'/concepciones/',reemplazos:tablas(datos)});
 
+/* lastmod honesto: la fecha del contenido, no la del build. El índice y el
+   feed del blog cambian con su entrada más reciente; novedades, con la suya. */
 const fechas={
- '/':'2026-10-01','/cambio-de-hora/':'2026-09-07','/concepciones/':'2026-09-20'
+ '/':'2026-10-01','/cambio-de-hora/':'2026-09-07','/concepciones/':'2026-09-20',
+ '/blog/':entradas[0].fecha,'/novedades/':novedades[0].fecha
 };
-const sitemap=`<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${[...rutasPortalPublicadas].map(ruta=>`  <url><loc>https://cochid.cl${ruta}</loc><lastmod>${fechas[ruta]||'2026-10-01'}</lastmod></url>`).join('\n')}\n</urlset>\n`;
+const urlsSitemap=[
+ ...[...rutasPortalPublicadas].map(ruta=>[ruta,fechas[ruta]||'2026-10-01']),
+ ...entradas.map(entrada=>[entrada.ruta,entrada.fecha]),
+ ['/blog/feed.xml',entradas[0].fecha]
+];
+const sitemap=`<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${urlsSitemap.map(([ruta,fecha])=>`  <url><loc>https://cochid.cl${ruta}</loc><lastmod>${fecha}</lastmod></url>`).join('\n')}\n</urlset>\n`;
 await writeFile(new URL('sitemap.xml',out),sitemap);
 const sitemapHosts=`<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${destinosMapa().map(destino=>`  <url><loc>${escapar(hrefDestino(destino))}</loc></url>`).join('\n')}\n</urlset>\n`;
 await writeFile(new URL('sitemap-hosts.xml',out),sitemapHosts);
@@ -215,4 +271,8 @@ await writeFile(new URL('sitemap-hosts.xml',out),sitemapHosts);
    aunque las migas se incorporen al generar las páginas editoriales. */
 if(!migasTemplate.includes('{{MIGAS}}'))throw new Error('partials/migas.html no declara {{MIGAS}}');
 
+console.log(`Blog: ${entradas.length} entradas, ${notasOmitidas.length} notas internas omitidas:`);
+for(const nota of notasOmitidas)console.log(`  - ${nota.archivo} (${nota.lugar}, ${nota.tipo}): ${nota.resumen}`);
+console.log(`Novedades: ${novedades.length} ítems (${novedades.filter(item=>item.origen==='blog').length} del blog, ${releasesNovedad.aceptadas.length} de releases); releases COCHID omitidas: ${releasesNovedad.omitidas.length}.`);
+for(const omitida of releasesNovedad.omitidas)console.log(`  - ${omitida.release}: ${omitida.motivo}`);
 console.log(`Sitio estático: 9 páginas editoriales, ${days.length} días y ${months.length} promedios del especial solar; ${datos.semanal.semana.length} semanas y ${datos.cumpleanos.fecha.length} fechas del especial de concepciones; parciales y registro vendorizado aplicados en dist/.`);

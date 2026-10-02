@@ -1,8 +1,13 @@
 # Publicar el portal estático de COCHID
 
 El apex conserva HTML estático y el chrome compartido de COCHID. El build
-compone la portada, nueve páginas editoriales y los especiales
-`/cambio-de-hora/` y `/concepciones/`. No hay backend ni proceso Node en
+compone la portada, nueve páginas editoriales, el blog (`/blog/`, cinco
+entradas y `/blog/feed.xml` en RSS 2.0), `/novedades/` y los especiales
+`/cambio-de-hora/` y `/concepciones/`. Las novedades son una instantánea del
+momento del build: leen en modo lectura el campo `novedad` de los
+`RELEASE.json` de `releases/cochid-*/current`, así que construir dos veces con
+releases distintas puede cambiar `/novedades/` y la portada. Registrar el
+manifiesto de `dist/` de la candidata revisada. No hay backend ni proceso Node en
 producción para esta superficie.
 
 ## Verificaciones y build
@@ -31,8 +36,17 @@ La imagen social no la produce el build, porque necesita Python con matplotlib:
 
 Regenerarla solo cuando cambie la curva semanal. El PNG está versionado.
 
-La QA del portal recorre todas las páginas a 1440, 768 y 320 px, en claro y
-oscuro, siempre bajo `flock /tmp/cochid-ui-browser.lock`. Verifica Axe, desborde,
+La QA del portal recorre todas las páginas, incluidas las del blog y
+`/novedades/`, a 1440, 768 y 320 px, en claro y oscuro, siempre bajo
+`flock /tmp/cochid-ui-browser.lock`. Fijar siempre `COCHID_QA_OUT` para no
+escribir sobre los recibos de un corte anterior:
+
+```sh
+flock /tmp/cochid-ui-browser.lock bash -c '
+python3 -m http.server 18547 --bind 127.0.0.1 --directory dist & srv=$!
+trap "kill $srv; wait $srv" EXIT; sleep 1
+COCHID_QA_OUT=/srv/projects/tasks/cochid-portal-20261001/qa/<corte> node scripts/qa-portal.mjs'
+``` Verifica Axe, desborde,
 foco de teclado y menú móvil. La unidad Caddy sirve archivos; no hay una
 compilación Next ni un servicio de aplicación para el apex.
 
@@ -43,7 +57,10 @@ de cada corte. Al preparar esta candidata, el root existente es el enlace:
 
 `/srv/projects/releases/cochid-main/91132ff-medicamentos-20260903T183955Z`
 
-Ese enlace apunta a
+Desde el corte 2a+2b (2 de octubre de 2026, 01:32 UTC) ese enlace apunta a
+`/srv/projects/releases/cochid-main/e2057f070483-portal-20261002T013243Z`,
+que es la base del paquete del corte 2c (`release/apex-2c-20261002/`). Antes
+apuntaba a
 `/srv/projects/releases/cochid-main/baf59070d2d2-home-connections-20261001T195509Z`.
 La candidata debe comparar ese destino por CAS antes de preparar o activar. No
 desplegar desde el checkout antiguo ni cambiar el enlace desde dos flujos.
