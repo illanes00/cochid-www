@@ -1,10 +1,10 @@
 {
   "schema": "cochid.destinos.v1",
-  "generado": "2026-10-02T21:40:00Z",
+  "generado": "2026-10-03T04:05:00Z",
   "fuentes": {
     "registro_sha": "dd408498bb03d12583e6111ee4fa0b8567759cd53fbb3388cb04a4cb57c13025",
     "portfolio_sha": "b746b87f014309d9617973e164de83079036cda94dfb8578b60c4c5c8fd15f5f",
-    "presentacion_sha": "89b62b992dabea578f265c7e3bef50a32e2a14790130ac464f08d0b19a119d08"
+    "presentacion_sha": "ac25e179d869c7420b8eb7e2f2944b8bef7889a65abdf2f183a4e574b106259b"
   },
   "grupos": [
     {
@@ -49,6 +49,30 @@
       "orden": 6,
       "visible": false
     }
+  ],
+  "directorio_proyectos": [
+    "cochid.datos",
+    "cochid.datos.presupuesto",
+    "cochid.economia",
+    "cochid.elecciones",
+    "cochid.congreso",
+    "cochid.votos",
+    "cochid.lex",
+    "cochid.mapas",
+    "cochid.mapas.ciudad",
+    "cochid.trenes",
+    "cochid.tpte",
+    "cochid.bici",
+    "cochid.cables",
+    "cochid.clima",
+    "cochid.medicamentos",
+    "cochid.apex.concepciones",
+    "cochid.apex.cambio-hora",
+    "cochid.graphs",
+    "cochid.taller",
+    "cochid.prosa-medicamentos",
+    "cochid.scribe",
+    "cochid.mundial"
   ],
   "dominios": [
     {
@@ -2202,7 +2226,7 @@
     {
       "id": "proyectos",
       "etiqueta": "Proyectos",
-      "href": "https://cochid.cl/#proyectos",
+      "href": "https://cochid.cl/proyectos/",
       "icono": "layout-grid"
     },
     {
@@ -2246,7 +2270,7 @@
     {
       "id": "proyectos",
       "etiqueta": "Proyectos",
-      "href": "https://cochid.cl/#proyectos",
+      "href": "https://cochid.cl/proyectos/",
       "icono": "layout-grid"
     },
     {
@@ -3020,6 +3044,44 @@
       "dominio": null,
       "servicio": null,
       "zona": "publica",
+      "marca": "cochid",
+      "titular": "cochid",
+      "alias_de": null,
+      "reemplazado_por": null,
+      "fragmento_es_ruta": false,
+      "relaciones": [],
+      "hermanos": []
+    },
+    {
+      "id": "cochid.apex.proyectos",
+      "host": "cochid.cl",
+      "ruta": "/proyectos/",
+      "etiqueta": "Proyectos",
+      "resumen": "Directorio de los sitios públicos de la Compañía Chilena de Inteligencia de Datos.",
+      "clase": "pagina",
+      "grupo": "datos",
+      "padre": "cochid.apex",
+      "orden": 9,
+      "icono": "layout-grid",
+      "site_id": "site.cochid",
+      "node_id": "brand.cochid",
+      "visible": {
+        "cabecera": false,
+        "pie": true,
+        "mapa_del_sitio": true,
+        "sitemap": true,
+        "paleta": true
+      },
+      "sitemap": {
+        "frecuencia": "weekly",
+        "prioridad": 0.8,
+        "fuente": "estatica"
+      },
+      "robots": "indexable",
+      "dominio": null,
+      "servicio": null,
+      "zona": "publica",
+      "estado": "vivo",
       "marca": "cochid",
       "titular": "cochid",
       "alias_de": null,

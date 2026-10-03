@@ -64,6 +64,16 @@
 .portal-tipo{margin-inline-start:.4rem;padding:1px 6px;vertical-align:2px}
 .portal-host{display:block;color:var(--ink-muted);font-family:var(--font-mono);font-size:.78rem;overflow-wrap:anywhere}
 .portal-arbol li>p{margin:.25rem 0 .5rem;font-size:.9rem}
+.portal-directorio{display:grid;gap:2.5rem}
+.portal-directorio>section{max-width:none}
+.portal-cuerpo .portal-directorio h2{margin:0 0 1rem;font-size:1.5rem;text-transform:none}
+.portal-proyectos{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,20rem),1fr));gap:1.25rem 2rem;list-style:none;margin:0;padding:0}
+.portal-proyecto{display:grid;grid-template-columns:auto minmax(0,1fr);gap:.85rem;align-items:start;margin:0;padding:0;border:0}
+.portal-proyecto__icono{display:inline-flex;color:var(--accent);padding-top:.15rem}
+.portal-cuerpo .portal-proyecto h3{margin:0;font-size:1.05rem;font-weight:600;text-transform:none}
+.portal-proyecto h3 a{color:var(--ink);text-decoration-line:underline;text-decoration-thickness:1px;text-underline-offset:3px}
+.portal-proyecto h3 a:hover{text-decoration-thickness:2px}
+.portal-proyecto p{margin:.25rem 0 0;color:var(--ink-muted);font-size:.92rem;line-height:1.5}
 .portal-filtro{display:grid;gap:.4rem;max-width:32rem;margin:1.5rem 0}
 .portal-filtro input{font:inherit;color:var(--ink);background:var(--paper);border:1px solid var(--line-strong,var(--line));padding:.65rem .75rem}
 .portal-formulario{position:relative;display:grid;gap:1rem;max-width:42rem;margin:1.5rem 0;padding:1.25rem;border:1px solid var(--line);background:var(--paper)}

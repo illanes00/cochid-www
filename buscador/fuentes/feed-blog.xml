@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Blog de COCHID</title>
+    <title>Blog de Compañía Chilena de Inteligencia de Datos</title>
     <link>https://cochid.cl/blog/</link>
-    <description>Datos nuevos, métodos y cambios de COCHID, Compañía Chilena de Inteligencia de Datos.</description>
+    <description>Datos nuevos, métodos y cambios de Compañía Chilena de Inteligencia de Datos, Compañía Chilena de Inteligencia de Datos.</description>
     <language>es-cl</language>
     <lastBuildDate>Thu, 01 Oct 2026 00:00:00 -0300</lastBuildDate>
     <atom:link href="https://cochid.cl/blog/feed.xml" rel="self" type="application/rss+xml"/>
@@ -13,7 +13,7 @@
       <guid isPermaLink="true">https://cochid.cl/blog/cargos-publicos-deuda-y-anuario/</guid>
       <pubDate>Thu, 01 Oct 2026 00:00:00 -0300</pubDate>
       <description>Tres series de DIPRES entran al catálogo con fichas propias: 874.586 observaciones de cargos del sector público, la deuda del Gobierno Central desde 1990 y el Anuario de Estadísticas de Finanzas Públicas.</description>
-      <category>Presupuesto y gasto público</category>
+      <category>Finanzas públicas</category>
       <category>DIPRES</category>
       <category>empleo público</category>
       <category>deuda</category>
@@ -24,8 +24,8 @@
       <link>https://cochid.cl/blog/visor-de-presupuesto-tres-tareas/</link>
       <guid isPermaLink="true">https://cochid.cl/blog/visor-de-presupuesto-tres-tareas/</guid>
       <pubDate>Thu, 01 Oct 2026 00:00:00 -0300</pubDate>
-      <description>El visor de presupuesto de COCHID se reorganizó en tres tareas: entender el presupuesto, explorar instituciones y comparar años. Los controles, las tablas y las descargas quedan plegados hasta que los necesitas.</description>
-      <category>Presupuesto y gasto público</category>
+      <description>El visor de presupuesto de Compañía Chilena de Inteligencia de Datos se reorganizó en tres tareas: entender el presupuesto, explorar instituciones y comparar años. Los controles, las tablas y las descargas quedan plegados hasta que los necesitas.</description>
+      <category>Finanzas públicas</category>
       <category>presupuesto</category>
       <category>visor</category>
       <category>DIPRES</category>
@@ -36,18 +36,18 @@
       <guid isPermaLink="true">https://cochid.cl/blog/glosas-presupuestarias-2026/</guid>
       <pubDate>Thu, 01 Oct 2026 00:00:00 -0300</pubDate>
       <description>Leímos los 470 documentos de glosas de la Ley de Presupuestos 2026 publicados por DIPRES. Cada glosa queda ligada a su programa y a la página del PDF de donde sale.</description>
-      <category>Presupuesto y gasto público</category>
+      <category>Finanzas públicas</category>
       <category>presupuesto</category>
       <category>DIPRES</category>
       <category>glosas</category>
       <category>Ley de Presupuestos</category>
     </item>
     <item>
-      <title>Los mismos cuatro destinos en la cabecera y el pie de COCHID</title>
+      <title>Los mismos cuatro destinos en la cabecera y el pie de Compañía Chilena de Inteligencia de Datos</title>
       <link>https://cochid.cl/blog/navegacion-comun-cochid/</link>
       <guid isPermaLink="true">https://cochid.cl/blog/navegacion-comun-cochid/</guid>
       <pubDate>Thu, 01 Oct 2026 00:00:00 -0300</pubDate>
-      <description>Datos, Mapas, Investigaciones y Presupuesto pasan a ser los destinos comunes de la navegación de COCHID. Desde el 2 de octubre están en la cabecera o el pie de cochid.cl, datos.cochid.cl y diez sitios más.</description>
+      <description>Datos, Mapas, Investigaciones y Presupuesto pasan a ser los destinos comunes de la navegación de Compañía Chilena de Inteligencia de Datos. Desde el 2 de octubre están en la cabecera o el pie de cochid.cl, datos.cochid.cl y diez sitios más.</description>
       <category>navegación</category>
       <category>sitio</category>
       <category>accesibilidad</category>
@@ -58,7 +58,7 @@
       <guid isPermaLink="true">https://cochid.cl/blog/ley-de-presupuestos-2009-2026/</guid>
       <pubDate>Wed, 30 Sep 2026 00:00:00 -0300</pubDate>
       <description>Cargamos 152.779 líneas de la Ley de Presupuestos de 18 años, con monto inicial y vigente, y la ejecución observada de cada año desde 2009.</description>
-      <category>Presupuesto y gasto público</category>
+      <category>Finanzas públicas</category>
       <category>presupuesto</category>
       <category>DIPRES</category>
       <category>Ley de Presupuestos</category>

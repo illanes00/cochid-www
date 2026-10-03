@@ -10,10 +10,12 @@ import {cargarEntradas,cuerpoEntrada,indiceBlog,metaEntrada,rss} from './blog.mj
 import {loNuevo,novedadesDesdeBlog,novedadesDesdeReleases,paginaNovedades,unirNovedades} from './novedades.mjs';
 
 const root=new URL('../',import.meta.url), out=new URL('../dist/',import.meta.url);
+const contratoPublico=JSON.parse(await readFile(new URL('../data/destinos.publico.json',import.meta.url),'utf8'));
+const idsDirectorioProyectos=new Set(contratoPublico.directorio_proyectos||[]);
 const rutasPortalPublicadas=new Set([
  '/', '/cambio-de-hora/', '/concepciones/', '/contacto/',
  '/documentacion/', '/herramientas/', '/investigaciones/', '/mapa-del-sitio/',
- '/mapas/', '/sobre-nosotros/', '/servicios/', '/asesoria/', '/blog/', '/novedades/',
+ '/mapas/', '/proyectos/', '/sobre-nosotros/', '/servicios/', '/asesoria/', '/blog/', '/novedades/',
  '/buscar/', '/temas/'
 ]);
 const [kitHead,headerTemplate,footerTemplate,migasTemplate,paginaTemplate,articuloTemplate,error404Template]=await Promise.all(
@@ -98,6 +100,18 @@ function arbolDestinos(){
  }).join('')}</div>`;
 }
 
+function directorioProyectos(){
+ const gruposDirectorio=gruposVisibles;
+ const incluidos=[...idsDirectorioProyectos].map(id=>destinos.find(destino=>destino.id===id));
+ if(incluidos.some(destino=>!destino))throw new Error('/proyectos/ referencia un destino ausente del contrato público');
+ if(incluidos.length!==22)throw new Error(`/proyectos/ esperaba 22 sitios públicos y recibió ${incluidos.length}`);
+ const tarjeta=destino=>`<li class="portal-proyecto"><span class="portal-proyecto__icono">${iconoSvg(destino.icono,{tamano:24})}</span><div><h3><a href="${escapar(hrefDestino(destino))}">${escapar(destino.etiqueta)}</a></h3><p>${escapar(destino.resumen)}</p></div></li>`;
+ return `<div class="portal-directorio" data-project-directory>${gruposDirectorio.map(grupo=>{
+  const elementos=incluidos.filter(destino=>destino.grupo===grupo.id);
+  return `<section><h2>${escapar(grupo.etiqueta)}</h2><ul class="portal-proyectos">${elementos.map(tarjeta).join('')}</ul></section>`;
+ }).join('')}</div>`;
+}
+
 const filtroMapa='<div class="portal-filtro"><label for="filtro-destinos">Filtrar el mapa</label><input id="filtro-destinos" type="search" autocomplete="off" placeholder="Por ejemplo, presupuesto o mapas"></div>';
 const scriptMapa='<script>document.querySelector("#filtro-destinos")?.addEventListener("input",event=>{const consulta=event.target.value.toLocaleLowerCase("es").trim();document.querySelectorAll("[data-map-item]").forEach(item=>{item.hidden=consulta!==""&&!item.textContent.toLocaleLowerCase("es").includes(consulta)})})</script>';
 const formularioAsesoria=`<form class="portal-formulario" method="post" action="/api/asesoria" accept-charset="utf-8" data-asesoria-form>
@@ -159,6 +173,7 @@ async function paginaEditorial(nombre){
   script=scriptMapa;
  }
  if(meta.ruta==='/datos/')extras['@@VISTAS_DOMINIOS@@']=vistasDominios(await dominiosPublicados());
+ if(meta.ruta==='/proyectos/')extras['@@DIRECTORIO_PROYECTOS@@']=directorioProyectos();
  if(meta.ruta==='/asesoria/'){
   extras['@@FORMULARIO_ASESORIA@@']=formularioAsesoria;
   script=scriptAsesoria;
@@ -228,7 +243,7 @@ await cp(new URL('vendor/v2/portada/index.html',root),new URL('index.html',out))
 await writeFile(new URL('404.html',out),reemplazar(error404Template,{
  KIT_HEAD:kitHead,HEADER:cabecera(''),FOOTER:piePortal()
 },'404'));
-for(const nombre of ['quienes-somos','contacto','servicios','mapas','herramientas','investigaciones','documentacion','mapa-del-sitio','asesoria','asesoria-gracias']){
+for(const nombre of ['quienes-somos','contacto','servicios','mapas','herramientas','investigaciones','proyectos','documentacion','mapa-del-sitio','asesoria','asesoria-gracias']){
  await paginaEditorial(nombre);
 }
 await publicarBlog();

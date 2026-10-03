@@ -20,6 +20,43 @@ class IdParser(HTMLParser):
 
 
 class PortalProjectsV2ContractTests(unittest.TestCase):
+    def test_project_directory_lists_the_complete_approved_public_sites(self):
+        page = (ROOT / "dist" / "proyectos" / "index.html").read_text(encoding="utf-8")
+        directory = page.split('data-project-directory', 1)[1].split(
+            '<p class="portal-meta"', 1
+        )[0]
+        groups = ["Datos", "Territorio", "Investigaciones", "Herramientas", "Especiales"]
+        positions = [directory.index(f">{group}</h2>") for group in groups]
+        self.assertEqual(positions, sorted(positions))
+        expected = [
+            "https://datos.cochid.cl/",
+            "https://datos.cochid.cl/presupuesto",
+            "https://economia.cochid.cl/",
+            "https://elecciones.cochid.cl/",
+            "https://congreso.cochid.cl/",
+            "https://votos.cochid.cl/",
+            "https://lex.cochid.cl/",
+            "https://mapas.cochid.cl/",
+            "https://mapas.cochid.cl/ciudad",
+            "https://trenes.cochid.cl/",
+            "https://tpte.cochid.cl/",
+            "https://bici.cochid.cl/",
+            "https://cables.cochid.cl/",
+            "https://clima.cochid.cl/",
+            "/concepciones/",
+            "/cambio-de-hora/",
+            "https://medicamentos.cochid.cl/",
+            "https://graphs.cochid.cl/",
+            "https://taller.cochid.cl/",
+            "https://prosa.medicamentos.cochid.cl/",
+            "https://scribe.cochid.cl/",
+            "https://mundial.cochid.cl/",
+        ]
+        for href in expected:
+            with self.subTest(href=href):
+                self.assertEqual(directory.count(f'href="{href}"'), 1)
+        self.assertEqual(directory.count('class="portal-proyecto"'), len(expected))
+
     def test_project_section_uses_the_approved_five_entries(self):
         section = re.search(r'<section class="sec" id="proyectos"[\s\S]*?</section>', HTML)
         self.assertIsNotNone(section)
