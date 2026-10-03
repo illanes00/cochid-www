@@ -269,7 +269,7 @@ def main():
         add(tipo, d['id'], TITULOS.get(d['id'], d['etiqueta']), d['resumen'], host_txt, g, url, CLAVES.get(d['id'], ''), w)
     # páginas de navegación que el registro no trae como destino propio
     add('pagina', 'nav.proyectos', 'Proyectos', 'Nuestros sitios, agrupados por lo que quieres hacer: datos, mapas, investigaciones y herramientas.',
-        'cochid.cl', 'otros', 'https://cochid.cl/#proyectos', 'sitios herramientas productos proyectos mundial especiales', 1)
+        'cochid.cl', 'otros', 'https://cochid.cl/proyectos/', 'sitios herramientas productos proyectos mundial especiales', 1)
     add('pagina', 'nav.cuenta', 'Iniciar sesión', 'Entra a tu cuenta para usar las herramientas con sesión.',
         'cuenta', 'otros', CUENTA, 'login cuenta ingresar entrar usuario sesion acceso registrarse', 3)
 

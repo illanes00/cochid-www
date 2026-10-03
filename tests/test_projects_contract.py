@@ -20,6 +20,21 @@ class IdParser(HTMLParser):
 
 
 class PortalProjectsV2ContractTests(unittest.TestCase):
+    def test_home_keeps_anchor_and_all_project_navigation_uses_directory(self):
+        home = (ROOT / "dist" / "index.html").read_text(encoding="utf-8")
+        self.assertIn('id="proyectos"', home)
+        self.assertIn(
+            '<a class="more" href="https://cochid.cl/proyectos/">Ver todos los proyectos',
+            home,
+        )
+        old_target = "https://cochid.cl/#proyectos"
+        for path in (ROOT / "dist").rglob("*.html"):
+            with self.subTest(path=path.relative_to(ROOT / "dist")):
+                self.assertNotIn(old_target, path.read_text(encoding="utf-8"))
+        search_index = (ROOT / "dist" / "buscar" / "indice.json").read_text(encoding="utf-8")
+        self.assertNotIn(old_target, search_index)
+        self.assertIn('https://cochid.cl/proyectos/', search_index)
+
     def test_project_directory_lists_the_complete_approved_public_sites(self):
         page = (ROOT / "dist" / "proyectos" / "index.html").read_text(encoding="utf-8")
         directory = page.split('data-project-directory', 1)[1].split(
