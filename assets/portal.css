@@ -64,7 +64,7 @@
 .portal-tipo{margin-inline-start:.4rem;padding:1px 6px;vertical-align:2px}
 .portal-host{display:block;color:var(--ink-muted);font-family:var(--font-mono);font-size:.78rem;overflow-wrap:anywhere}
 .portal-arbol li>p{margin:.25rem 0 .5rem;font-size:.9rem}
-.portal-directorio{display:grid;gap:2.5rem}
+.portal-directorio{display:grid;gap:2.5rem;margin-top:1.5rem}
 .portal-directorio>section{max-width:none}
 .portal-cuerpo .portal-directorio h2{margin:0 0 1rem;font-size:1.5rem;text-transform:none}
 .portal-proyectos{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,20rem),1fr));gap:1.25rem 2rem;list-style:none;margin:0;padding:0}

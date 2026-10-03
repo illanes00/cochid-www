@@ -2,7 +2,7 @@
   "schema": "cochid.chrome.v2",
   "version": 2,
   "destinos": 7,
-  "registro_sha256": "6a3972daaccc81dba3e0e2f6f5b4ac58cfb998a9ec51985ea49376b9aab324c2",
+  "registro_sha256": "f18e072d73f9b152b53127daf6b9186e0947b4b7c0c4c6d2d1c0efe839b9a2c0",
   "sha256": {
     "chrome.css": "d695d51843d4439c06c7be5cbceac9f03b1d9295cd884b64ac70fc60b074a406",
     "chrome.js": "1effe6fa24cee5db9978a09c5e2d7e300c47a11c9ba07066b1c5084496fa09f8",

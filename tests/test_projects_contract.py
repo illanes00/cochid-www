@@ -1,5 +1,6 @@
 from html.parser import HTMLParser
 from pathlib import Path
+import json
 import re
 import unittest
 
@@ -71,6 +72,16 @@ class PortalProjectsV2ContractTests(unittest.TestCase):
             with self.subTest(href=href):
                 self.assertEqual(directory.count(f'href="{href}"'), 1)
         self.assertEqual(directory.count('class="portal-proyecto"'), len(expected))
+
+    def test_project_directory_separates_intro_and_uses_distinct_election_icons(self):
+        css = (ROOT / "assets" / "portal.css").read_text(encoding="utf-8")
+        self.assertRegex(css, r"\.portal-directorio\{[^}]*margin-top:")
+        contract = json.loads((ROOT / "data" / "destinos.publico.json").read_text(encoding="utf-8"))
+        destinations = {item["id"]: item for item in contract["destinos"]}
+        self.assertNotEqual(
+            destinations["cochid.elecciones"]["icono"],
+            destinations["cochid.votos"]["icono"],
+        )
 
     def test_project_section_uses_the_approved_five_entries(self):
         section = re.search(r'<section class="sec" id="proyectos"[\s\S]*?</section>', HTML)
