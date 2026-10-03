@@ -68,6 +68,15 @@ class PortalV2ContractTests(unittest.TestCase):
         self.assertNotRegex(html, r'class="[^"]*(?:eyebrow|overline)[^"]*"')
         self.assertNotIn("border-left:", html)
 
+    def test_editorial_content_uses_the_same_container_gutter_as_chrome(self) -> None:
+        css = (ROOT / "assets" / "portal.css").read_text(encoding="utf-8").replace(" ", "")
+        self.assertIn(
+            ".portal-contenido{box-sizing:border-box;width:min(100%,var(--container));"
+            "margin:0auto;padding:2.5remvar(--pad-x)4rem}",
+            css,
+        )
+        self.assertNotIn(".portal-contenido{width:min(100%-1.25rem", css)
+
 
 if __name__ == "__main__":
     unittest.main()

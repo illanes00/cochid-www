@@ -2,7 +2,7 @@
 .gr-nav__brand:focus-visible{outline:2px solid var(--accent);outline-offset:3px}
 .portal-migas ol{display:flex;flex-wrap:wrap;gap:.35rem;list-style:none;padding:0;margin:0 0 1.5rem;color:var(--ink-muted)}
 .portal-migas li+li::before{content:"/";margin-right:.35rem;color:var(--ink-soft)}
-.portal-contenido{width:min(100% - 2rem,var(--container));margin:0 auto;padding:2.5rem 0 4rem}
+.portal-contenido{box-sizing:border-box;width:min(100%,var(--container));margin:0 auto;padding:2.5rem var(--pad-x) 4rem}
 .portal-contenido>header{max-width:52rem;margin-bottom:2rem}
 .portal-contenido>header p{font-size:var(--fs-lg,1.125rem);color:var(--ink-muted)}
 .portal-cuerpo>:where(:not(.portal-tarjetas,.portal-arbol)){max-width:52rem}
@@ -84,7 +84,7 @@
 .portal-formulario small,.portal-opcional,.portal-formulario__privacidad{color:var(--ink-muted);font-size:.9rem;font-weight:400}
 .portal-formulario__privacidad{margin:0}
 .portal-formulario__trampa{position:absolute;left:-10000px;width:1px;height:1px;overflow:hidden}
-@media (max-width:420px){.gr-nav__brand .gr-logo-claro,.gr-nav__brand .gr-logo-oscuro{max-width:132px;height:auto}.portal-contenido{width:min(100% - 1.25rem,var(--container));padding-top:1.5rem}.portal-cuerpo table{font-size:.9rem}}
+@media (max-width:420px){.gr-nav__brand .gr-logo-claro,.gr-nav__brand .gr-logo-oscuro{max-width:132px;height:auto}.portal-contenido{padding-top:1.5rem}.portal-cuerpo table{font-size:.9rem}}
 /* Blog y novedades: metadatos, etiquetas .badge del kit, cifras y listas. */
 .blog-meta{display:flex;flex-wrap:wrap;gap:.15rem 1rem;margin:.35rem 0 0;color:var(--ink-muted);font-size:.92rem}
 .blog-dominio{margin:.15rem 0 .5rem;color:var(--ink-muted);font-size:.92rem}
