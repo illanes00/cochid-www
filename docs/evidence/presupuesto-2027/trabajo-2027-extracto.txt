@@ -1,0 +1,471 @@
+ (https://www.camara.cl/legislacion/presupuesto/2027/15_Trabajo.pdf)
+citeturn53view0 [wordlim: 200] Crawled: today; Content type: application/pdf; Number of pages: 50; Source: find({"ref_id":"turn36view4","pattern":"Empleabilidad"}); Total lines: 2944
+L405@P7: Incluye$ 119 . 384 miles para informes de gesti ón que se realizarán con
+L406@P7: la Organización Internacional del
+L407@P7: un convenio entre el Ministerio
+L408@P7: Organ i smo Internacional, aprobado
+L409@P7: Trabajo,los cuales se ejecutarán median te
+L410@P7: del Trabajo y Previsión Social y dicho
+L411@P7: por decreto del Ministerio del Trabajo
+L412@P7: y Previsión Social, el que deberá ser dictado bajo la fórmula " Por orden del
+L413@P7: Presidente de la República" , a contar de la fecha de publicación de esta Ley .
+L414@P7: c) Incluye $ 139.840 miles para el pago de pasajes a las personas
+L415@P7: que integren la delegación tripartita que asistirá a reuniones de la
+L416@P7: Organización Internacional del Trabajo .
+L417@P7: d) I ncluye hasta$ 36 . 479 miles para el pago de pasajes y alojamientos a las
+L418@P7: 7
+L419@P7: 15
+L420@P7: 01
+L421@P7: 01 /
+L422@P7: 22
+L423@P7: 216
+L424@P7: 34 . 920
+L425@P7: 4 9 . 082
+L426@P7: 170 . 260
+L427@P7: 23
+L428@P7: 17
+L429@P7: 968 . 034
+L430@P7: 17
+L431@P7: 250 . 420
+L432@P7-8: 58 . 270 04 La
+L433@P8: PROYECTO DE LEY DE PRESUPUESTOS AÑO 2027
+L434@P8: MINISTERIO DEL TRABAJO Y PREVISIÓN SOCIAL
+L435@P8: Subsecretaría del Trabajo
+L436@P8: Subsecretaría del Trabajo (01, 06)
+L437@P8: PARTIDA
+L438@P8: CAPÍTULO
+L439@P8: ,_PROGRAMA
+L440@P8: personas que integren el Consejo Superior Laboral , creado por la Ley Nº
+L441@P8: 20 . 940 , que requieran trasladarse en el desempeño de sus funciones .
+L442@P8: transferencia de recursos, incluyendo entidades privadas, se regirá por la
+L443@P8: normativa vigente .
+L444@P8: 05 Con cargo a estos recursos se podrán financiar acciones de investi gación del
+L445@P8: mercado labora l y tendencias de empleabilidad f utura en cada Región,
+L446@P8: a nivel sectorial y a nivel nacional, siguiendo los lineamientos que establece
+L447@P8: la Estrategia Nacional de Prospección Laboral del Ministerio del Trabajo
+L448@P8: y Previsión Social, (Decreto Exento 110 de 2023) , cuya existencia mandata el
+L449@P8: Decreto Supremo 34 , de 2021, de con formidad al articulado de esta Ley de
+L450@P8: Presupuestos.
+L451@P8: 06 Anualmente, la Subsecretaría deberá publicar en su sitio web y enviar a la
+L452@P8: Comisión Especial Mixta de Presupuestos, 30 días después de terminado el
+L453@P8: período, el informe sobre condi ciones l aborales en Chile emi tido por la
+L454@P8: Organización Internacional del Trabajo .
+L455@P8: 07 Estos recursos podrán transferirse también a entidades privadas, y se asignarán
+L456@P8: conforme a lo estipulado en el articulado de esta ley .
+L457@P8: Se informará anualmente a la Comisión Especia l Mixta de Presupuestos las
+L458@P8: entidades privadas a las que se les realizaron transferencias, así como los
+L459@P8: montos comprometidos y las modalidades de pago .
+L460@P8: 8
+L461@P8: '
+L462@P8: 15
+L463@P8: 01
+L464@P8-9: 01 ,/ PROYECTO DE LEY DE PRESUPUESTOS AÑO 2027
+L465@P9: MINISTERIO DEL TRABAJO Y PREVISIÓN SOCIAL
+L466@P9: Subsecretaría del Trabajo
+L467@P9: PARTIDA
+L468@P9: CAPÍTULO
+L469@P9: '
+L470@P9: 15
+L471@P9: 01
+L472@P9: Proempleo ,PROGRAMA 03
+L473@P9: Sub- Ítem Asig. Denominaciones Glosa Nº Moneda Nacional
+L474@P9: Título
+L475@P9: INGRESOS
+L476@P9: 08 OTROS INGRESOS CORRfENTES
+L477@P9: 02 Multas y Sanciones Pecuniarias
+L478@P9: 99 Otros
+L479@P9: 09 APORTE FISCAL
+L480@P9: 01 Libre
+L481@P9: 15 SALDO INICIAL DE CAJA
+L482@P9: GASTOS
+L483@P9: 21 GASTOS EN PERSONAL 01
+L484@P9: 22 BIENES Y SERVICIOS DE CONSUMO
+L485@P9: 24 TRANSFERENCIAS CORRIENTES 02, 03
+L486@P9: 03 A Otras Entidades Públicas
+L487@P9: 264 Programa Inversión en la Comunidad 04
+L488@P9: 25 INTEGROS AL FISCO
+L489@P9: 99 Otros Integros al Fisco
+L490@P9: 34 SERVICIO DE LA DEUDA
+L491@P9: 07 Deuda Flotante
+L492@P9: 35 SALDO FINAL DE CAJA
+L493@P9: GLOSAS:
+L494@P9: 01 Incluye :
+L495@P9: a) Convenios con personas naturales
+L496@P9: - Nº de Personas
+L497@P9: - Miles de$
+L498@P9: 02 Previo a cualquier transferencia que se efectúe con fondos de este programa ,
+L499@P9: deberán hacerse públicos, a lo menos por la página web del organismo público que
+L500@P9: efectúa esta transferencia , los objetivos específicos del programa , haciendo
+L501@P9: especial referencia a las acciones programadas para alcanzarlos, los recursos
+L502@P9: humanos y materiales que involucra, los indicadores de avance y su periodicidad,
+L503@P9: existiendo al menos uno anual, los indicadores deevaluación cuantitativa del
+L504@P9: período presupuestario respectivo y l os indicadores de evaluación cualitativa,
+L505@P9: en especial la concordancia existente entre fines y medios .
+--------------------------------------------------------------------------------
+ (https://www.camara.cl/legislacion/presupuesto/2027/15_Trabajo.pdf)
+citeturn53view1 [wordlim: 200] Crawled: today; Content type: application/pdf; Number of pages: 50; Source: find({"ref_id":"turn36view4","pattern":"Subsidio al Empleo"}); Total lines: 2944
+L1313@P22: digitalización de actividades económicas destinado a trabajadores del sector de
+L1314@P22: servicios que tengan previsto ejecutar durante e l año y de aquellos programas
+L1315@P22: que tengan por objeto facilitar la reconversión laboral.
+L1316@P22: 16 Estos recursos podrán transferirse también a entidades privadas, y se asignarán
+L1317@P22: conforme a lo estipulado en el articulado de esta ley .
+L1318@P22: 17 El Servicio Nacional de Capacitación y Empleo podrá suscribir convenios con
+L1319@P22: organismos de la Administración del Estado para administrar recursos desti nados
+L1320@P22: e xclusivamente al financiamiento de subsidios, administrados por el SENCE y/o
+L1321@P22: programas de intermediación laboral en beneficio de trabajadores, personas
+L1322@P22: cesantes o empresas, conforme a los criterios de focalización y modalidades de
+L1323@P22: pago que se establezcan en cada convenio . Dichos recursos no se incorporarán al
+L1324@P22: presupuesto de ingresos y gastos del Servicio y su rendición de cuentas se
+L1325@P22: sujetará a lo dispuesto en la normativa vigente.
+L1326@P22: 22
+L1327@P22: 15
+L1328@P22: 05
+L1329@P22-23: 01 SubTitulo
+L1330@P23: 09
+L1331@P23: 15
+L1332@P23: 24
+L1333@P23: 34
+L1334@P23: 35
+L1335@P23: PROYECTO DE LEY DE PRESUPUESTOS AÑO 2027
+L1336@P23: MINISTERIO DEL TRABAJO Y PREVISIÓN SOCIAL
+L1337@P23: Servicio Nacional de Capacitación y Empleo
+L1338@P23: Servicio Nacional ele Capacitación y Empico - Empico (04)
+L1339@P23: Ítem Asig. Denominaciones
+L1340@P23: INGRESOS
+L1341@P23: APORTE FISCAL
+L1342@P23: 01 Libre
+L1343@P23: SALDO INICIAL DE CAJA
+L1344@P23: GASTOS
+L1345@P23: TRANSFERENCIAS CORRIENTES
+L1346@P23: 01 Al Sector Privado
+L1347@P23: 453 Subsidio al Empleo, Ley Nº 20.338
+L1348@P23: 454 Subsidio Empleo a la Mujer, Ley N° 20.595
+L1349@P23: 455 Subsidio Unificado de Empleo, Ley Nº 21.808
+L1350@P23: 08 A Instituciones Privadas Ejecutoras de Políticas Públicas
+L1351@P23: 090 Programa de Fonnación en el Puesto de Trabajo
+L1352@P23: SERVICIO DE LA DEUDA
+L1353@P23: 07 Deuda Flotante
+L1354@P23: SALDO FINAL DE CAJA
+L1355@P23: /
+L1356@P23: PARTIDA 15
+L1357@P23: CAPÍTULO 05
+L1358@P23: \.PROGRAMA 04
+L1359@P23: Glosa Nº Moneda Nacional
+L1360@P23: Miles de$
+L1361@P23: 131.007.958
+L1362@P23: 131.007.948
+L1363@P23: 131.007.948
+L1364@P23: 10
+L1365@P23: 131.007.958
+L1366@P23: 131.007.938
+L1367@P23: 89.612.552
+L1368@P23: 6.746.350
+L1369@P23: 03 6.746.350
+L1370@P23: 03,05,06,07 76.119.852
+L1371@P23: 41.395.386
+L1372@P23: 01 , 02, 07 41.395.386
+L1373@P23: 10
+L1374@P23: 10
+L1375@P23: 10
+L1376@P23: GLOSAS:
+L1377@P23: 01
+L1378@P23: 02
+L1379@P23: Los componen tes y líneas de acción comprendidas en este Programa y los
+L1380@P23: demás procedimientos, modalidades y mecani smos de control a que estará
+L1381@P23: afecto su desarrollo, serán los establecidos en el Decreto Nº28, de 2011, del
+L1382@P23: Ministerio del Trabajo y Previsión Social y sus modificaciones .
+L1383@P23: De igual modo , con cargo a esta glosa se financiará la ejecución de Planes de
+L1384@P23: Aprendizajes regulados en la letra c) del artículo 46 de la Ley Nº 19 . 518 .
+L1385@P23: La certificación del cumplimiento de los requisitos previsionales para
+L1386@P23: acceder a los p r ogramas, será suministrada por las Administradoras de Fondos de
+L1387@P23: Pensiones, a través de la Superintendencia del Ramo y por el Instituto de
+L1388@P23: Previsión Social .
+L1389@P23: La información relativa a las relaciones laborales, deberá ser suministrada por
+L1390@P23: la Dirección del Trabajo de acuerdo a lo estipulado en el Registro Electrónico
+L1391@P23: Laboral .
+L1392@P23: Para e l caso de los beneficiarios del Fondo de Cesantía Solidario, dicha
+L1393@P23: condición deberá ser acreditada por medio de la Bolsa Nacional de Empleo .
+L1394@P23: 03 Se informará trimestralmente a la Comisión Especial Mixta de Presupuestos, 30
+L1395@P23-24: 23 PROYECTO DE LEY DE PRESUPUESTOS AÑO 2027
+L1396@P24: MINISTERIO DEL TRABAJO Y PREVISIÓN SOCIAL
+L1397@P24: Servicio Nacional de Capacitación y Empleo
+L1398@P24: Servicio Nacional de Capacitación y Empico - Empleo (04)
+L1399@P24: /
+L1400@P24: PARTIDA
+L1401@P24: CAPÍTULO
+L1402@P24: \.PROGRAMA
+L1403@P24: días después del trimestre respectivo, acerca de los detalles y los
+L1404@P24: aspectos centrales que describen este subsidio, como son : el alcance que
+L1405@P24: se espera lograr, los criterios diseñados para su distribución, el
+L1406@P24: correspondiente desglose presupuestario de los fondos , así como también la
+L1407@P24: eventual priorizac ión de aquellas áreas del mercado laboral de la mujer que se
+L1408@P24: han visto afectadas por la crisis económica .
+L1409@P24: 04 Se informará trimestralmente a la Comisión Especial Mixta de Presupuestos, la
+--------------------------------------------------------------------------------
+ (https://www.camara.cl/legislacion/presupuesto/2027/15_Trabajo.pdf)
+citeturn53view2 [wordlim: 200] Crawled: today; Content type: application/pdf; Number of pages: 50; Source: find({"ref_id":"turn36view4","pattern":"Mujer"}); Total lines: 2944
+L1319@P22: organismos de la Administración del Estado para administrar recursos desti nados
+L1320@P22: e xclusivamente al financiamiento de subsidios, administrados por el SENCE y/o
+L1321@P22: programas de intermediación laboral en beneficio de trabajadores, personas
+L1322@P22: cesantes o empresas, conforme a los criterios de focalización y modalidades de
+L1323@P22: pago que se establezcan en cada convenio . Dichos recursos no se incorporarán al
+L1324@P22: presupuesto de ingresos y gastos del Servicio y su rendición de cuentas se
+L1325@P22: sujetará a lo dispuesto en la normativa vigente.
+L1326@P22: 22
+L1327@P22: 15
+L1328@P22: 05
+L1329@P22-23: 01 SubTitulo
+L1330@P23: 09
+L1331@P23: 15
+L1332@P23: 24
+L1333@P23: 34
+L1334@P23: 35
+L1335@P23: PROYECTO DE LEY DE PRESUPUESTOS AÑO 2027
+L1336@P23: MINISTERIO DEL TRABAJO Y PREVISIÓN SOCIAL
+L1337@P23: Servicio Nacional de Capacitación y Empleo
+L1338@P23: Servicio Nacional ele Capacitación y Empico - Empico (04)
+L1339@P23: Ítem Asig. Denominaciones
+L1340@P23: INGRESOS
+L1341@P23: APORTE FISCAL
+L1342@P23: 01 Libre
+L1343@P23: SALDO INICIAL DE CAJA
+L1344@P23: GASTOS
+L1345@P23: TRANSFERENCIAS CORRIENTES
+L1346@P23: 01 Al Sector Privado
+L1347@P23: 453 Subsidio al Empleo, Ley Nº 20.338
+L1348@P23: 454 Subsidio Empleo a la Mujer, Ley N° 20.595
+L1349@P23: 455 Subsidio Unificado de Empleo, Ley Nº 21.808
+L1350@P23: 08 A Instituciones Privadas Ejecutoras de Políticas Públicas
+L1351@P23: 090 Programa de Fonnación en el Puesto de Trabajo
+L1352@P23: SERVICIO DE LA DEUDA
+L1353@P23: 07 Deuda Flotante
+L1354@P23: SALDO FINAL DE CAJA
+L1355@P23: /
+L1356@P23: PARTIDA 15
+L1357@P23: CAPÍTULO 05
+L1358@P23: \.PROGRAMA 04
+L1359@P23: Glosa Nº Moneda Nacional
+L1360@P23: Miles de$
+L1361@P23: 131.007.958
+L1362@P23: 131.007.948
+L1363@P23: 131.007.948
+L1364@P23: 10
+L1365@P23: 131.007.958
+L1366@P23: 131.007.938
+L1367@P23: 89.612.552
+L1368@P23: 6.746.350
+L1369@P23: 03 6.746.350
+L1370@P23: 03,05,06,07 76.119.852
+L1371@P23: 41.395.386
+L1372@P23: 01 , 02, 07 41.395.386
+L1373@P23: 10
+L1374@P23: 10
+L1375@P23: 10
+L1376@P23: GLOSAS:
+L1377@P23: 01
+L1378@P23: 02
+L1379@P23: Los componen tes y líneas de acción comprendidas en este Programa y los
+L1380@P23: demás procedimientos, modalidades y mecani smos de control a que estará
+L1381@P23: afecto su desarrollo, serán los establecidos en el Decreto Nº28, de 2011, del
+L1382@P23: Ministerio del Trabajo y Previsión Social y sus modificaciones .
+L1383@P23: De igual modo , con cargo a esta glosa se financiará la ejecución de Planes de
+L1384@P23: Aprendizajes regulados en la letra c) del artículo 46 de la Ley Nº 19 . 518 .
+L1385@P23: La certificación del cumplimiento de los requisitos previsionales para
+L1386@P23: acceder a los p r ogramas, será suministrada por las Administradoras de Fondos de
+L1387@P23: Pensiones, a través de la Superintendencia del Ramo y por el Instituto de
+L1388@P23: Previsión Social .
+L1389@P23: La información relativa a las relaciones laborales, deberá ser suministrada por
+L1390@P23: la Dirección del Trabajo de acuerdo a lo estipulado en el Registro Electrónico
+L1391@P23: Laboral .
+L1392@P23: Para e l caso de los beneficiarios del Fondo de Cesantía Solidario, dicha
+L1393@P23: condición deberá ser acreditada por medio de la Bolsa Nacional de Empleo .
+L1394@P23: 03 Se informará trimestralmente a la Comisión Especial Mixta de Presupuestos, 30
+L1395@P23-24: 23 PROYECTO DE LEY DE PRESUPUESTOS AÑO 2027
+L1396@P24: MINISTERIO DEL TRABAJO Y PREVISIÓN SOCIAL
+L1397@P24: Servicio Nacional de Capacitación y Empleo
+L1398@P24: Servicio Nacional de Capacitación y Empico - Empleo (04)
+L1399@P24: /
+L1400@P24: PARTIDA
+L1401@P24: CAPÍTULO
+L1402@P24: \.PROGRAMA
+L1403@P24: días después del trimestre respectivo, acerca de los detalles y los
+L1404@P24: aspectos centrales que describen este subsidio, como son : el alcance que
+L1405@P24: se espera lograr, los criterios diseñados para su distribución, el
+L1406@P24: correspondiente desglose presupuestario de los fondos , así como también la
+L1407@P24: eventual priorizac ión de aquellas áreas del mercado laboral de la mujer que se
+L1408@P24: han visto afectadas por la crisis económica .
+L1409@P24: 04 Se informará trimestralmente a la Comisión Especial Mixta de Presupuestos, la
+L1410@P24: cantidad de mujeres que han sido beneficiadas con estos programas, los montos
+L1411@P24: destinados a ellas, sus remuneraciones promedio y l os tramos de edad.
+L1412@P24: Asimismo, se informará trimestralmente a la Comisión Especial Mixta de
+L1413@P24: Presupuestos, la cantidad de recursos, las áreas de actividad económica , las
+L1414@P24: comunas de residencia y ejecución , la cantidad y rangos etari os de los
+L1415@P24: benefi ciarios de la Región de Valparaiso .
+L1416@P24: 05 Incluye :
+L1417@P24: a) Gastos de Administración
+L1418@P24: - Miles de S 666.662
+L1419@P24: b) Convenios con personas naturales
+L1420@P24: - Nº de Personas
+L1421@P24: - Miles de S
+L1422@P24: 06 El Servi cio Nacional de Capacitación y Empleo podrá suscribir convenios con
+L1423@P24: o rganismos de la Administración del Estado para administrar recursos destinados
+L1424@P24: exc l usivamente al financiamiento de subsidios, establecidos en la normativa de
+L1425@P24: SENCE, en beneficio de trabajadores, personas cesantes o empresas, conforme a
+L1426@P24: los criterios de focalización y modalidades de pago que se establ ezcan en cada
+L1427@P24: convenio . Dichos recursos no se incorporarán al presupuesto de ingresos y gastos
+L1428@P24: del Servici o y su rendición de cuentas se sujetará a l o dispuesto en la
+L1429@P24: normativa vigente .
+L1430@P24: 07 El Servicio Nacional de Capacitación y Empleo podrá suscribir convenios con
+L1431@P24: organismos de la Administración del Estado para administrar recursos destinados
+L1432@P24: exclusivamente al financiamiento de subsidios, administrados por el SENCE y/o
+L1433@P24: programas de intermediac ión laboral en beneficio de trabajadores, personas
+L1434@P24: cesantes o empresas, conforme a los cri t erios de focalización y modalidades de
+L1435@P24: pago que se establezcan en cada convenio. Dichos recursos no se incorporarán al
+L1436@P24: presupuesto de ingresos y gastos del Servicio y su rendición de cuentas se
+L1437@P24: sujetará a lo dispuesto en l a normativa vigente .
+L1438@P24: 24
+L1439@P24: ' 15
+L1440@P24: 05
+L1441@P24: 04
+L1442@P24: 3
+L1443@P24-25: 91 . 563 SubTítulo
+L1444@P25: 05
+L1445@P25: 08
+L1446@P25: 09
+L1447@P25: 12
+L1448@P25: 15
+L1449@P25: 21
+L1450@P25: 22
+L1451@P25: 23
+L1452@P25: 25
+L1453@P25: 26
+L1454@P25: 29
+L1455@P25: 34
+L1456@P25: 35
+L1457@P25: PROYECTO DE LEY DE PRESUPUESTOS AÑO 2027
+L1458@P25: MINISTERIO DEL TRABAJO Y PREVISIÓN SOCIAL
+L1459@P25: Superintendencia de Seguridad Social
+L1460@P25: Superintendencia de Seguridad Social (01, 04, 05, 06, 07, 08, 09, 10)
+L1461@P25: Ítem Asig. Denominaciones
+L1462@P25: INGRESOS
+L1463@P25: TRANSFERENCIAS CORRIENTES
+L1464@P25: 01 Del Sector Privado
+L1465@P25: 004 Fondo Ley N° 21.063
+L1466@P25: 02 Del Gobierno Central
+L1467@P25: 201 Recuperación de Licencias Médicas - FON ASA
+L1468@P25: OTROS INGRESOS CORRIENTES
+L1469@P25: 01 Recuperaciones y Reembolsos por Licencias Médicas
+L1470@P25: 99 Otros
+L1471@P25: APORTE FISCAL
+L1472@P25: 01 Libre
+L1473@P25: RECUPERACIÓN DE PRÉSTAMOS
+L1474@P25: 10 Ingresos por Percibir
+L1475@P25: SALDO INICIAL DE CAJA
+L1476@P25: GASTOS
+L1477@P25: GASTOS EN PERSONAL
+L1478@P25: BIENES Y SERVICIOS DE CONSUMO
+L1479@P25: PRESTACIONES DE SEGURIDAD SOCIAL
+--------------------------------------------------------------------------------
+ (https://www.camara.cl/legislacion/presupuesto/2027/15_Trabajo.pdf)
+citeturn53view3 [wordlim: 200] Crawled: today; Content type: application/pdf; Number of pages: 50; Source: find({"ref_id":"turn36view4","pattern":"Unificado"}); Total lines: 2944
+L1319@P22: organismos de la Administración del Estado para administrar recursos desti nados
+L1320@P22: e xclusivamente al financiamiento de subsidios, administrados por el SENCE y/o
+L1321@P22: programas de intermediación laboral en beneficio de trabajadores, personas
+L1322@P22: cesantes o empresas, conforme a los criterios de focalización y modalidades de
+L1323@P22: pago que se establezcan en cada convenio . Dichos recursos no se incorporarán al
+L1324@P22: presupuesto de ingresos y gastos del Servicio y su rendición de cuentas se
+L1325@P22: sujetará a lo dispuesto en la normativa vigente.
+L1326@P22: 22
+L1327@P22: 15
+L1328@P22: 05
+L1329@P22-23: 01 SubTitulo
+L1330@P23: 09
+L1331@P23: 15
+L1332@P23: 24
+L1333@P23: 34
+L1334@P23: 35
+L1335@P23: PROYECTO DE LEY DE PRESUPUESTOS AÑO 2027
+L1336@P23: MINISTERIO DEL TRABAJO Y PREVISIÓN SOCIAL
+L1337@P23: Servicio Nacional de Capacitación y Empleo
+L1338@P23: Servicio Nacional ele Capacitación y Empico - Empico (04)
+L1339@P23: Ítem Asig. Denominaciones
+L1340@P23: INGRESOS
+L1341@P23: APORTE FISCAL
+L1342@P23: 01 Libre
+L1343@P23: SALDO INICIAL DE CAJA
+L1344@P23: GASTOS
+L1345@P23: TRANSFERENCIAS CORRIENTES
+L1346@P23: 01 Al Sector Privado
+L1347@P23: 453 Subsidio al Empleo, Ley Nº 20.338
+L1348@P23: 454 Subsidio Empleo a la Mujer, Ley N° 20.595
+L1349@P23: 455 Subsidio Unificado de Empleo, Ley Nº 21.808
+L1350@P23: 08 A Instituciones Privadas Ejecutoras de Políticas Públicas
+L1351@P23: 090 Programa de Fonnación en el Puesto de Trabajo
+L1352@P23: SERVICIO DE LA DEUDA
+L1353@P23: 07 Deuda Flotante
+L1354@P23: SALDO FINAL DE CAJA
+L1355@P23: /
+L1356@P23: PARTIDA 15
+L1357@P23: CAPÍTULO 05
+L1358@P23: \.PROGRAMA 04
+L1359@P23: Glosa Nº Moneda Nacional
+L1360@P23: Miles de$
+L1361@P23: 131.007.958
+L1362@P23: 131.007.948
+L1363@P23: 131.007.948
+L1364@P23: 10
+L1365@P23: 131.007.958
+L1366@P23: 131.007.938
+L1367@P23: 89.612.552
+L1368@P23: 6.746.350
+L1369@P23: 03 6.746.350
+L1370@P23: 03,05,06,07 76.119.852
+L1371@P23: 41.395.386
+L1372@P23: 01 , 02, 07 41.395.386
+L1373@P23: 10
+L1374@P23: 10
+L1375@P23: 10
+L1376@P23: GLOSAS:
+L1377@P23: 01
+L1378@P23: 02
+L1379@P23: Los componen tes y líneas de acción comprendidas en este Programa y los
+L1380@P23: demás procedimientos, modalidades y mecani smos de control a que estará
+L1381@P23: afecto su desarrollo, serán los establecidos en el Decreto Nº28, de 2011, del
+L1382@P23: Ministerio del Trabajo y Previsión Social y sus modificaciones .
+L1383@P23: De igual modo , con cargo a esta glosa se financiará la ejecución de Planes de
+L1384@P23: Aprendizajes regulados en la letra c) del artículo 46 de la Ley Nº 19 . 518 .
+L1385@P23: La certificación del cumplimiento de los requisitos previsionales para
+L1386@P23: acceder a los p r ogramas, será suministrada por las Administradoras de Fondos de
+L1387@P23: Pensiones, a través de la Superintendencia del Ramo y por el Instituto de
+L1388@P23: Previsión Social .
+L1389@P23: La información relativa a las relaciones laborales, deberá ser suministrada por
+L1390@P23: la Dirección del Trabajo de acuerdo a lo estipulado en el Registro Electrónico
+L1391@P23: Laboral .
+L1392@P23: Para e l caso de los beneficiarios del Fondo de Cesantía Solidario, dicha
+L1393@P23: condición deberá ser acreditada por medio de la Bolsa Nacional de Empleo .
+L1394@P23: 03 Se informará trimestralmente a la Comisión Especial Mixta de Presupuestos, 30
+L1395@P23-24: 23 PROYECTO DE LEY DE PRESUPUESTOS AÑO 2027
+L1396@P24: MINISTERIO DEL TRABAJO Y PREVISIÓN SOCIAL
+L1397@P24: Servicio Nacional de Capacitación y Empleo
+L1398@P24: Servicio Nacional de Capacitación y Empico - Empleo (04)
+L1399@P24: /
+L1400@P24: PARTIDA
+L1401@P24: CAPÍTULO
+L1402@P24: \.PROGRAMA
+L1403@P24: días después del trimestre respectivo, acerca de los detalles y los
+L1404@P24: aspectos centrales que describen este subsidio, como son : el alcance que
+L1405@P24: se espera lograr, los criterios diseñados para su distribución, el
+L1406@P24: correspondiente desglose presupuestario de los fondos , así como también la
+L1407@P24: eventual priorizac ión de aquellas áreas del mercado laboral de la mujer que se
+L1408@P24: han visto afectadas por la crisis económica .
+L1409@P24: 04 Se informará trimestralmente a la Comisión Especial Mixta de Presupuestos, la
+L1410@P24: cantidad de mujeres que han sido beneficiadas con estos programas, los montos
+L1411@P24: destinados a ellas, sus remuneraciones promedio y l os tramos de edad.
+L1412@P24: Asimismo, se informará trimestralmente a la Comisión Especial Mixta de
+L1413@P24: Presupuestos, la cantidad de recursos, las áreas de actividad económica , las
+L1414@P24: comunas de residencia y ejecución , la cantidad y rangos etari os de los
+L1415@P24: benefi ciarios de la Región de Valparaiso .
+L1416@P24: 05 Incluye :
+L1417@P24: a) Gastos de Administración
+L1418@P24: - Miles de S 666.662
+

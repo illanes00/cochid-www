@@ -1,0 +1,48 @@
+cis-build: lock OK · avail=8643MB swap=10079MB · dir=/srv/projects/qa/presupuesto2027-editorial-20261005/repo · cmd: python3 -m unittest discover -s tests -p test_*.py -v
+test_blog_pages_stay_below_the_page_budget (test_blog_rss_contract.BlogRssContractTests) ... ok
+test_feed_has_no_internal_notes (test_blog_rss_contract.BlogRssContractTests) ... ok
+test_has_one_valid_item_per_published_entry (test_blog_rss_contract.BlogRssContractTests) ... ok
+test_is_rss_2_with_required_channel_elements (test_blog_rss_contract.BlogRssContractTests) ... ok
+test_sitemap_is_well_formed_and_lists_blog_and_news (test_blog_rss_contract.BlogRssContractTests) ... ok
+test_home_links_to_the_study_like_the_other_cuaderno (test_concepciones_contract.ConcepcionesContractTests) ... ok
+test_page_avoids_the_forbidden_signs_and_the_loose_acronym (test_concepciones_contract.ConcepcionesContractTests) ... ok
+test_page_declares_identity_and_shared_chrome_markers (test_concepciones_contract.ConcepcionesContractTests) ... ok
+test_page_ships_its_own_layer_and_no_external_dependency (test_concepciones_contract.ConcepcionesContractTests) ... ok
+test_sitemap_lists_the_study (test_concepciones_contract.ConcepcionesContractTests) ... ok
+test_social_image_is_twelve_hundred_by_six_hundred_thirty (test_concepciones_contract.ConcepcionesContractTests) ... ok
+test_the_home_block_of_the_study_carries_no_eyebrow (test_concepciones_contract.ConcepcionesContractTests)
+La regla H28 prohíbe la ceja sobre un título, también en la portada. ... ok
+test_the_shared_footer_spells_the_company_out (test_concepciones_contract.ConcepcionesContractTests)
+CANON prohíbe la sigla suelta en público, y el pie viaja a la página. ... ok
+test_does_not_repeat_stale_or_unverified_metrics (test_home_contract.PortalHomeV2ContractTests) ... ok
+test_keeps_search_engine_controls_and_current_routes (test_home_contract.PortalHomeV2ContractTests) ... ok
+test_routes_the_three_primary_tasks (test_home_contract.PortalHomeV2ContractTests) ... ok
+test_uses_the_approved_low_density_portal_structure (test_home_contract.PortalHomeV2ContractTests) ... ok
+test_uses_the_full_public_brand_and_canonical_legal_identity (test_home_contract.PortalHomeV2ContractTests) ... ok
+test_all_editorial_pages_use_the_public_template (test_portal_pages_contract.PortalPagesContractTests) ... ok
+test_generated_navigation_files_are_public (test_portal_pages_contract.PortalPagesContractTests) ... ok
+test_new_editorial_html_stays_below_the_page_budget (test_portal_pages_contract.PortalPagesContractTests) ... ok
+test_old_routes_redirect_to_the_v2_canonical_routes (test_portal_pages_contract.PortalPagesContractTests) ... ok
+test_resolved_business_decisions_are_visible (test_portal_pages_contract.PortalPagesContractTests) ... ok
+test_editorial_content_uses_the_same_container_gutter_as_chrome (test_portal_v2_contract.PortalV2ContractTests) ... ok
+test_every_page_uses_the_exact_versioned_main_bar (test_portal_v2_contract.PortalV2ContractTests) ... ok
+test_home_keeps_the_approved_low_density_structure (test_portal_v2_contract.PortalV2ContractTests) ... ok
+test_public_html_never_uses_the_abbreviated_brand (test_portal_v2_contract.PortalV2ContractTests) ... ok
+test_publishes_home_search_about_and_eleven_theme_pages (test_portal_v2_contract.PortalV2ContractTests) ... ok
+test_home_keeps_anchor_and_all_project_navigation_uses_directory (test_projects_contract.PortalProjectsV2ContractTests) ... ok
+test_local_fragment_ids_are_unique (test_projects_contract.PortalProjectsV2ContractTests) ... ok
+test_personal_and_operational_destinations_are_not_projects (test_projects_contract.PortalProjectsV2ContractTests) ... ok
+test_project_directory_lists_the_complete_approved_public_sites (test_projects_contract.PortalProjectsV2ContractTests) ... ok
+test_project_directory_separates_intro_and_uses_distinct_election_icons (test_projects_contract.PortalProjectsV2ContractTests) ... ok
+test_project_section_uses_the_approved_five_entries (test_projects_contract.PortalProjectsV2ContractTests) ... ok
+test_avoids_forbidden_visual_shortcuts (test_style_v10_contract.PortalStyleV2ContractTests) ... ok
+test_loads_the_versioned_portal_chrome_and_theme (test_style_v10_contract.PortalStyleV2ContractTests) ... ok
+test_pins_one_canonical_style_v10_release (test_style_v10_contract.PortalStyleV2ContractTests) ... ok
+test_uses_canonical_logos_and_account_entry (test_style_v10_contract.PortalStyleV2ContractTests) ... ok
+test_uses_the_new_shared_header_and_footer_contract (test_style_v10_contract.PortalStyleV2ContractTests) ... ok
+
+----------------------------------------------------------------------
+Ran 39 tests in 0.085s
+
+OK
+cis-build: terminó (rc=0)

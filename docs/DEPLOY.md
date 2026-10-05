@@ -1,8 +1,8 @@
 # Publicar el portal estático de Compañía Chilena de Inteligencia de Datos
 
 El apex conserva HTML estático y el chrome compartido de Compañía Chilena de Inteligencia de Datos. El build
-compone la portada, nueve páginas editoriales, el blog (`/blog/`, cinco
-entradas y `/blog/feed.xml` en RSS 2.0), `/novedades/` y los especiales
+compone la portada, nueve páginas editoriales, el blog (`/blog/`, las entradas aprobadas
+y `/blog/feed.xml` en RSS 2.0), `/novedades/` y los especiales
 `/cambio-de-hora/` y `/concepciones/`. Las novedades son una instantánea del
 momento del build: leen en modo lectura el campo `novedad` de los
 `RELEASE.json` de `releases/cochid-*/current`, así que construir dos veces con
@@ -19,7 +19,7 @@ free -g
 cis-build --dir "$PWD" node scripts/build.mjs
 cis-build --dir "$PWD" python3 -m unittest discover -s tests -p 'test_*.py' -v
 cis-build --dir "$PWD" node --test
-sha256sum -c data/SHA256SUMS
+(cd data && sha256sum -c SHA256SUMS)
 ```
 
 El especial `/concepciones/` lee `concepciones/datos/*.json`, que es el recorte
@@ -37,7 +37,7 @@ La imagen social no la produce el build, porque necesita Python con matplotlib:
 Regenerarla solo cuando cambie la curva semanal. El PNG está versionado.
 
 La QA del portal recorre todas las páginas, incluidas las del blog y
-`/novedades/`, a 1440, 768 y 320 px, en claro y oscuro, siempre bajo
+`/novedades/`, a 1440, 768, 390 y 320 px, en claro y oscuro, siempre bajo
 `flock /tmp/cochid-ui-browser.lock`. Fijar siempre `COCHID_QA_OUT` para no
 escribir sobre los recibos de un corte anterior:
 
@@ -57,13 +57,25 @@ de cada corte. Al preparar esta candidata, el root existente es el enlace:
 
 `/srv/projects/releases/cochid-main/91132ff-medicamentos-20260903T183955Z`
 
-Desde el corte 2a+2b (2 de octubre de 2026, 01:32 UTC) ese enlace apunta a
-`/srv/projects/releases/cochid-main/e2057f070483-portal-20261002T013243Z`,
-que es la base del paquete del corte 2c (`release/apex-2c-20261002/`). Antes
-apuntaba a
-`/srv/projects/releases/cochid-main/baf59070d2d2-home-connections-20261001T195509Z`.
-La candidata debe comparar ese destino por CAS antes de preparar o activar. No
-desplegar desde el checkout antiguo ni cambiar el enlace desde dos flujos.
+Resolver el destino vigente con `readlink` y leer su `RELEASE.json` en cada
+corte. No copiar aquí el destino cambiante: el recibo fechado de publicación
+registra la base y la candidata. Comparar por CAS antes de activar y conservar
+un único flujo del apex.
+
+## Presupuesto 2027
+
+El recorte numérico, la comparación y los escenarios se reproducen con
+`python3 scripts/presupuesto-2027.py`. La opción `--graficos` requiere
+matplotlib y genera PNG y SVG. Ejecutarla con `cis-build` en el servidor con
+memoria disponible. El hilo lee `assets/presupuesto-2027/hilo.json`; el build
+publica seis textos seleccionables, botones de copia y PNG descargables en
+`/blog/presupuesto-2027-aportes-cambios-nominal-real/hilo/`.
+
+La QA portátil acepta `COCHID_QA_REQUIRE_FROM` y `COCHID_QA_CHROME` para el
+runtime privado. Verificar en navegador copia individual y completa,
+fallback de selección si se deniega el portapapeles, contenido sin JavaScript
+y SHA de las descargas. Las fuentes, unidades, cobertura, años y escenarios
+figuran en los PNG; revisar los originales para detectar rótulos recortados.
 
 ## Corte y reversión
 
@@ -73,7 +85,7 @@ desplegar desde el checkout antiguo ni cambiar el enlace desde dos flujos.
 3. Crear una ref Git recuperable y un bundle en el respaldo. Copiar `dist/`
    a una release nueva, añadir `RELEASE.json` y `SHA256SUMS`, verificar hashes
    y sellar todos los archivos (0444) y directorios (0555).
-4. Solo con revisión y autorización de la sesión supervisora, preparar un
+4. Con las verificaciones verdes y la autorización persistente aplicable, preparar un
    symlink temporal al nuevo destino y sustituir atómicamente el enlace
    existente con `os.replace`. No modificar Caddy, reiniciar unidades ni
    escribir sobre la release anterior.

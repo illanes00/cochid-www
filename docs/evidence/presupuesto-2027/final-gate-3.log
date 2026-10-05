@@ -1,0 +1,367 @@
+TAP version 13
+# Subtest: una figura conserva texto alternativo, proporción y leyenda accesibles
+ok 1 - una figura conserva texto alternativo, proporción y leyenda accesibles
+  ---
+  duration_ms: 2.485448
+  ...
+# Subtest: rechaza destinos externos, rutas de escape y datos incompletos
+ok 2 - rechaza destinos externos, rutas de escape y datos incompletos
+  ---
+  duration_ms: 1.075101
+  ...
+# Subtest: escapa leyenda y texto alternativo sin permitir HTML ejecutable
+ok 3 - escapa leyenda y texto alternativo sin permitir HTML ejecutable
+  ---
+  duration_ms: 1.602957
+  ...
+# Subtest: la curva semanal tiene 52 puntos en todas sus columnas
+ok 4 - la curva semanal tiene 52 puntos en todas sus columnas
+  ---
+  duration_ms: 1.39555
+  ...
+# Subtest: el máximo semanal cae en la quincena de fin de año, semana 52 o 1
+ok 5 - el máximo semanal cae en la quincena de fin de año, semana 52 o 1
+  ---
+  duration_ms: 0.755724
+  ...
+# Subtest: el mínimo es una meseta y no una semana identificable
+ok 6 - el mínimo es una meseta y no una semana identificable
+  ---
+  duration_ms: 0.279542
+  ...
+# Subtest: la amplitud publicada coincide con la curva
+ok 7 - la amplitud publicada coincide con la curva
+  ---
+  duration_ms: 0.257531
+  ...
+# Subtest: la grilla diaria de concepción tiene 365 días, sin 29 de febrero
+ok 8 - la grilla diaria de concepción tiene 365 días, sin 29 de febrero
+  ---
+  duration_ms: 0.30507
+  ...
+# Subtest: el índice mensual trae los doce meses
+ok 9 - el índice mensual trae los doce meses
+  ---
+  duration_ms: 0.182822
+  ...
+# Subtest: las variantes del método son 22, con 52 puntos cada una, y ninguna mueve el pico fuera de la quincena
+ok 10 - las variantes del método son 22, con 52 puntos cada una, y ninguna mueve el pico fuera de la quincena
+  ---
+  duration_ms: 0.33148
+  ...
+# Subtest: los remuestreos del pico y del valle suman 400
+ok 11 - los remuestreos del pico y del valle suman 400
+  ---
+  duration_ms: 0.2035
+  ...
+# Subtest: la validación contra los registros vitales trae 52 semanas en sus cuatro series
+ok 12 - la validación contra los registros vitales trae 52 semanas en sus cuatro series
+  ---
+  duration_ms: 0.296575
+  ...
+# Subtest: el calendario de cumpleaños tiene 366 fechas en todas sus columnas
+ok 13 - el calendario de cumpleaños tiene 366 fechas en todas sus columnas
+  ---
+  duration_ms: 0.265978
+  ...
+# Subtest: la máscara de feriados deja 179 fechas limpias y toca 186
+ok 14 - la máscara de feriados deja 179 fechas limpias y toca 186
+  ---
+  duration_ms: 0.220913
+  ...
+# Subtest: el 27 de diciembre es la fecha más común del calendario crudo
+ok 15 - el 27 de diciembre es la fecha más común del calendario crudo
+  ---
+  duration_ms: 0.216074
+  ...
+# Subtest: el día de la semana trae 7 días y 19 años
+ok 16 - el día de la semana trae 7 días y 19 años
+  ---
+  duration_ms: 0.380282
+  ...
+# Subtest: la matriz del feriado trae 15 días por cada día de la semana
+ok 17 - la matriz del feriado trae 15 días por cada día de la semana
+  ---
+  duration_ms: 0.46497
+  ...
+# Subtest: Fiestas Patrias trae 22 días de perfil y 19 años
+ok 18 - Fiestas Patrias trae 22 días de perfil y 19 años
+  ---
+  duration_ms: 0.286165
+  ...
+# Subtest: los estratos son 19 curvas de 52 puntos y 13 regiones
+ok 19 - los estratos son 19 curvas de 52 puntos y 13 regiones
+  ---
+  duration_ms: 1.303858
+  ...
+# Subtest: la advertencia textual de la región 11 viaja con los datos publicados
+ok 20 - la advertencia textual de la región 11 viaja con los datos publicados
+  ---
+  duration_ms: 0.423653
+  ...
+# Subtest: la serie larga trae 16 tramos y cinco períodos de doce meses
+ok 21 - la serie larga trae 16 tramos y cinco períodos de doce meses
+  ---
+  duration_ms: 0.309891
+  ...
+# Subtest: la validación externa cubre 204 meses y 17 años
+ok 22 - la validación externa cubre 204 meses y 17 años
+  ---
+  duration_ms: 0.200886
+  ...
+# Subtest: el metadato declara los nueve bloques en base v3
+ok 23 - el metadato declara los nueve bloques en base v3
+  ---
+  duration_ms: 0.273292
+  ...
+# Subtest: el metadato declara la población y la unidad publicable
+ok 24 - el metadato declara la población y la unidad publicable
+  ---
+  duration_ms: 0.19203
+  ...
+# Subtest: los CSV descargables traen las filas que declaran
+ok 25 - los CSV descargables traen las filas que declaran
+  ---
+  duration_ms: 0.910603
+  ...
+# Subtest: los encabezados de los CSV van sin tildes
+ok 26 - los encabezados de los CSV van sin tildes
+  ---
+  duration_ms: 0.446685
+  ...
+# Subtest: la página trae los marcadores del chrome compartido
+ok 27 - la página trae los marcadores del chrome compartido
+  ---
+  duration_ms: 0.287888
+  ...
+# Subtest: la página deja un hueco por cada tabla que genera el build
+ok 28 - la página deja un hueco por cada tabla que genera el build
+  ---
+  duration_ms: 0.334636
+  ...
+# Subtest: ni la página ni el módulo usan guiones largos ni el signo menos Unicode
+ok 29 - ni la página ni el módulo usan guiones largos ni el signo menos Unicode
+  ---
+  duration_ms: 0.780479
+  ...
+# Subtest: el módulo de figuras no escribe hexadecimales de color
+ok 30 - el módulo de figuras no escribe hexadecimales de color
+  ---
+  duration_ms: 0.493813
+  ...
+# Subtest: la hoja de estilo declara los dos temas y no usa hexadecimales fuera de ellos
+ok 31 - la hoja de estilo declara los dos temas y no usa hexadecimales fuera de ellos
+  ---
+  duration_ms: 0.291296
+  ...
+# Subtest: publica las entradas aprobadas en índice, páginas y RSS, conservando las cinco originales
+ok 32 - publica las entradas aprobadas en índice, páginas y RSS, conservando las cinco originales
+  ---
+  duration_ms: 2.576049
+  ...
+# Subtest: ningún archivo publicado contiene notas internas ni marcas de verificación
+ok 33 - ningún archivo publicado contiene notas internas ni marcas de verificación
+  ---
+  duration_ms: 16.830057
+  ...
+# Subtest: no referencia imágenes de portada inexistentes
+ok 34 - no referencia imágenes de portada inexistentes
+  ---
+  duration_ms: 6.343074
+  ...
+# Subtest: todos los enlaces internos de dist resuelven
+ok 35 - todos los enlaces internos de dist resuelven
+  ---
+  duration_ms: 24.265694
+  ...
+# Subtest: cada entrada trae migas, fecha, dominio, etiquetas, cuerpo, relacionadas, vecinas y RSS
+ok 36 - cada entrada trae migas, fecha, dominio, etiquetas, cuerpo, relacionadas, vecinas y RSS
+  ---
+  duration_ms: 4.152217
+  ...
+# Subtest: la portada muestra exactamente las tres entradas recientes aprobadas
+ok 37 - la portada muestra exactamente las tres entradas recientes aprobadas
+  ---
+  duration_ms: 1.744282
+  ...
+# Subtest: el pie v2 enlaza Blog y la barra secundaria enlaza Novedades
+ok 38 - el pie v2 enlaza Blog y la barra secundaria enlaza Novedades
+  ---
+  duration_ms: 7.35149
+  ...
+# Subtest: sitemap con blog, entradas y novedades, y lastmod de cada entrada
+ok 39 - sitemap con blog, entradas y novedades, y lastmod de cada entrada
+  ---
+  duration_ms: 0.535331
+  ...
+# Subtest: robots anuncia ambos sitemaps y el índice enumera sólo sitemaps absolutos
+ok 40 - robots anuncia ambos sitemaps y el índice enumera sólo sitemaps absolutos
+  ---
+  duration_ms: 0.676225
+  ...
+# Subtest: publica una página 404 propia con kit, logo y enlaces de recuperación
+ok 41 - publica una página 404 propia con kit, logo y enlaces de recuperación
+  ---
+  duration_ms: 0.582971
+  ...
+# Subtest: anuncia el RSS en portada, blog, entradas y novedades
+ok 42 - anuncia el RSS en portada, blog, entradas y novedades
+  ---
+  duration_ms: 2.912988
+  ...
+# Subtest: novedades solo vienen del blog o del campo novedad de releases Compañía Chilena de Inteligencia de Datos
+ok 43 - novedades solo vienen del blog o del campo novedad de releases Compañía Chilena de Inteligencia de Datos
+  ---
+  duration_ms: 2.397904
+  ...
+# Subtest: el lector de releases acepta solo el campo novedad y no escribe
+ok 44 - el lector de releases acepta solo el campo novedad y no escribe
+  ---
+  duration_ms: 50.03935
+  ...
+# Subtest: compone la portada con el chrome v2 canónico
+ok 45 - compone la portada con el chrome v2 canónico
+  ---
+  duration_ms: 3.888332
+  ...
+# Subtest: publica todas las puertas editoriales con el chrome de familia
+ok 46 - publica todas las puertas editoriales con el chrome de familia
+  ---
+  duration_ms: 11.573335
+  ...
+# Subtest: publica el formulario propio de asesoría y conserva sus enlaces
+ok 47 - publica el formulario propio de asesoría y conserva sus enlaces
+  ---
+  duration_ms: 5.84398
+  ...
+# Subtest: mantiene todos los enlaces internos resolubles en dist
+ok 48 - mantiene todos los enlaces internos resolubles en dist
+  ---
+  duration_ms: 8.356869
+  ...
+# Subtest: publica el registro y genera desde él el mapa del sitio
+ok 49 - publica el registro y genera desde él el mapa del sitio
+  ---
+  duration_ms: 5.578453
+  ...
+# Subtest: la portada enlaza las páginas nuevas y conserva sus anclas públicas
+ok 50 - la portada enlaza las páginas nuevas y conserva sus anclas públicas
+  ---
+  duration_ms: 3.176691
+  ...
+# Subtest: sitemap y robots describen la candidata completa
+ok 51 - sitemap y robots describen la candidata completa
+  ---
+  duration_ms: 2.467295
+  ...
+# Subtest: ningún archivo publicado imprime el nombre de un ícono
+ok 52 - ningún archivo publicado imprime el nombre de un ícono
+  ---
+  duration_ms: 22.848123
+  ...
+# Subtest: la cabecera del apex muestra solo el lockup Compañía Chilena de Inteligencia de Datos
+ok 53 - la cabecera del apex muestra solo el lockup Compañía Chilena de Inteligencia de Datos
+  ---
+  duration_ms: 3.655587
+  ...
+# Subtest: el módulo de íconos rechaza nombres sin SVG y entrega trazo accesible
+ok 54 - el módulo de íconos rechaza nombres sin SVG y entrega trazo accesible
+  ---
+  duration_ms: 1.067538
+  ...
+# Subtest: el parser de tarjetas usa el ícono como metadato y no como texto
+ok 55 - el parser de tarjetas usa el ícono como metadato y no como texto
+  ---
+  duration_ms: 0.874405
+  ...
+# Subtest: /temas/ publica los once dominios y sus páginas
+ok 56 - /temas/ publica los once dominios y sus páginas
+  ---
+  duration_ms: 0.392454
+  ...
+# Subtest: la portada muestra cuatro temas y permite desplegar los once
+ok 57 - la portada muestra cuatro temas y permite desplegar los once
+  ---
+  duration_ms: 1.294191
+  ...
+# Subtest: el mapa del sitio tiene una sola introducción y etiquetas de tipo
+ok 58 - el mapa del sitio tiene una sola introducción y etiquetas de tipo
+  ---
+  duration_ms: 0.515383
+  ...
+# Subtest: mapas, herramientas, investigaciones y servicios usan tarjetas
+ok 59 - mapas, herramientas, investigaciones y servicios usan tarjetas
+  ---
+  duration_ms: 1.329116
+  ...
+# Subtest: cada texto cabe en 280 caracteres e identifica el carácter hipotético del ajuste real
+ok 60 - cada texto cabe en 280 caracteres e identifica el carácter hipotético del ajuste real
+  ---
+  duration_ms: 1.549558
+  ...
+# Subtest: cada fila ofrece texto seleccionable, Copiar y PNG descargable con texto alternativo
+ok 61 - cada fila ofrece texto seleccionable, Copiar y PNG descargable con texto alternativo
+  ---
+  duration_ms: 0.568272
+  ...
+# Subtest: rechaza gráficos externos, textos demasiado largos y HTML ejecutable
+ok 62 - rechaza gráficos externos, textos demasiado largos y HTML ejecutable
+  ---
+  duration_ms: 1.821698
+  ...
+# Subtest: cubre los 365 días de Santiago 2026, sin duplicar fechas
+ok 63 - cubre los 365 días de Santiago 2026, sin duplicar fechas
+  ---
+  duration_ms: 5.991506
+  ...
+# Subtest: el cambio de septiembre mueve ambos extremos 60 minutos y conserva la luz
+ok 64 - el cambio de septiembre mueve ambos extremos 60 minutos y conserva la luz
+  ---
+  duration_ms: 0.230852
+  ...
+# Subtest: las fechas de transición afectan el amanecer correcto
+ok 65 - las fechas de transición afectan el amanecer correcto
+  ---
+  duration_ms: 0.263213
+  ...
+# Subtest: contrasta el 6 septiembre con efeméride independiente de timeanddate: 07:53 y 19:28, tolerancia 3 min
+ok 66 - contrasta el 6 septiembre con efeméride independiente de timeanddate: 07:53 y 19:28, tolerancia 3 min
+  ---
+  duration_ms: 0.173605
+  ...
+# Subtest: invierno, verano y crepúsculo son físicamente coherentes en todos los días
+ok 67 - invierno, verano y crepúsculo son físicamente coherentes en todos los días
+  ---
+  duration_ms: 2.710169
+  ...
+# Subtest: en primavera la puesta se retrasa también sin cambiar el reloj
+ok 68 - en primavera la puesta se retrasa también sin cambiar el reloj
+  ---
+  duration_ms: 0.184615
+  ...
+# Subtest: promedios ponderados por días conservan el total anual; abril y septiembre mezclan husos
+ok 69 - promedios ponderados por días conservan el total anual; abril y septiembre mezclan husos
+  ---
+  duration_ms: 2.672869
+  ...
+# Subtest: meses con luz usa punto medio de la hora y devuelve conteos enteros de cero a doce
+ok 70 - meses con luz usa punto medio de la hora y devuelve conteos enteros de cero a doce
+  ---
+  duration_ms: 3.088598
+  ...
+# Subtest: rechaza fechas inexistentes y fuera del alcance 2026
+ok 71 - rechaza fechas inexistentes y fuera del alcance 2026
+  ---
+  duration_ms: 0.446626
+  ...
+1..71
+# tests 71
+# suites 0
+# pass 71
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 237.904761
+cis-build: lock OK · avail=8643MB swap=10079MB · dir=/srv/projects/qa/presupuesto2027-editorial-20261005/repo · cmd: node --test
+cis-build: terminó (rc=0)

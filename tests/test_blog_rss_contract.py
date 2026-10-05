@@ -43,10 +43,11 @@ class BlogRssContractTests(unittest.TestCase):
         self.assertEqual("https://cochid.cl/blog/feed.xml", propio.get("href"))
         self.assertEqual("application/rss+xml", propio.get("type"))
 
-    def test_has_exactly_five_valid_items(self):
+    def test_has_one_valid_item_per_published_entry(self):
         items = self.canal.findall("item")
-        self.assertEqual(5, len(items))
         esperadas = {f"https://cochid.cl{meta['ruta']}": meta for meta in entradas()}
+        self.assertGreaterEqual(len(esperadas), 5)
+        self.assertEqual(len(esperadas), len(items))
         guids = []
         for item in items:
             enlace = item.findtext("link")

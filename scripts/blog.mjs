@@ -109,9 +109,29 @@ function validar(meta, cuerpo, archivo, dominios) {
   return true;
 }
 
-/* Bloques del cuerpo: `:::cifras` es una lista de cifras con su rótulo y
-   `:::aviso` un recuadro de texto. El resto queda para la segunda iteración. */
+/* Figuras propias del artículo. El texto alternativo y la leyenda son
+   obligatorios; una figura nunca puede cargar recursos externos ni HTML. */
+export function figuraBlog({src, alt, pie, ancho, alto}) {
+  if (!/^\/assets\/[a-z0-9][a-z0-9/_-]*\.(?:png|svg|webp)$/.test(src || '')
+    || !String(alt || '').trim() || !String(pie || '').trim()
+    || !/^[1-9]\d{1,4}$/.test(ancho || '') || !/^[1-9]\d{1,4}$/.test(alto || '')) {
+    throw new Error('Figura: ruta, texto alternativo, leyenda o dimensiones inválidos');
+  }
+  return `<figure class="blog-figura"><img src="${escapar(src)}" alt="${escapar(alt)}" width="${ancho}" height="${alto}" loading="lazy" decoding="async"><figcaption>${escapar(pie)}</figcaption></figure>`;
+}
+
+/* Bloques del cuerpo: cifras, aviso y figuras con tabla o explicación textual
+   en el artículo para que la información no dependa de una imagen. */
 function bloqueBlog(tipo, lineas) {
+  if (tipo === 'figura') {
+    const atributos = {};
+    for (const linea of lineas.filter(linea => linea.trim())) {
+      const dato = linea.match(/^(src|alt|pie|ancho|alto):\s*(.+)$/);
+      if (!dato || atributos[dato[1]] !== undefined) throw new Error('Figura: campo inválido o repetido');
+      atributos[dato[1]] = dato[2];
+    }
+    return figuraBlog(atributos);
+  }
   if (tipo === 'cifras') {
     const items = lineas.map(linea => linea.match(/^\s*-\s+(.+)$/)).filter(Boolean).map(([, texto]) => {
       const cifra = texto.match(/^([\d.,]+)\s+(.+)$/);

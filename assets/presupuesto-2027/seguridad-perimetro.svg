@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+  "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns:xlink="http://www.w3.org/1999/xlink" width="576pt" height="259.2pt" viewBox="0 0 576 259.2" xmlns="http://www.w3.org/2000/svg" version="1.1">
+ <title>Aporte fiscal libre: ley inicial 2026 y proyecto 2027</title>
+ <metadata>
+  <rdf:RDF xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+   <cc:Work>
+    <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+    <dc:title>Aporte fiscal libre: ley inicial 2026 y proyecto 2027</dc:title>
+    <dc:date>2026-10-05T21:43:16.367450</dc:date>
+    <dc:description>Fuente: DIPRES ley 2026 y Cámara, Tesoro Público 2027. Corte: 5 de octubre de 2026. Valores reales estimados con inflación hipotética de 3%.</dc:description>
+    <dc:format>image/svg+xml</dc:format>
+    <dc:creator>
+     <cc:Agent>
+      <dc:title>Matplotlib v3.9.2, https://matplotlib.org/</dc:title>
+     </cc:Agent>
+    </dc:creator>
+   </cc:Work>
+  </rdf:RDF>
+ </metadata>
+ <defs>
+  <style type="text/css">*{stroke-linejoin: round; stroke-linecap: butt}</style>
+ </defs>
+ <g id="figure_1">
+  <g id="patch_1">
+   <path d="M 0 259.2 
+L 576 259.2 
+L 576 0 
+L 0 0 
+z
+" style="fill: #ffffff"/>
+  </g>
+  <g id="axes_1">
+   <g id="patch_2">
+    <path d="M 201.6 184.032 
+L 564.48 184.032 
+L 564.48 57.024 
+L 201.6 57.024 
+z
+" style="fill: #ffffff"/>
+   </g>
+   <g id="matplotlib.axis_1">
+    <g id="xtick_1">
+     <g id="line2d_1">
+      <path d="M 201.6 184.032 
+L 201.6 57.024 
+" clip-path="url(#p9447fadd76)" style="fill: none; stroke: #e2e8f0; stroke-width: 0.5; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_2">
+      <defs>
+       <path id="m5703b40383" d="M 0 0 
+L 0 3.5 
+" style="stroke: #000000; stroke-width: 0.8"/>
+      </defs>
+      <g>
+       <use xlink:href="#m5703b40383" x="201.6" y="184.032" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_1">
+      <text style="font: 11px 'DejaVu Sans'; text-anchor: middle" x="201.6" y="199.390281" transform="rotate(-0 201.6 199.390281)">0</text>
+     </g>
+    </g>
+    <g id="xtick_2">
+     <g id="line2d_3">
+      <path d="M 266.4 184.032 
+L 266.4 57.024 
+" clip-path="url(#p9447fadd76)" style="fill: none; stroke: #e2e8f0; stroke-width: 0.5; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_4">
+      <g>
+       <use xlink:href="#m5703b40383" x="266.4" y="184.032" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_2">
+      <text style="font: 11px 'DejaVu Sans'; text-anchor: middle" x="266.4" y="199.390281" transform="rotate(-0 266.4 199.390281)">10</text>
+     </g>
+    </g>
+    <g id="xtick_3">
+     <g id="line2d_5">
+      <path d="M 331.2 184.032 
+L 331.2 57.024 
+" clip-path="url(#p9447fadd76)" style="fill: none; stroke: #e2e8f0; stroke-width: 0.5; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_6">
+      <g>
+       <use xlink:href="#m5703b40383" x="331.2" y="184.032" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_3">
+      <text style="font: 11px 'DejaVu Sans'; text-anchor: middle" x="331.2" y="199.390281" transform="rotate(-0 331.2 199.390281)">20</text>
+     </g>
+    </g>
+    <g id="xtick_4">
+     <g id="line2d_7">
+      <path d="M 396 184.032 
+L 396 57.024 
+" clip-path="url(#p9447fadd76)" style="fill: none; stroke: #e2e8f0; stroke-width: 0.5; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_8">
+      <g>
+       <use xlink:href="#m5703b40383" x="396" y="184.032" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_4">
+      <text style="font: 11px 'DejaVu Sans'; text-anchor: middle" x="396" y="199.390281" transform="rotate(-0 396 199.390281)">30</text>
+     </g>
+    </g>
+    <g id="xtick_5">
+     <g id="line2d_9">
+      <path d="M 460.8 184.032 
+L 460.8 57.024 
+" clip-path="url(#p9447fadd76)" style="fill: none; stroke: #e2e8f0; stroke-width: 0.5; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_10">
+      <g>
+       <use xlink:href="#m5703b40383" x="460.8" y="184.032" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_5">
+      <text style="font: 11px 'DejaVu Sans'; text-anchor: middle" x="460.8" y="199.390281" transform="rotate(-0 460.8 199.390281)">40</text>
+     </g>
+    </g>
+    <g id="xtick_6">
+     <g id="line2d_11">
+      <path d="M 525.6 184.032 
+L 525.6 57.024 
+" clip-path="url(#p9447fadd76)" style="fill: none; stroke: #e2e8f0; stroke-width: 0.5; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_12">
+      <g>
+       <use xlink:href="#m5703b40383" x="525.6" y="184.032" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_6">
+      <text style="font: 11px 'DejaVu Sans'; text-anchor: middle" x="525.6" y="199.390281" transform="rotate(-0 525.6 199.390281)">50</text>
+     </g>
+    </g>
+    <g id="text_7">
+     <text style="font: 11px 'DejaVu Sans'; text-anchor: middle" x="383.04" y="214.476219" transform="rotate(-0 383.04 214.476219)">Variación nominal del aporte fiscal libre (%)</text>
+    </g>
+   </g>
+   <g id="matplotlib.axis_2">
+    <g id="ytick_1">
+     <g id="line2d_13">
+      <defs>
+       <path id="m2987d94362" d="M 0 0 
+L -3.5 0 
+" style="stroke: #000000; stroke-width: 0.8"/>
+      </defs>
+      <g>
+       <use xlink:href="#m2987d94362" x="201.6" y="81.520629" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_8">
+      <text style="font: 11px 'DejaVu Sans'" transform="translate(80.000625 80.376801)">Comparación directa</text>
+      <text style="font: 11px 'DejaVu Sans'" transform="translate(74.785937 93.222395)">(cambia el perímetro)</text>
+     </g>
+    </g>
+    <g id="ytick_2">
+     <g id="line2d_14">
+      <g>
+       <use xlink:href="#m2987d94362" x="201.6" y="159.535371" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_9">
+      <text style="font: 11px 'DejaVu Sans'" transform="translate(101.25125 158.391543)">Mismo perímetro</text>
+      <text style="font: 11px 'DejaVu Sans'" transform="translate(41.696562 171.237137)">(Seguridad + Gendarmería)</text>
+     </g>
+    </g>
+   </g>
+   <g id="patch_3">
+    <path d="M 201.6 100.244167 
+L 488.933292 100.244167 
+L 488.933292 62.797091 
+L 201.6 62.797091 
+z
+" clip-path="url(#p9447fadd76)" style="fill: #64748b"/>
+   </g>
+   <g id="patch_4">
+    <path d="M 201.6 178.258909 
+L 280.050295 178.258909 
+L 280.050295 140.811833 
+L 201.6 140.811833 
+z
+" clip-path="url(#p9447fadd76)" style="fill: #165d91"/>
+   </g>
+   <g id="patch_5">
+    <path d="M 201.6 184.032 
+L 564.48 184.032 
+" style="fill: none; stroke: #000000; stroke-width: 0.8; stroke-linejoin: miter; stroke-linecap: square"/>
+   </g>
+   <g id="text_10">
+    <text style="font: 11px 'DejaVu Sans'; text-anchor: start" x="495.413292" y="84.555941" transform="rotate(-0 495.413292 84.555941)">+44,34%</text>
+   </g>
+   <g id="text_11">
+    <text style="font: 11px 'DejaVu Sans'; text-anchor: start" x="286.530295" y="162.570684" transform="rotate(-0 286.530295 162.570684)">+12,11%</text>
+   </g>
+  </g>
+  <g id="text_12">
+   <text style="font: 12px 'DejaVu Sans'" transform="translate(11.52 17.374125)">Seguridad: el traslado de Gendarmería</text>
+   <text style="font: 12px 'DejaVu Sans'" transform="translate(11.52 31.3875)">cambia la comparación</text>
+  </g>
+  <g id="text_13">
+   <text style="fill: #64748b; font: 9px 'DejaVu Sans'" transform="translate(11.52 243.937969)">Aporte fiscal libre CLP. Fuente: DIPRES 2026 y Cámara 2027, programa</text>
+   <text style="fill: #64748b; font: 9px 'DejaVu Sans'" transform="translate(11.52 254.016)">50/01/05. Ley inicial 2026 frente a proyecto 2027. Corte: 05-10-2026.</text>
+  </g>
+ </g>
+ <defs>
+  <clipPath id="p9447fadd76">
+   <rect x="201.6" y="57.024" width="362.88" height="127.008"/>
+  </clipPath>
+ </defs>
+</svg>

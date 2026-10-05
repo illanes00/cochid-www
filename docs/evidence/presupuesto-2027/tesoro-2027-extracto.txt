@@ -1,0 +1,506 @@
+ (https://www.camara.cl/legislacion/presupuesto/2027/50_TesoroPublico.pdf)
+citeturn46view0 [wordlim: 200] Crawled: today; Content type: application/pdf; Number of pages: 47; Source: open({"ref_id":"turn35view3","lineno":1550}); Total lines: 2750
+L1491@P28: 004 Instituto Antártico Chileno
+L1492@P28: 005 Agencia de Cooperación Internacional de Chile
+L1493@P28: 006 Subsecretaría de Relaciones Económicas
+L1494@P28: Internacionales
+L1495@P28: 007 Dirección General de Promoción de Exportaciones
+L1496@P28: 28
+L1497@P28: / 'I
+L1498@P28: PARTIDA 50
+L1499@P28: CAPÍTULO 01
+L1500@P28: PROGRAMA 05 ~
+L1501@P28: Moneda Nacional Moneda Extranjera
+L1502@P28: Miles de$ Convertida a Dólares
+L1503@P28: Miles de USS
+L1504@P28: 71.174.286.503 400.035
+L1505@P28: 71.l74.286.S03 400.035
+L1506@P28: 22.806.302
+L1507@P28: 22.806.302
+L1508@P28: 187 .302.412
+L1509@P28: 65.081.427
+L1510@P28: JO 1 .699 .236
+L1511@P28: 18.653.104
+L1512@P28: 1.868.645
+L1513@P28: 798.014.398
+L1514@P28: 625.066.278
+L1515@P28: 167.989.668
+L1516@P28: 4.958.452
+L1517@P28: 130.344.569
+L1518@P28: 130.344.569
+L1519@P28: 647.209.134
+L1520@P28: 90.490.277
+L1521@P28: 31.242.645
+L1522@P28: 273.867 .077
+L1523@P28: 11.1 44.958
+L1524@P28: 9 1.828.449
+L1525@P28: 136.700.288
+L1526@P28: 11.935.440
+L1527@P28: 105.743.062 204.446
+L1528@P28: 46.349.663 184. 105
+L1529@P28: 6.402.447
+L1530@P28: 7.635.766
+L1531@P28: 8.7 13.359
+L1532@P28: 12.312.633 3. 195
+L1533@P28-29: 24.329.194 17. 146 SubTítulo
+L1534@P29: PROYECTO DE LEY DE PRESUPUESTOS AÑO 2027
+L1535@P29: TESORO PÚBLICO
+L1536@P29: Fisco
+L1537@P29: Aporte Fiscal Libre
+L1538@P29: Ítem Asig. Denominaciones Glosa Nº
+L1539@P29: 07 MlNLSTERIO DE ECONOMÍA, FOMENTO Y
+L1540@P29: TURISMO
+L1541@P29: 001 Subsecretaría de Economía y Empresas de Menor
+L1542@P29: Tamaño
+L1543@P29: 002 Servicio Nacional del Consumidor
+L1544@P29: 003 Subsecretaría de Pesca y Acuicultura
+L1545@P29: 004 Servicio Nacional de Pesca y Acuicultura
+L1546@P29: 006 Corporación de Fomento de la Producción
+L1547@P29: 007 Instituto Nacional de Estadísticas
+L1548@P29: 008 Fiscalía Nacional Económica
+L1549@P29: 009 Servicio Nacional de Turismo
+L1550@P29: 0 16 Servicio de Cooperación Técnica
+L1551@P29: 0 19 Comité Innova Chile
+L1552@P29: 02 1 Agencia de Promoción de la Inversión Extranjera
+L1553@P29: 023 Instituto Nacional de Propiedad Industrial
+L1554@P29: 024 Subsecretaría de Turismo
+L1555@P29: 025 Superintendencia de Insolvencia y Reemprendimiento
+L1556@P29: 026 Instituto Nacional Desarrollo Sustentable Pesca
+L1557@P29: Artesanal y Acuicultura
+L1558@P29: 08 MlNISTERlO DE HACIENDA
+L1559@P29: 001 Secretaría y Administración General
+L1560@P29: 002 Dirección de Presupuestos
+L1561@P29: 003 Servicio de Impuestos Internos
+L1562@P29: 004 Servicio Nacional de Aduanas
+L1563@P29: 005 Servicio de Tesorerías
+L1564@P29: 007 Dirección de Compras y Contratación Pública
+L1565@P29: 01 5 Dirección Nacional del Servicio Civil
+L1566@P29: 0 16 Unidad de Análisis Financiero
+L1567@P29: 017 Superintendencia de Casinos de Juego
+L1568@P29: 030 Consejo de Defensa del Estado
+L1569@P29: 033 Defensoría del Contribuyente
+L1570@P29: 09 MINISTERJO DE EDUCACIÓN
+L1571@P29: 00 1 Subsecretaría de Educación
+L1572@P29: 002 Superintendencia de Educación
+L1573@P29: 003 Agencia de Calidad de la Educación
+L1574@P29: 004 Subsecretaría de Educación Parvularia
+L1575@P29: 009 Junta Nacional de Auxilio Escolar y Becas
+L1576@P29: 0 11 Junta Nacional de Jardines Infantiles
+L1577@P29: 29
+L1578@P29: / ' PARTIDA 50
+L1579@P29: CAPÍTULO 01
+L1580@P29: \.PROGRAMA 05
+L1581@P29: Moneda Nacional Moneda Extranjera
+L1582@P29: Miles de$ Convertida a Dólares
+L1583@P29: Miles de US$
+L1584@P29: 316.564.718
+L1585@P29: 48.086. 161
+L1586@P29: 19.406.525
+L1587@P29: 46.008.222
+L1588@P29: 38.656.257
+L1589@P29: l.543.21 O
+L1590@P29: 59.903.536
+L1591@P29: 9.346.038
+L1592@P29: 32.656.981
+L1593@P29: 20.136.760
+L1594@P29: 10
+L1595@P29: 5.926.207
+L1596@P29: 8.802.282
+L1597@P29: 2.592.614
+L1598@P29: 9.603.809
+L1599@P29: 13.896. 106
+L1600@P29: 629.194.865
+L1601@P29: 44.254.303
+L1602@P29: 26.204.770
+L1603@P29: 290.235.074
+L1604@P29: 106.889 .067
+L1605@P29: 82.019.256
+L1606@P29: 16.579.153
+L1607@P29: 14.166.724
+L1608@P29: 5.894.057
+L1609@P29: 5.544.407
+L1610@P29: 32.254.012
+L1611@P29: 5.154.042
+L1612@P29: 17.716.443.603
+L1613@P29: 9.764.278.899
+L1614@P29: 45.466.741
+L1615@P29: 46.027.054
+L1616@P29: 452.807 .388
+L1617@P29: 1.7 15.734.176
+L1618@P29-30: 849.430.602 SubTítulo
+L1619@P30: PROYECTO DE LEY DE PRESUPUESTOS AÑO 2027
+L1620@P30: TESORO PÚBLICO
+L1621@P30: Fisco
+L1622@P30: Aporte Fiscal Lil>rc
+L1623@P30: Ítem Asig. Denominaciones Glosa Nº
+L1624@P30: 013 Consejo de Rectores
+L1625@P30: 015 Consejo Nacional de Educación
+L1626@P30: 017 Dirección de Educación Pública
+L1627@P30: 018 Servicio Local de Educación Barrancas
+L1628@P30: 019 Servicio Local de Educación Puerto Cordillera
+L1629@P30: 021 Servicio Local de Educación Huasco
+L1630@P30: 022 Servicio Local de Educación Costa Araucanía
+--------------------------------------------------------------------------------
+ (https://www.camara.cl/legislacion/presupuesto/2027/50_TesoroPublico.pdf)
+citeturn46view1 [wordlim: 200] Crawled: today; Content type: application/pdf; Number of pages: 47; Source: open({"ref_id":"turn35view3","lineno":1924}); Total lines: 2750
+L1890@P33: 013 Caja de Previsión de la Defensa Nacional
+L1891@P33: 014 Dirección de Previsión de Carabineros de Chile
+L1892@P33: 16 MINISTERIO DE SALUD
+L1903@P33: 00 1 Subsecretaría de Vivienda y Urbanismo
+L1904@P33: 002 Parque Metropolitano
+L1905@P33: 02 1 Serviu Región de Tarapacá
+L1906@P33: 022 Serviu Región de Antofagasta
+L1907@P33: 023 Serviu Región de Atacama
+L1908@P33: 024 Serviu Región de Coquimbo
+L1909@P33: 025 Serviu Región de Valparaíso
+L1910@P33: 026 Serviu Región del Libertador General Bernardo
+L1911@P33: O'Higgins
+L1912@P33: 027 Serviu Región del Maule
+L1913@P33: 028 Serviu Región del Bío-Bío
+L1914@P33: 029 Serviu Región de La Araucanía
+L1915@P33: 030 Serviu Región de Los Lagos
+L1916@P33: 33
+L1917@P33: '
+L1918@P33: PARTIDA 50
+L1919@P33: CAPÍTIJLO 0 1
+L1920@P33: '-PROGRAMA 05 .,
+L1921@P33: Moneda Nacional Moneda Extranjera
+L1922@P33: Miles de S Convertida a Dólares
+L1923@P33: Miles de USS
+L1924@P33: 15.887.842.375
+L1925@P33: 156.788.444
+L1926@P33: 1 13.280.007
+L1927@P33: 7.147.998
+L1928@P33: 199.980.480
+L1929@P33: 2 1.826.697
+L1930@P33: 28.399.017
+L1931@P33: 12.252.155. 125
+L1932@P33: 8.576.238
+L1933@P33: 1.730.842.593
+L1934@P33: 1.368.845.776
+L1935@P33: 13.387.187.712
+L1936@P33: 1 1.716.632.09 1
+L1937@P33: 22.873.861
+L1938@P33: 492.336.926
+L1939@P33: 1.135.218.599
+L1940@P33: 20.126.235
+L1941@P33: 53.960.726
+L1942@P33: 11.707.148
+L1943@P33: 6.707.454
+L1944@P33: 35.546.124
+L1945@P33: 4.475.904.414
+L1946@P33: 542.797.004
+L1947@P33: 50.747.891
+L1948@P33: 90.489.389
+L1949@P33: 163.457 .288
+L1950@P33: 118.654.409
+L1951@P33: 203.341.011
+L1952@P33: 334.023.534
+L1953@P33: 239.876.847
+L1954@P33: 304.392.337
+L1955@P33: 337. 182.615
+L1956@P33: 323.4 76.414
+L1957@P33-34: 254.937.339 SubTítulo
+L1958@P34: PROYECTO DE LEY DE PRESUPUESTOS AÑO 2027
+L1959@P34: TESORO PÚBLICO
+L1960@P34: Fisco
+L1961@P34: Aporte Fiscal Libre
+L1962@P34: Ítem Asig. Denominaciones Glosa Nº
+L1963@P34: 03 1 Serviu Región de Aysén del General Carlos lbát'iez
+L1964@P34: Del Campo
+L1965@P34: 032 Serviu Región de Magallanes y de la Antártica
+L1966@P34: Chilena
+L1967@P34: 033 Serviu Región Metropolitana de Santiago
+L1968@P34: 034 Serviu Región de Los Ríos
+L1969@P34: 035 Serviu Región de Arica y Parinacota
+L1970@P34: 036 Serviu Región de Ñuble
+L1971@P34: 19 MINISTERIO DE TRANSPORTES Y
+L1972@P34: TELECOMUNICACIO ES
+L1973@P34: 001 Secretaría y Administración General de Transportes
+L1974@P34: 002 Subsecretaría de Telecomunicaciones
+L1975@P34: 003 Junta Aeronáutica Civil
+L1976@P34: 20 MINISTERIO SECRETARÍA GENERAL DE
+L1977@P34: GOBIERNO
+L1978@P34: 00 1 Secretaría General de Gobierno
+L1979@P34: 002 Consejo Nacional de Televisión
+L1980@P34: 21 MJNISTERIO DE DESARROLLO SOCIAL Y
+L1981@P34: FAMILIA
+L1982@P34: 001 Subsecretaria de Servicios Sociales
+L1983@P34: 002 Fondo de Solidaridad e Inversión Social
+L1984@P34: 005 Instituto Nacional de la Juventud
+L1985@P34: 006 Corporación Nacional de Desarrollo Indígena
+L1986@P34: 007 Servicio Nacional de la Discapacidad
+L1987@P34: 008 Servicio Nacional del Adulto Mayor
+L1988@P34: 009 Subsecretaría de Evaluación Social
+L1989@P34: 010 Subsecretaria de la Niñez
+L1990@P34: 011 Servicio Nacional de Protección Especializada a la
+L1991@P34: Niñez y Adolescencia
+L1992@P34: 22 MI ISTERIO SECRETARÍA GE ERAL DE LA
+L1993@P34: PRESIDENCIA DE LA REPÚBLICA
+L1994@P34: 00 1 Secretaría General de la Presidencia de la República
+L1995@P34: 23 MI ISTERIO PÚBLICO
+L1996@P34: 00 1 Ministerio Público
+L1997@P34: 24 MINISTERIO DE E 'ERGÍA
+L1998@P34: 00 1 Subsecretaría de Energía
+L1999@P34: 002 Comisión Nacional de Energía
+L2000@P34: 003 Comisión Chilena de Energía Nuclear
+L2001@P34: 34
+L2002@P34: r ..,
+L2003@P34: PARTIDA 50
+L2004@P34: CAPÍTULO 01
+L2005@P34: PROGRAMA 05
+L2006@P34: Moneda Nacional Moneda Extranjera
+L2007@P34: Miles de$ Convertida a Dólares
+L2008@P34: Miles de US$
+L2009@P34: 69.210.738
+L2010@P34: 101.871.615
+L2011@P34: 895. 196.926
+L2012@P34: 129.723.247
+L2013@P34: 132.521.444
+L2014@P34: 184.004.366
+L2015@P34: 1.883.830.858
+L2016@P34: 1.860.3 16.617
+L2017@P34: 22.009.275
+L2018@P34: 1.504.966
+L2019@P34: 32.880.650
+L2020@P34: 27.154.767
+L2021@P34: 5.725.883
+L2022@P34: 1.492.337.870
+L2023@P34: 435.247 .963
+L2024@P34: 53.366.481
+L2025@P34: 2.571.535
+L2026@P34: 122.865. 194
+L2027@P34: 12.683.201
+--------------------------------------------------------------------------------
+ (https://www.camara.cl/legislacion/presupuesto/2027/50_TesoroPublico.pdf)
+citeturn46view2 [wordlim: 200] Crawled: today; Content type: application/pdf; Number of pages: 47; Source: open({"ref_id":"turn35view3","lineno":2180}); Total lines: 2750
+L2149@P36: 99 Otros Activos Financieros
+L2150@P36: 35 SALDO FINAL DE CAJA
+L2151@P36: GLOSAS:
+L2152@P36: 01 Excedible mediante Decretos del Ministerio de Hacienda que se d i cten en la forma
+L2153@P36: dispuesta en el Art . 70 del D. L. Nº 1 . 263 , de 1975 . No obstante, se podrá
+L2154@P36: e xceder sin necesidad de Decreto, sancionándose posteriormente los e xcesos que
+L2155@P36: se produzcan .
+L2156@P36: 36
+L2157@P36: Miles de USS
+L2158@P36: 572.264
+L2159@P36: 265.124
+L2160@P36: 265.124
+L2161@P36: 265. 11 4
+L2162@P36: 10
+L2163@P36: 307.120
+L2164@P36: 307.100
+L2165@P36: 20
+L2166@P36: 20
+L2167@P36: 20
+L2168@P36: 10
+L2169@P36: 10
+L2170@P36: 572.264
+L2171@P36: 7.601
+L2172@P36: 299.499
+L2173@P36: 299.499
+L2174@P36: 299.499
+L2175@P36: 265.154
+L2176@P36: 265.144
+L2177@P36: 10
+L2178@P36-37: 10 PROYECTO DE LEY DE PRESUPUESTOS AÑO 2027
+L2179@P37: TESORO PÚBLICO
+L2180@P37: Fisco
+L2181@P37: Fondo de Estabilización Económica y Social
+L2182@P37: PARTIDA
+L2183@P37: CAPÍTULO
+L2184@P37: PROGRAMA
+L2185@P37: "I
+L2186@P37: 50
+L2187@P37: 01
+L2188@P37: 07 ,,
+L2189@P37: Moneda Nacional Moneda Extranjera Sub- Ítem Asig. Denominaciones Glosa Nº Miles de$ Convertida a Dólares Titulo
+L2190@P37: INGRESOS
+L2191@P37: 06 RENTAS DE LA PROPIEDAD
+L2192@P37: 03 Intereses
+L2193@P37: 061 Intereses
+L2194@P37: 062 Ganancias de Capital
+L2195@P37: 11 VENTA DE ACTIVOS FINANCIEROS
+L2196@P37: 01 Venta o Rescate de Títulos y Valores
+L2197@P37: 99 Otros Activos Financieros
+L2198@P37: 13 TRANSFERENCIAS PARA GASTOS DE
+L2199@P37: CAPITAL
+L2200@P37: 02 Del Gobierno Central
+L2201@P37: oso De Operaciones Complementarias
+L2202@P37: GASTOS
+L2203@P37: 22 BIENES Y SERVICIOS DE CONSUMO 01
+L2204@P37: 24 TRANSFERENCIAS CORRIENTES
+L2205@P37: 02 Al Gobierno Central 01
+L2206@P37: 060 A Ingresos Generales de la Nación
+L2207@P37: 30 ADQUISICIÓN DE ACTIVOS FINANCIEROS 01
+L2208@P37: 01 Compra de Títulos y Valores
+L2209@P37: 99 Otros Activos Financieros
+L2210@P37: 33 TRANSFERENCIAS DE CAPITAL
+L2211@P37: 02 Al Gobierno Central 01
+L2212@P37: 059 Al Fondo de Reserva de Pensiones
+L2213@P37: 35 SALDO FINAL DE CAJA
+L2214@P37: GLOSAS:
+L2215@P37: 01 Excedible mediante Decretos del Ministerio de Hacienda que se dicten en la forma
+L2216@P37: dispuesta en el Art . 70 del D.L . Nº 1 . 263 , de 1975 . No obstante, se podrá
+L2217@P37: exceder sin necesidad de Decreto, sancionándose posteriormente los excesos que
+L2218@P37: se produzcan.
+L2219@P37: 37
+L2220@P37: Miles de US$
+L2221@P37: 71.505
+L2222@P37: 69.524
+L2223@P37: 69.524
+L2224@P37: 69.514
+L2225@P37: 10
+L2226@P37: 1.971
+L2227@P37: 1.951
+L2228@P37: 20
+L2229@P37: lO
+L2230@P37: 10
+L2231@P37: 10
+L2232@P37: 71.505
+L2233@P37: 1.931
+L2234@P37: 10
+L2235@P37: 10
+L2236@P37: 10
+L2237@P37: 69.544
+L2238@P37: 69.534
+L2239@P37: 10
+L2240@P37: 10
+L2241@P37: 10
+L2242@P37: 10
+L2243@P37-38: 10 SubTítulo
+L2244@P38: 11
+L2245@P38: 13
+L2246@P38: 30
+L2247@P38: 33
+L2248@P38: 35
+L2249@P38: PROYECTO DE LEY DE PRESUPUESTOS AÑO 2027
+L2250@P38: TESORO PÚBLICO
+L2251@P38: Fisco
+L2252@P38: Fondo de Apoyo al Transporte Público y la Conectividad Regional
+L2253@P38: Ítem Asig. Denominaciones
+L2254@P38: INGRESOS
+L2255@P38: VENTA DE ACTIVOS FINANCIEROS
+L2256@P38: 01 Venta o Rescate de Títulos y Valores
+L2257@P38: TRANSFERENCIAS PARA GASTOS DE CAPITAL
+L2258@P38: 02 Del Gobierno Central
+L2259@P38: 050 De Operaciones Complementarias
+L2260@P38: 090 De Subsidio Nacional al Transporte Público
+L2261@P38: GASTOS
+L2262@P38: ADQUISICIÓN DE ACTIVOS FINANCIEROS
+L2263@P38: 01 Compra de Títulos y Valores
+L2264@P38: TRANSFERENCIAS DE CAPITAL
+L2265@P38: 02 Al Gobierno Central
+L2266@P38: 250 Financiamiento Gobiernos Regionales
+L2267@P38: 260 Empresas y Sociedades del Estado
+L2268@P38: 03 A Otras Entidades Públicas
+L2269@P38: 002 Aplicación Ley Nº20.378 - Fondo de Apoyo al Transporte Público y la
+L2270@P38: Conectividad Regional
+L2271@P38: SALDO FINAL DE CAJA
+L2272@P38: 38
+L2273@P38: " PARTIDA 50
+L2274@P38: CAPÍTULO 01
+L2275@P38: ,PROGRAMA 09 ~
+L2276@P38: Glosa Nº Moneda Nacional
+L2277@P38: Miles de$
+L2278@P38: 591.516.629
+L2279@P38: 96.196.042
+L2280@P38: 96.196.042
+L2281@P38: 495.320.587
+L2282@P38: 495.320.587
+L2283@P38: 482.964. 171
+L2284@P38: 12.356.416
+L2285@P38: 591.516.629
+L2286@P38: 113.182.349
+L2287@P38: 113.182.349
+L2288@P38: 478.334.270
+--------------------------------------------------------------------------------
+ (https://www.dipres.gob.cl/597/articles-397421_doc_pdf.pdf?ts=1765870385)
+citeturn46view3 [wordlim: 200] Crawled: today; Content type: application/pdf; Number of pages: 8; Source: open({"ref_id":"turn43view2","lineno":100}); Total lines: 443
+L74@P1: SubTítulo Ítem Asig. Denominaciones Glosa N° Moneda Nacional
+L75@P1: Miles de $
+L76@P1: Moneda Extranjera
+L77@P1: Convertida a Dólares
+L78@P1: Miles de US$
+L79@P1: 07 MINISTERIO DE ECONOMÍA, FOMENTO Y
+L80@P1: TURISMO
+L81@P1: 311.180.720
+L82@P1: 001 Subsecretaría de Economía y Empresas de Menor
+L83@P1: Tamaño
+L84@P1: 54.115.680
+L85@P1: 002 Servicio Nacional del Consumidor 19.109.897
+L86@P1: 003 Subsecretaría de Pesca y Acuicultura 32.103.197
+L87@P1: 004 Servicio Nacional de Pesca y Acuicultura 37.649.994
+L88@P1: 007 Instituto Nacional de Estadísticas 59.766.097
+L89@P1: 008 Fiscalía Nacional Económica 8.840.395
+L90@P1: 009 Servicio Nacional de Turismo 32.535.326
+L91@P1: 016 Servicio de Cooperación Técnica 24.022.973
+L92@P1: 021 Agencia de Promoción de la Inversión Extranjera 6.051.694
+L93@P1: 023 Instituto Nacional de Propiedad Industrial 8.492.769
+L94@P1: 024 Subsecretaría de Turismo 2.746.938
+L95@P1: 025 Superintendencia de Insolvencia y Reemprendimiento 9.814.358
+L96@P1: 026 Instituto Nacional Desarrollo Sustentable Pesca
+L97@P1: Artesanal y Acuicultura
+L98@P1: 15.931.402
+L99@P1: 08 MINISTERIO DE HACIENDA 635.659.293
+L100@P1: 001 Secretaría y Administración General 46.587.356
+L101@P1: 002 Dirección de Presupuestos 24.792.885
+L102@P1: 003 Servicio de Impuestos Internos 280.835.652
+L103@P1: 004 Servicio Nacional de Aduanas 126.849.338
+L104@P1: 005 Servicio de Tesorerías 80.216.819
+L105@P1: 007 Dirección de Compras y Contratación Pública 17.182.576
+L106@P1: 015 Dirección Nacional del Servicio Civil 13.479.716
+L107@P1: 016 Unidad de Análisis Financiero 5.768.753
+L108@P1: 017 Superintendencia de Casinos de Juego 4.718.967
+L109@P1: 030 Consejo de Defensa del Estado 30.372.942
+L110@P1: 033 Defensoría del Contribuyente 4.854.289
+L111@P1: 09 MINISTERIO DE EDUCACIÓN 16.821.936.421
+L112@P1: 001 Subsecretaría de Educación 9.235.795.618
+L113@P1: 002 Superintendencia de Educación 42.281.064
+L114@P1: 003 Agencia de Calidad de la Educación 47.405.476
+L115@P1: 004 Subsecretaría de Educación Parvularia 426.211.058
+L116@P1: 009 Junta Nacional de Auxilio Escolar y Becas 1.711.622.376
+L117@P1: 011 Junta Nacional de Jardines Infantiles 785.608.733
+L118@P1: 013 Consejo de Rectores 96.995
+L119@P1-2: 015 Consejo Nacional de Educación 2.226.419Fisco
+L120@P2: TESORO PÚBLICO
+L121@P2: Aporte Fiscal Libre
+L122@P2: PARTIDA
+L123@P2: CAPÍTULO
+L124@P2: PROGRAMA
+L125@P2: :
+L126@P2: :
+L127@P2: :
+L128@P2: LEY DE PRESUPUESTOS AÑO 2026
+L129@P2: 50
+L130@P2: 01
+L131@P2: 05
+L132@P2: SubTítulo Ítem Asig. Denominaciones Glosa N° Moneda Nacional
+L133@P2: Miles de $
+L134@P2: Moneda Extranjera
+L135@P2: Convertida a Dólares
+L136@P2: Miles de US$
+L137@P2: 017 Dirección de Educación Pública 483.082.142
+L138@P2: 018 Servicio Local de Educación Barrancas 4.207.472
+L139@P2: 019 Servicio Local de Educación Puerto Cordillera 3.069.227
+L140@P2: 021 Servicio Local de Educación Huasco 3.035.339
+L141@P2: 022 Servicio Local de Educación Costa Araucanía 3.528.105
+L142@P2: 023 Servicio Local de Educación Chinchorro 3.949.069
+L143@P2: 024 Servicio Local de Educación Gabriela Mistral 3.188.773
+L144@P2: 025 Servicio Local de Educación Andalien Sur 3.617.201
+L145@P2: 026 Servicio Local de Educación Atacama 3.747.615
+L146@P2: 027 Servicio Local de Educación Valparaíso 3.300.514
+L147@P2: 028 Servicio Local de Educación Colchagua 3.306.988
+L148@P2: 029 Servicio Local de Educación Llanquihue 3.323.146
+L149@P2: 030 Servicio Local de Educación Iquique 3.797.296
+L150@P2: 031 Servicio Local de Educación Licancabur 4.364.503
+L151@P2: 032 Servicio Local de Educación Maule Costa 4.266.474
+L152@P2: 033 Servicio Local de Educación Punilla Cordillera 3.592.210
+L153@P2: 034 Servicio Local de Educación Aysén 4.386.418
+L154@P2: 035 Servicio Local de Educación Magallanes 4.271.001
+L155@P2: 036 Servicio Local de Educación Tamarugal 3.113.058
+L156@P2: 037 Servicio Local de Educación Elqui 4.044.280
+L157@P2: 038 Servicio Local de Educación Costa Central 4.091.978
+L158@P2: 039 Servicio Local de Educación Marga Marga 4.200.364
+L159@P2: 040 Servicio Local de Educación Los Libertadores 3.625.737
+

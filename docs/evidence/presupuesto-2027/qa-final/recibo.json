@@ -1,0 +1,2207 @@
+{
+  "generado": "2026-10-05T21:45:34.102Z",
+  "base": "http://127.0.0.1:18561",
+  "rutas": 5,
+  "casos": 40,
+  "capturas": 60,
+  "axeSeriasOCriticas": 0,
+  "fallos": [],
+  "resultados": [
+    {
+      "id": "inicio-1440-light",
+      "ruta": "/",
+      "ancho": 1440,
+      "tema": "light",
+      "axeGraves": 0,
+      "sinFocoEnCaptura": true,
+      "desborde": {
+        "viewport": 1440,
+        "scroll": 1440,
+        "elementos": [
+          {
+            "selector": "a.skip-link",
+            "izquierda": -999,
+            "derecha": -838,
+            "ancho": 161,
+            "cliente": 161,
+            "scroll": 161
+          },
+          {
+            "selector": "label.sr-only",
+            "izquierda": 133,
+            "derecha": 134,
+            "ancho": 1,
+            "cliente": 1,
+            "scroll": 89
+          },
+          {
+            "selector": "ul.temas",
+            "izquierda": 132,
+            "derecha": 1308,
+            "ancho": 1176,
+            "cliente": 1176,
+            "scroll": 1188
+          },
+          {
+            "selector": "li.tema",
+            "izquierda": 132,
+            "derecha": 688,
+            "ancho": 556,
+            "cliente": 556,
+            "scroll": 568
+          },
+          {
+            "selector": "li.tema",
+            "izquierda": 752,
+            "derecha": 1308,
+            "ancho": 556,
+            "cliente": 556,
+            "scroll": 568
+          },
+          {
+            "selector": "li.tema",
+            "izquierda": 132,
+            "derecha": 688,
+            "ancho": 556,
+            "cliente": 556,
+            "scroll": 568
+          },
+          {
+            "selector": "li.tema",
+            "izquierda": 752,
+            "derecha": 1308,
+            "ancho": 556,
+            "cliente": 556,
+            "scroll": 568
+          }
+        ]
+      },
+      "foco": {
+        "tag": "A",
+        "clase": "skip-link",
+        "visible": true,
+        "outline": true
+      },
+      "menu": null,
+      "erroresPagina": []
+    },
+    {
+      "id": "inicio-1440-dark",
+      "ruta": "/",
+      "ancho": 1440,
+      "tema": "dark",
+      "axeGraves": 0,
+      "sinFocoEnCaptura": true,
+      "desborde": {
+        "viewport": 1440,
+        "scroll": 1440,
+        "elementos": [
+          {
+            "selector": "a.skip-link",
+            "izquierda": -999,
+            "derecha": -838,
+            "ancho": 161,
+            "cliente": 161,
+            "scroll": 161
+          },
+          {
+            "selector": "label.sr-only",
+            "izquierda": 133,
+            "derecha": 134,
+            "ancho": 1,
+            "cliente": 1,
+            "scroll": 89
+          },
+          {
+            "selector": "ul.temas",
+            "izquierda": 132,
+            "derecha": 1308,
+            "ancho": 1176,
+            "cliente": 1176,
+            "scroll": 1188
+          },
+          {
+            "selector": "li.tema",
+            "izquierda": 132,
+            "derecha": 688,
+            "ancho": 556,
+            "cliente": 556,
+            "scroll": 568
+          },
+          {
+            "selector": "li.tema",
+            "izquierda": 752,
+            "derecha": 1308,
+            "ancho": 556,
+            "cliente": 556,
+            "scroll": 568
+          },
+          {
+            "selector": "li.tema",
+            "izquierda": 132,
+            "derecha": 688,
+            "ancho": 556,
+            "cliente": 556,
+            "scroll": 568
+          },
+          {
+            "selector": "li.tema",
+            "izquierda": 752,
+            "derecha": 1308,
+            "ancho": 556,
+            "cliente": 556,
+            "scroll": 568
+          }
+        ]
+      },
+      "foco": {
+        "tag": "A",
+        "clase": "skip-link",
+        "visible": true,
+        "outline": true
+      },
+      "menu": null,
+      "erroresPagina": []
+    },
+    {
+      "id": "inicio-768-light",
+      "ruta": "/",
+      "ancho": 768,
+      "tema": "light",
+      "axeGraves": 0,
+      "sinFocoEnCaptura": true,
+      "desborde": {
+        "viewport": 768,
+        "scroll": 768,
+        "elementos": [
+          {
+            "selector": "a.skip-link",
+            "izquierda": -999,
+            "derecha": -838,
+            "ancho": 161,
+            "cliente": 161,
+            "scroll": 161
+          },
+          {
+            "selector": "label.sr-only",
+            "izquierda": 33,
+            "derecha": 34,
+            "ancho": 1,
+            "cliente": 1,
+            "scroll": 89
+          },
+          {
+            "selector": "ul.temas",
+            "izquierda": 32,
+            "derecha": 736,
+            "ancho": 704,
+            "cliente": 704,
+            "scroll": 716
+          },
+          {
+            "selector": "li.tema",
+            "izquierda": 32,
+            "derecha": 352,
+            "ancho": 320,
+            "cliente": 320,
+            "scroll": 332
+          },
+          {
+            "selector": "li.tema",
+            "izquierda": 416,
+            "derecha": 736,
+            "ancho": 320,
+            "cliente": 320,
+            "scroll": 332
+          },
+          {
+            "selector": "li.tema",
+            "izquierda": 32,
+            "derecha": 352,
+            "ancho": 320,
+            "cliente": 320,
+            "scroll": 332
+          },
+          {
+            "selector": "li.tema",
+            "izquierda": 416,
+            "derecha": 736,
+            "ancho": 320,
+            "cliente": 320,
+            "scroll": 332
+          }
+        ]
+      },
+      "foco": {
+        "tag": "A",
+        "clase": "skip-link",
+        "visible": true,
+        "outline": true
+      },
+      "menu": null,
+      "erroresPagina": []
+    },
+    {
+      "id": "inicio-768-dark",
+      "ruta": "/",
+      "ancho": 768,
+      "tema": "dark",
+      "axeGraves": 0,
+      "sinFocoEnCaptura": true,
+      "desborde": {
+        "viewport": 768,
+        "scroll": 768,
+        "elementos": [
+          {
+            "selector": "a.skip-link",
+            "izquierda": -999,
+            "derecha": -838,
+            "ancho": 161,
+            "cliente": 161,
+            "scroll": 161
+          },
+          {
+            "selector": "label.sr-only",
+            "izquierda": 33,
+            "derecha": 34,
+            "ancho": 1,
+            "cliente": 1,
+            "scroll": 89
+          },
+          {
+            "selector": "ul.temas",
+            "izquierda": 32,
+            "derecha": 736,
+            "ancho": 704,
+            "cliente": 704,
+            "scroll": 716
+          },
+          {
+            "selector": "li.tema",
+            "izquierda": 32,
+            "derecha": 352,
+            "ancho": 320,
+            "cliente": 320,
+            "scroll": 332
+          },
+          {
+            "selector": "li.tema",
+            "izquierda": 416,
+            "derecha": 736,
+            "ancho": 320,
+            "cliente": 320,
+            "scroll": 332
+          },
+          {
+            "selector": "li.tema",
+            "izquierda": 32,
+            "derecha": 352,
+            "ancho": 320,
+            "cliente": 320,
+            "scroll": 332
+          },
+          {
+            "selector": "li.tema",
+            "izquierda": 416,
+            "derecha": 736,
+            "ancho": 320,
+            "cliente": 320,
+            "scroll": 332
+          }
+        ]
+      },
+      "foco": {
+        "tag": "A",
+        "clase": "skip-link",
+        "visible": true,
+        "outline": true
+      },
+      "menu": null,
+      "erroresPagina": []
+    },
+    {
+      "id": "inicio-390-light",
+      "ruta": "/",
+      "ancho": 390,
+      "tema": "light",
+      "axeGraves": 0,
+      "sinFocoEnCaptura": true,
+      "desborde": {
+        "viewport": 390,
+        "scroll": 390,
+        "elementos": [
+          {
+            "selector": "a.skip-link",
+            "izquierda": -999,
+            "derecha": -838,
+            "ancho": 161,
+            "cliente": 161,
+            "scroll": 161
+          },
+          {
+            "selector": "label.sr-only",
+            "izquierda": 21,
+            "derecha": 22,
+            "ancho": 1,
+            "cliente": 1,
+            "scroll": 89
+          },
+          {
+            "selector": "ul.temas",
+            "izquierda": 20,
+            "derecha": 370,
+            "ancho": 350,
+            "cliente": 350,
+            "scroll": 362
+          },
+          {
+            "selector": "li.tema",
+            "izquierda": 20,
+            "derecha": 370,
+            "ancho": 350,
+            "cliente": 350,
+            "scroll": 362
+          },
+          {
+            "selector": "li.tema",
+            "izquierda": 20,
+            "derecha": 370,
+            "ancho": 350,
+            "cliente": 350,
+            "scroll": 362
+          },
+          {
+            "selector": "li.tema",
+            "izquierda": 20,
+            "derecha": 370,
+            "ancho": 350,
+            "cliente": 350,
+            "scroll": 362
+          },
+          {
+            "selector": "li.tema",
+            "izquierda": 20,
+            "derecha": 370,
+            "ancho": 350,
+            "cliente": 350,
+            "scroll": 362
+          },
+          {
+            "selector": "div.tabla__sc",
+            "izquierda": 20,
+            "derecha": 370,
+            "ancho": 350,
+            "cliente": 350,
+            "scroll": 680
+          },
+          {
+            "selector": "table.tabla",
+            "izquierda": 20,
+            "derecha": 700,
+            "ancho": 680,
+            "cliente": 680,
+            "scroll": 680
+          },
+          {
+            "selector": "caption.",
+            "izquierda": 20,
+            "derecha": 700,
+            "ancho": 680,
+            "cliente": 680,
+            "scroll": 680
+          },
+          {
+            "selector": "thead.",
+            "izquierda": 20,
+            "derecha": 700,
+            "ancho": 680,
+            "cliente": 680,
+            "scroll": 680
+          },
+          {
+            "selector": "tr.",
+            "izquierda": 20,
+            "derecha": 700,
+            "ancho": 680,
+            "cliente": 680,
+            "scroll": 680
+          }
+        ]
+      },
+      "foco": {
+        "tag": "A",
+        "clase": "skip-link",
+        "visible": true,
+        "outline": true
+      },
+      "menu": {
+        "abierto": "true",
+        "navegacionVisible": true,
+        "cerrado": "false",
+        "focoDevuelto": true
+      },
+      "erroresPagina": []
+    },
+    {
+      "id": "inicio-390-dark",
+      "ruta": "/",
+      "ancho": 390,
+      "tema": "dark",
+      "axeGraves": 0,
+      "sinFocoEnCaptura": true,
+      "desborde": {
+        "viewport": 390,
+        "scroll": 390,
+        "elementos": [
+          {
+            "selector": "a.skip-link",
+            "izquierda": -999,
+            "derecha": -838,
+            "ancho": 161,
+            "cliente": 161,
+            "scroll": 161
+          },
+          {
+            "selector": "label.sr-only",
+            "izquierda": 21,
+            "derecha": 22,
+            "ancho": 1,
+            "cliente": 1,
+            "scroll": 89
+          },
+          {
+            "selector": "ul.temas",
+            "izquierda": 20,
+            "derecha": 370,
+            "ancho": 350,
+            "cliente": 350,
+            "scroll": 362
+          },
+          {
+            "selector": "li.tema",
+            "izquierda": 20,
+            "derecha": 370,
+            "ancho": 350,
+            "cliente": 350,
+            "scroll": 362
+          },
+          {
+            "selector": "li.tema",
+            "izquierda": 20,
+            "derecha": 370,
+            "ancho": 350,
+            "cliente": 350,
+            "scroll": 362
+          },
+          {
+            "selector": "li.tema",
+            "izquierda": 20,
+            "derecha": 370,
+            "ancho": 350,
+            "cliente": 350,
+            "scroll": 362
+          },
+          {
+            "selector": "li.tema",
+            "izquierda": 20,
+            "derecha": 370,
+            "ancho": 350,
+            "cliente": 350,
+            "scroll": 362
+          },
+          {
+            "selector": "div.tabla__sc",
+            "izquierda": 20,
+            "derecha": 370,
+            "ancho": 350,
+            "cliente": 350,
+            "scroll": 680
+          },
+          {
+            "selector": "table.tabla",
+            "izquierda": 20,
+            "derecha": 700,
+            "ancho": 680,
+            "cliente": 680,
+            "scroll": 680
+          },
+          {
+            "selector": "caption.",
+            "izquierda": 20,
+            "derecha": 700,
+            "ancho": 680,
+            "cliente": 680,
+            "scroll": 680
+          },
+          {
+            "selector": "thead.",
+            "izquierda": 20,
+            "derecha": 700,
+            "ancho": 680,
+            "cliente": 680,
+            "scroll": 680
+          },
+          {
+            "selector": "tr.",
+            "izquierda": 20,
+            "derecha": 700,
+            "ancho": 680,
+            "cliente": 680,
+            "scroll": 680
+          }
+        ]
+      },
+      "foco": {
+        "tag": "A",
+        "clase": "skip-link",
+        "visible": true,
+        "outline": true
+      },
+      "menu": {
+        "abierto": "true",
+        "navegacionVisible": true,
+        "cerrado": "false",
+        "focoDevuelto": true
+      },
+      "erroresPagina": []
+    },
+    {
+      "id": "inicio-320-light",
+      "ruta": "/",
+      "ancho": 320,
+      "tema": "light",
+      "axeGraves": 0,
+      "sinFocoEnCaptura": true,
+      "desborde": {
+        "viewport": 320,
+        "scroll": 320,
+        "elementos": [
+          {
+            "selector": "a.skip-link",
+            "izquierda": -999,
+            "derecha": -838,
+            "ancho": 161,
+            "cliente": 161,
+            "scroll": 161
+          },
+          {
+            "selector": "label.sr-only",
+            "izquierda": 21,
+            "derecha": 22,
+            "ancho": 1,
+            "cliente": 1,
+            "scroll": 89
+          },
+          {
+            "selector": "ul.temas",
+            "izquierda": 20,
+            "derecha": 300,
+            "ancho": 280,
+            "cliente": 280,
+            "scroll": 292
+          },
+          {
+            "selector": "li.tema",
+            "izquierda": 20,
+            "derecha": 300,
+            "ancho": 280,
+            "cliente": 280,
+            "scroll": 292
+          },
+          {
+            "selector": "li.tema",
+            "izquierda": 20,
+            "derecha": 300,
+            "ancho": 280,
+            "cliente": 280,
+            "scroll": 292
+          },
+          {
+            "selector": "li.tema",
+            "izquierda": 20,
+            "derecha": 300,
+            "ancho": 280,
+            "cliente": 280,
+            "scroll": 292
+          },
+          {
+            "selector": "li.tema",
+            "izquierda": 20,
+            "derecha": 300,
+            "ancho": 280,
+            "cliente": 280,
+            "scroll": 292
+          },
+          {
+            "selector": "div.tabla__sc",
+            "izquierda": 20,
+            "derecha": 300,
+            "ancho": 280,
+            "cliente": 280,
+            "scroll": 680
+          },
+          {
+            "selector": "table.tabla",
+            "izquierda": 20,
+            "derecha": 700,
+            "ancho": 680,
+            "cliente": 680,
+            "scroll": 680
+          },
+          {
+            "selector": "caption.",
+            "izquierda": 20,
+            "derecha": 700,
+            "ancho": 680,
+            "cliente": 680,
+            "scroll": 680
+          },
+          {
+            "selector": "thead.",
+            "izquierda": 20,
+            "derecha": 700,
+            "ancho": 680,
+            "cliente": 680,
+            "scroll": 680
+          },
+          {
+            "selector": "tr.",
+            "izquierda": 20,
+            "derecha": 700,
+            "ancho": 680,
+            "cliente": 680,
+            "scroll": 680
+          }
+        ]
+      },
+      "foco": {
+        "tag": "A",
+        "clase": "skip-link",
+        "visible": true,
+        "outline": true
+      },
+      "menu": {
+        "abierto": "true",
+        "navegacionVisible": true,
+        "cerrado": "false",
+        "focoDevuelto": true
+      },
+      "erroresPagina": []
+    },
+    {
+      "id": "inicio-320-dark",
+      "ruta": "/",
+      "ancho": 320,
+      "tema": "dark",
+      "axeGraves": 0,
+      "sinFocoEnCaptura": true,
+      "desborde": {
+        "viewport": 320,
+        "scroll": 320,
+        "elementos": [
+          {
+            "selector": "a.skip-link",
+            "izquierda": -999,
+            "derecha": -838,
+            "ancho": 161,
+            "cliente": 161,
+            "scroll": 161
+          },
+          {
+            "selector": "label.sr-only",
+            "izquierda": 21,
+            "derecha": 22,
+            "ancho": 1,
+            "cliente": 1,
+            "scroll": 89
+          },
+          {
+            "selector": "ul.temas",
+            "izquierda": 20,
+            "derecha": 300,
+            "ancho": 280,
+            "cliente": 280,
+            "scroll": 292
+          },
+          {
+            "selector": "li.tema",
+            "izquierda": 20,
+            "derecha": 300,
+            "ancho": 280,
+            "cliente": 280,
+            "scroll": 292
+          },
+          {
+            "selector": "li.tema",
+            "izquierda": 20,
+            "derecha": 300,
+            "ancho": 280,
+            "cliente": 280,
+            "scroll": 292
+          },
+          {
+            "selector": "li.tema",
+            "izquierda": 20,
+            "derecha": 300,
+            "ancho": 280,
+            "cliente": 280,
+            "scroll": 292
+          },
+          {
+            "selector": "li.tema",
+            "izquierda": 20,
+            "derecha": 300,
+            "ancho": 280,
+            "cliente": 280,
+            "scroll": 292
+          },
+          {
+            "selector": "div.tabla__sc",
+            "izquierda": 20,
+            "derecha": 300,
+            "ancho": 280,
+            "cliente": 280,
+            "scroll": 680
+          },
+          {
+            "selector": "table.tabla",
+            "izquierda": 20,
+            "derecha": 700,
+            "ancho": 680,
+            "cliente": 680,
+            "scroll": 680
+          },
+          {
+            "selector": "caption.",
+            "izquierda": 20,
+            "derecha": 700,
+            "ancho": 680,
+            "cliente": 680,
+            "scroll": 680
+          },
+          {
+            "selector": "thead.",
+            "izquierda": 20,
+            "derecha": 700,
+            "ancho": 680,
+            "cliente": 680,
+            "scroll": 680
+          },
+          {
+            "selector": "tr.",
+            "izquierda": 20,
+            "derecha": 700,
+            "ancho": 680,
+            "cliente": 680,
+            "scroll": 680
+          }
+        ]
+      },
+      "foco": {
+        "tag": "A",
+        "clase": "skip-link",
+        "visible": true,
+        "outline": true
+      },
+      "menu": {
+        "abierto": "true",
+        "navegacionVisible": true,
+        "cerrado": "false",
+        "focoDevuelto": true
+      },
+      "erroresPagina": []
+    },
+    {
+      "id": "blog-1440-light",
+      "ruta": "/blog/",
+      "ancho": 1440,
+      "tema": "light",
+      "axeGraves": 0,
+      "sinFocoEnCaptura": true,
+      "desborde": {
+        "viewport": 1440,
+        "scroll": 1440,
+        "elementos": [
+          {
+            "selector": "a.skip-link",
+            "izquierda": -999,
+            "derecha": -838,
+            "ancho": 161,
+            "cliente": 161,
+            "scroll": 161
+          }
+        ]
+      },
+      "foco": {
+        "tag": "A",
+        "clase": "skip-link",
+        "visible": true,
+        "outline": true
+      },
+      "menu": null,
+      "erroresPagina": []
+    },
+    {
+      "id": "blog-1440-dark",
+      "ruta": "/blog/",
+      "ancho": 1440,
+      "tema": "dark",
+      "axeGraves": 0,
+      "sinFocoEnCaptura": true,
+      "desborde": {
+        "viewport": 1440,
+        "scroll": 1440,
+        "elementos": [
+          {
+            "selector": "a.skip-link",
+            "izquierda": -999,
+            "derecha": -838,
+            "ancho": 161,
+            "cliente": 161,
+            "scroll": 161
+          }
+        ]
+      },
+      "foco": {
+        "tag": "A",
+        "clase": "skip-link",
+        "visible": true,
+        "outline": true
+      },
+      "menu": null,
+      "erroresPagina": []
+    },
+    {
+      "id": "blog-768-light",
+      "ruta": "/blog/",
+      "ancho": 768,
+      "tema": "light",
+      "axeGraves": 0,
+      "sinFocoEnCaptura": true,
+      "desborde": {
+        "viewport": 768,
+        "scroll": 768,
+        "elementos": [
+          {
+            "selector": "a.skip-link",
+            "izquierda": -999,
+            "derecha": -838,
+            "ancho": 161,
+            "cliente": 161,
+            "scroll": 161
+          }
+        ]
+      },
+      "foco": {
+        "tag": "A",
+        "clase": "skip-link",
+        "visible": true,
+        "outline": true
+      },
+      "menu": null,
+      "erroresPagina": []
+    },
+    {
+      "id": "blog-768-dark",
+      "ruta": "/blog/",
+      "ancho": 768,
+      "tema": "dark",
+      "axeGraves": 0,
+      "sinFocoEnCaptura": true,
+      "desborde": {
+        "viewport": 768,
+        "scroll": 768,
+        "elementos": [
+          {
+            "selector": "a.skip-link",
+            "izquierda": -999,
+            "derecha": -838,
+            "ancho": 161,
+            "cliente": 161,
+            "scroll": 161
+          }
+        ]
+      },
+      "foco": {
+        "tag": "A",
+        "clase": "skip-link",
+        "visible": true,
+        "outline": true
+      },
+      "menu": null,
+      "erroresPagina": []
+    },
+    {
+      "id": "blog-390-light",
+      "ruta": "/blog/",
+      "ancho": 390,
+      "tema": "light",
+      "axeGraves": 0,
+      "sinFocoEnCaptura": true,
+      "desborde": {
+        "viewport": 390,
+        "scroll": 390,
+        "elementos": [
+          {
+            "selector": "a.skip-link",
+            "izquierda": -999,
+            "derecha": -838,
+            "ancho": 161,
+            "cliente": 161,
+            "scroll": 161
+          }
+        ]
+      },
+      "foco": {
+        "tag": "A",
+        "clase": "skip-link",
+        "visible": true,
+        "outline": true
+      },
+      "menu": {
+        "abierto": "true",
+        "navegacionVisible": true,
+        "cerrado": "false",
+        "focoDevuelto": true
+      },
+      "erroresPagina": []
+    },
+    {
+      "id": "blog-390-dark",
+      "ruta": "/blog/",
+      "ancho": 390,
+      "tema": "dark",
+      "axeGraves": 0,
+      "sinFocoEnCaptura": true,
+      "desborde": {
+        "viewport": 390,
+        "scroll": 390,
+        "elementos": [
+          {
+            "selector": "a.skip-link",
+            "izquierda": -999,
+            "derecha": -838,
+            "ancho": 161,
+            "cliente": 161,
+            "scroll": 161
+          }
+        ]
+      },
+      "foco": {
+        "tag": "A",
+        "clase": "skip-link",
+        "visible": true,
+        "outline": true
+      },
+      "menu": {
+        "abierto": "true",
+        "navegacionVisible": true,
+        "cerrado": "false",
+        "focoDevuelto": true
+      },
+      "erroresPagina": []
+    },
+    {
+      "id": "blog-320-light",
+      "ruta": "/blog/",
+      "ancho": 320,
+      "tema": "light",
+      "axeGraves": 0,
+      "sinFocoEnCaptura": true,
+      "desborde": {
+        "viewport": 320,
+        "scroll": 320,
+        "elementos": [
+          {
+            "selector": "a.skip-link",
+            "izquierda": -999,
+            "derecha": -838,
+            "ancho": 161,
+            "cliente": 161,
+            "scroll": 161
+          }
+        ]
+      },
+      "foco": {
+        "tag": "A",
+        "clase": "skip-link",
+        "visible": true,
+        "outline": true
+      },
+      "menu": {
+        "abierto": "true",
+        "navegacionVisible": true,
+        "cerrado": "false",
+        "focoDevuelto": true
+      },
+      "erroresPagina": []
+    },
+    {
+      "id": "blog-320-dark",
+      "ruta": "/blog/",
+      "ancho": 320,
+      "tema": "dark",
+      "axeGraves": 0,
+      "sinFocoEnCaptura": true,
+      "desborde": {
+        "viewport": 320,
+        "scroll": 320,
+        "elementos": [
+          {
+            "selector": "a.skip-link",
+            "izquierda": -999,
+            "derecha": -838,
+            "ancho": 161,
+            "cliente": 161,
+            "scroll": 161
+          }
+        ]
+      },
+      "foco": {
+        "tag": "A",
+        "clase": "skip-link",
+        "visible": true,
+        "outline": true
+      },
+      "menu": {
+        "abierto": "true",
+        "navegacionVisible": true,
+        "cerrado": "false",
+        "focoDevuelto": true
+      },
+      "erroresPagina": []
+    },
+    {
+      "id": "blog--presupuesto-2027-aportes-cambios-nominal-real-1440-light",
+      "ruta": "/blog/presupuesto-2027-aportes-cambios-nominal-real/",
+      "ancho": 1440,
+      "tema": "light",
+      "axeGraves": 0,
+      "sinFocoEnCaptura": true,
+      "desborde": {
+        "viewport": 1440,
+        "scroll": 1440,
+        "elementos": [
+          {
+            "selector": "a.skip-link",
+            "izquierda": -999,
+            "derecha": -838,
+            "ancho": 161,
+            "cliente": 161,
+            "scroll": 161
+          }
+        ]
+      },
+      "foco": {
+        "tag": "A",
+        "clase": "skip-link",
+        "visible": true,
+        "outline": true
+      },
+      "menu": null,
+      "erroresPagina": []
+    },
+    {
+      "id": "blog--presupuesto-2027-aportes-cambios-nominal-real-1440-dark",
+      "ruta": "/blog/presupuesto-2027-aportes-cambios-nominal-real/",
+      "ancho": 1440,
+      "tema": "dark",
+      "axeGraves": 0,
+      "sinFocoEnCaptura": true,
+      "desborde": {
+        "viewport": 1440,
+        "scroll": 1440,
+        "elementos": [
+          {
+            "selector": "a.skip-link",
+            "izquierda": -999,
+            "derecha": -838,
+            "ancho": 161,
+            "cliente": 161,
+            "scroll": 161
+          }
+        ]
+      },
+      "foco": {
+        "tag": "A",
+        "clase": "skip-link",
+        "visible": true,
+        "outline": true
+      },
+      "menu": null,
+      "erroresPagina": []
+    },
+    {
+      "id": "blog--presupuesto-2027-aportes-cambios-nominal-real-768-light",
+      "ruta": "/blog/presupuesto-2027-aportes-cambios-nominal-real/",
+      "ancho": 768,
+      "tema": "light",
+      "axeGraves": 0,
+      "sinFocoEnCaptura": true,
+      "desborde": {
+        "viewport": 768,
+        "scroll": 768,
+        "elementos": [
+          {
+            "selector": "a.skip-link",
+            "izquierda": -999,
+            "derecha": -838,
+            "ancho": 161,
+            "cliente": 161,
+            "scroll": 161
+          }
+        ]
+      },
+      "foco": {
+        "tag": "A",
+        "clase": "skip-link",
+        "visible": true,
+        "outline": true
+      },
+      "menu": null,
+      "erroresPagina": []
+    },
+    {
+      "id": "blog--presupuesto-2027-aportes-cambios-nominal-real-768-dark",
+      "ruta": "/blog/presupuesto-2027-aportes-cambios-nominal-real/",
+      "ancho": 768,
+      "tema": "dark",
+      "axeGraves": 0,
+      "sinFocoEnCaptura": true,
+      "desborde": {
+        "viewport": 768,
+        "scroll": 768,
+        "elementos": [
+          {
+            "selector": "a.skip-link",
+            "izquierda": -999,
+            "derecha": -838,
+            "ancho": 161,
+            "cliente": 161,
+            "scroll": 161
+          }
+        ]
+      },
+      "foco": {
+        "tag": "A",
+        "clase": "skip-link",
+        "visible": true,
+        "outline": true
+      },
+      "menu": null,
+      "erroresPagina": []
+    },
+    {
+      "id": "blog--presupuesto-2027-aportes-cambios-nominal-real-390-light",
+      "ruta": "/blog/presupuesto-2027-aportes-cambios-nominal-real/",
+      "ancho": 390,
+      "tema": "light",
+      "axeGraves": 0,
+      "sinFocoEnCaptura": true,
+      "desborde": {
+        "viewport": 390,
+        "scroll": 390,
+        "elementos": [
+          {
+            "selector": "a.skip-link",
+            "izquierda": -999,
+            "derecha": -838,
+            "ancho": 161,
+            "cliente": 161,
+            "scroll": 161
+          },
+          {
+            "selector": "div.portal-tabla",
+            "izquierda": 20,
+            "derecha": 370,
+            "ancho": 350,
+            "cliente": 350,
+            "scroll": 365
+          },
+          {
+            "selector": "div.portal-tabla",
+            "izquierda": 20,
+            "derecha": 370,
+            "ancho": 350,
+            "cliente": 350,
+            "scroll": 488
+          },
+          {
+            "selector": "table.",
+            "izquierda": 20,
+            "derecha": 508.125,
+            "ancho": 488.125,
+            "cliente": 488,
+            "scroll": 488
+          },
+          {
+            "selector": "thead.",
+            "izquierda": 20.5,
+            "derecha": 507.625,
+            "ancho": 487.125,
+            "cliente": 487,
+            "scroll": 487
+          },
+          {
+            "selector": "tr.",
+            "izquierda": 20.5,
+            "derecha": 507.625,
+            "ancho": 487.125,
+            "cliente": 487,
+            "scroll": 487
+          },
+          {
+            "selector": "th.",
+            "izquierda": 388.84375,
+            "derecha": 507.625,
+            "ancho": 118.78125,
+            "cliente": 118,
+            "scroll": 118
+          },
+          {
+            "selector": "tbody.",
+            "izquierda": 20.5,
+            "derecha": 507.625,
+            "ancho": 487.125,
+            "cliente": 487,
+            "scroll": 487
+          },
+          {
+            "selector": "tr.",
+            "izquierda": 20.5,
+            "derecha": 507.625,
+            "ancho": 487.125,
+            "cliente": 487,
+            "scroll": 487
+          },
+          {
+            "selector": "td.",
+            "izquierda": 388.84375,
+            "derecha": 507.625,
+            "ancho": 118.78125,
+            "cliente": 118,
+            "scroll": 118
+          },
+          {
+            "selector": "tr.",
+            "izquierda": 20.5,
+            "derecha": 507.625,
+            "ancho": 487.125,
+            "cliente": 487,
+            "scroll": 487
+          },
+          {
+            "selector": "td.",
+            "izquierda": 388.84375,
+            "derecha": 507.625,
+            "ancho": 118.78125,
+            "cliente": 118,
+            "scroll": 118
+          }
+        ]
+      },
+      "foco": {
+        "tag": "A",
+        "clase": "skip-link",
+        "visible": true,
+        "outline": true
+      },
+      "menu": {
+        "abierto": "true",
+        "navegacionVisible": true,
+        "cerrado": "false",
+        "focoDevuelto": true
+      },
+      "erroresPagina": []
+    },
+    {
+      "id": "blog--presupuesto-2027-aportes-cambios-nominal-real-390-dark",
+      "ruta": "/blog/presupuesto-2027-aportes-cambios-nominal-real/",
+      "ancho": 390,
+      "tema": "dark",
+      "axeGraves": 0,
+      "sinFocoEnCaptura": true,
+      "desborde": {
+        "viewport": 390,
+        "scroll": 390,
+        "elementos": [
+          {
+            "selector": "a.skip-link",
+            "izquierda": -999,
+            "derecha": -838,
+            "ancho": 161,
+            "cliente": 161,
+            "scroll": 161
+          },
+          {
+            "selector": "div.portal-tabla",
+            "izquierda": 20,
+            "derecha": 370,
+            "ancho": 350,
+            "cliente": 350,
+            "scroll": 365
+          },
+          {
+            "selector": "div.portal-tabla",
+            "izquierda": 20,
+            "derecha": 370,
+            "ancho": 350,
+            "cliente": 350,
+            "scroll": 488
+          },
+          {
+            "selector": "table.",
+            "izquierda": 20,
+            "derecha": 508.125,
+            "ancho": 488.125,
+            "cliente": 488,
+            "scroll": 488
+          },
+          {
+            "selector": "thead.",
+            "izquierda": 20.5,
+            "derecha": 507.625,
+            "ancho": 487.125,
+            "cliente": 487,
+            "scroll": 487
+          },
+          {
+            "selector": "tr.",
+            "izquierda": 20.5,
+            "derecha": 507.625,
+            "ancho": 487.125,
+            "cliente": 487,
+            "scroll": 487
+          },
+          {
+            "selector": "th.",
+            "izquierda": 388.84375,
+            "derecha": 507.625,
+            "ancho": 118.78125,
+            "cliente": 118,
+            "scroll": 118
+          },
+          {
+            "selector": "tbody.",
+            "izquierda": 20.5,
+            "derecha": 507.625,
+            "ancho": 487.125,
+            "cliente": 487,
+            "scroll": 487
+          },
+          {
+            "selector": "tr.",
+            "izquierda": 20.5,
+            "derecha": 507.625,
+            "ancho": 487.125,
+            "cliente": 487,
+            "scroll": 487
+          },
+          {
+            "selector": "td.",
+            "izquierda": 388.84375,
+            "derecha": 507.625,
+            "ancho": 118.78125,
+            "cliente": 118,
+            "scroll": 118
+          },
+          {
+            "selector": "tr.",
+            "izquierda": 20.5,
+            "derecha": 507.625,
+            "ancho": 487.125,
+            "cliente": 487,
+            "scroll": 487
+          },
+          {
+            "selector": "td.",
+            "izquierda": 388.84375,
+            "derecha": 507.625,
+            "ancho": 118.78125,
+            "cliente": 118,
+            "scroll": 118
+          }
+        ]
+      },
+      "foco": {
+        "tag": "A",
+        "clase": "skip-link",
+        "visible": true,
+        "outline": true
+      },
+      "menu": {
+        "abierto": "true",
+        "navegacionVisible": true,
+        "cerrado": "false",
+        "focoDevuelto": true
+      },
+      "erroresPagina": []
+    },
+    {
+      "id": "blog--presupuesto-2027-aportes-cambios-nominal-real-320-light",
+      "ruta": "/blog/presupuesto-2027-aportes-cambios-nominal-real/",
+      "ancho": 320,
+      "tema": "light",
+      "axeGraves": 0,
+      "sinFocoEnCaptura": true,
+      "desborde": {
+        "viewport": 320,
+        "scroll": 320,
+        "elementos": [
+          {
+            "selector": "a.skip-link",
+            "izquierda": -999,
+            "derecha": -838,
+            "ancho": 161,
+            "cliente": 161,
+            "scroll": 161
+          },
+          {
+            "selector": "div.portal-tabla",
+            "izquierda": 20,
+            "derecha": 300,
+            "ancho": 280,
+            "cliente": 280,
+            "scroll": 365
+          },
+          {
+            "selector": "table.",
+            "izquierda": 20,
+            "derecha": 385.125,
+            "ancho": 365.125,
+            "cliente": 365,
+            "scroll": 365
+          },
+          {
+            "selector": "thead.",
+            "izquierda": 20.5,
+            "derecha": 384.625,
+            "ancho": 364.125,
+            "cliente": 364,
+            "scroll": 364
+          },
+          {
+            "selector": "tr.",
+            "izquierda": 20.5,
+            "derecha": 384.625,
+            "ancho": 364.125,
+            "cliente": 364,
+            "scroll": 364
+          },
+          {
+            "selector": "th.",
+            "izquierda": 301.84375,
+            "derecha": 384.625,
+            "ancho": 82.78125,
+            "cliente": 82,
+            "scroll": 82
+          },
+          {
+            "selector": "tbody.",
+            "izquierda": 20.5,
+            "derecha": 384.625,
+            "ancho": 364.125,
+            "cliente": 364,
+            "scroll": 364
+          },
+          {
+            "selector": "tr.",
+            "izquierda": 20.5,
+            "derecha": 384.625,
+            "ancho": 364.125,
+            "cliente": 364,
+            "scroll": 364
+          },
+          {
+            "selector": "td.",
+            "izquierda": 301.84375,
+            "derecha": 384.625,
+            "ancho": 82.78125,
+            "cliente": 82,
+            "scroll": 82
+          },
+          {
+            "selector": "tr.",
+            "izquierda": 20.5,
+            "derecha": 384.625,
+            "ancho": 364.125,
+            "cliente": 364,
+            "scroll": 364
+          },
+          {
+            "selector": "td.",
+            "izquierda": 301.84375,
+            "derecha": 384.625,
+            "ancho": 82.78125,
+            "cliente": 82,
+            "scroll": 82
+          },
+          {
+            "selector": "div.portal-tabla",
+            "izquierda": 20,
+            "derecha": 300,
+            "ancho": 280,
+            "cliente": 280,
+            "scroll": 488
+          }
+        ]
+      },
+      "foco": {
+        "tag": "A",
+        "clase": "skip-link",
+        "visible": true,
+        "outline": true
+      },
+      "menu": {
+        "abierto": "true",
+        "navegacionVisible": true,
+        "cerrado": "false",
+        "focoDevuelto": true
+      },
+      "erroresPagina": []
+    },
+    {
+      "id": "blog--presupuesto-2027-aportes-cambios-nominal-real-320-dark",
+      "ruta": "/blog/presupuesto-2027-aportes-cambios-nominal-real/",
+      "ancho": 320,
+      "tema": "dark",
+      "axeGraves": 0,
+      "sinFocoEnCaptura": true,
+      "desborde": {
+        "viewport": 320,
+        "scroll": 320,
+        "elementos": [
+          {
+            "selector": "a.skip-link",
+            "izquierda": -999,
+            "derecha": -838,
+            "ancho": 161,
+            "cliente": 161,
+            "scroll": 161
+          },
+          {
+            "selector": "div.portal-tabla",
+            "izquierda": 20,
+            "derecha": 300,
+            "ancho": 280,
+            "cliente": 280,
+            "scroll": 365
+          },
+          {
+            "selector": "table.",
+            "izquierda": 20,
+            "derecha": 385.125,
+            "ancho": 365.125,
+            "cliente": 365,
+            "scroll": 365
+          },
+          {
+            "selector": "thead.",
+            "izquierda": 20.5,
+            "derecha": 384.625,
+            "ancho": 364.125,
+            "cliente": 364,
+            "scroll": 364
+          },
+          {
+            "selector": "tr.",
+            "izquierda": 20.5,
+            "derecha": 384.625,
+            "ancho": 364.125,
+            "cliente": 364,
+            "scroll": 364
+          },
+          {
+            "selector": "th.",
+            "izquierda": 301.84375,
+            "derecha": 384.625,
+            "ancho": 82.78125,
+            "cliente": 82,
+            "scroll": 82
+          },
+          {
+            "selector": "tbody.",
+            "izquierda": 20.5,
+            "derecha": 384.625,
+            "ancho": 364.125,
+            "cliente": 364,
+            "scroll": 364
+          },
+          {
+            "selector": "tr.",
+            "izquierda": 20.5,
+            "derecha": 384.625,
+            "ancho": 364.125,
+            "cliente": 364,
+            "scroll": 364
+          },
+          {
+            "selector": "td.",
+            "izquierda": 301.84375,
+            "derecha": 384.625,
+            "ancho": 82.78125,
+            "cliente": 82,
+            "scroll": 82
+          },
+          {
+            "selector": "tr.",
+            "izquierda": 20.5,
+            "derecha": 384.625,
+            "ancho": 364.125,
+            "cliente": 364,
+            "scroll": 364
+          },
+          {
+            "selector": "td.",
+            "izquierda": 301.84375,
+            "derecha": 384.625,
+            "ancho": 82.78125,
+            "cliente": 82,
+            "scroll": 82
+          },
+          {
+            "selector": "div.portal-tabla",
+            "izquierda": 20,
+            "derecha": 300,
+            "ancho": 280,
+            "cliente": 280,
+            "scroll": 488
+          }
+        ]
+      },
+      "foco": {
+        "tag": "A",
+        "clase": "skip-link",
+        "visible": true,
+        "outline": true
+      },
+      "menu": {
+        "abierto": "true",
+        "navegacionVisible": true,
+        "cerrado": "false",
+        "focoDevuelto": true
+      },
+      "erroresPagina": []
+    },
+    {
+      "id": "novedades-1440-light",
+      "ruta": "/novedades/",
+      "ancho": 1440,
+      "tema": "light",
+      "axeGraves": 0,
+      "sinFocoEnCaptura": true,
+      "desborde": {
+        "viewport": 1440,
+        "scroll": 1440,
+        "elementos": [
+          {
+            "selector": "a.skip-link",
+            "izquierda": -999,
+            "derecha": -838,
+            "ancho": 161,
+            "cliente": 161,
+            "scroll": 161
+          }
+        ]
+      },
+      "foco": {
+        "tag": "A",
+        "clase": "skip-link",
+        "visible": true,
+        "outline": true
+      },
+      "menu": null,
+      "erroresPagina": []
+    },
+    {
+      "id": "novedades-1440-dark",
+      "ruta": "/novedades/",
+      "ancho": 1440,
+      "tema": "dark",
+      "axeGraves": 0,
+      "sinFocoEnCaptura": true,
+      "desborde": {
+        "viewport": 1440,
+        "scroll": 1440,
+        "elementos": [
+          {
+            "selector": "a.skip-link",
+            "izquierda": -999,
+            "derecha": -838,
+            "ancho": 161,
+            "cliente": 161,
+            "scroll": 161
+          }
+        ]
+      },
+      "foco": {
+        "tag": "A",
+        "clase": "skip-link",
+        "visible": true,
+        "outline": true
+      },
+      "menu": null,
+      "erroresPagina": []
+    },
+    {
+      "id": "novedades-768-light",
+      "ruta": "/novedades/",
+      "ancho": 768,
+      "tema": "light",
+      "axeGraves": 0,
+      "sinFocoEnCaptura": true,
+      "desborde": {
+        "viewport": 768,
+        "scroll": 768,
+        "elementos": [
+          {
+            "selector": "a.skip-link",
+            "izquierda": -999,
+            "derecha": -838,
+            "ancho": 161,
+            "cliente": 161,
+            "scroll": 161
+          }
+        ]
+      },
+      "foco": {
+        "tag": "A",
+        "clase": "skip-link",
+        "visible": true,
+        "outline": true
+      },
+      "menu": null,
+      "erroresPagina": []
+    },
+    {
+      "id": "novedades-768-dark",
+      "ruta": "/novedades/",
+      "ancho": 768,
+      "tema": "dark",
+      "axeGraves": 0,
+      "sinFocoEnCaptura": true,
+      "desborde": {
+        "viewport": 768,
+        "scroll": 768,
+        "elementos": [
+          {
+            "selector": "a.skip-link",
+            "izquierda": -999,
+            "derecha": -838,
+            "ancho": 161,
+            "cliente": 161,
+            "scroll": 161
+          }
+        ]
+      },
+      "foco": {
+        "tag": "A",
+        "clase": "skip-link",
+        "visible": true,
+        "outline": true
+      },
+      "menu": null,
+      "erroresPagina": []
+    },
+    {
+      "id": "novedades-390-light",
+      "ruta": "/novedades/",
+      "ancho": 390,
+      "tema": "light",
+      "axeGraves": 0,
+      "sinFocoEnCaptura": true,
+      "desborde": {
+        "viewport": 390,
+        "scroll": 390,
+        "elementos": [
+          {
+            "selector": "a.skip-link",
+            "izquierda": -999,
+            "derecha": -838,
+            "ancho": 161,
+            "cliente": 161,
+            "scroll": 161
+          }
+        ]
+      },
+      "foco": {
+        "tag": "A",
+        "clase": "skip-link",
+        "visible": true,
+        "outline": true
+      },
+      "menu": {
+        "abierto": "true",
+        "navegacionVisible": true,
+        "cerrado": "false",
+        "focoDevuelto": true
+      },
+      "erroresPagina": []
+    },
+    {
+      "id": "novedades-390-dark",
+      "ruta": "/novedades/",
+      "ancho": 390,
+      "tema": "dark",
+      "axeGraves": 0,
+      "sinFocoEnCaptura": true,
+      "desborde": {
+        "viewport": 390,
+        "scroll": 390,
+        "elementos": [
+          {
+            "selector": "a.skip-link",
+            "izquierda": -999,
+            "derecha": -838,
+            "ancho": 161,
+            "cliente": 161,
+            "scroll": 161
+          }
+        ]
+      },
+      "foco": {
+        "tag": "A",
+        "clase": "skip-link",
+        "visible": true,
+        "outline": true
+      },
+      "menu": {
+        "abierto": "true",
+        "navegacionVisible": true,
+        "cerrado": "false",
+        "focoDevuelto": true
+      },
+      "erroresPagina": []
+    },
+    {
+      "id": "novedades-320-light",
+      "ruta": "/novedades/",
+      "ancho": 320,
+      "tema": "light",
+      "axeGraves": 0,
+      "sinFocoEnCaptura": true,
+      "desborde": {
+        "viewport": 320,
+        "scroll": 320,
+        "elementos": [
+          {
+            "selector": "a.skip-link",
+            "izquierda": -999,
+            "derecha": -838,
+            "ancho": 161,
+            "cliente": 161,
+            "scroll": 161
+          }
+        ]
+      },
+      "foco": {
+        "tag": "A",
+        "clase": "skip-link",
+        "visible": true,
+        "outline": true
+      },
+      "menu": {
+        "abierto": "true",
+        "navegacionVisible": true,
+        "cerrado": "false",
+        "focoDevuelto": true
+      },
+      "erroresPagina": []
+    },
+    {
+      "id": "novedades-320-dark",
+      "ruta": "/novedades/",
+      "ancho": 320,
+      "tema": "dark",
+      "axeGraves": 0,
+      "sinFocoEnCaptura": true,
+      "desborde": {
+        "viewport": 320,
+        "scroll": 320,
+        "elementos": [
+          {
+            "selector": "a.skip-link",
+            "izquierda": -999,
+            "derecha": -838,
+            "ancho": 161,
+            "cliente": 161,
+            "scroll": 161
+          }
+        ]
+      },
+      "foco": {
+        "tag": "A",
+        "clase": "skip-link",
+        "visible": true,
+        "outline": true
+      },
+      "menu": {
+        "abierto": "true",
+        "navegacionVisible": true,
+        "cerrado": "false",
+        "focoDevuelto": true
+      },
+      "erroresPagina": []
+    },
+    {
+      "id": "blog--presupuesto-2027-aportes-cambios-nominal-real--hilo-1440-light",
+      "ruta": "/blog/presupuesto-2027-aportes-cambios-nominal-real/hilo/",
+      "ancho": 1440,
+      "tema": "light",
+      "axeGraves": 0,
+      "sinFocoEnCaptura": true,
+      "desborde": {
+        "viewport": 1440,
+        "scroll": 1440,
+        "elementos": [
+          {
+            "selector": "a.skip-link",
+            "izquierda": -999,
+            "derecha": -838,
+            "ancho": 161,
+            "cliente": 161,
+            "scroll": 161
+          }
+        ]
+      },
+      "foco": {
+        "tag": "A",
+        "clase": "skip-link",
+        "visible": true,
+        "outline": true
+      },
+      "menu": null,
+      "erroresPagina": []
+    },
+    {
+      "id": "blog--presupuesto-2027-aportes-cambios-nominal-real--hilo-1440-dark",
+      "ruta": "/blog/presupuesto-2027-aportes-cambios-nominal-real/hilo/",
+      "ancho": 1440,
+      "tema": "dark",
+      "axeGraves": 0,
+      "sinFocoEnCaptura": true,
+      "desborde": {
+        "viewport": 1440,
+        "scroll": 1440,
+        "elementos": [
+          {
+            "selector": "a.skip-link",
+            "izquierda": -999,
+            "derecha": -838,
+            "ancho": 161,
+            "cliente": 161,
+            "scroll": 161
+          }
+        ]
+      },
+      "foco": {
+        "tag": "A",
+        "clase": "skip-link",
+        "visible": true,
+        "outline": true
+      },
+      "menu": null,
+      "erroresPagina": []
+    },
+    {
+      "id": "blog--presupuesto-2027-aportes-cambios-nominal-real--hilo-768-light",
+      "ruta": "/blog/presupuesto-2027-aportes-cambios-nominal-real/hilo/",
+      "ancho": 768,
+      "tema": "light",
+      "axeGraves": 0,
+      "sinFocoEnCaptura": true,
+      "desborde": {
+        "viewport": 768,
+        "scroll": 768,
+        "elementos": [
+          {
+            "selector": "a.skip-link",
+            "izquierda": -999,
+            "derecha": -838,
+            "ancho": 161,
+            "cliente": 161,
+            "scroll": 161
+          }
+        ]
+      },
+      "foco": {
+        "tag": "A",
+        "clase": "skip-link",
+        "visible": true,
+        "outline": true
+      },
+      "menu": null,
+      "erroresPagina": []
+    },
+    {
+      "id": "blog--presupuesto-2027-aportes-cambios-nominal-real--hilo-768-dark",
+      "ruta": "/blog/presupuesto-2027-aportes-cambios-nominal-real/hilo/",
+      "ancho": 768,
+      "tema": "dark",
+      "axeGraves": 0,
+      "sinFocoEnCaptura": true,
+      "desborde": {
+        "viewport": 768,
+        "scroll": 768,
+        "elementos": [
+          {
+            "selector": "a.skip-link",
+            "izquierda": -999,
+            "derecha": -838,
+            "ancho": 161,
+            "cliente": 161,
+            "scroll": 161
+          }
+        ]
+      },
+      "foco": {
+        "tag": "A",
+        "clase": "skip-link",
+        "visible": true,
+        "outline": true
+      },
+      "menu": null,
+      "erroresPagina": []
+    },
+    {
+      "id": "blog--presupuesto-2027-aportes-cambios-nominal-real--hilo-390-light",
+      "ruta": "/blog/presupuesto-2027-aportes-cambios-nominal-real/hilo/",
+      "ancho": 390,
+      "tema": "light",
+      "axeGraves": 0,
+      "sinFocoEnCaptura": true,
+      "desborde": {
+        "viewport": 390,
+        "scroll": 390,
+        "elementos": [
+          {
+            "selector": "a.skip-link",
+            "izquierda": -999,
+            "derecha": -838,
+            "ancho": 161,
+            "cliente": 161,
+            "scroll": 161
+          }
+        ]
+      },
+      "foco": {
+        "tag": "A",
+        "clase": "skip-link",
+        "visible": true,
+        "outline": true
+      },
+      "menu": {
+        "abierto": "true",
+        "navegacionVisible": true,
+        "cerrado": "false",
+        "focoDevuelto": true
+      },
+      "erroresPagina": []
+    },
+    {
+      "id": "blog--presupuesto-2027-aportes-cambios-nominal-real--hilo-390-dark",
+      "ruta": "/blog/presupuesto-2027-aportes-cambios-nominal-real/hilo/",
+      "ancho": 390,
+      "tema": "dark",
+      "axeGraves": 0,
+      "sinFocoEnCaptura": true,
+      "desborde": {
+        "viewport": 390,
+        "scroll": 390,
+        "elementos": [
+          {
+            "selector": "a.skip-link",
+            "izquierda": -999,
+            "derecha": -838,
+            "ancho": 161,
+            "cliente": 161,
+            "scroll": 161
+          }
+        ]
+      },
+      "foco": {
+        "tag": "A",
+        "clase": "skip-link",
+        "visible": true,
+        "outline": true
+      },
+      "menu": {
+        "abierto": "true",
+        "navegacionVisible": true,
+        "cerrado": "false",
+        "focoDevuelto": true
+      },
+      "erroresPagina": []
+    },
+    {
+      "id": "blog--presupuesto-2027-aportes-cambios-nominal-real--hilo-320-light",
+      "ruta": "/blog/presupuesto-2027-aportes-cambios-nominal-real/hilo/",
+      "ancho": 320,
+      "tema": "light",
+      "axeGraves": 0,
+      "sinFocoEnCaptura": true,
+      "desborde": {
+        "viewport": 320,
+        "scroll": 320,
+        "elementos": [
+          {
+            "selector": "a.skip-link",
+            "izquierda": -999,
+            "derecha": -838,
+            "ancho": 161,
+            "cliente": 161,
+            "scroll": 161
+          }
+        ]
+      },
+      "foco": {
+        "tag": "A",
+        "clase": "skip-link",
+        "visible": true,
+        "outline": true
+      },
+      "menu": {
+        "abierto": "true",
+        "navegacionVisible": true,
+        "cerrado": "false",
+        "focoDevuelto": true
+      },
+      "erroresPagina": []
+    },
+    {
+      "id": "blog--presupuesto-2027-aportes-cambios-nominal-real--hilo-320-dark",
+      "ruta": "/blog/presupuesto-2027-aportes-cambios-nominal-real/hilo/",
+      "ancho": 320,
+      "tema": "dark",
+      "axeGraves": 0,
+      "sinFocoEnCaptura": true,
+      "desborde": {
+        "viewport": 320,
+        "scroll": 320,
+        "elementos": [
+          {
+            "selector": "a.skip-link",
+            "izquierda": -999,
+            "derecha": -838,
+            "ancho": 161,
+            "cliente": 161,
+            "scroll": 161
+          }
+        ]
+      },
+      "foco": {
+        "tag": "A",
+        "clase": "skip-link",
+        "visible": true,
+        "outline": true
+      },
+      "menu": {
+        "abierto": "true",
+        "navegacionVisible": true,
+        "cerrado": "false",
+        "focoDevuelto": true
+      },
+      "erroresPagina": []
+    }
+  ]
+}

@@ -1,0 +1,36 @@
+{
+  "fecha": "2026-10-05",
+  "analisis": "/blog/presupuesto-2027-aportes-cambios-nominal-real/",
+  "tweets": [
+    {
+      "texto": "1/6 Presupuesto 2027: el aporte fiscal libre pasa de $69,67 a $71,17 billones, +2,16% nominal. Son recursos del Tesoro; no el gasto total del Estado. Comparamos el proyecto oficial con la ley inicial 2026.",
+      "grafico": "total-aporte.png",
+      "alt": "Aporte fiscal libre 2026 y proyecto 2027: 69,67 y 71,17 billones de pesos."
+    },
+    {
+      "texto": "2/6 Más pesos no siempre compran más: con inflación hipotética de 3%, ese aporte perdería 0,82% de poder de compra. Con 2%, subiría 0,16%; con 4%, caería 1,77%. Son escenarios, no inflación observada ni una proyección oficial nueva.",
+      "grafico": "total-aporte.png",
+      "alt": "Total nominal y valor a precios de 2026 con inflación hipotética de 3%."
+    },
+    {
+      "texto": "3/6 Aporte fiscal libre 2027: Educación +5,32%, Trabajo +3,89%, Salud +1,20% y Vivienda -20,17% nominal. Con inflación hipotética de 3%, Salud perdería 1,75% de poder de compra. Estas cifras no equivalen al presupuesto completo de cada ministerio.",
+      "grafico": "sectores-nominal-real.png",
+      "alt": "Variaciones nominales y reales estimadas con inflación de 3% en sectores seleccionados."
+    },
+    {
+      "texto": "4/6 Seguridad: +44,34% aparece al comparar partidas que cambian de perímetro, porque Gendarmería pasa desde Justicia. Incluyéndola en ambos años, el aumento del aporte fiscal libre es +12,11% nominal; +8,84% con inflación hipotética de 3%.",
+      "grafico": "seguridad-perimetro.png",
+      "alt": "Seguridad: 44,34% con perímetro distinto y 12,11% con el mismo conjunto de servicios."
+    },
+    {
+      "texto": "5/6 En SENCE, dos subsidios antiguos conservan asignación y aparece el Subsidio Unificado de Empleo. Las tres líneas 2027 suman $89.612,6 millones frente a $181.749,7 millones en 2026: -50,69% nominal. Es ese conjunto, no todo el financiamiento del empleo.",
+      "grafico": "empleo-lineas.png",
+      "alt": "Asignaciones seleccionadas de subsidios SENCE, 2026 y propuesta 2027, en miles de millones de pesos nominales."
+    },
+    {
+      "texto": "6/6 Empleabilidad Sostenida no figura en el cuadro de Proempleo 2027 revisado; eso no prueba por sí solo el cierre del programa. El proyecto aún se tramita. Fuentes, tablas y CSV: https://cochid.cl/blog/presupuesto-2027-aportes-cambios-nominal-real/",
+      "grafico": "tramitacion.png",
+      "alt": "La propuesta presupuestaria fue ingresada el 30 de septiembre; al 5 de octubre sigue en tramitación y puede cambiar."
+    }
+  ]
+}

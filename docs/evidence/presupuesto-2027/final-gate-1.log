@@ -1,0 +1,10 @@
+indice.json: 552 ítems, 211 KB; por tipo: {'tema': 11, 'dataset': 305, 'indicador': 172, 'sitio': 28, 'pagina': 28, 'investigacion': 3, 'blog': 5}
+Blog: 6 entradas, 4 notas internas omitidas:
+  - content/blog/2026-09-30-ley-de-presupuestos-2009-2026.md (cuerpo, comentario): Nota: el id de dominio `presupuesto-gasto-publico` es provisional hasta que destinos.json fije los ids (SPEC §2.4 y §6.3). La imagen de port
+  - content/blog/2026-10-01-cargos-publicos-deuda-y-anuario.md (cuerpo, comentario): Nota: el id de dominio `presupuesto-gasto-publico` es provisional (SPEC §2.4).
+  - content/blog/2026-10-01-glosas-presupuestarias-2026.md (cuerpo, comentario): Nota: el id de dominio `presupuesto-gasto-publico` es provisional (SPEC §2.4).
+  - content/blog/2026-10-01-visor-de-presupuesto-tres-tareas.md (cuerpo, comentario): Nota: el id de dominio `presupuesto-gasto-publico` es provisional (SPEC §2.4).
+Novedades: 6 ítems (6 del blog, 0 de releases); releases Compañía Chilena de Inteligencia de Datos omitidas: 0.
+Sitio estático: 9 páginas editoriales, 365 días y 12 promedios del especial solar; 52 semanas y 366 fechas del especial de concepciones; parciales y registro vendorizado aplicados en dist/.
+cis-build: lock OK · avail=8628MB swap=10079MB · dir=/srv/projects/qa/presupuesto2027-editorial-20261005/repo · cmd: node scripts/build.mjs
+cis-build: terminó (rc=0)

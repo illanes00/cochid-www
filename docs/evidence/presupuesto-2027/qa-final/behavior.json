@@ -1,0 +1,24 @@
+{
+  "base": "http://127.0.0.1:18561",
+  "cases": [
+    {
+      "width": 1440,
+      "tweetsCopied": 6,
+      "pngDownloads": 6,
+      "fullThreadCopied": true,
+      "deniedClipboardFallback": true,
+      "textDownload": true
+    },
+    {
+      "width": 320,
+      "tweetsCopied": 6,
+      "pngDownloads": 6,
+      "fullThreadCopied": true,
+      "deniedClipboardFallback": true,
+      "textDownload": true
+    }
+  ],
+  "noJavaScriptSelectable": true,
+  "articleFigures": 5,
+  "passed": true
+}

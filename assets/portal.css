@@ -94,6 +94,17 @@
 .blog-etiquetas{display:flex;flex-wrap:wrap;gap:.35rem;list-style:none;padding:0;margin:.5rem 0 0}
 .blog-etiquetas+.blog-cuerpo{margin-top:2rem}
 .blog-cuerpo>*+*{margin-top:1rem}
+.blog-figura{margin-inline:0}
+.blog-figura img{display:block;width:100%;height:auto;border:1px solid var(--border,#cbd5e1);background:#fff}
+.blog-figura figcaption{margin-top:.75rem;font-size:.9375rem;line-height:1.5}
+.hilo-lista{list-style:none;padding:0}
+.hilo-item{padding-block:1.5rem;border-bottom:1px solid var(--border,#cbd5e1)}
+.hilo-fila{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:1.5rem}
+.hilo-fila textarea{display:block;width:100%;min-height:10rem;margin-block:.5rem 1rem;padding:.75rem;font:inherit;line-height:1.5;resize:vertical;border:1px solid var(--border,#cbd5e1);color:inherit;background:transparent}
+.hilo-fila label{display:block}
+.hilo-fila figure{margin-block:0}
+.hilo-estado{min-height:1.5em}
+@media(max-width:767px){.hilo-fila{grid-template-columns:minmax(0,1fr)}}
 .portal-cuerpo .blog-cuerpo h2{margin:2.5rem 0 .75rem}
 .blog-cuerpo>h2+*{margin-top:0}
 .blog-seccion h2+*{margin-top:.5rem}

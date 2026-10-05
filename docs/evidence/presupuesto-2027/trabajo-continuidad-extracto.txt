@@ -1,0 +1,482 @@
+ (https://www.dipres.gob.cl/597/articles-397233_doc_pdf.pdf)
+citeturn52view0 [wordlim: 200] Crawled: today; Content type: application/pdf; Number of pages: 3; Source: open({"ref_id":"turn51view1","lineno":20}); Total lines: 138
+L0@P0: PARTIDA
+L1@P0: CAPÍTULO
+L2@P0: PROGRAMA
+L3@P0: :
+L4@P0: :
+L5@P0: :
+L6@P0: MINISTERIO DEL TRABAJO Y PREVISIÓN SOCIAL 15
+L7@P0: 01
+L8@P0: 03
+L9@P0: Subsecretaría del Trabajo
+L10@P0: Proempleo (08)
+L11@P0: LEY DE PRESUPUESTOS AÑO 2026
+L12@P0: SubTítulo Ítem Asig. Denominaciones Glosa N° Moneda Nacional
+L13@P0: Miles de $
+L14@P0: INGRESOS 23.974.101
+L15@P0: 08 OTROS INGRESOS CORRIENTES 10
+L16@P0: 99 Otros 10
+L17@P0: 09 APORTE FISCAL 23.974.081
+L18@P0: 01 Libre 23.974.081
+L19@P0: 15 SALDO INICIAL DE CAJA 10
+L20@P0: GASTOS 23.974.101
+L21@P0: 21 GASTOS EN PERSONAL 01 140.996
+L22@P0: 22 BIENES Y SERVICIOS DE CONSUMO 67.228
+L23@P0: 24 TRANSFERENCIAS CORRIENTES 02, 03, 07 23.760.075
+L24@P0: 03 A Otras Entidades Públicas 23.760.075
+L25@P0: 264 Programa Inversión en la Comunidad 05, 06 22.159.810
+L26@P0: 290 Programa a la Empleabilidad Sostenida 04 1.600.265
+L27@P0: 25 INTEGROS AL FISCO 10
+L28@P0: 99 Otros Integros al Fisco 10
+L29@P0: 29 ADQUISICIÓN DE ACTIVOS NO FINANCIEROS 5.772
+L30@P0: 07 Programas Informáticos 5.772
+L31@P0: 34 SERVICIO DE LA DEUDA 10
+L32@P0: 07 Deuda Flotante 10
+L33@P0: 35 SALDO FINAL DE CAJA 10
+L34@P0: GLOSAS:
+L35@P0: 01 Incluye:
+L36@P0: a) Convenios con personas naturales
+L37@P0:  - N° de Personas 4
+L38@P0:  - Miles de $ 140.996
+L39@P0: 02 Previo a cualquier transferencia que se efectúe con fondos de este
+L40@P0: programa, deberán hacerse públicos, a lo menos por la página web del
+L41@P0: organismo público que efectúa esta transferencia, los objetivos específicos
+L42@P0: del programa, haciendo especial referencia a las acciones programadas para
+L43@P0: alcanzarlos, los recursos humanos y materiales que involucra, los indicadores de
+L44@P0: avance y su periodicidad, existiendo al menos uno anual, los indicadores de
+L45@P0-1: evaluación cuantitativa del período presupuestario respectivo y losPARTIDA
+L46@P1: CAPÍTULO
+L47@P1: PROGRAMA
+L48@P1: :
+L49@P1: :
+L50@P1: :
+L51@P1: MINISTERIO DEL TRABAJO Y PREVISIÓN SOCIAL 15
+L52@P1: 01
+L53@P1: 03
+L54@P1: Subsecretaría del Trabajo
+L55@P1: Proempleo (08)
+L56@P1: LEY DE PRESUPUESTOS AÑO 2026
+L57@P1: indicadores de evaluación cualitativa, en especial la concordancia existente
+L58@P1: entre fines y medios.
+L59@P1: La transferencia de estos recursos al sector privado se hará de conformidad a lo
+L60@P1: establecido en el articulado de esta ley de presupuestos.
+L61@P1: 03 Los componentes o líneas de acción comprendidos en los Programas, así como, los
+L62@P1: requisitos de acceso a éstos y los demás procedimientos y modalidades a que
+L63@P1: estén afectos su determinación y desarrollo, serán los establecidos en los
+L64@P1: respectivos decretos de ejecución, los que podrán ser modificados mediante uno
+L65@P1: o más decretos del Ministerio del Trabajo y Previsión Social, visados por la
+L66@P1: Dirección de Presupuestos, los que podrán ser dictados bajo la fórmula
+L67@P1: “Por Orden del Presidente de la República" a contar de la fecha de
+L68@P1: publicación de esta Ley. Igual procedimiento se dispondrá para la aprobación o
+L69@P1: modificación, según correspondiere, de los convenios necesarios para la
+L70@P1: ejecución de los Programas. Los recursos que se transfieran con cargo
+L71@P1: esta asignación a organismos del Gobierno Central no ingresarán a sus
+L72@P1: presupuestos, y de su inversión rendirá cuenta, el organismo público receptor,
+L73@P1: directamente a la Contraloría General de la República. La
+L74@P1: participación de agentes privados en la ejecución de proyectos o programas
+L75@P1: incluidos en este subtítulo, se regirá por la normativa aplicable al respectivo
+L76@P1: organismo del Sector Público encargado de su administración, de acuerdo con
+L77@P1: lo que establece el articulado de esta ley de presupuestos.
+L78@P1: 04 La ejecución de este programa se ejecutará conforme a las bases de licitación
+L79@P1: que establezca el Ministerio del Trabajo y Previsión Social para cada llamado.
+L80@P1: La transferencia de recursos se regirá a través de la contratación de servicios
+L81@P1: por medio de licitación pública, de acuerdo con la Ley N° 19.886 y su
+L82@P1: Reglamento, incluyendo entidades privadas y a lo que establece el articulado de
+L83@P1: esta Ley de Presupuestos. Considera hasta $ 36.470 miles para solventar gastos
+L84@P1: en personal, considerando una persona, bienes y servicios de consumo
+L85@P1: y adquisición de activos no financieros necesarios para la ejecución del
+L86@P1: programa.
+L87@P1: 05 Programa destinado a realizar obras en el ámbito local que reúnan como
+L88@P1: característica mínima el uso intensivo de mano de obra y que presenten un
+L89@P1: beneficio comunitario. Este programa se ejecutará preferentemente en las
+L90@P1: regiones o comunas que presenten tasas de desocupación superiores al promedio
+L91@P1: del desempleo nacional. La ejecución de este programa se efectuará conforme a
+L92@P1: los términos establecidos en el decreto Nº 1, de 2010, del Ministerio del
+L93@P1-2: Trabajo y Previsión Social y a los convenios de ejecución y transferencia quePARTIDA
+L94@P2: CAPÍTULO
+L95@P2: PROGRAMA
+L96@P2: :
+L97@P2: :
+L98@P2: :
+L99@P2: MINISTERIO DEL TRABAJO Y PREVISIÓN SOCIAL 15
+L100@P2: 01
+L101@P2: 03
+L102@P2: Subsecretaría del Trabajo
+L103@P2: Proempleo (08)
+L104@P2: LEY DE PRESUPUESTOS AÑO 2026
+L105@P2: hayan sido celebrados en conformidad a dicho decreto. Para la ejecución de este
+L106@P2: programa podrán celebrarse convenios con entidades y organismos tanto públicos
+L107@P2: como privados de conformidad a lo establecido en el articulado de esta ley de
+L108@P2: presupuestos. Los recursos que se transfieran con cargo a esta asignación a
+L109@P2: Organismos del Gobierno Central no ingresarán a sus presupuestos y de su
+L110@P2: ejecución rendirán cuenta directamente a la Contraloría General de la
+L111@P2: República. Incluye hasta $ 135.581 miles para solventar gastos en
+L112@P2: personal, bienes y servicios de consumo y adquisición de activos no financieros
+L113@P2: necesarios para la ejecución del programa.
+L114@P2: La Subsecretaría del Trabajo informará trimestralmente y de manera detallada, a
+--------------------------------------------------------------------------------
+ (https://www.dipres.gob.cl/597/articles-397238_doc_pdf.pdf)
+citeturn52view1 [wordlim: 200] Crawled: today; Content type: application/pdf; Number of pages: 2; Source: open({"ref_id":"turn51view2","lineno":20}); Total lines: 83
+L0@P0: PARTIDA
+L1@P0: CAPÍTULO
+L2@P0: PROGRAMA
+L3@P0: :
+L4@P0: :
+L5@P0: :
+L6@P0: MINISTERIO DEL TRABAJO Y PREVISIÓN SOCIAL 15
+L7@P0: 05
+L8@P0: 04
+L9@P0: Servicio Nacional de Capacitación y Empleo
+L10@P0: Servicio Nacional de Capacitación y Empleo - Empleo (05)
+L11@P0: LEY DE PRESUPUESTOS AÑO 2026
+L12@P0: SubTítulo Ítem Asig. Denominaciones Glosa N° Moneda Nacional
+L13@P0: Miles de $
+L14@P0: INGRESOS 183.811.702
+L15@P0: 09 APORTE FISCAL 183.811.702
+L16@P0: 01 Libre 183.811.702
+L17@P0: GASTOS 183.811.702
+L18@P0: 24 TRANSFERENCIAS CORRIENTES 06 183.811.702
+L19@P0: 01 Al Sector Privado 181.749.702
+L20@P0: 453 Subsidio al Empleo, Ley N° 20.338 74.010.879
+L21@P0: 454 Subsidio Empleo a la Mujer, Ley N° 20.595 03, 04 107.738.823
+L22@P0: 08 A Instituciones Privadas Ejecutoras de Políticas Públicas 2.062.000
+L23@P0: 090 Programa de Formación en el Puesto de Trabajo 01, 02 2.062.000
+L24@P0: GLOSAS:
+L25@P0: 01 Los componentes y líneas de acción comprendidas en este Programa y los
+L26@P0: demás procedimientos, modalidades y mecanismos de control a que estará
+L27@P0: afecto su desarrollo, serán los establecidos en el Decreto N°28, de 2011, del
+L28@P0: Ministerio del Trabajo y Previsión Social y sus modificaciones.
+L29@P0: De igual modo, con cargo a esta glosa se financiará la ejecución de Planes de
+L30@P0: Aprendizajes regulados en la letra c) del artículo 46 de la Ley N° 19.518.
+L31@P0: 02 La certificación del cumplimiento de los requisitos previsionales para
+L32@P0: acceder a los programas, será suministrada por las Administradoras de Fondos de
+L33@P0: Pensiones, a través de la Superintendencia del Ramo y por el Instituto de
+L34@P0: Previsión Social.
+L35@P0: La información relativa a las relaciones laborales, deberá ser suministrada por
+L36@P0: la Dirección del Trabajo de acuerdo a lo estipulado en el Registro Electrónico
+L37@P0: Laboral.
+L38@P0: Para el caso de los beneficiarios del Fondo de Cesantía Solidario, dicha
+L39@P0: condición deberá ser acreditada por medio de la Bolsa Nacional de Empleo.
+L40@P0: 03 Incluye hasta $ 1.229.793 miles para gastos de administración, dentro de
+L41@P0: los cuales se consideran $ 178.659 miles para gastos en personal,
+L42@P0: considerando 5 personas.
+L43@P0: Asimismo, durante el año 2026, el Servicio Nacional de
+L44@P0: Capacitación y Empleo seguirá ejecutando el Subsidio al Empleo a la
+L45@P0-1: Mujer, en los términos del artículo décimo transitorio de la Ley Nº 20.595.PARTIDA
+L46@P1: CAPÍTULO
+L47@P1: PROGRAMA
+L48@P1: :
+L49@P1: :
+L50@P1: :
+L51@P1: MINISTERIO DEL TRABAJO Y PREVISIÓN SOCIAL 15
+L52@P1: 05
+L53@P1: 04
+L54@P1: Servicio Nacional de Capacitación y Empleo
+L55@P1: Servicio Nacional de Capacitación y Empleo - Empleo (05)
+L56@P1: LEY DE PRESUPUESTOS AÑO 2026
+L57@P1: Se informará trimestralmente a la Comisión Especial encargada de
+L58@P1: conocer iniciativas y tramitar proyectos de ley relacionados con la mujer y la
+L59@P1: igualdad de género del Senado y a la Comisión Especial Mixta de
+L60@P1: Presupuestos, 30 días después del trimestre respectivo, acerca de los
+L61@P1: efectos del subsidio en el empleo, señalando las beneficiarias del mismo,
+L62@P1: cuánto es el monto que se gasta por cada una de ellas, y cómo incide en su
+L63@P1: empleo.
+L64@P1: 04 Se informará trimestralmente a la Comisión Especial Mixta de Presupuestos, 30
+L65@P1: días después del trimestre respectivo, acerca de los detalles y los
+L66@P1: aspectos centrales que describen este subsidio, como son: el alcance que
+L67@P1: se espera lograr, los criterios diseñados para su distribución, el
+L68@P1: correspondiente desglose presupuestario de los fondos, así como también la
+L69@P1: eventual priorización de aquellas áreas del mercado laboral de la mujer que se
+L70@P1: han visto afectadas por la crisis económica.
+L71@P1: 05 Se informará trimestralmente a la Comisión Especial Mixta de Presupuestos, la
+L72@P1: cantidad de mujeres que han sido beneficiadas con estos programas, los montos
+L73@P1: destinados a ellas, sus remuneraciones promedio y los tramos de edad.
+L74@P1: Asimismo, se informará trimestralmente a la Comisión Especial Mixta de
+L75@P1: Presupuestos, la cantidad de recursos, las áreas de actividad económica, las
+L76@P1: comunas de residencia y ejecución, la cantidad y rangos etarios de los
+L77@P1: beneficiarios de la Región de Valparaíso.
+L78@P1: 06 Se podrán entregar estados de avances de los Organismos Técnicos de Capacitación
+L79@P1: previo cumplimiento de los hitos señalados en los convenios, en el porcentaje
+L80@P1: que autorice el Servicio Nacional de Capacitación y Empleo. Dicha transferencia
+L81@P1: tanto a los ejecutores públicos como privados, deberán cumplir con la normativa
+L82@P1: asociada según cada convenio y normativa vigentes de pagos a terceros.
+--------------------------------------------------------------------------------
+ (https://www.camara.cl/legislacion/presupuesto/2027/50_TesoroPublico.pdf)
+citeturn52view2 [wordlim: 200] Crawled: today; Content type: application/pdf; Number of pages: 47; Source: open({"ref_id":"turn35view3","lineno":1500}); Total lines: 2750
+L1405@P27: 11 4 Subsecre taría de Previsión Social
+L1406@P27: 115 Subsecretaría de Seguridad Pública
+L1407@P27: SERVICIO DE LA DEUDA 01
+L1408@P27: 01 Amortización Deuda Interna
+L1409@P27: 02 Amortización Deuda Externa
+L1410@P27: 03 Intereses Deuda Interna
+L1411@P27: 04 Intereses Deuda Externa
+L1412@P27: os Otros Gastos Financieros Deuda Interna 02
+L1413@P27: 06 Otros Gastos Financieros Deuda Externa 02
+L1414@P27: SALDO FINAL DE CAJA
+L1415@P27: /' 'I
+L1416@P27: PARTIDA 50
+L1417@P27: CAPÍTULO 01
+L1418@P27: PROGRAMA 04 ~
+L1419@P27: Moneda Nacional Moneda Extranjera
+L1420@P27: Miles de$ Convertida a Dólares
+L1421@P27: Miles de USS
+L1422@P27: 544.247
+L1423@P27: 1.874.438
+L1424@P27: 352.486
+L1425@P27: 5.764.848
+L1426@P27: 2.217.177
+L1427@P27: 1.673.612
+L1428@P27: 1.064.794
+L1429@P27: 292.384
+L1430@P27: 28.925
+L1431@P27: 23. 192
+L1432@P27: 209.007
+L1433@P27: 38.08 1
+L1434@P27: 17.229
+L1435@P27: 16.140.455.292 4.821.961
+L1436@P27: 12.846.990.077 10
+L1437@P27: 10 2.854.443
+L1438@P27: 3.291.695.235 10
+L1439@P27: 10 1.963.703
+L1440@P27: 1.769.950 10
+L1441@P27: 10 3.785
+L1442@P27: 10 10
+L1443@P27: GLOSAS:
+L1444@P27: 01 Excedible mediante Decretos del Ministerio de Hac i enda que se dicten en la
+L1445@P27: 02
+L1446@P27: forma dispuesta en el Art . 70 del D. L. Nº 1 . 263 , de 1975. No obstante, se
+L1447@P27: podrá e xceder sin necesidad de Decreto, sancionándose posterior mente los
+L1448@P27: excesos que se produzcan. Además, podrá anticiparse el pago de capital,
+L1449@P27: intereses y otros gast os financieros del servicio de la deuda del Fisco .
+L1450@P27: Con cargo a este se pagarán los gastos por concepto de
+L1451@P27: cumplimiento de compromisos por opera ciones accesorias al servicio de la deuda.
+L1452@P27-28: 27 SubTítulo
+L1453@P28: 27
+L1454@P28: PROYECTO DE LEY DE PRESUPUESTOS AÑO 2027
+L1455@P28: TESORO PÚBLICO
+L1456@P28: Fisco
+L1457@P28: Aporte Fiscal Libre
+L1458@P28: Ítem Asig. Denominaciones Glosa Nº
+L1459@P28: GASTOS
+L1460@P28: APORTE FISCAL LIBRE
+L1461@P28: 01 PRESIDENCIA DE LA REPÚBLICA
+L1462@P28: 00 1 Presidencia de la República
+L1463@P28: 02 CONGRESO NACIONAL
+L1464@P28: 001 Senado
+L1465@P28: 002 Cámara de Diputados
+L1466@P28: 003 Biblioteca del Congreso
+L1467@P28: 004 Consejo Resolutivo de Asignaciones Parlamentarias
+L1468@P28: 03 PODER JUDICIAL
+L1469@P28: 00 1 Poder Judicial
+L1470@P28: 003 Corporación Administrativa del Poder Judicial
+L1471@P28: 004 Academia Judicial
+L1472@P28: 04 CONTRALORÍA GENERAL DE LA
+L1473@P28: REPÚBLICA
+L1474@P28: 001 Contraloría General de la República
+L1475@P28: os MINISTERIO DEL INTERIOR Y SEGURIDAD
+L1476@P28: PÚBLICA
+L1477@P28: 002 Servicio de Gobierno Interior
+L1478@P28: 004 Servicio Nacional de Prevención y Respuesta ante
+L1479@P28: Desastres
+L1480@P28: 005 Subsecretaría de Desarrollo Regional y
+L1481@P28: Administrativo
+L1482@P28: 007 Agencia Nacional de Inteligencia
+L1483@P28: 009 Servicio Nacional para Prevención y Rehabilitación
+L1484@P28: Consumo de Drogas y Alcohol
+L1485@P28: OJO Subsecretaría del Interior
+L1486@P28: 035 Servicio Nacional de Migraciones
+L1487@P28: 06 MINISTERIO DE RELACIONES EXTERIORES
+L1488@P28: 001 Secretaría y Administración General y Servicio
+L1489@P28: Exterior
+L1490@P28: 003 Dirección de Fronteras y Límites del Estado
+L1491@P28: 004 Instituto Antártico Chileno
+L1492@P28: 005 Agencia de Cooperación Internacional de Chile
+L1493@P28: 006 Subsecretaría de Relaciones Económicas
+L1494@P28: Internacionales
+L1495@P28: 007 Dirección General de Promoción de Exportaciones
+L1496@P28: 28
+L1497@P28: / 'I
+L1498@P28: PARTIDA 50
+L1499@P28: CAPÍTULO 01
+L1500@P28: PROGRAMA 05 ~
+L1501@P28: Moneda Nacional Moneda Extranjera
+L1502@P28: Miles de$ Convertida a Dólares
+L1503@P28: Miles de USS
+L1504@P28: 71.174.286.503 400.035
+L1505@P28: 71.l74.286.S03 400.035
+L1506@P28: 22.806.302
+L1507@P28: 22.806.302
+L1508@P28: 187 .302.412
+L1509@P28: 65.081.427
+L1510@P28: JO 1 .699 .236
+L1511@P28: 18.653.104
+L1512@P28: 1.868.645
+L1513@P28: 798.014.398
+L1514@P28: 625.066.278
+L1515@P28: 167.989.668
+L1516@P28: 4.958.452
+L1517@P28: 130.344.569
+L1518@P28: 130.344.569
+L1519@P28: 647.209.134
+L1520@P28: 90.490.277
+L1521@P28: 31.242.645
+L1522@P28: 273.867 .077
+L1523@P28: 11.1 44.958
+L1524@P28: 9 1.828.449
+L1525@P28: 136.700.288
+L1526@P28: 11.935.440
+L1527@P28: 105.743.062 204.446
+L1528@P28: 46.349.663 184. 105
+L1529@P28: 6.402.447
+L1530@P28: 7.635.766
+L1531@P28: 8.7 13.359
+L1532@P28: 12.312.633 3. 195
+L1533@P28-29: 24.329.194 17. 146 SubTítulo
+L1534@P29: PROYECTO DE LEY DE PRESUPUESTOS AÑO 2027
+L1535@P29: TESORO PÚBLICO
+L1536@P29: Fisco
+L1537@P29: Aporte Fiscal Libre
+L1538@P29: Ítem Asig. Denominaciones Glosa Nº
+L1539@P29: 07 MlNLSTERIO DE ECONOMÍA, FOMENTO Y
+L1540@P29: TURISMO
+L1541@P29: 001 Subsecretaría de Economía y Empresas de Menor
+L1542@P29: Tamaño
+L1543@P29: 002 Servicio Nacional del Consumidor
+L1544@P29: 003 Subsecretaría de Pesca y Acuicultura
+L1545@P29: 004 Servicio Nacional de Pesca y Acuicultura
+L1546@P29: 006 Corporación de Fomento de la Producción
+L1547@P29: 007 Instituto Nacional de Estadísticas
+L1548@P29: 008 Fiscalía Nacional Económica
+L1549@P29: 009 Servicio Nacional de Turismo
+L1550@P29: 0 16 Servicio de Cooperación Técnica
+L1551@P29: 0 19 Comité Innova Chile
+L1552@P29: 02 1 Agencia de Promoción de la Inversión Extranjera
+L1553@P29: 023 Instituto Nacional de Propiedad Industrial
+L1554@P29: 024 Subsecretaría de Turismo
+L1555@P29: 025 Superintendencia de Insolvencia y Reemprendimiento
+L1556@P29: 026 Instituto Nacional Desarrollo Sustentable Pesca
+L1557@P29: Artesanal y Acuicultura
+L1558@P29: 08 MlNISTERlO DE HACIENDA
+L1559@P29: 001 Secretaría y Administración General
+L1560@P29: 002 Dirección de Presupuestos
+L1561@P29: 003 Servicio de Impuestos Internos
+L1562@P29: 004 Servicio Nacional de Aduanas
+L1563@P29: 005 Servicio de Tesorerías
+L1564@P29: 007 Dirección de Compras y Contratación Pública
+L1565@P29: 01 5 Dirección Nacional del Servicio Civil
+L1566@P29: 0 16 Unidad de Análisis Financiero
+L1567@P29: 017 Superintendencia de Casinos de Juego
+L1568@P29: 030 Consejo de Defensa del Estado
+L1569@P29: 033 Defensoría del Contribuyente
+L1570@P29: 09 MINISTERJO DE EDUCACIÓN
+L1571@P29: 00 1 Subsecretaría de Educación
+L1572@P29: 002 Superintendencia de Educación
+L1573@P29: 003 Agencia de Calidad de la Educación
+L1574@P29: 004 Subsecretaría de Educación Parvularia
+L1575@P29: 009 Junta Nacional de Auxilio Escolar y Becas
+L1576@P29: 0 11 Junta Nacional de Jardines Infantiles
+L1577@P29: 29
+L1578@P29: / ' PARTIDA 50
+L1579@P29: CAPÍTULO 01
+L1580@P29: \.PROGRAMA 05
+L1581@P29: Moneda Nacional Moneda Extranjera
+L1582@P29: Miles de$ Convertida a Dólares
+L1583@P29: Miles de US$
+L1584@P29: 316.564.718
+L1585@P29: 48.086. 161
+L1586@P29: 19.406.525
+L1587@P29: 46.008.222
+L1588@P29: 38.656.257
+L1589@P29: l.543.21 O
+L1590@P29: 59.903.536
+L1591@P29: 9.346.038
+L1592@P29: 32.656.981
+L1593@P29: 20.136.760
+L1594@P29: 10
+L1595@P29: 5.926.207
+L1596@P29: 8.802.282
+L1597@P29: 2.592.614
+L1598@P29: 9.603.809
+L1599@P29: 13.896. 106
+L1600@P29: 629.194.865
+L1601@P29: 44.254.303
+L1602@P29: 26.204.770
+L1603@P29: 290.235.074
+L1604@P29: 106.889 .067
+L1605@P29: 82.019.256
+L1606@P29: 16.579.153
+L1607@P29: 14.166.724
+L1608@P29: 5.894.057
+L1609@P29: 5.544.407
+L1610@P29: 32.254.012
+L1611@P29: 5.154.042
+L1612@P29: 17.716.443.603
+L1613@P29: 9.764.278.899
+L1614@P29: 45.466.741
+L1615@P29: 46.027.054
+L1616@P29: 452.807 .388
+L1617@P29: 1.7 15.734.176
+L1618@P29-30: 849.430.602 SubTítulo
+L1619@P30: PROYECTO DE LEY DE PRESUPUESTOS AÑO 2027
+L1620@P30: TESORO PÚBLICO
+L1621@P30: Fisco
+L1622@P30: Aporte Fiscal Lil>rc
+L1623@P30: Ítem Asig. Denominaciones Glosa Nº
+L1624@P30: 013 Consejo de Rectores
+L1625@P30: 015 Consejo Nacional de Educación
+L1626@P30: 017 Dirección de Educación Pública
+L1627@P30: 018 Servicio Local de Educación Barrancas
+L1628@P30: 019 Servicio Local de Educación Puerto Cordillera
+L1629@P30: 021 Servicio Local de Educación Huasco
+L1630@P30: 022 Servicio Local de Educación Costa Araucanía
+L1631@P30: 023 Servicio Local de Educación Chinchorro
+L1632@P30: 024 Servicio Local de Educación Gabriela Mistral
+L1633@P30: 025 Servicio Local de Educación Andalien Sur
+L1634@P30: 026 Servicio Local de Educación Atacama
+L1635@P30: 027 Servicio Local de Educación Valparaíso
+L1636@P30: 028 Servicio Local de Educación Colchagua
+L1637@P30: 029 Servicio Local de Educación Llanquihue
+L1638@P30: 030 Servicio Local de Educación [quique
+L1639@P30: 03 1 Servicio Local de Educación Licancabur
+L1640@P30: 032 Servicio Local de Educación Maule Costa
+L1641@P30: 033 Servicio Local de Educación Punilla Cordillera
+L1642@P30: 034 Servicio Local de Educación Aysén
+L1643@P30: 035 Servicio Local de Educación Magallanes
+L1644@P30: 036 Servicio Local de Educación Tamarugal
+L1645@P30: 037 Servicio Local de Educación Elqui
+L1646@P30: 038 Servicio Local de Educación Costa Central
+L1647@P30: 039 Servicio Local de Educación Marga Marga
+L1648@P30: 040 Servicio Local de Educación Los Libertadores
+L1649@P30: 041 Servicio Local de Educación Santa Rosa
+L1650@P30: 042 Servicio Local de Educación Santa Corina
+L1651@P30: 043 Servicio Local de Educación del Pino
+L1652@P30: 044 Servicio Local de Educación Andalién Costa
+L1653@P30: 045 Servicio Local de Educación Valdivia
+L1654@P30: 046 Servicio Local de Educación Antofagasta
+L1655@P30: 047 Servicio Local de Educación Aconcagua
+L1656@P30: 048 Servicio Local de Educación Los Andes
+L1657@P30: 049 Servicio Local de Educación Petorca
+L1658@P30: 050 Servicio Local de Educación Los Parques
+L1659@P30: 05 1 Servicio Local de Educación Santiago Centro
+L1660@P30: 052 Servicio Local de Educación Los Álamos
+L1661@P30: 30
+L1662@P30: r
+L1663@P30: PARTIDA 50
+L1664@P30: CAPÍTULO 01
+L1665@P30: ,PROGRAMA 05 ~
+L1666@P30: Moneda Nacional Moneda Extranjera
+L1667@P30: Miles de S Convertida a Dólares
+L1668@P30: Miles de USS
+L1669@P30: 98.587
+L1670@P30: 2.279.855
+L1671@P30: 546.224.038
+L1672@P30: 4.381.628
+L1673@P30: 3.231.330
+L1674@P30: 3.188.3 11
+L1675@P30: 3.658.031
+L1676@P30: 4. 155.706
+L1677@P30: 3.349.745
+L1678@P30: 3.822.847
+L1679@P30: 4. 141.297
+

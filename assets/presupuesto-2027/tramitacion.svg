@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+  "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns:xlink="http://www.w3.org/1999/xlink" width="576pt" height="345.6pt" viewBox="0 0 576 345.6" xmlns="http://www.w3.org/2000/svg" version="1.1">
+ <title>Aporte fiscal libre: ley inicial 2026 y proyecto 2027</title>
+ <metadata>
+  <rdf:RDF xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+   <cc:Work>
+    <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+    <dc:title>Aporte fiscal libre: ley inicial 2026 y proyecto 2027</dc:title>
+    <dc:date>2026-10-05T21:43:16.606974</dc:date>
+    <dc:description>Fuente: DIPRES ley 2026 y Cámara, Tesoro Público 2027. Corte: 5 de octubre de 2026. Valores reales estimados con inflación hipotética de 3%.</dc:description>
+    <dc:format>image/svg+xml</dc:format>
+    <dc:creator>
+     <cc:Agent>
+      <dc:title>Matplotlib v3.9.2, https://matplotlib.org/</dc:title>
+     </cc:Agent>
+    </dc:creator>
+   </cc:Work>
+  </rdf:RDF>
+ </metadata>
+ <defs>
+  <style type="text/css">*{stroke-linejoin: round; stroke-linecap: butt}</style>
+ </defs>
+ <g id="figure_1">
+  <g id="patch_1">
+   <path d="M 0 345.6 
+L 576 345.6 
+L 576 0 
+L 0 0 
+z
+" style="fill: #ffffff"/>
+  </g>
+  <g id="axes_1">
+   <g id="patch_2">
+    <path d="M 28.1088 124.416 
+L 547.8912 124.416 
+L 547.8912 66.3552 
+L 28.1088 66.3552 
+z
+" clip-path="url(#p8fb113baee)" style="fill: #f1f5f9; stroke: #64748b; stroke-width: 0.8; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_3">
+    <path d="M 28.1088 207.36 
+L 547.8912 207.36 
+L 547.8912 149.2992 
+L 28.1088 149.2992 
+z
+" clip-path="url(#p8fb113baee)" style="fill: #f1f5f9; stroke: #64748b; stroke-width: 0.8; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_4">
+    <path d="M 28.1088 290.304 
+L 547.8912 290.304 
+L 547.8912 232.2432 
+L 28.1088 232.2432 
+z
+" clip-path="url(#p8fb113baee)" style="fill: #f1f5f9; stroke: #64748b; stroke-width: 0.8; stroke-linejoin: miter"/>
+   </g>
+   <g id="text_1">
+    <text style="font: 700 12px 'DejaVu Sans'; text-anchor: start" x="44.352" y="91.737975" transform="rotate(-0 44.352 91.737975)">1. Ejecutivo: ingreso el 30 de septiembre</text>
+   </g>
+   <g id="text_2">
+    <text style="font: 11px 'DejaVu Sans'; text-anchor: start" x="44.352" y="110.862512" transform="rotate(-0 44.352 110.862512)">Propuesta oficial presentada al Congreso</text>
+   </g>
+   <g id="text_3">
+    <text style="font: 700 12px 'DejaVu Sans'; text-anchor: start" x="44.352" y="174.921975" transform="rotate(-0 44.352 174.921975)">2. Congreso: revisión y discusión</text>
+   </g>
+   <g id="text_4">
+    <text style="font: 11px 'DejaVu Sans'; text-anchor: start" x="44.352" y="193.806512" transform="rotate(-0 44.352 193.806512)">Las asignaciones pueden cambiar</text>
+   </g>
+   <g id="text_5">
+    <text style="font: 700 12px 'DejaVu Sans'; text-anchor: start" x="44.352" y="257.625975" transform="rotate(-0 44.352 257.625975)">3. Ley aprobada y publicada: pendiente</text>
+   </g>
+   <g id="text_6">
+    <text style="font: 11px 'DejaVu Sans'; text-anchor: start" x="44.352" y="276.750513" transform="rotate(-0 44.352 276.750513)">Estado verificado al 5 de octubre de 2026</text>
+   </g>
+   <g id="patch_5">
+    <path d="M 288 130.561875 
+Q 288 138.237277 288 144.794645 
+" style="fill: none; stroke: #165d91; stroke-linecap: round"/>
+    <path d="M 290.2 140.394645 
+L 288 144.794645 
+L 285.8 140.394645 
+" style="fill: none; stroke: #165d91; stroke-linecap: round"/>
+   </g>
+   <g id="patch_6">
+    <path d="M 288 213.505875 
+Q 288 221.181277 288 227.738645 
+" style="fill: none; stroke: #165d91; stroke-linecap: round"/>
+    <path d="M 290.2 223.338645 
+L 288 227.738645 
+L 285.8 223.338645 
+" style="fill: none; stroke: #165d91; stroke-linecap: round"/>
+   </g>
+  </g>
+  <g id="text_7">
+   <text style="font: 15px 'DejaVu Sans'; text-anchor: start" x="23.04" y="22.365656" transform="rotate(-0 23.04 22.365656)">Presupuesto 2027: todavía es un proyecto</text>
+  </g>
+  <g id="text_8">
+   <text style="fill: #64748b; font: 9px 'DejaVu Sans'; text-anchor: start" x="23.04" y="340.416" transform="rotate(-0 23.04 340.416)">Fuente: Cámara y calendario DIPRES. Una propuesta no acredita gasto ejecutado.</text>
+  </g>
+ </g>
+ <defs>
+  <clipPath id="p8fb113baee">
+   <rect x="17.28" y="41.472" width="541.44" height="276.48"/>
+  </clipPath>
+ </defs>
+</svg>

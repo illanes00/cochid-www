@@ -1,0 +1,4 @@
+destinos.publico.json: OK
+destinos.v1.json: OK
+cis-build: lock OK · avail=8578MB swap=10079MB · dir=/srv/projects/qa/presupuesto2027-editorial-20261005/repo/data · cmd: sha256sum -c SHA256SUMS
+cis-build: terminó (rc=0)

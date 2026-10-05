@@ -24,13 +24,13 @@ const frontmatter = nombre => {
 const entradas = fuentes.map(frontmatter);
 const rutasEntradas = entradas.map(meta => meta.ruta);
 
-test('publica exactamente las cinco entradas aprobadas, en índice, páginas y RSS', () => {
-  assert.equal(fuentes.length, 5);
+test('publica las entradas aprobadas en índice, páginas y RSS, conservando las cinco originales', () => {
+  assert.ok(fuentes.length >= 5);
   const directorios = readdirSync(join(dist, 'blog'), {withFileTypes: true}).filter(entrada => entrada.isDirectory()).map(entrada => entrada.name).sort();
   assert.deepEqual(directorios, entradas.map(meta => meta.slug).sort());
   const indice = pagina('/blog/');
-  assert.equal((indice.match(/<article class="blog-tarjeta"/g) || []).length, 5);
-  assert.equal((leer('blog/feed.xml').match(/<item>/g) || []).length, 5);
+  assert.equal((indice.match(/<article class="blog-tarjeta"/g) || []).length, fuentes.length);
+  assert.equal((leer('blog/feed.xml').match(/<item>/g) || []).length, fuentes.length);
   /* Índice por fecha descendente. */
   const fechas = [...indice.matchAll(/<article class="blog-tarjeta"[\s\S]*?<time datetime="([\d-]+)"/g)].map(m => m[1]);
   assert.deepEqual(fechas, [...fechas].sort().reverse());

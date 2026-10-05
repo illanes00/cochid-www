@@ -1,0 +1,333 @@
+{
+  "titulo": "Aporte fiscal libre: ley inicial 2026 y proyecto 2027",
+  "consultado_utc": "2026-10-05T21:20:00Z",
+  "estado_2027": "proyecto_en_tramitacion",
+  "unidad": "miles_de_pesos_chilenos",
+  "alcance": "Partida 50, capítulo 01, programa 05, subtítulo 27. Financiamiento fiscal libre en moneda nacional; no gasto consolidado del Gobierno Central ni gasto total de cada ministerio.",
+  "base_2026": "ley_inicial_aprobada",
+  "inflacion_escenario_pct": 3,
+  "advertencia_inflacion": "Escenario ilustrativo, no inflación observada de 2027 ni proyección oficial nueva. Sensibilidad adicional con 2% y 4%.",
+  "formula_nominal": "(proyecto_2027 / ley_2026 - 1) * 100",
+  "formula_real": "(proyecto_2027 / ley_2026 / (1 + inflacion_escenario_pct / 100) - 1) * 100",
+  "fuentes": [
+    {
+      "url": "https://www.dipres.gob.cl/597/articles-397421_doc_pdf.pdf",
+      "tipo": "ley_2026",
+      "paginas_pdf": "1-8",
+      "captura": "PDF original descargado y texto extraído"
+    },
+    {
+      "url": "https://www.camara.cl/legislacion/presupuesto/2027/50_TesoroPublico.pdf",
+      "tipo": "proyecto_2027",
+      "paginas_pdf": "29-36",
+      "captura": "Texto del documento consultado mediante navegador; los originales están enlazados. No se redistribuye una copia del PDF."
+    }
+  ],
+  "total_2026_miles_clp": 69669527710,
+  "total_2027_miles_clp": 71174286503,
+  "moneda_extranjera_separada": {
+    "unidad": "miles_de_dolares",
+    "ley_2026": 329524,
+    "proyecto_2027": 400035,
+    "incluida_en_totales_clp": false
+  },
+  "partidas": [
+    {
+      "partida": "01",
+      "sector": "Presidencia",
+      "ley_2026_miles_clp": 22829774,
+      "proyecto_2027_miles_clp": 22806302,
+      "variacion_nominal_pct": -0.10281310712931813,
+      "variacion_real_escenario_3_pct": -3.012439909834297,
+      "nota": ""
+    },
+    {
+      "partida": "02",
+      "sector": "Congreso",
+      "ley_2026_miles_clp": 177406732,
+      "proyecto_2027_miles_clp": 187302412,
+      "variacion_nominal_pct": 5.577961945660559,
+      "variacion_real_escenario_3_pct": 2.502875675398597,
+      "nota": ""
+    },
+    {
+      "partida": "03",
+      "sector": "Poder Judicial",
+      "ley_2026_miles_clp": 726104379,
+      "proyecto_2027_miles_clp": 798014398,
+      "variacion_nominal_pct": 9.903537436179,
+      "variacion_real_escenario_3_pct": 6.7024635302708635,
+      "nota": ""
+    },
+    {
+      "partida": "04",
+      "sector": "Contraloría",
+      "ley_2026_miles_clp": 116577566,
+      "proyecto_2027_miles_clp": 130344569,
+      "variacion_nominal_pct": 11.809307289877701,
+      "variacion_real_escenario_3_pct": 8.552725524153114,
+      "nota": ""
+    },
+    {
+      "partida": "05",
+      "sector": "Interior",
+      "ley_2026_miles_clp": 619361044,
+      "proyecto_2027_miles_clp": 647209134,
+      "variacion_nominal_pct": 4.496261150063541,
+      "variacion_real_escenario_3_pct": 1.4526807282170262,
+      "nota": ""
+    },
+    {
+      "partida": "06",
+      "sector": "Relaciones Exteriores",
+      "ley_2026_miles_clp": 102133387,
+      "proyecto_2027_miles_clp": 105743062,
+      "variacion_nominal_pct": 3.534275231663475,
+      "variacion_real_escenario_3_pct": 0.518713817149008,
+      "nota": ""
+    },
+    {
+      "partida": "07",
+      "sector": "Economía",
+      "ley_2026_miles_clp": 311180720,
+      "proyecto_2027_miles_clp": 316564718,
+      "variacion_nominal_pct": 1.7301836694767037,
+      "variacion_real_escenario_3_pct": -1.2328313888575693,
+      "nota": ""
+    },
+    {
+      "partida": "08",
+      "sector": "Hacienda",
+      "ley_2026_miles_clp": 635659293,
+      "proyecto_2027_miles_clp": 629194865,
+      "variacion_nominal_pct": -1.0169642875023643,
+      "variacion_real_escenario_3_pct": -3.8999653276722057,
+      "nota": ""
+    },
+    {
+      "partida": "09",
+      "sector": "Educación",
+      "ley_2026_miles_clp": 16821936421,
+      "proyecto_2027_miles_clp": 17716443603,
+      "variacion_nominal_pct": 5.317504237403514,
+      "variacion_real_escenario_3_pct": 2.2500041139839944,
+      "nota": ""
+    },
+    {
+      "partida": "10",
+      "sector": "Justicia",
+      "ley_2026_miles_clp": 1313476980,
+      "proyecto_2027_miles_clp": 792797889,
+      "variacion_nominal_pct": -39.64128027580659,
+      "variacion_real_escenario_3_pct": -41.399301238647176,
+      "nota": "Gendarmería se traslada a Seguridad Pública; comparación directa cambia de perímetro."
+    },
+    {
+      "partida": "11",
+      "sector": "Defensa",
+      "ley_2026_miles_clp": 1536895444,
+      "proyecto_2027_miles_clp": 1648810213,
+      "variacion_nominal_pct": 7.281872650277688,
+      "variacion_real_escenario_3_pct": 4.157157912890952,
+      "nota": ""
+    },
+    {
+      "partida": "12",
+      "sector": "Obras Públicas",
+      "ley_2026_miles_clp": 3523004254,
+      "proyecto_2027_miles_clp": 3621870630,
+      "variacion_nominal_pct": 2.806308731752094,
+      "variacion_real_escenario_3_pct": -0.18804977499796705,
+      "nota": ""
+    },
+    {
+      "partida": "13",
+      "sector": "Agricultura",
+      "ley_2026_miles_clp": 805461929,
+      "proyecto_2027_miles_clp": 797359218,
+      "variacion_nominal_pct": -1.0059706993302275,
+      "variacion_real_escenario_3_pct": -3.889291941097306,
+      "nota": ""
+    },
+    {
+      "partida": "14",
+      "sector": "Bienes Nacionales",
+      "ley_2026_miles_clp": 9434017,
+      "proyecto_2027_miles_clp": 9705758,
+      "variacion_nominal_pct": 2.880437887699383,
+      "variacion_real_escenario_3_pct": -0.11607972068021777,
+      "nota": ""
+    },
+    {
+      "partida": "15",
+      "sector": "Trabajo y Previsión Social",
+      "ley_2026_miles_clp": 15293668661,
+      "proyecto_2027_miles_clp": 15887842375,
+      "variacion_nominal_pct": 3.8850960300662596,
+      "variacion_real_escenario_3_pct": 0.8593165340449183,
+      "nota": ""
+    },
+    {
+      "partida": "16",
+      "sector": "Salud",
+      "ley_2026_miles_clp": 13228655908,
+      "proyecto_2027_miles_clp": 13387187712,
+      "variacion_nominal_pct": 1.1983969127515648,
+      "variacion_real_escenario_3_pct": -1.749129210920819,
+      "nota": ""
+    },
+    {
+      "partida": "17",
+      "sector": "Minería",
+      "ley_2026_miles_clp": 52814447,
+      "proyecto_2027_miles_clp": 53960726,
+      "variacion_nominal_pct": 2.1703890982707863,
+      "variacion_real_escenario_3_pct": -0.8054474774070064,
+      "nota": ""
+    },
+    {
+      "partida": "18",
+      "sector": "Vivienda y Urbanismo",
+      "ley_2026_miles_clp": 5606526657,
+      "proyecto_2027_miles_clp": 4475904414,
+      "variacion_nominal_pct": -20.166179743181413,
+      "variacion_real_escenario_3_pct": -22.49143664386545,
+      "nota": ""
+    },
+    {
+      "partida": "19",
+      "sector": "Transportes",
+      "ley_2026_miles_clp": 1849652480,
+      "proyecto_2027_miles_clp": 1883830858,
+      "variacion_nominal_pct": 1.8478270036974775,
+      "variacion_real_escenario_3_pct": -1.1186145595170172,
+      "nota": ""
+    },
+    {
+      "partida": "20",
+      "sector": "Secretaría General de Gobierno",
+      "ley_2026_miles_clp": 32573901,
+      "proyecto_2027_miles_clp": 32880650,
+      "variacion_nominal_pct": 0.9417017630157343,
+      "variacion_real_escenario_3_pct": -1.998347802897349,
+      "nota": ""
+    },
+    {
+      "partida": "21",
+      "sector": "Desarrollo Social y Familia",
+      "ley_2026_miles_clp": 1456840271,
+      "proyecto_2027_miles_clp": 1492337870,
+      "variacion_nominal_pct": 2.436615715986057,
+      "variacion_real_escenario_3_pct": -0.5469750330232448,
+      "nota": ""
+    },
+    {
+      "partida": "22",
+      "sector": "Secretaría General de la Presidencia",
+      "ley_2026_miles_clp": 12290100,
+      "proyecto_2027_miles_clp": 12374282,
+      "variacion_nominal_pct": 0.6849578115719179,
+      "variacion_real_escenario_3_pct": -2.2476137751728964,
+      "nota": ""
+    },
+    {
+      "partida": "23",
+      "sector": "Ministerio Público",
+      "ley_2026_miles_clp": 280925228,
+      "proyecto_2027_miles_clp": 321445843,
+      "variacion_nominal_pct": 14.423985801659644,
+      "variacion_real_escenario_3_pct": 11.09124835112587,
+      "nota": ""
+    },
+    {
+      "partida": "24",
+      "sector": "Energía",
+      "ley_2026_miles_clp": 150847774,
+      "proyecto_2027_miles_clp": 134951152,
+      "variacion_nominal_pct": -10.538187988110447,
+      "variacion_real_escenario_3_pct": -13.143871833116938,
+      "nota": ""
+    },
+    {
+      "partida": "25",
+      "sector": "Medio Ambiente",
+      "ley_2026_miles_clp": 94369410,
+      "proyecto_2027_miles_clp": 98631303,
+      "variacion_nominal_pct": 4.516180614035847,
+      "variacion_real_escenario_3_pct": 1.472020013627029,
+      "nota": ""
+    },
+    {
+      "partida": "26",
+      "sector": "Deporte",
+      "ley_2026_miles_clp": 168508200,
+      "proyecto_2027_miles_clp": 244243402,
+      "variacion_nominal_pct": 44.944520207325226,
+      "variacion_real_escenario_3_pct": 40.72283515274293,
+      "nota": ""
+    },
+    {
+      "partida": "27",
+      "sector": "Mujer y Equidad de Género",
+      "ley_2026_miles_clp": 91388440,
+      "proyecto_2027_miles_clp": 93088109,
+      "variacion_nominal_pct": 1.8598293175810854,
+      "variacion_real_escenario_3_pct": -1.1069618275911797,
+      "nota": ""
+    },
+    {
+      "partida": "28",
+      "sector": "Servicio Electoral",
+      "ley_2026_miles_clp": 38993564,
+      "proyecto_2027_miles_clp": 34959571,
+      "variacion_nominal_pct": -10.345279031175503,
+      "variacion_real_escenario_3_pct": -12.956581583665539,
+      "nota": ""
+    },
+    {
+      "partida": "29",
+      "sector": "Culturas",
+      "ley_2026_miles_clp": 523395798,
+      "proyecto_2027_miles_clp": 437690023,
+      "variacion_nominal_pct": -16.374945180587787,
+      "variacion_real_escenario_3_pct": -18.81062638892018,
+      "nota": ""
+    },
+    {
+      "partida": "30",
+      "sector": "Ciencia",
+      "ley_2026_miles_clp": 572802631,
+      "proyecto_2027_miles_clp": 544090749,
+      "variacion_nominal_pct": -5.012526208176582,
+      "variacion_real_escenario_3_pct": -7.779151658423866,
+      "nota": ""
+    },
+    {
+      "partida": "31",
+      "sector": "Gobiernos Regionales",
+      "ley_2026_miles_clp": 1124303237,
+      "proyecto_2027_miles_clp": 1194514407,
+      "variacion_nominal_pct": 6.244860611390379,
+      "variacion_real_escenario_3_pct": 3.150350108145994,
+      "nota": ""
+    },
+    {
+      "partida": "32",
+      "sector": "Seguridad Pública",
+      "ley_2026_miles_clp": 2369509063,
+      "proyecto_2027_miles_clp": 3420186286,
+      "variacion_nominal_pct": 44.34155747308066,
+      "variacion_real_escenario_3_pct": 40.13743443988413,
+      "nota": "Incluye Gendarmería en 2027. Ver comparación con perímetro constante."
+    }
+  ],
+  "perimetro_constante_seguridad": {
+    "ley_2026_seguridad_miles_clp": 2369509063,
+    "ley_2026_gendarmeria_miles_clp": 681326937,
+    "ley_2026_combinada_miles_clp": 3050836000,
+    "proyecto_2027_seguridad_incluye_gendarmeria_miles_clp": 3420186286,
+    "proyecto_2027_gendarmeria_miles_clp": 836360064,
+    "variacion_nominal_pct": 12.106527063401629,
+    "variacion_real_escenario_3_pct": 8.841288411069549
+  }
+}

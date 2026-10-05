@@ -1,0 +1,498 @@
+ (https://www.dipres.gob.cl/597/articles-397421_doc_pdf.pdf?ts=1765870385)
+citeturn47view0 [wordlim: 200] Crawled: today; Content type: application/pdf; Number of pages: 8; Source: open({"ref_id":"turn43view2","lineno":235}); Total lines: 443
+L208@P3: 073 Servicio Local de Educación Cachapoal Norte 799.438
+L209@P3: 074 Servicio Local de Educación Cachapoal Costa 792.677
+L210@P3: 075 Servicio Local de Educación Arauco Norte 831.518
+L211@P3: 076 Servicio Local de Educación Cautín Norte 886.357
+L212@P3: 077 Servicio Local de Educación Cautín Sur 828.524
+L213@P3: 090 Subsecretaría de Educación Superior 3.904.765.692
+L214@P3: 091 Superintendencia de Educación Superior 4.342.898
+L215@P3: 10 MINISTERIO DE JUSTICIA Y DERECHOS
+L216@P3: HUMANOS
+L217@P3: 1.313.476.980
+L218@P3: 001 Secretaría y Administración General 290.527.565
+L219@P3: 003 Servicio Médico Legal 69.039.126
+L220@P3: 004 Gendarmería de Chile 681.326.937
+L221@P3: 006 Subsecretaría de Derechos Humanos 9.439.454
+L222@P3: 009 Defensoría Penal Pública 76.782.517
+L223@P3: 010 Servicio Nacional de Reinserción Social Juvenil 186.361.381
+L224@P3: 11 MINISTERIO DE DEFENSA NACIONAL 1.536.895.444 126.351
+L225@P3: 001 Ejército de Chile 719.885.038 16.041
+L226@P3: 005 Armada de Chile 493.184.859 54.501
+L227@P3: 009 Fuerza Aérea de Chile 277.607.779 50.381
+L228@P3-4: 018 Dirección General de Movilización Nacional 2.198.118Fisco
+L229@P4: TESORO PÚBLICO
+L230@P4: Aporte Fiscal Libre
+L231@P4: PARTIDA
+L232@P4: CAPÍTULO
+L233@P4: PROGRAMA
+L234@P4: :
+L235@P4: :
+L236@P4: :
+L237@P4: LEY DE PRESUPUESTOS AÑO 2026
+L238@P4: 50
+L239@P4: 01
+L240@P4: 05
+L241@P4: SubTítulo Ítem Asig. Denominaciones Glosa N° Moneda Nacional
+L242@P4: Miles de $
+L243@P4: Moneda Extranjera
+L244@P4: Convertida a Dólares
+L245@P4: Miles de US$
+L246@P4: 019 Instituto Geográfico Militar 3.767.064
+L247@P4: 020 Servicio Hidrográfico y Oceanográfico de la Armada
+L248@P4: de Chile
+L249@P4: 5.978.529
+L250@P4: 022 Servicio Aerofotogramétrico de la FACH 1.579.610
+L251@P4: 023 Subsecretaría para las Fuerzas Armadas 15.908.964
+L252@P4: 024 Subsecretaría de Defensa 6.253.079
+L253@P4: 025 Estado Mayor Conjunto 10.532.404 5.428
+L254@P4: 12 MINISTERIO DE OBRAS PÚBLICAS 3.523.004.254
+L255@P4: 001 Secretaría y Administración General 33.536.740
+L256@P4: 002 Dirección General de Obras Públicas 3.215.761.926
+L257@P4: 003 Dirección General de Concesiones de Obras Públicas 201.202.952
+L258@P4: 004 Dirección General de Aguas 52.282.783
+L259@P4: 005 Instituto Nacional de Hidráulica 2.291.098
+L260@P4: 007 Superintendencia de Servicios Sanitarios 17.928.755
+L261@P4: 13 MINISTERIO DE AGRICULTURA 805.461.929
+L262@P4: 001 Subsecretaría de Agricultura 72.561.103
+L263@P4: 002 Oficina de Estudios y Políticas Agrarias 8.665.730
+L264@P4: 003 Instituto de Desarrollo Agropecuario 276.371.406
+L265@P4: 004 Servicio Agrícola y Ganadero 120.557.261
+L266@P4: 005 Corporación Nacional Forestal 201.381.082
+L267@P4: 006 Comisión Nacional de Riego 125.925.347
+L268@P4: 14 MINISTERIO DE BIENES NACIONALES 9.434.017
+L269@P4: 001 Subsecretaría de Bienes Nacionales 9.434.017
+L270@P4: 15 MINISTERIO DEL TRABAJO Y PREVISIÓN
+L271@P4: SOCIAL
+L272@P4: 15.293.668.661
+L273@P4: 001 Subsecretaría del Trabajo 40.265.771
+L274@P4: 002 Dirección del Trabajo 110.457.234
+L275@P4: 003 Subsecretaría de Previsión Social 8.504.639
+L276@P4: 004 Dirección General de Crédito Prendario 6.225.135
+L277@P4: 005 Servicio Nacional de Capacitación y Empleo 274.663.454
+L278@P4: 006 Superintendencia de Seguridad Social 21.883.848
+L279@P4: 007 Superintendencia de Pensiones 27.199.950
+L280@P4: 009 Instituto de Previsión Social 11.820.157.442
+L281@P4: 011 Chile Valora 8.525.732
+L282@P4: 013 Caja de Previsión de la Defensa Nacional 1.673.511.872
+L283@P4: 014 Dirección de Previsión de Carabineros de Chile 1.302.273.584
+L284@P4-5: 16 MINISTERIO DE SALUD 13.228.655.908Fisco
+L285@P5: TESORO PÚBLICO
+L286@P5: Aporte Fiscal Libre
+L287@P5: PARTIDA
+L288@P5: CAPÍTULO
+L289@P5: PROGRAMA
+L290@P5: :
+L291@P5: :
+L292@P5: :
+L293@P5: LEY DE PRESUPUESTOS AÑO 2026
+L294@P5: 50
+L295@P5: 01
+L296@P5: 05
+L297@P5: SubTítulo Ítem Asig. Denominaciones Glosa N° Moneda Nacional
+L298@P5: Miles de $
+L299@P5: Moneda Extranjera
+L300@P5: Convertida a Dólares
+L301@P5: Miles de US$
+L302@P5: 002 Fondo Nacional de Salud 11.528.782.212
+L303@P5: 004 Instituto de Salud Pública de Chile 21.961.128
+L304@P5: 009 Subsecretaría de Salud Pública 475.096.283
+L305@P5: 010 Subsecretaría de Redes Asistenciales 1.184.010.682
+L306@P5: 011 Superintendencia de Salud 18.805.603
+--------------------------------------------------------------------------------
+ (https://www.dipres.gob.cl/597/articles-397421_doc_pdf.pdf?ts=1765870385)
+citeturn47view1 [wordlim: 200] Crawled: today; Content type: application/pdf; Number of pages: 8; Source: open({"ref_id":"turn43view2","lineno":370}); Total lines: 443
+L333@P5: 034 Serviu Región de Los Ríos 147.637.734
+L334@P5: 035 Serviu Región de Arica y Parinacota 188.972.037
+L335@P5: 036 Serviu Región de Ñuble 245.178.560
+L336@P5: 19 MINISTERIO DE TRANSPORTES Y
+L337@P5: TELECOMUNICACIONES
+L338@P5: 1.849.652.480
+L339@P5: 001 Secretaría y Administración General de Transportes 1.820.842.847
+L340@P5: 002 Subsecretaría de Telecomunicaciones 27.379.704
+L341@P5: 003 Junta Aeronáutica Civil 1.429.929
+L342@P5: 20 MINISTERIO SECRETARÍA GENERAL DE
+L343@P5: GOBIERNO
+L344@P5-6: 32.573.901Fisco
+L345@P6: TESORO PÚBLICO
+L346@P6: Aporte Fiscal Libre
+L347@P6: PARTIDA
+L348@P6: CAPÍTULO
+L349@P6: PROGRAMA
+L350@P6: :
+L351@P6: :
+L352@P6: :
+L353@P6: LEY DE PRESUPUESTOS AÑO 2026
+L354@P6: 50
+L355@P6: 01
+L356@P6: 05
+L357@P6: SubTítulo Ítem Asig. Denominaciones Glosa N° Moneda Nacional
+L358@P6: Miles de $
+L359@P6: Moneda Extranjera
+L360@P6: Convertida a Dólares
+L361@P6: Miles de US$
+L362@P6: 001 Secretaría General de Gobierno 26.920.605
+L363@P6: 002 Consejo Nacional de Televisión 5.653.296
+L364@P6: 21 MINISTERIO DE DESARROLLO SOCIAL Y
+L365@P6: FAMILIA
+L366@P6: 1.456.840.271
+L367@P6: 001 Subsecretaría de Servicios Sociales 420.320.700
+L368@P6: 002 Fondo de Solidaridad e Inversión Social 52.136.969
+L369@P6: 005 Instituto Nacional de la Juventud 8.093.031
+L370@P6: 006 Corporación Nacional de Desarrollo Indígena 146.291.915
+L371@P6: 007 Servicio Nacional de la Discapacidad 14.287.406
+L372@P6: 008 Servicio Nacional del Adulto Mayor 18.326.221
+L373@P6: 009 Subsecretaría de Evaluación Social 31.123.886
+L374@P6: 010 Subsecretaría de la Niñez 111.972.662
+L375@P6: 011 Servicio Nacional de Protección Especializada a la
+L376@P6: Niñez y Adolescencia
+L377@P6: 654.287.481
+L378@P6: 22 MINISTERIO SECRETARÍA GENERAL DE LA
+L379@P6: PRESIDENCIA DE LA REPÚBLICA
+L380@P6: 12.290.100
+L381@P6: 001 Secretaría General de la Presidencia de la República 12.290.100
+L382@P6: 23 MINISTERIO PÚBLICO 280.925.228
+L383@P6: 001 Ministerio Público 280.925.228
+L384@P6: 24 MINISTERIO DE ENERGÍA 150.847.774
+L385@P6: 001 Subsecretaría de Energía 109.061.243
+L386@P6: 002 Comisión Nacional de Energía 8.985.188
+L387@P6: 003 Comisión Chilena de Energía Nuclear 13.491.379
+L388@P6: 004 Superintendencia de Electricidad y Combustibles 19.309.964
+L389@P6: 25 MINISTERIO DEL MEDIO AMBIENTE 94.369.410
+L390@P6: 001 Subsecretaría del Medio Ambiente 38.787.545
+L391@P6: 002 Servicio de Evaluación Ambiental 21.303.722
+L392@P6: 003 Superintendencia del Medio Ambiente 16.885.205
+L393@P6: 004 Servicio de Biodiversidad y Áreas Protegidas 17.392.938
+L394@P6: 26 MINISTERIO DEL DEPORTE 168.508.200
+L395@P6: 001 Subsecretaría del Deporte 9.243.253
+L396@P6: 002 Instituto Nacional de Deportes 159.264.947
+L397@P6: 27 MINISTERIO DE LA MUJER Y EQUIDAD DE
+L398@P6: GÉNERO
+L399@P6: 91.388.440
+L400@P6: 001 Subsecretaría de la Mujer y Equidad de Género 11.514.989
+L401@P6: 002 Servicio Nacional de la Mujer y Equidad de Género 79.873.451
+L402@P6: 28 SERVICIO ELECTORAL 38.993.564
+L403@P6-7: 001 Servicio Electoral 38.993.564Fisco
+L404@P7: TESORO PÚBLICO
+L405@P7: Aporte Fiscal Libre
+L406@P7: PARTIDA
+L407@P7: CAPÍTULO
+L408@P7: PROGRAMA
+L409@P7: :
+L410@P7: :
+L411@P7: :
+L412@P7: LEY DE PRESUPUESTOS AÑO 2026
+L413@P7: 50
+L414@P7: 01
+L415@P7: 05
+L416@P7: SubTítulo Ítem Asig. Denominaciones Glosa N° Moneda Nacional
+L417@P7: Miles de $
+L418@P7: Moneda Extranjera
+L419@P7: Convertida a Dólares
+L420@P7: Miles de US$
+L421@P7: 29 MINISTERIO DE LAS CULTURAS, LAS ARTES
+L422@P7: Y EL PATRIMONIO
+L423@P7: 523.395.798
+L424@P7: 001 Subsecretaría de las Culturas y las Artes 311.348.147
+L425@P7: 002 Subsecretaría del Patrimonio Cultural 3.335.890
+L426@P7: 003 Servicio Nacional del Patrimonio Cultural 208.711.761
+L427@P7: 30 MINISTERIO DE CIENCIA, TECNOLOGÍA,
+L428@P7: CONOCIMIENTO E INNOVACIÓN
+L429@P7: 572.802.631
+L430@P7: 001 Subsecretaría de Ciencia, Tecnología, Conocimiento e
+L431@P7: Innovación
+L432@P7: 221.448.855
+L433@P7: 002 Agencia Nacional de Investigación y Desarrollo 351.353.776
+L434@P7: 31 GOBIERNOS REGIONALES 1.124.303.237
+L435@P7: 003 Gobiernos Regionales 1.124.303.237
+L436@P7: 32 MINISTERIO DE SEGURIDAD PÚBLICA 2.369.509.063
+L437@P7: 001 Subsecretaría de Seguridad Pública 101.193.344
+L438@P7: 002 Subsecretaría de Prevención del Delito 80.774.917
+L439@P7: 003 Carabineros de Chile 1.612.118.300
+L440@P7: 004 Hospital de Carabineros 21.797.835
+--------------------------------------------------------------------------------
+ (https://www.camara.cl/legislacion/presupuesto/2027/50_TesoroPublico.pdf)
+citeturn47view2 [wordlim: 200] Crawled: today; Content type: application/pdf; Number of pages: 47; Source: open({"ref_id":"turn35view3","lineno":2070}); Total lines: 2750
+L2028@P34: 19.75 1.522
+L2029@P34: 27.807.961
+L2030@P34: 119.431.068
+L2031@P34: 698.612.945
+L2032@P34: 12.374.282
+L2033@P34: 12.374.282
+L2034@P34: 321.445.843
+L2035@P34: 32 1.445.843
+L2036@P34: 134.951.152
+L2037@P34: 92.562.084
+L2038@P34: 8.973.175
+L2039@P34-35: 13.440.481 SubTítulo
+L2040@P35: PROYECTO DE LEY DE PRESUPUESTOS AÑO 2027
+L2041@P35: TESORO PÚBLICO
+L2042@P35: Fisco
+L2043@P35: Aporte Fiscal Libre
+L2044@P35: Ítem Asig. Denominaciones Glosa
+L2045@P35: 004 Superintendencia de Electricidad y Combustibles
+L2046@P35: 25 MJNISTERIO DEL MEDIO AMBIENTE
+L2047@P35: 00 1 Subsecretaría del Medio Ambiente
+L2048@P35: 002 Servicio de Evaluación Ambiental
+L2049@P35: 003 Superintendencia del Medio Ambiente
+L2050@P35: 004 Servicio de Biodiversidad y Áreas Protegidas
+L2051@P35: 26 MINISTERIO DEL DEPORTE
+L2052@P35: 001 Subsecretaría del Deporte
+L2053@P35: 002 Instituto Nacional de Deportes
+L2054@P35: 27 MI ISTERIO DE LA MUJER Y EQUIDAD DE
+L2055@P35: GÉNERO
+L2056@P35: 001 Subsecretaría de la Mujer y Equidad de Género
+L2057@P35: 002 Servicio Nacional de la Mujer y Equidad de Género
+L2058@P35: 28 SERVICIO ELECTORAL
+L2059@P35: 001 Servicio Electoral
+L2060@P35: 29 MINISTERIO DE LAS CULTURAS, LAS ARTES
+L2061@P35: Y EL PATRIMONIO
+L2062@P35: 001 Subsecretaría de las Culturas y las Artes
+L2063@P35: 002 Subsecretaría del Patrimonio Cultural
+L2064@P35: 003 Servicio Nacional del Patrimonio Cultural
+L2065@P35: 30 MI 'ISTERIO DE CIE CJA, TECNOLOGÍA,
+L2066@P35: CONOCIMIENTO E INNOVACIÓN
+L2067@P35: 001 Subsecretaria de Ciencia, Tecnología, Conocimiento e
+L2068@P35: Innovación
+L2069@P35: 002 Agencia Nacional de Investigación y Desarrollo
+L2070@P35: 31 GOBIERNOS REGIONALES
+L2071@P35: 003 Gobie rnos Regionales
+L2072@P35: 32 MJNISTERIO DE SEGURIDAD PÚBLICA
+L2073@P35: 001 Subsecretaría de Seguridad Pública
+L2074@P35: 002 Subsecretaria de Prevención del Delito
+L2075@P35: 003 Carabineros de Chile
+L2076@P35: 004 Hospital de Carabineros
+L2077@P35: 005 Policía de Investigaciones
+L2078@P35: 006 Agencia Nacional de Ciberseguridad
+L2079@P35: 007 Gendarmería de Chile
+L2080@P35: 35
+L2081@P35: 'I
+L2082@P35: PARTIDA 50
+L2083@P35: CAPÍTULO 01
+L2084@P35: PROGRAMA 05 ~
+L2085@P35: Moneda Nacional Moneda Extra njera o Convertida a Dólares Miles de S Miles de USS
+L2086@P35: 19.975.4 12
+L2087@P35: 98.631.303
+L2088@P35: 36.273.014
+L2089@P35: 23.064.297
+L2090@P35: 16.989.949
+L2091@P35: 22.304.043
+L2092@P35: 244.243.402
+L2093@P35: 100.980.784
+L2094@P35: 143.262.618
+L2095@P35: 93.088.109
+L2096@P35: 11.471.342
+L2097@P35: 8 1.616.767
+L2098@P35: 34.959.571
+L2099@P35: 34.959.57 1
+L2100@P35: 437.690-023
+L2101@P35: 248. 782.54 7
+L2102@P35: 3.385.308
+L2103@P35: 185.522. 168
+L2104@P35: 544.090.749
+L2105@P35: 196.524.999
+L2106@P35: 347.565.750
+L2107@P35: 1.194.514.407
+L2108@P35: 1.194.5 14.407
+L2109@P35: 3.420.186.286
+L2110@P35: 104.971.285
+L2111@P35: 84.903.682
+L2112@P35: 1.748.634.922
+L2113@P35: 24.426.071
+L2114@P35: 6 15.557.530
+L2115@P35: 5.332.732
+L2116@P35-36: 836.360.064 PROYECTO DE LEY DE PRESUPUESTOS AÑO 2027
+L2117@P36: TESORO PÚBLICO
+L2118@P36: Fisco
+L2119@P36: Fondo de Reserva de Pensiones
+L2120@P36: /
+L2121@P36: PARTIDA
+L2122@P36: CAPÍTULO
+L2123@P36: '-PROGRAMA
+L2124@P36: " 50
+L2125@P36: 01
+L2126@P36: 06
+L2127@P36: Sub- Moneda Nacional Moneda Extranjera
+L2128@P36: Ítem Asig. Denominaciones Glosa Nº Miles de$ Convertida a Dólares Título
+L2129@P36: INGRESOS
+L2130@P36: 06 RENTAS DE LA PROPIEDAD
+L2131@P36: 03 Intereses
+L2132@P36: 05 1 Intereses
+L2133@P36: 052 Ganancias de Capital
+L2134@P36: 11 VENTA DE ACTIVOS FINANCIEROS
+L2135@P36: 01 Venta o Rescate de Títulos y Valores
+L2136@P36: 99 Otros Activos Financieros
+L2137@P36: 13 TRANSFERENCIAS PARA GASTOS DE
+L2138@P36: CAPITAL
+L2139@P36: 02 Del Gobierno Central
+L2140@P36: 059 De Operaciones Complementarias
+L2141@P36: 060 Del Fondo de Estabilización Económica Social
+L2142@P36: GASTOS
+L2143@P36: 22 BIENES Y SERVICIOS DE CONSUMO 01
+L2144@P36: 24 TRANSFERENCIAS CORRIENTES
+L2145@P36: 02 Al Gobierno Central 01
+L2146@P36: 050 A Ingresos Generales de la Nación
+L2147@P36: 30 ADQUISICIÓN DE ACTIVOS FINANCIEROS 01
+L2148@P36: 01 Compra de Títulos y Valores
+L2149@P36: 99 Otros Activos Financieros
+L2150@P36: 35 SALDO FINAL DE CAJA
+L2151@P36: GLOSAS:
+L2152@P36: 01 Excedible mediante Decretos del Ministerio de Hacienda que se d i cten en la forma
+L2153@P36: dispuesta en el Art . 70 del D. L. Nº 1 . 263 , de 1975 . No obstante, se podrá
+L2154@P36: e xceder sin necesidad de Decreto, sancionándose posteriormente los e xcesos que
+L2155@P36: se produzcan .
+L2156@P36: 36
+L2157@P36: Miles de USS
+L2158@P36: 572.264
+L2159@P36: 265.124
+L2160@P36: 265.124
+L2161@P36: 265. 11 4
+L2162@P36: 10
+L2163@P36: 307.120
+L2164@P36: 307.100
+L2165@P36: 20
+L2166@P36: 20
+L2167@P36: 20
+L2168@P36: 10
+L2169@P36: 10
+L2170@P36: 572.264
+L2171@P36: 7.601
+L2172@P36: 299.499
+L2173@P36: 299.499
+L2174@P36: 299.499
+L2175@P36: 265.154
+--------------------------------------------------------------------------------
+ (https://www.camara.cl/legislacion/presupuesto/2027/15_Trabajo.pdf)
+citeturn47view3 [wordlim: 200] Crawled: today; Content type: application/pdf; Number of pages: 50; Source: open({"ref_id":"turn36view4","lineno":330}); Total lines: 2944
+L294@P6: Ítem Asig. Denominaciones
+L295@P6: INGRESOS
+L296@P6: TRANSFERENCIAS CORRIENTES
+L297@P6: 02 Del Gobierno Central
+L298@P6: 201 Recuperación de Licencias Médicas - FONASA
+L299@P6: OTROS INGRESOS CORRIENTES
+L300@P6: 01 Recuperaciones y Reembolsos por Licencias Médicas
+L301@P6: 02 Multas y Sanciones Pecuniarias
+L302@P6: 99 Otros
+L303@P6: APORTE FISCAL
+L304@P6: 01 Libre
+L305@P6: RECUPERACIÓN DE PRÉSTAMOS
+L306@P6: JO Ingresos por Percibir
+L307@P6: SALDO INICIAL DE CAJA
+L308@P6: GASTOS
+L309@P6: GASTOS EN PERSONAL
+L310@P6: BIENES Y SERVICIOS DE CONSUMO
+L311@P6: PRESTACIONES DE SEGURIDAD SOCIAL
+L312@P6: 03 Prestaciones Sociales del Empleador
+L313@P6: 001 Indemnización de Cargo Fiscal
+L314@P6: 003 Fondo Retiro Funcionarios Públicos Ley Nº 19.882
+L315@P6: TRANSFERENC[AS CORRIENTES
+L316@P6: 03 A Otras Entidades Públicas
+L317@P6: 267 Observatorio Laboral
+L318@P6: 432 Programa Diálogo Social
+L319@P6: 435 Fondo de Formación Sindical y Relaciones Laborales Colaborativas
+L320@P6: 08 A Instituciones Privadas Ej ecutoras el e Políticas Públicas
+L321@P6: 248 Observatorio Laboral
+L322@P6: INTEGROS AL FISCO
+L323@P6: 01 Impuestos
+L324@P6: 99 Otros I ntegros al Fisco
+L325@P6: ADQUISICIÓN DE ACTJVOS NO FINANCIEROS
+L326@P6: 07 Programas Informáticos
+L327@P6: SERV[CJO DE LA DEUDA
+L328@P6: 07 Deuda Flotante
+L329@P6: SALDO FINAL DE CAJA
+L330@P6: 6
+L331@P6: / " PARTIDA 15
+L332@P6: CAPÍTULO 01
+L333@P6: \.PROGRAMA 01 .1
+L334@P6: Glosa Nº Moneda Nacional
+L335@P6: Miles de$
+L336@P6: 16.376.372
+L337@P6: 10
+L338@P6: JO
+L339@P6: 10
+L340@P6: 89.493
+L341@P6: 81.751
+L342@P6: 6.859
+L343@P6: 883
+L344@P6: 16.286.849
+L345@P6: 16.286.849
+L346@P6: 10
+L347@P6: 10
+L348@P6: 10
+L349@P6: 16.376.372
+L350@P6: 02 9.576.066
+L351@P6: 03 2.487.635
+L352@P6: 20
+L353@P6: 20
+L354@P6: JO
+L355@P6: 10
+L356@P6: 3.782.785
+L357@P6: 2.416.327
+L358@P6: 05 1.366.458
+L359@P6: 04 327.230
+L360@P6: 07 722.639
+L361@P6: 1.366.458
+L362@P6: 05 1.366.458
+L363@P6: 81.966
+L364@P6: 214
+L365@P6: 81.752
+L366@P6: 447.880
+L367@P6: 447.880
+L368@P6: 10
+L369@P6: 10
+L370@P6-7: 10 PROYECTO DE LEY DE PRESUPUESTOS AÑO 2027
+L371@P7: MINISTERIO DEL TRABAJO Y PREVISIÓN SOCIAL
+L372@P7: Subsecretaría del Trabajo
+L373@P7: Subsecretaría del Trabajo (01, 06)
+L374@P7: PARTIDA
+L375@P7: CAPÍTULO
+L376@P7: PROGRAMA
+L377@P7: GLOSAS:
+L378@P7: 01 Dotación máx ima de vehículos
+L379@P7: 02 I ncluye :
+L380@P7: a) Dotación máxima de personal
+L381@P7: Al personal que se desempeñe en la Subsecretaria en comisión de servicios,
+L382@P7: no le serán aplicables las limitaciones establecidas en e l articulo 76 del
+L383@P7: D. F .L. Nº 29 , de 2005, Ministerio de Hacienda .
+L384@P7: b) Horas extraor dinarias año
+L385@P7: - Miles de
+L386@P7: c) Autorización máxima para gastos en viáticos
+L387@P7: - En Territorio Nacional, en Miles de
+L388@P7: - En el Exterior, en Miles de
+L389@P7: Incluye$ 169 . 609 miles para el pago de viáticos a las personas que
+L390@P7: integren la delegación tripartita que asistirá a reuniones de la Organización
+L391@P7: Internaci onal del Trabajo .
+L392@P7: d) Convenios con personas naturales
+L393@P7: - Nº de Asesores Art . 38 bis CPR
+L394@P7: - Nº de Personas, otras contrataciones
+L395@P7: - Miles de$
+L396@P7: e) Autorización máxima para cumplimiento articulo septuagési mo tercero de la Ley
+L397@P7: Nº 19 . 882 , Asignación por Funciones Críticas:
+L398@P7: - Nº de personas
+L399@P7: - Miles de
+L400@P7: 03 Incluye :
+L401@P7: a) Capacitaci ón y perfeccionamiento, D. F . L . Nºl / 19 . 653 , de 2001 ,
+L402@P7: Mini sterio Secretaría General de la Presidencia
+L403@P7: - Miles de
+L404@P7: b) Contratación de estudios e investigaciones$ 273 . 598 miles.
+L405@P7: Incluye$ 119 . 384 miles para informes de gesti ón que se realizarán con
+L406@P7: la Organización Internacional del
+L407@P7: un convenio entre el Ministerio
+L408@P7: Organ i smo Internacional, aprobado
+L409@P7: Trabajo,los cuales se ejecutarán median te
+L410@P7: del Trabajo y Previsión Social y dicho
+L411@P7: por decreto del Ministerio del Trabajo
+L412@P7: y Previsión Social, el que deberá ser dictado bajo la fórmula " Por orden del
+L413@P7: Presidente de la República" , a contar de la fecha de publicación de esta Ley .
+L414@P7: c) Incluye $ 139.840 miles para el pago de pasajes a las personas
+L415@P7: que integren la delegación tripartita que asistirá a reuniones de la
+L416@P7: Organización Internacional del Trabajo .
+L417@P7: d) I ncluye hasta$ 36 . 479 miles para el pago de pasajes y alojamientos a las
+L418@P7: 7
+L419@P7: 15
+L420@P7: 01
+L421@P7: 01 /
+L422@P7: 22
+L423@P7: 216
+L424@P7: 34 . 920
+

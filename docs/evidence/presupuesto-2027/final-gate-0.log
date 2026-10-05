@@ -1,0 +1,3 @@
+32/32 partidas conciliadas; CLP y USD separados; cálculos nominales y escenarios reales validados.
+cis-build: lock OK · avail=8630MB swap=10079MB · dir=/srv/projects/qa/presupuesto2027-editorial-20261005/repo · cmd: python3 scripts/presupuesto-2027.py --graficos
+cis-build: terminó (rc=0)

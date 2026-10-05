@@ -8,6 +8,7 @@ import {iconoSvg} from './iconos.mjs';
 import {completarIconos,grillaHtml,leerTarjetas,validarDominios} from './tarjetas.mjs';
 import {cargarEntradas,cuerpoEntrada,indiceBlog,metaEntrada,rss} from './blog.mjs';
 import {loNuevo,novedadesDesdeBlog,novedadesDesdeReleases,paginaNovedades,unirNovedades} from './novedades.mjs';
+import {paginaHilo} from './presupuesto-hilo.mjs';
 
 const root=new URL('../',import.meta.url), out=new URL('../dist/',import.meta.url);
 const contratoPublico=JSON.parse(await readFile(new URL('../data/destinos.publico.json',import.meta.url),'utf8'));
@@ -16,7 +17,7 @@ const rutasPortalPublicadas=new Set([
  '/', '/cambio-de-hora/', '/concepciones/', '/contacto/',
  '/documentacion/', '/herramientas/', '/investigaciones/', '/mapa-del-sitio/',
  '/mapas/', '/proyectos/', '/sobre-nosotros/', '/servicios/', '/asesoria/', '/blog/', '/novedades/',
- '/buscar/', '/temas/'
+ '/buscar/', '/temas/', '/blog/presupuesto-2027-aportes-cambios-nominal-real/hilo/'
 ]);
 const [kitHead,headerTemplate,footerTemplate,migasTemplate,paginaTemplate,articuloTemplate,error404Template]=await Promise.all(
  ['head','header','footer','migas','pagina','articulo','error404'].map(nombre=>readFile(new URL(`partials/${nombre}.html`,root),'utf8'))
@@ -225,6 +226,9 @@ async function publicarBlog(){
   });
  }
  await writeFile(new URL('blog/feed.xml',out),rss(entradas));
+ const hilo=JSON.parse(await readFile(new URL('assets/presupuesto-2027/hilo.json',root),'utf8'));
+ await paginaArticulo({ruta:'/blog/presupuesto-2027-aportes-cambios-nominal-real/hilo/',titulo:'Presupuesto 2027: hilo y gráficos descargables',producto:'Blog',descripcion:'Seis tweets listos para copiar con PNG descargables, fuentes, cifras nominales y escenarios de inflación.',bajada:'Copia los textos y descarga sus gráficos para compartir la comparación.',migas:[['Inicio','/'],['Blog','/blog/'],['Presupuesto 2027',hilo.analisis],['Hilo y gráficos']],cuerpo:paginaHilo(hilo)});
+ await writeFile(new URL('assets/presupuesto-2027/hilo.txt',out),hilo.tweets.map(t=>t.texto).join('\n\n')+'\n');
  await paginaArticulo({
   ruta:'/novedades/',titulo:'Novedades',producto:'Portal',
   descripcion:'Datos nuevos, entradas del blog y publicaciones de Compañía Chilena de Inteligencia de Datos, con fecha y fuente de cada novedad.',
@@ -287,7 +291,8 @@ await especial({dir:'concepciones',ruta:'/concepciones/',reemplazos:tablas(datos
    feed del blog cambian con su entrada más reciente; novedades, con la suya. */
 const fechas={
  '/':'2026-10-01','/cambio-de-hora/':'2026-09-07','/concepciones/':'2026-09-20',
- '/blog/':entradas[0].fecha,'/novedades/':novedades[0].fecha
+ '/blog/':entradas[0].fecha,'/novedades/':novedades[0].fecha,
+ '/blog/presupuesto-2027-aportes-cambios-nominal-real/hilo/':'2026-10-05'
 };
 const temasV2=['salud','educacion','economia-trabajo','empresas-innovacion','finanzas-publicas','seguridad-justicia','poblacion-sociedad','territorio-vivienda','transporte-infraestructura','medio-ambiente-energia','politica-instituciones'];
 const urlsSitemap=[

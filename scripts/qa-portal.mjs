@@ -2,7 +2,7 @@ import {createRequire} from 'node:module';
 import {mkdirSync, readFileSync, readdirSync, writeFileSync} from 'node:fs';
 import {join} from 'node:path';
 
-const require = createRequire('/srv/projects/worktrees/cochid-datos-presupuesto-release-20260930/web/package.json');
+const require = createRequire(process.env.COCHID_QA_REQUIRE_FROM || '/srv/projects/worktrees/cochid-datos-presupuesto-release-20260930/web/package.json');
 const {chromium} = require('@playwright/test');
 const AxeBuilder = require('@axe-core/playwright').default;
 
@@ -18,7 +18,9 @@ const rutasBase = [
 ];
 const vistasBase = [
   {nombre: '1440', width: 1440, height: 1000},
+  {nombre: '768', width: 768, height: 1000},
   {nombre: '390', width: 390, height: 844},
+  {nombre: '320', width: 320, height: 844},
 ];
 const temasBase = ['light', 'dark'];
 const rutas = process.env.COCHID_QA_ROUTES ? process.env.COCHID_QA_ROUTES.split(',') : rutasBase;
@@ -30,7 +32,7 @@ const fallos = [];
 const casos = [];
 
 mkdirSync(salida, {recursive: true});
-const browser = await chromium.launch({headless: true});
+const browser = await chromium.launch({headless: true, ...(process.env.COCHID_QA_CHROME ? {executablePath: process.env.COCHID_QA_CHROME} : {})});
 try {
   for (const ruta of rutas) {
     for (const vista of vistas) {
@@ -88,7 +90,7 @@ try {
         if (foco.tag === 'BODY' || !foco.visible || !foco.outline) fallos.push(`${id}: foco inicial ${JSON.stringify(foco)}`);
 
         let menu = null;
-        if (vista.width === 390) {
+        if (vista.width <= 390) {
           const cerrarBuscador = page.locator('.bq__x');
           if (await cerrarBuscador.isVisible()) await cerrarBuscador.click();
           const boton = page.locator('.cx-menu-btn');
