@@ -1,6 +1,6 @@
 ---
 titulo: Herramientas
-descripcion: Herramientas de Compañía Chilena de Inteligencia de Datos para hacer gráficos con fuente, explorar visualizaciones territoriales, revisar textos y escribir documentos con evidencia.
+descripcion: Herramientas de Compañía Chilena de Inteligencia de Datos para explorar visualizaciones territoriales y escribir documentos con evidencia.
 ruta: /herramientas/
 ---
 
@@ -13,17 +13,9 @@ ruta: /herramientas/
 # Herramientas
 
 ::: tarjetas
-## Gráficos
-[graphs.cochid.cl](https://graphs.cochid.cl/)
-Biblioteca de figuras reproducibles. Cada figura guarda su fuente, los datos que usa, las decisiones de diseño y los archivos de descarga. Se puede enlazar o insertar en otra página.
-
 ## Taller
 [taller.cochid.cl](https://taller.cochid.cl/)
 Mapas y visualizaciones territoriales que estamos probando antes de publicarlos.
-
-## Prosa
-[prosa.medicamentos.cochid.cl](https://prosa.medicamentos.cochid.cl/)
-Editor y revisor de textos del informe de medicamentos: glosario, reglas editoriales y revisión del texto.
 
 ## Scribe
 [scribe.cochid.cl](https://scribe.cochid.cl/) · Requiere cuenta

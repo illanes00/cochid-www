@@ -44,11 +44,11 @@ class PortalProjectsV2ContractTests(unittest.TestCase):
         groups = ["Datos", "Territorio", "Investigaciones", "Herramientas", "Especiales"]
         positions = [directory.index(f">{group}</h2>") for group in groups]
         self.assertEqual(positions, sorted(positions))
+        # 6-oct-2026: graphs, elecciones y prosa quedan solo para Martín y salen del directorio público.
         expected = [
             "https://datos.cochid.cl/",
             "https://datos.cochid.cl/presupuesto",
             "https://economia.cochid.cl/",
-            "https://elecciones.cochid.cl/",
             "https://congreso.cochid.cl/",
             "https://votos.cochid.cl/",
             "https://lex.cochid.cl/",
@@ -62,9 +62,7 @@ class PortalProjectsV2ContractTests(unittest.TestCase):
             "/concepciones/",
             "/cambio-de-hora/",
             "https://medicamentos.cochid.cl/",
-            "https://graphs.cochid.cl/",
             "https://taller.cochid.cl/",
-            "https://prosa.medicamentos.cochid.cl/",
             "https://scribe.cochid.cl/",
             "https://mundial.cochid.cl/",
         ]

@@ -8,7 +8,7 @@ ruta: /servicios/
 
 # Servicios
 
-Los datos de Compañía Chilena de Inteligencia de Datos se consultan y descargan gratis. Si necesitas algo que el catálogo no entrega tal cual, estos son los servicios disponibles. Los vende y factura Compañía de Innovación de Santiago SpA (RUT 78.384.591-1), que opera Compañía Chilena de Inteligencia de Datos bajo licencia de Compañía Chilena de Inteligencia de Datos SpA.
+Los datos de Compañía Chilena de Inteligencia de Datos se consultan y descargan gratis. Si necesitas algo que el catálogo no entrega tal cual, estos son los servicios disponibles.
 
 ## Acceso gratuito
 
@@ -55,6 +55,6 @@ La documentación para usar la llave está en [Documentación](/documentacion/).
 1. Envías el formulario de [Asesoría y datos a medida](/asesoria/) con lo que necesitas.
 2. Revisamos si los datos existen y en qué fuentes.
 3. Te enviamos una propuesta con alcance, entregable y precio.
-4. Si la aceptas, Compañía de Innovación de Santiago SpA emite el contrato y la factura.
+4. Si la aceptas, te enviamos el contrato y la factura.
 
 Enviar el formulario no crea ninguna obligación.

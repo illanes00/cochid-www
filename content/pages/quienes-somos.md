@@ -42,9 +42,7 @@ Martín Illanes, fundador.
 
 ## Relación institucional
 
-Compañía Chilena de Inteligencia de Datos es la marca de Compañía Chilena de Inteligencia de Datos SpA (Compañía Chilena de Inteligencia de Datos SpA, RUT 78.374.391-4), que mantiene este ecosistema de datos. La operación técnica está a cargo de [Compañía de Innovación de Santiago SpA](https://innovacionsantiago.cl) (RUT 78.384.591-1), bajo licencia.
-
-Compañía de Innovación de Santiago SpA también vende y factura, bajo esa licencia, los servicios de Compañía Chilena de Inteligencia de Datos: asesorías, datos a medida, informes a pedido, descargas completas y planes de la API.
+Compañía Chilena de Inteligencia de Datos es la marca de Compañía Chilena de Inteligencia de Datos SpA (RUT 78.374.391-4), que mantiene este ecosistema de datos.
 
 ## Contacto
 

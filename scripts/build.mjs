@@ -107,7 +107,8 @@ function directorioProyectos(){
  const gruposDirectorio=gruposVisibles;
  const incluidos=[...idsDirectorioProyectos].map(id=>destinos.find(destino=>destino.id===id));
  if(incluidos.some(destino=>!destino))throw new Error('/proyectos/ referencia un destino ausente del contrato público');
- if(incluidos.length!==22)throw new Error(`/proyectos/ esperaba 22 sitios públicos y recibió ${incluidos.length}`);
+ /* 19 desde el 6-oct-2026: graphs, elecciones y prosa quedan solo para Martín. */
+ if(incluidos.length!==19)throw new Error(`/proyectos/ esperaba 19 sitios públicos y recibió ${incluidos.length}`);
  const tarjeta=destino=>`<li class="portal-proyecto"><span class="portal-proyecto__icono">${iconoSvg(destino.icono,{tamano:24})}</span><div><h3><a href="${escapar(hrefDestino(destino))}">${escapar(destino.etiqueta)}</a></h3><p>${escapar(destino.resumen)}</p></div></li>`;
  return `<div class="portal-directorio" data-project-directory>${gruposDirectorio.map(grupo=>{
   const elementos=incluidos.filter(destino=>destino.grupo===grupo.id);

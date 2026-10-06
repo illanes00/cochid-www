@@ -105,7 +105,7 @@ test('el mapa del sitio tiene una sola introducción y etiquetas de tipo', () =>
 });
 
 test('mapas, herramientas, investigaciones y servicios usan tarjetas', () => {
-  const esperado = {'/mapas/': 7, '/herramientas/': 4, '/investigaciones/': 3, '/servicios/': 3};
+  const esperado = {'/mapas/': 7, '/herramientas/': 2, '/investigaciones/': 3, '/servicios/': 3};
   for (const [ruta, total] of Object.entries(esperado)) {
     const html = leer(ruta);
     const cantidad = (html.match(/<li class="portal-tarjeta">/g) || []).length;

@@ -14,11 +14,11 @@ Si necesitas un corte de datos que no está en el catálogo, más consultas de A
 
 ## Consultas generales y prensa
 
-Escribe a **hola@innovacionsantiago.cl**. Este buzón lo atiende Compañía de Innovación de Santiago SpA, que opera Compañía Chilena de Inteligencia de Datos.
+Escribe a **hola@innovacionsantiago.cl**.
 
 [[VERIFICAR: buzón propio de Compañía Chilena de Inteligencia de Datos (`asesoria@cochid.cl` u otro) y su regla de ruteo en Cloudflare Email Routing; mientras no exista, no se publica (D-BUZON)]]
 
-También puedes usar el [formulario de contacto de Compañía de Innovación de Santiago SpA](https://innovacionsantiago.cl/contacto).
+Si buscas un dato, un informe o una asesoría, usa el [formulario de asesoría](/asesoria/).
 
 ## Reportar un error en un dato
 

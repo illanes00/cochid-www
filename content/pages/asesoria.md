@@ -12,7 +12,7 @@ Cuéntanos qué necesitas y te responderemos con una propuesta. Puedes pedir un 
 
 @@FORMULARIO_ASESORIA@@
 
-Enviar el formulario no crea ninguna obligación. Los servicios de Compañía Chilena de Inteligencia de Datos los vende y factura Compañía de Innovación de Santiago SpA (RUT 78.384.591-1), que opera Compañía Chilena de Inteligencia de Datos bajo licencia. Esa compañía es también la responsable de los datos que envías.
+Enviar el formulario no crea ninguna obligación. Cómo tratamos los datos que envías está en la [política de privacidad](https://innovacionsantiago.cl/legal/privacidad/).
 
 ## Si prefieres escribir por correo
 

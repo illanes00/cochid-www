@@ -54,7 +54,6 @@
     "cochid.datos",
     "cochid.datos.presupuesto",
     "cochid.economia",
-    "cochid.elecciones",
     "cochid.congreso",
     "cochid.votos",
     "cochid.lex",
@@ -68,9 +67,7 @@
     "cochid.medicamentos",
     "cochid.apex.concepciones",
     "cochid.apex.cambio-hora",
-    "cochid.graphs",
     "cochid.taller",
-    "cochid.prosa-medicamentos",
     "cochid.scribe",
     "cochid.mundial"
   ],
@@ -4583,10 +4580,10 @@
       "node_id": "product.cochid.elecciones",
       "visible": {
         "cabecera": false,
-        "pie": true,
-        "mapa_del_sitio": true,
-        "sitemap": true,
-        "paleta": true
+        "pie": false,
+        "mapa_del_sitio": false,
+        "sitemap": false,
+        "paleta": false
       },
       "sitemap": {
         "frecuencia": "weekly",
@@ -4605,7 +4602,8 @@
       "alias_de": null,
       "reemplazado_por": null,
       "fragmento_es_ruta": false,
-      "relaciones": []
+      "relaciones": [],
+      "nota_privada": "Solo Martín desde el 6-oct-2026: no está listo para el público."
     },
     {
       "id": "cochid.graphs",
@@ -4621,10 +4619,10 @@
       "portafolio": "fuera",
       "visible": {
         "cabecera": false,
-        "pie": true,
-        "mapa_del_sitio": true,
-        "sitemap": true,
-        "paleta": true
+        "pie": false,
+        "mapa_del_sitio": false,
+        "sitemap": false,
+        "paleta": false
       },
       "sitemap": {
         "frecuencia": "weekly",
@@ -4643,7 +4641,8 @@
       "alias_de": null,
       "reemplazado_por": null,
       "fragmento_es_ruta": false,
-      "relaciones": []
+      "relaciones": [],
+      "nota_privada": "Solo Martín desde el 6-oct-2026: no está listo para el público."
     },
     {
       "id": "cochid.lex",
@@ -4916,10 +4915,10 @@
       "portafolio": "fuera",
       "visible": {
         "cabecera": false,
-        "pie": true,
-        "mapa_del_sitio": true,
-        "sitemap": true,
-        "paleta": true
+        "pie": false,
+        "mapa_del_sitio": false,
+        "sitemap": false,
+        "paleta": false
       },
       "sitemap": {
         "frecuencia": "weekly",
@@ -4938,7 +4937,8 @@
       "alias_de": null,
       "reemplazado_por": null,
       "fragmento_es_ruta": false,
-      "relaciones": []
+      "relaciones": [],
+      "nota_privada": "Solo Martín desde el 6-oct-2026: herramienta editorial interna."
     },
     {
       "id": "cochid.scribe",

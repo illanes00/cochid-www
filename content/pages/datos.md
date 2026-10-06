@@ -44,7 +44,7 @@ Vistas: [Economía](https://economia.cochid.cl/)
 Ícono: urna
 Participación, resultados y padrón electoral; proyectos de ley y votaciones.
 Temas: [Elecciones](https://datos.cochid.cl/tema/elecciones)
-Vistas: [Elecciones](https://elecciones.cochid.cl/) · [Congreso](https://congreso.cochid.cl/)
+Vistas: [Congreso](https://congreso.cochid.cl/)
 
 ## Legislación
 Ícono: balanza
