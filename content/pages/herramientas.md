@@ -19,7 +19,7 @@ Biblioteca de figuras reproducibles. Cada figura guarda su fuente, los datos que
 
 ## Taller
 [taller.cochid.cl](https://taller.cochid.cl/)
-Laboratorio de visualización territorial: mapas, componentes y experimentos en preparación.
+Mapas y visualizaciones territoriales que estamos probando antes de publicarlos.
 
 ## Prosa
 [prosa.medicamentos.cochid.cl](https://prosa.medicamentos.cochid.cl/)

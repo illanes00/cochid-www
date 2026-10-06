@@ -47,6 +47,6 @@ Mapa meteorológico de Chile continental e insular: relieve, pronóstico horario
 
 ## Para equipos que trabajan con mapas
 
-[Taller](https://taller.cochid.cl/) es el laboratorio de visualización territorial de Compañía Chilena de Inteligencia de Datos: mapas, componentes y experimentos en preparación.
+[Taller](https://taller.cochid.cl/) es donde la Compañía Chilena de Inteligencia de Datos prueba mapas y visualizaciones territoriales antes de publicarlos.
 
 Los datos detrás de cada capa están en el [catálogo](https://datos.cochid.cl/catalogo). Si necesitas un mapa o una capa a medida, [escríbenos](/asesoria/?tipo=dato-a-medida).
