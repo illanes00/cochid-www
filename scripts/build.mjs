@@ -9,6 +9,7 @@ import {completarIconos,grillaHtml,leerTarjetas,validarDominios} from './tarjeta
 import {cargarEntradas,cuerpoEntrada,indiceBlog,metaEntrada,rss} from './blog.mjs';
 import {loNuevo,novedadesDesdeBlog,novedadesDesdeReleases,paginaNovedades,unirNovedades} from './novedades.mjs';
 import {paginaHilo} from './presupuesto-hilo.mjs';
+import {indicePublico,temaPublico} from './temas-publicos.mjs';
 import {cargarGraficos,cuerpoGrafico,headGrafico,indiceGraficos,rutaGrafico} from './graficos.mjs';
 
 const root=new URL('../',import.meta.url), out=new URL('../dist/',import.meta.url);
@@ -345,6 +346,20 @@ await cp(new URL('../vendor/v2/portada/index.html',import.meta.url),new URL('ind
 await cp(new URL('../vendor/v2/portada/portada.css',import.meta.url),new URL('assets/portal-v2-portada.css',out));
 await cp(new URL('../vendor/v2/portada/portada.js',import.meta.url),new URL('assets/portal-v2-portada.js',out));
 await cp(new URL('../vendor/v2/temas/',import.meta.url),new URL('temas/',out),{recursive:true});
+/* Nombres públicos y solo conjuntos publicados en /temas (pedido de Martín, 6-oct-2026). */
+{
+ const nombresPublicos=JSON.parse(await readFile(new URL('../data/nombres-publicos.v1.json',import.meta.url),'utf8')).conjuntos;
+ const totalesTema={};
+ for(const entrada of await readdir(new URL('temas/',out),{withFileTypes:true})){
+  if(!entrada.isDirectory())continue;
+  const archivo=new URL(`temas/${entrada.name}/index.html`,out);
+  const {html,total}=temaPublico(await readFile(archivo,'utf8'),nombresPublicos);
+  totalesTema[entrada.name]=total;
+  await writeFile(archivo,html);
+ }
+ const indiceTemas=new URL('temas/index.html',out);
+ await writeFile(indiceTemas,indicePublico(await readFile(indiceTemas,'utf8'),totalesTema));
+}
 await cp(bundle,new URL('assets/chrome-v2/',out),{recursive:true});
 execFileSync('python3',['buscador/generar_indice.py','--refrescar'],{cwd:new URL('../',import.meta.url),stdio:'inherit',env:{...process.env,DESTINOS_JSON:'data/destinos.v1.json',TAXONOMIA_JSON:'data/taxonomia.json'}});
 await mkdir(new URL('buscar/',out),{recursive:true});
@@ -386,6 +401,35 @@ function aplicarChromeV2(html){
  return sinComentariosHtml(html).replace(/\b(?:COCHID|Cochid)\b/g,'Compañía Chilena de Inteligencia de Datos').replace(/\b(?:overline|eyebrow)\b/g,'meta');
 }
 for(const path of await htmlFiles(out))await writeFile(path,aplicarChromeV2(await readFile(path,'utf8')));
+
+/* Metadatos para redes y buscadores en todas las páginas (6-oct-2026): canonical, Open Graph con imagen,
+   tarjeta grande de X; Organization y WebSite en la portada; BlogPosting en cada entrada del blog. */
+{
+ const ORIGEN='https://cochid.cl', IMAGEN=`${ORIGEN}/assets/social/cochid-og.jpg`;
+ const ORG={'@type':'Organization','@id':`${ORIGEN}/#organizacion`,name:'Compañía Chilena de Inteligencia de Datos',legalName:'Compañía Chilena de Inteligencia de Datos SpA',taxID:'78.374.391-4',url:`${ORIGEN}/`,logo:IMAGEN,address:{'@type':'PostalAddress',addressLocality:'Santiago',addressCountry:'CL'}};
+ const atributo=(html,re)=>(html.match(re)||[])[1];
+ const ld=objeto=>`<script type="application/ld+json">${JSON.stringify(objeto).replaceAll('<','\\u003c')}</script>`;
+ const porRuta=Object.fromEntries(entradas.map(entrada=>[entrada.ruta,entrada]));
+ for(const archivo of await htmlFiles(out)){
+  const relativo=archivo.pathname.slice(out.pathname.length);
+  if(!relativo.endsWith('index.html'))continue;
+  const ruta='/'+relativo.slice(0,-'index.html'.length);
+  let html=await readFile(archivo,'utf8');
+  if(/http-equiv="refresh"/i.test(html))continue;
+  const titulo=atributo(html,/<title>([^<]*)<\/title>/)||'Compañía Chilena de Inteligencia de Datos';
+  const descripcion=atributo(html,/<meta name="description" content="([^"]*)"/)||'';
+  const extra=[];
+  if(!/rel="canonical"/.test(html))extra.push(`<link rel="canonical" href="${ORIGEN}${ruta}">`);
+  if(!/property="og:title"/.test(html))extra.push(`<meta property="og:title" content="${titulo}">`,`<meta property="og:description" content="${descripcion}">`,`<meta property="og:url" content="${ORIGEN}${ruta}">`,'<meta property="og:type" content="website">','<meta property="og:site_name" content="Compañía Chilena de Inteligencia de Datos">');
+  if(!/property="og:image"/.test(html))extra.push(`<meta property="og:image" content="${IMAGEN}">`,'<meta property="og:image:width" content="1200">','<meta property="og:image:height" content="630">');
+  if(!/property="og:locale"/.test(html))extra.push('<meta property="og:locale" content="es_CL">');
+  if(!/name="twitter:card"/.test(html))extra.push('<meta name="twitter:card" content="summary_large_image">');
+  if(ruta==='/')extra.push(ld({'@context':'https://schema.org','@graph':[ORG,{'@type':'WebSite','@id':`${ORIGEN}/#sitio`,name:'Compañía Chilena de Inteligencia de Datos',url:`${ORIGEN}/`,inLanguage:'es-CL',publisher:{'@id':ORG['@id']},potentialAction:{'@type':'SearchAction',target:`${ORIGEN}/buscar/?q={search_term_string}`,'query-input':'required name=search_term_string'}}]}));
+  const entrada=porRuta[ruta];
+  if(entrada)extra.push(ld({'@context':'https://schema.org','@type':'BlogPosting',headline:entrada.titulo,description:entrada.descripcion,datePublished:entrada.fecha,dateModified:entrada.fecha,inLanguage:'es-CL',url:`${ORIGEN}${ruta}`,mainEntityOfPage:`${ORIGEN}${ruta}`,image:IMAGEN,author:ORG,publisher:ORG}));
+  if(extra.length)await writeFile(archivo,html.replace('</head>',extra.join('\n')+'\n</head>'));
+ }
+}
 
 /* Se carga desde el principio para que el build falle si el parcial no existe,
    aunque las migas se incorporen al generar las páginas editoriales. */
