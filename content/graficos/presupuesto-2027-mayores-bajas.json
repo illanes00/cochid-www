@@ -1,0 +1,154 @@
+{
+ "slug": "presupuesto-2027-mayores-bajas",
+ "url": "https://cochid.cl/g/presupuesto-2027-mayores-bajas/",
+ "serie": "presupuesto-2027",
+ "marca": "cochid",
+ "corte": "2026-10-05",
+ "corte_texto": "5 de octubre de 2026",
+ "fuente_corta": "DIPRES (ley 2026) y Cámara de Diputadas y Diputados (proyecto 2027). Corte 5-oct-2026",
+ "lectura": [
+  "El aporte fiscal libre es la plata que el Tesoro Público le entrega a cada ministerio para funcionar. No es todo su presupuesto: los ministerios también tienen ingresos propios y otras transferencias.",
+  "2027 es el proyecto de ley que el Gobierno envió al Congreso y que todavía se discute; 2026 es la ley aprobada al inicio del año.",
+  "Justicia y Seguridad Pública no se comparan aquí: Gendarmería pasa de Justicia a Seguridad en 2027 y eso mueve sus cifras sin que cambie el gasto."
+ ],
+ "explorar": [
+  {
+   "etiqueta": "Comparar todas las instituciones en el visor del proyecto 2027",
+   "url": "https://datos.cochid.cl/presupuesto/proyecto"
+  },
+  {
+   "etiqueta": "Leer el análisis completo, con método y fuentes",
+   "url": "https://cochid.cl/blog/presupuesto-2027-aportes-cambios-nominal-real/"
+  }
+ ],
+ "titulo": "Vivienda y Cultura: los aportes del Fisco que más caen en 2027",
+ "bajada": "Cambio del aporte fiscal libre de la ley 2026 al proyecto 2027. Sin Justicia ni Seguridad, por el traslado de Gendarmería.",
+ "descripcion": "Las seis instituciones cuyo aporte fiscal libre más baja en el proyecto 2027: Vivienda −20,2 %, Culturas −16,4 %, Energía −10,5 %, Servicio Electoral −10,3 %, Ciencia −5,0 %, Hacienda −1,0 %.",
+ "texto_x": "Proyecto de presupuesto 2027: los aportes del Fisco que más caen son Vivienda, Culturas y Energía. Vivienda recibiría $1,13 billones menos que en la ley 2026 (−20,2 %).",
+ "etiqueta": "Presupuesto 2027",
+ "icono": "trending-down",
+ "grafico": {
+  "tipo": "variacion",
+  "url": "cochid.cl/g/presupuesto-2027-mayores-bajas",
+  "nota": "En pesos de cada año, sin ajustar por inflación",
+  "filas": [
+   {
+    "etiqueta": "Vivienda",
+    "icono": "house",
+    "valor": -20.166179743181413,
+    "texto": "−20,2 %",
+    "destacar": true
+   },
+   {
+    "etiqueta": "Culturas",
+    "icono": "palette",
+    "valor": -16.37494518058779,
+    "texto": "−16,4 %",
+    "destacar": true
+   },
+   {
+    "etiqueta": "Energía",
+    "icono": "zap",
+    "valor": -10.538187988110451,
+    "texto": "−10,5 %"
+   },
+   {
+    "etiqueta": "Servicio Electoral",
+    "icono": "vote",
+    "valor": -10.345279031175505,
+    "texto": "−10,3 %"
+   },
+   {
+    "etiqueta": "Ciencia",
+    "icono": "flask-conical",
+    "valor": -5.012526208176582,
+    "texto": "−5,0 %"
+   },
+   {
+    "etiqueta": "Hacienda",
+    "icono": "coins",
+    "valor": -1.0169642875023617,
+    "texto": "−1,0 %"
+   }
+  ],
+  "anotaciones": [
+   {
+    "fila": "Vivienda",
+    "texto": "$1,13 billones menos que en 2026"
+   }
+  ]
+ },
+ "alt": "Barras horizontales con el cambio del aporte fiscal libre 2026 a 2027: Vivienda −20,2 %; Culturas −16,4 %; Energía −10,5 %; Servicio Electoral −10,3 %; Ciencia −5,0 %; Hacienda −1,0 %.",
+ "tabla": {
+  "columnas": [
+   "Institución",
+   "Ley 2026",
+   "Proyecto 2027",
+   "Variación nominal",
+   "Con inflación de 3 %"
+  ],
+  "filas": [
+   [
+    "Ministerio de Vivienda y Urbanismo",
+    "$5,61 billones",
+    "$4,48 billones",
+    "−20,2 %",
+    "−22,5 %"
+   ],
+   [
+    "Ministerio de las Culturas, las Artes y el Patrimonio",
+    "$523 mil millones",
+    "$438 mil millones",
+    "−16,4 %",
+    "−18,8 %"
+   ],
+   [
+    "Ministerio de Energía",
+    "$151 mil millones",
+    "$135 mil millones",
+    "−10,5 %",
+    "−13,1 %"
+   ],
+   [
+    "Servicio Electoral",
+    "$39,0 mil millones",
+    "$35,0 mil millones",
+    "−10,3 %",
+    "−13,0 %"
+   ],
+   [
+    "Ministerio de Ciencia, Tecnología, Conocimiento e Innovación",
+    "$573 mil millones",
+    "$544 mil millones",
+    "−5,0 %",
+    "−7,8 %"
+   ],
+   [
+    "Ministerio de Hacienda",
+    "$636 mil millones",
+    "$629 mil millones",
+    "−1,0 %",
+    "−3,9 %"
+   ]
+  ]
+ },
+ "fuentes": [
+  {
+   "etiqueta": "Ley de Presupuestos 2026, partida 50 Tesoro Público (DIPRES, PDF)",
+   "url": "https://www.dipres.gob.cl/597/articles-397421_doc_pdf.pdf"
+  },
+  {
+   "etiqueta": "Proyecto de Ley de Presupuestos 2027, partida 50 Tesoro Público (Cámara, PDF)",
+   "url": "https://www.camara.cl/legislacion/presupuesto/2027/50_TesoroPublico.pdf"
+  }
+ ],
+ "metodo": "Aporte fiscal libre en moneda nacional (partida 50, capítulo 01, programa 05, subtítulo 27). Variación nominal = proyecto 2027 / ley 2026 − 1. Variación con inflación = proyecto 2027 / ley 2026 / 1,03 − 1.",
+ "descargas": {
+  "csv": "/assets/g/presupuesto-2027-mayores-bajas/datos.csv"
+ },
+ "imagenes": {
+  "x": "/assets/g/presupuesto-2027-mayores-bajas/x.jpg",
+  "og": "/assets/g/presupuesto-2027-mayores-bajas/og.jpg",
+  "vertical": "/assets/g/presupuesto-2027-mayores-bajas/vertical.jpg"
+ }
+}

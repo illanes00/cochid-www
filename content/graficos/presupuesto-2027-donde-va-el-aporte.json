@@ -1,0 +1,167 @@
+{
+ "slug": "presupuesto-2027-donde-va-el-aporte",
+ "url": "https://cochid.cl/g/presupuesto-2027-donde-va-el-aporte/",
+ "serie": "presupuesto-2027",
+ "marca": "cochid",
+ "corte": "2026-10-05",
+ "corte_texto": "5 de octubre de 2026",
+ "fuente_corta": "DIPRES (ley 2026) y Cámara de Diputadas y Diputados (proyecto 2027). Corte 5-oct-2026",
+ "lectura": [
+  "El aporte fiscal libre es la plata que el Tesoro Público le entrega a cada ministerio para funcionar. No es todo su presupuesto: los ministerios también tienen ingresos propios y otras transferencias.",
+  "2027 es el proyecto de ley que el Gobierno envió al Congreso y que todavía se discute; 2026 es la ley aprobada al inicio del año."
+ ],
+ "explorar": [
+  {
+   "etiqueta": "Comparar todas las instituciones en el visor del proyecto 2027",
+   "url": "https://datos.cochid.cl/presupuesto/proyecto"
+  },
+  {
+   "etiqueta": "Leer el análisis completo, con método y fuentes",
+   "url": "https://cochid.cl/blog/presupuesto-2027-aportes-cambios-nominal-real/"
+  }
+ ],
+ "titulo": "Educación, Trabajo y Salud se llevan 66 % del aporte del Fisco en 2027",
+ "bajada": "Instituciones que más aporte fiscal libre recibirían en el proyecto 2027, de un total de $71,17 billones.",
+ "descripcion": "Las siete instituciones con más aporte fiscal libre en el proyecto 2027. Educación, Trabajo y Salud suman $46,99 billones, el 66 % del total.",
+ "texto_x": "Proyecto de presupuesto 2027: de los $71,17 billones que el Fisco entrega a los ministerios, Educación, Trabajo y Salud se llevan $46,99 billones (66 %).",
+ "etiqueta": "Presupuesto 2027",
+ "icono": "chart-column",
+ "grafico": {
+  "tipo": "ranking",
+  "url": "cochid.cl/g/presupuesto-2027-donde-va-el-aporte",
+  "filas": [
+   {
+    "etiqueta": "Educación",
+    "icono": "graduation-cap",
+    "valor": 17.716443603,
+    "texto": "$17,72 bill.",
+    "destacar": true
+   },
+   {
+    "etiqueta": "Trabajo y Previsión",
+    "icono": "users",
+    "valor": 15.887842375,
+    "texto": "$15,89 bill.",
+    "destacar": true
+   },
+   {
+    "etiqueta": "Salud",
+    "icono": "heart-pulse",
+    "valor": 13.387187712,
+    "texto": "$13,39 bill.",
+    "destacar": true
+   },
+   {
+    "etiqueta": "Vivienda",
+    "icono": "house",
+    "valor": 4.475904414,
+    "texto": "$4,48 bill."
+   },
+   {
+    "etiqueta": "Obras Públicas",
+    "icono": "hard-hat",
+    "valor": 3.62187063,
+    "texto": "$3,62 bill."
+   },
+   {
+    "etiqueta": "Seguridad Pública",
+    "icono": "shield-check",
+    "valor": 3.420186286,
+    "texto": "$3,42 bill."
+   },
+   {
+    "etiqueta": "Transportes",
+    "icono": "bus",
+    "valor": 1.883830858,
+    "texto": "$1,88 bill."
+   }
+  ],
+  "nota": "Aporte fiscal libre del proyecto 2027",
+  "anotaciones": [
+   {
+    "fila": "Salud",
+    "texto": "Entre las tres: 66 % del total"
+   }
+  ]
+ },
+ "alt": "Ranking del aporte fiscal libre 2027: Educación $17,72 bill.; Trabajo y Previsión $15,89 bill.; Salud $13,39 bill.; Vivienda $4,48 bill.; Obras Públicas $3,62 bill.; Seguridad Pública $3,42 bill.; Transportes $1,88 bill..",
+ "tabla": {
+  "columnas": [
+   "Institución",
+   "Ley 2026",
+   "Proyecto 2027",
+   "Variación nominal",
+   "Con inflación de 3 %"
+  ],
+  "filas": [
+   [
+    "Ministerio de Educación",
+    "$16,82 billones",
+    "$17,72 billones",
+    "+5,3 %",
+    "+2,3 %"
+   ],
+   [
+    "Ministerio del Trabajo y Previsión Social",
+    "$15,29 billones",
+    "$15,89 billones",
+    "+3,9 %",
+    "+0,9 %"
+   ],
+   [
+    "Ministerio de Salud",
+    "$13,23 billones",
+    "$13,39 billones",
+    "+1,2 %",
+    "−1,7 %"
+   ],
+   [
+    "Ministerio de Vivienda y Urbanismo",
+    "$5,61 billones",
+    "$4,48 billones",
+    "−20,2 %",
+    "−22,5 %"
+   ],
+   [
+    "Ministerio de Obras Públicas",
+    "$3,52 billones",
+    "$3,62 billones",
+    "+2,8 %",
+    "−0,2 %"
+   ],
+   [
+    "Ministerio de Seguridad Pública",
+    "$2,37 billones",
+    "$3,42 billones",
+    "+44,3 %",
+    "+40,1 %"
+   ],
+   [
+    "Ministerio de Transportes y Telecomunicaciones",
+    "$1,85 billones",
+    "$1,88 billones",
+    "+1,8 %",
+    "−1,1 %"
+   ]
+  ]
+ },
+ "fuentes": [
+  {
+   "etiqueta": "Ley de Presupuestos 2026, partida 50 Tesoro Público (DIPRES, PDF)",
+   "url": "https://www.dipres.gob.cl/597/articles-397421_doc_pdf.pdf"
+  },
+  {
+   "etiqueta": "Proyecto de Ley de Presupuestos 2027, partida 50 Tesoro Público (Cámara, PDF)",
+   "url": "https://www.camara.cl/legislacion/presupuesto/2027/50_TesoroPublico.pdf"
+  }
+ ],
+ "metodo": "Aporte fiscal libre en moneda nacional (partida 50, capítulo 01, programa 05, subtítulo 27). Variación nominal = proyecto 2027 / ley 2026 − 1. Variación con inflación = proyecto 2027 / ley 2026 / 1,03 − 1.",
+ "descargas": {
+  "csv": "/assets/g/presupuesto-2027-donde-va-el-aporte/datos.csv"
+ },
+ "imagenes": {
+  "x": "/assets/g/presupuesto-2027-donde-va-el-aporte/x.jpg",
+  "og": "/assets/g/presupuesto-2027-donde-va-el-aporte/og.jpg",
+  "vertical": "/assets/g/presupuesto-2027-donde-va-el-aporte/vertical.jpg"
+ }
+}

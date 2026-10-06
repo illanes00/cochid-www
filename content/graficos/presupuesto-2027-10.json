@@ -1,0 +1,108 @@
+{
+ "slug": "presupuesto-2027-10",
+ "url": "https://cochid.cl/g/presupuesto-2027-10/",
+ "serie": "presupuesto-2027",
+ "marca": "cochid",
+ "corte": "2026-10-05",
+ "corte_texto": "5 de octubre de 2026",
+ "fuente_corta": "DIPRES (ley 2026) y Cámara de Diputadas y Diputados (proyecto 2027). Corte 5-oct-2026",
+ "lectura": [
+  "El aporte fiscal libre es la plata que el Tesoro Público le entrega a cada ministerio para funcionar. No es todo su presupuesto: los ministerios también tienen ingresos propios y otras transferencias.",
+  "Gendarmería deja el Ministerio de Justicia y pasa al de Seguridad Pública en el proyecto 2027.",
+  "«Nominal» compara pesos de cada año. «Real» descuenta una inflación hipotética de 3 % para saber si alcanza para comprar más o menos que en 2026. No es una proyección oficial.",
+  "2027 es el proyecto de ley que el Gobierno envió al Congreso y que todavía se discute; 2026 es la ley aprobada al inicio del año."
+ ],
+ "explorar": [
+  {
+   "etiqueta": "Ver Justicia en el visor del proyecto 2027",
+   "url": "https://datos.cochid.cl/presupuesto/proyecto?institucion=10"
+  },
+  {
+   "etiqueta": "Leer el análisis completo, con método y fuentes",
+   "url": "https://cochid.cl/blog/presupuesto-2027-aportes-cambios-nominal-real/"
+  }
+ ],
+ "titulo": "Justicia: la caída de 39,6 % se explica por el traslado de Gendarmería",
+ "bajada": "Sin Gendarmería en ninguno de los dos años, el aporte del Fisco a Justicia sube 25,4 %.",
+ "institucion": "Ministerio de Justicia y Derechos Humanos",
+ "partida": "10",
+ "descripcion": "Ministerio de Justicia y Derechos Humanos: aporte fiscal libre de $1,31 billones en la ley 2026 y $793 mil millones en el proyecto 2027 (−39,6 % nominal, −41,4 % con inflación hipotética de 3 %).",
+ "texto_x": "Proyecto 2027: el aporte del Fisco a Justicia baja 39,6 %, porque Gendarmería pasa a Seguridad Pública. Comparando sin Gendarmería en ambos años, sube 25,4 %.",
+ "etiqueta": "Justicia",
+ "icono": "scale",
+ "grafico": {
+  "tipo": "comparacion",
+  "serie_a": "Ley 2026",
+  "serie_b": "Proyecto 2027",
+  "url": "cochid.cl/g/presupuesto-2027-10",
+  "filas": [
+   {
+    "etiqueta": "Con Gendarmería en 2026",
+    "icono": "scale",
+    "valor": 1.31347698,
+    "texto": "$1,31 bill.",
+    "valor_b": 0.792797889,
+    "texto_b": "$793 mil mill.",
+    "delta": "−39,6 %"
+   },
+   {
+    "etiqueta": "Sin Gendarmería ambos años",
+    "icono": "scale",
+    "valor": 0.632150043,
+    "texto": "$632 mil mill.",
+    "valor_b": 0.792797889,
+    "texto_b": "$793 mil mill.",
+    "delta": "+25,4 %",
+    "destacar": true
+   }
+  ],
+  "anotaciones": [
+   {
+    "fila": "Sin Gendarmería ambos años",
+    "texto": "La comparación con el mismo perímetro"
+   }
+  ]
+ },
+ "alt": "Ministerio de Justicia y Derechos Humanos: aporte fiscal libre de $1,31 billones en 2026 y $793 mil millones en el proyecto 2027 (−39,6 %); en pesos de 2026, $770 mil millones (−41,4 %).",
+ "tabla": {
+  "columnas": [
+   "Medida",
+   "Ley 2026",
+   "Proyecto 2027",
+   "Variación"
+  ],
+  "filas": [
+   [
+    "Directa",
+    "$1,31 billones",
+    "$793 mil millones",
+    "−39,6 %"
+   ],
+   [
+    "Sin Gendarmería en ambos años",
+    "$632 mil millones",
+    "$793 mil millones",
+    "+25,4 %"
+   ]
+  ]
+ },
+ "fuentes": [
+  {
+   "etiqueta": "Ley de Presupuestos 2026, partida 50 Tesoro Público (DIPRES, PDF)",
+   "url": "https://www.dipres.gob.cl/597/articles-397421_doc_pdf.pdf"
+  },
+  {
+   "etiqueta": "Proyecto de Ley de Presupuestos 2027, partida 50 Tesoro Público (Cámara, PDF)",
+   "url": "https://www.camara.cl/legislacion/presupuesto/2027/50_TesoroPublico.pdf"
+  }
+ ],
+ "metodo": "Aporte fiscal libre en moneda nacional (partida 50, capítulo 01, programa 05, subtítulo 27). Variación nominal = proyecto 2027 / ley 2026 − 1. Variación con inflación = proyecto 2027 / ley 2026 / 1,03 − 1.",
+ "descargas": {
+  "csv": "/assets/g/presupuesto-2027-10/datos.csv"
+ },
+ "imagenes": {
+  "x": "/assets/g/presupuesto-2027-10/x.jpg",
+  "og": "/assets/g/presupuesto-2027-10/og.jpg",
+  "vertical": "/assets/g/presupuesto-2027-10/vertical.jpg"
+ }
+}

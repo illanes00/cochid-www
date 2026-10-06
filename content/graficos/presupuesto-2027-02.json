@@ -1,0 +1,102 @@
+{
+ "slug": "presupuesto-2027-02",
+ "url": "https://cochid.cl/g/presupuesto-2027-02/",
+ "serie": "presupuesto-2027",
+ "marca": "cochid",
+ "corte": "2026-10-05",
+ "corte_texto": "5 de octubre de 2026",
+ "fuente_corta": "DIPRES (ley 2026) y Cámara de Diputadas y Diputados (proyecto 2027). Corte 5-oct-2026",
+ "lectura": [
+  "El aporte fiscal libre es la plata que el Tesoro Público le entrega a cada ministerio para funcionar. No es todo su presupuesto: los ministerios también tienen ingresos propios y otras transferencias.",
+  "«Nominal» compara pesos de cada año. «Real» descuenta una inflación hipotética de 3 % para saber si alcanza para comprar más o menos que en 2026. No es una proyección oficial.",
+  "2027 es el proyecto de ley que el Gobierno envió al Congreso y que todavía se discute; 2026 es la ley aprobada al inicio del año."
+ ],
+ "explorar": [
+  {
+   "etiqueta": "Ver Congreso en el visor del proyecto 2027",
+   "url": "https://datos.cochid.cl/presupuesto/proyecto?institucion=02"
+  },
+  {
+   "etiqueta": "Leer el análisis completo, con método y fuentes",
+   "url": "https://cochid.cl/blog/presupuesto-2027-aportes-cambios-nominal-real/"
+  }
+ ],
+ "titulo": "Congreso: el aporte del Fisco sube 5,6 % en el proyecto 2027",
+ "bajada": "Pasaría de $177 mil millones en la ley 2026 a $187 mil millones en el proyecto 2027.",
+ "institucion": "Congreso Nacional",
+ "partida": "02",
+ "descripcion": "Congreso Nacional: aporte fiscal libre de $177 mil millones en la ley 2026 y $187 mil millones en el proyecto 2027 (+5,6 % nominal, +2,5 % con inflación hipotética de 3 %).",
+ "texto_x": "Proyecto de presupuesto 2027: el aporte del Fisco al Congreso Nacional pasa de $177 mil millones a $187 mil millones (+5,6 %). Con una inflación de 3 %, alcanzaría para comprar 2,5 % más que en 2026.",
+ "etiqueta": "Congreso Nacional",
+ "icono": "landmark",
+ "grafico": {
+  "tipo": "comparacion",
+  "serie_a": "Ley 2026",
+  "serie_b": "Proyecto 2027",
+  "url": "cochid.cl/g/presupuesto-2027-02",
+  "filas": [
+   {
+    "etiqueta": "En pesos de cada año",
+    "icono": "banknote",
+    "valor": 0.177406732,
+    "texto": "$177 mil mill.",
+    "valor_b": 0.187302412,
+    "texto_b": "$187 mil mill.",
+    "delta": "+5,6 %",
+    "destacar": true
+   },
+   {
+    "etiqueta": "En pesos de 2026",
+    "icono": "piggy-bank",
+    "valor": 0.177406732,
+    "texto": "$177 mil mill.",
+    "valor_b": 0.18184700194174758,
+    "texto_b": "$182 mil mill.",
+    "delta": "+2,5 %"
+   }
+  ],
+  "anotaciones": []
+ },
+ "alt": "Congreso Nacional: aporte fiscal libre de $177 mil millones en 2026 y $187 mil millones en el proyecto 2027 (+5,6 %); en pesos de 2026, $182 mil millones (+2,5 %).",
+ "tabla": {
+  "columnas": [
+   "Medida",
+   "Ley 2026",
+   "Proyecto 2027",
+   "Variación"
+  ],
+  "filas": [
+   [
+    "Pesos de cada año",
+    "$177 mil millones",
+    "$187 mil millones",
+    "+5,6 %"
+   ],
+   [
+    "Pesos de 2026 (inflación 3 %)",
+    "$177 mil millones",
+    "$182 mil millones",
+    "+2,5 %"
+   ]
+  ]
+ },
+ "fuentes": [
+  {
+   "etiqueta": "Ley de Presupuestos 2026, partida 50 Tesoro Público (DIPRES, PDF)",
+   "url": "https://www.dipres.gob.cl/597/articles-397421_doc_pdf.pdf"
+  },
+  {
+   "etiqueta": "Proyecto de Ley de Presupuestos 2027, partida 50 Tesoro Público (Cámara, PDF)",
+   "url": "https://www.camara.cl/legislacion/presupuesto/2027/50_TesoroPublico.pdf"
+  }
+ ],
+ "metodo": "Aporte fiscal libre en moneda nacional (partida 50, capítulo 01, programa 05, subtítulo 27). Variación nominal = proyecto 2027 / ley 2026 − 1. Variación con inflación = proyecto 2027 / ley 2026 / 1,03 − 1.",
+ "descargas": {
+  "csv": "/assets/g/presupuesto-2027-02/datos.csv"
+ },
+ "imagenes": {
+  "x": "/assets/g/presupuesto-2027-02/x.jpg",
+  "og": "/assets/g/presupuesto-2027-02/og.jpg",
+  "vertical": "/assets/g/presupuesto-2027-02/vertical.jpg"
+ }
+}

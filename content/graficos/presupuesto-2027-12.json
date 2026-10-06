@@ -1,0 +1,102 @@
+{
+ "slug": "presupuesto-2027-12",
+ "url": "https://cochid.cl/g/presupuesto-2027-12/",
+ "serie": "presupuesto-2027",
+ "marca": "cochid",
+ "corte": "2026-10-05",
+ "corte_texto": "5 de octubre de 2026",
+ "fuente_corta": "DIPRES (ley 2026) y Cámara de Diputadas y Diputados (proyecto 2027). Corte 5-oct-2026",
+ "lectura": [
+  "El aporte fiscal libre es la plata que el Tesoro Público le entrega a cada ministerio para funcionar. No es todo su presupuesto: los ministerios también tienen ingresos propios y otras transferencias.",
+  "«Nominal» compara pesos de cada año. «Real» descuenta una inflación hipotética de 3 % para saber si alcanza para comprar más o menos que en 2026. No es una proyección oficial.",
+  "2027 es el proyecto de ley que el Gobierno envió al Congreso y que todavía se discute; 2026 es la ley aprobada al inicio del año."
+ ],
+ "explorar": [
+  {
+   "etiqueta": "Ver Obras Públicas en el visor del proyecto 2027",
+   "url": "https://datos.cochid.cl/presupuesto/proyecto?institucion=12"
+  },
+  {
+   "etiqueta": "Leer el análisis completo, con método y fuentes",
+   "url": "https://cochid.cl/blog/presupuesto-2027-aportes-cambios-nominal-real/"
+  }
+ ],
+ "titulo": "Obras Públicas: más pesos en 2027, pero menos poder de compra",
+ "bajada": "Pasaría de $3,52 billones en la ley 2026 a $3,62 billones en el proyecto 2027.",
+ "institucion": "Ministerio de Obras Públicas",
+ "partida": "12",
+ "descripcion": "Ministerio de Obras Públicas: aporte fiscal libre de $3,52 billones en la ley 2026 y $3,62 billones en el proyecto 2027 (+2,8 % nominal, −0,2 % con inflación hipotética de 3 %).",
+ "texto_x": "Proyecto de presupuesto 2027: el aporte del Fisco al Ministerio de Obras Públicas pasa de $3,52 billones a $3,62 billones (+2,8 %). Con una inflación de 3 %, alcanzaría para comprar 0,2 % menos que en 2026.",
+ "etiqueta": "Ministerio de Obras Públicas",
+ "icono": "hard-hat",
+ "grafico": {
+  "tipo": "comparacion",
+  "serie_a": "Ley 2026",
+  "serie_b": "Proyecto 2027",
+  "url": "cochid.cl/g/presupuesto-2027-12",
+  "filas": [
+   {
+    "etiqueta": "En pesos de cada año",
+    "icono": "banknote",
+    "valor": 3.523004254,
+    "texto": "$3,52 bill.",
+    "valor_b": 3.62187063,
+    "texto_b": "$3,62 bill.",
+    "delta": "+2,8 %"
+   },
+   {
+    "etiqueta": "En pesos de 2026",
+    "icono": "piggy-bank",
+    "valor": 3.523004254,
+    "texto": "$3,52 bill.",
+    "valor_b": 3.5163792524271846,
+    "texto_b": "$3,52 bill.",
+    "delta": "−0,2 %",
+    "destacar": true
+   }
+  ],
+  "anotaciones": []
+ },
+ "alt": "Ministerio de Obras Públicas: aporte fiscal libre de $3,52 billones en 2026 y $3,62 billones en el proyecto 2027 (+2,8 %); en pesos de 2026, $3,52 billones (−0,2 %).",
+ "tabla": {
+  "columnas": [
+   "Medida",
+   "Ley 2026",
+   "Proyecto 2027",
+   "Variación"
+  ],
+  "filas": [
+   [
+    "Pesos de cada año",
+    "$3,52 billones",
+    "$3,62 billones",
+    "+2,8 %"
+   ],
+   [
+    "Pesos de 2026 (inflación 3 %)",
+    "$3,52 billones",
+    "$3,52 billones",
+    "−0,2 %"
+   ]
+  ]
+ },
+ "fuentes": [
+  {
+   "etiqueta": "Ley de Presupuestos 2026, partida 50 Tesoro Público (DIPRES, PDF)",
+   "url": "https://www.dipres.gob.cl/597/articles-397421_doc_pdf.pdf"
+  },
+  {
+   "etiqueta": "Proyecto de Ley de Presupuestos 2027, partida 50 Tesoro Público (Cámara, PDF)",
+   "url": "https://www.camara.cl/legislacion/presupuesto/2027/50_TesoroPublico.pdf"
+  }
+ ],
+ "metodo": "Aporte fiscal libre en moneda nacional (partida 50, capítulo 01, programa 05, subtítulo 27). Variación nominal = proyecto 2027 / ley 2026 − 1. Variación con inflación = proyecto 2027 / ley 2026 / 1,03 − 1.",
+ "descargas": {
+  "csv": "/assets/g/presupuesto-2027-12/datos.csv"
+ },
+ "imagenes": {
+  "x": "/assets/g/presupuesto-2027-12/x.jpg",
+  "og": "/assets/g/presupuesto-2027-12/og.jpg",
+  "vertical": "/assets/g/presupuesto-2027-12/vertical.jpg"
+ }
+}

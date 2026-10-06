@@ -9,6 +9,7 @@ import {completarIconos,grillaHtml,leerTarjetas,validarDominios} from './tarjeta
 import {cargarEntradas,cuerpoEntrada,indiceBlog,metaEntrada,rss} from './blog.mjs';
 import {loNuevo,novedadesDesdeBlog,novedadesDesdeReleases,paginaNovedades,unirNovedades} from './novedades.mjs';
 import {paginaHilo} from './presupuesto-hilo.mjs';
+import {cargarGraficos,cuerpoGrafico,headGrafico,indiceGraficos,rutaGrafico} from './graficos.mjs';
 
 const root=new URL('../',import.meta.url), out=new URL('../dist/',import.meta.url);
 const contratoPublico=JSON.parse(await readFile(new URL('../data/destinos.publico.json',import.meta.url),'utf8'));
@@ -198,9 +199,9 @@ if(!entradas.length)throw new Error('content/blog/ no tiene entradas publicables
 const releasesNovedad=novedadesDesdeReleases();
 const novedades=unirNovedades(novedadesDesdeBlog(entradas),releasesNovedad.items);
 
-async function paginaArticulo({ruta,titulo,producto,descripcion,bajada,meta='',migas,cuerpo,ogTipo='website'}){
+async function paginaArticulo({ruta,titulo,producto,descripcion,bajada,meta='',migas,cuerpo,ogTipo='website',headExtra=''}){
  const pagina=reemplazar(articuloTemplate,{
-  TITULO:escapar(titulo),PRODUCTO:producto,DESCRIPCION:escapar(descripcion),RUTA:escapar(ruta),OG_TIPO:ogTipo,
+  TITULO:escapar(titulo),PRODUCTO:producto,DESCRIPCION:escapar(descripcion),RUTA:escapar(ruta),OG_TIPO:ogTipo,HEAD_EXTRA:headExtra,
   KIT_HEAD:kitHead,HEADER:cabecera(ruta),
   MIGAS:reemplazar(migasTemplate,{MIGAS:migas.map(([texto,href])=>href?`<li><a href="${href}">${escapar(texto)}</a></li>`:`<li aria-current="page">${escapar(texto)}</li>`).join('')},'migas'),
   BAJADA:escapar(bajada),META:meta,CUERPO:cuerpo,FOOTER:piePortal()
@@ -252,6 +253,23 @@ for(const nombre of ['quienes-somos','contacto','servicios','mapas','herramienta
 }
 await publicarBlog();
 
+/* Gráficos para redes: una página por ficha de content/graficos/ y el índice /g/. */
+const graficos=await cargarGraficos(new URL('content/graficos/',root));
+async function publicarGraficos(){
+ if(!graficos.length)return;
+ await paginaArticulo({ruta:'/g/',titulo:'Gráficos',producto:'Portal',
+  descripcion:'Gráficos del presupuesto público de Chile con su fuente, datos descargables y una guía para leerlos.',
+  bajada:'Cifras del presupuesto público explicadas en un gráfico, con su fuente y sus datos.',
+  migas:[['Inicio','/'],['Gráficos']],cuerpo:indiceGraficos(graficos)});
+ for(const ficha of graficos){
+  await paginaArticulo({ruta:rutaGrafico(ficha),titulo:ficha.titulo,producto:'Gráficos',ogTipo:'article',
+   descripcion:ficha.descripcion,bajada:ficha.bajada,headExtra:headGrafico(ficha),
+   meta:`<p class="blog-fecha">Datos al <time datetime="${escapar(ficha.corte)}">${escapar(ficha.corte_texto)}</time></p>`,
+   migas:[['Inicio','/'],['Gráficos','/g/'],[ficha.titulo]],cuerpo:cuerpoGrafico(ficha,graficos)});
+ }
+}
+await publicarGraficos();
+
 /* Un especial conserva su contenido y recibe los parciales, sin extraer HTML
    de la portada ni reemplazar grupos mediante expresiones regulares. */
 async function especial({dir,ruta,reemplazos={}}){
@@ -299,6 +317,7 @@ const urlsSitemap=[
  ...[...rutasPortalPublicadas].map(ruta=>[ruta,fechas[ruta]||'2026-10-01']),
  ...temasV2.map(tema=>[`/temas/${tema}/`,'2026-10-02']),
  ...entradas.map(entrada=>[entrada.ruta,entrada.fecha]),
+ ...(graficos.length?[['/g/',graficos.map(f=>f.corte).sort().at(-1)],...graficos.map(f=>[rutaGrafico(f),f.corte])]:[]),
 ];
 const sitemap=`<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${urlsSitemap.map(([ruta,fecha])=>`  <url><loc>https://cochid.cl${ruta}</loc><lastmod>${fecha}</lastmod></url>`).join('\n')}\n</urlset>\n`;
 await writeFile(new URL('sitemap.xml',out),sitemap);
