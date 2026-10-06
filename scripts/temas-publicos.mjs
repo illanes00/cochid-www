@@ -24,10 +24,12 @@ export function temaPublico(html, nombres) {
     if (resto.length < 3) return `<ul class="conj">${items.join('')}</ul>`;
     return `<ul class="conj">${items.slice(0, VISIBLES).join('')}</ul><details class="mas"><summary>Ver ${plural(resto.length, 'conjunto más', 'conjuntos más')}</summary><ul class="conj">${resto.join('')}</ul></details>`;
   });
+  // Sitios que solo ve Martín (6-oct-2026) no se ofrecen como «Relacionado».
+  const sinOcultos = h => h.replace(/<li><a href="https:\/\/(?:graphs|elecciones|prosa\.medicamentos)\.cochid\.cl\/[^"]*">[^<]*<\/a><span class="rel__t">[^<]*<\/span><\/li>/g, '');
   const resumen = total ? `${plural(total, 'conjunto de datos publicado', 'conjuntos de datos publicados')}` : 'Los conjuntos de este tema todavía se están preparando';
   return {
     total,
-    html: salida
+    html: sinOcultos(salida)
       .replace(/(<p class="pt__n">)\d+ conjuntos de datos(, \d+ indicadores)?\.[^<]*/, (_, p, ind = '') => `${p}${resumen}${ind}.`)
       .replace(/(<meta name="description" content="[^"]*?)\s*\d+ conjuntos de datos(, \d+ indicadores)?\.[^"]*"/, (_, m, ind = '') => `${m} ${resumen}${ind}."`)
       .replace(/\s*<p>Un conjunto «en preparación»[^<]*<\/p>/, ''),

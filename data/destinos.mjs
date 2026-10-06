@@ -55,7 +55,6 @@ const contrato = {
     "cochid.datos",
     "cochid.datos.presupuesto",
     "cochid.economia",
-    "cochid.elecciones",
     "cochid.congreso",
     "cochid.votos",
     "cochid.lex",
@@ -69,9 +68,7 @@ const contrato = {
     "cochid.medicamentos",
     "cochid.apex.concepciones",
     "cochid.apex.cambio-hora",
-    "cochid.graphs",
     "cochid.taller",
-    "cochid.prosa-medicamentos",
     "cochid.scribe",
     "cochid.mundial"
   ],
@@ -4584,10 +4581,10 @@ const contrato = {
       "node_id": "product.cochid.elecciones",
       "visible": {
         "cabecera": false,
-        "pie": true,
-        "mapa_del_sitio": true,
-        "sitemap": true,
-        "paleta": true
+        "pie": false,
+        "mapa_del_sitio": false,
+        "sitemap": false,
+        "paleta": false
       },
       "sitemap": {
         "frecuencia": "weekly",
@@ -4622,10 +4619,10 @@ const contrato = {
       "portafolio": "fuera",
       "visible": {
         "cabecera": false,
-        "pie": true,
-        "mapa_del_sitio": true,
-        "sitemap": true,
-        "paleta": true
+        "pie": false,
+        "mapa_del_sitio": false,
+        "sitemap": false,
+        "paleta": false
       },
       "sitemap": {
         "frecuencia": "weekly",
@@ -4917,10 +4914,10 @@ const contrato = {
       "portafolio": "fuera",
       "visible": {
         "cabecera": false,
-        "pie": true,
-        "mapa_del_sitio": true,
-        "sitemap": true,
-        "paleta": true
+        "pie": false,
+        "mapa_del_sitio": false,
+        "sitemap": false,
+        "paleta": false
       },
       "sitemap": {
         "frecuencia": "weekly",

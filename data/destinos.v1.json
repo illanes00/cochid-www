@@ -4779,10 +4779,10 @@
       "node_id": "product.cochid.elecciones",
       "visible": {
         "cabecera": false,
-        "pie": true,
-        "mapa_del_sitio": true,
-        "sitemap": true,
-        "paleta": true
+        "pie": false,
+        "mapa_del_sitio": false,
+        "sitemap": false,
+        "paleta": false
       },
       "sitemap": {
         "frecuencia": "weekly",
@@ -4819,10 +4819,10 @@
       "portafolio": "fuera",
       "visible": {
         "cabecera": false,
-        "pie": true,
-        "mapa_del_sitio": true,
-        "sitemap": true,
-        "paleta": true
+        "pie": false,
+        "mapa_del_sitio": false,
+        "sitemap": false,
+        "paleta": false
       },
       "sitemap": {
         "frecuencia": "weekly",
@@ -5163,10 +5163,10 @@
       "portafolio": "fuera",
       "visible": {
         "cabecera": false,
-        "pie": true,
-        "mapa_del_sitio": true,
-        "sitemap": true,
-        "paleta": true
+        "pie": false,
+        "mapa_del_sitio": false,
+        "sitemap": false,
+        "paleta": false
       },
       "sitemap": {
         "frecuencia": "weekly",

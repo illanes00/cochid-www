@@ -95,7 +95,7 @@ test('publica el registro y genera desde él el mapa del sitio', () => {
   const esperados = {
     Datos: [
       'https://datos.cochid.cl/', 'https://datos.cochid.cl/presupuesto',
-      'https://economia.cochid.cl/', 'https://elecciones.cochid.cl/',
+      'https://economia.cochid.cl/',
       'https://congreso.cochid.cl/', 'https://votos.cochid.cl/', 'https://lex.cochid.cl/',
     ],
     Territorio: [
@@ -105,8 +105,8 @@ test('publica el registro y genera desde él el mapa del sitio', () => {
     ],
     Investigaciones: ['https://medicamentos.cochid.cl/', '/concepciones/', '/cambio-de-hora/'],
     Herramientas: [
-      'https://graphs.cochid.cl/', 'https://taller.cochid.cl/',
-      'https://prosa.medicamentos.cochid.cl/', 'https://scribe.cochid.cl/',
+      // 6-oct-2026: graphs, elecciones y prosa quedan solo para Martín.
+      'https://taller.cochid.cl/', 'https://scribe.cochid.cl/',
     ],
     Especiales: ['https://mundial.cochid.cl/'],
   };
