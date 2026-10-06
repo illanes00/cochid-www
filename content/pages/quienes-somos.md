@@ -8,11 +8,11 @@ ruta: /sobre-nosotros/
 
 # Sobre nosotros
 
-Compañía Chilena de Inteligencia de Datos, Compañía Chilena de Inteligencia de Datos, reúne datos públicos de Chile en un catálogo único. Cada conjunto indica de dónde viene, cuándo se actualizó y desde qué archivo original se cargó. Está pensado para periodistas, equipos de investigación, organismos públicos y quienes construyen aplicaciones con datos chilenos.
+Compañía Chilena de Inteligencia de Datos reúne datos públicos de Chile en un catálogo único. Cada conjunto indica de dónde viene, cuándo se actualizó y desde qué archivo original se cargó. Está pensado para periodistas, equipos de investigación, organismos públicos y quienes construyen aplicaciones con datos chilenos.
 
 ## Qué hay hoy
 
-Al 1 de octubre de 2026, el catálogo de [Datos](https://datos.cochid.cl/catalogo) registra **308 conjuntos de datos** agrupados en **14 temas**, y la [Biblioteca](https://datos.cochid.cl/biblioteca) guarda **7.042 archivos originales** descargados de las fuentes.
+Al 6 de octubre de 2026, el [catálogo de datos](https://datos.cochid.cl/catalogo) publica **110 conjuntos de datos** en **11 temas**, cada uno con su fuente original.
 
 Entre las fuentes están la Dirección de Presupuestos (DIPRES), el Ministerio de Educación, el Instituto Nacional de Estadísticas, el Ministerio de Desarrollo Social y Familia (Encuesta CASEN), el Banco Central, la Biblioteca del Congreso Nacional, el Servel, Gendarmería y ChileCompra.
 
@@ -30,9 +30,9 @@ Fuente de las cifras: API pública de datos.cochid.cl (`/api/catalog/`, `/api/te
 Cada dato pasa por cuatro pasos:
 
 1. **Fuente.** Se descarga el archivo del organismo que lo publica y se registran su dirección, la fecha de descarga y su huella SHA-256.
-2. **Ingesta.** Un proceso lee el archivo y carga sus filas. Cada corrida queda registrada con su duración, las filas leídas y escritas y su resultado.
-3. **Validación.** Las corridas y sus resultados se publican en [Calidad](https://datos.cochid.cl/calidad), incluidas las que fallan.
-4. **Publicación.** El dato pasa al catálogo, a la API y a las vistas. Desde cada ficha se puede seguir el camino inverso en [Trazabilidad](https://datos.cochid.cl/lineage) hasta el archivo original.
+2. **Carga.** Un proceso lee el archivo y ordena sus filas. Cada carga queda registrada con su fecha, las filas leídas y su resultado.
+3. **Revisión.** Antes de publicar se revisa que las cifras cuadren con la fuente; lo que no cuadra no se publica.
+4. **Publicación.** El dato pasa al catálogo, a la API y a las vistas. Cada ficha indica la fuente y permite llegar al archivo original.
 
 El detalle por conjunto está en [Metodología](https://datos.cochid.cl/metodologia).
 

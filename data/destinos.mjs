@@ -2656,7 +2656,7 @@ const contrato = {
       "host": "cochid.cl",
       "ruta": "/concepciones/",
       "etiqueta": "Cuándo se concibe en Chile",
-      "resumen": "Investigación publicada sobre concepciones y opinión pública.",
+      "resumen": "Investigación publicada sobre cuándo se concibe en Chile, con cinco millones de nacimientos.",
       "clase": "pagina",
       "grupo": "investigaciones",
       "dominio": "poblacion-sociedad",
@@ -3831,10 +3831,10 @@ const contrato = {
       "node_id": "product.cochid.datos",
       "visible": {
         "cabecera": false,
-        "pie": true,
-        "mapa_del_sitio": true,
-        "sitemap": true,
-        "paleta": true
+        "pie": false,
+        "mapa_del_sitio": false,
+        "sitemap": false,
+        "paleta": false
       },
       "sitemap": {
         "frecuencia": "daily",
@@ -3868,9 +3868,9 @@ const contrato = {
       "visible": {
         "cabecera": false,
         "pie": false,
-        "mapa_del_sitio": true,
-        "sitemap": true,
-        "paleta": true
+        "mapa_del_sitio": false,
+        "sitemap": false,
+        "paleta": false
       },
       "sitemap": {
         "frecuencia": "weekly",
@@ -3976,9 +3976,9 @@ const contrato = {
       "visible": {
         "cabecera": false,
         "pie": false,
-        "mapa_del_sitio": true,
-        "sitemap": true,
-        "paleta": true
+        "mapa_del_sitio": false,
+        "sitemap": false,
+        "paleta": false
       },
       "sitemap": {
         "frecuencia": "weekly",
@@ -4011,10 +4011,10 @@ const contrato = {
       "node_id": "product.cochid.datos",
       "visible": {
         "cabecera": false,
-        "pie": true,
-        "mapa_del_sitio": true,
-        "sitemap": true,
-        "paleta": true
+        "pie": false,
+        "mapa_del_sitio": false,
+        "sitemap": false,
+        "paleta": false
       },
       "sitemap": {
         "frecuencia": "weekly",
@@ -4047,10 +4047,10 @@ const contrato = {
       "node_id": "product.cochid.datos",
       "visible": {
         "cabecera": false,
-        "pie": true,
-        "mapa_del_sitio": true,
-        "sitemap": true,
-        "paleta": true
+        "pie": false,
+        "mapa_del_sitio": false,
+        "sitemap": false,
+        "paleta": false
       },
       "sitemap": {
         "frecuencia": "weekly",
@@ -4119,10 +4119,10 @@ const contrato = {
       "node_id": "product.cochid.datos",
       "visible": {
         "cabecera": false,
-        "pie": true,
-        "mapa_del_sitio": true,
-        "sitemap": true,
-        "paleta": true
+        "pie": false,
+        "mapa_del_sitio": false,
+        "sitemap": false,
+        "paleta": false
       },
       "sitemap": {
         "frecuencia": "weekly",
@@ -4368,9 +4368,9 @@ const contrato = {
       "visible": {
         "cabecera": false,
         "pie": false,
-        "mapa_del_sitio": true,
-        "sitemap": true,
-        "paleta": true
+        "mapa_del_sitio": false,
+        "sitemap": false,
+        "paleta": false
       },
       "sitemap": {
         "frecuencia": "weekly",
@@ -4403,10 +4403,10 @@ const contrato = {
       "node_id": "product.cochid.datos",
       "visible": {
         "cabecera": false,
-        "pie": true,
-        "mapa_del_sitio": true,
-        "sitemap": true,
-        "paleta": true
+        "pie": false,
+        "mapa_del_sitio": false,
+        "sitemap": false,
+        "paleta": false
       },
       "sitemap": {
         "frecuencia": "monthly",

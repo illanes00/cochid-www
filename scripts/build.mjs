@@ -363,6 +363,8 @@ await cp(new URL('../vendor/v2/temas/',import.meta.url),new URL('temas/',out),{r
  }
  const indiceTemas=new URL('temas/index.html',out);
  await writeFile(indiceTemas,indicePublico(await readFile(indiceTemas,'utf8'),totalesTema));
+ const portada=new URL('index.html',out);
+ await writeFile(portada,indicePublico(await readFile(portada,'utf8'),totalesTema));
 }
 await cp(bundle,new URL('assets/chrome-v2/',out),{recursive:true});
 execFileSync('python3',['buscador/generar_indice.py','--refrescar'],{cwd:new URL('../',import.meta.url),stdio:'inherit',env:{...process.env,DESTINOS_JSON:'data/destinos.v1.json',TAXONOMIA_JSON:'data/taxonomia.json'}});

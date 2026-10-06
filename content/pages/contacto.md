@@ -28,7 +28,7 @@ Indica en tu mensaje:
 - el valor que aparece y el que esperabas;
 - la fuente con la que lo comparas, si la tienes.
 
-Antes de escribir puedes revisar el archivo original en la [Biblioteca](https://datos.cochid.cl/biblioteca) y el registro de corridas en [Calidad](https://datos.cochid.cl/calidad).
+Antes de escribir puedes revisar la fuente original en la ficha de cada conjunto, en «Descargar o usar».
 
 ## Soporte de cuenta y pagos
 

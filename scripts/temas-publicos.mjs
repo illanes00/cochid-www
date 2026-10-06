@@ -25,11 +25,20 @@ export function temaPublico(html, nombres) {
     return `<ul class="conj">${items.slice(0, VISIBLES).join('')}</ul><details class="mas"><summary>Ver ${plural(resto.length, 'conjunto más', 'conjuntos más')}</summary><ul class="conj">${resto.join('')}</ul></details>`;
   });
   // Sitios que solo ve Martín (6-oct-2026) no se ofrecen como «Relacionado».
-  const sinOcultos = h => h.replace(/<li><a href="https:\/\/(?:graphs|elecciones|prosa\.medicamentos)\.cochid\.cl\/[^"]*">[^<]*<\/a><span class="rel__t">[^<]*<\/span><\/li>/g, '');
+  const sinOcultos = h => h
+    .replace(/<li><a href="https:\/\/(?:graphs|elecciones|prosa\.medicamentos)\.cochid\.cl\/[^"]*">[^<]*<\/a><span class="rel__t">[^<]*<\/span><\/li>/g, '')
+    .replace(/<li><a href="https:\/\/datos\.cochid\.cl\/(?:mercado-publico|biblioteca|calidad|lineage|coverage|funnel|mapa|videos|futbol-territorial|kiosk|archivo|referencia|acerca)[^"]*">[^<]*<\/a><span class="rel__t">[^<]*<\/span><\/li>/g, '');
+  // Subtemas sin conjuntos publicados no se muestran; se recuenta el «Ver N subtemas más».
+  const sinSubVacios = h => h
+    .replace(/<li class="sub">(?:(?!<\/li>).)*?<\/p><\/div><\/li>/gs, m => m.includes('class="conj"') ? m : '')
+    .replace(/<details class="mas"><summary>Ver \d+ subtemas más<\/summary><ul class="subs">((?:(?!<\/ul>).)*)<\/ul><\/details>/gs, (m, dentro) => {
+      const n = (dentro.match(/<li class="sub">/g) || []).length;
+      return n ? `<details class="mas"><summary>Ver ${plural(n, 'subtema más', 'subtemas más')}</summary><ul class="subs">${dentro}</ul></details>` : '';
+    });
   const resumen = total ? `${plural(total, 'conjunto de datos publicado', 'conjuntos de datos publicados')}` : 'Los conjuntos de este tema todavía se están preparando';
   return {
     total,
-    html: sinOcultos(salida)
+    html: sinSubVacios(sinOcultos(salida))
       .replace(/(<p class="pt__n">)\d+ conjuntos de datos(, \d+ indicadores)?\.[^<]*/, (_, p, ind = '') => `${p}${resumen}${ind}.`)
       .replace(/(<meta name="description" content="[^"]*?)\s*\d+ conjuntos de datos(, \d+ indicadores)?\.[^"]*"/, (_, m, ind = '') => `${m} ${resumen}${ind}."`)
       .replace(/\s*<p>Un conjunto «en preparación»[^<]*<\/p>/, ''),
@@ -38,7 +47,7 @@ export function temaPublico(html, nombres) {
 
 export function indicePublico(html, totales) {
   let suma = 0;
-  const salida = html.replace(/(<a href="\.\.\/temas\/([a-z-]+)\/">[^<]*<\/a><\/h2><p class="tema__f">[^<]*<\/p><p class="tema__n">)\d+ conjuntos de datos/g, (_, antes, id) => {
+  const salida = html.replace(/(<a href="\.\.\/temas\/([a-z-]+)\/">[^<]*<\/a><\/h[23]><p class="tema__f">[^<]*<\/p><p class="tema__n">)\d+ conjuntos de datos/g, (_, antes, id) => {
     const n = totales[id] ?? 0;
     suma += n;
     return `${antes}${plural(n, 'conjunto de datos', 'conjuntos de datos')}`;
@@ -47,5 +56,9 @@ export function indicePublico(html, totales) {
     .replace(/<p>\d+ conjuntos de datos en (\d+) temas\./, (_, t) => `<p>${plural(suma, 'conjunto de datos publicado', 'conjuntos de datos publicados')} en ${t} temas.`)
     .replace(/El catálogo tiene \d+ registros; \d+ son archivos auxiliares sin tema y no se cuentan\. /, 'Se cuentan solo los conjuntos publicados. ')
     .replace(/\s*<p>«En preparación» significa[^<]*<\/p>/, '')
+    // Los once temas a la vista, sin «Ver todos los temas».
+    .replace(/<\/ul>\s*<details class="mas"><summary>Ver todos los temas<\/summary><ul class="temas">((?:(?!<\/ul>).)*)<\/ul><\/details>/s, '$1</ul>')
+    // Portada: la cifra del encabezado se escribió a mano; se reemplaza por los conjuntos publicados.
+    .replace(/<p class="hero__lead">\d+ conjuntos de datos y (\d+) indicadores de organismos públicos, en (\d+) temas\.<\/p>/, (_, ind, t) => `<p class="hero__lead">${plural(Object.values(totales).reduce((x, y) => x + y, 0), 'conjunto de datos publicado', 'conjuntos de datos publicados')} y ${ind} indicadores de organismos públicos, en ${t} temas.</p>`)
     .replace(/(<meta name="description" content=")\d+ conjuntos de datos/, (_, m) => `${m}${plural(suma, 'conjunto de datos', 'conjuntos de datos')}`);
 }

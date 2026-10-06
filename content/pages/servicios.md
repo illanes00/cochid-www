@@ -15,7 +15,7 @@ Los datos de Compañía Chilena de Inteligencia de Datos se consultan y descarga
 - Consulta del catálogo, las fichas y las vistas en [datos.cochid.cl](https://datos.cochid.cl/catalogo).
 - API pública sin registro, con un límite de 120 consultas por minuto y 2.000 por hora por dirección IP.
 - Descarga de cada conjunto en CSV o Excel, hasta 10.000 filas por archivo.
-- Descarga de los archivos originales de las fuentes desde la [Biblioteca](https://datos.cochid.cl/biblioteca).
+- Descarga de los archivos originales de las fuentes, a pedido.
 
 ::: tarjetas
 ## Datos a medida

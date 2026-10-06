@@ -46,7 +46,7 @@ Cada descarga gratuita entrega hasta 10.000 filas. Si el conjunto tiene más fil
 
 ## Archivos originales
 
-Los archivos tal como los publicó la fuente (CSV, Excel, PDF) están en la [Biblioteca](https://datos.cochid.cl/biblioteca). Cada archivo tiene su dirección de origen, la fecha de descarga y su huella SHA-256.
+Los archivos tal como los publicó la fuente (CSV, Excel, PDF) se enlazan desde la ficha de cada conjunto, en «Descargar o usar». Cada archivo tiene su dirección de origen y la fecha de descarga.
 
 ```
 # Metadatos de un archivo original
@@ -86,7 +86,3 @@ El uso de la API con llave y créditos pagados se rige por los términos de tu c
 ## Método y calidad
 
 - [Metodología](https://datos.cochid.cl/metodologia): fuente, método y limitaciones de cada conjunto.
-- [Trazabilidad](https://datos.cochid.cl/lineage): el camino de cada tabla desde el archivo original hasta la vista publicada.
-- [Calidad](https://datos.cochid.cl/calidad): registro de cada corrida de carga, con filas leídas y escritas y su resultado.
-- [Cobertura](https://datos.cochid.cl/coverage): años y territorios disponibles por conjunto.
-- [Estado del servicio](https://datos.cochid.cl/api/health/deep).

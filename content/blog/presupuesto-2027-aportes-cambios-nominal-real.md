@@ -169,7 +169,7 @@ Importes en **billones de pesos chilenos**, equivalentes a 10¹² pesos. Los cá
 | 31 · Gobiernos Regionales | 1,12 | 1,19 | +6,24% | +3,15% |
 | 32 · Seguridad Pública* | 2,37 | 3,42 | +44,34% | +40,14% |
 
-*Justicia y Seguridad cambian de perímetro por Gendarmería. Sus porcentajes directos no son comparaciones homogéneas; consulta el ajuste anterior. La suma nacional conserva una sola cuenta para cada partida.*
+Nota: Justicia y Seguridad cambian de perímetro por Gendarmería. Sus porcentajes directos no son comparaciones homogéneas; consulta el ajuste anterior. La suma nacional conserva una sola cuenta para cada partida.
 
 ## Datos y método reproducible
 
