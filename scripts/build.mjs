@@ -10,7 +10,7 @@ import {cargarEntradas,cuerpoEntrada,indiceBlog,metaEntrada,rss} from './blog.mj
 import {loNuevo,novedadesDesdeBlog,novedadesDesdeReleases,paginaNovedades,unirNovedades} from './novedades.mjs';
 import {paginaHilo} from './presupuesto-hilo.mjs';
 import {indicePublico,temaPublico} from './temas-publicos.mjs';
-import {cargarGraficos,cuerpoGrafico,headGrafico,indiceGraficos,rutaGrafico} from './graficos.mjs';
+import {cargarGraficos,cuerpoGrafico,headGrafico,indiceGraficos,paginaParaX,rutaGrafico} from './graficos.mjs';
 
 const root=new URL('../',import.meta.url), out=new URL('../dist/',import.meta.url);
 const contratoPublico=JSON.parse(await readFile(new URL('../data/destinos.publico.json',import.meta.url),'utf8'));
@@ -262,6 +262,9 @@ async function publicarGraficos(){
   descripcion:'Gráficos del presupuesto público de Chile con su fuente, datos descargables y una guía para leerlos.',
   bajada:'Cifras del presupuesto público explicadas en un gráfico, con su fuente y sus datos.',
   migas:[['Inicio','/'],['Gráficos']],cuerpo:indiceGraficos(graficos)});
+ await paginaArticulo({ruta:'/g/para-x/',titulo:'Posts para X',producto:'Gráficos',
+  descripcion:'Textos e imágenes listos para publicar a mano en X.',bajada:'Copia el texto, descarga la imagen y pega el texto alternativo.',
+  headExtra:'<meta name="robots" content="noindex, nofollow">',migas:[['Inicio','/'],['Gráficos','/g/'],['Posts para X']],cuerpo:paginaParaX(graficos)});
  for(const ficha of graficos){
   await paginaArticulo({ruta:rutaGrafico(ficha),titulo:ficha.titulo,producto:'Gráficos',ogTipo:'article',
    descripcion:ficha.descripcion,bajada:ficha.bajada,headExtra:headGrafico(ficha),

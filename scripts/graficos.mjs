@@ -121,3 +121,16 @@ export function indiceGraficos(fichas){
 }
 
 const scriptCopiar='<script>document.querySelectorAll("[data-copiar-enlace]").forEach(b=>b.addEventListener("click",async()=>{const e=document.querySelector(".g-estado");try{await navigator.clipboard.writeText(b.dataset.copiarEnlace);e.textContent="Enlace copiado."}catch{e.textContent="No se pudo copiar. Selecciona la dirección en la barra del navegador."}}))</script>';
+
+/* Página de trabajo para publicar a mano en X: texto listo (con el enlace), imagen y texto alternativo.
+   No se indexa ni entra al sitemap. Orden: primero los generales, después por institución. */
+export function paginaParaX(fichas){
+ const orden=[...fichas.filter(f=>!f.partida),...fichas.filter(f=>f.partida)];
+ const item=(f,i)=>{
+  const texto=`${f.texto_x}\n\n${f.url}`;
+  const largo=[...f.texto_x].length+2+23;
+  const nota=f.partida==='10'?'<p class="g-aviso">Revisa esta cifra antes de publicar: «sin Gendarmería» es un cálculo propio con los datos de la ley 2026.</p>':'';
+  return `<li class="px-item" id="post-${i+1}"><h2>${i+1}. ${escapar(f.titulo)}</h2>${nota}<div class="px-fila"><div><label for="px-${i+1}">Texto para X (${largo} de 280 con el enlace)</label><textarea id="px-${i+1}" rows="6" readonly>${escapar(texto)}</textarea><p><button type="button" class="btn-primary" data-copiar="px-${i+1}">Copiar texto</button></p><label for="alt-${i+1}">Texto alternativo de la imagen</label><textarea id="alt-${i+1}" rows="3" readonly>${escapar(f.alt)}</textarea><p><button type="button" class="btn" data-copiar="alt-${i+1}">Copiar texto alternativo</button></p></div><figure><img src="${escapar(f.imagenes.x)}" alt="" width="1200" height="675" loading="lazy" decoding="async"><figcaption><a href="${escapar(f.imagenes.x)}" download="${escapar(f.slug)}.jpg">Descargar imagen para X</a> · <a href="${rutaGrafico(f)}">Ver la página</a></figcaption></figure></div></li>`;
+ };
+ return `<p>${orden.length} posts listos para publicar a mano en X. En cada uno: copia el texto (ya trae el enlace), descarga la imagen, súbela al post y pega el texto alternativo en la opción «Descripción» de la imagen.</p><p class="g-estado" role="status" aria-live="polite"></p><ol class="px-lista">${orden.map(item).join('')}</ol><script>document.querySelectorAll("[data-copiar]").forEach(b=>b.addEventListener("click",async()=>{const t=document.getElementById(b.dataset.copiar);const e=document.querySelector(".g-estado");try{await navigator.clipboard.writeText(t.value);e.textContent="Copiado."}catch{t.select();e.textContent="Selecciona el texto y cópialo con Ctrl+C."}}))</script>`;
+}
