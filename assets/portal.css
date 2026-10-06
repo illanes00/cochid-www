@@ -152,6 +152,8 @@
 .g-lista span{display:block;font-size:.9rem;color:var(--ink-muted)}
 .px-lista{padding:0;list-style:none;max-width:none!important}
 .px-item{padding:1.5rem 0;border-bottom:1px solid var(--line)}
+.px-item h2{margin-bottom:1rem}
+.px-fila label{display:block;margin:.5rem 0 .25rem;font-weight:600}
 .px-fila{display:grid;gap:1.25rem;grid-template-columns:minmax(0,1fr) minmax(0,1fr);align-items:start}
 .px-fila textarea{box-sizing:border-box;width:100%;font:inherit;padding:.6rem;border:1px solid var(--line-strong,var(--line))}
 .px-fila img{width:100%;height:auto;border:1px solid var(--line)}

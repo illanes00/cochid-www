@@ -276,7 +276,7 @@ def ficha_mayores_montos(d: dict) -> dict:
                  "nota": "Aporte fiscal libre del proyecto 2027",
                  "anotaciones": [{"fila": filas[2]["etiqueta"],
                                   "texto": f"Entre las tres: {num(parte, 0)}{NBSP}% del total"}]},
-        alt=("Ranking del aporte fiscal libre 2027: " + "; ".join(plano(f["etiqueta"] + " " + f["texto"]) for f in filas) + "."),
+        alt=("Ranking del aporte fiscal libre 2027: " + "; ".join(plano(f["etiqueta"] + " " + f["texto"]) for f in filas)).rstrip(".") + ".",
         tabla=tabla_partidas(orden), csv=csv_partidas(orden),
     )
 
