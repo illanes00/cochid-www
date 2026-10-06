@@ -5,8 +5,20 @@
     <link>https://cochid.cl/blog/</link>
     <description>Datos nuevos, métodos y cambios de Compañía Chilena de Inteligencia de Datos, Compañía Chilena de Inteligencia de Datos.</description>
     <language>es-cl</language>
-    <lastBuildDate>Thu, 01 Oct 2026 00:00:00 -0300</lastBuildDate>
+    <lastBuildDate>Mon, 05 Oct 2026 00:00:00 -0300</lastBuildDate>
     <atom:link href="https://cochid.cl/blog/feed.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title>Presupuesto 2027: qué cambia en los aportes fiscales y cuánto pesan los precios</title>
+      <link>https://cochid.cl/blog/presupuesto-2027-aportes-cambios-nominal-real/</link>
+      <guid isPermaLink="true">https://cochid.cl/blog/presupuesto-2027-aportes-cambios-nominal-real/</guid>
+      <pubDate>Mon, 05 Oct 2026 00:00:00 -0300</pubDate>
+      <description>Los aportes fiscales libres suben 2,16% nominal. Revisamos sus 32 partidas, el traslado de Gendarmería y las líneas de empleo que cambian.</description>
+      <category>Finanzas públicas</category>
+      <category>presupuesto</category>
+      <category>DIPRES</category>
+      <category>finanzas públicas</category>
+      <category>Ley de Presupuestos</category>
+    </item>
     <item>
       <title>Cargos públicos, deuda y anuario financiero de DIPRES, con fichas nuevas</title>
       <link>https://cochid.cl/blog/cargos-publicos-deuda-y-anuario/</link>

@@ -363,6 +363,7 @@ function aplicarChromeV2(html){
  html=html.replace(/<link rel="stylesheet" href="[^\"]*(?:temas\/)?temas\.css">/g,'<link rel="stylesheet" href="/temas/temas.css">');
  if(!html.includes('/assets/chrome-v2/chrome.css'))html=html.replace('</head>','<link rel="stylesheet" href="/assets/chrome-v2/chrome.css">\n<script defer src="/assets/chrome-v2/chrome.js" data-indice="https://cochid.cl/buscar/indice.json" data-raiz="https://cochid.cl/"></script>\n</head>');
  if(!html.includes('type="application/rss+xml"'))html=html.replace('</head>','<link rel="alternate" type="application/rss+xml" title="Blog de Compañía Chilena de Inteligencia de Datos" href="https://cochid.cl/blog/feed.xml">\n</head>');
+ if(!html.includes('/assets/cuenta-panel.0a66d3c77722.js'))html=html.replace('</head>','<script defer src="/assets/cuenta-panel.0a66d3c77722.js" integrity="sha384-LDo8wtGWz2+G/IdHNzh0yaJHW7OioCRqTbf2Er6apvkqMeD0N9KfVruY8kDWEzbZ"></script>\n</head>');
  return sinComentariosHtml(html).replace(/\b(?:COCHID|Cochid)\b/g,'Compañía Chilena de Inteligencia de Datos').replace(/\b(?:overline|eyebrow)\b/g,'meta');
 }
 for(const path of await htmlFiles(out))await writeFile(path,aplicarChromeV2(await readFile(path,'utf8')));

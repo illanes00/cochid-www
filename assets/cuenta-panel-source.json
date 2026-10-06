@@ -1,0 +1,8 @@
+{
+  "canonical_source_commit": "52a8ff0b4e4eea460c7be3439e124283d7888a04",
+  "canonical_asset": "https://cuenta.innovacionsantiago.cl/assets/cuenta-panel.js",
+  "sha256": "0a66d3c77722fff8d6873f55cef3b15c9b1597d4b9085e119deb7ed2779b43b8",
+  "integrity": "sha384-LDo8wtGWz2+G/IdHNzh0yaJHW7OioCRqTbf2Er6apvkqMeD0N9KfVruY8kDWEzbZ",
+  "site_asset": "/assets/cuenta-panel.0a66d3c77722.js",
+  "scope": "Local immutable copy of common host widget; Cuenta data, session and views stay central."
+}
