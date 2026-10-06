@@ -2,9 +2,9 @@
 titulo: El visor de presupuesto, ordenado en tres tareas
 slug: visor-de-presupuesto-tres-tareas
 fecha: 2026-10-01
-autor: Equipo Compañía Chilena de Inteligencia de Datos
-resumen: El visor de presupuesto de Compañía Chilena de Inteligencia de Datos se reorganizó en tres tareas: entender el presupuesto, explorar instituciones y comparar años. Los controles, las tablas y las descargas quedan plegados hasta que los necesitas.
-descripcion: Cómo usar el visor de presupuesto de Compañía Chilena de Inteligencia de Datos después de su reorganización del 1 de octubre de 2026: tres tareas, gráficos legibles en el teléfono, descargas y verificación de cada consulta.
+autor: Equipo de la Compañía Chilena de Inteligencia de Datos
+resumen: El visor de presupuesto de la Compañía Chilena de Inteligencia de Datos se reorganizó en tres tareas: entender el presupuesto, explorar instituciones y comparar años. Los controles, las tablas y las descargas quedan plegados hasta que los necesitas.
+descripcion: Cómo usar el visor de presupuesto de la Compañía Chilena de Inteligencia de Datos después de su reorganización del 1 de octubre de 2026: tres tareas, gráficos legibles en el teléfono, descargas y verificación de cada consulta.
 ruta: /blog/visor-de-presupuesto-tres-tareas/
 tipo: metodologia
 dominio: finanzas-publicas

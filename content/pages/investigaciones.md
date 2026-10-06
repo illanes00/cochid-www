@@ -1,6 +1,6 @@
 ---
 titulo: Investigaciones
-descripcion: Estudios y cuadernos publicados sobre la infraestructura de Compañía Chilena de Inteligencia de Datos, con sus datos descargables y fuentes.
+descripcion: Estudios y cuadernos publicados sobre la infraestructura de la Compañía Chilena de Inteligencia de Datos, con sus datos descargables y fuentes.
 ruta: /investigaciones/
 ---
 

@@ -2,7 +2,7 @@
 titulo: La Ley de Presupuestos de 2009 a 2026, línea por línea
 slug: ley-de-presupuestos-2009-2026
 fecha: 2026-09-30
-autor: Equipo Compañía Chilena de Inteligencia de Datos
+autor: Equipo de la Compañía Chilena de Inteligencia de Datos
 resumen: Cargamos 152.779 líneas de la Ley de Presupuestos de 18 años, con monto inicial y vigente, y la ejecución observada de cada año desde 2009.
 descripcion: Compañía Chilena de Inteligencia de Datos publica 152.779 líneas de la Ley de Presupuestos entre 2009 y 2026 y 665.881 observaciones de ejecución, cada una ligada al archivo original de DIPRES.
 ruta: /blog/ley-de-presupuestos-2009-2026/
@@ -25,7 +25,7 @@ El 30 de septiembre de 2026 terminamos de cargar la Ley de Presupuestos del Sect
 - 665.881 observaciones de ejecución presupuestaria, 2009 a 2026
 :::
 
-Fuente: Dirección de Presupuestos (DIPRES), archivos publicados en [datos.gob.cl](https://datos.gob.cl/organization/direccion_de_presupuestos). Cifras contadas en la base de Compañía Chilena de Inteligencia de Datos el 1 de octubre de 2026.
+Fuente: Dirección de Presupuestos (DIPRES), archivos publicados en [datos.gob.cl](https://datos.gob.cl/organization/direccion_de_presupuestos). Cifras contadas en la base de la Compañía Chilena de Inteligencia de Datos el 1 de octubre de 2026.
 
 ## Qué es una línea
 

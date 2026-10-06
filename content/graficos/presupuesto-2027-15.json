@@ -7,7 +7,7 @@
  "corte_texto": "5 de octubre de 2026",
  "fuente_corta": "DIPRES (ley 2026) y Cámara de Diputadas y Diputados (proyecto 2027). Corte 5-oct-2026",
  "lectura": [
-  "El aporte fiscal libre es la plata que el Tesoro Público le entrega a cada ministerio para funcionar. No es todo su presupuesto: los ministerios también tienen ingresos propios y otras transferencias.",
+  "El aporte fiscal libre es el dinero que el Tesoro Público entrega a cada ministerio para funcionar. No es todo su presupuesto: los ministerios también tienen ingresos propios y otras transferencias.",
   "«Nominal» compara pesos de cada año. «Real» descuenta una inflación hipotética de 3 % para saber si alcanza para comprar más o menos que en 2026. No es una proyección oficial.",
   "2027 es el proyecto de ley que el Gobierno envió al Congreso y que todavía se discute; 2026 es la ley aprobada al inicio del año."
  ],
@@ -90,7 +90,7 @@
    "url": "https://www.camara.cl/legislacion/presupuesto/2027/50_TesoroPublico.pdf"
   }
  ],
- "metodo": "Aporte fiscal libre en moneda nacional (partida 50, capítulo 01, programa 05, subtítulo 27). Variación nominal = proyecto 2027 / ley 2026 − 1. Variación con inflación = proyecto 2027 / ley 2026 / 1,03 − 1.",
+ "metodo": "Aporte del Tesoro Público a cada ministerio, en pesos (línea 50-01-05-27 de la Ley de Presupuestos). Variación nominal = proyecto 2027 / ley 2026 − 1. Variación con inflación = proyecto 2027 / ley 2026 / 1,03 − 1.",
  "descargas": {
   "csv": "/assets/g/presupuesto-2027-15/datos.csv"
  },

@@ -101,7 +101,7 @@ export function cuerpoGrafico(ficha,todas){
   `<p>Puedes usar estos datos y gráficos citando así:</p><blockquote class="g-cita"><p>${escapar(cita)}</p></blockquote>`,
   '<h2 id="fuentes">De dónde salen los datos</h2>',
   `<ul>${ficha.fuentes.map(f=>`<li><a href="${escapar(f.url)}">${escapar(f.etiqueta)}</a></li>`).join('')}</ul>`,
-  ficha.metodo?`<p>${escapar(ficha.metodo)} Corte: <time datetime="${escapar(ficha.corte)}">${escapar(ficha.corte_texto)}</time>.</p>`:'',
+  ficha.metodo?`<p>${escapar(ficha.metodo)} Datos al <time datetime="${escapar(ficha.corte)}">${escapar(ficha.corte_texto)}</time>.</p>`:'',
   '<h2 id="explorar">Sigue explorando</h2>',
   `<ul>${ficha.explorar.map(e=>`<li><a href="${escapar(e.url)}">${escapar(e.etiqueta)}</a></li>`).join('')}</ul>`,
   relacionadas.length?`<h3>Otros gráficos del presupuesto 2027</h3><ul class="g-relacionados">${relacionadas.map(r=>`<li><a href="${rutaGrafico(r)}"><img src="${escapar(r.imagenes.x)}" alt="" width="1200" height="675" loading="lazy" decoding="async"><span>${escapar(r.titulo)}</span></a></li>`).join('')}</ul><p><a href="/g/">Ver todos los gráficos</a></p>`:'',

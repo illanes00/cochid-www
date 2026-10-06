@@ -97,7 +97,7 @@ test('la portada muestra cuatro temas y permite desplegar los once', () => {
 test('el mapa del sitio tiene una sola introducción y etiquetas de tipo', () => {
   const html = leer('/mapa-del-sitio/');
   const cuerpo = html.match(/<main[\s\S]*?<\/main>/)[0];
-  assert.equal((cuerpo.match(/Todas las páginas y sitios públicos de Compañía Chilena de Inteligencia de Datos/g) || []).length, 1);
+  assert.equal((cuerpo.match(/Todas las páginas y sitios públicos de la Compañía Chilena de Inteligencia de Datos/g) || []).length, 1);
   const tipos = [...cuerpo.matchAll(/<span class="badge portal-tipo">([^<]+)<\/span>/g)].map(m => m[1]);
   assert.ok(tipos.length > 20);
   for (const tipo of ['Página', 'Producto', 'Vista', 'Herramienta']) assert.ok(tipos.includes(tipo), `falta ${tipo}`);

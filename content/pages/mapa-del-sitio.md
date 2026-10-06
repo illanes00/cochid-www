@@ -1,6 +1,6 @@
 ---
 titulo: Mapa del sitio
-descripcion: Todas las páginas y sitios públicos de Compañía Chilena de Inteligencia de Datos en un solo lugar, agrupados por datos, territorio, investigaciones, herramientas y especiales.
+descripcion: Todas las páginas y sitios públicos de la Compañía Chilena de Inteligencia de Datos en un solo lugar, agrupados por datos, territorio, investigaciones, herramientas y especiales.
 ruta: /mapa-del-sitio/
 ---
 

@@ -16,20 +16,20 @@ Al 6 de octubre de 2026, el [catálogo de datos](https://datos.cochid.cl/catalog
 
 Entre las fuentes están la Dirección de Presupuestos (DIPRES), el Ministerio de Educación, el Instituto Nacional de Estadísticas, el Ministerio de Desarrollo Social y Familia (Encuesta CASEN), el Banco Central, la Biblioteca del Congreso Nacional, el Servel, Gendarmería y ChileCompra.
 
-Fuente de las cifras: API pública de datos.cochid.cl (`/api/catalog/`, `/api/temas/`, `/api/raw-files/`), consulta del 1 de octubre de 2026.
+Fuente de las cifras: [catálogo de datos](https://datos.cochid.cl/catalogo), consultado el 6 de octubre de 2026.
 
 ## Principios
 
 - **Cada cifra con su fuente.** La ficha de cada conjunto nombra al organismo que publica el dato y enlaza a su sitio.
 - **Cada cifra con su fecha.** Las fichas muestran la última actualización y la frecuencia declarada.
-- **El original disponible.** El archivo tal como lo publicó la fuente se puede descargar desde la Biblioteca, con su huella SHA-256 para comprobar que no cambió.
+- **El original disponible.** El archivo tal como lo publicó la fuente se puede descargar desde la ficha de cada conjunto, con una huella digital que permite comprobar que no cambió.
 - **Lo que falta se muestra.** Un valor ausente en la fuente queda ausente; no se reemplaza por cero ni se estima sin decirlo.
 
 ## Cómo trabajamos
 
 Cada dato pasa por cuatro pasos:
 
-1. **Fuente.** Se descarga el archivo del organismo que lo publica y se registran su dirección, la fecha de descarga y su huella SHA-256.
+1. **Fuente.** Se descarga el archivo del organismo que lo publica y se registran su dirección, la fecha de descarga y una huella digital que permite comprobar que el archivo no cambió.
 2. **Carga.** Un proceso lee el archivo y ordena sus filas. Cada carga queda registrada con su fecha, las filas leídas y su resultado.
 3. **Revisión.** Antes de publicar se revisa que las cifras cuadren con la fuente; lo que no cuadra no se publica.
 4. **Publicación.** El dato pasa al catálogo, a la API y a las vistas. Cada ficha indica la fuente y permite llegar al archivo original.
@@ -42,7 +42,7 @@ Martín Illanes, fundador.
 
 ## Relación institucional
 
-Compañía Chilena de Inteligencia de Datos es la marca de Compañía Chilena de Inteligencia de Datos SpA (RUT 78.374.391-4), que mantiene este ecosistema de datos.
+Compañía Chilena de Inteligencia de Datos es la marca de la Compañía Chilena de Inteligencia de Datos SpA (RUT 78.374.391-4), que mantiene este ecosistema de datos.
 
 ## Contacto
 

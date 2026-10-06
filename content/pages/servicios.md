@@ -1,6 +1,6 @@
 ---
 titulo: Servicios
-descripcion: Datos a medida, informes a pedido, descargas completas y planes de la API de Compañía Chilena de Inteligencia de Datos. Qué incluye el acceso gratuito y qué se cotiza.
+descripcion: Datos a medida, informes a pedido, descargas completas y planes de la API de la Compañía Chilena de Inteligencia de Datos. Qué incluye el acceso gratuito y qué se cotiza.
 ruta: /servicios/
 ---
 
@@ -8,7 +8,7 @@ ruta: /servicios/
 
 # Servicios
 
-Los datos de Compañía Chilena de Inteligencia de Datos se consultan y descargan gratis. Si necesitas algo que el catálogo no entrega tal cual, estos son los servicios disponibles.
+Los datos de la Compañía Chilena de Inteligencia de Datos se consultan y descargan gratis. Si necesitas algo que el catálogo no entrega tal cual, estos son los servicios disponibles.
 
 ## Acceso gratuito
 
@@ -20,7 +20,7 @@ Los datos de Compañía Chilena de Inteligencia de Datos se consultan y descarga
 ::: tarjetas
 ## Datos a medida
 Ícono: tabla
-Un corte que no está publicado: otra desagregación territorial, otro período, una combinación de fuentes o un formato distinto. Recibes el archivo con la descripción de las columnas, las fuentes usadas y la fecha de corte. Se cotiza.
+Una selección de datos que no está publicada: otra desagregación territorial, otro período, una combinación de fuentes o un formato distinto. Recibes el archivo con la descripción de las columnas, las fuentes usadas y la fecha de corte. Se cotiza.
 [Pide una cotización](/asesoria/?tipo=dato-a-medida)
 
 ## Descarga completa
@@ -41,10 +41,10 @@ Para usar la API con una llave propia y créditos prepagados. Cada consulta desc
 | Plan | Créditos | Precio | Renovación |
 |---|---|---|---|
 | Prueba gratuita | 100 | $0 | No |
-| Starter prepago | 5.000 | $5.000 IVA incluido | No, pago único |
+| Inicial prepago | 5.000 | $5.000 IVA incluido | No, pago único |
 | Profesional prepago | 50.000 | $25.000 IVA incluido | No, pago único |
 
-Fuente: catálogo público de la plataforma, consulta del 1 de octubre de 2026. [[VERIFICAR: flujo de compra operativo para cochid-datos en la plataforma de pagos; la investigación `cuenta.md` no encontró el producto en `products.yaml`]]
+Precios vigentes al 1 de octubre de 2026. [[VERIFICAR: flujo de compra operativo para cochid-datos en la plataforma de pagos; la investigación `cuenta.md` no encontró el producto en `products.yaml`]]
 
 Si necesitas más créditos o un límite por minuto mayor que el de estos planes, [escríbenos](/asesoria/?tipo=mas-cuota).
 

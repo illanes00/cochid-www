@@ -1,6 +1,6 @@
 ---
 titulo: Asesoría y datos a medida
-descripcion: Pide un corte de datos, más cuota de API, una descarga completa o un informe a Compañía Chilena de Inteligencia de Datos.
+descripcion: Pide un corte de datos, más cuota de API, una descarga completa o un informe a la Compañía Chilena de Inteligencia de Datos.
 ruta: /asesoria/
 ---
 

@@ -2,9 +2,9 @@
 titulo: Presupuesto 2027: qué cambia en los aportes fiscales y cuánto pesan los precios
 slug: presupuesto-2027-aportes-cambios-nominal-real
 fecha: 2026-10-05
-autor: Equipo Compañía Chilena de Inteligencia de Datos
+autor: Equipo de la Compañía Chilena de Inteligencia de Datos
 resumen: Los aportes fiscales libres suben 2,16% nominal. Revisamos sus 32 partidas, el traslado de Gendarmería y las líneas de empleo que cambian.
-descripcion: Comparación del proyecto oficial de Presupuesto 2027 con la ley inicial 2026: cifras, gráficos, inflación hipotética, cambios de perímetro y continuidad de programas.
+descripcion: Comparación del proyecto oficial de Presupuesto 2027 con la ley inicial 2026: cifras, gráficos, inflación hipotética, traslados entre ministerios y continuidad de programas.
 ruta: /blog/presupuesto-2027-aportes-cambios-nominal-real/
 tipo: analisis
 dominio: finanzas-publicas
@@ -25,15 +25,15 @@ Corte: 5 de octubre de 2026. El documento de la Cámara es el proyecto oficial e
 - **Educación y Trabajo aumentan su financiamiento fiscal libre**: 5,32% y 3,89% nominal, respectivamente. Con inflación de 3%, los aumentos serían 2,25% y 0,86% en poder de compra.
 - **Salud recibe 1,20% más pesos**, pero ese aporte perdería 1,75% de poder de compra bajo el mismo supuesto. Obras Públicas aumenta 2,81% nominal y quedaría prácticamente estable en términos reales, con una variación de -0,19%.
 - **Vivienda presenta una reducción de 20,17% en este componente de financiamiento**. Culturas disminuye 16,37%, Energía 10,54% y Ciencia 5,01%. Estas variaciones requieren contrastar los ingresos restantes y el gasto de cada partida antes de atribuirlas a prestaciones concretas.
-- **Seguridad cambia de perímetro**. Su comparación directa arroja +44,34%, pero incluye a Gendarmería en 2027. Comparando Seguridad y Gendarmería en ambos años, el aumento es 12,11% nominal.
+- **Seguridad suma una institución**. Su comparación directa arroja +44,34%, pero incluye a Gendarmería en 2027. Comparando Seguridad y Gendarmería en ambos años, el aumento es 12,11% nominal.
 - **En empleo hay líneas que cambian, aparecen o dejan de figurar**. La propuesta incorpora una asignación para el Subsidio Unificado de Empleo; conserva Inversión en la Comunidad y no muestra la asignación de Empleabilidad Sostenida en el cuadro de Proempleo revisado.
 
-Fuente de la comparación: [Tesoro Público, proyecto 2027, programa 50/01/05, páginas 29 a 36 del PDF](https://www.camara.cl/legislacion/presupuesto/2027/50_TesoroPublico.pdf) y [aporte fiscal libre de la ley inicial 2026](https://www.dipres.gob.cl/597/articles-397421_doc_pdf.pdf).
+Fuente de la comparación: [Tesoro Público, proyecto 2027, aporte fiscal a los ministerios, páginas 29 a 36 del PDF](https://www.camara.cl/legislacion/presupuesto/2027/50_TesoroPublico.pdf) y [aporte fiscal libre de la ley inicial 2026](https://www.dipres.gob.cl/597/articles-397421_doc_pdf.pdf).
 
 :::figura
 src: /assets/presupuesto-2027/total-aporte.png
 alt: El aporte fiscal libre pasa de 69,67 a 71,17 billones nominales. Con inflación hipotética de 3%, equivale a 69,10 billones a precios de 2026.
-pie: Financiamiento en moneda nacional. Fuente: DIPRES 2026 y Cámara 2027, programa 50/01/05. Corte: 05-10-2026. El ajuste de precios es un escenario, no una proyección oficial.
+pie: Financiamiento en moneda nacional. Fuente: DIPRES 2026 y Cámara 2027, aporte fiscal a los ministerios. Datos al 5 de octubre de 2026. El ajuste de precios es un escenario, no una proyección oficial.
 ancho: 1440
 alto: 648
 :::
@@ -86,7 +86,7 @@ Fuentes: [ley 2026, aporte fiscal libre, Justicia y Seguridad](https://www.dipre
 
 :::figura
 src: /assets/presupuesto-2027/seguridad-perimetro.png
-alt: El aumento nominal de Seguridad parece de 44,34% al cambiar el perímetro. Comparando Seguridad más Gendarmería en ambos años, es de 12,11%.
+alt: El aumento nominal de Seguridad parece de 44,34% porque Gendarmería se suma en 2027. Comparando Seguridad más Gendarmería en ambos años, es de 12,11%.
 pie: Aporte fiscal libre, moneda nacional. La segunda barra incluye a Gendarmería en la base 2026 y en la propuesta 2027. No compara un servicio incorporado con una base que lo omite.
 ancho: 1440
 alto: 648
@@ -99,7 +99,7 @@ Revisamos los cuadros de Presidencia y Trabajo, además del traslado de Gendarme
 | Línea o servicio revisado | Evidencia 2026 | Evidencia del proyecto 2027 | Lectura del cambio |
 | --- | --- | --- | --- |
 | Gendarmería | Justicia, aporte libre de $681.326,9 millones | Seguridad, $836.360,1 millones | Traslado y cambio de recursos; el servicio sigue figurando |
-| Inversión en la Comunidad, Proempleo, 15/01/03/24/03/264 | $22.159,8 millones | $140.403,7 millones | La asignación continúa y aumenta; no está eliminada |
+| Inversión en la Comunidad, Proempleo | $22.159,8 millones | $140.403,7 millones | La asignación continúa y aumenta; no está eliminada |
 | Empleabilidad Sostenida, Proempleo, 15/01/03/24/03/290 | $1.600,3 millones | La asignación no figura en el cuadro de Proempleo revisado | Línea ausente en ese cuadro; falta conciliar destinos alternativos antes de afirmar cierre del programa |
 | Subsidio al Empleo y Subsidio Empleo a la Mujer, SENCE | $74.010,9 millones y $107.738,8 millones | $6.746,4 millones para cada línea; figura además Subsidio Unificado de Empleo por $76.119,9 millones | Cambia la composición del financiamiento; las líneas antiguas conservan asignación |
 | Cambio de Mando Presidencial, 01/01/01/24/09/703 | $727,5 millones, con glosa para el primer trimestre 2026 | No figura esa asignación en Presidencia 2027 | Gasto de un evento específico de 2026 que no se repite; no es un programa social eliminado |
@@ -169,17 +169,17 @@ Importes en **billones de pesos chilenos**, equivalentes a 10¹² pesos. Los cá
 | 31 · Gobiernos Regionales | 1,12 | 1,19 | +6,24% | +3,15% |
 | 32 · Seguridad Pública* | 2,37 | 3,42 | +44,34% | +40,14% |
 
-Nota: Justicia y Seguridad cambian de perímetro por Gendarmería. Sus porcentajes directos no son comparaciones homogéneas; consulta el ajuste anterior. La suma nacional conserva una sola cuenta para cada partida.
+Nota: Justicia y Seguridad cambian porque Gendarmería pasa de una a otra. Sus porcentajes directos no son comparaciones homogéneas; consulta el ajuste anterior. La suma nacional conserva una sola cuenta para cada partida.
 
 ## Datos y método reproducible
 
 ¿Quieres compartir estos hallazgos? Usa el [hilo con textos listos para copiar y gráficos PNG descargables](/blog/presupuesto-2027-aportes-cambios-nominal-real/hilo/).
 
 - **Base:** ley inicial aprobada de 2026, no el proyecto 2026 ni su presupuesto vigente modificado.
-- **Propuesta:** cuadro del aporte fiscal libre del Tesoro 2027, programa 50/01/05. Las 32 partidas suman exactamente $69.669.527.710 miles en 2026 y $71.174.286.503 miles en 2027.
+- **Propuesta:** cuadro del aporte fiscal libre del Tesoro 2027 a los ministerios. Las 32 partidas suman exactamente $69.669.527.710 miles en 2026 y $71.174.286.503 miles en 2027.
 - **Monedas:** la columna en miles de dólares se mantiene separada: 329.524 en 2026 y 400.035 en 2027. No se suma a los pesos.
 - **Alcance:** financiamiento fiscal libre. No se agrega otra vez al gasto de los ministerios, lo que duplicaría recursos; quedan fuera de este indicador ingresos propios, otros aportes y transferencias.
 - **Continuidad:** se distingue traslado, línea ausente en un cuadro, gasto no recurrente y asignación nueva. No publicamos una cantidad nacional de programas eliminados sin una conciliación completa.
-- **Corte:** 5 de octubre de 2026. Las fuentes primarias originales quedan enlazadas; los valores 2027 proceden de su texto consultado y se controlaron mediante conciliación de totales.
+- **Corte:** 5 de octubre de 2026. Las fuentes primarias originales quedan enlazadas; los valores 2027 proceden de su texto consultado y se revisaron comprobando que las partidas sumen el total oficial.
 
-[Tabla CSV](/assets/presupuesto-2027/comparacion.csv) · [Datos y fuentes en JSON](/assets/presupuesto-2027/comparacion.json) · [Sensibilidad de inflación en CSV](/assets/presupuesto-2027/sensibilidad.csv)
+[Tabla CSV](/assets/presupuesto-2027/comparacion.csv) · [Datos y fuentes (archivo para programadores)](/assets/presupuesto-2027/comparacion.json) · [Sensibilidad de inflación en CSV](/assets/presupuesto-2027/sensibilidad.csv)

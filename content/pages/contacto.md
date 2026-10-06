@@ -1,6 +1,6 @@
 ---
 titulo: Contacto
-descripcion: Cómo escribir a Compañía Chilena de Inteligencia de Datos para consultas sobre datos, correcciones, pedidos a medida, uso de la API y prensa.
+descripcion: Cómo escribir a la Compañía Chilena de Inteligencia de Datos para consultas sobre datos, correcciones, pedidos a medida, uso de la API y prensa.
 ruta: /contacto/
 ---
 
@@ -10,13 +10,13 @@ ruta: /contacto/
 
 ## Pedir datos, cuota o un informe
 
-Si necesitas un corte de datos que no está en el catálogo, más consultas de API, una descarga completa o un informe, usa el formulario de [Asesoría y datos a medida](/asesoria/). Indica qué datos, en qué formato y para qué los usarás.
+Si necesitas una selección de datos que no está en el catálogo, más consultas de API, una descarga completa o un informe, usa el formulario de [Asesoría y datos a medida](/asesoria/). Indica qué datos, en qué formato y para qué los usarás.
 
 ## Consultas generales y prensa
 
 Escribe a **hola@innovacionsantiago.cl**.
 
-[[VERIFICAR: buzón propio de Compañía Chilena de Inteligencia de Datos (`asesoria@cochid.cl` u otro) y su regla de ruteo en Cloudflare Email Routing; mientras no exista, no se publica (D-BUZON)]]
+[[VERIFICAR: buzón propio de la Compañía Chilena de Inteligencia de Datos (`asesoria@cochid.cl` u otro) y su regla de ruteo en Cloudflare Email Routing; mientras no exista, no se publica (D-BUZON)]]
 
 Si buscas un dato, un informe o una asesoría, usa el [formulario de asesoría](/asesoria/).
 
@@ -32,7 +32,7 @@ Antes de escribir puedes revisar la fuente original en la ficha de cada conjunto
 
 ## Soporte de cuenta y pagos
 
-Si tienes una cuenta y una consulta sobre una llave de API, tus créditos o un pago, entra a tu cuenta y usa la sección de ayuda. [[VERIFICAR: URL exacta de ayuda de la Cuenta para usuarios de Compañía Chilena de Inteligencia de Datos (`cuenta.innovacionsantiago.cl/…/ayuda`)]]
+Si tienes una cuenta y una consulta sobre una llave de API, tus créditos o un pago, entra a tu cuenta y usa la sección de ayuda. [[VERIFICAR: URL exacta de ayuda de la Cuenta para usuarios de la Compañía Chilena de Inteligencia de Datos (`cuenta.innovacionsantiago.cl/…/ayuda`)]]
 
 ## Privacidad
 

@@ -75,7 +75,7 @@ PARTIDAS = {
 # Partidas cuyo cambio mezcla un traslado de servicios: no entran a los rankings de alzas y bajas.
 CAMBIAN_PERIMETRO = {"10", "32"}
 
-QUE_ES = ("El aporte fiscal libre es la plata que el Tesoro Público le entrega a cada ministerio para "
+QUE_ES = ("El aporte fiscal libre es el dinero que el Tesoro Público entrega a cada ministerio para "
           "funcionar. No es todo su presupuesto: los ministerios también tienen ingresos propios y otras "
           "transferencias.")
 NOMINAL_REAL = ("«Nominal» compara pesos de cada año. «Real» descuenta una inflación hipotética de 3 % para "
@@ -314,7 +314,7 @@ def ficha_seguridad(d: dict) -> dict:
                  "compara Seguridad 2026 sin Gendarmería con Seguridad 2027 con Gendarmería, el alza se exagera.",
                  NOMINAL_REAL],
         tabla={"columnas": ["Comparación", "Ley 2026", "Proyecto 2027", "Variación"],
-               "filas": [["Directa (perímetro distinto)", plano(plata(seg26)), plano(plata(b)), plano(pct(directa))],
+               "filas": [["Sin ajustar (Gendarmería solo en 2027)", plano(plata(seg26)), plano(plata(b)), plano(pct(directa))],
                          ["Con Gendarmería en ambos años", plano(plata(a)), plano(plata(b)), plano(pct(nominal))]]},
         csv=[["comparacion", "ley_2026_miles_clp", "proyecto_2027_miles_clp", "variacion_nominal_pct"],
              ["directa", seg26, b, f"{directa:.4f}"], ["perimetro_constante", a, b, f"{nominal:.4f}"]],
@@ -406,7 +406,7 @@ def fichas(d: dict) -> list[dict]:
                 "url": d["fuentes"][1]["url"]}]
     for f in salida:
         f["fuentes"] = fuentes
-        f["metodo"] = ("Aporte fiscal libre en moneda nacional (partida 50, capítulo 01, programa 05, subtítulo 27). "
+        f["metodo"] = ("Aporte del Tesoro Público a cada ministerio, en pesos (línea 50-01-05-27 de la Ley de Presupuestos). "
                        "Variación nominal = proyecto 2027 / ley 2026 − 1. Variación con inflación = proyecto 2027 / "
                        "ley 2026 / 1,03 − 1.")
     return salida

@@ -1,6 +1,6 @@
 ---
 titulo: Documentación
-descripcion: Cómo usar los datos de Compañía Chilena de Inteligencia de Datos: API pública, formatos de descarga, archivos originales, límites de uso, cómo citar y dónde está la metodología.
+descripcion: Cómo usar los datos de la Compañía Chilena de Inteligencia de Datos: API pública, formatos de descarga, archivos originales, límites de uso, cómo citar y dónde está la metodología.
 ruta: /documentacion/
 ---
 
@@ -14,7 +14,7 @@ ruta: /documentacion/
 
 ## API pública
 
-La API de Compañía Chilena de Inteligencia de Datos responde en JSON y no requiere registro. La referencia completa, con todas las rutas y sus parámetros, está en [datos.cochid.cl/api/docs](https://datos.cochid.cl/api/docs).
+La API de la Compañía Chilena de Inteligencia de Datos responde en JSON y no requiere registro. La referencia completa, con todas las rutas y sus parámetros, está en [datos.cochid.cl/api/docs](https://datos.cochid.cl/api/docs).
 
 Ejemplos:
 
@@ -79,7 +79,7 @@ Cita también la fuente original que aparece en la ficha. En el ejemplo, la Dire
 
 ## Licencia
 
-Los datos de Compañía Chilena de Inteligencia de Datos no tienen una licencia formal. Si los usas, cita a Compañía Chilena de Inteligencia de Datos y a la fuente original que aparece en cada ficha, como se indica en «Cómo citar».
+Los datos de la Compañía Chilena de Inteligencia de Datos no tienen una licencia formal. Si los usas, cita a la Compañía Chilena de Inteligencia de Datos y a la fuente original que aparece en cada ficha, como se indica en «Cómo citar».
 
 El uso de la API con llave y créditos pagados se rige por los términos de tu cuenta.
 

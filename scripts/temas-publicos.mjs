@@ -41,7 +41,8 @@ export function temaPublico(html, nombres) {
     html: sinSubVacios(sinOcultos(salida))
       .replace(/(<p class="pt__n">)\d+ conjuntos de datos(, \d+ indicadores)?\.[^<]*/, (_, p, ind = '') => `${p}${resumen}${ind}.`)
       .replace(/(<meta name="description" content="[^"]*?)\s*\d+ conjuntos de datos(, \d+ indicadores)?\.[^"]*"/, (_, m, ind = '') => `${m} ${resumen}${ind}."`)
-      .replace(/\s*<p>Un conjunto «en preparación»[^<]*<\/p>/, ''),
+      .replace(/\s*<p>Un conjunto «en preparación»[^<]*<\/p>/, '')
+      .replace(/<a href="https:\/\/datos\.cochid\.cl\/api\/catalog\/">datos\.cochid\.cl<\/a>/g, '<a href="https://datos.cochid.cl/catalogo">datos.cochid.cl</a>'),
   };
 }
 
@@ -56,6 +57,7 @@ export function indicePublico(html, totales) {
     .replace(/<p>\d+ conjuntos de datos en (\d+) temas\./, (_, t) => `<p>${plural(suma, 'conjunto de datos publicado', 'conjuntos de datos publicados')} en ${t} temas.`)
     .replace(/El catálogo tiene \d+ registros; \d+ son archivos auxiliares sin tema y no se cuentan\. /, 'Se cuentan solo los conjuntos publicados. ')
     .replace(/\s*<p>«En preparación» significa[^<]*<\/p>/, '')
+    .replace(/<a href="https:\/\/datos\.cochid\.cl\/api\/catalog\/">datos\.cochid\.cl<\/a>/g, '<a href="https://datos.cochid.cl/catalogo">datos.cochid.cl</a>')
     // Los once temas a la vista, sin «Ver todos los temas».
     .replace(/<\/ul>\s*<details class="mas"><summary>Ver todos los temas<\/summary><ul class="temas">((?:(?!<\/ul>).)*)<\/ul><\/details>/s, '$1</ul>')
     // Portada: la cifra del encabezado se escribió a mano; se reemplaza por los conjuntos publicados.

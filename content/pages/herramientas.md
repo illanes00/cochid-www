@@ -1,6 +1,6 @@
 ---
 titulo: Herramientas
-descripcion: Herramientas de Compañía Chilena de Inteligencia de Datos para explorar visualizaciones territoriales y escribir documentos con evidencia.
+descripcion: Herramientas de la Compañía Chilena de Inteligencia de Datos para explorar visualizaciones territoriales y escribir documentos con evidencia.
 ruta: /herramientas/
 ---
 

@@ -2,7 +2,7 @@
 titulo: Cargos públicos, deuda y anuario financiero de DIPRES, con fichas nuevas
 slug: cargos-publicos-deuda-y-anuario
 fecha: 2026-10-01
-autor: Equipo Compañía Chilena de Inteligencia de Datos
+autor: Equipo de la Compañía Chilena de Inteligencia de Datos
 resumen: Tres series de DIPRES entran al catálogo con fichas propias: 874.586 observaciones de cargos del sector público, la deuda del Gobierno Central desde 1990 y el Anuario de Estadísticas de Finanzas Públicas.
 descripcion: Compañía Chilena de Inteligencia de Datos publica las series de cargos públicos (2014 a 2025), deuda del Gobierno Central (1990 a 2025) y Anuario de Estadísticas de Finanzas Públicas (2015 a 2024) de DIPRES, con fichas de lectura y descarga.
 ruta: /blog/cargos-publicos-deuda-y-anuario/
@@ -25,7 +25,7 @@ El 30 de septiembre de 2026 cargamos tres series que DIPRES publica en planillas
 - 800 observaciones del Anuario de Estadísticas de Finanzas Públicas, 2015 a 2024
 :::
 
-Fuente: Dirección de Presupuestos. Cifras contadas en la base de Compañía Chilena de Inteligencia de Datos el 1 de octubre de 2026.
+Fuente: Dirección de Presupuestos. Cifras contadas en la base de la Compañía Chilena de Inteligencia de Datos el 1 de octubre de 2026.
 
 ## Cargos del sector público
 

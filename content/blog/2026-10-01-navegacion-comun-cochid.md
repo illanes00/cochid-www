@@ -1,9 +1,9 @@
 ---
-titulo: Los mismos cuatro destinos en la cabecera y el pie de Compañía Chilena de Inteligencia de Datos
+titulo: Los mismos cuatro destinos en la cabecera y el pie de la Compañía Chilena de Inteligencia de Datos
 slug: navegacion-comun-cochid
 fecha: 2026-10-01
-autor: Equipo Compañía Chilena de Inteligencia de Datos
-resumen: Datos, Mapas, Investigaciones y Presupuesto pasan a ser los destinos comunes de la navegación de Compañía Chilena de Inteligencia de Datos. Desde el 2 de octubre están en la cabecera o el pie de cochid.cl, datos.cochid.cl y diez sitios más.
+autor: Equipo de la Compañía Chilena de Inteligencia de Datos
+resumen: Datos, Mapas, Investigaciones y Presupuesto pasan a ser los destinos comunes de la navegación de la Compañía Chilena de Inteligencia de Datos. Desde el 2 de octubre están en la cabecera o el pie de cochid.cl, datos.cochid.cl y diez sitios más.
 descripcion: Qué cambió el 1 de octubre de 2026 en la navegación de datos.cochid.cl y cochid.cl, y cómo se llega desde cualquier sitio Compañía Chilena de Inteligencia de Datos a los datos, los mapas, las investigaciones y el presupuesto.
 ruta: /blog/navegacion-comun-cochid/
 tipo: metodologia
@@ -38,7 +38,7 @@ El [mapa del sitio](/mapa-del-sitio/) reúne todas las páginas y sitios públic
 
 ## Por qué los mismos destinos en todos los sitios
 
-Quien llega a un mapa o a una investigación desde un buscador no siempre sabe que existe el catálogo de datos o el visor de presupuesto. Con los mismos cuatro enlaces en todos los sitios, cualquier página lleva a las cuatro entradas principales de Compañía Chilena de Inteligencia de Datos sin tener que conocer la dirección de cada sitio.
+Quien llega a un mapa o a una investigación desde un buscador no siempre sabe que existe el catálogo de datos o el visor de presupuesto. Con los mismos cuatro enlaces en todos los sitios, cualquier página lleva a las cuatro entradas principales de la Compañía Chilena de Inteligencia de Datos sin tener que conocer la dirección de cada sitio.
 
 ## En los demás sitios
 
@@ -46,4 +46,4 @@ El 1 y el 2 de octubre de 2026 la misma cabecera y el mismo pie llegaron a diez 
 
 Congreso, Medicamentos y Transporte se suman en una etapa siguiente.
 
-Si encuentras una página de Compañía Chilena de Inteligencia de Datos desde la que no puedes volver a los datos o a la portada, [avísanos](/contacto/) con su dirección.
+Si encuentras una página de la Compañía Chilena de Inteligencia de Datos desde la que no puedes volver a los datos o a la portada, [avísanos](/contacto/) con su dirección.

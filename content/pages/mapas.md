@@ -1,6 +1,6 @@
 ---
 titulo: Mapas y territorio
-descripcion: Mapas de Compañía Chilena de Inteligencia de Datos para explorar Chile por territorio: atlas, transporte público, bicicleta, trenes, cables submarinos y clima.
+descripcion: Mapas de la Compañía Chilena de Inteligencia de Datos para explorar Chile por territorio: atlas, transporte público, bicicleta, trenes, cables submarinos y clima.
 ruta: /mapas/
 ---
 
@@ -18,7 +18,7 @@ Todos los mapas usan datos con fuente declarada.
 ::: tarjetas
 ## Atlas
 [mapas.cochid.cl](https://mapas.cochid.cl/)
-Atlas interactivo de datos territoriales de Chile y Sudamérica. Reúne las capas publicadas por Compañía Chilena de Inteligencia de Datos en un mismo mapa, con su fuente, licencia y atribución.
+Atlas interactivo de datos territoriales de Chile y Sudamérica. Reúne las capas publicadas por la Compañía Chilena de Inteligencia de Datos en un mismo mapa, con su fuente, licencia y atribución.
 
 ## Ciudad
 [mapas.cochid.cl/ciudad](https://mapas.cochid.cl/ciudad)

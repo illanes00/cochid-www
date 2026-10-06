@@ -217,7 +217,7 @@ async function paginaArticulo({ruta,titulo,producto,descripcion,bajada,meta='',m
 async function publicarBlog(){
  await paginaArticulo({
   ruta:'/blog/',titulo:'Blog',producto:'Portal',
-  descripcion:'Notas de Compañía Chilena de Inteligencia de Datos sobre datos nuevos, métodos y cambios del sitio, ordenadas de la más reciente a la más antigua.',
+  descripcion:'Notas de la Compañía Chilena de Inteligencia de Datos sobre datos nuevos, métodos y cambios del sitio, ordenadas de la más reciente a la más antigua.',
   bajada:'Notas sobre datos nuevos, métodos y cambios del sitio, de la más reciente a la más antigua.',
   migas:[['Inicio','/'],['Blog']],cuerpo:indiceBlog(entradas)
  });
@@ -234,8 +234,8 @@ async function publicarBlog(){
  await writeFile(new URL('assets/presupuesto-2027/hilo.txt',out),hilo.tweets.map(t=>t.texto).join('\n\n')+'\n');
  await paginaArticulo({
   ruta:'/novedades/',titulo:'Novedades',producto:'Portal',
-  descripcion:'Datos nuevos, entradas del blog y publicaciones de Compañía Chilena de Inteligencia de Datos, con fecha y fuente de cada novedad.',
-  bajada:'Datos nuevos, entradas del blog y publicaciones de Compañía Chilena de Inteligencia de Datos, con fecha y fuente de cada novedad.',
+  descripcion:'Datos nuevos, entradas del blog y publicaciones de la Compañía Chilena de Inteligencia de Datos, con fecha y fuente de cada novedad.',
+  bajada:'Datos nuevos, entradas del blog y publicaciones de la Compañía Chilena de Inteligencia de Datos, con fecha y fuente de cada novedad.',
   migas:[['Inicio','/'],['Novedades']],cuerpo:paginaNovedades(novedades)
  });
 }
@@ -402,7 +402,7 @@ function aplicarChromeV2(html){
  html=html.replace(/<script defer src="[^\"]*(?:portada\/)?portada\.js"><\/script>/g,'<script defer src="/assets/portal-v2-portada.js"></script>');
  html=html.replace(/<link rel="stylesheet" href="[^\"]*(?:temas\/)?temas\.css">/g,'<link rel="stylesheet" href="/temas/temas.css">');
  if(!html.includes('/assets/chrome-v2/chrome.css'))html=html.replace('</head>','<link rel="stylesheet" href="/assets/chrome-v2/chrome.css">\n<script defer src="/assets/chrome-v2/chrome.js" data-indice="https://cochid.cl/buscar/indice.json" data-raiz="https://cochid.cl/"></script>\n</head>');
- if(!html.includes('type="application/rss+xml"'))html=html.replace('</head>','<link rel="alternate" type="application/rss+xml" title="Blog de Compañía Chilena de Inteligencia de Datos" href="https://cochid.cl/blog/feed.xml">\n</head>');
+ if(!html.includes('type="application/rss+xml"'))html=html.replace('</head>','<link rel="alternate" type="application/rss+xml" title="Blog de la Compañía Chilena de Inteligencia de Datos" href="https://cochid.cl/blog/feed.xml">\n</head>');
  if(!html.includes('/assets/cuenta-panel.0a66d3c77722.js'))html=html.replace('</head>','<script defer src="/assets/cuenta-panel.0a66d3c77722.js" integrity="sha384-LDo8wtGWz2+G/IdHNzh0yaJHW7OioCRqTbf2Er6apvkqMeD0N9KfVruY8kDWEzbZ"></script>\n</head>');
  return sinComentariosHtml(html).replace(/\b(?:COCHID|Cochid)\b/g,'Compañía Chilena de Inteligencia de Datos').replace(/\b(?:overline|eyebrow)\b/g,'meta');
 }

@@ -84,10 +84,10 @@ test('cada entrada trae migas, fecha, dominio, etiquetas, cuerpo, relacionadas, 
     assert.match(html, /<h2 id="relacionadas">Relacionadas<\/h2>/, meta.slug);
     assert.match(html, /href="\/blog\/feed\.xml"/, meta.slug);
     assert.equal((html.match(/<h1\b/g) || []).length, 1, meta.slug);
-    if (meta.dominio.startsWith('null')) assert.doesNotMatch(html, /Dominio:/, meta.slug);
-    else assert.match(html, /Dominio: Finanzas públicas/, meta.slug);
+    if (meta.dominio.startsWith('null')) assert.doesNotMatch(html, /Tema:/, meta.slug);
+    else assert.match(html, /Tema: Finanzas públicas/, meta.slug);
   }
-  assert.match(pagina('/blog/'), /Dominio: Finanzas públicas/);
+  assert.match(pagina('/blog/'), /Tema: Finanzas públicas/);
   assert.match(pagina('/blog/'), /class="badge">navegación</);
 });
 
@@ -147,7 +147,7 @@ test('publica una página 404 propia con kit, logo y enlaces de recuperación', 
 });
 
 test('anuncia el RSS en portada, blog, entradas y novedades', () => {
-  const alterno = '<link rel="alternate" type="application/rss+xml" title="Blog de Compañía Chilena de Inteligencia de Datos" href="https://cochid.cl/blog/feed.xml">';
+  const alterno = '<link rel="alternate" type="application/rss+xml" title="Blog de la Compañía Chilena de Inteligencia de Datos" href="https://cochid.cl/blog/feed.xml">';
   for (const ruta of ['/', '/blog/', '/novedades/', ...rutasEntradas]) assert.ok(pagina(ruta).includes(alterno), ruta);
 });
 
