@@ -22,11 +22,11 @@
   }
  ],
  "titulo": "Secretaría de la Presidencia: más pesos en 2027, pero menos poder de compra",
- "bajada": "Pasaría de $12,3 mil millones en la ley 2026 a $12,4 mil millones en el proyecto 2027.",
+ "bajada": "Pasaría de $12,29 mil millones en la ley 2026 a $12,37 mil millones en el proyecto 2027.",
  "institucion": "Ministerio Secretaría General de la Presidencia",
  "partida": "22",
- "descripcion": "Ministerio Secretaría General de la Presidencia: aporte fiscal libre de $12,3 mil millones en la ley 2026 y $12,4 mil millones en el proyecto 2027 (+0,7 % nominal, −2,2 % con inflación hipotética de 3 %).",
- "texto_x": "Proyecto de presupuesto 2027: el aporte del Fisco a Secretaría de la Presidencia pasa de $12,3 mil millones a $12,4 mil millones (+0,7 %). Con una inflación de 3 %, alcanzaría para comprar 2,2 % menos que en 2026.",
+ "descripcion": "Ministerio Secretaría General de la Presidencia: aporte fiscal libre de $12,29 mil millones en la ley 2026 y $12,37 mil millones en el proyecto 2027 (+0,7 % nominal, −2,2 % con inflación hipotética de 3 %).",
+ "texto_x": "Proyecto de presupuesto 2027: el aporte del Fisco al Ministerio Secretaría General de la Presidencia pasa de $12,29 mil millones a $12,37 mil millones (+0,7 %). Con una inflación de 3 %, alcanzaría para comprar 2,2 % menos que en 2026.",
  "etiqueta": "Secretaría de la Presidencia",
  "icono": "file-text",
  "grafico": {
@@ -57,7 +57,7 @@
   ],
   "anotaciones": []
  },
- "alt": "Ministerio Secretaría General de la Presidencia: aporte fiscal libre de $12,3 mil millones en 2026 y $12,4 mil millones en el proyecto 2027 (+0,7 %); en pesos de 2026, $12,0 mil millones (−2,2 %).",
+ "alt": "Ministerio Secretaría General de la Presidencia: aporte fiscal libre de $12,29 mil millones en 2026 y $12,37 mil millones en el proyecto 2027 (+0,7 %); en pesos de 2026, $12,01 mil millones (−2,2 %).",
  "tabla": {
   "columnas": [
    "Medida",
@@ -68,14 +68,14 @@
   "filas": [
    [
     "Pesos de cada año",
-    "$12,3 mil millones",
-    "$12,4 mil millones",
+    "$12,29 mil millones",
+    "$12,37 mil millones",
     "+0,7 %"
    ],
    [
     "Pesos de 2026 (inflación 3 %)",
-    "$12,3 mil millones",
-    "$12,0 mil millones",
+    "$12,29 mil millones",
+    "$12,01 mil millones",
     "−2,2 %"
    ]
   ]

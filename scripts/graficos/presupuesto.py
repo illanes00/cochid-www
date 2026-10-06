@@ -101,7 +101,7 @@ def plata(miles: int | Decimal) -> str:
     pesos = Decimal(miles) * 1000
     if pesos >= Decimal(10) ** 12:
         return f"${num(pesos / Decimal(10) ** 12)}{NBSP}billones"
-    return f"${num(pesos / Decimal(10) ** 9, 0 if pesos >= Decimal(10) ** 11 else 1)}{NBSP}mil{NBSP}millones"
+    return f"${num(pesos / Decimal(10) ** 9, 0 if pesos >= Decimal(10) ** 11 else 2 if pesos < Decimal(10) ** 11 // 4 else 1)}{NBSP}mil{NBSP}millones"
 
 
 def plata_corta(miles: int | Decimal) -> str:
@@ -299,10 +299,10 @@ def ficha_seguridad(d: dict) -> dict:
         bajada=("Gendarmería pasa de Justicia a Seguridad Pública en 2027. Para comparar lo mismo, hay que sumarla "
                 "también en 2026."),
         descripcion=(f"Comparando el mismo perímetro, el aporte fiscal libre de Seguridad Pública con Gendarmería sube "
-                     f"{plano(pct(nominal))} nominal y {plano(pct(real))} con inflación hipotética de 3 %; la comparación directa "
+                     f"{plano(pct(nominal, 1, False))} nominal y {plano(pct(real, 1, False))} con inflación hipotética de 3 %; la comparación directa "
                      f"({plano(pct(directa))}) mezcla el traslado de Gendarmería."),
-        texto_x=(f"Proyecto 2027: el aporte del Fisco a Seguridad Pública parece subir {pct(directa)}, pero incluye a "
-                 f"Gendarmería, que en 2026 estaba en Justicia. Con Gendarmería en ambos años, sube {pct(nominal)}."),
+        texto_x=(f"Proyecto 2027: el aporte del Fisco a Seguridad Pública parece subir {pct(directa, 1, False)}, pero incluye a "
+                 f"Gendarmería, que en 2026 estaba en Justicia. Con Gendarmería en ambos años, sube {pct(nominal, 1, False)}."),
         etiqueta="Presupuesto 2027", icono="shield-check",
         grafico={"tipo": "comparacion", "serie_a": "Ley 2026", "serie_b": "Proyecto 2027",
                  "url": "cochid.cl/g/presupuesto-2027-seguridad", "filas": filas,
@@ -371,7 +371,7 @@ def ficha_partida(d: dict, p: dict) -> dict:
                       f"{'más' if real >= 0 else 'menos'} que en 2026.")
         else:
             remate = f"Con una inflación de 3{NBSP}%, la caída en poder de compra sería de {pct(-real, 1, False)}."
-        texto_x = (f"Proyecto de presupuesto 2027: el aporte del Fisco {al(nombre if len(nombre) < 45 else corto)} pasa de "
+        texto_x = (f"Proyecto de presupuesto 2027: el aporte del Fisco {al(nombre)} pasa de "
                    f"{plata(a)} a {plata(b)} ({pct(nominal)}). {remate}")
         anot = None
         tabla_filas = [["Pesos de cada año", plano(plata(a)), plano(plata(b)), plano(pct(nominal))],

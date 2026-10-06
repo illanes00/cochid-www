@@ -22,11 +22,11 @@
   }
  ],
  "titulo": "Presidencia: el aporte del Fisco baja 0,1 % en el proyecto 2027",
- "bajada": "Pasaría de $22,8 mil millones en la ley 2026 a $22,8 mil millones en el proyecto 2027.",
+ "bajada": "Pasaría de $22,83 mil millones en la ley 2026 a $22,81 mil millones en el proyecto 2027.",
  "institucion": "Presidencia de la República",
  "partida": "01",
- "descripcion": "Presidencia de la República: aporte fiscal libre de $22,8 mil millones en la ley 2026 y $22,8 mil millones en el proyecto 2027 (−0,1 % nominal, −3,0 % con inflación hipotética de 3 %).",
- "texto_x": "Proyecto de presupuesto 2027: el aporte del Fisco a la Presidencia de la República pasa de $22,8 mil millones a $22,8 mil millones (−0,1 %). Con una inflación de 3 %, la caída en poder de compra sería de 3,0 %.",
+ "descripcion": "Presidencia de la República: aporte fiscal libre de $22,83 mil millones en la ley 2026 y $22,81 mil millones en el proyecto 2027 (−0,1 % nominal, −3,0 % con inflación hipotética de 3 %).",
+ "texto_x": "Proyecto de presupuesto 2027: el aporte del Fisco a la Presidencia de la República pasa de $22,83 mil millones a $22,81 mil millones (−0,1 %). Con una inflación de 3 %, la caída en poder de compra sería de 3,0 %.",
  "etiqueta": "Presidencia de la República",
  "icono": "flag",
  "grafico": {
@@ -57,7 +57,7 @@
   ],
   "anotaciones": []
  },
- "alt": "Presidencia de la República: aporte fiscal libre de $22,8 mil millones en 2026 y $22,8 mil millones en el proyecto 2027 (−0,1 %); en pesos de 2026, $22,1 mil millones (−3,0 %).",
+ "alt": "Presidencia de la República: aporte fiscal libre de $22,83 mil millones en 2026 y $22,81 mil millones en el proyecto 2027 (−0,1 %); en pesos de 2026, $22,14 mil millones (−3,0 %).",
  "tabla": {
   "columnas": [
    "Medida",
@@ -68,14 +68,14 @@
   "filas": [
    [
     "Pesos de cada año",
-    "$22,8 mil millones",
-    "$22,8 mil millones",
+    "$22,83 mil millones",
+    "$22,81 mil millones",
     "−0,1 %"
    ],
    [
     "Pesos de 2026 (inflación 3 %)",
-    "$22,8 mil millones",
-    "$22,1 mil millones",
+    "$22,83 mil millones",
+    "$22,14 mil millones",
     "−3,0 %"
    ]
   ]

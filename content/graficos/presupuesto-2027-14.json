@@ -22,11 +22,11 @@
   }
  ],
  "titulo": "Bienes Nacionales: más pesos en 2027, pero menos poder de compra",
- "bajada": "Pasaría de $9,4 mil millones en la ley 2026 a $9,7 mil millones en el proyecto 2027.",
+ "bajada": "Pasaría de $9,43 mil millones en la ley 2026 a $9,71 mil millones en el proyecto 2027.",
  "institucion": "Ministerio de Bienes Nacionales",
  "partida": "14",
- "descripcion": "Ministerio de Bienes Nacionales: aporte fiscal libre de $9,4 mil millones en la ley 2026 y $9,7 mil millones en el proyecto 2027 (+2,9 % nominal, −0,1 % con inflación hipotética de 3 %).",
- "texto_x": "Proyecto de presupuesto 2027: el aporte del Fisco al Ministerio de Bienes Nacionales pasa de $9,4 mil millones a $9,7 mil millones (+2,9 %). Con una inflación de 3 %, alcanzaría para comprar 0,1 % menos que en 2026.",
+ "descripcion": "Ministerio de Bienes Nacionales: aporte fiscal libre de $9,43 mil millones en la ley 2026 y $9,71 mil millones en el proyecto 2027 (+2,9 % nominal, −0,1 % con inflación hipotética de 3 %).",
+ "texto_x": "Proyecto de presupuesto 2027: el aporte del Fisco al Ministerio de Bienes Nacionales pasa de $9,43 mil millones a $9,71 mil millones (+2,9 %). Con una inflación de 3 %, alcanzaría para comprar 0,1 % menos que en 2026.",
  "etiqueta": "Ministerio de Bienes Nacionales",
  "icono": "map-pin",
  "grafico": {
@@ -57,7 +57,7 @@
   ],
   "anotaciones": []
  },
- "alt": "Ministerio de Bienes Nacionales: aporte fiscal libre de $9,4 mil millones en 2026 y $9,7 mil millones en el proyecto 2027 (+2,9 %); en pesos de 2026, $9,4 mil millones (−0,1 %).",
+ "alt": "Ministerio de Bienes Nacionales: aporte fiscal libre de $9,43 mil millones en 2026 y $9,71 mil millones en el proyecto 2027 (+2,9 %); en pesos de 2026, $9,42 mil millones (−0,1 %).",
  "tabla": {
   "columnas": [
    "Medida",
@@ -68,14 +68,14 @@
   "filas": [
    [
     "Pesos de cada año",
-    "$9,4 mil millones",
-    "$9,7 mil millones",
+    "$9,43 mil millones",
+    "$9,71 mil millones",
     "+2,9 %"
    ],
    [
     "Pesos de 2026 (inflación 3 %)",
-    "$9,4 mil millones",
-    "$9,4 mil millones",
+    "$9,43 mil millones",
+    "$9,42 mil millones",
     "−0,1 %"
    ]
   ]
