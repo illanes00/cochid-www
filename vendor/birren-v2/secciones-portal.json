@@ -1,0 +1,306 @@
+[
+  {
+    "producto": "portal",
+    "slug": "inicio",
+    "nombre": "Portada",
+    "familia": "neutro (sin familia)",
+    "icono": "house",
+    "ambiente": "--env-acogida"
+  },
+  {
+    "producto": "portal",
+    "slug": "seguridad-justicia",
+    "nombre": "Seguridad y justicia",
+    "familia": "--fam-estado",
+    "icono": "gavel",
+    "ambiente": "--env-datos"
+  },
+  {
+    "producto": "portal",
+    "slug": "politica-instituciones",
+    "nombre": "Política e instituciones",
+    "familia": "--fam-estado",
+    "icono": "building-2",
+    "ambiente": "--env-datos"
+  },
+  {
+    "producto": "portal",
+    "slug": "poblacion-sociedad",
+    "nombre": "Población y sociedad",
+    "familia": "--fam-estado",
+    "icono": "users",
+    "ambiente": "--env-datos"
+  },
+  {
+    "producto": "portal",
+    "slug": "congreso",
+    "nombre": "Subsitio: Congreso",
+    "familia": "--fam-estado",
+    "icono": "scale",
+    "ambiente": "--env-datos"
+  },
+  {
+    "producto": "portal",
+    "slug": "elecciones",
+    "nombre": "Subsitio: Elecciones",
+    "familia": "--fam-estado",
+    "icono": "vote",
+    "ambiente": "--env-datos"
+  },
+  {
+    "producto": "portal",
+    "slug": "votos",
+    "nombre": "Subsitio: Votos Cámara",
+    "familia": "--fam-estado",
+    "icono": "vote",
+    "ambiente": "--env-datos"
+  },
+  {
+    "producto": "portal",
+    "slug": "lex",
+    "nombre": "Subsitio: Lex",
+    "familia": "--fam-estado",
+    "icono": "scale",
+    "ambiente": "--env-datos"
+  },
+  {
+    "producto": "portal",
+    "slug": "concepciones",
+    "nombre": "Investigación: Concepciones en Chile",
+    "familia": "--fam-estado",
+    "icono": "calendar",
+    "ambiente": "--env-lectura"
+  },
+  {
+    "producto": "portal",
+    "slug": "economia-trabajo",
+    "nombre": "Economía y trabajo",
+    "familia": "--fam-dinero",
+    "icono": "briefcase",
+    "ambiente": "--env-datos"
+  },
+  {
+    "producto": "portal",
+    "slug": "empresas-innovacion",
+    "nombre": "Empresas e innovación",
+    "familia": "--fam-dinero",
+    "icono": "factory",
+    "ambiente": "--env-datos"
+  },
+  {
+    "producto": "portal",
+    "slug": "finanzas-publicas",
+    "nombre": "Finanzas públicas",
+    "familia": "--fam-dinero",
+    "icono": "landmark",
+    "ambiente": "--env-datos"
+  },
+  {
+    "producto": "portal",
+    "slug": "economia",
+    "nombre": "Subsitio: Economía",
+    "familia": "--fam-dinero",
+    "icono": "trending-up",
+    "ambiente": "--env-datos"
+  },
+  {
+    "producto": "portal",
+    "slug": "salud",
+    "nombre": "Salud",
+    "familia": "--fam-saber",
+    "icono": "stethoscope",
+    "ambiente": "--env-datos"
+  },
+  {
+    "producto": "portal",
+    "slug": "educacion",
+    "nombre": "Educación",
+    "familia": "--fam-saber",
+    "icono": "school",
+    "ambiente": "--env-datos"
+  },
+  {
+    "producto": "portal",
+    "slug": "medicamentos",
+    "nombre": "Subsitio: Medicamentos (informe CIF)",
+    "familia": "--fam-saber",
+    "icono": "heart-pulse",
+    "ambiente": "--env-lectura"
+  },
+  {
+    "producto": "portal",
+    "slug": "territorio-vivienda",
+    "nombre": "Territorio y vivienda",
+    "familia": "--fam-territorio",
+    "icono": "home",
+    "ambiente": "--env-datos"
+  },
+  {
+    "producto": "portal",
+    "slug": "transporte-infraestructura",
+    "nombre": "Transporte e infraestructura",
+    "familia": "--fam-territorio",
+    "icono": "bus",
+    "ambiente": "--env-datos"
+  },
+  {
+    "producto": "portal",
+    "slug": "medio-ambiente-energia",
+    "nombre": "Medio ambiente y energía",
+    "familia": "--fam-territorio",
+    "icono": "leaf",
+    "ambiente": "--env-datos"
+  },
+  {
+    "producto": "portal",
+    "slug": "tpte",
+    "nombre": "Subsitios: Transporte y Trenes",
+    "familia": "--fam-territorio",
+    "icono": "bus",
+    "ambiente": "--env-datos"
+  },
+  {
+    "producto": "portal",
+    "slug": "bici",
+    "nombre": "Subsitio: Bici",
+    "familia": "--fam-territorio",
+    "icono": "map-pin",
+    "ambiente": "--env-datos"
+  },
+  {
+    "producto": "portal",
+    "slug": "cables",
+    "nombre": "Subsitio: Cables",
+    "familia": "--fam-territorio",
+    "icono": "layers",
+    "ambiente": "--env-datos"
+  },
+  {
+    "producto": "portal",
+    "slug": "clima",
+    "nombre": "Subsitio: Clima",
+    "familia": "--fam-territorio",
+    "icono": "sun",
+    "ambiente": "--env-datos"
+  },
+  {
+    "producto": "portal",
+    "slug": "sobre",
+    "nombre": "Barra: Sobre nosotros",
+    "familia": "neutro (sin familia)",
+    "icono": "info",
+    "ambiente": "--env-acogida"
+  },
+  {
+    "producto": "portal",
+    "slug": "datos",
+    "nombre": "Barra: Datos",
+    "familia": "neutro (sin familia)",
+    "icono": "database",
+    "ambiente": "--env-datos"
+  },
+  {
+    "producto": "portal",
+    "slug": "mapas",
+    "nombre": "Barra: Mapas",
+    "familia": "neutro (sin familia)",
+    "icono": "map",
+    "ambiente": "--env-datos"
+  },
+  {
+    "producto": "portal",
+    "slug": "investigaciones",
+    "nombre": "Barra: Investigaciones",
+    "familia": "neutro (sin familia)",
+    "icono": "book-open",
+    "ambiente": "--env-lectura"
+  },
+  {
+    "producto": "portal",
+    "slug": "blog",
+    "nombre": "Barra: Blog",
+    "familia": "neutro (sin familia)",
+    "icono": "file-text",
+    "ambiente": "--env-lectura"
+  },
+  {
+    "producto": "portal",
+    "slug": "proyectos",
+    "nombre": "Barra: Proyectos",
+    "familia": "neutro (sin familia)",
+    "icono": "folder-kanban",
+    "ambiente": "--env-acogida"
+  },
+  {
+    "producto": "portal",
+    "slug": "contacto",
+    "nombre": "Barra: Contacto",
+    "familia": "neutro (sin familia)",
+    "icono": "mail",
+    "ambiente": "--env-servicio"
+  },
+  {
+    "producto": "portal",
+    "slug": "catalogo",
+    "nombre": "Datos: catálogo y explorar",
+    "familia": "neutro (sin familia)",
+    "icono": "search",
+    "ambiente": "--env-datos"
+  },
+  {
+    "producto": "portal",
+    "slug": "ficha",
+    "nombre": "Datos: ficha de un conjunto",
+    "familia": "neutro (sin familia)",
+    "icono": "database",
+    "ambiente": "--env-datos"
+  },
+  {
+    "producto": "portal",
+    "slug": "comparar",
+    "nombre": "Datos: comparar",
+    "familia": "neutro (sin familia)",
+    "icono": "bar-chart-3",
+    "ambiente": "--env-datos"
+  },
+  {
+    "producto": "portal",
+    "slug": "biblioteca",
+    "nombre": "Datos: biblioteca y calidad",
+    "familia": "neutro (sin familia)",
+    "icono": "book-open",
+    "ambiente": "--env-datos"
+  },
+  {
+    "producto": "portal",
+    "slug": "metodologia",
+    "nombre": "Datos: metodología, documentación y preguntas frecuentes",
+    "familia": "neutro (sin familia)",
+    "icono": "book-open",
+    "ambiente": "--env-lectura"
+  },
+  {
+    "producto": "portal",
+    "slug": "cambio-hora",
+    "nombre": "Investigación: Cambio de hora",
+    "familia": "neutro (sin familia)",
+    "icono": "clock",
+    "ambiente": "--env-lectura"
+  },
+  {
+    "producto": "portal",
+    "slug": "herramientas",
+    "nombre": "Herramientas: Gráficos, Taller, Scribe y Prosa",
+    "familia": "neutro (sin familia)",
+    "icono": "wand-sparkles",
+    "ambiente": "--env-trabajo"
+  },
+  {
+    "producto": "portal",
+    "slug": "mundial",
+    "nombre": "Subsitio: Mundial 2026 (archivado)",
+    "familia": "neutro (sin familia)",
+    "icono": "trophy",
+    "ambiente": "--env-acogida"
+  }
+]

@@ -4,10 +4,11 @@
   "destinos": 7,
   "registro_sha256": "f18e072d73f9b152b53127daf6b9186e0947b4b7c0c4c6d2d1c0efe839b9a2c0",
   "sha256": {
-    "chrome.css": "d695d51843d4439c06c7be5cbceac9f03b1d9295cd884b64ac70fc60b074a406",
+    "chrome.css": "f8a72dc51762dfcb38595e61b6554550e47b28de282a5e5d7bca3d46a0908a6a",
     "chrome.js": "1effe6fa24cee5db9978a09c5e2d7e300c47a11c9ba07066b1c5084496fa09f8",
-    "footer.html": "73b7982e975900d7bb5ad34c52e70e1bd2ee6114d9409e5db90906d57521e199",
-    "header.html": "0332d988731133cede4e9cb35f63535c25d53ced6c9e56b5b452848032b37657",
+    "footer.html": "921f4b7fbb4c80895e2bfe2320de5b4730915730154c923a01ce5ac687befe07",
+    "header.html": "2bdc06b77a1d18d21b5161022afee1a407c2de41f2d1e16999ec7ffb44ded666",
     "iconos.json": "b9c48a6c248b5e4667518472ff34db4286a4a8686f1aa4bbfbefc036c3f5a5ca"
-  }
+  },
+  "birren_kit_digest": "62845b655c03cb86561b403d3f4f5fdd3f08497cc0aae36866b4d50feaa0e536"
 }

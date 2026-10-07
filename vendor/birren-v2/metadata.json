@@ -1,0 +1,578 @@
+{
+  "schema": "cis.style.icons.v1",
+  "count": 81,
+  "source": "lucide-react@1.31.0",
+  "source_sha256": "2f36062f38350714e65a16132179b97aea5d9c4a05e81eb0dd206eea32a30122",
+  "license_url": "https://raw.githubusercontent.com/lucide-icons/lucide/1.31.0/LICENSE",
+  "license_sha256": "b495047bd93a9b06913511076f504daba17d5bbeb3e0650f3bb53a4220329c57",
+  "icons": {
+    "octagon-alert": {
+      "grupo": "estado",
+      "uso": "peligro",
+      "fuente": "lucide-react 1.31.0 icons/octagon-alert.mjs",
+      "alias_de": null,
+      "licencia": "ISC"
+    },
+    "siren": {
+      "grupo": "estado",
+      "uso": "alerta, emergencia",
+      "fuente": "lucide-react 1.31.0 icons/siren.mjs",
+      "alias_de": null,
+      "licencia": "ISC"
+    },
+    "bell-ring": {
+      "grupo": "estado",
+      "uso": "alerta, aviso activo",
+      "fuente": "lucide-react 1.31.0 icons/bell-ring.mjs",
+      "alias_de": null,
+      "licencia": "ISC"
+    },
+    "triangle-alert": {
+      "grupo": "estado",
+      "uso": "precaución (con punto)",
+      "fuente": "lucide-react 1.31.0 icons/triangle-alert.mjs",
+      "alias_de": null,
+      "licencia": "ISC",
+      "adaptacion": "Punto circular visible, r=1.1; aprobacion D-v2-7."
+    },
+    "circle-check": {
+      "grupo": "estado",
+      "uso": "seguro, completado",
+      "fuente": "lucide-react 1.31.0 icons/circle-check.mjs",
+      "alias_de": null,
+      "licencia": "ISC"
+    },
+    "info": {
+      "grupo": "estado",
+      "uso": "información",
+      "fuente": "lucide-react 1.31.0 icons/info.mjs",
+      "alias_de": null,
+      "licencia": "ISC"
+    },
+    "circle-x": {
+      "grupo": "estado",
+      "uso": "error, cerrar",
+      "fuente": "lucide-react 1.31.0 icons/circle-x.mjs",
+      "alias_de": null,
+      "licencia": "ISC"
+    },
+    "lightbulb": {
+      "grupo": "estado",
+      "uso": "sugerencia",
+      "fuente": "lucide-react 1.31.0 icons/lightbulb.mjs",
+      "alias_de": null,
+      "licencia": "ISC"
+    },
+    "circle-help": {
+      "grupo": "estado",
+      "uso": "ayuda",
+      "fuente": "lucide-react 1.31.0 icons/circle-question-mark.mjs",
+      "alias_de": "circle-question-mark",
+      "licencia": "ISC"
+    },
+    "loader": {
+      "grupo": "estado",
+      "uso": "en curso",
+      "fuente": "lucide-react 1.31.0 icons/loader.mjs",
+      "alias_de": null,
+      "licencia": "ISC"
+    },
+    "search": {
+      "grupo": "interfaz",
+      "uso": "buscar",
+      "fuente": "lucide-react 1.31.0 icons/search.mjs",
+      "alias_de": null,
+      "licencia": "ISC"
+    },
+    "menu": {
+      "grupo": "interfaz",
+      "uso": "menú",
+      "fuente": "lucide-react 1.31.0 icons/menu.mjs",
+      "alias_de": null,
+      "licencia": "ISC"
+    },
+    "user": {
+      "grupo": "interfaz",
+      "uso": "cuenta",
+      "fuente": "lucide-react 1.31.0 icons/user.mjs",
+      "alias_de": null,
+      "licencia": "ISC"
+    },
+    "log-in": {
+      "grupo": "interfaz",
+      "uso": "iniciar sesión",
+      "fuente": "lucide-react 1.31.0 icons/log-in.mjs",
+      "alias_de": null,
+      "licencia": "ISC"
+    },
+    "chevron-right": {
+      "grupo": "interfaz",
+      "uso": "siguiente",
+      "fuente": "lucide-react 1.31.0 icons/chevron-right.mjs",
+      "alias_de": null,
+      "licencia": "ISC"
+    },
+    "chevron-down": {
+      "grupo": "interfaz",
+      "uso": "desplegar",
+      "fuente": "lucide-react 1.31.0 icons/chevron-down.mjs",
+      "alias_de": null,
+      "licencia": "ISC"
+    },
+    "arrow-right": {
+      "grupo": "interfaz",
+      "uso": "ir",
+      "fuente": "lucide-react 1.31.0 icons/arrow-right.mjs",
+      "alias_de": null,
+      "licencia": "ISC"
+    },
+    "arrow-up-right": {
+      "grupo": "interfaz",
+      "uso": "enlace externo",
+      "fuente": "lucide-react 1.31.0 icons/arrow-up-right.mjs",
+      "alias_de": null,
+      "licencia": "ISC"
+    },
+    "bookmark": {
+      "grupo": "interfaz",
+      "uso": "guardar",
+      "fuente": "lucide-react 1.31.0 icons/bookmark.mjs",
+      "alias_de": null,
+      "licencia": "ISC"
+    },
+    "share-2": {
+      "grupo": "interfaz",
+      "uso": "compartir",
+      "fuente": "lucide-react 1.31.0 icons/share-2.mjs",
+      "alias_de": null,
+      "licencia": "ISC"
+    },
+    "clock": {
+      "grupo": "interfaz",
+      "uso": "hora, tiempo de lectura",
+      "fuente": "lucide-react 1.31.0 icons/clock.mjs",
+      "alias_de": null,
+      "licencia": "ISC"
+    },
+    "calendar": {
+      "grupo": "interfaz",
+      "uso": "fecha",
+      "fuente": "lucide-react 1.31.0 icons/calendar.mjs",
+      "alias_de": null,
+      "licencia": "ISC"
+    },
+    "filter": {
+      "grupo": "interfaz",
+      "uso": "filtrar",
+      "fuente": "lucide-react 1.31.0 icons/funnel.mjs",
+      "alias_de": "funnel",
+      "licencia": "ISC"
+    },
+    "download": {
+      "grupo": "interfaz",
+      "uso": "descargar",
+      "fuente": "lucide-react 1.31.0 icons/download.mjs",
+      "alias_de": null,
+      "licencia": "ISC"
+    },
+    "settings": {
+      "grupo": "interfaz",
+      "uso": "ajustes",
+      "fuente": "lucide-react 1.31.0 icons/settings.mjs",
+      "alias_de": null,
+      "licencia": "ISC"
+    },
+    "plus": {
+      "grupo": "interfaz",
+      "uso": "agregar",
+      "fuente": "lucide-react 1.31.0 icons/plus.mjs",
+      "alias_de": null,
+      "licencia": "ISC"
+    },
+    "x": {
+      "grupo": "interfaz",
+      "uso": "cerrar",
+      "fuente": "lucide-react 1.31.0 icons/x.mjs",
+      "alias_de": null,
+      "licencia": "ISC"
+    },
+    "sun": {
+      "grupo": "interfaz",
+      "uso": "tema claro",
+      "fuente": "lucide-react 1.31.0 icons/sun.mjs",
+      "alias_de": null,
+      "licencia": "ISC"
+    },
+    "moon": {
+      "grupo": "interfaz",
+      "uso": "tema oscuro",
+      "fuente": "lucide-react 1.31.0 icons/moon.mjs",
+      "alias_de": null,
+      "licencia": "ISC"
+    },
+    "house": {
+      "grupo": "interfaz",
+      "uso": "inicio",
+      "fuente": "lucide-react 1.31.0 icons/house.mjs",
+      "alias_de": null,
+      "licencia": "ISC"
+    },
+    "eye": {
+      "grupo": "interfaz",
+      "uso": "ver",
+      "fuente": "lucide-react 1.31.0 icons/eye.mjs",
+      "alias_de": null,
+      "licencia": "ISC"
+    },
+    "star": {
+      "grupo": "interfaz",
+      "uso": "destacado",
+      "fuente": "lucide-react 1.31.0 icons/star.mjs",
+      "alias_de": null,
+      "licencia": "ISC"
+    },
+    "tag": {
+      "grupo": "interfaz",
+      "uso": "etiqueta",
+      "fuente": "lucide-react 1.31.0 icons/tag.mjs",
+      "alias_de": null,
+      "licencia": "ISC"
+    },
+    "camera": {
+      "grupo": "interfaz",
+      "uso": "foto, crédito de imagen",
+      "fuente": "lucide-react 1.31.0 icons/camera.mjs",
+      "alias_de": null,
+      "licencia": "ISC"
+    },
+    "quote": {
+      "grupo": "interfaz",
+      "uso": "cita",
+      "fuente": "lucide-react 1.31.0 icons/quote.mjs",
+      "alias_de": null,
+      "licencia": "ISC"
+    },
+    "external-link": {
+      "grupo": "interfaz",
+      "uso": "abrir fuera",
+      "fuente": "lucide-react 1.31.0 icons/external-link.mjs",
+      "alias_de": null,
+      "licencia": "ISC"
+    },
+    "landmark": {
+      "grupo": "periodismo2",
+      "uso": "política; también finanzas (portal)",
+      "fuente": "lucide-react 1.31.0 icons/landmark.mjs",
+      "alias_de": null,
+      "licencia": "ISC"
+    },
+    "scale": {
+      "grupo": "periodismo2",
+      "uso": "congreso, justicia",
+      "fuente": "lucide-react 1.31.0 icons/scale.mjs",
+      "alias_de": null,
+      "licencia": "ISC"
+    },
+    "trending-up": {
+      "grupo": "periodismo2",
+      "uso": "economía",
+      "fuente": "lucide-react 1.31.0 icons/trending-up.mjs",
+      "alias_de": null,
+      "licencia": "ISC"
+    },
+    "briefcase": {
+      "grupo": "periodismo2",
+      "uso": "trabajo",
+      "fuente": "lucide-react 1.31.0 icons/briefcase.mjs",
+      "alias_de": null,
+      "licencia": "ISC"
+    },
+    "globe": {
+      "grupo": "periodismo2",
+      "uso": "mundo",
+      "fuente": "lucide-react 1.31.0 icons/globe.mjs",
+      "alias_de": null,
+      "licencia": "ISC"
+    },
+    "shield": {
+      "grupo": "periodismo2",
+      "uso": "policial",
+      "fuente": "lucide-react 1.31.0 icons/shield.mjs",
+      "alias_de": null,
+      "licencia": "ISC"
+    },
+    "cpu": {
+      "grupo": "periodismo2",
+      "uso": "tecnología",
+      "fuente": "lucide-react 1.31.0 icons/cpu.mjs",
+      "alias_de": null,
+      "licencia": "ISC"
+    },
+    "flask-conical": {
+      "grupo": "periodismo2",
+      "uso": "ciencia",
+      "fuente": "lucide-react 1.31.0 icons/flask-conical.mjs",
+      "alias_de": null,
+      "licencia": "ISC"
+    },
+    "heart-pulse": {
+      "grupo": "periodismo2",
+      "uso": "salud",
+      "fuente": "lucide-react 1.31.0 icons/heart-pulse.mjs",
+      "alias_de": null,
+      "licencia": "ISC"
+    },
+    "graduation-cap": {
+      "grupo": "periodismo2",
+      "uso": "educación",
+      "fuente": "lucide-react 1.31.0 icons/graduation-cap.mjs",
+      "alias_de": null,
+      "licencia": "ISC"
+    },
+    "palette": {
+      "grupo": "periodismo2",
+      "uso": "cultura",
+      "fuente": "lucide-react 1.31.0 icons/palette.mjs",
+      "alias_de": null,
+      "licencia": "ISC"
+    },
+    "film": {
+      "grupo": "periodismo2",
+      "uso": "entretención",
+      "fuente": "lucide-react 1.31.0 icons/film.mjs",
+      "alias_de": null,
+      "licencia": "ISC"
+    },
+    "gamepad-2": {
+      "grupo": "periodismo2",
+      "uso": "gaming",
+      "fuente": "lucide-react 1.31.0 icons/gamepad-2.mjs",
+      "alias_de": null,
+      "licencia": "ISC"
+    },
+    "trophy": {
+      "grupo": "periodismo2",
+      "uso": "deportes",
+      "fuente": "lucide-react 1.31.0 icons/trophy.mjs",
+      "alias_de": null,
+      "licencia": "ISC"
+    },
+    "map-pin": {
+      "grupo": "periodismo2",
+      "uso": "regiones",
+      "fuente": "lucide-react 1.31.0 icons/map-pin.mjs",
+      "alias_de": null,
+      "licencia": "ISC"
+    },
+    "message-square-quote": {
+      "grupo": "periodismo2",
+      "uso": "opinión",
+      "fuente": "lucide-react 1.31.0 icons/message-square-quote.mjs",
+      "alias_de": null,
+      "licencia": "ISC"
+    },
+    "newspaper": {
+      "grupo": "periodismo2",
+      "uso": "noticias",
+      "fuente": "lucide-react 1.31.0 icons/newspaper.mjs",
+      "alias_de": null,
+      "licencia": "ISC"
+    },
+    "mail": {
+      "grupo": "periodismo2",
+      "uso": "newsletter",
+      "fuente": "lucide-react 1.31.0 icons/mail.mjs",
+      "alias_de": null,
+      "licencia": "ISC"
+    },
+    "mountain": {
+      "grupo": "periodismo2",
+      "uso": "medio ambiente",
+      "fuente": "lucide-react 1.31.0 icons/mountain.mjs",
+      "alias_de": null,
+      "licencia": "ISC"
+    },
+    "audio-lines": {
+      "grupo": "usaia",
+      "uso": "audio",
+      "fuente": "lucide-react 1.31.0 icons/audio-lines.mjs",
+      "alias_de": null,
+      "licencia": "ISC"
+    },
+    "file-text": {
+      "grupo": "usaia",
+      "uso": "documentos",
+      "fuente": "lucide-react 1.31.0 icons/file-text.mjs",
+      "alias_de": null,
+      "licencia": "ISC"
+    },
+    "file": {
+      "grupo": "usaia",
+      "uso": "archivo",
+      "fuente": "lucide-react 1.31.0 icons/file.mjs",
+      "alias_de": null,
+      "licencia": "ISC"
+    },
+    "image": {
+      "grupo": "usaia",
+      "uso": "imagen",
+      "fuente": "lucide-react 1.31.0 icons/image.mjs",
+      "alias_de": null,
+      "licencia": "ISC"
+    },
+    "wand-sparkles": {
+      "grupo": "usaia",
+      "uso": "creación asistida",
+      "fuente": "lucide-react 1.31.0 icons/wand-sparkles.mjs",
+      "alias_de": null,
+      "licencia": "ISC"
+    },
+    "paintbrush": {
+      "grupo": "usaia",
+      "uso": "diseño",
+      "fuente": "lucide-react 1.31.0 icons/paintbrush.mjs",
+      "alias_de": null,
+      "licencia": "ISC"
+    },
+    "map": {
+      "grupo": "usaia",
+      "uso": "mapas",
+      "fuente": "lucide-react 1.31.0 icons/map.mjs",
+      "alias_de": null,
+      "licencia": "ISC"
+    },
+    "bar-chart-3": {
+      "grupo": "usaia",
+      "uso": "gráficos",
+      "fuente": "lucide-react 1.31.0 icons/chart-column.mjs",
+      "alias_de": "chart-column",
+      "licencia": "ISC"
+    },
+    "calculator": {
+      "grupo": "usaia",
+      "uso": "cálculo",
+      "fuente": "lucide-react 1.31.0 icons/calculator.mjs",
+      "alias_de": null,
+      "licencia": "ISC"
+    },
+    "code": {
+      "grupo": "usaia",
+      "uso": "código",
+      "fuente": "lucide-react 1.31.0 icons/code.mjs",
+      "alias_de": null,
+      "licencia": "ISC"
+    },
+    "database": {
+      "grupo": "usaia",
+      "uso": "datos",
+      "fuente": "lucide-react 1.31.0 icons/database.mjs",
+      "alias_de": null,
+      "licencia": "ISC"
+    },
+    "message-circle": {
+      "grupo": "usaia",
+      "uso": "chat",
+      "fuente": "lucide-react 1.31.0 icons/message-circle.mjs",
+      "alias_de": null,
+      "licencia": "ISC"
+    },
+    "folder-kanban": {
+      "grupo": "usaia",
+      "uso": "proyectos",
+      "fuente": "lucide-react 1.31.0 icons/folder-kanban.mjs",
+      "alias_de": null,
+      "licencia": "ISC"
+    },
+    "credit-card": {
+      "grupo": "usaia",
+      "uso": "pagos, billetera",
+      "fuente": "lucide-react 1.31.0 icons/credit-card.mjs",
+      "alias_de": null,
+      "licencia": "ISC"
+    },
+    "layers": {
+      "grupo": "usaia",
+      "uso": "capas, apps",
+      "fuente": "lucide-react 1.31.0 icons/layers.mjs",
+      "alias_de": null,
+      "licencia": "ISC"
+    },
+    "stethoscope": {
+      "grupo": "portal",
+      "uso": "salud",
+      "fuente": "lucide-react 1.31.0 icons/stethoscope.mjs",
+      "alias_de": null,
+      "licencia": "ISC"
+    },
+    "school": {
+      "grupo": "portal",
+      "uso": "educación",
+      "fuente": "lucide-react 1.31.0 icons/school.mjs",
+      "alias_de": null,
+      "licencia": "ISC"
+    },
+    "factory": {
+      "grupo": "portal",
+      "uso": "empresas",
+      "fuente": "lucide-react 1.31.0 icons/factory.mjs",
+      "alias_de": null,
+      "licencia": "ISC"
+    },
+    "users": {
+      "grupo": "portal",
+      "uso": "población",
+      "fuente": "lucide-react 1.31.0 icons/users.mjs",
+      "alias_de": null,
+      "licencia": "ISC"
+    },
+    "home": {
+      "grupo": "portal",
+      "uso": "vivienda",
+      "fuente": "lucide-react 1.31.0 icons/house.mjs",
+      "alias_de": "house",
+      "licencia": "ISC"
+    },
+    "bus": {
+      "grupo": "portal",
+      "uso": "transporte",
+      "fuente": "lucide-react 1.31.0 icons/bus.mjs",
+      "alias_de": null,
+      "licencia": "ISC"
+    },
+    "leaf": {
+      "grupo": "portal",
+      "uso": "medio ambiente",
+      "fuente": "lucide-react 1.31.0 icons/leaf.mjs",
+      "alias_de": null,
+      "licencia": "ISC"
+    },
+    "gavel": {
+      "grupo": "portal",
+      "uso": "justicia",
+      "fuente": "lucide-react 1.31.0 icons/gavel.mjs",
+      "alias_de": null,
+      "licencia": "ISC"
+    },
+    "vote": {
+      "grupo": "portal",
+      "uso": "instituciones, elecciones",
+      "fuente": "lucide-react 1.31.0 icons/vote.mjs",
+      "alias_de": null,
+      "licencia": "ISC"
+    },
+    "building-2": {
+      "grupo": "portal",
+      "uso": "instituciones",
+      "fuente": "lucide-react 1.31.0 icons/building-2.mjs",
+      "alias_de": null,
+      "licencia": "ISC"
+    },
+    "book-open": {
+      "grupo": "portal",
+      "uso": "investigaciones, lecturas",
+      "fuente": "lucide-react 1.31.0 icons/book-open.mjs",
+      "alias_de": null,
+      "licencia": "ISC"
+    }
+  }
+}

@@ -105,7 +105,9 @@ test('el pie v2 enlaza Blog y la barra secundaria enlaza Novedades', () => {
   for (const archivo of htmls.filter(ruta => !ruta.includes('/concepciones/datos/'))) {
     const html = readFileSync(archivo, 'utf8');
     if (!html.includes('data-footer-owner="cochid"')) continue;
-    assert.match(html, /data-nav-id="blog" href="https:\/\/cochid\.cl\/blog\/">Blog<\/a>/, archivo);
+    // Birren v2 agrega un ícono decorativo del kit junto al nombre; el destino y la etiqueta siguen siendo obligatorios.
+    const textoHtml = html.replace(/<svg\b[^>]*data-kit-icon="[^"]+"[^>]*aria-hidden="true"[^>]*>[\s\S]*?<\/svg>/g, '');
+    assert.match(textoHtml, /data-nav-id="blog" href="https:\/\/cochid\.cl\/blog\/">Blog<\/a>/, archivo);
     assert.match(html, /href="https:\/\/cochid\.cl\/novedades\/">Novedades<\/a>/, archivo);
   }
   const mapa = pagina('/mapa-del-sitio/');

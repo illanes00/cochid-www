@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Blog de Compañía Chilena de Inteligencia de Datos</title>
+    <title>Blog de la Compañía Chilena de Inteligencia de Datos</title>
     <link>https://cochid.cl/blog/</link>
-    <description>Datos nuevos, métodos y cambios de Compañía Chilena de Inteligencia de Datos, Compañía Chilena de Inteligencia de Datos.</description>
+    <description>Datos nuevos, métodos y cambios de la Compañía Chilena de Inteligencia de Datos.</description>
     <language>es-cl</language>
     <lastBuildDate>Mon, 05 Oct 2026 00:00:00 -0300</lastBuildDate>
     <atom:link href="https://cochid.cl/blog/feed.xml" rel="self" type="application/rss+xml"/>
@@ -36,7 +36,7 @@
       <link>https://cochid.cl/blog/visor-de-presupuesto-tres-tareas/</link>
       <guid isPermaLink="true">https://cochid.cl/blog/visor-de-presupuesto-tres-tareas/</guid>
       <pubDate>Thu, 01 Oct 2026 00:00:00 -0300</pubDate>
-      <description>El visor de presupuesto de Compañía Chilena de Inteligencia de Datos se reorganizó en tres tareas: entender el presupuesto, explorar instituciones y comparar años. Los controles, las tablas y las descargas quedan plegados hasta que los necesitas.</description>
+      <description>El visor de presupuesto de la Compañía Chilena de Inteligencia de Datos se reorganizó en tres tareas: entender el presupuesto, explorar instituciones y comparar años. Los controles, las tablas y las descargas quedan plegados hasta que los necesitas.</description>
       <category>Finanzas públicas</category>
       <category>presupuesto</category>
       <category>visor</category>
@@ -55,11 +55,11 @@
       <category>Ley de Presupuestos</category>
     </item>
     <item>
-      <title>Los mismos cuatro destinos en la cabecera y el pie de Compañía Chilena de Inteligencia de Datos</title>
+      <title>Los mismos cuatro destinos en la cabecera y el pie de la Compañía Chilena de Inteligencia de Datos</title>
       <link>https://cochid.cl/blog/navegacion-comun-cochid/</link>
       <guid isPermaLink="true">https://cochid.cl/blog/navegacion-comun-cochid/</guid>
       <pubDate>Thu, 01 Oct 2026 00:00:00 -0300</pubDate>
-      <description>Datos, Mapas, Investigaciones y Presupuesto pasan a ser los destinos comunes de la navegación de Compañía Chilena de Inteligencia de Datos. Desde el 2 de octubre están en la cabecera o el pie de cochid.cl, datos.cochid.cl y diez sitios más.</description>
+      <description>Datos, Mapas, Investigaciones y Presupuesto pasan a ser los destinos comunes de la navegación de la Compañía Chilena de Inteligencia de Datos. Desde el 2 de octubre están en la cabecera o el pie de cochid.cl, datos.cochid.cl y diez sitios más.</description>
       <category>navegación</category>
       <category>sitio</category>
       <category>accesibilidad</category>

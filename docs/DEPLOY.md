@@ -37,7 +37,7 @@ La imagen social no la produce el build, porque necesita Python con matplotlib:
 Regenerarla solo cuando cambie la curva semanal. El PNG está versionado.
 
 La QA del portal recorre todas las páginas, incluidas las del blog y
-`/novedades/`, a 1440, 768, 390 y 320 px, en claro y oscuro, siempre bajo
+`/novedades/`, a 1440, 1000, 768, 390 y 320 px, en claro y oscuro, siempre bajo
 `flock /tmp/cochid-ui-browser.lock`. Fijar siempre `COCHID_QA_OUT` para no
 escribir sobre los recibos de un corte anterior:
 

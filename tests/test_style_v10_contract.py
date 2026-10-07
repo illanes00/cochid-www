@@ -5,7 +5,7 @@ import unittest
 
 ROOT = Path(__file__).resolve().parents[1]
 HTML = (ROOT / "dist" / "index.html").read_text(encoding="utf-8")
-DIGEST = "d4b1a31b65e7ded392140cd72deaca3b05cb9975f328985439981f90a16eb2c0"
+DIGEST = "62845b655c03cb86561b403d3f4f5fdd3f08497cc0aae36866b4d50feaa0e536"
 
 
 class PortalStyleV2ContractTests(unittest.TestCase):

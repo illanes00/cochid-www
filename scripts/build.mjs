@@ -11,6 +11,7 @@ import {loNuevo,novedadesDesdeBlog,novedadesDesdeReleases,paginaNovedades,unirNo
 import {paginaHilo} from './presupuesto-hilo.mjs';
 import {indicePublico,temaPublico} from './temas-publicos.mjs';
 import {cargarGraficos,cuerpoGrafico,headGrafico,indiceGraficos,paginaParaX,rutaGrafico} from './graficos.mjs';
+import {aplicarBirren,leyendaDePared,iconoKit,seccionDeEnlace,familiaDeSeccion} from './birren.mjs';
 
 const root=new URL('../',import.meta.url), out=new URL('../dist/',import.meta.url);
 const contratoPublico=JSON.parse(await readFile(new URL('../data/destinos.publico.json',import.meta.url),'utf8'));
@@ -109,7 +110,10 @@ function directorioProyectos(){
  if(incluidos.some(destino=>!destino))throw new Error('/proyectos/ referencia un destino ausente del contrato público');
  /* 19 desde el 6-oct-2026: graphs, elecciones y prosa quedan solo para Martín. */
  if(incluidos.length!==19)throw new Error(`/proyectos/ esperaba 19 sitios públicos y recibió ${incluidos.length}`);
- const tarjeta=destino=>`<li class="portal-proyecto"><span class="portal-proyecto__icono">${iconoSvg(destino.icono,{tamano:24})}</span><div><h3><a href="${escapar(hrefDestino(destino))}">${escapar(destino.etiqueta)}</a></h3><p>${escapar(destino.resumen)}</p></div></li>`;
+ const tarjeta=destino=>{
+  const seccion=seccionDeEnlace(hrefDestino(destino)), familia=familiaDeSeccion(seccion);
+  return `<li class="portal-proyecto"><span class="portal-proyecto__icono"${familia?` data-family="${familia}"`:''}>${iconoKit(seccion.icono,{tamano:24})}</span><div><h3><a href="${escapar(hrefDestino(destino))}">${escapar(destino.etiqueta)}</a></h3><p>${escapar(destino.resumen)}</p></div></li>`;
+ };
  return `<div class="portal-directorio" data-project-directory>${gruposDirectorio.map(grupo=>{
   const elementos=incluidos.filter(destino=>destino.grupo===grupo.id);
   return `<section><h2>${escapar(grupo.etiqueta)}</h2><ul class="portal-proyectos">${elementos.map(tarjeta).join('')}</ul></section>`;
@@ -344,7 +348,7 @@ const subnav=`<section class="cx-sub" data-subnav aria-label="Barra del portal">
     </nav>
     <details class="cx-sub__movil"><summary>Secciones<svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></summary><div class="cx-mas__lista"><a href="https://cochid.cl/">Inicio</a><a href="https://cochid.cl/temas/">Temas</a><a href="https://cochid.cl/investigaciones/">Investigaciones</a><a href="https://cochid.cl/novedades/">Novedades</a><a href="https://cochid.cl/servicios/">Servicios</a><a href="https://cochid.cl/documentacion/">Documentación</a></div></details>
   </div>
-</section>`;
+</section>${leyendaDePared()}`;
 
 await cp(new URL('../vendor/v2/portada/index.html',import.meta.url),new URL('index.html',out));
 await cp(new URL('../vendor/v2/portada/portada.css',import.meta.url),new URL('assets/portal-v2-portada.css',out));
@@ -406,7 +410,11 @@ function aplicarChromeV2(html){
  if(!html.includes('/assets/cuenta-panel.0a66d3c77722.js'))html=html.replace('</head>','<script defer src="/assets/cuenta-panel.0a66d3c77722.js" integrity="sha384-LDo8wtGWz2+G/IdHNzh0yaJHW7OioCRqTbf2Er6apvkqMeD0N9KfVruY8kDWEzbZ"></script>\n</head>');
  return sinComentariosHtml(html).replace(/\b(?:COCHID|Cochid)\b/g,'Compañía Chilena de Inteligencia de Datos').replace(/\b(?:overline|eyebrow)\b/g,'meta');
 }
-for(const path of await htmlFiles(out))await writeFile(path,aplicarChromeV2(await readFile(path,'utf8')));
+for(const path of await htmlFiles(out)) {
+ const relativo=path.pathname.slice(out.pathname.length);
+ const ruta=relativo.endsWith('index.html')?'/'+relativo.slice(0,-'index.html'.length):'/'+relativo;
+ await writeFile(path,aplicarBirren(aplicarChromeV2(await readFile(path,'utf8')),ruta,kitHead));
+}
 
 /* Metadatos para redes y buscadores en todas las páginas (6-oct-2026): canonical, Open Graph con imagen,
    tarjeta grande de X; Organization y WebSite en la portada; BlogPosting en cada entrada del blog. */

@@ -1,0 +1,36 @@
+{
+  "kit_digest": "62845b655c03cb86561b403d3f4f5fdd3f08497cc0aae36866b4d50feaa0e536",
+  "spec_sha256": "fbc5aeeba10a9042d2f82bf61ba8f1be62e2e8200b83a4bbd1b0d76b78447144",
+  "decision": "D-v2-1/3/4/7/10/12 aprobadas; D-10 conserva acento. Identidad anterior congelada sin alineación pendiente.",
+  "files": {
+    "style.css": {
+      "sha256": "07892c78b8976a185011357e07b128fc54417f20daecff159b789482fd6371bb",
+      "sri": "sha384-SjVr7cjChsYpD35IGvMeKikrtLu8NaAbEj86aMoBnx6uo9uLI2vG3s4iTUvr8U2c"
+    },
+    "theme.js": {
+      "sha256": "68a8b7b0a581968cde05fffa434db9935cc199f02a63756d2f4d5b9f386adaf8",
+      "sri": "sha384-4z/J3/xbpw17qJScwLAq3N2hW5F9+5M9by+yIDuu63LedHlPJq2cZE716lDAxL3c"
+    },
+    "chrome.js": {
+      "sha256": "ae9c80556090999dec89117aa373a7dc3c2eb33908a58f485541e188b2ee436b",
+      "sri": "sha384-co7hY1m6MP6Ayzf+C2+5NEt419kZfQztoGNHKHJNk1+jVsBWW4RjteoprHRM/fQp"
+    }
+  },
+  "frozen_identity": {
+    "assets/namebrands/compania-chilena-inteligencia-datos-lockup.svg": {
+      "source_url": "https://kit.innovacionsantiago.cl/v10/d4b1a31b65e7ded392140cd72deaca3b05cb9975f328985439981f90a16eb2c0/assets/namebrands/compania-chilena-inteligencia-datos-lockup.svg",
+      "sha256": "bc36a487b6e39147345f2a8b8259e2dc8df32654dd0941e599130a8f6aa3672c",
+      "bytes": 30265
+    },
+    "assets/brands/cochid-lockup-dark.svg": {
+      "source_url": "https://kit.innovacionsantiago.cl/v10/d4b1a31b65e7ded392140cd72deaca3b05cb9975f328985439981f90a16eb2c0/assets/brands/cochid-lockup-dark.svg",
+      "sha256": "30b22b748419b069a5893dcc78c05b6f7d72b5cc1633abffcb4dd96f4b670ba4",
+      "bytes": 30404
+    },
+    "assets/chrome/favicons/cochid.svg": {
+      "source_url": "https://kit.innovacionsantiago.cl/v10/d4b1a31b65e7ded392140cd72deaca3b05cb9975f328985439981f90a16eb2c0/assets/chrome/favicons/cochid.svg",
+      "sha256": "06da061071b6f48f49432a2b28ed22dd8e0310f6aaec5a2372d0927491ee2dd2",
+      "bytes": 534
+    }
+  }
+}

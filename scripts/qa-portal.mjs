@@ -3,8 +3,9 @@ import {mkdirSync, readFileSync, readdirSync, writeFileSync} from 'node:fs';
 import {join} from 'node:path';
 
 const require = createRequire(process.env.COCHID_QA_REQUIRE_FROM || '/srv/projects/worktrees/cochid-datos-presupuesto-release-20260930/web/package.json');
-const {chromium} = require('@playwright/test');
-const AxeBuilder = require('@axe-core/playwright').default;
+const {chromium} = require(process.env.COCHID_QA_PLAYWRIGHT_MODULE || '@playwright/test');
+const axePath = process.env.COCHID_QA_AXE_PATH;
+const AxeBuilder = axePath ? null : require('@axe-core/playwright').default;
 
 const base = process.env.COCHID_QA_BASE || 'http://127.0.0.1:18547';
 const salida = process.env.COCHID_QA_OUT || '/srv/projects/tasks/cochid-portal-20261001/qa/apex-r2';
@@ -18,6 +19,7 @@ const rutasBase = [
 ];
 const vistasBase = [
   {nombre: '1440', width: 1440, height: 1000},
+  {nombre: '1000', width: 1000, height: 1000},
   {nombre: '768', width: 768, height: 1000},
   {nombre: '390', width: 390, height: 844},
   {nombre: '320', width: 320, height: 844},
@@ -49,6 +51,48 @@ try {
         const response = await page.goto(`${base}${ruta}`, {waitUntil: 'networkidle'});
         if (!response || response.status() !== 200) fallos.push(`${id}: HTTP ${response?.status()}`);
         await page.evaluate(valor => document.documentElement.dataset.theme = valor, tema);
+        const birren = await page.evaluate(() => {
+          const probe = document.createElement('span');
+          probe.style.cssText = 'position:absolute;left:-10000px;visibility:hidden';
+          document.body.append(probe);
+          const canvas = document.createElement('canvas');
+          canvas.width = canvas.height = 1;
+          const ctx = canvas.getContext('2d', {willReadFrequently: true});
+          const color = expression => {
+            probe.style.color = expression;
+            const resolved = getComputedStyle(probe).color;
+            ctx.clearRect(0, 0, 1, 1); ctx.fillStyle = resolved; ctx.fillRect(0, 0, 1, 1);
+            return {css: resolved, rgba: [...ctx.getImageData(0, 0, 1, 1).data]};
+          };
+          const luminance = rgba => rgba.slice(0, 3).map(v => v / 255)
+            .map(v => v <= .04045 ? v / 12.92 : ((v + .055) / 1.055) ** 2.4)
+            .reduce((sum, v, i) => sum + v * [.2126, .7152, .0722][i], 0);
+          const tokens = Object.fromEntries(['--n-fondo', '--n-superficie-1', '--n-superficie-2',
+            '--n-superficie-3', '--n-texto', '--n-texto-2', '--n-texto-3', '--n-borde-control']
+            .map(token => [token, color(`var(${token})`)]));
+          const muro = color(getComputedStyle(document.body).backgroundColor);
+          const fondos = {'muro servido': muro, ...Object.fromEntries(Object.entries(tokens)
+            .filter(([nombre]) => nombre.includes('superficie') || nombre === '--n-fondo'))};
+          const contrastes = [];
+          for (const [texto, minimo] of [['--n-texto', 12], ['--n-texto-2', 7],
+            ['--n-texto-3', 4.5], ['--n-borde-control', 3]]) {
+            for (const [fondo, valor] of Object.entries(fondos)) {
+              const a = luminance(tokens[texto].rgba), b = luminance(valor.rgba);
+              contrastes.push({texto, fondo, minimo, ratio: (Math.max(a, b) + .05) / (Math.min(a, b) + .05)});
+            }
+          }
+          probe.remove();
+          const niveles = ['--n-fondo', '--n-superficie-1', '--n-superficie-2', '--n-superficie-3']
+            .map(nombre => ({nombre, luminancia: luminance(tokens[nombre].rgba)}));
+          return {ambiente: document.body.dataset.environment, marca: document.documentElement.dataset.brand,
+            muro, tokens, contrastes, niveles};
+        });
+        for (const par of birren.contrastes) {
+          if (par.ratio < par.minimo) fallos.push(`${id}: contraste ${par.texto}/${par.fondo} ${par.ratio.toFixed(2)} < ${par.minimo}`);
+        }
+        if (tema === 'dark' && birren.niveles.some((nivel, i, niveles) => i > 0 && nivel.luminancia <= niveles[i - 1].luminancia)) {
+          fallos.push(`${id}: escalera oscura sin elevación por luminosidad`);
+        }
 
         const desborde = await page.evaluate(() => ({
           viewport: document.documentElement.clientWidth,
@@ -90,7 +134,7 @@ try {
         if (foco.tag === 'BODY' || !foco.visible || !foco.outline) fallos.push(`${id}: foco inicial ${JSON.stringify(foco)}`);
 
         let menu = null;
-        if (vista.width <= 390) {
+        if (await page.locator('.cx-menu-btn').isVisible()) {
           const cerrarBuscador = page.locator('.bq__x');
           if (await cerrarBuscador.isVisible()) await cerrarBuscador.click();
           const boton = page.locator('.cx-menu-btn');
@@ -110,12 +154,22 @@ try {
           }
         }
 
-        const axe = await new AxeBuilder({page}).analyze();
+        let axe;
+        if (axePath) {
+          await page.addScriptTag({path: axePath});
+          axe = await page.evaluate(async () => window.axe.run(document));
+        } else {
+          axe = await new AxeBuilder({page}).analyze();
+        }
         const graves = axe.violations.filter(violacion => ['serious', 'critical'].includes(violacion.impact));
         if (graves.length) fallos.push(`${id}: Axe ${graves.map(v => `${v.id}:${v.impact}`).join(',')}`);
         if (erroresPagina.length) fallos.push(`${id}: errores JS ${erroresPagina.join(' | ')}`);
 
-        casos.push({id, ruta, ancho: vista.width, tema, axeGraves: graves.length, sinFocoEnCaptura: sinFoco, desborde, foco, menu, erroresPagina});
+        const detalleAxe = graves.map(({id, impact, help, nodes}) => ({
+          id, impact, help,
+          nodes: nodes.map(({target, failureSummary}) => ({target, failureSummary})),
+        }));
+        casos.push({id, ruta, ancho: vista.width, tema, birren, axeGraves: graves.length, detalleAxe, sinFocoEnCaptura: sinFoco, desborde, foco, menu, erroresPagina});
         await context.close();
       }
     }
