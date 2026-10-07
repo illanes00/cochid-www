@@ -34,7 +34,7 @@ NBSP = " "
 INFLACION = Decimal("0.03")
 CORTE = "2026-10-05"
 CORTE_TEXTO = "5 de octubre de 2026"
-FUENTE_CORTA = "DIPRES (ley 2026) y Cámara de Diputadas y Diputados (proyecto 2027). Corte 5-oct-2026"
+FUENTE_CORTA = "DIPRES (ley 2026) y Cámara de Diputadas y Diputados (proyecto 2027). Datos al 5 de octubre de 2026"
 SERIE = "presupuesto-2027"
 
 # partida -> (nombre completo, nombre corto para el gráfico, ícono lucide)
