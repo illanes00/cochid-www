@@ -117,7 +117,6 @@
 .buscar{display:flex;margin-top:32px;max-width:520px;border:1px solid var(--n-borde-control);background:var(--paper-raised)}
 .buscar input{flex:1;min-width:0;border:0;background:transparent;color:var(--ink);padding:0 16px;height:52px;font:inherit;font-size:1rem}
 .buscar input::placeholder{color:var(--ink-muted);opacity:1}
-.buscar input:focus-visible{outline:0}
 .buscar:focus-within{outline:2px solid var(--ink);outline-offset:2px}
 .buscar button{border:0;background:var(--ink);color:var(--paper);font:600 15px var(--font-sans);padding:0 24px;cursor:pointer}
 .buscar button:hover{opacity:.86}

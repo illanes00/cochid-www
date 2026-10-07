@@ -110,6 +110,22 @@ try {
             }),
         }));
         if (desborde.scroll > desborde.viewport + 1) fallos.push(`${id}: desborde ${JSON.stringify(desborde)}`);
+        const medirControlesBarra = () => page.evaluate(() => [...document.querySelectorAll(
+          '.cx-nav__acciones button,.cx-nav__acciones .cx-pill,.cx-panel a,.cx-sub a,.cx-sub summary'
+        )].filter(elemento => {
+          const caja = elemento.getBoundingClientRect();
+          return caja.width > 0 && caja.height > 0 && getComputedStyle(elemento).visibility !== 'hidden';
+        }).map(elemento => {
+          const caja = elemento.getBoundingClientRect();
+          return {texto: elemento.textContent.trim(), ancho: caja.width, alto: caja.height};
+        }));
+        const controlesBarra = await medirControlesBarra();
+        const comprobarControles = controles => {
+          for (const control of controles) if (control.ancho < 43.5 || control.alto < 43.5) {
+            fallos.push(`${id}: control de barra menor de 44px ${JSON.stringify(control)}`);
+          }
+        };
+        comprobarControles(controlesBarra);
 
         /* Las capturas de revisión van sin foco de teclado ni hover: el foco se
            prueba aparte, después de capturar. */
@@ -141,6 +157,8 @@ try {
           await boton.click();
           const abierto = await boton.getAttribute('aria-expanded');
           const navegacionVisible = await page.locator('.cx-panel').isVisible();
+          const controlesMenu = await medirControlesBarra();
+          comprobarControles(controlesMenu);
           await page.screenshot({path: join(salida, `${id}-menu.png`), fullPage: false});
           await page.keyboard.press('Escape');
           menu = {
@@ -148,6 +166,7 @@ try {
             navegacionVisible,
             cerrado: await boton.getAttribute('aria-expanded'),
             focoDevuelto: await boton.evaluate(elemento => document.activeElement === elemento),
+            controles: controlesMenu,
           };
           if (menu.abierto !== 'true' || !menu.navegacionVisible || menu.cerrado !== 'false' || !menu.focoDevuelto) {
             fallos.push(`${id}: menú móvil ${JSON.stringify(menu)}`);
@@ -169,7 +188,7 @@ try {
           id, impact, help,
           nodes: nodes.map(({target, failureSummary}) => ({target, failureSummary})),
         }));
-        casos.push({id, ruta, ancho: vista.width, tema, birren, axeGraves: graves.length, detalleAxe, sinFocoEnCaptura: sinFoco, desborde, foco, menu, erroresPagina});
+        casos.push({id, ruta, ancho: vista.width, tema, birren, controlesBarra, axeGraves: graves.length, detalleAxe, sinFocoEnCaptura: sinFoco, desborde, foco, menu, erroresPagina});
         await context.close();
       }
     }
