@@ -4,7 +4,7 @@ descripcion: Cómo escribir a la Compañía Chilena de Inteligencia de Datos par
 ruta: /contacto/
 ---
 
-<!-- Nota de implementación: no publicar plazo de respuesta mientras no haya responsable asignado (D-PLAZO). Solo hola@innovacionsantiago.cl está verificado como buzón operativo; las direcciones @cochid.cl se publican cuando exista su regla de ruteo (D-BUZON). -->
+<!-- Nota de implementación: no publicar plazo de respuesta mientras no haya responsable asignado (D-PLAZO). contacto@cochid.cl tiene regla de ruteo en Cloudflare (reenvía al buzón de la operadora), verificada el 7-oct-2026 (D-BUZON resuelto). -->
 
 # Contacto
 
@@ -14,9 +14,8 @@ Si necesitas una selección de datos que no está en el catálogo, más consulta
 
 ## Consultas generales y prensa
 
-Escribe a **hola@innovacionsantiago.cl**.
+Escribe a **[contacto@cochid.cl](mailto:contacto@cochid.cl)**.
 
-[[VERIFICAR: buzón propio de la Compañía Chilena de Inteligencia de Datos (`asesoria@cochid.cl` u otro) y su regla de ruteo en Cloudflare Email Routing; mientras no exista, no se publica (D-BUZON)]]
 
 Si buscas un dato, un informe o una asesoría, usa el [formulario de asesoría](/asesoria/).
 

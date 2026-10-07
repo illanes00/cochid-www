@@ -16,4 +16,4 @@ Enviar el formulario no crea ninguna obligación. Cómo tratamos los datos que e
 
 ## Si prefieres escribir por correo
 
-Escribe a **hola@innovacionsantiago.cl** con el asunto «Asesoría Compañía Chilena de Inteligencia de Datos».
+Escribe a **[contacto@cochid.cl](mailto:contacto@cochid.cl)** con el asunto «Asesoría».
