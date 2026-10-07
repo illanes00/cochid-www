@@ -1,11 +1,11 @@
 // Generado por bin/gen-destinos. No editar a mano.
 const contrato = {
   "schema": "cochid.destinos.v1",
-  "generado": "2026-10-03T04:05:00Z",
+  "generado": "2026-10-07",
   "fuentes": {
     "registro_sha": "dd408498bb03d12583e6111ee4fa0b8567759cd53fbb3388cb04a4cb57c13025",
     "portfolio_sha": "b746b87f014309d9617973e164de83079036cda94dfb8578b60c4c5c8fd15f5f",
-    "presentacion_sha": "529c142be9072c7b4c2795cebbdfb4d06bdda0b31c1d7c78747b505c45c52884"
+    "presentacion_sha": "46162e5936c7da96db3c5837b5135e64d0827b2ed055fd7faa3324d2d7c9dd0b"
   },
   "grupos": [
     {
@@ -2278,7 +2278,12 @@ const contrato = {
       "icono": "mail"
     }
   ],
-  "excluidos": [],
+  "excluidos": [
+    {
+      "host": "docs.cochid.cl",
+      "motivo": "Alias: redirige a datos.cochid.cl/metodologia y /catalogo; no sirve contenido propio (Caddy, 6-oct-2026)."
+    }
+  ],
   "destinos": [
     {
       "id": "cochid.bici",
