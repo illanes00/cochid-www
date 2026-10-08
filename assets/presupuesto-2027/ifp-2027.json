@@ -1,0 +1,359 @@
+{
+  "version": 1,
+  "corte": "2026-10-08",
+  "estado_2027": "proyecto",
+  "fuentes": [
+    {
+      "nombre": "ifp-prensa",
+      "url": "https://www.dipres.gob.cl/598/articles-433299_Informe_PDF.pdf",
+      "sha256": "62894dac712f93f94a37cd8e648573f42c876a315d98503990a8620e4cd8ce5b",
+      "paginas_pdf": [
+        15,
+        45,
+        54,
+        61,
+        211
+      ],
+      "publicacion": "2026-10-06"
+    },
+    {
+      "nombre": "oferta",
+      "url": "https://www.dipres.gob.cl/598/articles-433302_doc_pdf.pdf",
+      "sha256": "2a7613f5b8ae427acd27820ece3c5af47fad8b83c31effb688f3130e573b005e",
+      "paginas_pdf": [
+        4,
+        6,
+        10,
+        11,
+        12,
+        13
+      ],
+      "publicacion": "2026-10-06"
+    },
+    {
+      "nombre": "prioridades",
+      "url": "https://www.dipres.gob.cl/598/articles-433300_doc_pdf.pdf",
+      "sha256": "44ad2c8a51c66a07bd399054b530465a65ba675cc598a99dd5f1f317a78fd953",
+      "paginas_pdf": [
+        4,
+        5,
+        6
+      ],
+      "publicacion": "2026-10-06"
+    }
+  ],
+  "gobierno_central": {
+    "cierre_2026_nominal": {
+      "valor_mm_clp": 87280684,
+      "ano": 2026,
+      "ano_precios": 2026,
+      "tipo": "cierre_proyectado",
+      "moneda": "CLP"
+    },
+    "cierre_2026_precios_2027": {
+      "valor_mm_clp": 89790135,
+      "ano": 2026,
+      "ano_precios": 2027,
+      "tipo": "cierre_proyectado",
+      "moneda": "CLP"
+    },
+    "ley_2026_precios_2027": {
+      "valor_mm_clp": 88736851,
+      "ano": 2026,
+      "ano_precios": 2027,
+      "tipo": "ley_aprobada",
+      "moneda": "CLP"
+    },
+    "proyecto_2027": {
+      "valor_mm_clp": 91175816,
+      "ano": 2027,
+      "ano_precios": 2027,
+      "tipo": "proyecto",
+      "moneda": "CLP"
+    },
+    "variacion_real_oficial_cierre_pct": "1.5",
+    "variacion_real_oficial_ley_pct": "2.7",
+    "ingresos_2027_mm_clp": 84424236,
+    "deuda_2027_pct_pib": "42.5",
+    "deficit_efectivo_2027_pct_pib": "1.8",
+    "deficit_estructural_2027_pct_pib": "1.8"
+  },
+  "supuestos_2027": {
+    "ipc_promedio_anual_pct": "2.9",
+    "pib_real_pct": "3.3",
+    "tipo_cambio_promedio_clp_usd": 886,
+    "cobre_promedio_centavos_usd_libra": 565
+  },
+  "oferta": {
+    "total_programas": 590,
+    "financiamiento_especifico": 475,
+    "financiamiento_institucional": 115,
+    "aumentan": 114,
+    "reducen": 220,
+    "sin_variacion_o_sin_base_2026": 141,
+    "sin_base_2026": 14,
+    "variacion_real_pct": "1.5",
+    "presupuesto_billones_clp_aproximado": "38.5",
+    "base": "ley_2026_ajustada_a_precios_2027",
+    "presupuesto_fuente": "Cuadros1,2,3,4 del informe completo, no resumen integrado"
+  },
+  "fusiones": {
+    "programas_integrados_reportados": 33,
+    "iniciativas_resultantes_reportadas": 12,
+    "cesan_ejecucion_individual_reportados": 21,
+    "nota": "Recuentos informados por DIPRES; PADIS y Fortalecimiento Caprino figuran en dos fusiones por distribución de componentes. No son un censo de beneficios eliminados.",
+    "grupos": [
+      {
+        "origen": [
+          "Beca Aysén",
+          "Beca Patagonia Aysén",
+          "Beca Magallanes"
+        ],
+        "resultado": "Becas Patagonia",
+        "servicio": "JUNAEB"
+      },
+      {
+        "origen": [
+          "Simulacro Borde Costero",
+          "Simulacro Amenaza Volcánica"
+        ],
+        "resultado": "Chile Preparado",
+        "servicio": "SENAPRED"
+      },
+      {
+        "origen": [
+          "Biblioteca Pública Digital",
+          "Bibliomás"
+        ],
+        "resultado": "Programa de Fortalecimiento de la Frecuencia Lectora",
+        "servicio": "Servicio Nacional del Patrimonio Cultural"
+      },
+      {
+        "origen": [
+          "Orquestas Propias de FOJI",
+          "Orquestas Comunales del Catastro FOJI"
+        ],
+        "resultado": "Orquestas Sinfónicas Juveniles e Infantiles de Chile",
+        "servicio": "Subsecretaría de las Culturas, las Artes y el Patrimonio"
+      },
+      {
+        "origen": [
+          "Programa Nacional de Lectura",
+          "Plan Nacional de Escritura"
+        ],
+        "resultado": "Programa Nacional de Lectoescritura",
+        "servicio": "Subsecretaría de Educación"
+      },
+      {
+        "origen": [
+          "Apoyo a la Comercialización de Artesanías",
+          "Educación y Difusión",
+          "Exposiciones Nacionales"
+        ],
+        "resultado": "Apoyo a la sostenibilidad comercial de artesanos y artesanas tradicionales de Chile",
+        "servicio": "Subsecretaría de las Culturas, las Artes y el Patrimonio"
+      },
+      {
+        "origen": [
+          "Elige Vida Sana",
+          "Control de Salud de Niño y Niña Sano en Establecimientos Educacionales",
+          "Cuidados Comunitarios en APS",
+          "DIR APS Alcohol, Tabaco y otras Drogas"
+        ],
+        "resultado": "Más Salud en Comunidad",
+        "servicio": "Subsecretaría de Redes Asistenciales"
+      },
+      {
+        "origen": [
+          "Tránsito a la Vida Independiente",
+          "Acceso a la Justicia para Personas en Situación de Discapacidad",
+          "Desarrollo Inclusivo Territorial"
+        ],
+        "resultado": "Servicios de Apoyo para la Vida Independiente e Inclusión en la Comunidad",
+        "servicio": "SENADIS"
+      },
+      {
+        "origen": [
+          "FDI Gestión Social Indígena",
+          "Kume Mognen Pu Zomo",
+          "FDI Fomento a la Economía Indígena",
+          "FDI Apoyo a Predios Adquiridos y Transferidos"
+        ],
+        "resultado": "Fondo de Desarrollo Indígena",
+        "servicio": "CONADI"
+      },
+      {
+        "origen": [
+          "PRODESAL Asesorías e Inversiones",
+          "PADIS",
+          "Fortalecimiento Caprino Lechero de Coquimbo"
+        ],
+        "resultado": "Programa de Desarrollo de Acción Local (PRODESAL)",
+        "servicio": "INDAP"
+      },
+      {
+        "origen": [
+          "Servicio de Asesoría Técnica (SAT)",
+          "PADIS",
+          "Fortalecimiento Caprino Lechero de Coquimbo"
+        ],
+        "resultado": "Programa Servicio de Asesoría Técnica (SAT)",
+        "servicio": "INDAP"
+      },
+      {
+        "origen": [
+          "Servicios Virtuales",
+          "Capacitación y Formación Empresarial"
+        ],
+        "resultado": "Formación Digital Mipe",
+        "servicio": "SERCOTEC"
+      }
+    ]
+  },
+  "nuevos_programas": [
+    {
+      "programa": "Chile Trabaja: Apoyo al Empleo Dependiente",
+      "servicio": "FOSIS",
+      "proyecto_2027_miles_clp": 1028800
+    },
+    {
+      "programa": "Apoyo a las Actividades Conexas de la Pesca Artesanal",
+      "servicio": "Indespa",
+      "proyecto_2027_miles_clp": 77160
+    },
+    {
+      "programa": "Fortalecimiento de Prevención Municipal",
+      "servicio": "Subsecretaría de Seguridad Pública",
+      "proyecto_2027_miles_clp": 2056993
+    },
+    {
+      "programa": "Seguridad Rural",
+      "servicio": "Subsecretaría de Prevención del Delito",
+      "proyecto_2027_miles_clp": 514400
+    },
+    {
+      "programa": "Acceso a Capacidad de Cómputo IA para Investigación, Desarrollo e Innovación",
+      "servicio": "Subsecretaría de CTCI",
+      "proyecto_2027_miles_clp": 411520
+    },
+    {
+      "programa": "Posicionamiento Internacional de la Ciencia, la Tecnología y la Innovación Chilena",
+      "servicio": "Subsecretaría de CTCI",
+      "proyecto_2027_miles_clp": 514400
+    }
+  ],
+  "mayores_aumentos": [
+    {
+      "programa": "Pensión Garantizada Universal",
+      "proyecto_2027_mm_clp": 7001100,
+      "aumento_real_mm_clp": 199539,
+      "variacion_real_oficial_pct": "2.9",
+      "base": "ley_2026_ajustada_a_precios_2027"
+    },
+    {
+      "programa": "Inversión en la Comunidad",
+      "proyecto_2027_mm_clp": 140502,
+      "aumento_real_mm_clp": 115779,
+      "variacion_real_oficial_pct": "468.3",
+      "base": "ley_2026_ajustada_a_precios_2027"
+    },
+    {
+      "programa": "Subsidio Habitacional DS1",
+      "proyecto_2027_mm_clp": 420575,
+      "aumento_real_mm_clp": 115989,
+      "variacion_real_oficial_pct": "38.1",
+      "base": "ley_2026_ajustada_a_precios_2027"
+    },
+    {
+      "programa": "Subvención Carrera Docente",
+      "proyecto_2027_mm_clp": 1466994,
+      "aumento_real_mm_clp": 80739,
+      "variacion_real_oficial_pct": "5.8",
+      "base": "ley_2026_ajustada_a_precios_2027"
+    },
+    {
+      "programa": "Transporte Público Regional",
+      "proyecto_2027_mm_clp": 536959,
+      "aumento_real_mm_clp": 79827,
+      "variacion_real_oficial_pct": "17.5",
+      "base": "ley_2026_ajustada_a_precios_2027"
+    },
+    {
+      "programa": "Transporte Público Metropolitano",
+      "proyecto_2027_mm_clp": 1045542,
+      "aumento_real_mm_clp": 73964,
+      "variacion_real_oficial_pct": "7.6",
+      "base": "ley_2026_ajustada_a_precios_2027"
+    },
+    {
+      "programa": "Fondo Solidario de Elección de Vivienda DS49",
+      "proyecto_2027_mm_clp": 2006782,
+      "aumento_real_mm_clp": 70268,
+      "variacion_real_oficial_pct": "3.6",
+      "base": "ley_2026_ajustada_a_precios_2027"
+    },
+    {
+      "programa": "Programa Habitacional de Integración Social DS19",
+      "proyecto_2027_mm_clp": 443975,
+      "aumento_real_mm_clp": 69548,
+      "variacion_real_oficial_pct": "18.6",
+      "base": "ley_2026_ajustada_a_precios_2027"
+    },
+    {
+      "programa": "Subvención Escolar Regular",
+      "proyecto_2027_mm_clp": 5451707,
+      "aumento_real_mm_clp": 69091,
+      "variacion_real_oficial_pct": "1.3",
+      "base": "ley_2026_ajustada_a_precios_2027"
+    },
+    {
+      "programa": "Protección Contra Incendios Forestales",
+      "proyecto_2027_mm_clp": 179008,
+      "aumento_real_mm_clp": 44190,
+      "variacion_real_oficial_pct": "32.8",
+      "base": "ley_2026_ajustada_a_precios_2027"
+    },
+    {
+      "programa": "Crédito Mipyme",
+      "proyecto_2027_mm_clp": 63210,
+      "aumento_real_mm_clp": 42634,
+      "variacion_real_oficial_pct": "207.2",
+      "base": "ley_2026_ajustada_a_precios_2027"
+    },
+    {
+      "programa": "Formación en el Puesto de Trabajo",
+      "proyecto_2027_mm_clp": 41395,
+      "aumento_real_mm_clp": 35419,
+      "variacion_real_oficial_pct": "592.7",
+      "base": "ley_2026_ajustada_a_precios_2027"
+    },
+    {
+      "programa": "Protección Especializada en Maltrato Grave y Abuso Sexual (PRM)",
+      "proyecto_2027_mm_clp": 129928,
+      "aumento_real_mm_clp": 33280,
+      "variacion_real_oficial_pct": "34.4",
+      "base": "ley_2026_ajustada_a_precios_2027"
+    },
+    {
+      "programa": "Incentivo para el Desarrollo de Inversiones (agrícola)",
+      "proyecto_2027_mm_clp": 35025,
+      "aumento_real_mm_clp": 28545,
+      "variacion_real_oficial_pct": "440.5",
+      "base": "ley_2026_ajustada_a_precios_2027"
+    },
+    {
+      "programa": "FONDECYT",
+      "proyecto_2027_mm_clp": 197560,
+      "aumento_real_mm_clp": 28467,
+      "variacion_real_oficial_pct": "16.8",
+      "base": "ley_2026_ajustada_a_precios_2027"
+    }
+  ],
+  "advertencias": [
+    "El Gobierno Central total, el aporte fiscal libre y la oferta programática son universos diferentes y no se suman.",
+    "Los recuentos de programas presupuestarios del clasificador y de la oferta evaluada son distintos.",
+    "El aumento real de cada programa usa ley 2026 ajustada; el gasto total usa cierre 2026 proyectado.",
+    "El resumen integrado difiere del informe completo en algunos recuentos de evaluación; esos recuentos no se usan aquí.",
+    "El IPC de 2,9% es una proyección para 2027, no inflación observada."
+  ]
+}

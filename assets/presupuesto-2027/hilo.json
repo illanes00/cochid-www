@@ -1,36 +1,49 @@
 {
-  "fecha": "2026-10-05",
+  "fecha": "2026-10-08",
   "analisis": "/blog/presupuesto-2027-aportes-cambios-nominal-real/",
   "tweets": [
     {
-      "texto": "1/6 Presupuesto 2027: el aporte fiscal libre pasa de $69,67 a $71,17 billones, +2,16% nominal. Son recursos del Tesoro; no el gasto total del Estado. Comparamos el proyecto oficial con la ley inicial 2026.",
-      "grafico": "total-aporte.png",
-      "alt": "Aporte fiscal libre 2026 y proyecto 2027: 69,67 y 71,17 billones de pesos."
+      "texto": "1/6 Presupuesto 2027: $91,18 billones de gasto total. Frente al cierre esperado de 2026, sube 4,46% nominal y 1,5% real según DIPRES. Frente a la ley aprobada 2026, la variación real es 2,7%. La base importa.",
+      "grafico": "gasto-gobierno-central.png",
+      "alt": "Gasto total nominal y a precios de 2027: ejecución esperada de 2026 frente al proyecto 2027.",
+      "titulo": "Gasto total: nominal y real",
+      "fuente": "DIPRES, IFP del tercer trimestre de 2026. Gasto total: cierre esperado de 2026 frente al proyecto 2027."
     },
     {
-      "texto": "2/6 Más pesos no siempre compran más: con inflación hipotética de 3%, ese aporte perdería 0,82% de poder de compra. Con 2%, subiría 0,16%; con 4%, caería 1,77%. Son escenarios, no inflación observada ni una proyección oficial nueva.",
-      "grafico": "total-aporte.png",
-      "alt": "Total nominal y valor a precios de 2026 con inflación hipotética de 3%."
+      "texto": "2/6 El IFP proyecta IPC promedio anual de 2,9% para 2027. El aporte fiscal libre sube 2,16% nominal y perdería 0,72% de poder de compra con ese IPC. Es un cálculo propio sobre aporte fiscal; no es la variación oficial del gasto total.",
+      "grafico": "aporte-fiscal-ipc-proyectado.png",
+      "alt": "Aporte fiscal libre: +2,16% nominal y -0,72% de poder de compra, calculado con el IPC proyectado de 2,9%.",
+      "titulo": "IPC proyectado y aporte fiscal",
+      "fuente": "DIPRES y Cámara. Aporte fiscal libre CLP: ley inicial 2026 frente al proyecto 2027. Cálculo propio con IPC proyectado de 2,9% del IFP; no es la variación oficial del gasto total."
     },
     {
-      "texto": "3/6 Aporte fiscal libre 2027: Educación +5,32%, Trabajo +3,89%, Salud +1,20% y Vivienda -20,17% nominal. Con inflación hipotética de 3%, Salud perdería 1,75% de poder de compra. Estas cifras no equivalen al presupuesto completo de cada ministerio.",
-      "grafico": "sectores-nominal-real.png",
-      "alt": "Variaciones nominales y reales estimadas con inflación de 3% en sectores seleccionados."
+      "texto": "3/6 Oferta 2027: 590 programas. Hay 475 con financiamiento específico y 115 dentro de presupuestos institucionales. Entre los primeros, 114 aumentan recursos, 220 reducen y 141 no varían o no tienen base 2026.",
+      "grafico": "oferta-programas.png",
+      "alt": "Entre 475 programas con financiamiento específico, 114 aumentan, 220 disminuyen y 141 no varían o no tienen base 2026.",
+      "titulo": "Programas con más y menos recursos",
+      "fuente": "DIPRES, Oferta Programática 2027. Ley 2026 ajustada, a precios de 2027."
     },
     {
-      "texto": "4/6 Seguridad: +44,34% aparece al comparar partidas que cambian de perímetro, porque Gendarmería pasa desde Justicia. Incluyéndola en ambos años, el aumento del aporte fiscal libre es +12,11% nominal; +8,84% con inflación hipotética de 3%.",
+      "texto": "4/6 DIPRES informa 33 programas integrados en 12 iniciativas y 21 que dejan de ejecutarse individualmente. Ejemplos: Becas Patagonia, Frecuencia Lectora y Más Salud en Comunidad. Una fusión no demuestra la eliminación de un beneficio.",
+      "grafico": "fusiones-programas.png",
+      "alt": "Ejemplos de programas de origen y programa resultante en la propuesta 2027.",
+      "titulo": "Fusiones de programas",
+      "fuente": "DIPRES, Oferta Programática 2027, cuadro 4. Ejemplos de integración, no eliminación de beneficios."
+    },
+    {
+      "texto": "5/6 Aumentos reales, frente a ley 2026 ajustada: PGU +2,9%, DS1 +38,1%, transporte regional +17,5% y FONDECYT +16,8%. La propuesta suma seis programas nuevos por $4.603,3 millones. No son porcentajes del aporte fiscal ministerial.",
+      "grafico": "oferta-programas.png",
+      "alt": "Recuento de programas que aumentan, se reducen o no varían entre los 475 con financiamiento específico.",
+      "titulo": "Recursos por programa",
+      "fuente": "DIPRES, Oferta Programática 2027. Recuento de variaciones con la ley 2026 ajustada."
+    },
+    {
+      "texto": "6/6 Seguridad incorpora a Gendarmería. Con el mismo perímetro en ambos años, su aporte fiscal sube 12,11% nominal. El proyecto sigue en tramitación. Fuentes, bases de precios y CSV: https://cochid.cl/blog/presupuesto-2027-aportes-cambios-nominal-real/",
       "grafico": "seguridad-perimetro.png",
-      "alt": "Seguridad: 44,34% con perímetro distinto y 12,11% con el mismo conjunto de servicios."
-    },
-    {
-      "texto": "5/6 En SENCE, dos subsidios antiguos conservan asignación y aparece el Subsidio Unificado de Empleo. Las tres líneas 2027 suman $89.612,6 millones frente a $181.749,7 millones en 2026: -50,69% nominal. Es ese conjunto, no todo el financiamiento del empleo.",
-      "grafico": "empleo-lineas.png",
-      "alt": "Asignaciones seleccionadas de subsidios SENCE, 2026 y propuesta 2027, en miles de millones de pesos nominales."
-    },
-    {
-      "texto": "6/6 Empleabilidad Sostenida no figura en el cuadro de Proempleo 2027 revisado; eso no prueba por sí solo el cierre del programa. El proyecto aún se tramita. Fuentes, tablas y CSV: https://cochid.cl/blog/presupuesto-2027-aportes-cambios-nominal-real/",
-      "grafico": "tramitacion.png",
-      "alt": "La propuesta presupuestaria fue ingresada el 30 de septiembre; al 5 de octubre sigue en tramitación y puede cambiar."
+      "alt": "Seguridad con Gendarmería en ambos años; comparación de aporte fiscal libre.",
+      "titulo": "Seguridad con el mismo perímetro",
+      "fuente": "DIPRES y Cámara. Aporte fiscal libre, Seguridad y Gendarmería en ambos años; gráfico del 5 de octubre."
     }
-  ]
+  ],
+  "resumen": "Seis textos con gráficos del gasto total, el IPC proyectado y los cambios de programas. Cada figura identifica su fuente y base de comparación."
 }

@@ -1,10 +1,11 @@
 ---
-titulo: Presupuesto 2027: qué cambia en los aportes fiscales y cuánto pesan los precios
+titulo: Presupuesto 2027: cuánto crece el gasto y qué programas cambian
 slug: presupuesto-2027-aportes-cambios-nominal-real
 fecha: 2026-10-05
+actualizado: 2026-10-08
 autor: Equipo de la Compañía Chilena de Inteligencia de Datos
-resumen: Los aportes fiscales libres suben 2,16% nominal. Revisamos sus 32 partidas, el traslado de Gendarmería y las líneas de empleo que cambian.
-descripcion: Comparación del proyecto oficial de Presupuesto 2027 con la ley inicial 2026: cifras, gráficos, inflación hipotética, traslados entre ministerios y continuidad de programas.
+resumen: El gasto total sube 4,46% nominal y 1,5% real frente al cierre esperado de 2026. Revisamos los programas con menos recursos y las fusiones de la propuesta.
+descripcion: Proyecto oficial de Presupuesto 2027: gasto total, comparación nominal y real del IFP, aportes fiscales, programas nuevos, fusiones y cambios de financiamiento.
 ruta: /blog/presupuesto-2027-aportes-cambios-nominal-real/
 tipo: analisis
 dominio: finanzas-publicas
@@ -14,13 +15,106 @@ imagen: null
 borrador: false
 ---
 
-El proyecto oficial de Presupuesto 2027 propone **$71,17 billones de aporte fiscal libre en moneda nacional**, frente a $69,67 billones de la ley inicial 2026. Son $1,50 billones adicionales y un aumento nominal de **2,16%**. Con una inflación hipotética de 3%, ese financiamiento perdería **0,82% de poder de compra**. La comparación de las 32 partidas permite distinguir aumentos, reducciones y cambios de ubicación institucional.
+El proyecto oficial de Presupuesto 2027 contempla **$91,18 billones de gasto del Gobierno Central total**. Frente al cierre que DIPRES proyecta para 2026, son $3,90 billones adicionales: **4,46% más pesos y 1,5% de crecimiento real**, según el Informe de Finanzas Públicas publicado el 6 de octubre. El aumento agregado convive con reducciones en 220 programas con financiamiento específico y con fusiones que cambian cómo se ejecutan algunas prestaciones.
 
 :::aviso
-Corte: 5 de octubre de 2026. El documento de la Cámara es el proyecto oficial en tramitación. Las cifras corresponden al aporte fiscal libre del Tesoro, no al gasto total del Gobierno Central ni al presupuesto completo de cada ministerio. Todos los valores reales de esta entrada son escenarios con inflación hipotética, no inflación observada de 2027.
+Publicado el 5 de octubre y actualizado el 8 de octubre de 2026. El documento de la Cámara es el proyecto oficial en tramitación. Distinguimos el gasto total del IFP, la oferta programática y el aporte fiscal libre del Tesoro. Son universos diferentes: no se suman. Las cifras de 2027 son propuestas o proyecciones; los escenarios de inflación de 2%, 3% y 4% conservan su carácter hipotético.
 :::
 
-## Cinco hallazgos para leer la propuesta
+## El gasto total: 4,46% nominal y 1,5% real
+
+El cierre de 2026 se estima en $87.280.684 millones corrientes y el gasto de 2027 en $91.175.816 millones. La diferencia nominal es $3.895.132 millones. Para medir el cambio real, el IFP expresa el cierre de 2026 en pesos de 2027: $89.790.135 millones. Compararlo con la propuesta da 1,54%; DIPRES lo publica redondeado a una cifra decimal, **1,5%**.
+
+| Comparación del gasto total | Base 2026, billones de pesos | Proyecto 2027, billones | Variación |
+| --- | --- | --- | --- |
+| Pesos corrientes de cada año, frente al cierre proyectado | 87,28 | 91,18 | +4,46% nominal |
+| Pesos de 2027, frente al cierre proyectado | 89,79 | 91,18 | +1,5% real, cifra oficial |
+| Pesos de 2027, frente a la ley aprobada de 2026 | 88,74 | 91,18 | +2,7% real, cifra oficial |
+
+**La base cambia el resultado.** El aumento de 1,5% compara con la ejecución esperada, mientras el de 2,7% compara con la ley aprobada al comienzo de 2026. Las reasignaciones durante el año explican que esas bases sean distintas. Ninguna de las dos es una ejecución ya observada de 2027.
+
+:::figura
+src: /assets/presupuesto-2027/gasto-gobierno-central.png
+alt: El gasto total pasa de 87,28 a 91,18 billones corrientes, un aumento nominal de 4,46%. A precios de 2027, la base del cierre 2026 es 89,79 billones y la variación real oficial es 1,5%.
+pie: Gobierno Central total. Cierre proyectado 2026 frente al proyecto 2027. Las dos comparaciones usan las bases de precios del IFP, no la ley inicial como sustituto de la ejecución esperada.
+ancho: 1440
+alto: 1800
+:::
+
+El informe también proyecta $84,42 billones de ingresos, déficits efectivo y estructural de 1,8% del PIB y deuda bruta de 42,5% del PIB al cierre de 2027. Su escenario supone crecimiento del PIB de 3,3% e **IPC promedio anual de 2,9%** para 2027. Ese IPC es una proyección y no una medición del año futuro.
+
+Fuentes: [IFP del tercer trimestre de 2026, cuadros I.4.1, II.1.1, II.4.1 y anexo VI; páginas 45, 54, 61 y 211 del PDF](https://www.dipres.gob.cl/598/articles-433299_Informe_PDF.pdf). [Descargar las bases del gasto total en CSV](/assets/presupuesto-2027/gasto-gobierno-central.csv).
+
+## Programas: qué aumenta, qué se reduce y qué se integra
+
+La Oferta Programática 2027 identifica **590 programas**. De ellos, 475 tienen financiamiento específico, por aproximadamente $38,5 billones; otros 115 pueden financiarse dentro del presupuesto institucional sin una asignación específica. Por eso, contar solo las asignaciones individuales no permite concluir que esos 115 programas carezcan de recursos.
+
+En el conjunto de 475 programas, **114 aumentan sus recursos y 220 los reducen** frente a la ley 2026 ajustada y expresada en pesos de 2027. Los otros 141 no presentan variación o no tienen base presupuestaria de 2026; 14 de ellos no permiten calcular un porcentaje porque carecen de esa base. El incremento real del financiamiento específico es 1,5%, con aproximadamente $567 mil millones adicionales.
+
+:::figura
+src: /assets/presupuesto-2027/oferta-programas.png
+alt: De 475 programas con financiamiento específico, 220 reducen recursos, 114 aumentan y 141 no varían o no tienen base de 2026. La revisión no incluye como asignaciones individuales los otros 115 programas de la oferta.
+pie: Recuentos del cuadro 1 de Oferta Programática 2027. Los cambios comparan con ley 2026 ajustada, a precios de 2027. La categoría de 141 incluye programas sin base comparable, no solo presupuestos estables.
+ancho: 1440
+alto: 1260
+:::
+
+Entre los aumentos del informe destacan:
+
+| Programa | Proyecto 2027, millones de pesos | Cambio real frente a ley 2026 ajustada |
+| --- | --- | --- |
+| Pensión Garantizada Universal | 7.001.100 | +2,9% |
+| Subsidio Habitacional DS1 | 420.575 | +38,1% |
+| Inversión en la Comunidad | 140.502 | +468,3% |
+| Subvención Carrera Docente | 1.466.994 | +5,8% |
+| Transporte Público Regional | 536.959 | +17,5% |
+| Protección Contra Incendios Forestales | 179.008 | +32,8% |
+| FONDECYT | 197.560 | +16,8% |
+
+Estos porcentajes usan el presupuesto de cada programa y una ley 2026 ajustada. No deben confundirse con la variación del aporte fiscal libre de un ministerio. Por ejemplo, la reducción de ese aporte en Vivienda no implica que todos sus subsidios disminuyan: DS1 y DS49 aumentan sus recursos en la comparación programática del informe.
+
+### Fusiones y cierre de la ejecución individual
+
+DIPRES informa que **33 programas se integran en 12 iniciativas**, con 21 que dejan de ejecutarse individualmente. Esto acredita una reorganización; no equivale a afirmar que se eliminan 21 beneficios. Las becas Aysén, Patagonia Aysén y Magallanes se reúnen en Becas Patagonia. Biblioteca Pública Digital y Bibliomás pasan al Programa de Fortalecimiento de la Frecuencia Lectora. Elige Vida Sana y otras tres intervenciones de atención primaria se integran en Más Salud en Comunidad.
+
+:::figura
+src: /assets/presupuesto-2027/fusiones-programas.svg
+alt: Diagrama de ejemplos de integración: tres becas regionales pasan a Becas Patagonia; Biblioteca Pública Digital y Bibliomás al programa de Frecuencia Lectora; cuatro intervenciones de atención primaria a Más Salud en Comunidad.
+pie: Fusiones descritas por DIPRES, cuadro 4, páginas 12 y 13 del PDF. Algunos componentes de INDAP se distribuyen entre dos programas resultantes. El diagrama no representa prestaciones eliminadas.
+ancho: 1440
+alto: 1620
+:::
+
+El [CSV con las 12 fusiones](/assets/presupuesto-2027/programas-fusionados.csv) conserva los programas de origen, el destino y el servicio responsable. No deduplicamos sus componentes para inventar un recuento nacional de eliminaciones.
+
+### Seis programas nuevos con financiamiento
+
+La propuesta asigna $4.603,3 millones en conjunto a seis programas nuevos con diseño recomendado favorablemente:
+
+| Programa nuevo | Millones de pesos propuestos |
+| --- | --- |
+| Fortalecimiento de Prevención Municipal | 2.057,0 |
+| Chile Trabaja: Apoyo al Empleo Dependiente | 1.028,8 |
+| Seguridad Rural | 514,4 |
+| Posicionamiento Internacional de la Ciencia, la Tecnología y la Innovación Chilena | 514,4 |
+| Acceso a Capacidad de Cómputo IA para Investigación, Desarrollo e Innovación | 411,5 |
+| Apoyo a las Actividades Conexas de la Pesca Artesanal | 77,2 |
+
+Fuentes: [Oferta Programática 2027, cuadros 1 a 4, páginas 6 y 10 a 13](https://www.dipres.gob.cl/598/articles-433302_doc_pdf.pdf). La revisión anterior de SENCE, Proempleo y Presidencia se conserva más abajo, distinguiendo líneas ausentes, cambios de composición y gastos no recurrentes. La diferencia entre el número total de programas de dos informes anuales no prueba por sí sola cuántos fueron eliminados.
+
+## Aporte fiscal libre: la comparación inicial de las 32 partidas
+
+El análisis publicado el 5 de octubre comparó **$71,17 billones de aporte fiscal libre en moneda nacional** del proyecto 2027 con $69,67 billones de la ley inicial 2026: +2,16% nominal. Es un componente de financiamiento del Tesoro; no es el gasto total del Gobierno Central. Al ajustar esta comparación con el IPC proyectado de 2,9% del nuevo IFP, el cálculo propio da **-0,72%**. Los gráficos originales conservan el escenario hipotético de 3%, que da -0,82%, para mantener identificado el supuesto utilizado.
+
+:::figura
+src: /assets/presupuesto-2027/aporte-fiscal-ipc-proyectado.png
+alt: El aporte fiscal libre sube de 69,67 a 71,17 billones nominales. Ajustado con el IPC proyectado de 2,9%, el proyecto equivale a 69,17 billones a precios de 2026 y disminuye 0,72%.
+pie: Cálculo propio del aporte fiscal libre CLP. Ley inicial 2026 frente al proyecto 2027, con IPC promedio anual de 2,9% proyectado por DIPRES. Es una estimación de poder de compra; la variación oficial del gasto total usa otra base.
+ancho: 1440
+alto: 1800
+:::
+
+### Cinco hallazgos de la comparación inicial, con inflación hipotética de 3%
 
 - **Educación y Trabajo aumentan su financiamiento fiscal libre**: 5,32% y 3,89% nominal, respectivamente. Con inflación de 3%, los aumentos serían 2,25% y 0,86% en poder de compra.
 - **Salud recibe 1,20% más pesos**, pero ese aporte perdería 1,75% de poder de compra bajo el mismo supuesto. Obras Públicas aumenta 2,81% nominal y quedaría prácticamente estable en términos reales, con una variación de -0,19%.
@@ -49,7 +143,7 @@ Variación nominal = (aporte 2027 / aporte 2026 - 1) × 100
 Variación real = (aporte 2027 / aporte 2026 / (1 + inflación) - 1) × 100
 ```
 
-El año 2027 todavía no ocurre: **no existe un IPC observado para ese año**. Usamos 3% como supuesto ilustrativo y publicamos sensibilidad a 2% y 4%. El [calendario oficial de DIPRES](https://www.dipres.gob.cl/598/w3-article-426537.html) fija la presentación del nuevo Informe de Finanzas Públicas para el 6 de octubre. Este corte no atribuye al informe aún pendiente una proyección que no hemos verificado.
+El año 2027 todavía no ocurre: **no existe un IPC observado para ese año**. Los gráficos del corte inicial usan 3% como supuesto ilustrativo y publican sensibilidad a 2% y 4%. La actualización distingue ese escenario de la proyección oficial de 2,9% del nuevo IFP y del crecimiento real de gasto total que DIPRES calcula con sus propias bases de precios.
 
 | Inflación hipotética 2027 | Variación nominal del aporte total | Variación real estimada |
 | --- | --- | --- |

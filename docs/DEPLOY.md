@@ -77,6 +77,26 @@ fallback de selección si se deniega el portapapeles, contenido sin JavaScript
 y SHA de las descargas. Las fuentes, unidades, cobertura, años y escenarios
 figuran en los PNG; revisar los originales para detectar rótulos recortados.
 
+La ampliación del IFP y de la Oferta Programática conserva sus fuentes y bases
+en `assets/presupuesto-2027/ifp-2027.json`. Reproducir los CSV y cálculos con
+`python3 scripts/presupuesto-ifp-2027.py`. Sus figuras se generan con
+`python3 scripts/graficos/ifp.py --fuente <IBM-Plex-Sans-Regular.ttf>` dentro
+del build serializado. Usar la fuente del manifiesto del kit vigente; si se
+convierte desde WOFF2 para matplotlib, registrar los hashes de ambos archivos
+sin modificar el kit ni las fuentes del sistema. Revisar PNG y SVG, fuentes,
+precios de cada comparación y legibilidad a 320 px antes de publicar.
+
+El campo opcional `actualizado` de una entrada mantiene su fecha de publicación
+en RSS y orden del blog. La fecha nueva se muestra en la página y se usa en
+`dateModified`, `lastBuildDate` del feed y `lastmod` del sitemap. El hilo usa
+su propia fecha de contenido. Una actualización inválida o anterior a la
+publicación detiene el build.
+
+El índice de búsqueda toma el RSS de `dist/blog/feed.xml` con `--blog-local`.
+Así indexa el contenido de la release que se está construyendo. Ejecutar el
+generador de índice sin esa opción conserva la lectura del RSS público o su
+copia local para los usos independientes del buscador.
+
 ## Corte y reversión
 
 1. Reservar el único flujo del apex con `cis-note`. Confirmar que el enlace

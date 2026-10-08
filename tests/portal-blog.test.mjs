@@ -120,11 +120,24 @@ test('sitemap con blog, entradas y novedades, y lastmod de cada entrada', () => 
   for (const ruta of ['/blog/', '/novedades/']) assert.match(sitemap, new RegExp(`<loc>https://cochid\\.cl${ruta}</loc>`));
   assert.doesNotMatch(sitemap, /blog\/feed\.xml/);
   for (const meta of entradas) {
-    assert.match(sitemap, new RegExp(`<loc>https://cochid\\.cl${meta.ruta}</loc><lastmod>${meta.fecha}</lastmod>`));
+    assert.match(sitemap, new RegExp(`<loc>https://cochid\\.cl${meta.ruta}</loc><lastmod>${meta.actualizado || meta.fecha}</lastmod>`));
   }
-  const reciente = entradas.map(meta => meta.fecha).sort().at(-1);
+  const reciente = entradas.map(meta => meta.actualizado || meta.fecha).sort().at(-1);
   assert.match(sitemap, new RegExp(`<loc>https://cochid\\.cl/blog/</loc><lastmod>${reciente}</lastmod>`));
   assert.doesNotMatch(sitemap, /<loc>https:\/\/cochid\.cl\/(?:datos|quienes-somos)\//);
+});
+
+test('la fecha de actualización publicada coincide en el artículo, sus metadatos y el hilo', () => {
+  const meta = entradas.find(meta => meta.slug === 'presupuesto-2027-aportes-cambios-nominal-real');
+  assert.equal(meta.fecha, '2026-10-05');
+  assert.equal(meta.actualizado, '2026-10-08');
+  const html = pagina(meta.ruta);
+  const ld = [...html.matchAll(/<script type="application\/ld\+json">([\s\S]*?)<\/script>/g)]
+    .map(m => JSON.parse(m[1])).find(d => d['@type'] === 'BlogPosting');
+  assert.equal(ld.datePublished, meta.fecha);
+  assert.equal(ld.dateModified, meta.actualizado);
+  assert.match(html, /Actualizado el <time datetime="2026-10-08">8 de octubre de 2026<\/time>/);
+  assert.match(leer('sitemap.xml'), /<loc>https:\/\/cochid\.cl\/blog\/presupuesto-2027-aportes-cambios-nominal-real\/hilo\/<\/loc><lastmod>2026-10-08<\/lastmod>/);
 });
 
 test('robots anuncia ambos sitemaps y el índice enumera sólo sitemaps absolutos', () => {

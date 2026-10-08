@@ -18,7 +18,7 @@ Uso:
   python3 generar_indice.py --refrescar  # vuelve a descargar todo (refresco activo)
 Sin dependencias fuera de la biblioteca estándar.
 """
-import json, os, re, sys, unicodedata, datetime, urllib.request
+import argparse, json, os, re, sys, unicodedata, datetime, urllib.request
 import xml.etree.ElementTree as ET
 
 AQUI = os.path.dirname(os.path.abspath(__file__))
@@ -155,7 +155,11 @@ def dominio_blog(titulo, cats):
 
 
 def main():
-    refrescar = '--refrescar' in sys.argv
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument('--refrescar', action='store_true')
+    parser.add_argument('--blog-local', help='RSS recién generado para el build del apex')
+    args = parser.parse_args()
+    refrescar = args.refrescar
     os.makedirs(FUENTES, exist_ok=True)
     reg = json.load(open(DESTINOS, encoding='utf-8'))
     tax = json.load(open(TAXONOMIA, encoding='utf-8'))
@@ -166,7 +170,12 @@ def main():
     cat_b, cat_t, cat_m = traer('catalogo.json', refrescar)
     ind_b, ind_t, ind_m = traer('indicadores.json', refrescar)
     sm_b, sm_t, sm_m = traer('sitemap-apex.xml', refrescar)
-    fd_b, fd_t, fd_m = traer('feed-blog.xml', refrescar)
+    if args.blog_local is not None:
+        with open(args.blog_local, 'rb') as feed:
+            fd_b = feed.read()
+        fd_t, fd_m = AHORA, 'archivo del build'
+    else:
+        fd_b, fd_t, fd_m = traer('feed-blog.xml', refrescar)
     catalogo = {c['dataset_id']: c for c in json.loads(cat_b)}
     indicadores = json.loads(ind_b)
     clas_c = {c['dataset_id']: c for c in tax['clasificacion_conjuntos']}

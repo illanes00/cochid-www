@@ -1,0 +1,22 @@
+{
+  "corte": "2026-10-08",
+  "gct_2027_mm_clp": 91175816,
+  "gct_diferencia_nominal_mm_clp": 3895132,
+  "gct_nominal_pct": 4.46276520931023,
+  "gct_real_recalculado_pct": 1.5432441436912863,
+  "gct_real_oficial_pct": "1.5",
+  "gct_real_ley_recalculado_pct": 2.7485367944823733,
+  "gct_real_ley_oficial_pct": "2.7",
+  "ipc_proyectado_2027_pct": "2.9",
+  "oferta_cobertura_pct": 80.50847457627118,
+  "programas_fusionados_reportados": 33,
+  "iniciativas_resultantes_reportadas": 12,
+  "nuevos_programas_miles_clp": 4603273,
+  "advertencias": [
+    "El Gobierno Central total, el aporte fiscal libre y la oferta programática son universos diferentes y no se suman.",
+    "Los recuentos de programas presupuestarios del clasificador y de la oferta evaluada son distintos.",
+    "El aumento real de cada programa usa ley 2026 ajustada; el gasto total usa cierre 2026 proyectado.",
+    "El resumen integrado difiere del informe completo en algunos recuentos de evaluación; esos recuentos no se usan aquí.",
+    "El IPC de 2,9% es una proyección para 2027, no inflación observada."
+  ]
+}

@@ -6,7 +6,7 @@ import {destinos,dominios,familia,grupos,navegacionPrimaria,pie} from '../data/d
 import {depurarMarkdown,leerFrontmatter,markdownAHtml} from './markdown.mjs';
 import {iconoSvg} from './iconos.mjs';
 import {completarIconos,grillaHtml,leerTarjetas,validarDominios} from './tarjetas.mjs';
-import {cargarEntradas,cuerpoEntrada,indiceBlog,metaEntrada,rss} from './blog.mjs';
+import {cargarEntradas,cuerpoEntrada,fechaContenido,indiceBlog,metaEntrada,rss} from './blog.mjs';
 import {loNuevo,novedadesDesdeBlog,novedadesDesdeReleases,paginaNovedades,unirNovedades} from './novedades.mjs';
 import {paginaHilo} from './presupuesto-hilo.mjs';
 import {indicePublico,temaPublico} from './temas-publicos.mjs';
@@ -218,6 +218,7 @@ async function paginaArticulo({ruta,titulo,producto,descripcion,bajada,meta='',m
  await writeFile(new URL('index.html',directorio),pagina);
 }
 
+const hiloPresupuesto=JSON.parse(await readFile(new URL('assets/presupuesto-2027/hilo.json',root),'utf8'));
 async function publicarBlog(){
  await paginaArticulo({
   ruta:'/blog/',titulo:'Blog',producto:'Portal',
@@ -233,7 +234,7 @@ async function publicarBlog(){
   });
  }
  await writeFile(new URL('blog/feed.xml',out),rss(entradas));
- const hilo=JSON.parse(await readFile(new URL('assets/presupuesto-2027/hilo.json',root),'utf8'));
+ const hilo=hiloPresupuesto;
  await paginaArticulo({ruta:'/blog/presupuesto-2027-aportes-cambios-nominal-real/hilo/',titulo:'Presupuesto 2027: hilo y gráficos descargables',producto:'Blog',descripcion:'Seis tweets listos para copiar con PNG descargables, fuentes, cifras nominales y escenarios de inflación.',bajada:'Copia los textos y descarga sus gráficos para compartir la comparación.',migas:[['Inicio','/'],['Blog','/blog/'],['Presupuesto 2027',hilo.analisis],['Hilo y gráficos']],cuerpo:paginaHilo(hilo)});
  await writeFile(new URL('assets/presupuesto-2027/hilo.txt',out),hilo.tweets.map(t=>t.texto).join('\n\n')+'\n');
  await paginaArticulo({
@@ -316,16 +317,17 @@ await especial({dir:'concepciones',ruta:'/concepciones/',reemplazos:tablas(datos
 
 /* lastmod honesto: la fecha del contenido, no la del build. El índice y el
    feed del blog cambian con su entrada más reciente; novedades, con la suya. */
+const fechaBlog=entradas.map(fechaContenido).sort().at(-1);
 const fechas={
  '/':'2026-10-01','/cambio-de-hora/':'2026-09-07','/concepciones/':'2026-09-20',
- '/blog/':entradas[0].fecha,'/novedades/':novedades[0].fecha,
- '/blog/presupuesto-2027-aportes-cambios-nominal-real/hilo/':'2026-10-05'
+ '/blog/':fechaBlog,'/novedades/':[fechaBlog,novedades[0].fecha].sort().at(-1),
+ '/blog/presupuesto-2027-aportes-cambios-nominal-real/hilo/':hiloPresupuesto.fecha
 };
 const temasV2=['salud','educacion','economia-trabajo','empresas-innovacion','finanzas-publicas','seguridad-justicia','poblacion-sociedad','territorio-vivienda','transporte-infraestructura','medio-ambiente-energia','politica-instituciones'];
 const urlsSitemap=[
  ...[...rutasPortalPublicadas].map(ruta=>[ruta,fechas[ruta]||'2026-10-01']),
  ...temasV2.map(tema=>[`/temas/${tema}/`,'2026-10-02']),
- ...entradas.map(entrada=>[entrada.ruta,entrada.fecha]),
+ ...entradas.map(entrada=>[entrada.ruta,fechaContenido(entrada)]),
  ...(graficos.length?[['/g/',graficos.map(f=>f.corte).sort().at(-1)],...graficos.map(f=>[rutaGrafico(f),f.corte])]:[]),
 ];
 const sitemap=`<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${urlsSitemap.map(([ruta,fecha])=>`  <url><loc>https://cochid.cl${ruta}</loc><lastmod>${fecha}</lastmod></url>`).join('\n')}\n</urlset>\n`;
@@ -371,7 +373,7 @@ await cp(new URL('../vendor/v2/temas/',import.meta.url),new URL('temas/',out),{r
  await writeFile(portada,indicePublico(await readFile(portada,'utf8'),totalesTema));
 }
 await cp(bundle,new URL('assets/chrome-v2/',out),{recursive:true});
-execFileSync('python3',['buscador/generar_indice.py','--refrescar'],{cwd:new URL('../',import.meta.url),stdio:'inherit',env:{...process.env,DESTINOS_JSON:'data/destinos.v1.json',TAXONOMIA_JSON:'data/taxonomia.json'}});
+execFileSync('python3',['buscador/generar_indice.py','--refrescar','--blog-local',new URL('blog/feed.xml',out).pathname],{cwd:new URL('../',import.meta.url),stdio:'inherit',env:{...process.env,DESTINOS_JSON:'data/destinos.v1.json',TAXONOMIA_JSON:'data/taxonomia.json'}});
 await mkdir(new URL('buscar/',out),{recursive:true});
 await cp(new URL('../buscador/indice.json',import.meta.url),new URL('buscar/indice.json',out));
 const buscar=`<!doctype html><html lang="es-CL" data-brand="cochid" data-theme="light"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Buscar · Compañía Chilena de Inteligencia de Datos</title><meta name="description" content="Busca datos, mapas, investigaciones, herramientas y entradas del blog.">${kitHead}</head><body>${bundleHeader}${subnav}<main id="contenido" class="portal-contenido" tabindex="-1"><header><h1>Buscar</h1><p>Busca datos, mapas, investigaciones, herramientas y entradas del blog.</p></header><p><button class="btn-primary" type="button" data-buscar-abrir>Abrir el buscador</button></p></main>${bundleFooter}<script>addEventListener('load',()=>{document.querySelector('[data-buscar-abrir]')?.click();const q=new URLSearchParams(location.search).get('q');if(q)setTimeout(()=>{const i=document.querySelector('.bq__in');if(i){i.value=q;i.dispatchEvent(new Event('input',{bubbles:true}))}},50)})</script></body></html>`;
@@ -440,7 +442,7 @@ for(const path of await htmlFiles(out)) {
   if(!/name="twitter:card"/.test(html))extra.push('<meta name="twitter:card" content="summary_large_image">');
   if(ruta==='/')extra.push(ld({'@context':'https://schema.org','@graph':[ORG,{'@type':'WebSite','@id':`${ORIGEN}/#sitio`,name:'Compañía Chilena de Inteligencia de Datos',url:`${ORIGEN}/`,inLanguage:'es-CL',publisher:{'@id':ORG['@id']},potentialAction:{'@type':'SearchAction',target:`${ORIGEN}/buscar/?q={search_term_string}`,'query-input':'required name=search_term_string'}}]}));
   const entrada=porRuta[ruta];
-  if(entrada)extra.push(ld({'@context':'https://schema.org','@type':'BlogPosting',headline:entrada.titulo,description:entrada.descripcion,datePublished:entrada.fecha,dateModified:entrada.fecha,inLanguage:'es-CL',url:`${ORIGEN}${ruta}`,mainEntityOfPage:`${ORIGEN}${ruta}`,image:IMAGEN,author:ORG,publisher:ORG}));
+  if(entrada)extra.push(ld({'@context':'https://schema.org','@type':'BlogPosting',headline:entrada.titulo,description:entrada.descripcion,datePublished:entrada.fecha,dateModified:fechaContenido(entrada),inLanguage:'es-CL',url:`${ORIGEN}${ruta}`,mainEntityOfPage:`${ORIGEN}${ruta}`,image:IMAGEN,author:ORG,publisher:ORG}));
   if(extra.length)await writeFile(archivo,html.replace('</head>',extra.join('\n')+'\n</head>'));
  }
 }

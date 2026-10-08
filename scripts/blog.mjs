@@ -90,6 +90,13 @@ function validar(meta, cuerpo, archivo, dominios) {
   if (!/^\d{4}-\d{2}-\d{2}$/.test(meta.fecha) || Number.isNaN(partesFecha(meta.fecha).utc.getTime())) {
     throw new Error(`${archivo}: fecha no ISO: ${meta.fecha}`);
   }
+  if (meta.actualizado !== undefined) {
+    const fecha = typeof meta.actualizado === 'string' && /^\d{4}-\d{2}-\d{2}$/.test(meta.actualizado)
+      ? partesFecha(meta.actualizado).utc : null;
+    if (!fecha || Number.isNaN(fecha.getTime()) || fecha.toISOString().slice(0, 10) !== meta.actualizado || meta.actualizado < meta.fecha) {
+      throw new Error(`${archivo}: actualizado inválido o anterior a la publicación: ${meta.actualizado}`);
+    }
+  }
   if (!/^[a-z0-9]+(?:-[a-z0-9]+)*$/.test(meta.slug)) throw new Error(`${archivo}: slug inválido`);
   if (meta.ruta !== `/blog/${meta.slug}/`) throw new Error(`${archivo}: ruta ${meta.ruta} no corresponde al slug`);
   if (!TIPOS[meta.tipo]) throw new Error(`${archivo}: tipo desconocido ${meta.tipo}`);
@@ -176,11 +183,14 @@ const etiquetasHtml = entrada => entrada.etiquetas
   .map(etiqueta => `<li class="badge">${escapar(ROTULOS_ETIQUETAS[etiqueta])}</li>`).join('');
 
 /* Línea de metadatos común a índice, entrada y novedades. */
+export const fechaContenido = entrada => entrada.actualizado || entrada.fecha;
+
 export function metaEntrada(entrada, {autor = false} = {}) {
   const partes = [
     `<span class="blog-tipo">${escapar(TIPOS[entrada.tipo])}</span>`,
     `<time datetime="${entrada.fecha}">${fechaLarga(entrada.fecha)}</time>`,
   ];
+  if (entrada.actualizado) partes.push(`<span class="blog-actualizado">Actualizado el <time datetime="${escapar(entrada.actualizado)}">${fechaLarga(entrada.actualizado)}</time></span>`);
   if (autor) partes.push(`<span>${escapar(entrada.autor)}</span>`);
   partes.push(`<span>${entrada.minutos} min de lectura</span>`);
   const dominio = entrada.dominioEtiqueta ? `<p class="blog-dominio">Tema: ${escapar(entrada.dominioEtiqueta)}</p>` : '';
@@ -234,10 +244,10 @@ ${relacionadas.length ? `<section class="blog-seccion" aria-labelledby="relacion
 }
 
 /* RSS 2.0 con autodescubrimiento atom:link (recomendado por el validador del
-   RSS Advisory Board). lastBuildDate es la fecha de la entrada más reciente,
+   RSS Advisory Board). lastBuildDate es la fecha del contenido más reciente,
    no la hora del build, para que el feed sea reproducible. */
 export function rss(entradas) {
-  const reciente = entradas[0].fecha;
+  const reciente = entradas.map(fechaContenido).sort().at(-1);
   const items = entradas.map(entrada => {
     const url = `${SITIO}${entrada.ruta}`;
     const categorias = [

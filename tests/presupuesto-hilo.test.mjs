@@ -4,11 +4,14 @@ import {readFileSync} from 'node:fs';
 import {paginaHilo} from '../scripts/presupuesto-hilo.mjs';
 const hilo=JSON.parse(readFileSync(new URL('../assets/presupuesto-2027/hilo.json',import.meta.url)));
 
-test('cada texto cabe en 280 caracteres e identifica el carácter hipotético del ajuste real',()=>{
+test('cada texto cabe en 280 caracteres y distingue proyección, base y fuentes',()=>{
   assert.equal(hilo.tweets.length,6);
   for(const t of hilo.tweets)assert.ok([...t.texto].length<=280);
-  assert.match(hilo.tweets[1].texto,/inflación hipotética/);
-  assert.match(hilo.tweets[3].texto,/ambos años/);
+  assert.match(hilo.tweets[1].texto,/proyecta IPC/);
+  assert.match(hilo.tweets[1].fuente,/IPC proyectado de 2,9%/);
+  assert.equal(hilo.tweets[1].grafico,'aporte-fiscal-ipc-proyectado.png');
+  assert.match(hilo.tweets[5].fuente,/ambos años/);
+  for(const t of hilo.tweets){assert.ok(t.titulo);assert.match(t.fuente,/DIPRES/);}
 });
 
 test('cada fila ofrece texto seleccionable, Copiar y PNG descargable con texto alternativo',()=>{

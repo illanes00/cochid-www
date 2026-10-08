@@ -78,7 +78,7 @@ class BlogRssContractTests(unittest.TestCase):
             self.assertIn(f"https://cochid.cl{ruta}", urls)
         self.assertNotIn("https://cochid.cl/blog/feed.xml", urls)
         for meta in entradas():
-            self.assertEqual(meta["fecha"], urls[f"https://cochid.cl{meta['ruta']}"])
+            self.assertEqual(meta.get("actualizado", meta["fecha"]), urls[f"https://cochid.cl{meta['ruta']}"])
 
     def test_blog_pages_stay_below_the_page_budget(self):
         for archivo in [DIST / "blog" / "index.html", DIST / "novedades" / "index.html", *(DIST / "blog").glob("*/index.html")]:
